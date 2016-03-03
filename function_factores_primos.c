@@ -1,4 +1,3 @@
-/*******************FACTORES PRIMOS***********************/
 #include <stdio.h>
 
 int numero;             //El numero que examinaremos.
