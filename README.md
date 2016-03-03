@@ -39,11 +39,11 @@ la indenteción, es MUY IMPORTANTE, o no compilará.
 
       - README.md in english.
       - [x] función exec - function 
-      - función login - function
+      - [x] función login - function
       - función stty - function
       - Menú functional - cusrse_menu
       - Paneles - curse_pane
-      - Ventanas - curse_win
+      - [x] Ventanas - curse_win
       - función check - function. Comprueba tipo tty.
       - función grub - UEFI nuevo estilo. Nuevo entre comillas *"algo aquí"*.
       - Integración de artículos en la web: 
