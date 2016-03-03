@@ -20,12 +20,12 @@ ejem.
 
   linker - librería a enlazar. Para enlazar NCURSES: -lncurses
 
-La mayoría son portables, aunque sí es cierto que ciertas librerías son dependientes.
+La mayoría son portables, aunque sí es cierto que algunas librerías son dependientes.
 Cualquier aclaración/aportación/mejora será más que bienvenida.
 
-Aquellos archivos con _prefijo_ _ pueden ser compilados como grupo, para lo que 
+Aquellos archivos con _prefijo_ + _ pueden ser compilados como grupo, para lo que 
 aconsejo el uso de un Makefile. 
-En el caso de un IDE, indicarlo al linker. No puedo añadir mas a esto pues no 
+En el caso de un IDE, indicarlo al linker. No puedo añadir mas a esto, pues no 
 me gustan los IDEs y no trabajo con ellos.
 
 Turorial Makefile: http://mrbook.org/blog/tutorials/make/
@@ -38,7 +38,23 @@ la indenteción, es MUY IMPORTANTE, o no compilará.
 *    TODO 
 
       - README.md in english.
-      - función exec - function 
+      - [*] función exec - function 
       - función login - function
       - función stty - function
+      - Menú functional - cusrse_menu
+      - Paneles - curse_pane
+      - Ventanas - curse_win
+      - función check - function. Comprueba tipo tty.
+      - función grub - UEFI nuevo estilo. Nuevo entre comillas *"algo aquí"*.
+      - Integración de artículos en la web: 
+      - linux4free - function
+      - SVGA/VGA/EGA/CGA - function
+      - check_arch - function 
+      - controlador frontend - via emacs(lisp scheme-guile)
+
+
+
+
+
+
 
