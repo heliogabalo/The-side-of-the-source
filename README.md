@@ -23,8 +23,8 @@ ejem.
 La mayoría son portables, aunque sí es cierto que ciertas librerías son dependientes.
 Cualquier aclaración/aportación/mejora será más que bienvenida.
 
-Aquellos archivos con <prefijo_> pueden ser compilados como grupo, para
-lo que aconsejo el uso de un Makefile. 
+Aquellos archivos con _prefijo_ _ pueden ser compilados como grupo, para lo que 
+aconsejo el uso de un Makefile. 
 En el caso de un IDE, indicarlo al linker. No puedo añadir mas a esto pues no 
 me gustan los IDEs y no trabajo con ellos.
 
