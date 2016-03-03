@@ -51,10 +51,8 @@ la indenteción, es MUY IMPORTANTE, o no compilará.
       - SVGA/VGA/EGA/CGA - function
       - check_arch - function 
       - controlador frontend - via emacs(lisp scheme-guile)
-
-
-
-
+      - mapa de red
+      
 
 
 
