@@ -38,7 +38,7 @@ la indenteción, es MUY IMPORTANTE, o no compilará.
 *    TODO 
 
       - README.md in english.
-     [*] - función exec - function 
+      - [x] función exec - function 
       - función login - function
       - función stty - function
       - Menú functional - cusrse_menu
