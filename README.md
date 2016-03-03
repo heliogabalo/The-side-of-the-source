@@ -54,5 +54,10 @@ la indenteción, es MUY IMPORTANTE, o no compilará.
       - mapa de red
       
 
-
+Si quieres participar activamente en este repositorio tienes dos formas de hacerlo:
+- jonitjuego arroba gmail.com. Mándame un email con tu clave pública para que pueda
+  añadirte como colaborador.
+- Puedes clonar la repo con:
+  <pre><code>git clone https://github.com/heliogabalo/The-side-of-the-source.git</code></pre> 
+  o hacer un fork al mismo y tabajar sobre tu propia rama.
 
