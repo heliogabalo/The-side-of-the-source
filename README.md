@@ -12,13 +12,13 @@ Para compilar código fuente escrito en C/C++ :
 
 ejem.
 
-> $gcc -o <objeto> <source> <linker>
->
-> <objeto> - será el binario ejecutable.
->
-> <source> - código fuente(nuestro archivo).
->
-> <linker> - librería a enlazar. Para enlazar NCURSES: -lncurses
+> $gcc -o objeto source linker
+
+  objeto - será el binario ejecutable.
+
+  source - código fuente(nuestro archivo).
+
+  linker - librería a enlazar. Para enlazar NCURSES: -lncurses
 
 La mayoría son portables, aunque sí es cierto que ciertas librerías son dependientes.
 Cualquier aclaración/aportación/mejora será más que bienvenida.
@@ -35,8 +35,10 @@ la indenteción, es MUY IMPORTANTE, o no compilará.
 
 
 
-*    TODO - README.md in english.
-            función exec - function 
-            función login - function
-            función stty - function
+*    TODO 
+
+      - README.md in english.
+      - función exec - function 
+      - función login - function
+      - función stty - function
 
