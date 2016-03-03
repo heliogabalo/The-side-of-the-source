@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+
 puts "dime argo pallo"
 text = gets.chomp
 
