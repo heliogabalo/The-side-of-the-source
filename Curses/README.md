@@ -22,8 +22,8 @@ Ante esta disyuntiva, hay dos formas claras de afrontrar el reto.
 
 
 
-    [x] Menú principal.
-    [x] Recolocar ventana.
+        - [x] Menú principal.
+        - [x] Recolocar ventana.
 
 
 
