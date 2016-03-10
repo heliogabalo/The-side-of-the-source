@@ -16,7 +16,11 @@ Ante esta disyuntiva, hay dos formas claras de afrontrar el reto.
 
 
 
+
+
 *   La aplicación:
+
+
 
     [x] Menú principal.
     [x] Recolocar ventana.
