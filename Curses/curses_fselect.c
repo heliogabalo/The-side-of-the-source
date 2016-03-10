@@ -1,0 +1,108 @@
+#include "curses_head.h"
+
+
+char *choices[] = {
+  "1-Mover Ventana",
+  "2-Choice",
+  "3-Choice",
+  "4-Choice",
+  "Exit",
+};
+
+
+int n_choices = sizeof(choices) / sizeof(char *);
+int print_menu(WINDOW *menu_win, int highlight);
+
+
+int select_loop(bool flag_select){
+  WIN win;
+  
+  win.startx = 0;
+  win.starty = 0;
+
+  WINDOW *menu_win;
+  int highlight = 1;
+  int choice = 0;
+  int c, i;
+
+  win.startx = (COLS - WIDTH) / 2;
+  win.starty = (LINES - HEIGHT) / 2;
+
+  menu_win = newwin(HEIGHT, WIDTH, win.starty, win.startx);
+  keypad(menu_win, TRUE);
+  mvprintw(0, 0, "Use arrow keys to go up and down, Press enter to select a choice");
+
+  refresh();
+  print_menu(menu_win, highlight);
+
+  
+    while(1)
+    {       c = wgetch(menu_win);
+            switch(c)
+            {       case KEY_UP:
+                            if(highlight == 1)
+                                    highlight = n_choices;
+                            else
+                                    --highlight;
+                            break;
+                    case KEY_DOWN:
+                            if(highlight == n_choices)
+                                    highlight = 1;
+                            else
+                                    ++highlight;
+                            break;
+                    case 10:
+                            choice = highlight;
+                            break;
+  
+                    default:
+  
+                            mvprintw(24, 0, "Charcter pressed is = %3d Hopefully it can be printed as '%c'", c, c);
+                            refresh();
+                            break;
+                  }
+                  print_menu(menu_win, highlight);
+
+                  if(choice != 0){  /* User did a choice come out */
+                      for(i = 0; i < n_choices; ++i)
+                         if(choices[0] == choices[i])
+                             return redraw_loop();
+//                             break;  //Secmentation fault !!!
+                         
+//                         break; // Segmentation fault !!!!
+                       }
+//                      break;    //Segmentation fault!!
+                  
+//                  else
+//                    return 0; // Sale del buche !
+//                    break; // Sale del bucle
+
+        mvprintw(23, 0, "You chose choice %d with choice string %s\n", choice, choices[choice -1]);
+        clrtoeol();
+        refresh();
+    }
+
+        
+
+}
+
+int print_menu(WINDOW *menu_win, int highlight)
+{
+        int x, y, i;
+
+        x = 2;
+        y = 2;
+        box(menu_win, 0, 0);
+          for(i = 0; i < n_choices; ++i)
+          {       if(highlight == i + 1) /* High light the present choice */
+                  {       wattron(menu_win, A_REVERSE);
+                          mvwprintw(menu_win, y, x, "%s", choices[i]);
+                          wattroff(menu_win, A_REVERSE);
+                  }
+                  else
+                          mvwprintw(menu_win, y, x, "%s", choices[i]);
+                  ++y;
+          }
+          wrefresh(menu_win);
+        }
+

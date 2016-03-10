@@ -1,0 +1,28 @@
+HEIGHT	curses_log.c	7
+Mcurses_log	curses_log.c	/^int main(){$/
+WIDTH	curses_log.c	6
+WIN	curses_fdraw.c	14
+WIN_BORDER	curses_fdraw.c	7
+_WIN_struct	curses_fdraw.c	9
+_win_border_struct	curses_fdraw.c	4
+bl	curses_fdraw.c	6
+border	curses_fdraw.c	13
+br	curses_fdraw.c	6
+bs	curses_fdraw.c	5
+choices	curses_log.c	12
+create_box	curses_fdraw.c	/^void create_box(WIN *p_win, bool flag)$/
+height	curses_fdraw.c	12
+init_win_params	curses_fdraw.c	/^void init_win_params(WIN *p_win)$/
+ls	curses_fdraw.c	5
+n_choices	curses_log.c	20
+print_menu	curses_log.c	/^void print_menu(WINDOW *menu_win, int highlight)$/
+redraw_loop	curses_fdraw.c	/^void redraw_loop(bool flag_redraw) {$/
+rs	curses_fdraw.c	5
+startx	curses_fdraw.c	11
+startx	curses_log.c	9
+starty	curses_fdraw.c	11
+starty	curses_log.c	10
+tl	curses_fdraw.c	6
+tr	curses_fdraw.c	6
+ts	curses_fdraw.c	5
+width	curses_fdraw.c	12
