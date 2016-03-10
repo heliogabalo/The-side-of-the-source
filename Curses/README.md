@@ -16,13 +16,13 @@ Ante esta disyuntiva, hay dos formas claras de afrontrar el reto.
 
 
 
-
-
 *   La aplicación:
 
-
-
+        - [x] Main(). Inicializa ventana.
+        - [x] Cabecera.hd 
+        - [x] Aislar funciones del main(). 
         - [x] Menú principal.
+        - [x] Tags para VIM. ctags.
         - [x] Recolocar ventana.
 
 
@@ -31,13 +31,25 @@ Ante esta disyuntiva, hay dos formas claras de afrontrar el reto.
 
 
         - Redimensionar ventana.
-        - Manipulacion de sdtout(fd1) con Sed y awk.
-        - Estado "POSIX" de la aplicación.
-        - Acerca de OpenGL.txt
-        - Acerca de Frame Buffer.txt
-        - Entorno seguro. Shell cookeada. Modo restringido.
+        - Paneles y paneles en segundo plano.
+        - Espacio de usuario. Guardar config.
+        - Aplicaciones comunes:
+          -- Compiladores.
+          -- Debugers.
+          -- Visor de PDFs.
+          -- Visor de Imágenes.
+          -- Streams en general. Streams.txt.
         - "La terminal".
         - "La pts".
+        - Manipulacion de sdtout(fd1) con Sed y awk.
+        - Permisos de usuario. Apclicaciones Chruteadas.txt.
+        - Estado "POSIX" de la aplicación.
+        - Acerca de OpenGL.txt.
+        - Acerca de Frame Buffer.txt.
+        - Cuándo usar un multiplexador. Alternativas.txt.
+        - Entorno seguro. Shell cookeada. Modo restringido.
+        - Etags. Usuarios Emacs.
+
 
 
 
