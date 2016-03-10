@@ -14,12 +14,18 @@ Ante esta disyuntiva, hay dos formas claras de afrontrar el reto.
   gente que trabaja aquí, lo hace en su tiempo libre y como se dice
   vulgarmente: por el amor al arte!!
 
+
+
 *   La aplicación:
 
-    [x] - Menú principal.
-    [x] - Recolocar ventana.
+    [x] Menú principal.
+    [x] Recolocar ventana.
+
+
 
 *   TODO
+
+
         - Redimensionar ventana.
         - Manipulacion de sdtout(fd1) con Sed y awk.
         - Estado "POSIX" de la aplicación.
