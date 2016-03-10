@@ -48,6 +48,8 @@ Ante esta disyuntiva, hay dos formas claras de afrontrar el reto.
         - Acerca de Frame Buffer.txt.
         - Cuándo usar un multiplexador. Alternativas.txt.
         - Entorno seguro. Shell cookeada. Modo restringido.
+        - Entropia. Piscina entrópica:
+          Cuando las máquinas sueñen con cabezas humanas.txt
         - Etags. Usuarios Emacs.
 
 
