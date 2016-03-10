@@ -41,9 +41,10 @@ la indenteción, es MUY IMPORTANTE, o no compilará.
       - [x] función exec - function 
       - [x] función login - function
       - función stty - function
-      - Menú functional - cusrse_menu
+      - [x]Menú functional - cusrse_menu
       - Paneles - curse_pane
       - [x] Ventanas - curse_win
+      - Directorio Curses. Readme_curses.txt
       - función check - function. Comprueba tipo tty.
       - función grub - UEFI nuevo estilo. Nuevo entre comillas *"algo aquí"*.
       - Integración de artículos en la web: 
