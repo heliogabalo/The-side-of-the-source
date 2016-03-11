@@ -11,7 +11,7 @@ int main(){
         noecho();
         init_pair(1, COLOR_CYAN, COLOR_BLACK); //-2
 
-        select_loop(TRUE);
+        select_loop();
 
         refresh();
         endwin();

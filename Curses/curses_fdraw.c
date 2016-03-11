@@ -1,3 +1,4 @@
+//#include <ncurses.h>
 #include "curses_head.h"
 
 
@@ -6,7 +7,7 @@ typedef struct _WIN_struct WIN;
 
 void init_win_params(WIN *p_win);
 void create_box(WIN *p_win, bool flag);
-int redraw_loop();
+void redraw_loop(int argc, char *argv[], bool flag);
 
 
 
@@ -64,7 +65,7 @@ void create_box(WIN *p_win, bool flag)
 
 }
 
-int redraw_loop(int argc, char *argv[]) {
+void redraw_loop(int argc, char *argv[], bool flag) {
   WIN win;
   int max_y =0, max_x =0;
   int ch;
@@ -75,7 +76,8 @@ int redraw_loop(int argc, char *argv[]) {
   init_win_params(&win);
   print_win_params(&win);
                  
-  attron(COLOR_PAIR(1));                          
+  attron(COLOR_PAIR(1));
+  clear();
   printw("Press F1 to exit");                        
   refresh();  
   attroff(COLOR_PAIR(1));
@@ -92,7 +94,12 @@ int redraw_loop(int argc, char *argv[]) {
                                     break;
                                  }
                                 create_box(&win, FALSE);
-                                --win.startx;
+                                if (flag == TRUE){
+                                  --win.startx;
+                                }
+                                else if (flag == FALSE)
+                                  --win.width;
+
                                 create_box(&win, TRUE);
                                 break;
                         case KEY_RIGHT:
@@ -132,6 +139,7 @@ int redraw_loop(int argc, char *argv[]) {
 
       }
         endwin();
-        return 0;
+        clear();
+        return select_loop();
 }
 

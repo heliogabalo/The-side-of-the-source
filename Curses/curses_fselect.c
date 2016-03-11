@@ -3,7 +3,7 @@
 
 char *choices[] = {
   "1-Mover Ventana",
-  "2-Choice",
+  "2-Redimensionar V.",
   "3-Choice",
   "4-Choice",
   "Exit",
@@ -11,10 +11,10 @@ char *choices[] = {
 
 
 int n_choices = sizeof(choices) / sizeof(char *);
-int print_menu(WINDOW *menu_win, int highlight);
+void print_menu(WINDOW *menu_win, int highlight);
 
 
-int select_loop(bool flag_select){
+void select_loop(){
   WIN win;
   
   win.startx = 0;
@@ -56,7 +56,6 @@ int select_loop(bool flag_select){
                             break;
   
                     default:
-  
                             mvprintw(24, 0, "Charcter pressed is = %3d Hopefully it can be printed as '%c'", c, c);
                             refresh();
                             break;
@@ -64,9 +63,20 @@ int select_loop(bool flag_select){
                   print_menu(menu_win, highlight);
 
                   if(choice != 0){  /* User did a choice come out */
-                      for(i = 0; i < n_choices; ++i)
+                      for(i = 0; i < n_choices; ++i){
                          if(choices[0] == choices[i])
-                             return redraw_loop();
+                           return redraw_loop(NULL, NULL, TRUE);
+
+                         else if(choices[1] == choices[i])
+                           return redraw_loop(NULL, NULL, FALSE);
+
+                         else
+                           return 1;
+
+                      }
+
+
+
 //                             break;  //Secmentation fault !!!
                          
 //                         break; // Segmentation fault !!!!
@@ -86,7 +96,7 @@ int select_loop(bool flag_select){
 
 }
 
-int print_menu(WINDOW *menu_win, int highlight)
+void print_menu(WINDOW *menu_win, int highlight)
 {
         int x, y, i;
 

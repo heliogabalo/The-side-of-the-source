@@ -29,18 +29,16 @@ typedef struct _WIN_struct {
 
 void init_win_params(WIN *p_win);
 void create_box(WIN *p_win, bool flag);
-int redraw_loop();
+void redraw_loop(int argc, char *argv[], bool flag);
 
 #endif
 
 #ifndef _CURSES_FSELECT_
 #define _CURSES_FSELECT_
 
+//char *choices[];
 
-int n_choices;
-
-int print_menu(WINDOW *win_menu, int highlight);
-int select_loop(bool flag_select);
-bool gflag;
+void print_menu(WINDOW *win_menu, int highlight);
+void select_loop();
 
 #endif
