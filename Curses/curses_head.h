@@ -36,7 +36,7 @@ int redraw_loop();
 #ifndef _CURSES_FSELECT_
 #define _CURSES_FSELECT_
 
-//char *choices[];
+
 int n_choices;
 
 int print_menu(WINDOW *win_menu, int highlight);
