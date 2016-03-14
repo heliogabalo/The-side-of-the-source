@@ -59,38 +59,21 @@ void select_loop(){
                             mvprintw(24, 0, "Charcter pressed is = %3d Hopefully it can be printed as '%c'", c, c);
                             refresh();
                             break;
-                  }
-                  print_menu(menu_win, highlight);
+            }
 
-                  if(choice != 0){  /* User did a choice come out */
-                      for(i = 0; i < n_choices; ++i){
-                         if(choices[0] == choices[i])
-                           return redraw_loop(NULL, NULL, TRUE);
-
-                         else if(choices[1] == choices[i])
-                           return redraw_loop(NULL, NULL, FALSE);
-
-                         else
-                           return 1;
-
-                      }
-
-
-
-//                             break;  //Secmentation fault !!!
-                         
-//                         break; // Segmentation fault !!!!
-                       }
-//                      break;    //Segmentation fault!!
+            print_menu(menu_win, highlight);
+            if(choice != 0){  /* User did a choice come out */
+              exec_function();
+              break;
+                
+              }
+    }
                   
-//                  else
-//                    return 0; // Sale del buche !
-//                    break; // Sale del bucle
 
         mvprintw(23, 0, "You chose choice %d with choice string %s\n", choice, choices[choice -1]);
         clrtoeol();
         refresh();
-    }
+    
 
         
 
@@ -116,3 +99,25 @@ void print_menu(WINDOW *menu_win, int highlight)
           wrefresh(menu_win);
         }
 
+void exec_function(){
+  int c, i;
+  
+  for(i = 0; i <= 4; ++i){
+//    while(1){
+      if(*choices[i] == *choices[0])
+        redraw_loop(c, NULL, TRUE);
+      else if(*choices[i] == *choices[1])
+        redraw_loop(c, NULL, FALSE);
+      else if(*choices[i] == *choices[2])
+        break;
+      else if(*choices[i] == *choices[3])
+        break;
+      else
+        break;
+//    }
+  }
+  
+
+
+
+}

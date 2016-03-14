@@ -13,8 +13,8 @@ void redraw_loop(int argc, char *argv[], bool flag);
 
 void init_win_params(WIN *p_win)
 {
-          p_win->height = 10;
-          p_win->width = 30;
+          p_win->height = 9;
+          p_win->width = 29;
           p_win->starty = (LINES - p_win->height)/2;
           p_win->startx = (COLS - p_win->width)/2;
           p_win->border.ls = (ACS_VLINE);
@@ -65,7 +65,7 @@ void create_box(WIN *p_win, bool flag)
 
 }
 
-void redraw_loop(int argc, char *argv[], bool flag) {
+void redraw_loop(int argc, char *argv[], bool flag_d) {
   WIN win;
   int max_y =0, max_x =0;
   int ch;
@@ -94,10 +94,10 @@ void redraw_loop(int argc, char *argv[], bool flag) {
                                     break;
                                  }
                                 create_box(&win, FALSE);
-                                if (flag == TRUE){
+                                if (flag_d == TRUE){
                                   --win.startx;
                                 }
-                                else if (flag == FALSE)
+                                else if (flag_d == FALSE)
                                   --win.width;
 
                                 create_box(&win, TRUE);

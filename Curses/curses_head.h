@@ -29,7 +29,7 @@ typedef struct _WIN_struct {
 
 void init_win_params(WIN *p_win);
 void create_box(WIN *p_win, bool flag);
-void redraw_loop(int argc, char *argv[], bool flag);
+void redraw_loop(int argc, char *argv[], bool flag_d);
 
 #endif
 
@@ -40,5 +40,6 @@ void redraw_loop(int argc, char *argv[], bool flag);
 
 void print_menu(WINDOW *win_menu, int highlight);
 void select_loop();
+void exec_function();
 
 #endif
