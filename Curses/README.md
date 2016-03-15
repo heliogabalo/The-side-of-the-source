@@ -10,11 +10,12 @@ própias de un entorno gráfico.
 *   La aplicación:
 
         - [x] Main(). Inicializa ventana.
-        - [x] Cabecera.hd 
+        - [x] Cabecera.h 
         - [x] Aislar funciones del main(). 
         - [x] Menú principal.
         - [x] Tags para VIM. ctags.
         - [x] Recolocar ventana.
+        - [x] Makefile
 
 
 
@@ -40,7 +41,17 @@ própias de un entorno gráfico.
         - Etags. Usuarios Emacs.
 
 
-  Advertencia: La aplicación esta escrita en C, sin usar mas librerías
+
+  Para comilar: 
+  <pre><code>
+    $cd Curses
+    $make
+    $make clean
+    //make clean borra los archivos objeto.
+  </pre></code>
+
+
+  Advertencia: La aplicación está escrita en C, sin usar mas librerías
   que las proias del lenguaje y Ncurses. Esta última, está ámpliamente
   integrada en las plataformas más comunes. No debería suponer ningún
   problema su compilación.
@@ -49,5 +60,5 @@ própias de un entorno gráfico.
 
 
   N.T.d.A: Esta aplicación está basada en fuentes de código abierto.
-  Gracias de antemano a todos aquellos que en su día compartieron el
+  Gracias de antemano, a todos aquellos que en su día compartieron el
   "source".
