@@ -52,15 +52,29 @@
 #
 #   1.- Cremaos una imagen 'qemu' con esta funcionalidad:
 #
-#     <qemu-img create -f qcow2 -o backing_file=winxp.img test01.img>
+#     <qemu-img create -f qcow2 -o backing_file=winxp.img test01.img 1M>
 #
+#     Al llamar al 'backing_file' en el proceso de instalación de la image, qemu, parece 
+#     no reconocer direcciones fuera del directorio que contiene la imagen 'base'. Esto 
+#     quiere decir que para instalar la imagen en el backing file es necesario encontrarse 
+#     en el directorio contenedor.
+#     nota: mezcla las rutas absolutas/relativas.
+#     
 #     Con el comando 'backing_file' conseguimos establecer una copia 'base' que no será
 #     alterada. Los cambios en el SUPUESTO sólo serán aplicados a la imagen copia.
 #     Habrá que tener en cuenta el guardar los cambios aplicados dentro del entorno 
 #     alternativo, pues de otro modo, perderemos todo el tabajo cuando borremos la 
 #     imagen.
 #
-#   2.- qemu -m 256 -hda test.img -kernel-kqemu & (obsoleto??) 
+#   2.- qemu -m 256 -hda test.img -kernel-kqemu & (obsoleto??)
+#     -kemu-qkernel es un parámetro obsoleto no reconocido. He mirado en el Changelog de
+#     la version instalada(-v2.6) pero no he encontrado ninguna referencia al respecto.
+#     Podría ser que me pasase por alto.
+#     Ademas, he tenido que forzar la instalación llamando a la imagen 'base' desde la 
+#     linea de comando, igual que si hiciese una instalacion normal.
+#
+#     Por tanto la línea de entrada quedaría así:
+#     qemu-system-i386 -m 256 -hda backing_name.img -cdrom base_name.img -boot <string>
 #
 #
 #
@@ -92,9 +106,33 @@
 #
 #
 ################################################################
+#                  E X P E R I M E N T A L                     #
 ################################################################
-
-##   #####################################################################
+#   
+#   VIRTIO -- https://wiki.archlinux.org/index.php/QEMU#qxl
+#   
+#   virtio-vga / virtio-gpu is a paravirtual 3D graphics driver based on virgl. Currently a work in
+#   progress, supporting only very recent (>= 4.4) Linux guests. 
+#
+# QEMU offers guests the ability to use paravirtualized block and network devices using the virtio
+# drivers, which provide better performance and lower overhead.
+# 
+# A virtio block device requires the option -drive instead of the simple -hd* plus if=virtio:
+# 
+#     $ qemu-system-i386 -boot order=c -drive file=disk_image,if=virtio
+# 
+# Note: -boot order=c is absolutely necessary when you want to boot from it. There is no 
+# auto-detection as with -hd*.
+# 
+# Abmos  the same goes for the network:
+# 
+# $ qemu-system-i386 -net nic,model=virtio
+# 
+# Note: This will only work if the guest machinethas drivers for virtio devices. Linux does, and the
+# required drivers are included in Arch Linux, but there is no guarantee that virtio devices will work
+# with other operating systems.
+# 
+#####################################################################
 ## Aquí primero preparamos el dispositivo que será leído por el módulo de
 ## kernel NBD. Para ello debemos tener cargado dicho módulo o cargarlo en 
 ## todo caso. Recuerda que para llevar a cabo este tipo de operaciones en
@@ -126,7 +164,12 @@
 ################################################################
 ################################################################
 
-
+# LANZAR LA VM APUNTANDO AL SERVIDOR NBD
+#
+# $QEMU -object tls-creds-x509,id=tls0,dir=$HOME/.pki/qemutls,endpoint=client \
+#       -drive driver=nbd,host=localhost,port=10809,tls-creds=tls0 \
+#       /path/to/img
+#
 
 
 
