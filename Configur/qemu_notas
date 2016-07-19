@@ -139,6 +139,64 @@
 #
 #
 ################################################################
+################################################################
+#
+#   COMO MONTAR UN LOOPBACK PARA COMUNICARNOS CON LA VM SIN CONEXION
+#
+#  Mounting Disk Image by Calculating Partition Offset
+#
+# 1. Set a loop device on the disk image whose partition you want to mount.
+#
+#    tux@venus:~> losetup /dev/loop0 /images/sles11sp1_base.raw
+#
+# 2. Find the sector size and the starting sector number of the partition you want to mount.
+#
+#    tux@venus:~> fdisk -lu /dev/loop0
+#
+#    Disk /dev/loop0: 4294 MB, 4294967296 bytes
+#    255 heads, 63 sectors/track, 522 cylinders, total 8388608 sectors
+#    Units = sectors of 1 * 512 = 512[1] bytes
+#    Disk identifier: 0x000ceca8
+#
+#           Device Boot      Start         End      Blocks   Id  System
+#    /dev/loop0p1              63     1542239      771088+  82  Linux swap
+#    /dev/loop0p2   *     1542240[2]    8385929     3421845   83  Linux
+#
+#    [1] The disk sector size.
+#
+#    [2] The starting sector of the partition.
+#
+# 3. Calculate the partition start offset:
+#
+#    sector_size * sector_start = 512 * 1542240 = 789626880
+#
+# 4. Delete the loop and mount the partition inside the disk image with the calculated offset on a
+#    prepared directory.
+#
+#    tux@venus:~> losetup -d /dev/loop0
+#    tux@venus:~> mount -o loop,offset=789626880 \
+#    /images/sles11sp1_base.raw /mnt/sles11sp1/
+#    tux@venus:~> ls -l /mnt/sles11sp1/
+#    total 112
+#    drwxr-xr-x   2 root root  4096 Nov 16 10:02 bin
+#    drwxr-xr-x   3 root root  4096 Nov 16 10:27 boot
+#    drwxr-xr-x   5 root root  4096 Nov 16 09:11 dev
+#    [...]
+#    drwxrwxrwt  14 root root  4096 Nov 24 09:50 tmp
+#    drwxr-xr-x  12 root root  4096 Nov 16 09:16 usr
+#    drwxr-xr-x  15 root root  4096 Nov 16 09:22 var
+#
+# 5. Copy one or more files onto the mounted partition and unmount it when finished.
+#
+#    tux@venus:~> cp /etc/X11/xorg.conf /mnt/sles11sp1/root/tmp
+#    tux@venus:~> ls -l /mnt/sles11sp1/root/tmp
+#    tux@venus:~> umount /mnt/sles11sp1/
+#
+################################################################
+#
+#
+#
+################################################################
 #                  E X P E R I M E N T A L                     #
 ################################################################
 #   
