@@ -74,11 +74,44 @@
 #     linea de comando, igual que si hiciese una instalacion normal.
 #
 #     Por tanto la línea de entrada quedaría así:
-#     qemu-system-i386 -m 256 -hda backing_name.img -cdrom base_name.img -boot <string>
+#     qemu-system-i386 -m 256 -hda copia(overlay).img -cdrom base_name(backing).img -boot <string>
+#
+#   -----------------------------------
+#
+#   CON O SIN CONEXION A INTERNET !!
+#
+#   Añadiendo la opcion -net parametro <nic> qemu instala una tqrgeta virtual de red genérica.
+#
+#   El comando quedaría algo así:
+#
+#   qemu-system-<arch> -net nic \
+#     ... \
+#     -<mas opciones>
 #
 #
+#   De esta forma la MAC de la VM tendrá un identificador por defecto. 
+#   Esto puede ser un inconveniente, si corremos mas de una máquina, y queremos tener acceso
+#   a internet en todas ellas, puesto que la aplicación genera por defecto, siempre la 
+#   misma MAC.# 
 #
+#   Para que esto no ocurra sebe indicarse un identificador. Reempaza las "X" con números 
+#   decimales arbitrarios, pero recuerda conservar las primeras dos cifras, que hacen
+#   referencia al id de fabricante(qemu)
 #   
+#   $ qemu-system-i386 -net nic,macaddr=52:54:XX:XX:XX:XX -net vde disk_image
+#
+#   Otro problema con el que nos encontraremos, es que la tarjeta virtual que estamos creando
+#   tiene asociado otro compenente, una especie de CTR o conector que debe ser único para 
+#   cada GEST.
+#
+#   Hay dos formas básicas de dotar a la VM con conexión a internet:
+#
+#     - Modo usuario (slirp)
+#     - Modo Tap
+#
+#     Modo usuario:
+#
+#     -netdev user,id=mynet0,net=192.168.76.0/24,dhcpstart=192.168.76.9
 #
 #   ------------------------------
 #   Notas: 
