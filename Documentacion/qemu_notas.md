@@ -209,19 +209,29 @@ Esto quiere decir, que puede montarse una copia de "respaldo" de GuildWars, en u
 suficientemente grande para contener ambos discos. Sin necesidad de crear una partición  
 dentro de la imagen.
 
-Debo hacer la comprovación oportuna... pero para que me sirva de guía escribo esto como 
-nota[borrar]. Si _no_ se crea una partición en la imagen(la VM), los datos podrán ser montados
-sobre cualquier formato, nuevamente Ext2, Fat16 ... 
+Debo hacer la comprovación oportuna... pero para que me sirva de guía escribo esto como  
+nota[borrar]. Si _no_ se crea una partición en la imagen(la VM), los datos podrán ser  
+montados sobre cualquier formato, nuevamente Ext2, Fat16 ...  
 
-Sin embargo, si tenemos alojadas particiones dentro de la imagen, únicamente podremos
-montarlas en formato raw(crudo en inglés). Esto es para que qemu pueda manejarlas.
-
-En este último caso, convertir la imagen al formato apropiado es cuestion de usar
-el binario de qemu para tal efecto:
+Sin embargo, si tenemos alojadas particiones dentro de la imagen, únicamente podremos  
+montarlas en formato raw(crudo en inglés). Esto es para que qemu pueda manejarlas.  
 
 En este caso como trabajaremos sobre una imagen ISO, parece apropiado seguir los pasos  
-descritos al principio del artículo. Crear la caja vaía, y escribirla en el formato 
-apropiado.
+descritos al principio del artículo. Crear la caja vaía, y escribirla en el formato  
+apropiado. Pero como problamente no queramos lanzar otra GUEST, sino únicamente acceder  
+al contenido del la imagem.
+
+  ~~~  
+ $ qemu-img convert -O imagen.iso copia.raw  
+  ~~~
+
+Con esto conseguimos una copia en crudo, de la image ISO. Ya solo queda montarla:
+
+  ~~~  
+ $ mkdir -p ~/mnt/copia  
+ # mount copia.raw  
+  ~~~
+
 
 
 Hay varias técnicas para llevarlo a cabo: 
