@@ -138,21 +138,19 @@ qemu-system-i386 -m 256 -hda copia(overlay).img -cdrom base_name(backing).img -b
 
 Añadiendo la opcion -net parametro _nic_, qemu instala una targeta virtual de red genérica.
 
-El comando quedaría de esta manera:
+El comando quedaría algo así:
 
   ~~~  
-qemu-system-_arch_ -net nic \  
-  ... \  
-  _mas opciones_  
+qemu-system- _arch_ -net nic ...  
   ~~~  
 
-De esta forma la MAC de la VM tendrá un identificador por defecto. 
-Esto puede ser un inconveniente, si corremos mas de una máquina, y queremos tener acceso
-a internet en todas ellas, puesto que la aplicación genera por defecto, siempre la 
+De esta forma la MAC de la VM tendrá un identificador por defecto.  
+Esto puede ser un inconveniente, si corremos mas de una máquina, y queremos tener acceso  
+a internet en todas ellas, puesto que la aplicación genera por defecto, siempre la  
 misma MAC. 
 
 Para que esto no ocurra sebe indicarse un identificador. Reempaza las "X" con números 
-decimales arbitrarios, pero recuerda conservar las primeras dos cifras, que hacen
+hexadecimales arbitrarios, pero recuerda conservar las primeras dos cifras, que hacen
 referencia al id de fabricante(qemu).  
 ~~~
 $ qemu-system-i386 -net nic,macaddr=52:54:XX:XX:XX:XX -net vde disk_image
