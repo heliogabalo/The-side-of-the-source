@@ -1,16 +1,16 @@
 
-## PROCESO DE INSTALACION DE UNA IMAGEN ##
-### - Crear imagen ###
-### - Convetir imagen ###
+#### 1. PROCESO DE INSTALACION DE UNA IMAGEN
+####  1.1 Crear imagen
+####  1.2 Convetir imagen
 
-    TRABAJAR CON UNA COPIA DE IMAGEN
-      - Backing-files/overlays
-      - Snapshots 
-    CON O SIN CONEXION A INTERNET
-    COMO MONTAR UN LOOPBACK PARA COMUNICARNOS CON LA VM SIN CONEXION
-    LOOPBACK PARA UNA IMGEN (USANDO MODULOS EN EL KERNEL)
-      - Lanzar la VM apuntando al servidor NBD
-    EXPERIMENTAL
+#### 2. TRABAJAR CON UNA COPIA DE IMAGEN
+####   2.1 Backing-files/overlays
+####   2.2 Snapshots 
+#### 3. CON O SIN CONEXION A INTERNET
+#### 4. COMO MONTAR UN LOOPBACK PARA COMUNICARNOS CON LA VM SIN CONEXION
+#### 5. LOOPBACK PARA UNA IMGEN (USANDO MODULOS EN EL KERNEL)
+####  5.1 Lanzar la VM apuntando al servidor NBD
+#### 6. EXPERIMENTAL
 
 ## PROCESO DE INSTALACION DE UNA IMAGEN ##
 
@@ -19,7 +19,9 @@
  con la que  QEMU, pueda trabajar.
 
  1.- Para esto primero creamos la imagen. Una "caja" vacía.
+  ~~~
  qemu-img create -f qcow2 mi_imagen.img 1G
+  ~~~
 
  Aquí el flag "-f" indica el tipo de formato con el que será creada nuestra imagen (aún vacia).
  También indicamos el archivo imagen y el tamaño en Gigabytes.
