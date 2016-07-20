@@ -187,16 +187,21 @@ Hay dos formas básicas de dotar a la VM con conexión a internet:
 
 
 ## COMO MONTAR UN LOOPBACK PARA COMUNICARNOS CON LA VM SIN CONEXION
-La traducción de loopback significa: bucle hacia atrás(ma o meno), o 'camino de 
-regreso'. La idea es utilizar una partición o disco, que se encuentra fuera de la
-imagen de la VM.
+La traducción de loopback significa: bucle hacia atrás(ma o meno), o 'camino de  
+regreso'. La idea es utilizar una partición o disco, que se encuentra fuera de la  
+imagen de la VM.  
 
-Antes de seguir, debo recordar que las operaciones con particiones y sobre módulos
-que afectan directamente al _kernel_, hay que hacerlas con permisos de administrador.
-Por precaución, siempre es recomendable hacer este tipo de opereaciones con la 
-VM apagada. De otra forma, se corre el riesgo de corromper los datos la imagen.
+Antes de seguir, debo recordar que las operaciones con particiones y sobre módulos  
+que afectan directamente al _kernel_, hay que hacerlas con permisos de administrador.  
+Por precaución, siempre es recomendable hacer este tipo de opereaciones con la  
+VM apagada. De otra forma, se corre el riesgo de corromper los datos la imagen.  
 
-Hay varias técnicas para llevar a cabo esto: 
+En determidas ocasiones, la máquina virtual no tiene conexión a internet. Es el caso  
+de una instalación con Qemu. Este el escenario habitual, que uno, se encuentra cuando  
+trabaja desde la cónsola, con sus ventajas e inconvenientes ...
+
+
+Hay varias técnicas para llevarlo a cabo: 
 #### Mediante el montaje de una imagen, directamente en el disco duro. 
 
   Mounting Disk Image by Calculating Partition Offset
