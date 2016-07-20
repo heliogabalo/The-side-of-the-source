@@ -12,7 +12,6 @@
       - Lanzar la VM apuntando al servidor NBD
     EXPERIMENTAL
 
-################################################################
 ## PROCESO DE INSTALACION DE UNA IMAGEN
 #
 # Bien sea porque tenemos el disco original (en este caso un SO windows)
