@@ -197,16 +197,16 @@ Por precaución, siempre es recomendable hacer este tipo de opereaciones con la
 VM apagada. De otra forma, se corre el riesgo de corromper los datos la imagen.  
 
 En determidas ocasiones, la máquina virtual no tiene conexión a internet. Es el caso  
-de una instalación con Qemu. Este el escenario habitual, que uno, se encuentra cuando  
+de una instalación con Qemu. Este es el escenario habitual, que uno, se encuentra cuando  
 trabaja desde la cónsola, con sus ventajas e inconvenientes ...
 
-Si no me equivoco, y como estoy haciendo esta página para mi uso personal no exclusivo:
-las técnicas que describiré a continuación, pueden llevarse a cabo sobre particiones con
-formato de disco usease formateadas: ejem Ext3, NTFS, FAT32 etc. o sobre una imagén sin 
+Si no me equivoco, y como estoy haciendo esta página para mi uso personal no exclusivo:  
+las técnicas que describiré a continuación, pueden llevarse a cabo sobre particiones con  
+formato de disco usease formateadas: ejem Ext3, NTFS, FAT32 etc. o sobre una imagén sin  
 una partición en concreto.
 
-Esto quiere decir, que puede montarse una copia de "respaldo" de GuildWars, en una imagen lo
-suficientemente grande para contener ambos disco. Sin necesidad de crear una partición
+Esto quiere decir, que puede montarse una copia de "respaldo" de GuildWars, en una imagen lo  
+suficientemente grande para contener ambos discos. Sin necesidad de crear una partición  
 dentro de la imagen.
 
 Debo hacer la comprovación oportuna... pero para que me sirva de guía escribo esto como 
