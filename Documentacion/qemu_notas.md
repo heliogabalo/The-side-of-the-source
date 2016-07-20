@@ -85,6 +85,8 @@ específicas, qemu es capaz de interpretar una gran variedad de
 ---
 ## TRABAJAR CON UNA COPIA DE IMAGEN ##
 
+#### Backing_files/overlays
+
 La principal idea aquí, es la 'copia de seguridad'. Una vez se ha instalado el sistema  
 operativo, puede trabajarse con una copia de la imagen, resultado de la instalación.  
 Esto permite probar extensivamente un determinado GUEST, sin importar los cambios que  
@@ -92,7 +94,7 @@ hagamos, pues no serán aplicados al GUEST original, sino a la copia.
 
 Son necesarios dos pasos básicos:
 
-1. Cremaos una imagen 'qemu' con esta funcionalidad:  
+- Cremaos una imagen 'qemu' con esta funcionalidad:  
 
   ~~~
   $ qemu-img create -f qcow2 -o backing_file=winxp.img test01.img 1M  
@@ -110,7 +112,7 @@ Son necesarios dos pasos básicos:
   alternativo, pues de otro modo, perderemos todo el trabajo cuando borremos la  
   imagen.  
 
-2. La VM arranca con:  
+- La VM arranca con:  
   
   ~~~ 
   qemu -m 256 -hda test.img -kernel-kqemu & (obsoleto??)  
@@ -126,6 +128,10 @@ Por tanto la línea de entrada quedaría así:
 ~~~
 qemu-system-i386 -m 256 -hda copia(overlay).img -cdrom base_name(backing).img -boot __string__
 ~~~
+
+#### SnapShots
+
+> _to be continued_
 
 ---  
 ## CON O SIN CONEXION A INTERNET !! ##
