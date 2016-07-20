@@ -75,17 +75,17 @@ Son necesarios dos pasos básicos:
   $ qemu-img create -f qcow2 -o backing_file=winxp.img test01.img 1M  
   ~~~  
 
-Al llamar al 'backing_file' en el proceso de instalación de la image, qemu, parece  
-no reconocer direcciones fuera del directorio que contiene la imagen 'base'. Esto  
-quiere decir que para instalar la imagen en el backing file es necesario encontrarse  
-en el directorio contenedor.
-nota: mezcla las rutas absolutas/relativas.
-
-Con el comando 'backing_file' conseguimos establecer una copia 'base' que no será  
-alterada. Los cambios en el SUPUESTO sólo serán aplicados a la imagen copia.  
-Habrá que tener en cuenta el guardar los cambios aplicados dentro del entorno  
-alternativo, pues de otro modo, perderemos todo el tabajo cuando borremos la  
-imagen.  
+  Al llamar al 'backing_file' en el proceso de instalación de la image, qemu, parece  
+  no reconocer direcciones fuera del directorio que contiene la imagen 'base'. Esto  
+  quiere decir que para instalar la imagen en el backing file es necesario encontrarse  
+  en el directorio contenedor.
+  nota: mezcla las rutas absolutas/relativas.
+  
+  Con el comando 'backing_file' conseguimos establecer una copia 'base' que no será  
+  alterada. Los cambios en el SUPUESTO sólo serán aplicados a la imagen copia.  
+  Habrá que tener en cuenta el guardar los cambios aplicados dentro del entorno  
+  alternativo, pues de otro modo, perderemos todo el tabajo cuando borremos la  
+  imagen.  
 
 2. La VM arranca con:  
   
