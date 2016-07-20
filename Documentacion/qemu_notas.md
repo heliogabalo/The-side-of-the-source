@@ -12,13 +12,14 @@
   - 5.1 Lanzar la VM apuntando al servidor NBD
 6. EXPERIMENTAL
 
+---
 ## PROCESO DE INSTALACION DE UNA IMAGEN ##
 
  Bien sea porque tenemos el disco original (en este caso un SO windows)  
  o bien porque lo hayamos descargado, deberemos antes CREAR una imagen GUEST  
  con la que  QEMU, pueda trabajar.
 
-    1. Para esto primero creamos la imagen. Una "caja" vacía.
+    1. Para esto primero creamos la imagen. Una "caja" vacía.  
   ~~~
  qemu-img create -f qcow2 mi_imagen.img 1G
   ~~~
