@@ -143,7 +143,7 @@ El comando quedaría de esta manera:
   ~~~  
 qemu-system-_arch_ -net nic \  
   ... \  
-  -_mas opciones_  
+  _mas opciones_  
   ~~~  
 
 De esta forma la MAC de la VM tendrá un identificador por defecto. 
