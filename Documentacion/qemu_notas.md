@@ -28,137 +28,136 @@
  Aquí el flag "-f" indica el tipo de formato con el que será creada nuestra imagen (aún vacia).
  También indicamos el archivo imagen y el tamaño en Gigabytes.
 
- 2.- Instalación de SUPUESTO OS en la imágen previamente creada:  
+2. Instalación de SUPUESTO OS en la imágen previamente creada:  
   ```bash  
  qemu -m 256 -hda mi_imagen.img -cdrom winxpsp2.iso -boot d  
   ```
- Este comando anterior es un poco confuso.
-   - Habrá que sustituir "qemu" con el comando apropiado, en relación a la arquitectura
-   del sistema operativo GUEST con el que se vaya a trabajar. En este caso sería:
-   qemu-system-i386
-   - Nuevamente el flag -m indica la memoria RAM para el SUPUESTO SO.
-   - La siguiente opción -hda indica el archivo imagen donde vamos a instalar la imagen del SO.
-   - Sigue la opción -cdrom, parece indicar el dispositivo físico un 'CD', pero todo apunta
-   a que se trata de una denominación para diferenciarlo de la partición GUEST que acabamos
-   de crear. Es decir, que utilizaremos el mismo flag '-cdrom' para tratar con una imagen
-   descargada en el disco duro, o una imagen que previamente hayamos 'quemado' en un 'CD'.
-   La diferencia es que para utilizar un 'CD' a la hora de hacer la instalación en nuestra
-   'caja vacía' habrá que indicar la ruta hacia el dispositivo ejem. /dev/cdrom
-   La opción -boot d indica como 'cadena' la letra que será usada en el arranque del sistema.
-   Es exactamente igual a como interpreta la BIOS el 'orden' de arranque de sistema de nuestro 
-   HOST.
-   *  'a' y 'b' para la floppy
-   *  'c' para el disco duro
-   *  'd' para el CD-ROM
-   *  'n-p' arranque desde RED. Opcion muy interesente para un GUEST. Investigar!!!
-   Desde Linux, la cadena que representa el dispositivo de arranque, está muy claro,
-   (pues nosotros no usamos letras para esto). Así que 'c' claramente representa al
-   disco duro y 'd' a un CD-ROM.
-   Desde una perspectiva <Win@> habrá que asegurarse, pués windows utiliza letras para
-   denominar los dispositivos de almacenamiento. De momento a mi plin!
+Este comando anterior es un poco confuso.
+  - Habrá que sustituir "qemu" con el comando apropiado, en relación a la arquitectura
+  del sistema operativo GUEST con el que se vaya a trabajar. En este caso sería:
+  qemu-system-i386
+  - Nuevamente el flag -m indica la memoria RAM para el SUPUESTO SO.
+  - La siguiente opción -hda indica el archivo imagen donde vamos a instalar la imagen del SO.
+  - Sigue la opción -cdrom, parece indicar el dispositivo físico un 'CD', pero todo apunta
+  a que se trata de una denominación para diferenciarlo de la partición GUEST que acabamos
+  de crear. Es decir, que utilizaremos el mismo flag '-cdrom' para tratar con una imagen
+  descargada en el disco duro, o una imagen que previamente hayamos 'quemado' en un 'CD'.
+  La diferencia es que para utilizar un 'CD' a la hora de hacer la instalación en nuestra
+  'caja vacía' habrá que indicar la ruta hacia el dispositivo ejem. /dev/cdrom
+  La opción -boot d indica como 'cadena' la letra que será usada en el arranque del sistema.
+  Es exactamente igual a como interpreta la BIOS el 'orden' de arranque de sistema de nuestro 
+  HOST.
+  *  'a' y 'b' para la floppy
+  *  'c' para el disco duro
+  *  'd' para el CD-ROM
+  *  'n-p' arranque desde RED. Opcion muy interesente para un GUEST. Investigar!!!
+  Desde Linux, la cadena que representa el dispositivo de arranque, está muy claro,
+  (pues nosotros no usamos letras para esto). Así que 'c' claramente representa al
+  disco duro y 'd' a un CD-ROM.
+  Desde una perspectiva <Win@> habrá que asegurarse, pués windows utiliza letras para
+  denominar los dispositivos de almacenamiento. De momento a mi plin!
 
-   ------------------------------
+---
 ## TRABAJAR CON UNA COPIA DE IMAGEN ##
 
-   La principal idea aquí, es la 'copia de seguridad'. Una vez se ha instalado el sistema
-   operativo, puede trabajarse con una copia de la imagen, resultado de la instalación.
-   Esto permite probar extensivamente un determinado GUEST, sin importar los cambios que
-   hagamos, pues no serán aplicados al GUEST original, sino a la copia.
+La principal idea aquí, es la 'copia de seguridad'. Una vez se ha instalado el sistema
+operativo, puede trabajarse con una copia de la imagen, resultado de la instalación.
+Esto permite probar extensivamente un determinado GUEST, sin importar los cambios que
+hagamos, pues no serán aplicados al GUEST original, sino a la copia.
 
-   Son necesarios dos pasos básicos:
+Son necesarios dos pasos básicos:
 
-   1.- Cremaos una imagen 'qemu' con esta funcionalidad:
+1. Cremaos una imagen 'qemu' con esta funcionalidad:
 
-     <qemu-img create -f qcow2 -o backing_file=winxp.img test01.img 1M>
+  <qemu-img create -f qcow2 -o backing_file=winxp.img test01.img 1M>
 
-     Al llamar al 'backing_file' en el proceso de instalación de la image, qemu, parece 
-     no reconocer direcciones fuera del directorio que contiene la imagen 'base'. Esto 
-     quiere decir que para instalar la imagen en el backing file es necesario encontrarse 
-     en el directorio contenedor.
-     nota: mezcla las rutas absolutas/relativas.
-     
-     Con el comando 'backing_file' conseguimos establecer una copia 'base' que no será
-     alterada. Los cambios en el SUPUESTO sólo serán aplicados a la imagen copia.
-     Habrá que tener en cuenta el guardar los cambios aplicados dentro del entorno 
-     alternativo, pues de otro modo, perderemos todo el tabajo cuando borremos la 
-     imagen.
+Al llamar al 'backing_file' en el proceso de instalación de la image, qemu, parece 
+no reconocer direcciones fuera del directorio que contiene la imagen 'base'. Esto 
+quiere decir que para instalar la imagen en el backing file es necesario encontrarse 
+en el directorio contenedor.
+nota: mezcla las rutas absolutas/relativas.
 
-   2.- qemu -m 256 -hda test.img -kernel-kqemu & (obsoleto??)
-     -kemu-qkernel es un parámetro obsoleto no reconocido. He mirado en el Changelog de
-     la version instalada(-v2.6) pero no he encontrado ninguna referencia al respecto.
-     Podría ser que me pasase por alto.
-     Ademas, he tenido que forzar la instalación llamando a la imagen 'base' desde la 
-     linea de comando, igual que si hiciese una instalacion normal.
+Con el comando 'backing_file' conseguimos establecer una copia 'base' que no será
+alterada. Los cambios en el SUPUESTO sólo serán aplicados a la imagen copia.
+Habrá que tener en cuenta el guardar los cambios aplicados dentro del entorno 
+alternativo, pues de otro modo, perderemos todo el tabajo cuando borremos la 
+imagen.
 
-     Por tanto la línea de entrada quedaría así:
-     qemu-system-i386 -m 256 -hda copia(overlay).img -cdrom base_name(backing).img -boot <string>
+2. qemu -m 256 -hda test.img -kernel-kqemu & (obsoleto??)
+-kemu-qkernel es un parámetro obsoleto no reconocido. He mirado en el Changelog de
+la version instalada(-v2.6) pero no he encontrado ninguna referencia al respecto.
+Podría ser que me pasase por alto.
+Ademas, he tenido que forzar la instalación llamando a la imagen 'base' desde la 
+linea de comando, igual que si hiciese una instalacion normal.
 
-   -----------------------------------
+Por tanto la línea de entrada quedaría así:  
+~~~
+qemu-system-i386 -m 256 -hda copia(overlay).img -cdrom base_name(backing).img -boot <string>
+~~~
+---
 
-##   CON O SIN CONEXION A INTERNET !! ##
+## CON O SIN CONEXION A INTERNET !! ##
 
-   Añadiendo la opcion -net parametro <nic> qemu instala una tqrgeta virtual de red genérica.
+Añadiendo la opcion -net parametro <nic> qemu instala una tqrgeta virtual de red genérica.
 
-   El comando quedaría algo así:
+El comando quedaría algo así:
 
-   qemu-system-<arch> -net nic \
-     ... \
-     -<mas opciones>
-
-
-   De esta forma la MAC de la VM tendrá un identificador por defecto. 
-   Esto puede ser un inconveniente, si corremos mas de una máquina, y queremos tener acceso
-   a internet en todas ellas, puesto que la aplicación genera por defecto, siempre la 
-   misma MAC.# 
-
-   Para que esto no ocurra sebe indicarse un identificador. Reempaza las "X" con números 
-   decimales arbitrarios, pero recuerda conservar las primeras dos cifras, que hacen
-   referencia al id de fabricante(qemu)
-   
-   $ qemu-system-i386 -net nic,macaddr=52:54:XX:XX:XX:XX -net vde disk_image
-
-   Otro problema con el que nos encontraremos, es que la tarjeta virtual que estamos creando
-   tiene asociado otro compenente, una especie de CTR o conector que debe ser único para 
-   cada GEST.
-
-   Hay dos formas básicas de dotar a la VM con conexión a internet:
-
-     - Modo usuario (slirp)
-     - Modo Tap
-
-     Modo usuario:
-
-     -netdev user,id=mynet0,net=192.168.76.0/24,dhcpstart=192.168.76.9
-
-   ------------------------------
-   Notas: 
-     Al seguir éste segundo método de instalación, he podido comprobar que el proceso
-     de conectar el dispositivo y luego montar la unidad GUEST al mismo, lo hace qemu
-     automáticamente, por lo que el uso de los scripts de arranque y parada que he
-     escrito, son poco útiles. Cuidado NO UTILIZAR, para evitar duplicados. 
-
-     Cabe pensar que para el proceso de arranque de una VM, habrá que confeccionar otros
-     scripts específicos, con los que poder dar más opciones al sistema GUEST.
-
-     También es razonable pensar en virtualizar aplicaciones aisladas. Es posible que La
-     Guest solo pueda comunicarse con otra GUEST. Habrá que averiguar si es posible acceder
-     u una partición fuera de VM!!
-
-     Otra idea es probar qemu-ga. Éste es un demonio que funciona desde dentro de la
-     SUPUESTA, así que en teoría, el host via injection/algo puede gestionar la particion
-     de la VM, pero habrá que averiguar que tipo de operaciones puede hacer GUEST-AGENT.
-
-     La idea es mantener la VM simple, ya que por razones obvias, esto mejora su 
-     rendimiento, además el objeto de estas 'maquinas' es romperlas. Y ya se 
-     sabe que pasa cuando uno entra a cuchillo en algún lado(sin saber)...
-     Por otro lado puede que me convenga retomar la programación con Ogre3D. 
-     (en Linux es un DESASTRE!!).
+qemu-system-<arch> -net nic \
+  ... \
+  -<mas opciones>
 
 
-###############################################################
-###############################################################
+De esta forma la MAC de la VM tendrá un identificador por defecto. 
+Esto puede ser un inconveniente, si corremos mas de una máquina, y queremos tener acceso
+a internet en todas ellas, puesto que la aplicación genera por defecto, siempre la 
+misma MAC. 
 
-   COMO MONTAR UN LOOPBACK PARA COMUNICARNOS CON LA VM SIN CONEXION
+Para que esto no ocurra sebe indicarse un identificador. Reempaza las "X" con números 
+decimales arbitrarios, pero recuerda conservar las primeras dos cifras, que hacen
+referencia al id de fabricante(qemu).  
+~~~
+$ qemu-system-i386 -net nic,macaddr=52:54:XX:XX:XX:XX -net vde disk_image
+~~~
+Otro problema con el que nos encontraremos, es que la tarjeta virtual que estamos creando
+tiene asociado otro compenente, una especie de CTR o conector que debe ser único para 
+cada GEST.
+
+Hay dos formas básicas de dotar a la VM con conexión a internet:
+
+  - Modo usuario (slirp)
+  - Modo Tap
+
+####Modo usuario:
+
+-netdev user,id=mynet0,net=192.168.76.0/24,dhcpstart=192.168.76.9
+
+ ------------------------------
+ Notas: 
+   Al seguir éste segundo método de instalación, he podido comprobar que el proceso
+   de conectar el dispositivo y luego montar la unidad GUEST al mismo, lo hace qemu
+   automáticamente, por lo que el uso de los scripts de arranque y parada que he
+   escrito, son poco útiles. Cuidado NO UTILIZAR, para evitar duplicados. 
+
+   Cabe pensar que para el proceso de arranque de una VM, habrá que confeccionar otros
+   scripts específicos, con los que poder dar más opciones al sistema GUEST.
+
+   También es razonable pensar en virtualizar aplicaciones aisladas. Es posible que La
+   Guest solo pueda comunicarse con otra GUEST. Habrá que averiguar si es posible acceder
+   u una partición fuera de VM!!
+
+   Otra idea es probar qemu-ga. Éste es un demonio que funciona desde dentro de la
+   SUPUESTA, así que en teoría, el host via injection/algo puede gestionar la particion
+   de la VM, pero habrá que averiguar que tipo de operaciones puede hacer GUEST-AGENT.
+
+   La idea es mantener la VM simple, ya que por razones obvias, esto mejora su 
+   rendimiento, además el objeto de estas 'maquinas' es romperlas. Y ya se 
+   sabe que pasa cuando uno entra a cuchillo en algún lado(sin saber)...
+   Por otro lado puede que me convenga retomar la programación con Ogre3D. 
+   (en Linux es un DESASTRE!!).
+
+
+###
+## COMO MONTAR UN LOOPBACK PARA COMUNICARNOS CON LA VM SIN CONEXION
 
   Mounting Disk Image by Calculating Partition Offset
 
@@ -213,9 +212,9 @@
 
 
 
-###############################################################
+###
                   E X P E R I M E N T A L                     #
-###############################################################
+###
    
    VIRTIO -- https://wiki.archlinux.org/index.php/QEMU#qxl
    
@@ -376,24 +375,24 @@ todo caso. Recuerda que para llevar a cabo este tipo de operaciones en
    qemu-nbd --connect=/dev/nbd0 --format=VHDX <vhdx_file_name>
    ddrescue --verbose --force /dev/nbd0 /dev/sda  # write image to /dev/sda
 
-# Write one partition: 
+#### Write one partition: 
 
    nbd --partition=2 --read-only --connect=/dev/nbd2 --format=vpc <vhd_file_name> 
    ddrescue --verbose --force /dev/nbd2 /dev/sda2 # write partition 2 of image to /dev/sda2
 
-# Mount partition:
+#### Mount partition:
 
   qemu-nbd --partition=2 --read-only --connect=/dev/nbd2 --format=vpc <vhd_file_name>
   mount /dev/nbd2 /mnt 
 
-# Unmount and disconnect image file:
+#### Unmount and disconnect image file:
 
   umount /mnt 
   qemu-nbd --disconnect /dev/nbd2
 
-# To convert a vhd image to raw (less usable)
+#### To convert a vhd image to raw (less usable)
 
 qemu-img convert -f raw -O vpc something.img something.vhd
 
-## To convert a vhd image to cow2 (the up to date qemu format)
+#### To convert a vhd image to cow2 (the up to date qemu format)
 qemu-img convert -f qcow2 -O vpc something.img something.vhd
