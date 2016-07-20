@@ -26,7 +26,7 @@
  Aquí el flag "-f" indica el tipo de formato con el que será creada nuestra imagen (aún vacia).
  También indicamos el archivo imagen y el tamaño en Gigabytes.
 
- 2.- Instalación de SUPUESTO OS en la imágen previamente creada:
+ 2.- Instalación de SUPUESTO OS en la imágen previamente creada:  
   ´´´bash  
  qemu -m 256 -hda mi_imagen.img -cdrom winxpsp2.iso -boot d  
   ´´´
