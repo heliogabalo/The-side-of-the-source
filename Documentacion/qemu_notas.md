@@ -1,7 +1,7 @@
 
  1. ###### PROCESO DE INSTALACION DE UNA IMAGEN
-    1.1 Crear imagen
-    1.2 Convetir imagen
+    1. Crear imagen
+    1. ###### Convetir imagen
 
 #### 2. TRABAJAR CON UNA COPIA DE IMAGEN
 ####   2.1 Backing-files/overlays
