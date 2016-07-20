@@ -200,9 +200,28 @@ En determidas ocasiones, la máquina virtual no tiene conexión a internet. Es e
 de una instalación con Qemu. Este el escenario habitual, que uno, se encuentra cuando  
 trabaja desde la cónsola, con sus ventajas e inconvenientes ...
 
+Si no me equivoco, y como estoy haciendo esta página para mi uso personal no exclusivo:
+las técnicas que describiré a continuación, pueden llevarse a cabo sobre particiones con
+formato de disco usease formateadas: ejem Ext3, NTFS, FAT32 etc. o sobre una imagén sin 
+una partición en concreto.
+
+Esto quiere decir, que puede montarse una copia de "respaldo" de GuildWars, en una imagen lo
+suficientemente grande para contener ambos disco. Sin necesidad de crear una partición
+dentro de la imagen.
+
+Debo hacer la comprovación oportuna... pero para que me sirva de guía escribo esto como 
+nota[borrar]. Si _no_ se crea una partición en la imagen(la VM), los datos podrán ser montados
+sobre cualquier formato, nuevamente Ext2, Fat16 ... 
+
+Sin embargo, si tenemos alojadas particiones dentro de la imagen, únicamente podremos
+montarlas en formato raw(crudo en inglés). Esto es para que qemu pueda manejarlas.
+
 
 Hay varias técnicas para llevarlo a cabo: 
 #### Mediante el montaje de una imagen, directamente en el disco duro. 
+ 
+
+
 
   Mounting Disk Image by Calculating Partition Offset
 
