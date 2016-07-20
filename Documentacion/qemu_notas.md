@@ -141,7 +141,7 @@ Añadiendo la opcion -net parametro _nic_, qemu instala una targeta virtual de r
 El comando quedaría algo así:
 
   ~~~  
-qemu-system- _arch_ -net nic ...  
+qemu-system-(arch) -net nic ...  
   ~~~  
 
 De esta forma la MAC de la VM tendrá un identificador por defecto.  
@@ -149,14 +149,14 @@ Esto puede ser un inconveniente, si corremos mas de una máquina, y queremos ten
 a internet en todas ellas, puesto que la aplicación genera por defecto, siempre la  
 misma MAC. 
 
-Para que esto no ocurra sebe indicarse un identificador. Reempaza las "X" con números 
-hexadecimales arbitrarios, pero recuerda conservar las primeras dos cifras, que hacen
+Para que esto no ocurra sebe indicarse un identificador. Reempaza las "X" con números  
+hexadecimales arbitrarios, pero recuerda conservar las primeras dos cifras, que hacen  
 referencia al id de fabricante(qemu).  
-~~~
+  ~~~
 $ qemu-system-i386 -net nic,macaddr=52:54:XX:XX:XX:XX -net vde disk_image
-~~~
-Otro problema con el que nos encontraremos, es que la tarjeta virtual que estamos creando
-tiene asociado otro compenente, una especie de CTR o conector que debe ser único para 
+  ~~~
+Otro problema con el que nos encontraremos, es que la tarjeta virtual que estamos creando  
+tiene asociado otro compenente, una especie de CTR o conector que debe ser único para  
 cada GEST.
 
 Hay dos formas básicas de dotar a la VM con conexión a internet:
@@ -170,13 +170,6 @@ Hay dos formas básicas de dotar a la VM con conexión a internet:
 
  ------------------------------
  Notas: 
-   Al seguir éste segundo método de instalación, he podido comprobar que el proceso
-   de conectar el dispositivo y luego montar la unidad GUEST al mismo, lo hace qemu
-   automáticamente, por lo que el uso de los scripts de arranque y parada que he
-   escrito, son poco útiles. Cuidado NO UTILIZAR, para evitar duplicados. 
-
-   Cabe pensar que para el proceso de arranque de una VM, habrá que confeccionar otros
-   scripts específicos, con los que poder dar más opciones al sistema GUEST.
 
    También es razonable pensar en virtualizar aplicaciones aisladas. Es posible que La
    Guest solo pueda comunicarse con otra GUEST. Habrá que averiguar si es posible acceder
@@ -194,6 +187,17 @@ Hay dos formas básicas de dotar a la VM con conexión a internet:
 
 
 ## COMO MONTAR UN LOOPBACK PARA COMUNICARNOS CON LA VM SIN CONEXION
+La traducción de loopback significa: bucle hacia atrás(ma o meno), o 'camino de 
+regreso'. La idea es utilizar una partición o disco, que se encuentra fuera de la
+imagen de la VM.
+
+Antes de seguir, debo recordar que las operaciones con particiones y sobre módulos
+que afectan directamente al _kernel_, hay que hacerlas con permisos de administrador.
+Por precaución, siempre es recomendable hacer este tipo de opereaciones con la 
+VM apagada. De otra forma, se corre el riesgo de corromper los datos la imagen.
+
+Hay varias técnicas para llevar a cabo esto: 
+#### Mediante el montaje de una imagen, directamente en el disco duro. 
 
   Mounting Disk Image by Calculating Partition Offset
 
