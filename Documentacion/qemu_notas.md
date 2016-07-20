@@ -101,7 +101,8 @@ Son necesarios dos pasos básicos:
 > Al llamar al 'backing_file' en el proceso de instalación de la image, qemu, parece  
 > no reconocer direcciones fuera del directorio que contiene la imagen 'base'. Esto  
 > quiere decir que para instalar la imagen en el backing file es necesario encontrarse  
-> en el directorio contenedor: mezcla las rutas absolutas/relativas.
+> en el directorio contenedor: mezcla las rutas absolutas/relativas.  
+
 
     Con el comando 'backing_file' conseguimos establecer una copia 'base' que no será  
     alterada. Los cambios en el SUPUESTO sólo serán aplicados a la imagen copia.  
@@ -115,11 +116,11 @@ Son necesarios dos pasos básicos:
   qemu -m 256 -hda test.img -kernel-kqemu & (obsoleto??)  
   ~~~  
 
-__-kemu-qkernel__ es un parámetro obsoleto no reconocido. He mirado en el Changelog de  
-la version instalada(-v2.6) pero no he encontrado ninguna referencia al respecto.  
-Podría ser que me pasase por alto.  
-Ademas, he tenido que forzar la instalación llamando a la imagen 'base' desde la  
-linea de comando, igual que si hiciese una instalacion normal.  
+> _-kemu-qkernel_ es un parámetro obsoleto no reconocido. He mirado en el Changelog de  
+> la version instalada(-v2.6) pero no he encontrado ninguna referencia al respecto.  
+> Podría ser que me pasase por alto.  
+> Ademas, he tenido que forzar la instalación llamando a la imagen 'base' desde la  
+> linea de comando, igual que si hiciese una instalacion normal.  
 
 Por tanto la línea de entrada quedaría así:  
 ~~~
