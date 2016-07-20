@@ -140,11 +140,11 @@ Añadiendo la opcion -net parametro _nic_, qemu instala una targeta virtual de r
 
 El comando quedaría de esta manera:
 
-    ~~~  
-qemu-system-_arch_ -net nic \
-  ... \
-  -_mas opciones_
-    ~~~  
+  ~~~  
+qemu-system-_arch_ -net nic \  
+  ... \  
+  -_mas opciones_  
+  ~~~  
 
 De esta forma la MAC de la VM tendrá un identificador por defecto. 
 Esto puede ser un inconveniente, si corremos mas de una máquina, y queremos tener acceso
