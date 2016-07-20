@@ -1,7 +1,7 @@
 
-    ##PROCESO DE INSTALACION DE UNA IMAGEN
-     ### - Crear imagen
-      - Convetir imagen
+    ## PROCESO DE INSTALACION DE UNA IMAGEN ##
+     ### - Crear imagen ###
+     ### - Convetir imagen ###
 
     TRABAJAR CON UNA COPIA DE IMAGEN
       - Backing-files/overlays
