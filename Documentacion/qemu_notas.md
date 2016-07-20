@@ -19,7 +19,8 @@
  o bien porque lo hayamos descargado, deberemos antes CREAR una imagen GUEST  
  con la que  QEMU, pueda trabajar.
 
-    1. Para esto primero creamos la imagen. Una "caja" vacía.  
+1. Para esto primero creamos la imagen. Una "caja" vacía. 
+ 
   ~~~
  qemu-img create -f qcow2 mi_imagen.img 1G
   ~~~
