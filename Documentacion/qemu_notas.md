@@ -66,7 +66,7 @@ denominar los dispositivos de almacenamiento.
 Por qué convertir imágenes antes de instalarlas:  
 
   ~~~
-  # qemu-img convert -f source.vhd -O qcow2 destination.qcow2  
+  # qemu-img convert -f vhd -O qcow2 source.vhd destination.qcow2  
   ~~~
 > Es posible que la instrucción no funcione correctamente debido a algún  
 > cambio en la version utilizada con _qemu_. Este otro comando debería funcionar.  
@@ -215,6 +215,13 @@ sobre cualquier formato, nuevamente Ext2, Fat16 ...
 
 Sin embargo, si tenemos alojadas particiones dentro de la imagen, únicamente podremos
 montarlas en formato raw(crudo en inglés). Esto es para que qemu pueda manejarlas.
+
+En este último caso, convertir la imagen al formato apropiado es cuestion de usar
+el binario de qemu para tal efecto:
+
+En este caso como trabajaremos sobre una imagen ISO, parece apropiado seguir los pasos  
+descritos al principio del artículo. Crear la caja vaía, y escribirla en el formato 
+apropiado.
 
 
 Hay varias técnicas para llevarlo a cabo: 
