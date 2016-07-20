@@ -15,6 +15,8 @@
 ---
 ## PROCESO DE INSTALACION DE UNA IMAGEN ##
 
+#### Crear imagen
+
 Bien sea porque tenemos el disco original (en este caso un SO windows)  
 o bien porque lo hayamos descargado, deberemos antes CREAR una imagen GUEST  
 con la que  QEMU, pueda trabajar.
@@ -59,6 +61,30 @@ disco duro y 'd' a un CD-ROM.
 Desde una perspectiva Windows, habrá que asegurarse. Pués windows utiliza letras para  
 denominar los dispositivos de almacenamiento.
 
+#### Convertir imagen
+
+Por qué convertir imágenes antes de instalarlas:  
+
+  ~~~
+  # qemu-img convert -f source.vhd -O qcow2 destination.qcow2  
+  ~~~
+> Es posible que la instrucción no funcione correctamente debido a algún 
+> cambio en la version utilizada con _qemu_.Este otro comando debería funcionar.  
+
+  ~~~
+  qemu-img convert -O qcow2 filename file_output  (autodetectada??)  
+  ~~~
+
+
+Qemu tiene el conversor de imagenes mas versatil, en relación a otros emuladores.
+Esto lo convierte en una herramienta indispensable a la hora de trabajar con VMs.
+Así como otros emuladores, presentan limitaciones a la hora de trabajar con imagenes
+específicas, qemu es capaz de interpretar una gran variedad de
+éstas, además de poseer un tipo genérico 'raw' donde converge con otras 'versiones'.
+
+
+
+
 ---
 ## TRABAJAR CON UNA COPIA DE IMAGEN ##
 
@@ -81,11 +107,11 @@ Son necesarios dos pasos básicos:
 > en el directorio contenedor.  
 > __nota__: mezcla las rutas absolutas/relativas.
 
-Con el comando 'backing_file' conseguimos establecer una copia 'base' que no será  
-alterada. Los cambios en el SUPUESTO sólo serán aplicados a la imagen copia.  
-Habrá que tener en cuenta el guardar los cambios aplicados dentro del entorno  
-alternativo, pues de otro modo, perderemos todo el tabajo cuando borremos la  
-imagen.  
+  Con el comando 'backing_file' conseguimos establecer una copia 'base' que no será  
+  alterada. Los cambios en el SUPUESTO sólo serán aplicados a la imagen copia.  
+  Habrá que tener en cuenta el guardar los cambios aplicados dentro del entorno  
+  alternativo, pues de otro modo, perderemos todo el tabajo cuando borremos la  
+  imagen.  
 
 2. La VM arranca con:  
   
@@ -107,7 +133,7 @@ qemu-system-i386 -m 256 -hda copia(overlay).img -cdrom base_name(backing).img -b
 ---  
 ## CON O SIN CONEXION A INTERNET !! ##
 
-Añadiendo la opcion -net parametro <nic> qemu instala una tqrgeta virtual de red genérica.
+Añadiendo la opcion -net parametro _nic_ qemu instala una targeta virtual de red genérica.
 
 El comando quedaría algo así:
 
@@ -165,7 +191,6 @@ Hay dos formas básicas de dotar a la VM con conexión a internet:
    (en Linux es un DESASTRE!!).
 
 
-###
 ## COMO MONTAR UN LOOPBACK PARA COMUNICARNOS CON LA VM SIN CONEXION
 
   Mounting Disk Image by Calculating Partition Offset
@@ -222,7 +247,7 @@ Hay dos formas básicas de dotar a la VM con conexión a internet:
 
 
 ###
-                  E X P E R I M E N T A L                     #
+                  E X P E R I M E N T A L                     
 ###
    
    VIRTIO -- https://wiki.archlinux.org/index.php/QEMU#qxl
@@ -233,12 +258,12 @@ Hay dos formas básicas de dotar a la VM con conexión a internet:
  QEMU offers guests the ability to use paravirtualized block and network devices using the virtio
  drivers, which provide better performance and lower overhead.
  
- A virtio block device requires the option -drive instead of the simple -hd* plus if=virtio:
+ A virtio block device requires the option -drive instead of the simple -hdX plus if=virtio:
  
      $ qemu-system-i386 -boot order=c -drive file=disk_image,if=virtio
  
  Note: -boot order=c is absolutely necessary when you want to boot from it. There is no 
- auto-detection as with -hd*.
+ auto-detection as with -hdX
  
  Abmos  the same goes for the network:
  
@@ -292,21 +317,7 @@ todo caso. Recuerda que para llevar a cabo este tipo de operaciones en
 ###############################################################
 ###############################################################
 
- Por qué convertir imágenes antes de instalarlas:
- 
- qemu-img convert -f source.vhd -O qcow2 destination.qcow2
- 
- - Parece que ha habido algún problemilla con la nomenclatura del comando
- La siguiente devuelve la imagen convertida, sin ningún error desde fd2.
 
-    < qemu-img convert -O qcow2 filename file_output > (autodetectada??)
-
-
- Qemu tiene el conversor de imagenes mas versatil, en relación a otros emuladores.
- Esto lo convierte en una herramienta indispensable a la hora de trabajar con VMs.
- Así como otros emuladores, presentan limitaciones a la hora de trabajar con imagenes
- específicas (extension del archivo) qemu es capaz de interpretar una gran variedad de
- éstas, además de poseer un tipo genérico 'raw' donde converge con otras 'versiones'.
 
 
 
