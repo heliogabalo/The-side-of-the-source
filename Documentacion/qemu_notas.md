@@ -15,10 +15,10 @@
 ## PROCESO DE INSTALACION DE UNA IMAGEN ##
 
  Bien sea porque tenemos el disco original (en este caso un SO windows)  
- o bien porque lo hayamos descargado, deberemos antes CREAR una imagen GUEST
+ o bien porque lo hayamos descargado, deberemos antes CREAR una imagen GUEST  
  con la que  QEMU, pueda trabajar.
 
- 1.- Para esto primero creamos la imagen. Una "caja" vacía.
+    1. Para esto primero creamos la imagen. Una "caja" vacía.
   ~~~
  qemu-img create -f qcow2 mi_imagen.img 1G
   ~~~
@@ -27,9 +27,9 @@
  También indicamos el archivo imagen y el tamaño en Gigabytes.
 
  2.- Instalación de SUPUESTO OS en la imágen previamente creada:
-
+´´´bash
  qemu -m 256 -hda mi_imagen.img -cdrom winxpsp2.iso -boot d
-
+´´´
  Este comando anterior es un poco confuso.
    - Habrá que sustituir "qemu" con el comando apropiado, en relación a la arquitectura
    del sistema operativo GUEST con el que se vaya a trabajar. En este caso sería:
