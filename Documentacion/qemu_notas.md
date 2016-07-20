@@ -27,9 +27,9 @@
  También indicamos el archivo imagen y el tamaño en Gigabytes.
 
  2.- Instalación de SUPUESTO OS en la imágen previamente creada:
-´´´bash
- qemu -m 256 -hda mi_imagen.img -cdrom winxpsp2.iso -boot d
-´´´
+  ´´´bash  
+ qemu -m 256 -hda mi_imagen.img -cdrom winxpsp2.iso -boot d  
+  ´´´
  Este comando anterior es un poco confuso.
    - Habrá que sustituir "qemu" con el comando apropiado, en relación a la arquitectura
    del sistema operativo GUEST con el que se vaya a trabajar. En este caso sería:
