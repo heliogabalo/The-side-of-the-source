@@ -88,9 +88,11 @@ alternativo, pues de otro modo, perderemos todo el tabajo cuando borremos la
 imagen.  
 
 2. La VM arranca con:  
+  
   ~~~ 
   qemu -m 256 -hda test.img -kernel-kqemu & (obsoleto??)  
-  ~~~
+  ~~~  
+
 __-kemu-qkernel__ es un parámetro obsoleto no reconocido. He mirado en el Changelog de
 la version instalada(-v2.6) pero no he encontrado ninguna referencia al respecto.
 Podría ser que me pasase por alto.
