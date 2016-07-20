@@ -14,7 +14,7 @@
 
 ## PROCESO DE INSTALACION DE UNA IMAGEN ##
 
- Bien sea porque tenemos el disco original (en este caso un SO windows)
+ Bien sea porque tenemos el disco original (en este caso un SO windows)  
  o bien porque lo hayamos descargado, deberemos antes CREAR una imagen GUEST
  con la que  QEMU, pueda trabajar.
 
