@@ -19,7 +19,7 @@ Bien sea porque tenemos el disco original (en este caso un SO windows)
 o bien porque lo hayamos descargado, deberemos antes CREAR una imagen GUEST  
 con la que  QEMU, pueda trabajar.
 
-1. Para esto primero creamos la imagen. Una "caja" vacía. 
+- Para esto primero creamos la imagen. Una "caja" vacía. 
    
   ~~~
  qemu-img create -f qcow2 mi_imagen.img 1G
@@ -28,7 +28,7 @@ con la que  QEMU, pueda trabajar.
  Aquí el flag "-f" indica el tipo de formato con el que será creada nuestra imagen (aún vacia).
  También indicamos el archivo imagen y el tamaño en Gigabytes.
 
-2. Instalación de SUPUESTO OS en la imágen previamente creada:  
+- Instalación de SUPUESTO OS en la imágen previamente creada:  
   ```bash  
  qemu -m 256 -hda mi_imagen.img -cdrom winxpsp2.iso -boot d  
   ```
@@ -43,16 +43,16 @@ del SO.
 apunta a que se trata de una denominación para diferenciarlo de la partición GUEST  
 que acabamos de crear. Es decir, que utilizaremos el mismo flag '-cdrom' para tratar  
 con una imagen descargada en el disco duro, o una imagen que previamente hayamos  
- 'quemado' en un 'CD'.  
+'quemado' en un 'CD'.  
 La diferencia es que para utilizar un 'CD' a la hora de hacer la instalación en  
 nuestra 'caja vacía' habrá que indicar la ruta hacia el dispositivo ejem. /dev/cdrom  
 La opción -boot d indica como 'cadena' la letra que será usada en el arranque del sistema.  
 Es exactamente igual a como interpreta la BIOS el 'orden' de arranque de sistema de  
 nuestro HOST.  
-  - 'a' y 'b' para la floppy
-  - 'c' para el disco duro
-  - 'd' para el CD-ROM
-  - 'n-p' arranque desde RED. Opcion muy interesente para un GUEST. Investigar!!!  
+  'a' y 'b' para la floppy
+  'c' para el disco duro
+  'd' para el CD-ROM
+  'n-p' arranque desde RED. Opcion muy interesente para un GUEST. Investigar!!!  
 Desde Linux, la cadena que representa el dispositivo de arranque, está muy claro,  
 (pues nosotros no usamos letras para esto). Así que 'c' claramente representa al  
 disco duro y 'd' a un CD-ROM.  
@@ -75,17 +75,17 @@ Son necesarios dos pasos básicos:
   $ qemu-img create -f qcow2 -o backing_file=winxp.img test01.img 1M  
   ~~~  
 
-  Al llamar al 'backing_file' en el proceso de instalación de la image, qemu, parece  
-  no reconocer direcciones fuera del directorio que contiene la imagen 'base'. Esto  
-  quiere decir que para instalar la imagen en el backing file es necesario encontrarse  
-  en el directorio contenedor.
-  nota: mezcla las rutas absolutas/relativas.
-  
-  Con el comando 'backing_file' conseguimos establecer una copia 'base' que no será  
-  alterada. Los cambios en el SUPUESTO sólo serán aplicados a la imagen copia.  
-  Habrá que tener en cuenta el guardar los cambios aplicados dentro del entorno  
-  alternativo, pues de otro modo, perderemos todo el tabajo cuando borremos la  
-  imagen.  
+> Al llamar al 'backing_file' en el proceso de instalación de la image, qemu, parece  
+> no reconocer direcciones fuera del directorio que contiene la imagen 'base'. Esto  
+> quiere decir que para instalar la imagen en el backing file es necesario encontrarse  
+> en el directorio contenedor.
+> __nota__: mezcla las rutas absolutas/relativas.
+
+Con el comando 'backing_file' conseguimos establecer una copia 'base' que no será  
+alterada. Los cambios en el SUPUESTO sólo serán aplicados a la imagen copia.  
+Habrá que tener en cuenta el guardar los cambios aplicados dentro del entorno  
+alternativo, pues de otro modo, perderemos todo el tabajo cuando borremos la  
+imagen.  
 
 2. La VM arranca con:  
   
@@ -93,11 +93,11 @@ Son necesarios dos pasos básicos:
   qemu -m 256 -hda test.img -kernel-kqemu & (obsoleto??)  
   ~~~  
 
-__-kemu-qkernel__ es un parámetro obsoleto no reconocido. He mirado en el Changelog de
-la version instalada(-v2.6) pero no he encontrado ninguna referencia al respecto.
-Podría ser que me pasase por alto.
-Ademas, he tenido que forzar la instalación llamando a la imagen 'base' desde la 
-linea de comando, igual que si hiciese una instalacion normal.
+__-kemu-qkernel__ es un parámetro obsoleto no reconocido. He mirado en el Changelog de  
+la version instalada(-v2.6) pero no he encontrado ninguna referencia al respecto.  
+Podría ser que me pasase por alto.  
+Ademas, he tenido que forzar la instalación llamando a la imagen 'base' desde la  
+linea de comando, igual que si hiciese una instalacion normal.  
 
 Por tanto la línea de entrada quedaría así:  
 ~~~
