@@ -49,10 +49,10 @@ nuestra 'caja vacía' habrá que indicar la ruta hacia el dispositivo ejem. /dev
 La opción -boot d indica como 'cadena' la letra que será usada en el arranque del sistema.  
 Es exactamente igual a como interpreta la BIOS el 'orden' de arranque de sistema de  
 nuestro HOST.  
-*  'a' y 'b' para la floppy
-*  'c' para el disco duro
-*  'd' para el CD-ROM
-*  'n-p' arranque desde RED. Opcion muy interesente para un GUEST. Investigar!!!  
+    * 'a' y 'b' para la floppy
+    * 'c' para el disco duro
+    * 'd' para el CD-ROM
+  * 'n-p' arranque desde RED. Opcion muy interesente para un GUEST. Investigar!!!  
 Desde Linux, la cadena que representa el dispositivo de arranque, está muy claro,  
 (pues nosotros no usamos letras para esto). Así que 'c' claramente representa al  
 disco duro y 'd' a un CD-ROM.  
