@@ -4,20 +4,20 @@
     2. Convetir imagen
 
 2. TRABAJAR CON UNA COPIA DE IMAGEN
-  - 2.1 Backing-files/overlays
-  - 2.2 Snapshots 
+    1. 2.1 Backing-files/overlays
+    2. Snapshots 
 3. CON O SIN CONEXION A INTERNET
 4. COMO MONTAR UN LOOPBACK PARA COMUNICARNOS CON LA VM SIN CONEXION
 5. LOOPBACK PARA UNA IMGEN (USANDO MODULOS EN EL KERNEL)
-  - 5.1 Lanzar la VM apuntando al servidor NBD
+    5. Lanzar la VM apuntando al servidor NBD
 6. EXPERIMENTAL
 
 ---
 ## PROCESO DE INSTALACION DE UNA IMAGEN ##
 
- Bien sea porque tenemos el disco original (en este caso un SO windows)  
- o bien porque lo hayamos descargado, deberemos antes CREAR una imagen GUEST  
- con la que  QEMU, pueda trabajar.
+Bien sea porque tenemos el disco original (en este caso un SO windows)  
+o bien porque lo hayamos descargado, deberemos antes CREAR una imagen GUEST  
+con la que  QEMU, pueda trabajar.
 
 1. Para esto primero creamos la imagen. Una "caja" vacía. 
  
@@ -33,29 +33,31 @@
  qemu -m 256 -hda mi_imagen.img -cdrom winxpsp2.iso -boot d  
   ```
 Este comando anterior es un poco confuso.
-  - Habrá que sustituir "qemu" con el comando apropiado, en relación a la arquitectura
-  del sistema operativo GUEST con el que se vaya a trabajar. En este caso sería:
-  qemu-system-i386
-  - Nuevamente el flag -m indica la memoria RAM para el SUPUESTO SO.
-  - La siguiente opción -hda indica el archivo imagen donde vamos a instalar la imagen del SO.
-  - Sigue la opción -cdrom, parece indicar el dispositivo físico un 'CD', pero todo apunta
-  a que se trata de una denominación para diferenciarlo de la partición GUEST que acabamos
-  de crear. Es decir, que utilizaremos el mismo flag '-cdrom' para tratar con una imagen
-  descargada en el disco duro, o una imagen que previamente hayamos 'quemado' en un 'CD'.
-  La diferencia es que para utilizar un 'CD' a la hora de hacer la instalación en nuestra
-  'caja vacía' habrá que indicar la ruta hacia el dispositivo ejem. /dev/cdrom
-  La opción -boot d indica como 'cadena' la letra que será usada en el arranque del sistema.
-  Es exactamente igual a como interpreta la BIOS el 'orden' de arranque de sistema de nuestro 
-  HOST.
-  *  'a' y 'b' para la floppy
-  *  'c' para el disco duro
-  *  'd' para el CD-ROM
-  *  'n-p' arranque desde RED. Opcion muy interesente para un GUEST. Investigar!!!
-  Desde Linux, la cadena que representa el dispositivo de arranque, está muy claro,
-  (pues nosotros no usamos letras para esto). Así que 'c' claramente representa al
-  disco duro y 'd' a un CD-ROM.
-  Desde una perspectiva <Win@> habrá que asegurarse, pués windows utiliza letras para
-  denominar los dispositivos de almacenamiento. De momento a mi plin!
+- Habrá que sustituir "qemu" con el comando apropiado, en relación a la arquitectura  
+del sistema operativo GUEST con el que se vaya a trabajar. En este caso sería:  
+qemu-system-i386
+- Nuevamente el flag -m indica la memoria RAM para el SUPUESTO SO.
+- La siguiente opción -hda indica el archivo imagen donde vamos a instalar la imagen  
+del SO.
+- Sigue la opción -cdrom, parece indicar el dispositivo físico un 'CD', pero todo  
+apunta a que se trata de una denominación para diferenciarlo de la partición GUEST  
+que acabamos de crear. Es decir, que utilizaremos el mismo flag '-cdrom' para tratar  
+con una imagen descargada en el disco duro, o una imagen que previamente hayamos  
+ 'quemado' en un 'CD'.  
+La diferencia es que para utilizar un 'CD' a la hora de hacer la instalación en  
+nuestra 'caja vacía' habrá que indicar la ruta hacia el dispositivo ejem. /dev/cdrom  
+La opción -boot d indica como 'cadena' la letra que será usada en el arranque del sistema.  
+Es exactamente igual a como interpreta la BIOS el 'orden' de arranque de sistema de  
+nuestro HOST.  
+*  'a' y 'b' para la floppy
+*  'c' para el disco duro
+*  'd' para el CD-ROM
+*  'n-p' arranque desde RED. Opcion muy interesente para un GUEST. Investigar!!!  
+Desde Linux, la cadena que representa el dispositivo de arranque, está muy claro,  
+(pues nosotros no usamos letras para esto). Así que 'c' claramente representa al  
+disco duro y 'd' a un CD-ROM.  
+Desde una perspectiva <Win@> habrá que asegurarse, pués windows utiliza letras para  
+denominar los dispositivos de almacenamiento.
 
 ---
 ## TRABAJAR CON UNA COPIA DE IMAGEN ##
@@ -67,24 +69,24 @@ hagamos, pues no serán aplicados al GUEST original, sino a la copia.
 
 Son necesarios dos pasos básicos:
 
-1. Cremaos una imagen 'qemu' con esta funcionalidad:
-
-  <qemu-img create -f qcow2 -o backing_file=winxp.img test01.img 1M>
-
-Al llamar al 'backing_file' en el proceso de instalación de la image, qemu, parece 
-no reconocer direcciones fuera del directorio que contiene la imagen 'base'. Esto 
-quiere decir que para instalar la imagen en el backing file es necesario encontrarse 
+1. Cremaos una imagen 'qemu' con esta funcionalidad:  
+  ~~~
+  $ qemu-img create -f qcow2 -o backing_file=winxp.img test01.img 1M  
+  ~~~
+Al llamar al 'backing_file' en el proceso de instalación de la image, qemu, parece  
+no reconocer direcciones fuera del directorio que contiene la imagen 'base'. Esto  
+quiere decir que para instalar la imagen en el backing file es necesario encontrarse  
 en el directorio contenedor.
 nota: mezcla las rutas absolutas/relativas.
 
-Con el comando 'backing_file' conseguimos establecer una copia 'base' que no será
-alterada. Los cambios en el SUPUESTO sólo serán aplicados a la imagen copia.
-Habrá que tener en cuenta el guardar los cambios aplicados dentro del entorno 
-alternativo, pues de otro modo, perderemos todo el tabajo cuando borremos la 
-imagen.
+Con el comando 'backing_file' conseguimos establecer una copia 'base' que no será  
+alterada. Los cambios en el SUPUESTO sólo serán aplicados a la imagen copia.  
+Habrá que tener en cuenta el guardar los cambios aplicados dentro del entorno  
+alternativo, pues de otro modo, perderemos todo el tabajo cuando borremos la  
+imagen.  
 
-2. qemu -m 256 -hda test.img -kernel-kqemu & (obsoleto??)
--kemu-qkernel es un parámetro obsoleto no reconocido. He mirado en el Changelog de
+2. qemu -m 256 -hda test.img -kernel-kqemu & (obsoleto??)  
+__-kemu-qkernel__ es un parámetro obsoleto no reconocido. He mirado en el Changelog de
 la version instalada(-v2.6) pero no he encontrado ninguna referencia al respecto.
 Podría ser que me pasase por alto.
 Ademas, he tenido que forzar la instalación llamando a la imagen 'base' desde la 
@@ -92,7 +94,7 @@ linea de comando, igual que si hiciese una instalacion normal.
 
 Por tanto la línea de entrada quedaría así:  
 ~~~
-qemu-system-i386 -m 256 -hda copia(overlay).img -cdrom base_name(backing).img -boot <string>
+qemu-system-i386 -m 256 -hda copia(overlay).img -cdrom base_name(backing).img -boot __string__
 ~~~
 ---
 
