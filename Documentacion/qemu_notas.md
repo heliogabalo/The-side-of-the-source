@@ -4,7 +4,7 @@
     2. Convetir imagen
 
 2. TRABAJAR CON UNA COPIA DE IMAGEN
-    1. 2.1 Backing-files/overlays
+    1. Backing-files/overlays
     2. Snapshots 
 3. CON O SIN CONEXION A INTERNET
 4. COMO MONTAR UN LOOPBACK PARA COMUNICARNOS CON LA VM SIN CONEXION
@@ -20,7 +20,7 @@ o bien porque lo hayamos descargado, deberemos antes CREAR una imagen GUEST
 con la que  QEMU, pueda trabajar.
 
 1. Para esto primero creamos la imagen. Una "caja" vacía. 
- 
+   
   ~~~
  qemu-img create -f qcow2 mi_imagen.img 1G
   ~~~
@@ -49,30 +49,32 @@ nuestra 'caja vacía' habrá que indicar la ruta hacia el dispositivo ejem. /dev
 La opción -boot d indica como 'cadena' la letra que será usada en el arranque del sistema.  
 Es exactamente igual a como interpreta la BIOS el 'orden' de arranque de sistema de  
 nuestro HOST.  
-    * 'a' y 'b' para la floppy
-    * 'c' para el disco duro
-    * 'd' para el CD-ROM
-  * 'n-p' arranque desde RED. Opcion muy interesente para un GUEST. Investigar!!!  
+  - 'a' y 'b' para la floppy
+  - 'c' para el disco duro
+  - 'd' para el CD-ROM
+  - 'n-p' arranque desde RED. Opcion muy interesente para un GUEST. Investigar!!!  
 Desde Linux, la cadena que representa el dispositivo de arranque, está muy claro,  
 (pues nosotros no usamos letras para esto). Así que 'c' claramente representa al  
 disco duro y 'd' a un CD-ROM.  
-Desde una perspectiva <Win@> habrá que asegurarse, pués windows utiliza letras para  
+Desde una perspectiva Windows, habrá que asegurarse. Pués windows utiliza letras para  
 denominar los dispositivos de almacenamiento.
 
 ---
 ## TRABAJAR CON UNA COPIA DE IMAGEN ##
 
-La principal idea aquí, es la 'copia de seguridad'. Una vez se ha instalado el sistema
-operativo, puede trabajarse con una copia de la imagen, resultado de la instalación.
-Esto permite probar extensivamente un determinado GUEST, sin importar los cambios que
+La principal idea aquí, es la 'copia de seguridad'. Una vez se ha instalado el sistema  
+operativo, puede trabajarse con una copia de la imagen, resultado de la instalación.  
+Esto permite probar extensivamente un determinado GUEST, sin importar los cambios que  
 hagamos, pues no serán aplicados al GUEST original, sino a la copia.
 
 Son necesarios dos pasos básicos:
 
 1. Cremaos una imagen 'qemu' con esta funcionalidad:  
+
   ~~~
   $ qemu-img create -f qcow2 -o backing_file=winxp.img test01.img 1M  
-  ~~~
+  ~~~  
+
 Al llamar al 'backing_file' en el proceso de instalación de la image, qemu, parece  
 no reconocer direcciones fuera del directorio que contiene la imagen 'base'. Esto  
 quiere decir que para instalar la imagen en el backing file es necesario encontrarse  
@@ -85,7 +87,10 @@ Habrá que tener en cuenta el guardar los cambios aplicados dentro del entorno
 alternativo, pues de otro modo, perderemos todo el tabajo cuando borremos la  
 imagen.  
 
-2. qemu -m 256 -hda test.img -kernel-kqemu & (obsoleto??)  
+2. La VM arranca con:  
+  ~~~ 
+  qemu -m 256 -hda test.img -kernel-kqemu & (obsoleto??)  
+  ~~~
 __-kemu-qkernel__ es un parámetro obsoleto no reconocido. He mirado en el Changelog de
 la version instalada(-v2.6) pero no he encontrado ninguna referencia al respecto.
 Podría ser que me pasase por alto.
@@ -96,8 +101,8 @@ Por tanto la línea de entrada quedaría así:
 ~~~
 qemu-system-i386 -m 256 -hda copia(overlay).img -cdrom base_name(backing).img -boot __string__
 ~~~
----
 
+---  
 ## CON O SIN CONEXION A INTERNET !! ##
 
 Añadiendo la opcion -net parametro <nic> qemu instala una tqrgeta virtual de red genérica.
