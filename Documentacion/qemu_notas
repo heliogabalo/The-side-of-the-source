@@ -1,4 +1,17 @@
-A
+
+    ##PROCESO DE INSTALACION DE UNA IMAGEN
+     ### - Crear imagen
+      - Convetir imagen
+
+    TRABAJAR CON UNA COPIA DE IMAGEN
+      - Backing-files/overlays
+      - Snapshots 
+    CON O SIN CONEXION A INTERNET
+    COMO MONTAR UN LOOPBACK PARA COMUNICARNOS CON LA VM SIN CONEXION
+    LOOPBACK PARA UNA IMGEN (USANDO MODULOS EN EL KERNEL)
+      - Lanzar la VM apuntando al servidor NBD
+    EXPERIMENTAL
+
 ################################################################
 ## PROCESO DE INSTALACION DE UNA IMAGEN
 #
@@ -45,7 +58,7 @@ A
 ## TRABAJAR CON UNA COPIA DE IMAGEN
 #
 #   La principal idea aquí, es la 'copia de seguridad'. Una vez se ha instalado el sistema
-#   operativo, puede trabajarse con una copia de la imagen, resultado de la instalación.#
+#   operativo, puede trabajarse con una copia de la imagen, resultado de la instalación.
 #   Esto permite probar extensivamente un determinado GUEST, sin importar los cambios que
 #   hagamos, pues no serán aplicados al GUEST original, sino a la copia.
 #
