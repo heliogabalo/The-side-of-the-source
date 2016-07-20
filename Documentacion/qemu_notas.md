@@ -131,7 +131,7 @@ qemu-system-i386 -m 256 -hda copia(overlay).img -cdrom base_name(backing).img -b
 
 #### SnapShots
 
-> _to be continued_
+> _to be continued_...
 
 ---  
 ## CON O SIN CONEXION A INTERNET !! ##
