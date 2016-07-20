@@ -51,10 +51,10 @@ nuestra 'caja vacía' habrá que indicar la ruta hacia el dispositivo ejem. /dev
 La opción -boot d indica como 'cadena' la letra que será usada en el arranque del sistema.  
 Es exactamente igual a como interpreta la BIOS el 'orden' de arranque de sistema de  
 nuestro HOST.  
-  'a' y 'b' para la floppy
-  'c' para el disco duro
-  'd' para el CD-ROM
-  'n-p' arranque desde RED. Opcion muy interesente para un GUEST. Investigar!!!  
+    - 'a' y 'b' para la floppy
+    - 'c' para el disco duro
+    - 'd' para el CD-ROM
+    - 'n-p' arranque desde RED. Opcion muy interesente para un GUEST. Investigar!!!  
 Desde Linux, la cadena que representa el dispositivo de arranque, está muy claro,  
 (pues nosotros no usamos letras para esto). Así que 'c' claramente representa al  
 disco duro y 'd' a un CD-ROM.  
@@ -68,7 +68,7 @@ Por qué convertir imágenes antes de instalarlas:
   ~~~
   # qemu-img convert -f source.vhd -O qcow2 destination.qcow2  
   ~~~
-> Es posible que la instrucción no funcione correctamente debido a algún 
+> Es posible que la instrucción no funcione correctamente debido a algún  
 > cambio en la version utilizada con _qemu_.Este otro comando debería funcionar.  
 
   ~~~
@@ -81,9 +81,6 @@ Esto lo convierte en una herramienta indispensable a la hora de trabajar con VMs
 Así como otros emuladores, presentan limitaciones a la hora de trabajar con imagenes
 específicas, qemu es capaz de interpretar una gran variedad de
 éstas, además de poseer un tipo genérico 'raw' donde converge con otras 'versiones'.
-
-
-
 
 ---
 ## TRABAJAR CON UNA COPIA DE IMAGEN ##
@@ -104,14 +101,13 @@ Son necesarios dos pasos básicos:
 > Al llamar al 'backing_file' en el proceso de instalación de la image, qemu, parece  
 > no reconocer direcciones fuera del directorio que contiene la imagen 'base'. Esto  
 > quiere decir que para instalar la imagen en el backing file es necesario encontrarse  
-> en el directorio contenedor.  
-> __nota__: mezcla las rutas absolutas/relativas.
+> en el directorio contenedor: mezcla las rutas absolutas/relativas.
 
-  Con el comando 'backing_file' conseguimos establecer una copia 'base' que no será  
-  alterada. Los cambios en el SUPUESTO sólo serán aplicados a la imagen copia.  
-  Habrá que tener en cuenta el guardar los cambios aplicados dentro del entorno  
-  alternativo, pues de otro modo, perderemos todo el tabajo cuando borremos la  
-  imagen.  
+    Con el comando 'backing_file' conseguimos establecer una copia 'base' que no será  
+    alterada. Los cambios en el SUPUESTO sólo serán aplicados a la imagen copia.  
+    Habrá que tener en cuenta el guardar los cambios aplicados dentro del entorno  
+    alternativo, pues de otro modo, perderemos todo el tabajo cuando borremos la  
+    imagen.  
 
 2. La VM arranca con:  
   
