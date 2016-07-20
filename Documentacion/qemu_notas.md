@@ -78,7 +78,7 @@ Son necesarios dos pasos básicos:
 > Al llamar al 'backing_file' en el proceso de instalación de la image, qemu, parece  
 > no reconocer direcciones fuera del directorio que contiene la imagen 'base'. Esto  
 > quiere decir que para instalar la imagen en el backing file es necesario encontrarse  
-> en el directorio contenedor.
+> en el directorio contenedor.  
 > __nota__: mezcla las rutas absolutas/relativas.
 
 Con el comando 'backing_file' conseguimos establecer una copia 'base' que no será  
