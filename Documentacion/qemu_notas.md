@@ -104,11 +104,11 @@ Son necesarios dos pasos básicos:
 > en el directorio contenedor: mezcla las rutas absolutas/relativas.  
 
 
-    Con el comando 'backing_file' conseguimos establecer una copia 'base' que no será  
-    alterada. Los cambios en el SUPUESTO sólo serán aplicados a la imagen copia.  
-    Habrá que tener en cuenta el guardar los cambios aplicados dentro del entorno  
-    alternativo, pues de otro modo, perderemos todo el trabajo cuando borremos la  
-    imagen.  
+  Con el comando 'backing_file' conseguimos establecer una copia 'base' que no será  
+  alterada. Los cambios en el SUPUESTO sólo serán aplicados a la imagen copia.  
+  Habrá que tener en cuenta el guardar los cambios aplicados dentro del entorno  
+  alternativo, pues de otro modo, perderemos todo el trabajo cuando borremos la  
+  imagen.  
 
 2. La VM arranca con:  
   
