@@ -1,4 +1,4 @@
-# 1
+# 0
 1. PROCESO DE INSTALACION DE UNA IMAGEN 
     1. Crear imagen
     2. Convetir imagen
@@ -16,10 +16,10 @@
 6. EXPERIMENTAL
 7. AGRADECIMIENTOS
 
-[1. PROCESO DE INSTALACION DE UNA IMAGEN]:(#1)
+[1. PROCESO DE INSTALACION DE UNA IMAGEN](#1)
 
 ---
-## PROCESO DE INSTALACION DE UNA IMAGEN ##  
+## PROCESO DE INSTALACION DE UNA IMAGEN   
 # 1
 #### Crear imagen
 
@@ -516,7 +516,6 @@ qemu-img convert -f qcow2 -O vpc something.img something.vhd
 ## AGRADECIMIENTOS
 
 Markdowns y otras recomendaciones --[Javier Cristóbal][Markdown] \- [productividad mac][limni]
-# 1
 
 
 
@@ -525,4 +524,4 @@ Markdowns y otras recomendaciones --[Javier Cristóbal][Markdown] \- [productivi
 ---
 [Markdown]: http://markdown.es/sintaxis-markdown/
 [limni]: http://limni.net/blog/
-[INDICE](#1)
+[INDICE](#0)
