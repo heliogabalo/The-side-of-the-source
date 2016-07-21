@@ -14,6 +14,7 @@
     2. LOOPBACK PARA UNA IMGEN (USANDO MODULOS EN EL KERNEL)  
       - Lanzar la VM apuntando al servidor NBD
 6. EXPERIMENTAL
+7. AGRADECIMIENTOS
 
 ---
 ## PROCESO DE INSTALACION DE UNA IMAGEN ##
@@ -440,13 +441,8 @@ qemu-img convert -f raw -O vpc something.img something.vhd
 #### To convert a vhd image to cow2 (the up to date qemu format)
 qemu-img convert -f qcow2 -O vpc something.img something.vhd
 
-###############################################################
+##                  E X P E R I M E N T A L                     
 
-
-
-###
-                  E X P E R I M E N T A L                     
-###
    
    VIRTIO -- https://wiki.archlinux.org/index.php/QEMU#qxl
    
@@ -470,3 +466,5 @@ qemu-img convert -f qcow2 -O vpc something.img something.vhd
  Note: This will only work if the guest machinethas drivers for virtio devices. Linux does, and the
  required drivers are included in Arch Linux, but there is no guarantee that virtio devices will work
  with other operating systems.
+
+## AGRADECIMIENTOS
