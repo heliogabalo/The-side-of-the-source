@@ -1,5 +1,5 @@
 # 1
-1. PROCESO DE INSTALACION DE UNA IMAGEN
+1. PROCESO DE INSTALACION DE UNA IMAGEN 
     1. Crear imagen
     2. Convetir imagen
 
@@ -16,9 +16,11 @@
 6. EXPERIMENTAL
 7. AGRADECIMIENTOS
 
----
-## PROCESO DE INSTALACION DE UNA IMAGEN ##
+[1. PROCESO DE INSTALACION DE UNA IMAGEN]:(#1)
 
+---
+## PROCESO DE INSTALACION DE UNA IMAGEN ##  
+# 1
 #### Crear imagen
 
 Bien sea porque tenemos el disco original (en este caso un SO windows)  
@@ -515,7 +517,6 @@ qemu-img convert -f qcow2 -O vpc something.img something.vhd
 
 Markdowns y otras recomendaciones --[Javier Cristóbal][Markdown] \- [productividad mac][limni]
 # 1
-    # 1
 
 
 
