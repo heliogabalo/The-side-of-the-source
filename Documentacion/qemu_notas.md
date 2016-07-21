@@ -165,25 +165,24 @@ Hay dos formas básicas de dotar a la VM con conexión a internet:
   - Modo Tap
 
 ####Modo usuario:
-
--netdev user,id=mynet0,net=192.168.76.0/24,dhcpstart=192.168.76.9
+  ~~~
+-netdev user,id=mynet0,net=192.168.76.0/24,dhcpstart=192.168.76.9  
+  ~~~
 
  ------------------------------
- Notas: 
-
-   También es razonable pensar en virtualizar aplicaciones aisladas. Es posible que La
-   Guest solo pueda comunicarse con otra GUEST. Habrá que averiguar si es posible acceder
-   u una partición fuera de VM!!
-
-   Otra idea es probar qemu-ga. Éste es un demonio que funciona desde dentro de la
-   SUPUESTA, así que en teoría, el host via injection/algo puede gestionar la particion
-   de la VM, pero habrá que averiguar que tipo de operaciones puede hacer GUEST-AGENT.
-
-   La idea es mantener la VM simple, ya que por razones obvias, esto mejora su 
-   rendimiento, además el objeto de estas 'maquinas' es romperlas. Y ya se 
-   sabe que pasa cuando uno entra a cuchillo en algún lado(sin saber)...
-   Por otro lado puede que me convenga retomar la programación con Ogre3D. 
-   (en Linux es un DESASTRE!!).
+> _Notas:_ 
+>
+>   También es razonable pensar en virtualizar aplicaciones aisladas. Es posible que La  
+>   Guest solo pueda comunicarse con otra GUEST. Habrá que averiguar si es posible acceder  
+>   u una partición fuera de VM!!  
+>
+>   Otra idea es probar qemu-ga. Éste es un demonio que funciona desde dentro de la  
+>   SUPUESTA, así que en teoría, el host via injection/algo puede gestionar la particion  
+>   de la VM, pero habrá que averiguar que tipo de operaciones puede hacer GUEST-AGENT.  
+>
+>   La idea es mantener la VM simple, ya que por razones obvias, esto mejora su  
+>   rendimiento, además el objeto de estas 'maquinas' es romperlas. Y ya se  
+>   sabe que pasa cuando uno entra a cuchillo en algún lado(sin saber)...  
 
 
 ## COMO MONTAR UN LOOPBACK PARA COMUNICARNOS CON LA VM SIN CONEXION
@@ -197,7 +196,7 @@ Por precaución, siempre es recomendable hacer este tipo de opereaciones con la
 VM apagada. De otra forma, se corre el riesgo de corromper los datos la imagen.  
 
 En determidas ocasiones, la máquina virtual no tiene conexión a internet. Es el caso  
-de una instalación con Qemu. Así que la mejor forma de comunicarnos con la VM es 
+de una instalación con Qemu. Así que la mejor forma de comunicarnos con la VM es  
 mediante la técnica del loopback.
 
 Si no me equivoco, y como estoy haciendo esta página para mi uso personal no exclusivo:  
@@ -232,10 +231,11 @@ Con esto conseguimos una copia en crudo, de la image ISO. Ya solo queda montarla
  $ file copia.raw  
   ~~~  
 Con esto comprobamos que efectivamente la copia en crudo a tenido éxito al terminar.  
-__nota:__ aquí va otra nota sobre el uso de los shasum y file, sobre la importancia  
-de hacer las comprobaciones oportunas en cuanto a imágenes descargadas. Y un especial  
-comentario acerca del cambio que se produce en un sha, cuando queremos montar una image  
-con permisos de escritura. IMPORTANTE INVESTIGAR!  
+  
+> __nota:__ aquí va otra nota sobre el uso de los shasum y file, sobre la importancia  
+> de hacer las comprobaciones oportunas en cuanto a imágenes descargadas. Y un especial  
+> comentario acerca del cambio que se produce en un sha, cuando queremos montar una image  
+> con permisos de escritura. IMPORTANTE INVESTIGAR!  
 
 #### Mediante el montaje de una imagen, directamente en el disco duro. 
  
