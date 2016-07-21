@@ -523,27 +523,53 @@ antes de
 [Markdown]: http://markdown.es/sintaxis-markdown/
 [limni]: http://limni.net/blog/
 
-# Foo
+#### Foo
+
+[titulo de algo aqui](#referencia)  
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
+s
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+1. <a name="referencia">Titulo de algo</a>  
 
 
 
