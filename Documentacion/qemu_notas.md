@@ -1,4 +1,4 @@
-1. PROCESO DE INSTALACION DE UNA IMAGEN 
+1. [PROCESO DE INSTALACION DE UNA IMAGEN](#i1) 
     1. Crear imagen  
     2. Convetir imagen
 
@@ -17,7 +17,7 @@
 
 
 ---
-## 1 PROCESO DE INSTALACION DE UNA IMAGEN  
+## 1. <a name="i1">PROCESO DE INSTALACION DE UNA IMAGEN</a>  
 
 #### Crear imagen
 
@@ -515,64 +515,18 @@ qemu-img convert -f qcow2 -O vpc something.img something.vhd
 
 Markdowns y otras recomendaciones --[Javier Cristóbal][Markdown] \- [productividad mac][limni]
 
-<a name="test"/>
-antes de
-</a>
 
 ---
 [Markdown]: http://markdown.es/sintaxis-markdown/
 [limni]: http://limni.net/blog/
 
-#### Foo
 
-1. [titulo de algo aqui](#referencia)  
-s
-s
-s
-s
-s
-s
-s
-s
-s
-s
-s
-s  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
+1. [Titulo de algo aqui](#referencia)  
 ---
-
 1. <a name="referencia">Titulo de algo</a>  
 
 
 
-#test
-
-
-[link text](#test)
 
 
 
