@@ -309,19 +309,17 @@ Para esto utilizamos la aplicación _losetup:_
     tux@venus:~> ls -l /mnt/sles11sp1/root/tmp
     tux@venus:~> umount /mnt/sles11sp1/
 
-
  
 #### LOOPBACK PARA UNA IMAGEN (USANDO MODUOS EN EL KERNEL)
 
-Aquí primero preparamos el dispositivo que será leído por el módulo de
-kernel NBD. Para ello debemos tener cargado dicho módulo o cargarlo en 
-todo caso. Recuerda que para llevar a cabo este tipo de operaciones en
-  el kernel debemos escalar privilegios.
+Aquí primero preparamos el dispositivo que será leído por el módulo de kernel NBD.  
+Para ello debemos tener cargado dicho módulo o cargarlo en todo caso. Recuerda que   
+para llevar a cabo este tipo de operaciones, debemos escalar privilegios.
   
 
  1. CARGAMOS EL MÓDULO 
 
- modprobe nbd -- Esto carga el módulo de no estar cargado.
+ modprobe nbd -- Esto carga el módulo de no estar cargado.  
  modprobe nbd max_part=16  -- Esto es una opción del módulo que no tengo muy clara, INVESTIGAR. 
  
  2. A continuación preparamos el dispositivo donde montaremos la unidad.
