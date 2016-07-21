@@ -316,7 +316,7 @@ Aquí primero preparamos el dispositivo que será leído por el módulo de kerne
 Para ello debemos tener cargado dicho módulo o cargarlo en todo caso. Recuerda que   
 para llevar a cabo este tipo de operaciones, debemos escalar privilegios.
 
-Primero comprobamos si tenemos instalados los módulos que vamos
+Primero comprobamos si tenemos instalados los módulos que vamos  
 a usar  ... normalmente en /lib/... (editar)  
 Comprobar si el módulo está cargado o no, en el sistema. Puede determinarse con:
 
@@ -336,13 +336,14 @@ podrá accederse al disco, pero no a los nodos de ninguna de las particiones
 
 Esto puede hacerse en una misma línea(root):  
   ~~~  
-    # modprobe nbd max_part= _N_  
+    # modprobe nbd max_part=N  
   ~~~
 
   - 'N' representa el número de particiones que tiene la imagen que vamos a montar
   Por lo que teniendo esto en cuenta, debe ajustarse con criterio!!
   Si se trata de una imagen, sin una partición especifica, puede omitirse el 
   parametro.
+> Dato sin verificar!
 
 Si el módulo está cargado, lo mejor es descargarlo y cargarlo de nuevo, 
 iniciando la variable. En Debian esto parece que tiene un bug. Cuando comprobamos
