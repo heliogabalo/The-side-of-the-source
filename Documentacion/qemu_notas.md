@@ -6,10 +6,13 @@
 2. TRABAJAR CON UNA COPIA DE IMAGEN
     1. Backing-files/overlays
     2. Snapshots 
-3. CON O SIN CONEXION A INTERNET
-4. COMO MONTAR UN LOOPBACK PARA COMUNICARNOS CON LA VM SIN CONEXION
-5. LOOPBACK PARA UNA IMGEN (USANDO MODULOS EN EL KERNEL)
-    5. Lanzar la VM apuntando al servidor NBD
+3. CON O SIN CONEXION A INTERNET  
+    1. Modo usuario
+    2. Modo Tap
+4. EL LOOPBACK
+    1. COMO MONTAR UN LOOPBACK PARA COMUNICARNOS CON LA VM SIN CONEXION
+    2. LOOPBACK PARA UNA IMGEN (USANDO MODULOS EN EL KERNEL)  
+      - Lanzar la VM apuntando al servidor NBD
 6. EXPERIMENTAL
 
 ---
@@ -204,9 +207,8 @@ las técnicas que describiré a continuación, pueden llevarse a cabo sobre part
 formato de disco usease formateadas: ejem Ext3, NTFS, FAT32 etc. o sobre una imagén sin  
 una partición en concreto.
 
-Esto quiere decir, que puede montarse una copia de "respaldo" de GuildWars, en una imagen lo  
-suficientemente grande para contener ambos discos. Sin necesidad de crear una partición  
-dentro de la imagen.
+Esto quiere decir, que puede montarse una copia de "respaldo" de _old-games_, en una imagen  
+lo suficientemente grande, sin necesidad de crear una partición dentro de la imagen.
 
 Debo hacer la comprovación oportuna... pero para que me sirva de guía escribo esto como  
 nota[borrar]. Si _no_ se crea una partición en la imagen(la VM), los datos podrán ser  
@@ -234,7 +236,7 @@ Con esto comprobamos que efectivamente la copia en crudo a tenido éxito al term
   
 > __nota:__ aquí va otra nota sobre el uso de los shasum y file, sobre la importancia  
 > de hacer las comprobaciones oportunas en cuanto a imágenes descargadas. Y un especial  
-> comentario acerca del cambio que se produce en un sha, cuando queremos montar una image  
+> comentario acerca del cambio que se produce en un sha, cuando queremos montar una imagen  
 > con permisos de escritura. IMPORTANTE INVESTIGAR!  
 
 #### Mediante el montaje de una imagen, directamente en el disco duro. 
@@ -294,36 +296,7 @@ Con esto comprobamos que efectivamente la copia en crudo a tenido éxito al term
     tux@venus:~> ls -l /mnt/sles11sp1/root/tmp
     tux@venus:~> umount /mnt/sles11sp1/
 
-###############################################################
 
-
-
-###
-                  E X P E R I M E N T A L                     
-###
-   
-   VIRTIO -- https://wiki.archlinux.org/index.php/QEMU#qxl
-   
-   virtio-vga / virtio-gpu is a paravirtual 3D graphics driver based on virgl. Currently a work in
-   progress, supporting only very recent (>= 4.4) Linux guests. 
-
- QEMU offers guests the ability to use paravirtualized block and network devices using the virtio
- drivers, which provide better performance and lower overhead.
- 
- A virtio block device requires the option -drive instead of the simple -hdX plus if=virtio:
- 
-     $ qemu-system-i386 -boot order=c -drive file=disk_image,if=virtio
- 
- Note: -boot order=c is absolutely necessary when you want to boot from it. There is no 
- auto-detection as with -hdX
- 
- Abmos  the same goes for the network:
- 
- $ qemu-system-i386 -net nic,model=virtio
- 
- Note: This will only work if the guest machinethas drivers for virtio devices. Linux does, and the
- required drivers are included in Arch Linux, but there is no guarantee that virtio devices will work
- with other operating systems.
  
 ####################################################################
 Aquí primero preparamos el dispositivo que será leído por el módulo de
@@ -468,3 +441,34 @@ qemu-img convert -f raw -O vpc something.img something.vhd
 
 #### To convert a vhd image to cow2 (the up to date qemu format)
 qemu-img convert -f qcow2 -O vpc something.img something.vhd
+
+###############################################################
+
+
+
+###
+                  E X P E R I M E N T A L                     
+###
+   
+   VIRTIO -- https://wiki.archlinux.org/index.php/QEMU#qxl
+   
+   virtio-vga / virtio-gpu is a paravirtual 3D graphics driver based on virgl. Currently a work in
+   progress, supporting only very recent (>= 4.4) Linux guests. 
+
+ QEMU offers guests the ability to use paravirtualized block and network devices using the virtio
+ drivers, which provide better performance and lower overhead.
+ 
+ A virtio block device requires the option -drive instead of the simple -hdX plus if=virtio:
+ 
+     $ qemu-system-i386 -boot order=c -drive file=disk_image,if=virtio
+ 
+ Note: -boot order=c is absolutely necessary when you want to boot from it. There is no 
+ auto-detection as with -hdX
+ 
+ Abmos  the same goes for the network:
+ 
+ $ qemu-system-i386 -net nic,model=virtio
+ 
+ Note: This will only work if the guest machinethas drivers for virtio devices. Linux does, and the
+ required drivers are included in Arch Linux, but there is no guarantee that virtio devices will work
+ with other operating systems.
