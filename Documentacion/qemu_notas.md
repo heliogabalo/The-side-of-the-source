@@ -525,7 +525,7 @@ antes de
 
 #### Foo
 
-[titulo de algo aqui](#referencia)  
+1. [titulo de algo aqui](#referencia)  
 s
 s
 s
@@ -537,36 +537,32 @@ s
 s
 s
 s
-s
-s
-s
-s
+s  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
-s
-s
-s
-s
-s
-s
-s
-s
-s
-s
-s
-s
-s
-s
-s
-s
-s
-s
-s
-s
-s
-s
-s
-s
-s
 
 
 1. <a name="referencia">Titulo de algo</a>  
