@@ -24,7 +24,7 @@
 Bien sea porque tenemos el disco original (en este caso un SO windows)  
 o bien porque lo hayamos descargado, deberemos antes CREAR una imagen GUEST  
 con la que  QEMU, pueda trabajar.
-
+  
 - Para esto primero creamos la imagen. Una "caja" vacía. 
    
   ~~~
@@ -487,7 +487,7 @@ qemu-img convert -f qcow2 -O vpc something.img something.vhd
 
 ##                  E X P E R I M E N T A L                     
 
-# Foo   
+[Foo](#foo)   
    VIRTIO -- https://wiki.archlinux.org/index.php/QEMU#qxl
    
    virtio-vga / virtio-gpu is a paravirtual 3D graphics driver based on virgl. Currently a work in
@@ -515,13 +515,44 @@ qemu-img convert -f qcow2 -O vpc something.img something.vhd
 
 Markdowns y otras recomendaciones --[Javier Cristóbal][Markdown] \- [productividad mac][limni]
 
-
-# Foo  
-
+<a name="test"/>
+antes de
+</a>
 
 ---
 [Markdown]: http://markdown.es/sintaxis-markdown/
 [limni]: http://limni.net/blog/
-[Foo](#foo)
+
+# Foo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#test
+
+
+[link text](#test)
+
+
+
 
 
