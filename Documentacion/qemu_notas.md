@@ -317,24 +317,27 @@ Para ello debemos tener cargado dicho módulo o cargarlo en todo caso. Recuerda 
 para llevar a cabo este tipo de operaciones, debemos escalar privilegios.
 
 Primero comprobamos si tenemos instalados los módulos que vamos
-a usar  ... normalmente en /lib/... (editar)
+a usar  ... normalmente en /lib/... (editar)  
 Comprobar si el módulo está cargado o no, en el sistema. Puede determinarse con:
 
-lsmod |cat -n |grep _modulo-en-cuestion_ 
+  ~~~  
+    $ lsmod |cat -n |grep _modulo-en-cuestion_  
+  ~~~
 
 - La primera instrucción lista los módulos cargados en el kernel.
 - Através de tubería cuantificamos su número, por razones de stress!!
 - y le pasamos un filtro grep, para concretar la salida.
 
-Si el modulo no está cargado, lo cargamos dándole un parámetro 'max_part'
-para poder acceder a los nodos de cada una de las particiones.
-En caso de no iniciar la variable, como el valor por defecto es 0(cero)
-podrá accederse al disco, pero no a los nodos de ninguna de las particiones
+Si el modulo no está cargado, lo cargamos dándole un parámetro 'max_part'  
+para poder acceder a los nodos de cada una de las particiones.  
+En caso de no iniciar la variable, como el valor por defecto es 0(cero)  
+podrá accederse al disco, pero no a los nodos de ninguna de las particiones  
  ...
 
-Esto puede hacerse en una misma línea:
-
-modprobe nbd max_part=<N>
+Esto puede hacerse en una misma línea(root):  
+  ~~~  
+    # modprobe nbd max_part= _N_  
+  ~~~
 
   - 'N' representa el número de particiones que tiene la imagen que vamos a montar
   Por lo que teniendo esto en cuenta, debe ajustarse con criterio!!
