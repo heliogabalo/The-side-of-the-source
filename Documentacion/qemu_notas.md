@@ -1,4 +1,3 @@
-# 1. PROCESO DE INSTALACION DE UNA IMAGEN
 1. PROCESO DE INSTALACION DE UNA IMAGEN 
     1. Crear imagen  
     2. Convetir imagen
@@ -18,7 +17,7 @@
 
 
 ---
-[## 1 PROCESO DE INSTALACION DE UNA IMAGEN](#1)   
+## 1 PROCESO DE INSTALACION DE UNA IMAGEN  
 
 #### Crear imagen
 
@@ -488,7 +487,7 @@ qemu-img convert -f qcow2 -O vpc something.img something.vhd
 
 ##                  E X P E R I M E N T A L                     
 
-   
+# Foo   
    VIRTIO -- https://wiki.archlinux.org/index.php/QEMU#qxl
    
    virtio-vga / virtio-gpu is a paravirtual 3D graphics driver based on virgl. Currently a work in
@@ -517,9 +516,12 @@ qemu-img convert -f qcow2 -O vpc something.img something.vhd
 Markdowns y otras recomendaciones --[Javier Cristóbal][Markdown] \- [productividad mac][limni]
 
 
-
+# Foo  
 
 
 ---
 [Markdown]: http://markdown.es/sintaxis-markdown/
 [limni]: http://limni.net/blog/
+[Foo](#foo)
+
+
