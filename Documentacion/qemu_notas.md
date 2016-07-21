@@ -1,6 +1,6 @@
 1. [PROCESO DE INSTALACION DE UNA IMAGEN](#i1) 
     1. Crear imagen  
-    2. Convetir imagen
+    2. [Convetir imagen](#i2)
 
 2. TRABAJAR CON UNA COPIA DE IMAGEN
     1. Backing-files/overlays
