@@ -1,7 +1,3 @@
-'esto es una prueba'  
-`esto es otra`  
-    otramas  
-    yotra  
 
 1. PROCESO DE INSTALACION DE UNA IMAGEN
     1. Crear imagen
@@ -517,7 +513,7 @@ qemu-img convert -f qcow2 -O vpc something.img something.vhd
 
 ## AGRADECIMIENTOS
 
-[Javier Cristóbal][Markdown] \- [productividad mac][limni]
+Markdowns y otras recomendaciones --[Javier Cristóbal][Markdown] \- [productividad mac][limni]
 
 
 
