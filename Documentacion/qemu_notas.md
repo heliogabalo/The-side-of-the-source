@@ -207,13 +207,13 @@ formato de disco usease formateadas: ejem Ext3, NTFS, FAT32 etc. o sobre una ima
 una partición en concreto.
 
 Esto quiere decir, que puede montarse una copia de "respaldo" de _old-games_, en una imagen  
-lo suficientemente grande, sin necesidad de crear una partición dentro de la imagen.
-En realidad lo que ocurre, es que la partición abarca todo el disco, no significa que no 
-haya partición, significa que todo el disco está ocupado por una única partición.
-En este "marco" qemu no tiene problema para leer la tabla de nodos de partición, porque
+lo suficientemente grande, sin necesidad de crear una partición dentro de la imagen.  
+En realidad lo que ocurre, es que la partición abarca todo el disco, no significa que no  
+haya partición, significa que todo el disco está ocupado por una única partición.  
+En este "marco" qemu no tiene problema para leer la tabla de nodos de partición, porque  
 solo hay una, con un formato determinado!!
 
-Así que antes de describir las dos alternativas, quiero dejar anotado un concepto que puede
+Así que antes de describir las dos alternativas, quiero dejar anotado un concepto que puede  
 ser aplicado a ambas técnicas: _montaje simple_.
 
 Si _no_ se crea una partición en la imagen(la VM), los datos podrán ser montados sobre  
