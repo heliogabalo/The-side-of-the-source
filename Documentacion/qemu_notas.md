@@ -321,7 +321,7 @@ a usar  ... normalmente en /lib/... (editar)
 Comprobar si el módulo está cargado o no, en el sistema. Puede determinarse con:
 
   ~~~  
-    $ lsmod |cat -n |grep _modulo-en-cuestion_  
+    $ lsmod |cat -n |grep modulo-en-cuestion  
   ~~~
 
 - La primera instrucción lista los módulos cargados en el kernel.
@@ -350,11 +350,43 @@ Si el módulo está cargado, lo mejor es descargarlo y cargarlo de nuevo, inicia
 variable. En Debian esto parece que tiene un bug. Cuando comprobamos la información  
 del módulo(antes y despues de la asignación):
   ~~~  
-    modinfo nbd  
+    # modinfo nbd  
   ~~~
 
 ...vemos que aparece la ĺinea, pero no el entero! parece un bug.  
-> _nota:_ deberías comprobar en el mailing de Debian se ha escrito el 'report'.
+> _nota:_ deberías comprobar si en el mailing de Debian se ha escrito el 'report'.  
+
+__antes:__
+  ~~~
+filename:       /lib/modules/algo_aqui/kernel/drivers/block/nbd.ko  
+license:        GPL  
+description:    Network Block Device  
+depends:  
+intree:         Y  
+vermagic:       algo_aqui-tete SMP mod_unload modversions 086  
+parm:           nbds_max:number of network block devices to initialize (default: 16) (int)  
+parm:           max_part:number of partitions per device (default: 0) (int)  
+parm:           debugflags:flags for controlling debug output (int)  
+  ~~~
+
+__después:__
+  ~~~
+    # modprobe nbd max_part=8  
+  ~~~  
+
+  ~~~  
+  # modinfo nbd
+filename:       /lib/modules/algo-aqui/kernel/drivers/block/nbd.ko  
+license:        GPL  
+description:    Network Block Device  
+depends:  
+intree:         Y  
+vermagic:       algo-aqui SMP mod_unload modversions 086  
+parm:           nbds_max:number of network block devices to initialize (default: 16) (int)  
+parm:           max_part:number of partitions per device (default: 0) (int)  
+parm:           debugflags:flags for controlling debug output (int)  
+  ~~~
+
 
 Este comando identifica la imagen, como un dispositivo de bloque llamado  
 /dev/nbd0, y la partición dentro de éste, como sub-dispositivo, que sería:  
