@@ -30,7 +30,7 @@ con la que  QEMU, pueda trabajar.
  qemu-img create -f qcow2 mi_imagen.img 1G
   ~~~
 
- Aquí el flag "-f" indica el tipo de formato con el que será creada nuestra imagen (aún vacia).
+ Aquí el flag "-f" indica el tipo de formato con el que será creada nuestra imagen (aún vacia).  
  También indicamos el archivo imagen y el tamaño en Gigabytes.
 
 - Instalación de SUPUESTO OS en la imágen previamente creada:  
@@ -40,11 +40,11 @@ con la que  QEMU, pueda trabajar.
 Este comando anterior es un poco confuso.
 - Habrá que sustituir "qemu" con el comando apropiado, en relación a la arquitectura  
 del sistema operativo GUEST con el que se vaya a trabajar. En este caso sería:  
-qemu-system-i386
+_qemu-system-i386_
 - Nuevamente el flag -m indica la memoria RAM para el SUPUESTO SO.
 - La siguiente opción -hda indica el archivo imagen donde vamos a instalar la imagen  
 del SO.
-- Sigue la opción -cdrom, parece indicar el dispositivo físico un 'CD', pero todo  
+- Sigue la opción -cdrom. Parece indicar el dispositivo físico un 'CD', pero todo  
 apunta a que se trata de una denominación para diferenciarlo de la partición GUEST  
 que acabamos de crear. Es decir, que utilizaremos el mismo flag '-cdrom' para tratar  
 con una imagen descargada en el disco duro, o una imagen que previamente hayamos  
@@ -79,11 +79,11 @@ Por qué convertir imágenes antes de instalarlas:
   ~~~
 
 
-Qemu tiene el conversor de imagenes mas versatil, en relación a otros emuladores.
-Esto lo convierte en una herramienta indispensable a la hora de trabajar con VMs.
-Así como otros emuladores, presentan limitaciones a la hora de trabajar con imagenes
-específicas, qemu es capaz de interpretar una gran variedad de
-éstas, además de poseer un tipo genérico 'raw' donde converge con otras 'versiones'.
+Qemu tiene el conversor de imagenes mas versatil, en relación a otros emuladores.  
+Esto lo convierte en una herramienta indispensable a la hora de trabajar con VMs.  
+Así como otros emuladores, presentan limitaciones a la hora de trabajar con imagenes  
+específicas, qemu es capaz de interpretar una gran variedad de éstas, además de  
+poseer un tipo genérico 'raw' donde converge con otras 'versiones'.
 
 ---
 ## TRABAJAR CON UNA COPIA DE IMAGEN ##
@@ -109,7 +109,7 @@ Son necesarios dos pasos básicos:
 > en el directorio contenedor: mezcla las rutas absolutas/relativas.  
 
 
-  Con el comando 'backing_file' conseguimos establecer una copia 'base' que no será  
+  Con el parametro 'backing_file' conseguimos establecer una copia 'base' que no será  
   alterada. Los cambios en el SUPUESTO sólo serán aplicados a la imagen copia.  
   Habrá que tener en cuenta el guardar los cambios aplicados dentro del entorno  
   alternativo, pues de otro modo, perderemos todo el trabajo cuando borremos la  
@@ -176,7 +176,7 @@ Hay dos formas básicas de dotar a la VM con conexión a internet:
 >
 >   También es razonable pensar en virtualizar aplicaciones aisladas. Es posible que La  
 >   Guest solo pueda comunicarse con otra GUEST. Habrá que averiguar si es posible acceder  
->   u una partición fuera de VM!!  
+>   a una partición fuera de VM!!  
 >
 >   Otra idea es probar qemu-ga. Éste es un demonio que funciona desde dentro de la  
 >   SUPUESTA, así que en teoría, el host via injection/algo puede gestionar la particion  
@@ -185,6 +185,10 @@ Hay dos formas básicas de dotar a la VM con conexión a internet:
 >   La idea es mantener la VM simple, ya que por razones obvias, esto mejora su  
 >   rendimiento, además el objeto de estas 'maquinas' es romperlas. Y ya se  
 >   sabe que pasa cuando uno entra a cuchillo en algún lado(sin saber)...  
+
+
+#### Modo Tap
+> to be continued...
 
 ---   
 ## EL LOOPBACK 
@@ -234,6 +238,15 @@ la imagen:
  $ file imagen.iso  
     imagen.iso: ISO 9660 CD-ROM filesystem data 'GRTMPVOL_EN' (bootable)  
   ~~~
+
+Vemos que únicamente contiene una partición. A continuación, tan sólo queda montar la imagen.  
+Para esto utilizamos la aplicación _losetup:_  
+
+  ~~~  
+    $ losetup /dev/loop0 /punto_de_montaje/imagen.iso
+  ~~~  
+
+
 
 > __nota:__ aquí va otra nota sobre el uso de los shasum y file, sobre la importancia  
 > de hacer las comprobaciones oportunas en cuanto a imágenes descargadas. Y un especial  
