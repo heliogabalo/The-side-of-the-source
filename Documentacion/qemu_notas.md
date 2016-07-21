@@ -1,3 +1,6 @@
+'esto es una prueba'  
+`esto es otra`  
+    otramas  
 
 1. PROCESO DE INSTALACION DE UNA IMAGEN
     1. Crear imagen
@@ -512,3 +515,15 @@ qemu-img convert -f qcow2 -O vpc something.img something.vhd
  with other operating systems.
 
 ## AGRADECIMIENTOS
+
+Javier Cristóbal -- Markdowns
+
+
+
+
+
+
+
+---
+[Markdown]: http://markdown.es/sintaxis-markdown/
+
