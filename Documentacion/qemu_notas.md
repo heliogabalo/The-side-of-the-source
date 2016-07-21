@@ -513,11 +513,11 @@ qemu-img convert -f qcow2 -O vpc something.img something.vhd
 
 ## AGRADECIMIENTOS
 
-Documentation/Networking --[QEMU][QEM]
-Gente de fedora --[snapshots-handout][fedora]
-ArchWiki --[QEMU][archi]
-Suse --[QEMU][suse]
-Markdowns y otras recomendaciones --[Javier Cristóbal][Markdown] \- [productividad mac][limni]
+Documentation/Networking --[QEMU][QEM]  
+Gente de fedora --[snapshots-handout][fedora]  
+ArchWiki --[QEMU][archi]  
+Suse --[QEMU][suse]  
+Markdowns y otras recomendaciones --[Javier Cristóbal][Markdown] \- [productividad mac][limni]  
 
 
 ---
