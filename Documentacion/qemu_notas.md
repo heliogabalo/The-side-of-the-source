@@ -5,7 +5,7 @@
 2. TRABAJAR CON UNA COPIA DE IMAGEN
     1. Backing-files/overlays
     2. Snapshots 
-3. CON O SIN CONEXION A INTERNET  
+3. [CON O SIN CONEXION A INTERNET](i3)
     1. Modo usuario
     2. Modo Tap
 4. EL LOOPBACK
@@ -65,7 +65,7 @@ disco duro y 'd' a un CD-ROM.
 Desde una perspectiva Windows, habrá que asegurarse. Pués windows utiliza letras para  
 denominar los dispositivos de almacenamiento.
 
-#### Convertir imagen
+#### <a name="i2">Convertir imagen</a> 
 
 Por qué convertir imágenes antes de instalarlas:  
 
@@ -138,7 +138,7 @@ qemu-system-i386 -m 256 -hda copia(overlay).img -cdrom base_name(backing).img -b
 > _to be continued_...
 
 ---  
-## CON O SIN CONEXION A INTERNET !! ##
+## <a name="i3">CON O SIN CONEXION A INTERNET !!</a>
 
 Añadiendo la opcion -net parametro _nic_, qemu instala una targeta virtual de red genérica.
 
@@ -305,9 +305,9 @@ Para esto utilizamos la aplicación _losetup:_
 
  5. Copiar uno o mas archivos dentro de la partición montada y desmontar al terminar.
 
-    tux@venus:~> cp /etc/X11/xorg.conf /mnt/sles11sp1/root/tmp
-    tux@venus:~> ls -l /mnt/sles11sp1/root/tmp
-    tux@venus:~> umount /mnt/sles11sp1/
+    tux@venus:~> cp /etc/X11/xorg.conf /mnt/sles11sp1/root/tmp  
+    tux@venus:~> ls -l /mnt/sles11sp1/root/tmp  
+    tux@venus:~> umount /mnt/sles11sp1/  
 
  
 #### LOOPBACK PARA UNA IMAGEN (USANDO MODUOS EN EL KERNEL)
