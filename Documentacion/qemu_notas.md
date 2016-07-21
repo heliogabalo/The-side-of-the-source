@@ -65,7 +65,7 @@ disco duro y 'd' a un CD-ROM.
 Desde una perspectiva Windows, habrá que asegurarse. Pués windows utiliza letras para  
 denominar los dispositivos de almacenamiento.
 
-#### Convertir imagen
+#### <a name="i2">Convertir imagen</a>
 
 Por qué convertir imágenes antes de instalarlas:  
 
