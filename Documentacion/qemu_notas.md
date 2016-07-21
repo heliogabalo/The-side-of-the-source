@@ -247,6 +247,13 @@ Para esto utilizamos la aplicación _losetup:_
     $ losetup /dev/loop0 /punto_de_montaje/imagen.iso
   ~~~  
 
+En caso de utilizar este método _montaje simple_, para evitar que el sistema nos devuelva
+algún mensaje de aviso, acerca de los permisos con los que se monta la unidad, podemos
+especificar que lo haga en modo solo lectura.
+
+  ~~~  
+    # mount -o ro,loop image.iso /mnt/point
+  ~~~
 
 
 > __nota:__ aquí va otra nota sobre el uso de los shasum y file, sobre la importancia  
@@ -538,7 +545,12 @@ Markdowns y otras recomendaciones --[Javier Cristóbal][Markdown] \- [productivi
 ---
 1. <a name="referencia">Titulo de algo</a>  
 
+---
+man qemu-system:
 
+-net nic
+Create a new Network Interface Card and connect it to VLAN n (n = 0 is the default). The
+           NIC is an e1000 by default on the PC target.
 
 
 
