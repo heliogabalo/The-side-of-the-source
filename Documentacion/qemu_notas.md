@@ -1,6 +1,6 @@
 1. [PROCESO DE INSTALACION DE UNA IMAGEN](#i1) 
     1. Crear imagen  
-    2. [Convetir imagen](#i2)
+    2. [Convertir imagen](#i2)
 
 2. TRABAJAR CON UNA COPIA DE IMAGEN
     1. Backing-files/overlays
@@ -65,7 +65,7 @@ disco duro y 'd' a un CD-ROM.
 Desde una perspectiva Windows, habrá que asegurarse. Pués windows utiliza letras para  
 denominar los dispositivos de almacenamiento.
 
-#### <a name="i2">Convertir imagen</a>
+#### Convertir imagen
 
 Por qué convertir imágenes antes de instalarlas:  
 
