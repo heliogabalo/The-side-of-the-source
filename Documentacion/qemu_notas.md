@@ -152,7 +152,7 @@ Esto puede ser un inconveniente, si corremos mas de una máquina, y queremos ten
 a internet en todas ellas, puesto que la aplicación genera por defecto, siempre la  
 misma MAC. 
 
-Para que esto no ocurra sebe indicarse un identificador. Reempaza las "X" con números  
+Para que esto no ocurra debe indicarse un identificador. Reempaza las "X" con números  
 hexadecimales arbitrarios, pero recuerda conservar las primeras dos cifras, que hacen  
 referencia al id de fabricante(qemu).  
   ~~~
@@ -172,7 +172,6 @@ Hay dos formas básicas de dotar a la VM con conexión a internet:
 -netdev user,id=mynet0,net=192.168.76.0/24,dhcpstart=192.168.76.9  
   ~~~
 
- ------------------------------
 > _Notas:_ 
 >
 >   También es razonable pensar en virtualizar aplicaciones aisladas. Es posible que La  
@@ -187,8 +186,9 @@ Hay dos formas básicas de dotar a la VM con conexión a internet:
 >   rendimiento, además el objeto de estas 'maquinas' es romperlas. Y ya se  
 >   sabe que pasa cuando uno entra a cuchillo en algún lado(sin saber)...  
 
+---   
+## EL LOOPBACK 
 
-## COMO MONTAR UN LOOPBACK PARA COMUNICARNOS CON LA VM SIN CONEXION
 La traducción de loopback significa: bucle hacia atrás(ma o meno), o 'camino de  
 regreso'. La idea es utilizar una partición o disco, que se encuentra fuera de la  
 imagen de la VM.  
@@ -196,52 +196,51 @@ imagen de la VM.
 Antes de seguir, debo recordar que las operaciones con particiones y sobre módulos  
 que afectan directamente al _kernel_, hay que hacerlas con permisos de administrador.  
 Por precaución, siempre es recomendable hacer este tipo de opereaciones con la  
-VM apagada. De otra forma, se corre el riesgo de corromper los datos la imagen.  
+VM apagada. De otra forma, se corre el riesgo de corromper los datos de la imagen.  
 
 En determidas ocasiones, la máquina virtual no tiene conexión a internet. Es el caso  
 de una instalación con Qemu. Así que la mejor forma de comunicarnos con la VM es  
-mediante la técnica del loopback.
+mediante la técnica del _loopback_.
 
-Si no me equivoco, y como estoy haciendo esta página para mi uso personal no exclusivo:  
-las técnicas que describiré a continuación, pueden llevarse a cabo sobre particiones con  
+Las técnicas que describiré a continuación, pueden llevarse a cabo sobre particiones con  
 formato de disco usease formateadas: ejem Ext3, NTFS, FAT32 etc. o sobre una imagén sin  
 una partición en concreto.
 
 Esto quiere decir, que puede montarse una copia de "respaldo" de _old-games_, en una imagen  
 lo suficientemente grande, sin necesidad de crear una partición dentro de la imagen.
+En realidad lo que ocurre, es que la partición abarca todo el disco, no significa que no 
+haya partición, significa que todo el disco está ocupado por una única partición.
+En este "marco" qemu no tiene problema para leer la tabla de nodos de partición, porque
+solo hay una, con un formato determinado!!
 
-Debo hacer la comprovación oportuna... pero para que me sirva de guía escribo esto como  
-nota[borrar]. Si _no_ se crea una partición en la imagen(la VM), los datos podrán ser  
-montados sobre cualquier formato, nuevamente Ext2, Fat16 ...  
+Así que antes de describir las dos alternativas, quiero dejar anotado un concepto que puede
+ser aplicado a ambas técnicas: _montaje simple_.
 
-Sin embargo, si tenemos alojadas particiones dentro de la imagen, únicamente podremos  
-montarlas en formato raw(crudo en inglés). Esto es para que qemu pueda manejarlas.  
+Si _no_ se crea una partición en la imagen(la VM), los datos podrán ser montados sobre  
+cualquier formato. Sin embargo, si tenemos alojadas particiones dentro de la imagen,  
+únicamente podremos montarlas en formato raw(crudo en inglés).  
+Esto es para que qemu pueda manejar las particiones alojadas.  
 
 En este caso como trabajaremos sobre una imagen ISO, parece apropiado seguir los pasos  
 descritos al principio del artículo. Crear la caja vaía, y escribirla en el formato  
 apropiado. Pero como problamente no queramos lanzar otra GUEST, sino únicamente acceder  
-al contenido del la imagem.
+al contenido del la imagem. La operación de calcular el offset de la partición, puede  
+ser omitida_-ver mas adelante_. 
 
-  ~~~  
- $ qemu-img convert -O imagen.iso copia.raw  
-  ~~~
-
-Con esto conseguimos una copia en crudo, de la image ISO. Ya solo queda montarla:
+Esto es de lo que hablaba: el _montaje simple_. Puede determinarse mirando el contenido de  
+la imagen:
 
   ~~~  
  $ file imagen.iso  
- $ file copia.raw  
-  ~~~  
-Con esto comprobamos que efectivamente la copia en crudo a tenido éxito al terminar.  
-  
+    imagen.iso: ISO 9660 CD-ROM filesystem data 'GRTMPVOL_EN' (bootable)  
+  ~~~
+
 > __nota:__ aquí va otra nota sobre el uso de los shasum y file, sobre la importancia  
 > de hacer las comprobaciones oportunas en cuanto a imágenes descargadas. Y un especial  
 > comentario acerca del cambio que se produce en un sha, cuando queremos montar una imagen  
 > con permisos de escritura. IMPORTANTE INVESTIGAR!  
 
-#### Mediante el montaje de una imagen, directamente en el disco duro. 
- 
-
+#### COMO MONTAR UN LOOPBACK PARA COMUNICARNOS CON LA VM SIN CONEXION 
 
 
   Mounting Disk Image by Calculating Partition Offset
@@ -298,7 +297,8 @@ Con esto comprobamos que efectivamente la copia en crudo a tenido éxito al term
 
 
  
-####################################################################
+#### LOOPBACK PARA UNA IMAGEN (USANDO MODUOS EN EL KERNEL)
+
 Aquí primero preparamos el dispositivo que será leído por el módulo de
 kernel NBD. Para ello debemos tener cargado dicho módulo o cargarlo en 
 todo caso. Recuerda que para llevar a cabo este tipo de operaciones en
