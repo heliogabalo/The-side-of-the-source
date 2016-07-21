@@ -315,13 +315,52 @@ Para esto utilizamos la aplicación _losetup:_
 Aquí primero preparamos el dispositivo que será leído por el módulo de kernel NBD.  
 Para ello debemos tener cargado dicho módulo o cargarlo en todo caso. Recuerda que   
 para llevar a cabo este tipo de operaciones, debemos escalar privilegios.
-  
+
+Primero comprobamos si tenemos instalados los módulos que vamos
+a usar  ... normalmente en /lib/... (editar)
+Comprobar si el módulo está cargado o no, en el sistema. Puede determinarse con:
+
+lsmod |cat -n |grep _modulo-en-cuestion_ 
+
+- La primera instrucción lista los módulos cargados en el kernel.
+- Através de tubería cuantificamos su número, por razones de stress!!
+- y le pasamos un filtro grep, para concretar la salida.
+
+Si el modulo no está cargado, lo cargamos dándole un parámetro 'max_part'
+para poder acceder a los nodos de cada una de las particiones.
+En caso de no iniciar la variable, como el valor por defecto es 0(cero)
+podrá accederse al disco, pero no a los nodos de ninguna de las particiones
+ ...
+
+Esto puede hacerse en una misma línea:
+
+modprobe nbd max_part=<N>
+
+  - 'N' representa el número de particiones que tiene la imagen que vamos a montar
+  Por lo que teniendo esto en cuenta, debe ajustarse con criterio!!
+  Si se trata de una imagen, sin una partición especifica, puede omitirse el 
+  parametro.
+
+Si el módulo está cargado, lo mejor es descargarlo y cargarlo de nuevo, 
+iniciando la variable. En Debian esto parece que tiene un bug. Cuando comprobamos
+la información del módulo(antes y despues de la asignación):
+
+modinfo nbd
+
+...vemos que aparece la ĺinea, pero no el entero! parece un bug. 
+nota: deberias comprobar en el mailing de Debian se ha escrito el 'report'.
+
+Este comando identifica la imagen, como un dispositivo de bloque llamado
+/dev/nbd0, y la partición dentro de éste, como sub-dispositivo, que sería:
+/dev/nbd0p1
+
+qemu-nbd -c /dev/nbd0 <vdi-file> 
 
  1. CARGAMOS EL MÓDULO 
 
  modprobe nbd -- Esto carga el módulo de no estar cargado.  
- modprobe nbd max_part=16  -- Esto es una opción del módulo que no tengo muy clara, INVESTIGAR. 
- 
+ modprobe nbd max_part=16  
+  
  2. A continuación preparamos el dispositivo donde montaremos la unidad.
  Este proceso inicia una especie de servidor. Realmente la carga en memoria es mínima, es
  decir, no es como si lanzásemos Apache!!!
@@ -353,45 +392,7 @@ para llevar a cabo este tipo de operaciones, debemos escalar privilegios.
 
 #### http://bethesignal.org/blog/2011/01/05/how-to-mount-virtualbox-vdi-image/ ####
 
- Primero comprobamos si tenemos instalados los módulos que vamos
- a usar  ... normalmente en /lib/... (editar)
- Comprobar si el módulo está cargado o no, en el sistema. Puede determinarse con:
-
- lsmod |cat -n |grep <modulo-en-cuestion> 
-
- - La primera instrucción lista los módulos cargados en el kernel.
- - Através de tubería cuantificamos su número, por razones de stress!!
- - y le pasamos un filtro grep, para concretar la salida.
-
- Si el modulo no está cargado, lo cargamos dándole un parámetro 'max_part'
- para poder acceder a los nodos de cada una de las particiones.
- En caso de no iniciar la variable, como el valor por defecto es 0(cero)
- podrá accederse al disco, pero no a los nodos de ninguna de las particiones
-  ...
-
- Esto puede hacerse en una misma línea:
-
- modprobe nbd max_part=<N>
-
-   - 'N' representa el número de particiones que tiene la imagen que vamos a montar
-   Por lo que teniendo esto en cuenta, debe ajustarse con criterio!!
-   Si se trata de una imagen, sin una partición especifica, puede omitirse el 
-   parametro.
-
- Si el módulo está cargado, lo mejor es descargarlo y cargarlo de nuevo, 
- iniciando la variable. En Debian esto parece que tiene un bug. Cuando comprobamos
- la información del módulo(antes y despues de la asignación):
-
- modinfo nbd
-
- ...vemos que aparece la ĺinea, pero no el entero! parece un bug. 
- nota: deberias comprobar en el mailing de Debian se ha escrito el 'report'.
-
- Este comando identifica la imagen, como un dispositivo de bloque llamado
- /dev/nbd0, y la partición dentro de éste, como sub-dispositivo, que sería:
- /dev/nbd0p1
-
- qemu-nbd -c /dev/nbd0 <vdi-file> 
+ 
 
  Ahora podríamos ejecutar cfdisk en el dispositivo de bloque, y montarlo
  como partición individual.
