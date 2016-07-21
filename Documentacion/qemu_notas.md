@@ -10,7 +10,7 @@
     1. Modo usuario
     2. Modo Tap
 4. EL LOOPBACK
-    1. COMO MONTAR UN LOOPBACK PARA COMUNICARNOS CON LA VM SIN CONEXION
+    1. MONTAR UN LOOPBACK PARA COMUNICARNOS CON LA VM SIN CONEXION
     2. LOOPBACK PARA UNA IMGEN (USANDO MODULOS EN EL KERNEL)  
       - Lanzar la VM apuntando al servidor NBD
 6. EXPERIMENTAL
@@ -253,10 +253,9 @@ Para esto utilizamos la aplicación _losetup:_
 > comentario acerca del cambio que se produce en un sha, cuando queremos montar una imagen  
 > con permisos de escritura. IMPORTANTE INVESTIGAR!  
 
-#### COMO MONTAR UN LOOPBACK PARA COMUNICARNOS CON LA VM SIN CONEXION 
+#### MONTAR UN LOOPBACK PARA COMUNICARNOS CON LA VM SIN CONEXION 
 
   Calcular el _offset_ antes de montar la imagen de disco.  
-  Mounting Disk Image by Calculating Partition Offset
     
  1. Asociar el dispositivo de imagen de disco, a la partición que vayamos a montar.
     ~~~
@@ -303,8 +302,7 @@ Para esto utilizamos la aplicación _losetup:_
     drwxr-xr-x  15 root root  4096 Nov 16 09:22 var  
     ~~~  
 
-    Copiar uno o mas archivos dentro de la partición montada y desmontar al terminar.
- 5. Copy one or more files onto the mounted partition and unmount it when finished.
+ 5. Copiar uno o mas archivos dentro de la partición montada y desmontar al terminar.
 
     tux@venus:~> cp /etc/X11/xorg.conf /mnt/sles11sp1/root/tmp
     tux@venus:~> ls -l /mnt/sles11sp1/root/tmp
@@ -320,12 +318,12 @@ todo caso. Recuerda que para llevar a cabo este tipo de operaciones en
   el kernel debemos escalar privilegios.
   
 
-## 1- CARGAMOS EL MÓDULO ##
+ 1. CARGAMOS EL MÓDULO 
 
  modprobe nbd -- Esto carga el módulo de no estar cargado.
  modprobe nbd max_part=16  -- Esto es una opción del módulo que no tengo muy clara, INVESTIGAR. 
  
- 2.- A continuación preparamos el dispositivo donde montaremos la unidad.
+ 2. A continuación preparamos el dispositivo donde montaremos la unidad.
  Este proceso inicia una especie de servidor. Realmente la carga en memoria es mínima, es
  decir, no es como si lanzásemos Apache!!!
 
@@ -333,7 +331,7 @@ todo caso. Recuerda que para llevar a cabo este tipo de operaciones en
  partprobe /dev/nbd0  -- indica al SO los cambios que se han llevado a cabo en la 
                          tabla de particiones.
 
- 3.- Este último paso, es el que realmente monta la unidad virtual en el sistema.
+ 3. Este último paso, es el que realmente monta la unidad virtual en el sistema.
  
  mount /dev/nbd0p1 /imagen/a/montar(vhd en este caso!!)
 
@@ -342,10 +340,8 @@ todo caso. Recuerda que para llevar a cabo este tipo de operaciones en
  umount /imagen/montada(vhd) -- Desmontamos imagen.
  qemu-nbd -d /dev/nbd0 -- desconectamos dispositivo.
 
-###############################################################
-###############################################################
 
- LANZAR LA VM APUNTANDO AL SERVIDOR NBD
+## LANZAR LA VM APUNTANDO AL SERVIDOR NBD
 
  $QEMU -object tls-creds-x509,id=tls0,dir=$HOME/.pki/qemutls,endpoint=client \
        -drive driver=nbd,host=localhost,port=10809,tls-creds=tls0 \
@@ -354,20 +350,7 @@ todo caso. Recuerda que para llevar a cabo este tipo de operaciones en
 
 
 
-###############################################################
-###############################################################
 
-
-
-
-
-
-
-###############################################################
-##############################################################
-     LOOPBACK PARA UNA IMGEN (USANDO MODULOS EN EL KERNEL)
-###############################################################
-###############################################################
 
 #### http://bethesignal.org/blog/2011/01/05/how-to-mount-virtualbox-vdi-image/ ####
 
