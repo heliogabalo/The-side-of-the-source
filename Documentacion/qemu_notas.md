@@ -5,7 +5,7 @@
 2. TRABAJAR CON UNA COPIA DE IMAGEN
     1. Backing-files/overlays
     2. Snapshots 
-3. [CON O SIN CONEXION A INTERNET](i3)
+3. [CON O SIN CONEXION A INTERNET](#i3)
     1. Modo usuario
     2. Modo Tap
 4. EL LOOPBACK
