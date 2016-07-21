@@ -339,26 +339,28 @@ Esto puede hacerse en una misma línea(root):
     # modprobe nbd max_part=N  
   ~~~
 
-  - 'N' representa el número de particiones que tiene la imagen que vamos a montar
-  Por lo que teniendo esto en cuenta, debe ajustarse con criterio!!
-  Si se trata de una imagen, sin una partición especifica, puede omitirse el 
-  parametro.
+  - 'N' representa el número de particiones que tiene la imagen que vamos a montar  
+  Por lo que teniendo esto en cuenta, debe ajustarse con criterio!!  
+  Si se trata de una imagen, sin una partición especifica, puede omitirse el  
+  parametro.  
 > Dato sin verificar!
 
-Si el módulo está cargado, lo mejor es descargarlo y cargarlo de nuevo, 
-iniciando la variable. En Debian esto parece que tiene un bug. Cuando comprobamos
-la información del módulo(antes y despues de la asignación):
+Si el módulo está cargado, lo mejor es descargarlo y cargarlo de nuevo, iniciando la  
+variable. En Debian esto parece que tiene un bug. Cuando comprobamos la información  
+del módulo(antes y despues de la asignación):
+  ~~~  
+    modinfo nbd  
+  ~~~
 
-modinfo nbd
+...vemos que aparece la ĺinea, pero no el entero! parece un bug.  
+> _nota:_ deberías comprobar en el mailing de Debian se ha escrito el 'report'.
 
-...vemos que aparece la ĺinea, pero no el entero! parece un bug. 
-nota: deberias comprobar en el mailing de Debian se ha escrito el 'report'.
-
-Este comando identifica la imagen, como un dispositivo de bloque llamado
-/dev/nbd0, y la partición dentro de éste, como sub-dispositivo, que sería:
+Este comando identifica la imagen, como un dispositivo de bloque llamado  
+/dev/nbd0, y la partición dentro de éste, como sub-dispositivo, que sería:  
 /dev/nbd0p1
-
-qemu-nbd -c /dev/nbd0 <vdi-file> 
+  ~~~  
+    qemu-nbd -c /dev/nbd0 _vdi-file_  
+  ~~~
 
  1. CARGAMOS EL MÓDULO 
 
