@@ -225,7 +225,7 @@ En este caso como trabajaremos sobre una imagen ISO, parece apropiado seguir los
 descritos al principio del artículo. Crear la caja vaía, y escribirla en el formato  
 apropiado. Pero como problamente no queramos lanzar otra GUEST, sino únicamente acceder  
 al contenido del la imagem. La operación de calcular el offset de la partición, puede  
-ser omitida_-ver mas adelante_. 
+ser omitida _-ver mas adelante_. 
 
 Esto es de lo que hablaba: el _montaje simple_. Puede determinarse mirando el contenido de  
 la imagen:
