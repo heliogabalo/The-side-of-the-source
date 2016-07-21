@@ -343,6 +343,7 @@ Esto puede hacerse en una misma línea(root):
   Por lo que teniendo esto en cuenta, debe ajustarse con criterio!!  
   Si se trata de una imagen, sin una partición especifica, puede omitirse el  
   parametro.  
+ 
 > Dato sin verificar!
 
 Si el módulo está cargado, lo mejor es descargarlo y cargarlo de nuevo, iniciando la  
