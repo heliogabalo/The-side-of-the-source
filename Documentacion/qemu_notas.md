@@ -1,5 +1,5 @@
 # 0
-1. PROCESO DE INSTALACION DE UNA IMAGEN 
+[1. PROCESO DE INSTALACION DE UNA IMAGEN](# 1. PROCESO DE INSTALACION DE UNA IMAGEN) 
     1. Crear imagen
     2. Convetir imagen
 
@@ -16,11 +16,10 @@
 6. EXPERIMENTAL
 7. AGRADECIMIENTOS
 
-[1. PROCESO DE INSTALACION DE UNA IMAGEN](#1)
 
 ---
-## PROCESO DE INSTALACION DE UNA IMAGEN   
-# 1
+## 1. PROCESO DE INSTALACION DE UNA IMAGEN   
+
 #### Crear imagen
 
 Bien sea porque tenemos el disco original (en este caso un SO windows)  
@@ -524,4 +523,3 @@ Markdowns y otras recomendaciones --[Javier Cristóbal][Markdown] \- [productivi
 ---
 [Markdown]: http://markdown.es/sintaxis-markdown/
 [limni]: http://limni.net/blog/
-[INDICE](#0)
