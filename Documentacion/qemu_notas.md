@@ -87,7 +87,7 @@ específicas, qemu es capaz de interpretar una gran variedad de éstas, además 
 poseer un tipo genérico 'raw' donde converge con otras 'versiones'.
 
 ---
-## TRABAJAR CON UNA COPIA DE IMAGEN ##
+## TRABAJAR CON UNA COPIA DE IMAGEN 
 
 #### Backing_files/overlays
 
@@ -513,12 +513,25 @@ qemu-img convert -f qcow2 -O vpc something.img something.vhd
 
 ## AGRADECIMIENTOS
 
+Documentation/Networking --[QEMU][QEM]
+Gente de fedora --[snapshots-handout][fedora]
+ArchWiki --[QEMU][archi]
+Suse --[QEMU][suse]
 Markdowns y otras recomendaciones --[Javier Cristóbal][Markdown] \- [productividad mac][limni]
 
 
 ---
+[QEM]: http://wiki.qemu.org/Documentation/Networking
+[fedora]: https://kashyapc.fedorapeople.org/virt/lc-2012/snapshots-handout.html
+[archi]: https://wiki.archlinux.org/index.php/QEMU#qxl
+[suse]: https://www.suse.com/documentation/sles11/book_kvm/data/cha_qemu_guest_inst_qemu-img.html 
 [Markdown]: http://markdown.es/sintaxis-markdown/
 [limni]: http://limni.net/blog/
+
+ 
+
+-->
+
 
 
 1. [Titulo de algo aqui](#referencia)  
