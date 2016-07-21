@@ -353,7 +353,8 @@ del módulo(antes y despues de la asignación):
     # modinfo nbd  
   ~~~
 
-...vemos que aparece la ĺinea, pero no el entero! parece un bug.  
+...vemos que aparece la ĺinea, pero no el entero! parece un bug. Es la segunda línea  
+empezando por abajo. 
 > _nota:_ deberías comprobar si en el mailing de Debian se ha escrito el 'report'.  
 
 __antes:__
