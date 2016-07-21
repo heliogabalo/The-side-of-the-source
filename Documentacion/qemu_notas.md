@@ -1,4 +1,4 @@
-
+[1]
 1. PROCESO DE INSTALACION DE UNA IMAGEN
     1. Crear imagen
     2. Convetir imagen
@@ -524,3 +524,4 @@ Markdowns y otras recomendaciones --[Javier Cristóbal][Markdown] \- [productivi
 ---
 [Markdown]: http://markdown.es/sintaxis-markdown/
 [limni]: http://limni.net/blog/
+[1]: Indice
