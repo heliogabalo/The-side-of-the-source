@@ -255,15 +255,15 @@ Para esto utilizamos la aplicación _losetup:_
 
 #### COMO MONTAR UN LOOPBACK PARA COMUNICARNOS CON LA VM SIN CONEXION 
 
-
+  Calcular el _offset_ antes de montar la imagen de disco.  
   Mounting Disk Image by Calculating Partition Offset
-
- 1. Set a loop device on the disk image whose partition you want to mount.  
+    
+ 1. Asociar el dispositivo de imagen de disco, a la partición que vayamos a montar.
     ~~~
     tux@venus:~> losetup /dev/loop0 /images/sles11sp1_base.raw  
     ~~~
-
- 2. Find the sector size and the starting sector number of the partition you want to mount.  
+    
+ 2. Tamaño de sector y número de inicio de sector, de la partición a montar.
     ~~~
     tux@venus:~> fdisk -lu /dev/loop0  
     
@@ -277,16 +277,17 @@ Para esto utilizamos la aplicación _losetup:_
     /dev/loop0p2   *     1542240[2]    8385929     3421845   83  Linux  
     ~~~
   
-    [1] The disk sector size.
+    [1] Tamaño del sector.
 
-    [2] The starting sector of the partition.
+    [2] Sector de inicio de la partición.
 
- 3. Calculate the partition start offset:
+ 3. Calcular el _offset_ de inicio, de la partición.
 
     sector_size * sector_start = 512 * 1542240 = 789626880
 
- 4. Delete the loop and mount the partition inside the disk image with the calculated offset on a
-    prepared directory.
+ 4. Borrar el loop y montar la partición, dentro de la imagen de disco. Con el cálculo del offset  
+    dentro del directorio ya preparado.        
+
     ~~~
     tux@venus:~> losetup -d /dev/loop0  
     tux@venus:~> mount -o loop,offset=789626880 \  
@@ -302,6 +303,7 @@ Para esto utilizamos la aplicación _losetup:_
     drwxr-xr-x  15 root root  4096 Nov 16 09:22 var  
     ~~~  
 
+    Copiar uno o mas archivos dentro de la partición montada y desmontar al terminar.
  5. Copy one or more files onto the mounted partition and unmount it when finished.
 
     tux@venus:~> cp /etc/X11/xorg.conf /mnt/sles11sp1/root/tmp
