@@ -104,7 +104,7 @@ Son necesarios dos pasos básicos:
   $ qemu-img create -f qcow2 -o backing_file=winxp.img test01.img 1M  
   ~~~  
 
-> Al llamar al 'backing_file' en el proceso de instalación de la image, qemu, parece  
+> Al llamar al 'backing_file' en el proceso de instalación de la imagen, qemu, parece  
 > no reconocer direcciones fuera del directorio que contiene la imagen 'base'. Esto  
 > quiere decir que para instalar la imagen en el backing file es necesario encontrarse  
 > en el directorio contenedor: mezcla las rutas absolutas/relativas.  
