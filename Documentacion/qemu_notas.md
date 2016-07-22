@@ -140,12 +140,61 @@ qemu-system-i386 -m 256 -hda copia(overlay).img -cdrom base_name(backing).img -b
 ---  
 ## <a name="i3">CON O SIN CONEXION A INTERNET !!</a>
 
-Añadiendo la opcion -net parametro _nic_, qemu instala una targeta virtual de red genérica.
+> __nota:__
+>      Si se trabaja con el _overlay_, habrá que recordar actualizar el _backing_file_, de otra  
+>      manera, estaremos escribiendo una y otra vez, las opciones necesarias para que la   
+>      GUEST inicie a nuestro gusto. vínculo a trabajar con una copia de imagen  
 
-El comando quedaría algo así:
+
+Seguramente no seré la única persona que esté tratando de instalar un windows en una GUEST,  
+a mi me dió algunos problemas con los dispositivos y drivers para la NIC. Que he solucionado  
+añadiendo como apendice, la opción que detalla la línea de comando un poco más abajo.  
+
+Da la casualidad que mi tarjeta de red es exactamente la que instala qemu, una Realtek,  
+así que desconozco si a otras personas les será esto de ayuda.  
+
+Pero para que conste el dato: cuando instalamos el sistema operativo en la guest, no hay  
+que indicar ningún comando especial para tener acceso a internet. Por defecto, qemu  
+establece el modo usuario.  
+
+Mas bien el problema intuyo que viene dado desde el GUEST, cacawin(windrop in english)  
+Es decir, que si estais buscando desde:  
+     >>Panel de contro>>herramientas administrativas>>computer managament>>device manager  
+     >>network adapter(dispositivo)  
+La forma de instalar un dispositivo y su draiver, mejor quitaoslo de la cabeza.  
+Porque hay chorrocientas alternativas y hay que pensar que qemu está instalando un dispositivo  
+'virtual'.  
+
+El dispositivo que ha quedado instalado en mi GUEST:  
+  _Realtec RTL8139 family PCI Fast ethernet NIC_ (y su draiver con nombre similar/igual).  
+
+En caso de que este dispositivo no funcione lo mejor es echar mano del manual de  
+qemu-system-tu-_arquitectura-de-maquina_ y mirar que alternativas hay:  
+>       -net nic[,vlan=n][,macaddr=mac][,model=type] [,name=name][,addr=addr][,vectors=v]  
+>           Create a new Network Interface Card and connect it to VLAN n (n = 0 is the default). The  
+>           NIC is an e1000 by default on the PC target. Optionally, the MAC address can be changed  
+>           to mac, the device address set to addr (PCI cards only), and a name can be assigned for  
+>           use in monitor commands.  Optionally, for PCI cards, you can specify the number v of  
+>           MSI-X vectors that the card should have; this option currently only affects virtio  
+>           cards; set v = 0 to disable MSI-X. If no -net option is specified, a single NIC is  
+>           created.  QEMU can emulate several different models of network card.  Valid values for  
+>           type are "virtio", "i82551", "i82557b", "i82559er", "ne2k_pci", "ne2k_isa", "pcnet",  
+>           "rtl8139", "e1000", "smc91c111", "lance" and "mcf_fec".  Not all devices are supported  
+>           on all targets.  Use "-net nic,model=help" for a list of available devices for your  
+>           target.  
+
+
+>> Solo he podido probar esta teoría en mis máquinas!   
+
+Añadiendo la opcion -net parametro _nic_, qemu instala una targeta virtual de red genérica.  
+De hecho, el manual que sugiere gentoo, es el que me ha funcionado a mi. La versión de qemu  
+que corre mi máquina es la 2.6, es posible que en sucesivas actualizaciones vemamos otros  
+cambios.  
+
+El comando quedaría algo así:  
 
   ~~~  
-qemu-system-(arch) -net nic ...  
+qemu-system-(arch) -net nic,model8139 ...   
   ~~~  
 
 De esta forma la MAC de la VM tendrá un identificador por defecto.  
