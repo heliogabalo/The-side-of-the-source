@@ -2,9 +2,9 @@
 
 qemu-system-i386 -hda backing_winXP.raw \
   -net nic,model=rtl8139 \
-  -net user,id=helionet0,net=192.168.0.8/24,dhcpstart=192.168.0.8 \
-  -net macaddr=52:54:15:6F:91:A3 \
-  -cdrom winXPsataD.iso -boot cd -m 2047 &
+  -net user,id=mynet0,net=111.118.9.2/24,dhcpstart=111.118.9.8 \
+  -net macaddr=52:54:A5:BF:3A:15 \
+  -cdrom winXPsotaboloD.iso -boot cd -m 2047 &
 
 
 
