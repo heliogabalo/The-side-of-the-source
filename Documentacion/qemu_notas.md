@@ -149,7 +149,7 @@ no se rompiese.
 - La VM arranca con:  
   
   ~~~ 
-  qemu -m 256  overlay.cow  
+  qemu overlay.cow -m 128 
   ~~~  
 
 
