@@ -6,7 +6,8 @@
     1. Backing-files/overlays
     2. Snapshots 
 3. [CON O SIN CONEXION A INTERNET](#i3)
-    1. Modo usuario
+    1. Modo usuario  
+       - Configurar una MAC específica.
     2. Modo Tap
 4. EL LOOPBACK
     1. MONTAR UN LOOPBACK PARA COMUNICARNOS CON LA VM SIN CONEXION
@@ -245,8 +246,10 @@ cada GEST.
 
 Esto puede resolverse asociando el dispositivo al conector, mediante un ID único.  
 Habrá que constituir un nuevo framework de red sobre el que se realizarán las  
-conexiones, tanto del Host como del Guest, una _Vlan_.
+conexiones, tanto del Host como del Guest, una _Vlan_.  
 
+
+#### Configurar una MAC específica
 
   ~~~
 -netdev user,id=mynet0,net=192.168.76.0/24,dhcpstart=192.168.76.9  
