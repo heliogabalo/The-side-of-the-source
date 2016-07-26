@@ -623,6 +623,7 @@ Documentation/Networking --[QEMU][QEM]
 Gente de fedora --[snapshots-handout][fedora]  
 ArchWiki --[QEMU][archi]  
 Suse --[QEMU][suse]  
+Debian --[VLAN][debian]
 Markdowns y otras recomendaciones --[Javier Cristóbal][Markdown] \- [productividad mac][limni]  
 
 
@@ -631,6 +632,7 @@ Markdowns y otras recomendaciones --[Javier Cristóbal][Markdown] \- [productivi
 [fedora]: https://kashyapc.fedorapeople.org/virt/lc-2012/snapshots-handout.html
 [archi]: https://wiki.archlinux.org/index.php/QEMU#qxl
 [suse]: https://www.suse.com/documentation/sles11/book_kvm/data/cha_qemu_guest_inst_qemu-img.html 
+[debian]: https://wiki.debian.org/es/NetworkConfiguration#C.2BAPM-mo_utilizar_VLAN_.28dot1q.2C_802.1q.2C_trunk.29_.28Etch.2C_Lenny.29
 [Markdown]: http://markdown.es/sintaxis-markdown/
 [limni]: http://limni.net/blog/
 
