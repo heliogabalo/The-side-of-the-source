@@ -257,8 +257,7 @@ conexiones, tanto del Host como del Guest, una _Vlan_.
 
 De esta forma la MAC de la VM tendrá un identificador por defecto.  
 Esto puede ser un inconveniente, si corremos mas de una máquina, y queremos tener acceso  
-a internet en todas ellas, puesto que la aplicación genera por defecto, siempre la  
-misma MAC. 
+a internet en todas ellas, puesto que la aplicación genera siempre la misma MAC.  
 
   ~~~
 $ qemu-system-i386 -net nic,macaddr=52:54:XX:XX:XX:XX -net vde disk_image
@@ -267,7 +266,7 @@ $ qemu-system-i386 -net nic,macaddr=52:54:XX:XX:XX:XX -net vde disk_image
 
 Para que esto no ocurra debe indicarse un identificador. Reempaza las "X" con números  
 hexadecimales arbitrarios, pero recuerda conservar las primeras dos cifras, que hacen  
-referencia al id de fabricante(qemu).  
+referencia al _id_ de fabricante(qemu).  
 
 
 > _Notas:_ 
