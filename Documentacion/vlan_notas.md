@@ -1,5 +1,7 @@
 
-## Comentario sobre el hardware
+## Configuración de una VLAN
+
+#### Comentario sobre el hardware
 
 Para llevar a cabo este tipo de configuración son necesarios dos componentes  
 principales:
@@ -7,11 +9,11 @@ principales:
   - Conmunador con soporte al standard IEEE 802.1q en una red ethernet.
   - Una NIC, o tarjeta de red(Network Interface Card).
 
-> Tip: Los modelos de router, que suministra el proveedor habitual de servicios
->     de internet(ISP), son algo distintos a los utilizados en empresas y
->     organizaciones.
->     Estos equipos son una especie de híbrido, agrupando varias funcionalidades
->     que en otros equipos más sofisticados, encontraríamos por separado.
+> Tip: Los modelos de router, que suministra el proveedor habitual de servicios  
+>     de internet(ISP), son algo distintos a los utilizados en empresas y  
+>     organizaciones.  
+>     Estos equipos son una especie de híbrido, agrupando varias funcionalidades  
+>     que en otros equipos más sofisticados, encontraríamos por separado.  
 
 
 De la Wiki:
@@ -50,11 +52,11 @@ Dentro del archivo, añadimos
   ~~~  
   8021q  
   ~~~ 
-Guardamos y salimos. Hay una pequeña guía de comandos a pie del editor. Si no recuerdo
+Guardamos y salimos. Hay una pequeña guía de comandos a pie del editor. Si no recuerdo  
 mal: __ctrl + o__ para guardar y __ctrl + x__ para salir.  
 
-En linux, siempre hay varias formas de realizar una misma tarea, aquí se utilizará
-la aplicación _ip_. Primero, es creado el dispositio:
+En linux, siempre hay varias formas de realizar una misma tarea, aquí se utilizará  
+la aplicación _ip_. Primero, es creado el dispositio:  
 
   ~~~  
   # ip link add link eth0 name eth0.my_vlan id my_vlan  
