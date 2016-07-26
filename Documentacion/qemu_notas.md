@@ -92,29 +92,59 @@ poseer un tipo genérico 'raw' donde converge con otras 'versiones'.
 #### Backing_files/overlays
 
 La principal idea aquí, es la 'copia de seguridad'. Una vez se ha instalado el sistema  
-operativo, puede trabajarse con una copia de la imagen, resultado de la instalación.  
+operativo, puede trabajarse sobre un archivo de 'prueba/efecto'. Al que llamamos  
+_Overlay_.
 Esto permite probar extensivamente un determinado GUEST, sin importar los cambios que  
 hagamos, pues no serán aplicados al GUEST original, sino a la copia.
+La imagen del archivo que contiene la instalación original, o en un estado básico,
+la llamamos _BackingFile_.  
 
-Son necesarios dos pasos básicos:
+Para preparar este _entorno de prueba_ primero se crea una imagen en crudo, asignando el
+tamaño para la misma.
 
-- Cremaos una imagen 'qemu' con esta funcionalidad:  
-
-  ~~~
-  $ qemu-img create -f qcow2 -o backing_file=winxp.img test01.img 1M  
+  ~~~  
+  $ qemu-img create -f raw image_file.raw 10G  
   ~~~  
 
+A continuación creamos el backing_file. Realmente no lo estamos creando, estamos formando
+la imágen en crudo, para que reconozca nuestro entorno de prueba, asociando ambos
+archivos: _raw/qcow2_ en este caso.
+Lo hacemos con la siguiente línea:
+
+  ~~~  
+  $ qemu-img create -o backing_file=image_file.raw,backing_fmt=raw \  
+    -f qcow2 overlay.cow   
+  ~~~  
+
+Lo mas importante en este proceso, es asegurarnos de que el 'overlay' apunta al  
+backing_file. Podemos comprobarlo con la aplicación _file_
+
+  ~~~  
+  $ file overlay.cow  
+  ~~~  
+
+> Tip: Cuando trabajamos con procedimientos de este tipo, es habitual separar los
+> archivos, en distintos directorios. Una forma sencilla y eficaz de hacerlo
+> sin tener que estar escribiendo una y otra vez rutas largas, es asignar
+> la ruta a una variable.ejem: crear_backing.sh
+
+  ~~~  
+  #!/bin/sh  
+
+  my_path=/ruta/a/directorio/respaldo  
+  ~~~
+
+Se que algunos me tacharán de novato, pero escribiendo las rutas directamente en la línea  
+de comando, no conseguí de ninguna manera, que el vínculo entre ambos: backing-overlay,  
+no se rompiese.  
+
+> CAZADO:
 > Al llamar al 'backing_file' en el proceso de instalación de la imagen, qemu, parece  
 > no reconocer direcciones fuera del directorio que contiene la imagen 'base'. Esto  
 > quiere decir que para instalar la imagen en el backing file es necesario encontrarse  
 > en el directorio contenedor: mezcla las rutas absolutas/relativas.  
 
 
-  Con el parametro 'backing_file' conseguimos establecer una copia 'base' que no será  
-  alterada. Los cambios en el SUPUESTO sólo serán aplicados a la imagen copia.  
-  Habrá que tener en cuenta el guardar los cambios aplicados dentro del entorno  
-  alternativo, pues de otro modo, perderemos todo el trabajo cuando borremos la  
-  imagen.  
 
 - La VM arranca con:  
   
@@ -128,10 +158,22 @@ Son necesarios dos pasos básicos:
 > Ademas, he tenido que forzar la instalación llamando a la imagen 'base' desde la  
 > linea de comando, igual que si hiciese una instalacion normal.  
 
-Por tanto la línea de entrada quedaría así:  
-~~~
-qemu-system-i386 -m 256 -hda copia(overlay).img -cdrom base_name(backing).img -boot __string__
-~~~
+
+
+> EXPERIMENTAL: Debo probar hacer una copia de una instalación normal y una vez terminada la  
+> instalación, formar el 'backing' sobre una copia de la imagen que ya contiene el sistema  
+> operativo instalado.  
+> En este caso, se conseguiría una imagen sin 'tocar' o como backup, sobre la cual hacemos  
+> una copia, es decir, copiamos el archivo renombrándolo, antes de formar el 'backing'.  
+> Una vez hecho esto lo creamos. Al crear el backing de esta forma, conseguimos  
+> una imagen que no está tocada. 'El origen'.  
+> Esto puede ser interesante si por algún motivo, no queremos crear una imagen en crudo,  
+> o si queremos conservar una copia de una determinada instalación en un estado inicial.  
+> También puede resultar útil, cuando hemos aplicado muchas actualizaciones a nuestra  
+> imagen, y resulta mas complicado volver a un estado anterior, que comezar desde el  
+> principio.  
+
+
 
 #### SnapShots
 
