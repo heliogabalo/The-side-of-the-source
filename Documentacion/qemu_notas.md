@@ -245,7 +245,7 @@ tiene asociado otro compenente, una especie de CTR o conector que debe ser únic
 cada GEST.
 
 Esto puede resolverse asociando el dispositivo al conector, mediante un ID único.  
-Habrá que constituir un nuevo framework de red sobre el que se realizarán las  
+Habrá que constituir una nueva interfase de red, sobre la que se realizarán las  
 conexiones, tanto del Host como del Guest, una _Vlan_.  
 
 _vinculo a VLAN ._ 
