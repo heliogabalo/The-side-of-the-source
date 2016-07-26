@@ -271,17 +271,11 @@ referencia al _id_ de fabricante(qemu).
 
 > _Notas:_ 
 >
->   También es razonable pensar en virtualizar aplicaciones aisladas. Es posible que La  
->   Guest solo pueda comunicarse con otra GUEST. Habrá que averiguar si es posible acceder  
->   a una partición fuera de VM!!  
->
+
 >   Otra idea es probar qemu-ga. Éste es un demonio que funciona desde dentro de la  
 >   SUPUESTA, así que en teoría, el host via injection/algo puede gestionar la particion  
 >   de la VM, pero habrá que averiguar que tipo de operaciones puede hacer GUEST-AGENT.  
 >
->   La idea es mantener la VM simple, ya que por razones obvias, esto mejora su  
->   rendimiento, además el objeto de estas 'maquinas' es romperlas. Y ya se  
->   sabe que pasa cuando uno entra a cuchillo en algún lado(sin saber)...  
 
 
 #### Modo Tap
