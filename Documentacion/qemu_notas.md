@@ -251,11 +251,11 @@ conexiones, tanto del Host como del Guest, una _Vlan_.
 _vinculo a VLAN ._ 
 
   ~~~  
-  $ qemu-_arch_ -net nic,vlan=id -net user,vlan=id  
+  $ qemu- _arch_ -net nic,vlan=id -net user,vlan=id  
   ~~~  
 
 Cada uno de los dispositivos de red debe asociarse a su conector único!!
-> -net nic,vlan=id1 -net user,vlan=ID2 __NO SIRVE__
+> -net nic,vlan=id1 -net user,vlan=id2 __NO FUNCIONARÁ__
 
 
 #### Configurar una MAC específica
