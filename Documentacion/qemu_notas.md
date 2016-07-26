@@ -153,13 +153,13 @@ no se rompiese.
   ~~~  
 
 
-> EXPERIMENTAL: Debo probar hacer una copia de una instalación normal y una vez terminada la  
-> instalación, formar el 'backing' sobre una copia de la imagen que ya contiene el sistema  
-> operativo instalado.  
+> EXPERIMENTAL: Debo probar hacer una copia de una instalación normal y una vez   
+> terminada la  instalación, formar el 'backing' sobre una copia de la imagen que ya  
+> contiene el sistema operativo instalado.  
 > En este caso, se conseguiría una imagen sin 'tocar' o como backup, sobre la cual hacemos  
 > una copia, es decir, copiamos el archivo renombrándolo, antes de formar el 'backing'.  
 > Una vez hecho esto lo creamos. Al crear el backing de esta forma, conseguimos  
-> una imagen que no está tocada. 'El origen'.  
+> una imagen que no está tocada.  
 > Esto puede ser interesante si por algún motivo, no queremos crear una imagen en crudo,  
 > o si queremos conservar una copia de una determinada instalación en un estado inicial.  
 > También puede resultar útil, cuando hemos aplicado muchas actualizaciones a nuestra  
