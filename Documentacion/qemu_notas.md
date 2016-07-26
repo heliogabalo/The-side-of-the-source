@@ -93,22 +93,22 @@ poseer un tipo genérico 'raw' donde converge con otras 'versiones'.
 
 La principal idea aquí, es la 'copia de seguridad'. Una vez se ha instalado el sistema  
 operativo, puede trabajarse sobre un archivo de 'prueba/efecto'. Al que llamamos  
-_Overlay_.
+_Overlay_.  
 Esto permite probar extensivamente un determinado GUEST, sin importar los cambios que  
-hagamos, pues no serán aplicados al GUEST original, sino a la copia.
-La imagen del archivo que contiene la instalación original, o en un estado básico,
+hagamos, pues no serán aplicados al GUEST original, sino a la copia.  
+La imagen del archivo que contiene la instalación original, o en un estado básico,  
 la llamamos _BackingFile_.  
 
-Para preparar este _entorno de prueba_ primero se crea una imagen en crudo, asignando el
+Para preparar este _entorno de prueba_ primero se crea una imagen en crudo, asignando el  
 tamaño para la misma.
 
   ~~~  
   $ qemu-img create -f raw image_file.raw 10G  
   ~~~  
 
-A continuación creamos el backing_file. Realmente no lo estamos creando, estamos formando
-la imágen en crudo, para que reconozca nuestro entorno de prueba, asociando ambos
-archivos: _raw/qcow2_ en este caso.
+A continuación creamos el backing_file. Realmente no lo estamos creando, estamos formando  
+la imágen en crudo, para que reconozca nuestro entorno de prueba, asociando ambos  
+archivos: _raw/qcow2_ en este caso.  
 Lo hacemos con la siguiente línea:
 
   ~~~  
