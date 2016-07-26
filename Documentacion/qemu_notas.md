@@ -251,7 +251,7 @@ conexiones, tanto del Host como del Guest, una _Vlan_.
 _vinculo a VLAN ._ 
 
   ~~~  
-  $ qemu- _arch_ -net nic,vlan=id -net user,vlan=id  
+  $ qemu-<arch> -net nic,vlan=id -net user,vlan=id  
   ~~~  
 
 Cada uno de los dispositivos de red debe asociarse a su conector único!!
