@@ -248,7 +248,12 @@ Esto puede resolverse asociando el dispositivo al conector, mediante un ID únic
 Habrá que constituir una nueva interfase de red, sobre la que se realizarán las  
 conexiones, tanto del Host como del Guest, una _Vlan_.  
 
-_vinculo a VLAN ._ 
+_vinculo a VLAN ._  
+
+> _nota:_  
+>       ...Los administradores de red configuran las VLAN mediante software en lugar  
+>       de hardware, lo que las hace extremadamente fuertes.  
+>>> Wikia - Vlan.
 
   ~~~  
   $ qemu-<arch> -net nic,vlan=id -net user,vlan=id  
@@ -624,6 +629,7 @@ Gente de fedora --[snapshots-handout][fedora]
 ArchWiki --[QEMU][archi]  
 Suse --[QEMU][suse]  
 Debian --[VLAN][debian]  
+IEEE 802.1Q --[Wikia][dot1Q]  
 Markdowns y otras recomendaciones --[Javier Cristóbal][Markdown] \- [productividad mac][limni]  
 
 
@@ -633,6 +639,7 @@ Markdowns y otras recomendaciones --[Javier Cristóbal][Markdown] \- [productivi
 [archi]: https://wiki.archlinux.org/index.php/QEMU#qxl
 [suse]: https://www.suse.com/documentation/sles11/book_kvm/data/cha_qemu_guest_inst_qemu-img.html 
 [debian]: https://wiki.debian.org/es/NetworkConfiguration#C.2BAPM-mo_utilizar_VLAN_.28dot1q.2C_802.1q.2C_trunk.29_.28Etch.2C_Lenny.29
+[dot1Q]: https://es.wikipedia.org/wiki/IEEE_802.1Q
 [Markdown]: http://markdown.es/sintaxis-markdown/
 [limni]: http://limni.net/blog/
 
