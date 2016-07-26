@@ -248,6 +248,14 @@ Esto puede resolverse asociando el dispositivo al conector, mediante un ID únic
 Habrá que constituir un nuevo framework de red sobre el que se realizarán las  
 conexiones, tanto del Host como del Guest, una _Vlan_.  
 
+_vinculo a VLAN ._ 
+
+  ~~~  
+  $ qemu-_arch_ -net nic,vlan=id -net user,vlan=id  
+  ~~~  
+
+
+
 
 #### Configurar una MAC específica
 
