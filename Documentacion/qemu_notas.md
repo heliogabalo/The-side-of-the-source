@@ -158,7 +158,7 @@ no se rompiese.
 > contiene el sistema operativo instalado.  
 > En este caso, se conseguiría una imagen sin 'tocar' o como backup, sobre la cual hacemos  
 > una copia, es decir, copiamos el archivo renombrándolo, antes de formar el 'backing'.  
-> Una vez hecho esto lo creamos. Al crear el backing de esta forma, conseguimos  
+> Una vez hecho esto, lo creamos. Al crear el backing de esta forma, conseguimos  
 > una imagen que no está tocada.  
 > Esto puede ser interesante si por algún motivo, no queremos crear una imagen en crudo,  
 > o si queremos conservar una copia de una determinada instalación en un estado inicial.  
@@ -232,30 +232,40 @@ El comando quedaría algo así:
 qemu-system-(arch) -net nic,model8139 ...   
   ~~~  
 
-De esta forma la MAC de la VM tendrá un identificador por defecto.  
-Esto puede ser un inconveniente, si corremos mas de una máquina, y queremos tener acceso  
-a internet en todas ellas, puesto que la aplicación genera por defecto, siempre la  
-misma MAC. 
-
-Para que esto no ocurra debe indicarse un identificador. Reempaza las "X" con números  
-hexadecimales arbitrarios, pero recuerda conservar las primeras dos cifras, que hacen  
-referencia al id de fabricante(qemu).  
-  ~~~
-$ qemu-system-i386 -net nic,macaddr=52:54:XX:XX:XX:XX -net vde disk_image
-  ~~~
-Otro problema con el que nos encontraremos, es que la tarjeta virtual que estamos creando  
-tiene asociado otro compenente, una especie de CTR o conector que debe ser único para  
-cada GEST.
-
 Hay dos formas básicas de dotar a la VM con conexión a internet:
 
   - Modo usuario (slirp)
   - Modo Tap
 
 ####Modo usuario:
+
+Un problema con el que nos encontraremos, es que la tarjeta virtual que estamos creando  
+tiene asociado otro compenente, una especie de CTR o conector que debe ser único para  
+cada GEST.
+
+Esto puede resolverse asociando el dispositivo al conector, mediante un ID único.
+Pero habrá que constituir un nuevo framework de red sobre el que se realizarán las 
+conexiones. Para ello se configurara una _Vlan_
+
+
   ~~~
 -netdev user,id=mynet0,net=192.168.76.0/24,dhcpstart=192.168.76.9  
   ~~~
+
+De esta forma la MAC de la VM tendrá un identificador por defecto.  
+Esto puede ser un inconveniente, si corremos mas de una máquina, y queremos tener acceso  
+a internet en todas ellas, puesto que la aplicación genera por defecto, siempre la  
+misma MAC. 
+
+  ~~~
+$ qemu-system-i386 -net nic,macaddr=52:54:XX:XX:XX:XX -net vde disk_image
+  ~~~
+
+
+Para que esto no ocurra debe indicarse un identificador. Reempaza las "X" con números  
+hexadecimales arbitrarios, pero recuerda conservar las primeras dos cifras, que hacen  
+referencia al id de fabricante(qemu).  
+
 
 > _Notas:_ 
 >
