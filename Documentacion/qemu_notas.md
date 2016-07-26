@@ -243,9 +243,9 @@ Un problema con el que nos encontraremos, es que la tarjeta virtual que estamos 
 tiene asociado otro compenente, una especie de CTR o conector que debe ser único para  
 cada GEST.
 
-Esto puede resolverse asociando el dispositivo al conector, mediante un ID único.
-Pero habrá que constituir un nuevo framework de red sobre el que se realizarán las 
-conexiones. Para ello se configurara una _Vlan_
+Esto puede resolverse asociando el dispositivo al conector, mediante un ID único.  
+Habrá que constituir un nuevo framework de red sobre el que se realizarán las  
+conexiones, tanto del Host como del Guest, una _Vlan_.
 
 
   ~~~
