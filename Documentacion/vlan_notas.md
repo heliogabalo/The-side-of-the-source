@@ -53,4 +53,50 @@ Dentro del archivo, añadimos
 Guardamos y salimos. Hay una pequeña guía de comandos a pie del editor. Si no recuerdo
 mal: __ctrl + o__ para guardar y __ctrl + x__ para salir.  
 
+En linux, siempre hay varias formas de realizar una misma tarea, aquí se utilizará
+la aplicación _ip_. Primero, es creado el dispositio:
 
+  ~~~  
+  # ip link add link eth0 name eth0.my_vlan id my_vlan  
+  # ip link  
+  # ip -d link show eth0.my_vlan  
+  ~~~  
+
+A continuación lo activamos y es añadida una dirección _IP_ al vínculo de la _VLAN_:
+  ~~~  
+  # ip addr add 192.168.1.200/24 brd 192.168.1.255 dev eth0.my_vlan  
+  # ip link set dev eth0.my_vlan up  
+  ~~~  
+
+Todo el trafico que va a través de eth0 buscará la etiqueta _my-vlan_. Únicamente los  
+dispositivos en aviso, podrán aceptar paquetes, de otra forma serán omitidos.
+
+## Borrar el dispositivo
+
+  ~~~  
+  # ip link set dev eth0.my_vlan down  
+  # ip link delete eth0.my_vlan  
+  ~~~  
+
+Esto es, desconectar primero, borrar después.
+
+## Hacer permanente la configuración en un entorno Debian/Ubuntu.
+
+Abrimos el archivo de configuración
+  ~~~  
+  /etc/network/interfaces  
+  ~~~  
+
+... y escribimos lo siguiente:
+  ~~~  
+  ## vlan en Debian/Ubuntu Linux##
+  auto eth0.my_vlan  
+  iface eth0.my_vlan  
+      address 192.168.1.200  
+      netmask 255.255.255.0  
+      vlan-raw-device eth0
+  ~~~  
+
+> Puede omitirse 'vlan-raw-devie eth0' en la sección _iface_ si nombramos la _vlan_
+> con un identificador tipo ethX.YY, donde el dispositivo bruto toma el nombre de la
+> interfaz. 
