@@ -59,7 +59,7 @@ En linux, siempre hay varias formas de realizar una misma tarea, aquí se utiliz
 la aplicación _ip_. Primero, es creado el dispositio:  
 
   ~~~  
-  # ip link add link eth0 name eth0.my_vlan id my_vlan  
+  # ip link add link eth0 name eth0.my_vlan type vlan id my_vlan  
   # ip link  
   # ip -d link show eth0.my_vlan  
   ~~~  
