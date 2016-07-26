@@ -109,23 +109,6 @@ Abrimos el archivo de configuración
 > con un identificador tipo ethX.YY, donde el dispositivo bruto toma el nombre de la
 > interfaz.
 
-## EXPERIMENTAL Notas sobre seguridad EXPERIMENTAL
-NO PROVAR SIN ESTAR SEGURO DE LO QUE SE HACE -- EXPERIMENTAL.
-
-Creo haber leído algo sobre no tener activadas distintas interfaces, por seguridad.  
-Esto quiere decir que no es conveniente tener activa la conexión directa,  
-bien sea estática o dinámica.
-
-Si esto es así, habría que borrar las líneas asociadas a tal interface, dentro  
-del archivo /etc/network/interfaces y posiblemente tirarla abajo.
- 
-
-Puede comprobarse las interfaces activas, con el comando _ifconfig_ donde aparece  
-
-lo -- el loopback de red  
-eth0 --dispositivo o NIC  
-eth0.my_vlan -- interface virtual para la Vlan.  
-
 
 ---
 
