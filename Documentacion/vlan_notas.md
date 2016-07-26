@@ -64,6 +64,12 @@ la aplicación _ip_. Primero, es creado el dispositio:
   # ip -d link show eth0.my_vlan  
   ~~~  
 
+> Por convención, se utilizan números para denominar la interface. Han sido utilizados  
+> literales, por claridad. Igualmente son válidos.
+
+Si la salida de _ip link_ nos devuelve un mensaje renombrando la interface virtual  
+que acabamos de crear, leer vinculo a VLAN - ARCHIWIKI  
+
 A continuación lo activamos y es añadida una dirección _IP_ al vínculo de la _VLAN_:
   ~~~  
   # ip addr add 192.168.1.200/24 brd 192.168.1.255 dev eth0.my_vlan  
@@ -101,4 +107,25 @@ Abrimos el archivo de configuración
 
 > Puede omitirse 'vlan-raw-devie eth0' en la sección _iface_ si nombramos la _vlan_
 > con un identificador tipo ethX.YY, donde el dispositivo bruto toma el nombre de la
-> interfaz. 
+> interfaz.
+
+## EXPERIMENTAL Notas sobre seguridad EXPERIMENTAL
+NO PROVAR SIN ESTAR SEGURO DE LO QUE SE HACE -- EXPERIMENTAL.
+
+Creo haber leído algo sobre no tener activadas distintas interfaces, por seguridad.
+Esto quiere decir que no es conveniente tener activa la conexión directa, 
+bien sea estática o dinámica.
+
+Si esto es así, habría que borrar las líneas asociadas a tal interface, dentro
+del archivo /etc/network/interfaces y posiblemente tirarla abajo.
+ 
+
+podemos comprobar las interfaces activas con el comando ifconfig donde aparece
+
+lo -- el loopback de red
+eth0 --dispositivo o NIC
+eth0.my_vlan -- interface virtual para la Vlan.
+
+---
+
+[archw]: https://wiki.archlinux.org/index.php/VLAN
