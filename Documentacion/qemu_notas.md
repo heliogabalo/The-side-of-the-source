@@ -99,8 +99,8 @@ hagamos, pues no serán aplicados al GUEST original, sino a la copia.
 La imagen del archivo que contiene la instalación original, o en un estado básico,  
 la llamamos _BackingFile_.  
 
-Para preparar este _entorno de prueba_ primero se crea una imagen en crudo, asignando el  
-tamaño para la misma.
+Para preparar este _entorno de prueba_ primero se crea una imagen en crudo, asignando un  
+tamaño a la misma.
 
   ~~~  
   $ qemu-img create -f raw image_file.raw 10G  
@@ -123,9 +123,9 @@ backing_file. Podemos comprobarlo con la aplicación _file_
   $ file overlay.cow  
   ~~~  
 
-> Tip: Cuando trabajamos con procedimientos de este tipo, es habitual separar los
-> archivos, en distintos directorios. Una forma sencilla y eficaz de hacerlo
-> sin tener que estar escribiendo una y otra vez rutas largas, es asignar
+> Tip: Cuando trabajamos con procedimientos de este tipo, es habitual separar los  
+> archivos, en distintos directorios. Una forma sencilla y eficaz de hacerlo  
+> sin tener que estar escribiendo una y otra vez rutas largas, es asignar  
 > la ruta a una variable.ejem: crear_backing.sh
 
   ~~~  
@@ -149,15 +149,8 @@ no se rompiese.
 - La VM arranca con:  
   
   ~~~ 
-  qemu -m 256 -hda test.img -kernel-kqemu & (obsoleto??)  
+  qemu -m 256  overlay.cow  
   ~~~  
-
-> _-kemu-qkernel_ es un parámetro obsoleto no reconocido. He mirado en el Changelog de  
-> la version instalada(-v2.6) pero no he encontrado ninguna referencia al respecto.  
-> Podría ser que me pasase por alto.  
-> Ademas, he tenido que forzar la instalación llamando a la imagen 'base' desde la  
-> linea de comando, igual que si hiciese una instalacion normal.  
-
 
 
 > EXPERIMENTAL: Debo probar hacer una copia de una instalación normal y una vez terminada la  
