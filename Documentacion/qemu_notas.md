@@ -254,8 +254,8 @@ _vinculo a VLAN ._
   $ qemu-<arch> -net nic,vlan=id -net user,vlan=id  
   ~~~  
 
-> Cada uno de los dispositivos de red debe asociarse a su conector único!!
-> -net nic,vlan=id1 -net user,vlan=id2 __NO FUNCIONARÁ__
+> Cada uno de los dispositivos de red debe asociarse a su conector único!!  
+> -net nic,vlan=id1 -net user,vlan=id2 __NO FUNCIONARÁ__  
 
 
 #### Configurar una MAC específica
