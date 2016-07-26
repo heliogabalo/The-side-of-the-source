@@ -623,7 +623,7 @@ Documentation/Networking --[QEMU][QEM]
 Gente de fedora --[snapshots-handout][fedora]  
 ArchWiki --[QEMU][archi]  
 Suse --[QEMU][suse]  
-Debian --[VLAN][debian]
+Debian --[VLAN][debian]  
 Markdowns y otras recomendaciones --[Javier Cristóbal][Markdown] \- [productividad mac][limni]  
 
 
