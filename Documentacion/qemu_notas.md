@@ -99,7 +99,7 @@ hagamos, pues no serán aplicados al GUEST original, sino a la copia.
 La imagen del archivo que contiene la instalación original, o en un estado básico,  
 la llamamos _BackingFile_.  
 
-Para preparar este _entorno de prueba_ primero se crea una imagen en crudo, asignando un  
+Para preparar este _entorno de prueba_, primero se crea una imagen en crudo, asignando un  
 tamaño a la misma.
 
   ~~~  
@@ -126,7 +126,7 @@ backing_file. Podemos comprobarlo con la aplicación _file_
 > Tip: Cuando trabajamos con procedimientos de este tipo, es habitual separar los  
 > archivos, en distintos directorios. Una forma sencilla y eficaz de hacerlo  
 > sin tener que estar escribiendo una y otra vez rutas largas, es asignar  
-> la ruta a una variable.ejem: crear_backing.sh
+> la ruta a una variable ejem: crear_backing.sh
 
   ~~~  
   #!/bin/sh  
