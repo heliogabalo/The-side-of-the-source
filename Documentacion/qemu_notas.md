@@ -262,6 +262,9 @@ _vinculo a VLAN ._
 > Cada uno de los dispositivos de red debe asociarse a su conector único!!  
 > -net nic,vlan=id1 -net user,vlan=id2 __NO FUNCIONARÁ__  
 
+> PROBLEMA: despúes de hacer la instalación via CTR/interface, sigue siendo  
+> un requisito lanzar la app con tal asociación. De otro modo, el dispositivo
+> sigue instalado, pero la Vm no tiene acceso a la interface virtual(vlan).
 
 #### Configurar una MAC específica
 
