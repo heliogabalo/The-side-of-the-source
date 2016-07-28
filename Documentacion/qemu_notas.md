@@ -799,7 +799,7 @@ Suse --[QEMU][suse]
 Debian --[VLAN][debian]  
 IEEE 802.1Q --[Wikia][dot1Q]  
 Markdowns y otras recomendaciones --[Javier Cristóbal][Markdown] \- [productividad mac][limni]  
-
+HeavyMetalRadio [hrm][HRM]
 
 ---
 [QEM]: http://wiki.qemu.org/Documentation/Networking
@@ -810,7 +810,7 @@ Markdowns y otras recomendaciones --[Javier Cristóbal][Markdown] \- [productivi
 [dot1Q]: https://es.wikipedia.org/wiki/IEEE_802.1Q
 [Markdown]: http://markdown.es/sintaxis-markdown/
 [limni]: http://limni.net/blog/
-
+[HMR]:http://stream.kazancity.net:8000/14-heavymetalradio
  
 
 -->
