@@ -320,7 +320,6 @@ El proceso es similar a la hibernación de sistema.
 > _nota:_ el estado de disco, debería permanecer sin modificar, durante el tiempo de  
 restauración.  
 
-
 #### <a name="2i3">Creando capturas</a>  
 Mediante el uso de una _captura externa_, una nueva imagen(**overlay**), es creada para  
 facilitar la escritura del supuesto. La imagen previa se convierte en _captura_.
@@ -633,9 +632,9 @@ del módulo(antes y despues de la asignación):
 
 Si está cargado, lo descargamos:  
   ~~~  
-    # rmmod nbd  
-  ~~~
----
+  # rmmod nbd  
+  ~~~  
+
 ...vemos que aparece la ĺinea, pero no el entero! parece un bug. Es la segunda línea  
 empezando por abajo. 
 > _nota:_ deberías comprobar si en el mailing de Debian se ha escrito el 'report'.  
@@ -777,6 +776,7 @@ If VHDX format:
   $ qemu-img convert -f qcow2 -O vpc something.img something.vhd  
   ~~~  
 
+---  
 ##                  E X P E R I M E N T A L                     
 
 VIRTIO -- https://wiki.archlinux.org/index.php/QEMU#qxl
@@ -801,10 +801,11 @@ Almost the same goes for the network:
   $ qemu-system-i386 -net nic,model=virtio  
   ~~~  
 
-> _Note:_ This will only work if the guest machinethas drivers for virtio devices. Linux does, and the
-> required drivers are included in Arch Linux, but there is no guarantee that virtio devices will work
-> with other operating systems.
+> _Note:_ This will only work if the guest machinethas drivers for virtio devices. Linux does,  
+> and the required drivers are included in Arch Linux, but there is no guarantee that virtio  
+> devices will work with other operating systems.  
 
+---
 ## <a name="ai">AGRADECIMIENTOS</a>  
 
 Documentation/Networking --[QEMU][QEM]  
