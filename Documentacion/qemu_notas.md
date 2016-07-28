@@ -799,7 +799,7 @@ Suse --[QEMU][suse]
 Debian --[VLAN][debian]  
 IEEE 802.1Q --[Wikia][dot1Q]  
 Markdowns y otras recomendaciones --[Javier Cristóbal][Markdown] \- [productividad mac][limni]  
-HeavyMetalRadio [hrm][HMR]
+HeavyMetalRadio [hmr][HMR]
 
 ---
 [QEM]: http://wiki.qemu.org/Documentation/Networking
