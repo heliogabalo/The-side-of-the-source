@@ -1,5 +1,5 @@
 1. [PROCESO DE INSTALACION DE UNA IMAGEN](#i1) 
-    1. Crear imagen  
+    1. [Crear imagen](#i1)  
     2. [Convertir imagen](#1i2)
 
 2. [TRABAJAR CON UNA COPIA DE IMAGEN](#2i)
