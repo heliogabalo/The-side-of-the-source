@@ -208,7 +208,7 @@ _qemu_ actual. Es utilizado junto al comando _commit_ que se verá mas adelante.
 
 > __man page:__  
   ~~~  
-    > commit [--object objectdef] [--image-opts] [-q] [-f fmt] [-t cache] [-b base] [-d] [-p]  
+    commit [--object objectdef] [--image-opts] [-q] [-f fmt] [-t cache] [-b base] [-d] [-p]  
   ~~~
 
 La bandera(flag) __-o__ significa opciones. Cuando la imagen de disco, es creada con   
@@ -223,7 +223,7 @@ a la base(backing_file). El tamaño del archivo, puede ser omitido.
 > sin instalar un nuevo sistema operativo. Actualizaré la sección, cuando el problema
 > con ciertos paquetes sea resuelto en mi distribución. Puede pasar mucho tiempo.
 > 28-07-16. 
-> [fedora][fedora] -- en inglés.
+  [fedora][fedora] -- en inglés.
 ---  
 ## <a name="i3">CON O SIN CONEXION A INTERNET !!</a>
 
