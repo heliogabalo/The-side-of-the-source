@@ -171,9 +171,48 @@ no se rompiese.
 
 #### SnapShots
 
->   Ésta es quizás, la sección más delicada, me resulta imposible comprobar los comandos
->   sin instalar un nuevo sistema operativo.  
->     [fedora][fedora] -- en inglés.
+Snapshot es la captura de estado de una determinada máquina virtual, en un momento  
+concreto. Esto incluye al sistema operativo y todas las aplicaciones. Es como  
+una fotografía instantánea: _en ella aparecerá todo lo que hay delante del objetivo de  
+la cámara_.
+
+Aquí hablamos de instancias, como lo haríamos sobre una _clase_, por que en realidad  
+es un concepto similar: definimos un _proceso_, que ya ha sido implementado en otro  
+_escenario_, configurándolo para cumplir una _tarea específica_.  
+
+Esto evita tener que modificar el proceso original, y trabajar directamente en él, con  
+todas, o muchas, de sus características.
+
+La casualidad no existe. Qcow2(copy-on-write)podría traducirse como:  
+"escritura sobre la copia", que es exáctamente lo que se pretende en este _proceso _.  
+
+Esta ténica puede ser tan complicada o simple como la necesidad a cubrir, pero siempre  
+guarda la misma idea: mantener a salvo el archivo original, y realizar cambios, sobre
+una _copia_ de éste.
+
+Al realizar los cambios, modificaciones, pruebas, etc. aparece la alternativa de guardar  
+ese _estado_ en la imagen origanl, o tal vez descartarlo, por que  ha sido un _horrible  
+desastre_.
+
+Empezamos crenado una relación BackingFile/Overlay:
+
+  ~~~  
+  $ qemu-img create -b 
+
+
+La bandera(flag) __-o__ significa opciones. Cuando la imagen de disco, es creada con   
+la _opción_ *backing_file*, la imagen(overlay), sólo guardará la diferencia respecto  
+a la base(backing_file). El tamaño del archivo, puede ser omitido. 
+
+
+
+
+
+> Ésta, es quizás, la sección más delicada, me resulta imposible comprobar los comandos
+> sin instalar un nuevo sistema operativo. Actualizaré la sección, cuando el problema
+> con ciertos paquetes sea resuelto en mi distribución. Puede pasar mucho tiempo.
+> 28-07-16. 
+> [fedora][fedora] -- en inglés.
 ---  
 ## <a name="i3">CON O SIN CONEXION A INTERNET !!</a>
 
