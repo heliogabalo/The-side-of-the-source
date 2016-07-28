@@ -171,14 +171,14 @@ no se rompiese.
 
 #### SnapShots
 
-Snapshot es la captura de estado de una determinada máquina virtual, en un momento  
+Snapshot es la captura de _estado_ de una determinada máquina virtual, en un momento  
 concreto. Esto incluye al sistema operativo y todas las aplicaciones. Es como  
 una fotografía instantánea: _en ella aparecerá todo lo que hay delante del objetivo de  
 la cámara_.
 
 Aquí hablamos de instancias, como lo haríamos sobre una _clase_, por que en realidad  
 es un concepto similar: definimos un _proceso_, que ya ha sido implementado en otro  
-_escenario_, configurándolo para cumplir una _tarea específica_.  
+_escenario_. Configurándolo para cumplir una _tarea específica_.  
 
 Esto evita tener que modificar el proceso original, y trabajar directamente en él, con  
 todas, o muchas, de sus características.
@@ -204,7 +204,7 @@ Empezamos crenado una relación BackingFile/Overlay:
   ~~~  
 
 El flag *-b*, parece referirse a la *base*, pero ha queado obsoleto desde la version  
-_qemu_ actual. Es utilizado junto al comando _commit_ que se verá mas adelante.
+_qemu_ actual. Es utilizado junto al comando _commit_ que será visto, mas adelante.
 
 > __man page:__  
   ~~~  
@@ -213,9 +213,10 @@ _qemu_ actual. Es utilizado junto al comando _commit_ que se verá mas adelante.
 
 La bandera(flag) __-o__ significa opciones. Cuando la imagen de disco, es creada con   
 la _opción_ *backing_file*, la imagen(overlay), sólo guardará la diferencia respecto  
-a la base(backing_file). El tamaño del archivo, puede ser omitido. 
-
-
+a la base. El tamaño del archivo, puede ser omitido. 
+**-f** hace referencia al formato de archivo, para el __overlay__. Puesto que es habitual  
+guardar la _base_ en _crudo_. 
+**$mi_ruta:** no es más que una varible, que he utilizado para simplificar la línea.  
 
 
 
