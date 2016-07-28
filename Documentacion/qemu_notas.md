@@ -4,7 +4,9 @@
 
 2. TRABAJAR CON UNA COPIA DE IMAGEN
     1. Backing-files/overlays
-    2. Snapshots 
+    2. Snapshots  
+        - En vivo
+        - ... y en diferido
 3. [CON O SIN CONEXION A INTERNET](#i3)
     1. Modo usuario  
        - Configurar una MAC específica.
@@ -225,9 +227,9 @@ Es importante comprobar que el _vínculo_ entre ambos archivos, es el _adecuado:
   ~~~  
 
 __file__ ofrece una versión resumida si únicamente buscamos comprabar el vínculo.  
-__qemu-img info --backingfile__ aporta información más detallada.  
+__qemu-img info --backing-chain__ aporta información más detallada:  
   ~~~  
-    image: /path/to//BF/Overlays/img1.cow
+    image: /path/to/BF/Overlays/img1.cow
     file format: qcow2
     virtual size: 3.0G (3221225472 bytes)
     disk size: 1.5G
