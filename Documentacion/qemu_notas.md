@@ -184,11 +184,11 @@ Esto evita tener que modificar el proceso original, y trabajar directamente en �
 todas, o muchas, de sus características.
 
 La casualidad no existe. Qcow2(copy-on-write)podría traducirse como:  
-"escritura sobre la copia", que es exáctamente lo que se pretende en este _proceso _.  
+"escritura sobre la copia", que es exáctamente lo que se pretende en este _proceso_. 
 
 Esta ténica puede ser tan complicada o simple como la necesidad a cubrir, pero siempre  
 guarda la misma idea: mantener a salvo el archivo original, y realizar cambios, sobre
-una _copia_ de éste.
+una _copia_.
 
 Al realizar los cambios, modificaciones, pruebas, etc. aparece la alternativa de guardar  
 ese _estado_ en la imagen origanl, o tal vez descartarlo, por que  ha sido un _horrible  
@@ -197,8 +197,19 @@ desastre_.
 Empezamos crenado una relación BackingFile/Overlay:
 
   ~~~  
-  $ qemu-img create -b 
+  $ qemu-img create -b $mi_Ruta/base.img -f qcow2 \  
+    $mi_ruta/Overlays/overlay1.qcow2  
+  $ qemu.img create -o backing_file=$mi_ruta/base.img,backing_fmt=raw \  
+    -f qcow2 $mi_ruta/Overlays/overlay2.qcow2  
+  ~~~  
 
+El flag *-b*, parece referirse a la *base*, pero ha queado obsoleto desde la version  
+_qemu_ actual. Es utilizado junto al comando _commit_ que se verá mas adelante.
+
+> __man page:__  
+  ~~~  
+    > commit [--object objectdef] [--image-opts] [-q] [-f fmt] [-t cache] [-b base] [-d] [-p]  
+  ~~~
 
 La bandera(flag) __-o__ significa opciones. Cuando la imagen de disco, es creada con   
 la _opción_ *backing_file*, la imagen(overlay), sólo guardará la diferencia respecto  
