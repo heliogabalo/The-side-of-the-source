@@ -8,7 +8,7 @@
         - [Captura interna](#2i2a)  
         - [Captura externa](#2i2b)  
         - [Estado de la VM](#2i2c)
-    3. [Creando capturas](#3i)  
+    3. [Creando capturas](#2i3)  
     4. Proceso de reversión  
     5. Confluencia en las capturas  
     6. Aprovado de bloque  
