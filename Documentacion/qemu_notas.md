@@ -3,7 +3,7 @@
     2. [Convertir imagen](#1i2)
 
 2. [TRABAJAR CON UNA COPIA DE IMAGEN](#2i)
-    1. [Backing-files/overlays](#2i1)
+    1. [Backing-files/overlays](#2i)
     2. [Snapshots](#2i2)  
         - [Captura interna](#2i2a)  
         - [Captura externa](#2i2b)  
