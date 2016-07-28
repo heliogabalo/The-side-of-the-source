@@ -4,7 +4,7 @@
 
 2. TRABAJAR CON UNA COPIA DE IMAGEN
     1. Backing-files/overlays
-    2. Snapshots 
+    2. Snapshots  
         -Captura interna
         - Captura externa 
         - En vivo
@@ -301,9 +301,7 @@ carrera o tras el apagado del sitema.
 > con ciertos paquetes sea resuelto en mi distribución. Puede pasar mucho tiempo.  
 > 28-07-16.  
 > - libvirt-bin
-> - libvirt-daemo
-> - libvirt-bin
-> - libvirt-daemonn
+> - libvirt-daemon
   [Manual snapShots][fedora] -- en inglés.  
 
 ---  
