@@ -224,8 +224,8 @@ Es importante comprobar que el _vínculo_ entre ambos archivos, es el _adecuado:
   $ qemu-img info --backing-chain $mi_ruta/Overlays/overlay2.qcow2  
   ~~~  
 
-__file__ ofrece una versión resumida si únicamente buscamos comprabar el vínculo.
-__qemu-img info --backingfile__ aporta información más detallada.
+__file__ ofrece una versión resumida si únicamente buscamos comprabar el vínculo.  
+__qemu-img info --backingfile__ aporta información más detallada.  
   ~~~  
     image: /path/to//BF/Overlays/img1.cow
     file format: qcow2
