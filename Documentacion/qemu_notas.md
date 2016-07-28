@@ -171,7 +171,9 @@ no se rompiese.
 
 #### SnapShots
 
-
+>   Ésta es quizás, la sección más delicada, me resulta imposible comprobar los comandos
+>   sin instalar un nuevo sistema operativo.  
+>     [fedora][fedora] -- en inglés.
 ---  
 ## <a name="i3">CON O SIN CONEXION A INTERNET !!</a>
 
