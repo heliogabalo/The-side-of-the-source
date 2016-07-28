@@ -296,7 +296,7 @@ se convierte a sólo lectura(_base_) y, un nuevo archivo(_overlay_) recogerá lo
 _estado_ guardado.  
  
 **Captura externa de disco:**  
-La captura de disco, es guardada en un archivo y, _delta_ hasta la captura, seguido en uno  
+La captura de disco, es guardada en un archivo y, _delta_ hasta la captura, _seguido_ en uno  
 nuevo, con formato qcow2. Puede ser tomada en _vivo_ o con la máquina apagada.  
 
   - libvirt: esta librería, usa el comando de shell 'transaction', durante la carrera del  
@@ -308,7 +308,7 @@ nuevo, con formato qcow2. Puede ser tomada en _vivo_ o con la máquina apagada.
 Aquí, el estado de disco del SUPUESTO será guardado en un archivo, su RAM y el estado  
 del dispositivo serán almacenados en un nuevo archivo.
 
-**Estado de la VM**
+**Estado de la VM**  
 Guarda la RAM y el estado del dispositivo de un supuesto en carrera, sin embargo, no el  
 estado de disco; a un archivo. Así, podrá ser restaurado más tarde.  
 El proceso es similar a la hibernación de sistema.  
@@ -320,13 +320,13 @@ restauración.
 
 
 
-
-> Ésta es quizás, la sección más delicada, me resulta imposible comprobar los comandos  
-> sin instalar un nuevo sistema operativo. Actualizaré la sección, cuando el problema  
-> con ciertos paquetes sea resuelto en mi distribución. Puede pasar mucho tiempo.  
+> La implentación de la librería _libvirt_ está aún en desarrollo, por lo que parte  
+> de su funcionalidad no se encuentra disponible, al menos en la rama estable. En  
+> Debian los paquetes necesarios son libvirt-bin y libvirt-daemon, pero es probable  
+> romper el sistema si se instalan desde la rama estable.  
+> Actualizaré la sección, cuando el problema con estps paquetes sea resuelto desde la  
+> rama estable. Puede pasar mucho tiempo.  
 > 28-07-16.  
-> - libvirt-bin  
-> - libvirt-daemon  
 > [Manual snapShots][fedora] -- en inglés.  
 
 ---  
