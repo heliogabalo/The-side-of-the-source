@@ -512,15 +512,15 @@ la imagen:
     imagen.iso: ISO 9660 CD-ROM filesystem data 'GRTMPVOL_EN' (bootable)  
   ~~~
 
-Vemos que únicamente contiene una partición. A continuación, tan sólo queda montar la imagen.  
-Para esto utilizamos la aplicación _losetup:_  
+Vemos que únicamente contiene una partición. A continuación, tan sólo queda montar la  
+imagen. Para esto utilizamos la aplicación _losetup:_  
 
   ~~~  
     $ losetup /dev/loop0 /punto_de_montaje/imagen.iso
   ~~~  
 
-En caso de utilizar este método _montaje simple_, para evitar que el sistema nos devuelva
-algún mensaje de aviso, acerca de los permisos con los que se monta la unidad, podemos
+En caso de utilizar este método _montaje simple_, para evitar que el sistema nos devuelva  
+algún mensaje de aviso, acerca de los permisos con los que se monta la unidad, podemos  
 especificar que lo haga en modo solo lectura.
 
   ~~~  
@@ -529,9 +529,9 @@ especificar que lo haga en modo solo lectura.
 
 
 > __nota:__ aquí va otra nota sobre el uso de los shasum y file, sobre la importancia  
-> de hacer las comprobaciones oportunas en cuanto a imágenes descargadas. Y un especial  
-> comentario acerca del cambio que se produce en un sha, cuando queremos montar una imagen  
-> con permisos de escritura. IMPORTANTE INVESTIGAR!  
+> de hacer las comprobaciones oportunas en cuanto a imágenes descargadas. Y un  
+> especial comentario acerca del cambio que se produce en un sha, cuando queremos montar  
+> una imagen con permisos de escritura. IMPORTANTE INVESTIGAR!  
 
 #### <a name="4i1">MONTAR UN LOOPBACK PARA COMUNICARNOS CON LA VM SIN CONEXION</a>  
 
@@ -564,9 +564,8 @@ especificar que lo haga en modo solo lectura.
 
     sector_size * sector_start = 512 * 1542240 = 789626880
 
- 4. Borrar el loop y montar la partición, dentro de la imagen de disco. Con el cálculo del offset  
-    dentro del directorio ya preparado.        
-
+ 4. Borrar el loop y montar la partición, dentro de la imagen de disco. Con el cálculo del  
+    offset dentro del directorio ya preparado.  
     ~~~
     tux@venus:~> losetup -d /dev/loop0  
     tux@venus:~> mount -o loop,offset=789626880 \  
@@ -661,15 +660,15 @@ __después:__
 
   ~~~  
   # modinfo nbd
-filename:       /lib/modules/algo-aqui/kernel/drivers/block/nbd.ko  
-license:        GPL  
-description:    Network Block Device  
+filename:    /lib/modules/algo-aqui/kernel/drivers/block/nbd.ko  
+license:     GPL  
+description: Network Block Device  
 depends:  
-intree:         Y  
-vermagic:       algo-aqui SMP mod_unload modversions 086  
-parm:           nbds_max:number of network block devices to initialize (default: 16) (int)  
-parm:           max_part:number of partitions per device (default: 0) (int)  
-parm:           debugflags:flags for controlling debug output (int)  
+intree:      Y  
+vermagic:    algo-aqui SMP mod_unload modversions 086  
+parm:        nbds_max:number of network block devices to initialize(default:16)(int)  
+parm:        max_part:number of partitions per device (default: 0) (int)  
+parm:        debugflags:flags for controlling debug output (int)  
   ~~~
 
 
