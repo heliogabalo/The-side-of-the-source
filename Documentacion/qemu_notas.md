@@ -4,7 +4,9 @@
 
 2. TRABAJAR CON UNA COPIA DE IMAGEN
     1. Backing-files/overlays
-    2. Snapshots  
+    2. Snapshots 
+        -Captura interna
+        - Captura externa 
         - En vivo
         - ... y en diferido
 3. [CON O SIN CONEXION A INTERNET](#i3)
@@ -252,7 +254,7 @@ Otro usuario **Linux**, desde la distribución _Fedora_, ha querido incluir en s
 un conjunto de términos utilizados junto a estas _capturas de estado_. Intentaré  
 traducirlos sin cambiar su contenido...  
 
-**Captura interna:**  
+#### **Captura interna:**  
 
 Un archivo qcow2 que sostiene la captura y "delta" hasta el punto de guardado. Delta hace  
 referencia al "direncial" escrito en la imagen, aquellas partes del disco que han sufrido  
@@ -273,12 +275,21 @@ modificación.
 **Captura interna de disco:**  
 El estado del disco virtual dado en un punto del tiempo. Tanto la captura, como _delta_  
 son almacenados en el mismo archivo qcow2. Pueden ser tomados igualmente, cuando el  
-SUPUESTO esta 'vivo/encendido' u 'offline/apagado'.
+SUPUESTO esta 'vivo/encendido' u 'offline/apagado'.  
+
+  - libvirt: esta librería, usa el comando 'qemu-img' cuando el SUPUESTO está _apagado_.
+  - libvirt: usa el comando 'savevm' cuando el SUPUESTO está _encendido_.
 
 
-  **Punto de guardado interno del sistema:**  
+**Punto de guardado interno del sistema:**  
 
-**Captura externa:**  
+Estado de la _RAM_, estdo del dispositivo y el estado del disco de un SUPUESTO en carrera.  
+Todos son guardados en el mismo archivo original qcow2. Puede ser tomado durante la
+carrera o tras el apagado del sitema.
+
+  - libvirt: usa el comando 'savevm' cuando el SUPUESTO está _encendido_.
+
+#### **Captura externa:**  
 
   **Captura externa de disco:**
 
@@ -289,6 +300,10 @@ SUPUESTO esta 'vivo/encendido' u 'offline/apagado'.
 > sin instalar un nuevo sistema operativo. Actualizaré la sección, cuando el problema  
 > con ciertos paquetes sea resuelto en mi distribución. Puede pasar mucho tiempo.  
 > 28-07-16.  
+> - libvirt-bin
+> - libvirt-daemo
+> - libvirt-bin
+> - libvirt-daemonn
   [Manual snapShots][fedora] -- en inglés.  
 
 ---  
