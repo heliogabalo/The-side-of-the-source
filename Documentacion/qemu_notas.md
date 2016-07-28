@@ -700,14 +700,14 @@ Este comando identifica la imagen, como un dispositivo de bloque llamado
 
 > RECUERDA DESMONTAR LA UNIDAD Y EL DISPOSITIVO CUANDO TERMINES.  
   ~~~  
-  # umount /imagen/montada(vhd) -- Desmontamos imagen.  
+  $ umount /imagen/montada(vhd) -- Desmontamos imagen.  
   # qemu-nbd -d /dev/nbd0 -- desconectamos dispositivo.  
   ~~~  
 
 
 ## LANZAR LA VM APUNTANDO AL SERVIDOR NBD  
   ~~~  
-   $QEMU -object tls-creds-x509,id=tls0,dir=$HOME/.pki/qemutls,endpoint=client \  
+   $ QEMU -object tls-creds-x509,id=tls0,dir=$HOME/.pki/qemutls,endpoint=client \  
        -drive driver=nbd,host=localhost,port=10809,tls-creds=tls0 \  
        /path/to/img  
   ~~~  
@@ -730,10 +730,11 @@ como partición individual.
 
 
 
-Al terminar podemos desmontar la unidad y el dispositivo, así.
-
- unmount /mnt
- qemu-nbd -d /dev/nbd0
+Al terminar podemos desmontar la unidad y el dispositivo, así.  
+  ~~~  
+  $ unmount /mnt  
+  # qemu-nbd -d /dev/nbd0  
+  ~~~  
 
 You can use qemu-nbd in Linux to access a disk image as if it were a block device.  
 Here are some examples of operations that can be performed from a live Knoppix terminal.  
@@ -759,10 +760,11 @@ If VHDX format:
   ~~~  
   # qemu-nbd --partition=2 --read-only --connect=/dev/nbd2 --format=vpc vhd-file-name  
   # mount /dev/nbd2 /mnt  
+  ~~~  
 
 #### Unmount and disconnect image file:  
   ~~~  
-  # umount /mnt  
+  $ umount /mnt  
   # qemu-nbd --disconnect /dev/nbd2  
   ~~~  
 
