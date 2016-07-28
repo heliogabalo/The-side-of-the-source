@@ -8,7 +8,14 @@
         - Captura interna  
         - Captura externa  
         - Estado de la VM
-    3. Creando capturas
+    3. Creando capturas  
+    4. Proceso de reversión  
+    5. Confluencia en las capturas  
+    6. Aprovado de bloque  
+    7. Aceptación o emisión de bloque  
+    8. Flujo de línea?  
+    9. Borrado de capturas  
+    10. Notas del autor 
 3. [CON O SIN CONEXION A INTERNET](#i3)
     1. Modo usuario  
        - Configurar una MAC específica.
@@ -191,7 +198,7 @@ La casualidad no existe. Qcow2(copy-on-write)podría traducirse como:
 "escritura sobre la copia", que es exáctamente lo que se pretende en este _proceso_. 
 
 Esta ténica puede ser tan complicada o simple como la necesidad a cubrir, pero siempre  
-guarda la misma idea: mantener a salvo el archivo original, y realizar cambios, sobre
+guarda la misma idea: mantener a salvo el archivo original, y realizar cambios, sobre  
 una _copia_.
 
 Al realizar los cambios, modificaciones, pruebas, etc. aparece la alternativa de guardar  
@@ -323,7 +330,7 @@ restauración.
 > La implentación de la librería _libvirt_ está aún en desarrollo, por lo que parte  
 > de su funcionalidad no se encuentra disponible, al menos en la rama estable. En  
 > Debian los paquetes necesarios son libvirt-bin y libvirt-daemon, pero es probable  
-> romper el sistema si se instalan desde ésta rama(alternativa filo sangriento?).  
+> romper el sistema si se instalan desde ésta rama(alternativa _filo sangrante?_).  
 > Actualizaré la sección, cuando el problema con estos paquetes sea resuelto.    
 > Puede pasar mucho tiempo. 28-07-16.  
 > [Manual snapShots][fedora] -- en inglés.  
