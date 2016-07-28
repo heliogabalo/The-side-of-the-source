@@ -5,8 +5,9 @@
 2. TRABAJAR CON UNA COPIA DE IMAGEN
     1. Backing-files/overlays
     2. Snapshots  
-        -Captura interna
-        - Captura externa 
+        - Captura interna  
+        - Captura externa  
+        - Estado de la VM
         - En vivo
         - ... y en diferido
 3. [CON O SIN CONEXION A INTERNET](#i3)
@@ -284,16 +285,38 @@ SUPUESTO esta 'vivo/encendido' u 'offline/apagado'.
 **Punto de guardado interno del sistema:**  
 
 Estado de la _RAM_, estdo del dispositivo y el estado del disco de un SUPUESTO en carrera.  
-Todos son guardados en el mismo archivo original qcow2. Puede ser tomado durante la
-carrera o tras el apagado del sitema.
+Todos son guardados en el mismo archivo original qcow2. Puede ser tomado durante la  
+carrera o tras el apagado del sitema.  
 
-  - libvirt: usa el comando 'savevm' cuando el SUPUESTO está _encendido_.
+  - libvirt: usa el comando 'savevm' cuando el SUPUESTO está _encendido_.  
 
 #### **Captura externa:**  
+Al tomar la captura se almacena el estado de disco en un archivo. En ese punto, la imagen  
+se convierte a sólo lectura(_base_) y, un nuevo archivo(_overlay_) recogerá los _deltas_ del  
+_estado_ guardado.  
+ 
+**Captura externa de disco:**  
+La captura de disco, es guardada en un archivo y, _delta_ hasta la captura, seguido en uno
+nuevo, con formato qcow2. Puede ser tomada en _vivo_ o con la máquina apagada.  
 
-  **Captura externa de disco:**
+  - libvirt: esta librería, usa el comando de shell 'transaction', durante la carrera del
+    SUPUESTO.  
+  - libvirt: usa el comando de cónsola 'qemu-img' cuando el SUPUESTO está apagado.  
+    
 
-  **Punto de guardado externo del sistema:**
+**Punto de guardado externo del sistema:**  
+Aquí, el estado de disco del SUPUESTO será guardado en un archivo, su RAM y el estado del  
+dispositivo serán almacenados en un nuevo archivo.
+
+**Estado de la VM**
+Guarda la RAM y el estado del dispositivo de un supuesto en carrera, sin embargo, no el estado  
+de disco; a un archivo. Así, podrá ser restaurado más tarde.  
+El proceso es similar a la hibernación de sistema.  
+> _nota:_ el estado de disco, debería permanecer sin modificar, durante el tiempo de restauración.
+
+
+
+
 
 
 > Ésta es quizás, la sección más delicada, me resulta imposible comprobar los comandos  
