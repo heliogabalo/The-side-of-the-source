@@ -270,10 +270,10 @@ modificación.
 >  El archivo test-over, represanta otra imagen, a la que se han aplicado "pocos" cambios.  
 
 
-  **Captura interna de disco:**  
-    El estado del disco virtual dado en un punto del tiempo. Tanto la captura, como _delta_  
-    son almacenados en el mismo archivo qcow2. Pueden ser tomados igualmente, cuando el
-    SUPUESTO esta 'vivo/encendido' u 'offline/apagado'.
+**Captura interna de disco:**  
+El estado del disco virtual dado en un punto del tiempo. Tanto la captura, como _delta_  
+son almacenados en el mismo archivo qcow2. Pueden ser tomados igualmente, cuando el  
+SUPUESTO esta 'vivo/encendido' u 'offline/apagado'.
 
 
   **Punto de guardado interno del sistema:**  
