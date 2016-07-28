@@ -242,12 +242,38 @@ __qemu-img info --backing-chain__ aporta información más detallada:
         refcount bits: 16
         corrupt: false
     
-    image: /path/to//BF/image_file.raw
+    image: /path/to/BF/image_file.raw
     file format: raw
     virtual size: 3.0G (3221225472 bytes)
     disk size: 1.4G
   ~~~  
 
+Otro usuario **Linux**, desde la distribución _Fedora_, ha querido incluir en su documentación,  
+un conjunto de términos utilizados junto a estas _capturas de estado_. Intentaré  
+traducirlos sin cambiar su contenido...  
+
+**Captura interna:**  
+
+
+  ~~~  
+    $ ls -sh $my_path && ls -sh $my_path/Overlays
+    1,5G image_file.raw  2,1G test01.img 
+       0 Overlays           0 Unsafe     
+    total 1,7G
+    1,6G img1.cow  134M test_over.qcow2
+  ~~~  
+  
+ 
+
+  **Captura interna de disco:**
+
+  **Punto de guardado interno del sistema:**  
+
+**Captura externa:**  
+
+  **Captura externa de disco:**
+
+  **Punto de guardado externo del sistema:**
 
 
 > Ésta es quizás, la sección más delicada, me resulta imposible comprobar los comandos  
