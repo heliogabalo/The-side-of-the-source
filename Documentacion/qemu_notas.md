@@ -778,7 +778,7 @@ If VHDX format:
   $ qemu-img convert -f qcow2 -O vpc something.img something.vhd  
   ~~~  
 
----  
+---
 ##                  E X P E R I M E N T A L                     
 
 VIRTIO -- https://wiki.archlinux.org/index.php/QEMU#qxl
