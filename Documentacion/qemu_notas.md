@@ -211,9 +211,9 @@ _qemu_ actual. Es utilizado junto al comando _commit_ que será visto, mas adela
     commit [--object objectdef] [--image-opts] [-q] [-f fmt] [-t cache] [-b base] [-d] [-p]  
   ~~~
 
-La bandera(flag):  __-o__ significa opciones. Cuando la imagen de disco, es creada con  
-la _opción_ *backing_file*, la imagen(overlay), sólo guardará la diferencia respecto  
-a la base. El tamaño del archivo, puede ser omitido.  
+La bandera(flag):  __-o__ significa opciones. Cuando la imagen de disco, es creada con la  
+_opción_ *backing_file*, la imagen(overlay), sólo guardará la diferencia respecto a la base.  
+El tamaño del archivo, puede ser omitido.  
 **-f** hace referencia al formato de archivo, para el __overlay__. Puesto que es habitual  
 guardar la _base_ en _crudo_. 
 **$mi_ruta:** no es más que una varible, que he utilizado para simplificar la línea.  
