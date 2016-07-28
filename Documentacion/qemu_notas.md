@@ -8,8 +8,7 @@
         - Captura interna  
         - Captura externa  
         - Estado de la VM
-        - En vivo
-        - ... y en diferido
+    3. Creando capturas
 3. [CON O SIN CONEXION A INTERNET](#i3)
     1. Modo usuario  
        - Configurar una MAC específica.
@@ -316,7 +315,8 @@ El proceso es similar a la hibernación de sistema.
 restauración.  
 
 
-
+#### Creando capturas.
+...algo aquí
 
 
 
@@ -324,9 +324,8 @@ restauración.
 > de su funcionalidad no se encuentra disponible, al menos en la rama estable. En  
 > Debian los paquetes necesarios son libvirt-bin y libvirt-daemon, pero es probable  
 > romper el sistema si se instalan desde la rama estable.  
-> Actualizaré la sección, cuando el problema con estps paquetes sea resuelto desde la  
-> rama estable. Puede pasar mucho tiempo.  
-> 28-07-16.  
+> Actualizaré la sección, cuando el problema con estos paquetes sea resuelto.    
+> Puede pasar mucho tiempo. 28-07-16.  
 > [Manual snapShots][fedora] -- en inglés.  
 
 ---  
