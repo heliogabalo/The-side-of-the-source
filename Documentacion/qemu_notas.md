@@ -5,10 +5,10 @@
 2. [TRABAJAR CON UNA COPIA DE IMAGEN](#2i)
     1. [Backing-files/overlays](#2i1)
     2. [Snapshots](#2i2)  
-        - [Captura interna](#2ia)  
-        - Captura externa  
-        - Estado de la VM
-    3. Creando capturas  
+        - [Captura interna](#2i2a)  
+        - [Captura externa](#2i2b)  
+        - [Estado de la VM](#2i2c)
+    3. [Creando capturas](#3i)  
     4. Proceso de reversión  
     5. Confluencia en las capturas  
     6. Aprovado de bloque  
@@ -17,15 +17,15 @@
     9. Borrado de capturas  
     10. Notas de autor 
 3. [CON O SIN CONEXION A INTERNET](#i3)
-    1. Modo usuario  
-       - Configurar una MAC específica.
+    1. [Modo usuario](#3i1)  
+       - [Configurar una MAC específica](#3i1a)  
     2. Modo Tap
-4. EL LOOPBACK
-    1. MONTAR UN LOOPBACK PARA COMUNICARNOS CON LA VM SIN CONEXION
-    2. LOOPBACK PARA UNA IMGEN (USANDO MODULOS EN EL KERNEL)  
+4. [EL LOOPBACK](#4i)
+    1. [MONTAR UN LOOPBACK PARA COMUNICARNOS CON LA VM SIN CONEXION](#4i1)  
+    2. [LOOPBACK PARA UNA IMGEN (USANDO MODULOS EN EL KERNEL)](#4i2)  
       - Lanzar la VM apuntando al servidor NBD
 6. EXPERIMENTAL
-7. AGRADECIMIENTOS
+7. [AGRADECIMIENTOS](#ai)
 
 ---
 ## 1. <a name="i1">PROCESO DE INSTALACION DE UNA IMAGEN</a>  
@@ -338,7 +338,7 @@ facilitar la escritura del supuesto. La imagen previa se convierte en _captura_.
 > [Manual snapShots][fedora] -- en inglés.  
 
 ---  
-## <a name="i3">CON O SIN CONEXION A INTERNET !!</a>
+## <a name="3i">CON O SIN CONEXION A INTERNET !!</a>
 
 > __nota:__
 >      Si se trabaja con el _overlay_, habrá que recordar actualizar el _backing_file_, de otra  
