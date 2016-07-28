@@ -323,7 +323,7 @@ restauración.
 > La implentación de la librería _libvirt_ está aún en desarrollo, por lo que parte  
 > de su funcionalidad no se encuentra disponible, al menos en la rama estable. En  
 > Debian los paquetes necesarios son libvirt-bin y libvirt-daemon, pero es probable  
-> romper el sistema si se instalan desde ésta rama(alternativa filo sangriento!).  
+> romper el sistema si se instalan desde ésta rama(alternativa filo sangriento?).  
 > Actualizaré la sección, cuando el problema con estos paquetes sea resuelto.    
 > Puede pasar mucho tiempo. 28-07-16.  
 > [Manual snapShots][fedora] -- en inglés.  
