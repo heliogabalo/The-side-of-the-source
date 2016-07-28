@@ -266,12 +266,15 @@ modificación.
     1,6G img1.cow  134M test_over.qcow2
   ~~~  
 >  En la última línea del siguiente bloque de código, puede verse como al archivo img1.cow,  
->  se han ido aplicando diferentes actualizaciones, quedando reflejadas en el tamaño de disco.
->  El archivo test_over, represanta otra imagen, a la que se han aplicado "pocos" cambios.
- 
- 
+>  se han aplicando diferentes actualizaciones, quedando reflejadas en el tamaño de disco.  
+>  El archivo test-over, represanta otra imagen, a la que se han aplicado "pocos" cambios.  
 
-  **Captura interna de disco:**
+
+  **Captura interna de disco:**  
+    El estado del disco virtual dado en un punto del tiempo. Tanto la captura, como _delta_  
+    son almacenados en el mismo archivo qcow2. Pueden ser tomados igualmente, cuando el
+    SUPUESTO esta 'vivo/encendido' u 'offline/apagado'.
+
 
   **Punto de guardado interno del sistema:**  
 
