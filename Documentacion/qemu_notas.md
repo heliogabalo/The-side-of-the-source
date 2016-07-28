@@ -254,6 +254,9 @@ traducirlos sin cambiar su contenido...
 
 **Captura interna:**  
 
+Un archivo qcow2 que sostiene la captura y "delta" hasta el punto de guardado. Delta hace  
+referencia al "direncial" escrito en la imagen, aquellas partes del disco que han sufrido  
+modificación.
 
   ~~~  
     $ ls -sh $my_path && ls -sh $my_path/Overlays
@@ -262,7 +265,10 @@ traducirlos sin cambiar su contenido...
     total 1,7G
     1,6G img1.cow  134M test_over.qcow2
   ~~~  
-  
+>  En la última línea del siguiente bloque de código, puede verse como al archivo img1.cow,  
+>  se han ido aplicando diferentes actualizaciones, quedando reflejadas en el tamaño de disco.
+>  El archivo test_over, represanta otra imagen, a la que se han aplicado "pocos" cambios.
+ 
  
 
   **Captura interna de disco:**
