@@ -211,18 +211,46 @@ _qemu_ actual. Es utilizado junto al comando _commit_ que será visto, mas adela
     commit [--object objectdef] [--image-opts] [-q] [-f fmt] [-t cache] [-b base] [-d] [-p]  
   ~~~
 
-La bandera(flag):  __-o__ significa opciones. Cuando la imagen de disco, es creada con la  
-_opción_ *backing_file*, la imagen(overlay), sólo guardará la diferencia respecto a la base.  
-El tamaño del archivo, puede ser omitido.  
-**-f** hace referencia al formato de archivo, para el __overlay__. Puesto que es habitual  
-guardar la _base_ en _crudo_.  
-**$mi_ruta:** no es más que una varible, que he utilizado para simplificar la línea.  
+> La bandera(flag):  __-o__ significa opciones. Cuando la imagen de disco, es creada con la  
+> _opción_ *backing_file*, la imagen(overlay), sólo guardará la diferencia respecto a la base.  
+> El tamaño del archivo, puede ser omitido.  
+> **-f** hace referencia al formato de archivo, para el __overlay__. Puesto que es habitual  
+> guardar la _base_ en _crudo_.  
+> **$mi_ruta:** no es más que una varible, que he utilizado para simplificar la línea.  
+
+Es importante comprobar que el _vínculo_ entre ambos archivos, es el _adecuado:_  
+  ~~~  
+  $ file *archivo*  
+  $ qemu-img info --backing-chain $mi_ruta/Overlays/overlay2.qcow2  
+  ~~~  
+
+__file__ ofrece una versión resumida si únicamente buscamos comprabar el vínculo.
+__qemu-img info --backingfile__ aporta información más detallada.
+  ~~~  
+    image: /path/to//BF/Overlays/img1.cow
+    file format: qcow2
+    virtual size: 3.0G (3221225472 bytes)
+    disk size: 1.5G
+    cluster_size: 65536
+    backing file: /path/to/BF/image_file.raw
+    backing file format: raw
+    Format specific information:
+        compat: 1.1
+        lazy refcounts: false
+        refcount bits: 16
+        corrupt: false
+    
+    image: /path/to//BF/image_file.raw
+    file format: raw
+    virtual size: 3.0G (3221225472 bytes)
+    disk size: 1.4G
+  ~~~  
 
 
 
-> Ésta, es quizás, la sección más delicada, me resulta imposible comprobar los comandos
-> sin instalar un nuevo sistema operativo. Actualizaré la sección, cuando el problema
-> con ciertos paquetes sea resuelto en mi distribución. Puede pasar mucho tiempo.
+> Ésta es quizás, la sección más delicada, me resulta imposible comprobar los comandos  
+> sin instalar un nuevo sistema operativo. Actualizaré la sección, cuando el problema  
+> con ciertos paquetes sea resuelto en mi distribución. Puede pasar mucho tiempo.  
 > 28-07-16.  
   [Manual snapShots][fedora] -- en inglés.  
 
