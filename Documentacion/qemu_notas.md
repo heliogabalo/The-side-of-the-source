@@ -1,11 +1,11 @@
 1. [PROCESO DE INSTALACION DE UNA IMAGEN](#i1) 
     1. Crear imagen  
-    2. [Convertir imagen](#i2)
+    2. [Convertir imagen](#1i2)
 
-2. TRABAJAR CON UNA COPIA DE IMAGEN
-    1. Backing-files/overlays
-    2. Snapshots  
-        - Captura interna  
+2. [TRABAJAR CON UNA COPIA DE IMAGEN](#2i)
+    1. [Backing-files/overlays](#2i1)
+    2. [Snapshots](#2i2)  
+        - [Captura interna](#2ia)  
         - Captura externa  
         - Estado de la VM
     3. Creando capturas  
@@ -15,7 +15,7 @@
     7. Aceptación o emisión de bloque  
     8. Flujo de línea?  
     9. Borrado de capturas  
-    10. Notas del autor 
+    10. Notas de autor 
 3. [CON O SIN CONEXION A INTERNET](#i3)
     1. Modo usuario  
        - Configurar una MAC específica.
@@ -26,7 +26,6 @@
       - Lanzar la VM apuntando al servidor NBD
 6. EXPERIMENTAL
 7. AGRADECIMIENTOS
-
 
 ---
 ## 1. <a name="i1">PROCESO DE INSTALACION DE UNA IMAGEN</a>  
@@ -77,7 +76,7 @@ disco duro y 'd' a un CD-ROM.
 Desde una perspectiva Windows, habrá que asegurarse. Pués windows utiliza letras para  
 denominar los dispositivos de almacenamiento.
 
-#### <a name="i2">Convertir imagen</a> 
+#### <a name="1i2">Convertir imagen</a> 
 
 Por qué convertir imágenes antes de instalarlas:  
 
@@ -99,7 +98,7 @@ específicas, qemu es capaz de interpretar una gran variedad de éstas, además 
 poseer un tipo genérico 'raw' donde converge con otras 'versiones'.
 
 ---
-## TRABAJAR CON UNA COPIA DE IMAGEN 
+## <a name="2i">TRABAJAR CON UNA COPIA DE IMAGEN</a>  
 
 #### Backing_files/overlays
 
@@ -180,7 +179,7 @@ no se rompiese.
 
 
 
-#### SnapShots
+#### <a name="2i2">SnapShots</a>
 
 Snapshot es la captura de _estado_ de una determinada máquina virtual, en un momento  
 concreto. Esto incluye al sistema operativo y todas las aplicaciones. Es como  
@@ -261,7 +260,7 @@ Otro usuario **Linux**, desde la distribución _Fedora_, ha querido incluir en s
 un conjunto de términos utilizados junto a estas _capturas de estado_. Intentaré  
 traducirlos sin cambiar su contenido...  
 
-#### **Captura interna:**  
+#### <a name="2i2a">**Captura interna:**</a>  
 
 Un archivo qcow2 que sostiene la captura y "delta" hasta el punto de guardado. Delta hace  
 referencia al "direncial" escrito en la imagen, aquellas partes del disco que han sufrido  
@@ -296,7 +295,7 @@ carrera o tras el apagado del sitema.
 
   - libvirt: usa el comando 'savevm' cuando el SUPUESTO está _encendido_.  
 
-#### **Captura externa:**  
+#### <a name="2i2b">**Captura externa:**</a>
 Al tomar la captura se almacena el estado de disco en un archivo. En ese punto, la imagen  
 se convierte a sólo lectura(_base_) y, un nuevo archivo(_overlay_) recogerá los _deltas_ del  
 _estado_ guardado.  
@@ -314,7 +313,7 @@ nuevo, con formato qcow2. Puede ser tomada en _vivo_ o con la máquina apagada.
 Aquí, el estado de disco del SUPUESTO será guardado en un archivo, su RAM y el estado  
 del dispositivo serán almacenados en un nuevo archivo.
 
-**Estado de la VM**  
+#### <a name="2i2c">**Estado de la VM**</a>
 Guarda la RAM y el estado del dispositivo de un supuesto en carrera, sin embargo, no el  
 estado de disco; a un archivo. Así, podrá ser restaurado más tarde.  
 El proceso es similar a la hibernación de sistema.  
@@ -322,8 +321,11 @@ El proceso es similar a la hibernación de sistema.
 restauración.  
 
 
-#### Creando capturas.
-...algo aquí
+#### <a name="2i3">Creando capturas</a>  
+Mediante el uso de una _captura externa_, una nueva imagen(**overlay**), es creada para  
+facilitar la escritura del supuesto. La imagen previa se convierte en _captura_.
+
+
 
 
 
@@ -400,7 +402,7 @@ Hay dos formas básicas de dotar a la VM con conexión a internet:
   - Modo usuario (slirp)
   - Modo Tap
 
-####Modo usuario:
+#### <a name="3i1">Modo usuario:</a>  
 
 Un problema con el que nos encontraremos, es que la tarjeta virtual que estamos creando  
 tiene asociado otro compenente, una especie de CTR o conector que debe ser único para  
@@ -429,7 +431,7 @@ _vinculo a VLAN ._
 > sigue instalado, pero la Vm no tiene acceso a la interface virtual(vlan).  
 
 
-#### Configurar una MAC específica
+#### <a name="3i1a">Configurar una MAC específica</a>  
 
   ~~~
 -netdev user,id=mynet0,net=192.168.76.0/24,dhcpstart=192.168.76.9  
@@ -462,7 +464,7 @@ referencia al _id_ de fabricante(qemu).
 > to be continued...
 
 ---   
-## EL LOOPBACK 
+## <a name="4i">EL LOOPBACK</a>  
 
 La traducción de loopback significa: bucle hacia atrás(ma o meno), o 'camino de  
 regreso'. La idea es utilizar una partición o disco, que se encuentra fuera de la  
@@ -531,7 +533,7 @@ especificar que lo haga en modo solo lectura.
 > comentario acerca del cambio que se produce en un sha, cuando queremos montar una imagen  
 > con permisos de escritura. IMPORTANTE INVESTIGAR!  
 
-#### MONTAR UN LOOPBACK PARA COMUNICARNOS CON LA VM SIN CONEXION 
+#### <a name="4i1">MONTAR UN LOOPBACK PARA COMUNICARNOS CON LA VM SIN CONEXION</a>  
 
   Calcular el _offset_ antes de montar la imagen de disco.  
     
@@ -587,7 +589,7 @@ especificar que lo haga en modo solo lectura.
     tux@venus:~> umount /mnt/sles11sp1/  
 
  
-#### LOOPBACK PARA UNA IMAGEN (USANDO MODUOS EN EL KERNEL)
+#### <a name="4i2">LOOPBACK PARA UNA IMAGEN (USANDO MODUOS EN EL KERNEL)</a>  
 
 Aquí primero preparamos el dispositivo que será leído por el módulo de kernel NBD.  
 Para ello debemos tener cargado dicho módulo o cargarlo en todo caso. Recuerda que   
@@ -788,7 +790,7 @@ qemu-img convert -f qcow2 -O vpc something.img something.vhd
  required drivers are included in Arch Linux, but there is no guarantee that virtio devices will work
  with other operating systems.
 
-## AGRADECIMIENTOS
+## <a name="ai">AGRADECIMIENTOS</a>  
 
 Documentation/Networking --[QEMU][QEM]  
 Gente de fedora --[snapshots-handout][fedora]  
