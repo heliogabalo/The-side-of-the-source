@@ -744,37 +744,37 @@ Here are some examples of operations that can be performed from a live Knoppix t
   # qemu-nbd --read-only --connect=/dev/nbd0 --format=vpc _vhd-file-name_  
   ~~~  
 
-If VHDX format:  
+###### If VHDX format:  
   ~~~  
   # qemu-nbd --connect=/dev/nbd0 --format=VHDX _hdx-file-name_  
   # ddrescue --verbose --force /dev/nbd0 /dev/sda  # write image to /dev/sda  
   ~~~  
 
-#### Write one partition:  
+###### Write one partition:  
   ~~~  
   # nbd --partition=2 --read-only --connect=/dev/nbd2 --format=vpc vhd-file-name  
   # ddrescue --verbose --force /dev/nbd2 /dev/sda2 # write partition 2 of image to /dev/sda2  
   ~~~  
 
 
-#### Mount partition:  
+###### Mount partition:  
   ~~~  
   # qemu-nbd --partition=2 --read-only --connect=/dev/nbd2 --format=vpc vhd-file-name  
   # mount /dev/nbd2 /mnt  
   ~~~  
 
-#### Unmount and disconnect image file:  
+###### Unmount and disconnect image file:  
   ~~~  
   $ umount /mnt  
   # qemu-nbd --disconnect /dev/nbd2  
   ~~~  
 
-#### To convert a vhd image to raw (less usable)  
+###### To convert a vhd image to raw (less usable)  
   ~~~  
   $ qemu-img convert -f raw -O vpc something.img something.vhd  
   ~~~  
 
-#### To convert a vhd image to cow2 (the up to date qemu format)  
+###### To convert a vhd image to cow2 (the up to date qemu format)  
   ~~~  
   $ qemu-img convert -f qcow2 -O vpc something.img something.vhd  
   ~~~  
