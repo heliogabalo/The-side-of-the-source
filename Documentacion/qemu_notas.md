@@ -690,8 +690,8 @@ Este comando identifica la imagen, como un dispositivo de bloque llamado
     mínima, es decir, no es como si lanzásemos Apache!!!  
   ~~~  
   # qemu-nbd -c /dev/nbd0/ /path/to/vhd_file -- Esto conecta el dispositivo.  
-  # partprobe /dev/nbd0  -- indica al SO los cambios que se han llevado a cabo en la  
-                        tabla de particiones.  
+  # partprobe /dev/nbd0  -- indica al SO los cambios que se han llevado  
+                            a cabo en la tabla de particiones.  
   ~~~  
 
  3. Este último paso, es el que realmente monta la unidad virtual en el sistema.  
@@ -723,77 +723,87 @@ Este comando identifica la imagen, como un dispositivo de bloque llamado
 
  
 
- Ahora podríamos ejecutar cfdisk en el dispositivo de bloque, y montarlo
- como partición individual.
+Ahora podríamos ejecutar cfdisk en el dispositivo de bloque, y montarlo
+como partición individual.  
+  ~~~  
+  # mount /dev/nbd0p1 /mnt -- "/mnt" es el punto de montaje.  
+  ~~~  
 
- mount /dev/nbd0p1 /mnt -- "/mnt" es el punto de montaje.
 
 
- Al terminar podemos desmontar la unidad y el dispositivo, así.
+Al terminar podemos desmontar la unidad y el dispositivo, así.
 
  unmount /mnt
  qemu-nbd -d /dev/nbd0
-###################################################################
 
- You can use qemu-nbd in Linux to access a disk image as if it were a block device.
- Here are some examples of operations that can be performed from a live Knoppix terminal.
+You can use qemu-nbd in Linux to access a disk image as if it were a block device.  
+Here are some examples of operations that can be performed from a live Knoppix terminal.  
+  ~~~  
+  $ su  
+  # modprobe nbd  
+  # qemu-nbd --read-only --connect=/dev/nbd0 --format=vpc _vhd-file-name_  
 
-   su 
-   modprobe nbd
-   qemu-nbd --read-only --connect=/dev/nbd0 --format=vpc <vhd_file_name>
+If VHDX format:  
+  ~~~  
+  # qemu-nbd --connect=/dev/nbd0 --format=VHDX _hdx-file-name_  
+  # ddrescue --verbose --force /dev/nbd0 /dev/sda  # write image to /dev/sda  
+  ~~~  
 
-   If VHDX format:
+#### Write one partition:  
+  ~~~  
+  # nbd --partition=2 --read-only --connect=/dev/nbd2 --format=vpc vhd-file-name  
+  # ddrescue --verbose --force /dev/nbd2 /dev/sda2 # write partition 2 of image to /dev/sda2  
+  ~~~  
 
-   qemu-nbd --connect=/dev/nbd0 --format=VHDX <vhdx_file_name>
-   ddrescue --verbose --force /dev/nbd0 /dev/sda  # write image to /dev/sda
 
-#### Write one partition: 
+#### Mount partition:  
+  ~~~  
+  # qemu-nbd --partition=2 --read-only --connect=/dev/nbd2 --format=vpc vhd-file-name  
+  # mount /dev/nbd2 /mnt  
 
-   nbd --partition=2 --read-only --connect=/dev/nbd2 --format=vpc <vhd_file_name> 
-   ddrescue --verbose --force /dev/nbd2 /dev/sda2 # write partition 2 of image to /dev/sda2
+#### Unmount and disconnect image file:  
+  ~~~  
+  # umount /mnt  
+  # qemu-nbd --disconnect /dev/nbd2  
+  ~~~  
 
-#### Mount partition:
+#### To convert a vhd image to raw (less usable)  
+  ~~~  
+  $ qemu-img convert -f raw -O vpc something.img something.vhd  
+  ~~~  
 
-  qemu-nbd --partition=2 --read-only --connect=/dev/nbd2 --format=vpc <vhd_file_name>
-  mount /dev/nbd2 /mnt 
-
-#### Unmount and disconnect image file:
-
-  umount /mnt 
-  qemu-nbd --disconnect /dev/nbd2
-
-#### To convert a vhd image to raw (less usable)
-
-qemu-img convert -f raw -O vpc something.img something.vhd
-
-#### To convert a vhd image to cow2 (the up to date qemu format)
-qemu-img convert -f qcow2 -O vpc something.img something.vhd
+#### To convert a vhd image to cow2 (the up to date qemu format)  
+  ~~~  
+  $ qemu-img convert -f qcow2 -O vpc something.img something.vhd  
+  ~~~  
 
 ##                  E X P E R I M E N T A L                     
 
-[Foo](#foo)   
-   VIRTIO -- https://wiki.archlinux.org/index.php/QEMU#qxl
-   
-   virtio-vga / virtio-gpu is a paravirtual 3D graphics driver based on virgl. Currently a work in
-   progress, supporting only very recent (>= 4.4) Linux guests. 
+VIRTIO -- https://wiki.archlinux.org/index.php/QEMU#qxl
 
- QEMU offers guests the ability to use paravirtualized block and network devices using the virtio
- drivers, which provide better performance and lower overhead.
- 
- A virtio block device requires the option -drive instead of the simple -hdX plus if=virtio:
- 
-     $ qemu-system-i386 -boot order=c -drive file=disk_image,if=virtio
- 
- Note: -boot order=c is absolutely necessary when you want to boot from it. There is no 
- auto-detection as with -hdX
- 
- Abmos  the same goes for the network:
- 
- $ qemu-system-i386 -net nic,model=virtio
- 
- Note: This will only work if the guest machinethas drivers for virtio devices. Linux does, and the
- required drivers are included in Arch Linux, but there is no guarantee that virtio devices will work
- with other operating systems.
+virtio-vga / virtio-gpu is a paravirtual 3D graphics driver based on virgl. Currently  
+a work in progress, supporting only very recent (>= 4.4) Linux guests.  
+
+QEMU offers guests the ability to use paravirtualized block and network devices using  
+the virtio drivers, which provide better performance and lower overhead.  
+
+> A virtio block device requires the option  
+> -drive instead of the simple -hdX plus if=virtio:  
+> ~~~  
+> $ qemu-system-i386 -boot order=c -drive file=disk_image,if=virtio  
+> ~~~  
+
+Note: -boot order=c is absolutely necessary when you want to boot from it. There is no  
+auto-detection as with -hdX  
+
+Almost the same goes for the network:  
+  ~~~  
+  $ qemu-system-i386 -net nic,model=virtio  
+  ~~~  
+
+> _Note:_ This will only work if the guest machinethas drivers for virtio devices. Linux does, and the
+> required drivers are included in Arch Linux, but there is no guarantee that virtio devices will work
+> with other operating systems.
 
 ## <a name="ai">AGRADECIMIENTOS</a>  
 
