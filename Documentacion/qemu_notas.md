@@ -742,6 +742,7 @@ Here are some examples of operations that can be performed from a live Knoppix t
   $ su  
   # modprobe nbd  
   # qemu-nbd --read-only --connect=/dev/nbd0 --format=vpc _vhd-file-name_  
+  ~~~  
 
 If VHDX format:  
   ~~~  
