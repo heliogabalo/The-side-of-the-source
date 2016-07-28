@@ -224,7 +224,7 @@ guardar la _base_ en _crudo_.
 > sin instalar un nuevo sistema operativo. Actualizaré la sección, cuando el problema
 > con ciertos paquetes sea resuelto en mi distribución. Puede pasar mucho tiempo.
 > 28-07-16.  
-  [fedora][fedora] -- en inglés.  
+  [Manual snapShots][fedora] -- en inglés.  
 
 ---  
 ## <a name="i3">CON O SIN CONEXION A INTERNET !!</a>
