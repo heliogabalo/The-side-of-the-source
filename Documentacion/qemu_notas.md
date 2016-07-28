@@ -215,7 +215,7 @@ La bandera(flag):  __-o__ significa opciones. Cuando la imagen de disco, es crea
 _opción_ *backing_file*, la imagen(overlay), sólo guardará la diferencia respecto a la base.  
 El tamaño del archivo, puede ser omitido.  
 **-f** hace referencia al formato de archivo, para el __overlay__. Puesto que es habitual  
-guardar la _base_ en _crudo_. 
+guardar la _base_ en _crudo_.  
 **$mi_ruta:** no es más que una varible, que he utilizado para simplificar la línea.  
 
 
@@ -223,8 +223,9 @@ guardar la _base_ en _crudo_.
 > Ésta, es quizás, la sección más delicada, me resulta imposible comprobar los comandos
 > sin instalar un nuevo sistema operativo. Actualizaré la sección, cuando el problema
 > con ciertos paquetes sea resuelto en mi distribución. Puede pasar mucho tiempo.
-> 28-07-16. 
-  [fedora][fedora] -- en inglés.
+> 28-07-16.  
+  [fedora][fedora] -- en inglés.  
+
 ---  
 ## <a name="i3">CON O SIN CONEXION A INTERNET !!</a>
 
