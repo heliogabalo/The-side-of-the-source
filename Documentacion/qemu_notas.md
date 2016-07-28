@@ -793,7 +793,7 @@ qemu-img convert -f qcow2 -O vpc something.img something.vhd
 ## <a name="ai">AGRADECIMIENTOS</a>  
 
 Documentation/Networking --[QEMU][QEM]  
-Gente de fedora --[snapshots-handout][fedora]  
+Manual Capturas(inglés) --[snapshots-handout][fedora]  
 ArchWiki --[QEMU][archi]  
 Suse --[QEMU][suse]  
 Debian --[VLAN][debian]  
