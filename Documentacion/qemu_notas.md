@@ -679,34 +679,38 @@ Este comando identifica la imagen, como un dispositivo de bloque llamado
     qemu-nbd -c /dev/nbd0 _vdi-file_  
   ~~~
 
- 1. CARGAMOS EL MÓDULO 
+1. CARGAMOS EL MÓDULO 
 
- modprobe nbd -- Esto carga el módulo de no estar cargado.  
- modprobe nbd max_part=16  
-  
- 2. A continuación preparamos el dispositivo donde montaremos la unidad.
- Este proceso inicia una especie de servidor. Realmente la carga en memoria es mínima, es
- decir, no es como si lanzásemos Apache!!!
-
- qemu-nbd -c /dev/nbd0/ /path/to/vhd_file -- Esto conecta el dispositivo.
- partprobe /dev/nbd0  -- indica al SO los cambios que se han llevado a cabo en la 
-                         tabla de particiones.
-
- 3. Este último paso, es el que realmente monta la unidad virtual en el sistema.
+modprobe nbd -- Esto carga el módulo de no estar cargado.  
+modprobe nbd max_part=16  
  
- mount /dev/nbd0p1 /imagen/a/montar(vhd en este caso!!)
+2. A continuación preparamos el dispositivo donde montaremos la unidad.  
+Este proceso inicia una especie de servidor. Realmente la carga en memoria es mínima, es
+decir, no es como si lanzásemos Apache!!!  
 
-     RECUERDA DESMONTAR LA UNIDAD Y EL DISPOSITIVO CUANDO TERMINES.
+qemu-nbd -c /dev/nbd0/ /path/to/vhd_file -- Esto conecta el dispositivo.  
+partprobe /dev/nbd0  -- indica al SO los cambios que se han llevado a cabo en la  
+                        tabla de particiones.
 
- umount /imagen/montada(vhd) -- Desmontamos imagen.
- qemu-nbd -d /dev/nbd0 -- desconectamos dispositivo.
+3. Este último paso, es el que realmente monta la unidad virtual en el sistema.  
+  ~~~  
+  # mount /dev/nbd0p1 /imagen/a/montar(vhd en este caso!!)  
+  ~~~  
+
+> RECUERDA DESMONTAR LA UNIDAD Y EL DISPOSITIVO CUANDO TERMINES.  
+  ~~~  
+  # umount /imagen/montada(vhd) -- Desmontamos imagen.  
+  # qemu-nbd -d /dev/nbd0 -- desconectamos dispositivo.  
+  ~~~  
 
 
-## LANZAR LA VM APUNTANDO AL SERVIDOR NBD
+## LANZAR LA VM APUNTANDO AL SERVIDOR NBD  
+  ~~~  
+   $QEMU -object tls-creds-x509,id=tls0,dir=$HOME/.pki/qemutls,endpoint=client \  
+       -drive driver=nbd,host=localhost,port=10809,tls-creds=tls0 \  
+       /path/to/img  
+  ~~~  
 
- $QEMU -object tls-creds-x509,id=tls0,dir=$HOME/.pki/qemutls,endpoint=client \
-       -drive driver=nbd,host=localhost,port=10809,tls-creds=tls0 \
-       /path/to/img
 
 
 
