@@ -296,23 +296,25 @@ se convierte a sólo lectura(_base_) y, un nuevo archivo(_overlay_) recogerá lo
 _estado_ guardado.  
  
 **Captura externa de disco:**  
-La captura de disco, es guardada en un archivo y, _delta_ hasta la captura, seguido en uno
+La captura de disco, es guardada en un archivo y, _delta_ hasta la captura, seguido en uno  
 nuevo, con formato qcow2. Puede ser tomada en _vivo_ o con la máquina apagada.  
 
-  - libvirt: esta librería, usa el comando de shell 'transaction', durante la carrera del
+  - libvirt: esta librería, usa el comando de shell 'transaction', durante la carrera del  
     SUPUESTO.  
   - libvirt: usa el comando de cónsola 'qemu-img' cuando el SUPUESTO está apagado.  
     
 
 **Punto de guardado externo del sistema:**  
-Aquí, el estado de disco del SUPUESTO será guardado en un archivo, su RAM y el estado del  
-dispositivo serán almacenados en un nuevo archivo.
+Aquí, el estado de disco del SUPUESTO será guardado en un archivo, su RAM y el estado  
+del dispositivo serán almacenados en un nuevo archivo.
 
 **Estado de la VM**
-Guarda la RAM y el estado del dispositivo de un supuesto en carrera, sin embargo, no el estado  
-de disco; a un archivo. Así, podrá ser restaurado más tarde.  
+Guarda la RAM y el estado del dispositivo de un supuesto en carrera, sin embargo, no el  
+estado de disco; a un archivo. Así, podrá ser restaurado más tarde.  
 El proceso es similar a la hibernación de sistema.  
-> _nota:_ el estado de disco, debería permanecer sin modificar, durante el tiempo de restauración.
+> _nota:_ el estado de disco, debería permanecer sin modificar, durante el tiempo de  
+restauración.  
+
 
 
 
@@ -323,9 +325,9 @@ El proceso es similar a la hibernación de sistema.
 > sin instalar un nuevo sistema operativo. Actualizaré la sección, cuando el problema  
 > con ciertos paquetes sea resuelto en mi distribución. Puede pasar mucho tiempo.  
 > 28-07-16.  
-> - libvirt-bin
-> - libvirt-daemon
-  [Manual snapShots][fedora] -- en inglés.  
+> - libvirt-bin  
+> - libvirt-daemon  
+> [Manual snapShots][fedora] -- en inglés.  
 
 ---  
 ## <a name="i3">CON O SIN CONEXION A INTERNET !!</a>
