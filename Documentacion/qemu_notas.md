@@ -171,15 +171,6 @@ no se rompiese.
 
 #### SnapShots
 
-> _to be continued_...
-Esto no se puede testar en Debian/kali hay que hacerlo en otro sistema, Fedora Archi...  
-o romper el puto sistema, porque el libvirt-bin aconseja 104 putas desinstalaciones.  
-
-Otra alternativa es virtualizar kali en uno de los de arriba mencionados dentro de  
-un puto ordenador quantico. El que tenga pasta ya sabe!
-
-Resumiendo que todo lo escrito en la puta documentacion. _este puto documento_ no sirve  
-para una puta mierda!me cago en mis muertos
 
 ---  
 ## <a name="i3">CON O SIN CONEXION A INTERNET !!</a>
