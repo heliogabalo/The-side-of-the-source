@@ -16,7 +16,7 @@
     8. Flujo de línea?  
     9. Borrado de capturas  
     10. Notas de autor 
-3. [CON O SIN CONEXION A INTERNET](#i3)
+3. [CON O SIN CONEXION A INTERNET](#3i)
     1. [Modo usuario](#3i1)  
        - [Configurar una MAC específica](#3i1a)  
     2. Modo Tap
