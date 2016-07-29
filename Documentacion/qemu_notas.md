@@ -812,6 +812,7 @@ Almost the same goes for the network:
 ## <a name="ai">AGRADECIMIENTOS</a>  
 
 Documentation/Networking --[QEMU][QEM]  
+Virtualization Api --[Libvirt][lib]
 Manual Capturas(inglés) --[snapshots-handout][fedora]  
 ArchWiki --[QEMU][archi]  
 Suse --[QEMU][suse]  
@@ -822,6 +823,7 @@ HeavyMetalRadio [hmr][HMR]
 
 ---
 [QEM]: http://wiki.qemu.org/Documentation/Networking
+[lib]: http://libvirt.org/index.html
 [fedora]: https://kashyapc.fedorapeople.org/virt/lc-2012/snapshots-handout.html
 [archi]: https://wiki.archlinux.org/index.php/QEMU#qxl
 [suse]: https://www.suse.com/documentation/sles11/book_kvm/data/cha_qemu_guest_inst_qemu-img.html 
