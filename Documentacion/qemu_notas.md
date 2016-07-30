@@ -289,7 +289,6 @@ SUPUESTO esta 'vivo/encendido' u 'offline/apagado'.
   - libvirt: esta librería, usa el comando 'qemu-img' cuando el SUPUESTO está _apagado_.
   - libvirt: usa el comando 'savevm' cuando el SUPUESTO está _encendido_.
 
-
 **Punto de guardado interno del sistema:**  
 
 Estado de la _RAM_, estdo del dispositivo y el estado del disco de un SUPUESTO en carrera.  
@@ -337,6 +336,62 @@ restauración.
 #### <a name="2i3">Creando capturas</a>  
 Mediante el uso de una _captura externa_, una nueva imagen(**overlay**), es creada para  
 facilitar la escritura del supuesto. La imagen previa se convierte en _captura_.
+
+
+
+
+
+
+
+#### Borrado de capturas
+Borrar __capturas internas__ sea en vivo o con la máquina apagada, no es complicado:
+
+  ~~~  
+  # virsh snapshot-delete --domain myVm --snapshotname snap6  
+  ~~~  
+...alternativamente
+  ~~~  
+  # virsh snapshot-delete myVm snap6  
+  ~~~  
+Mencionar aquí, que se está borrando la última captura, por lo que el vínculo con la  
+_base_ no se rompe. Es de suponer, que si varias capturas han sido creadas, el orden
+en que borramos éstas, es importante. Alternativamente podemos corromper tranquilamente  
+la imagen y pasar a otra cosa ...
+
+
+Libvirt aún no tiene la capacidad de borrar capturas externas, pero pueden llevarse a 
+cabo con `qemu-img`.  
+Con la máquina apagada, de dos formas, puede realizarse la tarea:
+  - 1 base <- capt1 <- capt2 <- capt3
+  > La flecha se lee ...capt3 tiene su base en capt2 (capt==snapshot) 
+
+Supongamos; para no perder la costumbre, que se han tomado un par de capturas, sin  
+aplicarse aún ningúna aceptación de cambio(commit):
+
+  ~~~  
+  $ qemu-img info /path/to/somewereIn/Overlays/test_over.qcow2
+  image: /path/to/somewereIn/Overlays/test_over.qcow2
+  file format: qcow2
+  virtual size: 3.0G (3221225472 bytes)
+  disk size: 808M
+  cluster_size: 65536
+  backing file: /path/to/image_file.raw
+  Snapshot list:
+  ID        TAG                 VM SIZE                DATE       VM CLOCK
+  1         tagtag                 273M 2016-07-30 11:51:54   00:03:51.796
+  2         idid                   273M 2016-07-30 11:52:10   00:04:01.967
+  Format specific information:
+      compat: 1.1
+      lazy refcounts: false
+      refcount bits: 16
+      corrupt: false
+  ~~~  
+> La línea importante es la que dice `backing file`, hacia mitad de párrafo.
+Así que aquí no hay _problema_, podrían borarse ambas capturas, en cualquier orden.  
+Pero son capturas internas y; sencillamente, no puden ser borradas. Fin de la historia.
+Sin la capacidad de usar virsh, es como cuando pica la oreja y uno se rasca la 
+rodilla...
+
 
 
 
@@ -917,31 +972,6 @@ HeavyMetalRadio [hmr][HMR]
 [HMR]:http://stream.kazancity.net:8000/14-heavymetalradio
  
 
-  ```ruby
-  def my_definition
-    print "me"
-  end
-  ```
-  ```bash
-  #!/bin/bash
-
-  for i in $( cat emacs_dirs.txt ); do
-    rm  -r $i
-  done  
-  ```
-
-  ```c
-  //#include <ncurses.h>
-  #include "curses_head.h"
-  
-  
-  typedef struct _win_border_struct WIN_BORDER;
-  typedef struct _WIN_struct WIN;
-  
-  void init_win_params(WIN *p_win);
-  void create_box(WIN *p_win, bool flag);
-  void redraw_loop(int argc, char *argv[], bool flag);
-  ```
 
 
 1. [Titulo de algo aqui](#referencia)  
