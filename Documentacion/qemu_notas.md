@@ -338,6 +338,39 @@ Mediante el uso de una _captura externa_, una nueva imagen(**overlay**), es crea
 facilitar la escritura del supuesto. La imagen previa se convierte en _captura_.
 
 
+__Crear capturas internas de disco__
+Dada la máquina `myVm`, es posible crear una captura con el siguiente comando de línea:
+
+  ~~~  
+  # virsh snapshot-create-as `myVm` capt1 `descripción-deCaptura`  
+  ~~~  
+Funciona de la misma forma con o sin la _VM_ encendida. Se añade una breve descripción.
+Ahora sería oportuno listar y revisar los datos:
+  ~~~  
+  # virsh snapshot-list myVm  
+  # qemu-img info /far/beyondThe/su/myVm.qcow2  
+  ~~~  
+> _qemu-img info_ arroja información con detalle, sobre la captura interna.
+
+
+__Crear capturas externas de  disco__
+
+Primero es listado el dispositivo de bloque asociado a la supuesta.
+
+  ~~~  
+  # virsh domblklist myVm-base   <- domain block list  
+  ~~~  
+
+A continuación es creada la captura, con la supuesta en carrera.
+
+  ~~~  
+  # virsh snapshot-create-as --domain myVm-base capt1 capt1-desc \
+  --disk-only --diskspec vda,snapshot=external,file=/path/to/vm
+
+
+
+
+
 
 
 
@@ -358,11 +391,9 @@ _base_ no se rompe. Es de suponer, que si varias capturas han sido creadas, el o
 en que borramos éstas, es importante. Alternativamente podemos corromper tranquilamente  
 la imagen y pasar a otra cosa ...  
 
+
 Libvirt aún no tiene la capacidad de borrar capturas externas, pero pueden llevarse a  
 cabo con `qemu-img`.  
-Con la máquina apagada, de dos formas, puede realizarse la tarea:  
-  - 1 base <- capt1 <- capt2 <- capt3  
-  > La flecha se lee ...capt3 tiene su base en capt2 (capt==snapshot)  
 
 Supongamos; para no perder la costumbre, que se han tomado un par de capturas, sin  
 aplicarse aún ningúna aceptación de cambio(commit):  
@@ -391,6 +422,34 @@ Así que aquí no hay _problema_, podrían borarse ambas capturas, en cualquier 
 Pero son capturas internas y; sencillamente, no puden ser borradas. Fin de la historia.  
 Sin la capacidad de usar virsh, es como cuando pica la oreja y uno se rasca la  
 rodilla...
+
+
+Borrar __capturas externas__  
+
+Con la máquina apagada, de dos formas, puede realizarse la tarea:  
+    `base <- capt1 <- capt2 <- capt3`  
+>> La flecha se lee ...capt3 tiene su base en capt2 (capt==snapshot)  
+
+  1. `base <- sn1 <- sn3`(copiando sn2 en sn1)  
+  2. `base <- sn1 <- sn3`(copiando sn2 en sn3)
+
+#### Metodo 1
+El diagrama muestra la intención de hacer _desaparecer_ la captura 2, pero no sin antes  
+_aceptar_ los cambios en alguna de las capturas contiguas. 
+Igualmente, es necesario que sn1 no sea la _base_ de ninguna otra captura, de lo contrario  
+tendríamos una base a la que han sido aplicados cambios, donde otras capturas esperan
+encontrarla sin esos cambios, consecuentemente los datos se malograían.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
