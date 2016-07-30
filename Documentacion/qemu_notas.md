@@ -922,7 +922,26 @@ HeavyMetalRadio [hmr][HMR]
     print "me"
   end
   ```
+  ```bash
+  #!/bin/bash
 
+  for i in $( cat emacs_dirs.txt ); do
+    rm  -r $i
+  done  
+  ```
+
+  ```c
+  //#include <ncurses.h>
+  #include "curses_head.h"
+  
+  
+  typedef struct _win_border_struct WIN_BORDER;
+  typedef struct _WIN_struct WIN;
+  
+  void init_win_params(WIN *p_win);
+  void create_box(WIN *p_win, bool flag);
+  void redraw_loop(int argc, char *argv[], bool flag);
+  ```
 
 
 1. [Titulo de algo aqui](#referencia)  
