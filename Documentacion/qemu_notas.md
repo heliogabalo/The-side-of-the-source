@@ -210,7 +210,7 @@ desastre_.
 Empezamos crenado una relación BackingFile/Overlay:
 
   ~~~  
-  $ qemu-img create -b $mi_Ruta/base.img -f qcow2 \  
+  $ qemu-img create -b `$mi_Ruta/base.img` -f qcow2 \  
     $mi_ruta/Overlays/overlay1.qcow2  
   $ qemu.img create -o backing_file=$mi_ruta/base.img,backing_fmt=raw \  
     -f qcow2 $mi_ruta/Overlays/overlay2.qcow2  
