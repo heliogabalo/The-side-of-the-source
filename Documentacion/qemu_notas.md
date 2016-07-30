@@ -210,7 +210,7 @@ desastre_.
 Empezamos crenado una relación BackingFile/Overlay:
 
   ~~~  
-  $ qemu-img create -b `$mi_Ruta/base.img` -f qcow2 \  
+  $ qemu-img create -b $mi_Ruta/base.img -f qcow2 \  
     $mi_ruta/Overlays/overlay1.qcow2  
   $ qemu.img create -o backing_file=$mi_ruta/base.img,backing_fmt=raw \  
     -f qcow2 $mi_ruta/Overlays/overlay2.qcow2  
@@ -294,7 +294,7 @@ SUPUESTO esta 'vivo/encendido' u 'offline/apagado'.
 
 Estado de la _RAM_, estdo del dispositivo y el estado del disco de un SUPUESTO en carrera.  
 Todos son guardados en el mismo archivo original qcow2. Puede ser tomado durante la  
-carrera o tras el apagado del sitema.  
+carrera.  
 
   - libvirt: usa el comando 'savevm' cuando el SUPUESTO está _encendido_.  
 
@@ -302,6 +302,12 @@ carrera o tras el apagado del sitema.
 > __ctrl+alt+2__ abre el monitor. El comando  _help_ lista la ayuda.  
 > __ctrl+alt+1__ para volver al modo en el que hayamos lanzado la VM(gráfico/texto).  
 > __q|quit__cierra qemu en modo monitor.  
+
+  ~~~  
+  $ qemu-img info /path/to/img.qcow2 
+  ~~~  
+> Éste comando lista las capturas que hayamos tomado. Si no establecemos Id o tag  
+> durante la captura con `(qemu )savevm id/tag`, es creado un nuevo archivo.
 
 #### <a name="2i2b">**Captura externa:**</a>
 Al tomar la captura se almacena el estado de disco en un archivo. En ese punto, la imagen  
@@ -342,6 +348,7 @@ facilitar la escritura del supuesto. La imagen previa se convierte en _captura_.
 > romper el sistema si se instalan desde ésta rama(alternativa _filo sangrante?_).  
 > Actualizaré la sección, cuando el problema con estos paquetes sea resuelto.    
 > Puede pasar mucho tiempo. 28-07-16.  
+> Herramientas como _transaction_ _virsh_ no están disponibles.
 > [Manual snapShots][fedora] -- en inglés.  
 
 ---  
@@ -806,6 +813,7 @@ Here are some examples of operations that can be performed from a live Knoppix t
 ---  
 ##                  E X P E R I M E N T A L  
 
+
 VIRTIO -- https://wiki.archlinux.org/index.php/QEMU#qxl
 
 virtio-vga / virtio-gpu is a paravirtual 3D graphics driver based on virgl. Currently  
@@ -819,7 +827,14 @@ the virtio drivers, which provide better performance and lower overhead.
 > ~~~  
 > $ qemu-system-i386 -boot order=c -drive file=disk_image,if=virtio  
 > ~~~  
+---
+Indicio DFB 
 
+(qemu) dump-guest-memory gdbserver getfd getfd name  
+qemu-io: shell type?
+
+
+---
 Note: -boot order=c is absolutely necessary when you want to boot from it. There is no  
 auto-detection as with -hdX  
 
@@ -902,7 +917,11 @@ HeavyMetalRadio [hmr][HMR]
 [HMR]:http://stream.kazancity.net:8000/14-heavymetalradio
  
 
-
+  ```ruby
+  def my_definition
+    print "me"
+  end
+  ```
 
 
 
