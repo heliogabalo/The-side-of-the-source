@@ -829,16 +829,16 @@ Almost the same goes for the network:
 
 ---
 ## ATAJOS DEL TECLADO
-Son combinaciones de teclas, para acceder a funcionalidades própias de Qemu. Generalmaente:
-__ctrl + alt + tecla__:
+Son combinaciones de teclas, para acceder a funcionalidades própias de Qemu. Generalmaente:  
+__ctrl + alt + tecla__:  
 
   - ctrl+alt: acopla el ratón a la ventanta donde corremos qemu. Pero también las  
-    funciones de acceso rápido(teclas vinculadas). Éstas, toman los valores de la máquina
-    en carrera. ejem:
-      VM linux: ctrl+alt+suprimir, cierra sessión.
-      VM windows: ctrl+alt+surpimir, lanza el administrador de procesos.
+    funciones de acceso rápido(teclas vinculadas). Éstas, toman los valores de la máquina  
+    en carrera. ejem:  
+      VM linux: ctrl+alt+suprimir, cierra sessión.  
+      VM windows: ctrl+alt+surpimir, lanza el administrador de procesos.  
     Es decir, hereda las funciones relacionadas con dispositivos de entrada, del proceso  
-    emulado/virtualizado.
+    emulado/virtualizado.  
   - ctrl+alt+f: maximiza/desmaximiza ventana de la VM.
   - ctrl+alt+1:
   - ctrl+alt+2: Monitor de qemu.
