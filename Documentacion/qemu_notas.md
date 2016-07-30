@@ -365,7 +365,9 @@ A continuación es creada la captura, con la supuesta en carrera.
 
   ~~~  
   # virsh snapshot-create-as --domain myVm-base capt1 capt1-desc \
-  --disk-only --diskspec vda,snapshot=external,file=/path/to/vm
+  --disk-only --diskspec vda,snapshot=external,file=/path/to/capt-de-myVm-base.qcow2 \
+  --atomic  
+  ~~~  
 
 
 
