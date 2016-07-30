@@ -844,7 +844,8 @@ __ctrl + alt + tecla__:
     Es decir, hereda las funciones relacionadas con dispositivos de entrada, del proceso  
     emulado/virtualizado.  
   - ctrl+alt+f: maximiza/desmaximiza ventana de la VM.
-  - ctrl+alt+1:
+  - ctrl+alt+u: Recupera el tamaño de la ventana a su dimensión original.
+  - ctrl+alt+1: volver al modo en el que hayamos lanzado la VM(gráfico/texto).
   - ctrl+alt+2: Monitor de qemu.
   - ctrl+alt+3: Cónsola en serie.
   - ctrl+alt+4: Cónsola en paralelo. 
@@ -915,8 +916,9 @@ man qemu-system:
 Create a new Network Interface Card and connect it to VLAN n (n = 0 is the default). The
            NIC is an e1000 by default on the PC target.
 
-
-
-
-
+Esto es | una prueba
+--- | ---
+ctr+alt+ | afecta a `todas`
+ctrl+alt+
+ctrl+alt+
 
