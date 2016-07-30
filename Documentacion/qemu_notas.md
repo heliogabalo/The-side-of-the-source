@@ -354,19 +354,18 @@ Borrar __capturas internas__ sea en vivo o con la máquina apagada, no es compli
   # virsh snapshot-delete myVm snap6  
   ~~~  
 Mencionar aquí, que se está borrando la última captura, por lo que el vínculo con la  
-_base_ no se rompe. Es de suponer, que si varias capturas han sido creadas, el orden
+_base_ no se rompe. Es de suponer, que si varias capturas han sido creadas, el orden  
 en que borramos éstas, es importante. Alternativamente podemos corromper tranquilamente  
-la imagen y pasar a otra cosa ...
+la imagen y pasar a otra cosa ...  
 
-
-Libvirt aún no tiene la capacidad de borrar capturas externas, pero pueden llevarse a 
+Libvirt aún no tiene la capacidad de borrar capturas externas, pero pueden llevarse a  
 cabo con `qemu-img`.  
-Con la máquina apagada, de dos formas, puede realizarse la tarea:
-  - 1 base <- capt1 <- capt2 <- capt3
-  > La flecha se lee ...capt3 tiene su base en capt2 (capt==snapshot) 
+Con la máquina apagada, de dos formas, puede realizarse la tarea:  
+  - 1 base <- capt1 <- capt2 <- capt3  
+  > La flecha se lee ...capt3 tiene su base en capt2 (capt==snapshot)  
 
 Supongamos; para no perder la costumbre, que se han tomado un par de capturas, sin  
-aplicarse aún ningúna aceptación de cambio(commit):
+aplicarse aún ningúna aceptación de cambio(commit):  
 
   ~~~  
   $ qemu-img info /path/to/somewereIn/Overlays/test_over.qcow2
@@ -386,10 +385,11 @@ aplicarse aún ningúna aceptación de cambio(commit):
       refcount bits: 16
       corrupt: false
   ~~~  
-> La línea importante es la que dice `backing file`, hacia mitad de párrafo.
+> La línea importante es la que dice `backing file`, hacia mitad de párrafo.  
+
 Así que aquí no hay _problema_, podrían borarse ambas capturas, en cualquier orden.  
-Pero son capturas internas y; sencillamente, no puden ser borradas. Fin de la historia.
-Sin la capacidad de usar virsh, es como cuando pica la oreja y uno se rasca la 
+Pero son capturas internas y; sencillamente, no puden ser borradas. Fin de la historia.  
+Sin la capacidad de usar virsh, es como cuando pica la oreja y uno se rasca la  
 rodilla...
 
 
