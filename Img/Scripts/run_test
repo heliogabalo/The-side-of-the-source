@@ -1,0 +1,4 @@
+qemu-system-i386 /my/fucking/private/FuckingFiles/teta11111.img \
+  -net nic -net user \
+  -netdev user,id=mynet,net=192.168.0.8/24,dhcpstart=192.168.0.2 \
+  -m 1024 -localtime

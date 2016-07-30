@@ -1,6 +1,6 @@
 #!/bin/sh
 
-qemu-system-i386 -hda backing_winXP.raw \
+qemu-system-i386 -hda buffing_winXP.raw \
   -net nic,model=rtl8139 \
   -net user,id=mynet0,net=111.118.9.2/24,dhcpstart=111.118.9.8 \
   -net macaddr=52:54:A5:BF:3A:15 \
