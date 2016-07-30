@@ -25,7 +25,10 @@
     2. [LOOPBACK PARA UNA IMGEN (USANDO MODULOS EN EL KERNEL)](#4i2)  
       - Lanzar la VM apuntando al servidor NBD
 6. EXPERIMENTAL
-7. [AGRADECIMIENTOS](#ai)
+7. ATAJOS DEL TECLADO  
+    1. Comandos del monitor qemu 
+    2. Redefinir teclas
+8. [AGRADECIMIENTOS](#ai)
 
 ---
 ## 1. <a name="i1">PROCESO DE INSTALACION DE UNA IMAGEN</a>  
@@ -533,6 +536,22 @@ especificar que lo haga en modo solo lectura.
 > una imagen con permisos de escritura. IMPORTANTE INVESTIGAR!  
 
 #### <a name="4i1">MONTAR UN LOOPBACK PARA COMUNICARNOS CON LA VM SIN CONEXION</a>  
+Este método es útil cuando necesitamos averiguar donde empieza la partición con la 
+que vamos a trabajar. En el punto dos, puede verse en la última columna _System_
+el tipo de partición que contiene la imagen de disco. La primera es una swap, la 
+segunda debe ser una tipo EXT. 
+
+Qemu-img no formatea la imagen de disco, crea una imagen de disco vacía, con una formato
+de archivo, pero aún no tiene partición. Esto se ve claro cuando instalamos un sistema 
+operativo dentro de la imagen creada con qemu-img. Es el propio sistema operativo que
+vamos a instalar, quien crea la partición y le da formato. 
+
+Solo quiero aclarar, que si creamos una imagen con qemu-img y, tratamos de copiar un
+archivo dentro, NUNCA FUNCIONARÁ. Por que es como si antes de instalar el sistema operativo
+en nuestro host, normal(no hablo de VMs), tratásemos de meter algo en el disco
+duro, No chutaría nada, ni siquiera se encendería la pantalla.
+
+Link aquí a fdisk dd gpart crear imagenes.
 
   Calcular el _offset_ antes de montar la imagen de disco.  
     
@@ -809,6 +828,47 @@ Almost the same goes for the network:
 > devices will work with other operating systems.  
 
 ---
+## ATAJOS DEL TECLADO
+Son combinaciones de teclas, para acceder a funcionalidades própias de Qemu. Generalmaente:
+__ctrl + alt + tecla__:
+
+  - ctrl+alt: acopla el ratón a la ventanta donde corremos qemu. Pero también las  
+    funciones de acceso rápido(teclas vinculadas). Éstas, toman los valores de la máquina
+    en carrera. ejem:
+      VM linux: ctrl+alt+suprimir, cierra sessión.
+      VM windows: ctrl+alt+surpimir, lanza el administrador de procesos.
+    Es decir, hereda las funciones relacionadas con dispositivos de entrada, del proceso  
+    emulado/virtualizado.
+  - ctrl+alt+f: maximiza/desmaximiza ventana de la VM.
+  - ctrl+alt+1:
+  - ctrl+alt+2: Monitor de qemu.
+  - ctrl+alt+3: Cónsola en serie.
+  - ctrl+alt+4: Cónsola en paralelo. 
+  - ctrl+alt+avance página;
+  - ctrl+alt+retroceso página:
+  - ctrl+alt+arriba:
+  - ctrl+alt+abajo:
+
+#### Comandos del monitor __Qemu__
+  - commit device|all:
+  - info subcommand:
+  - q| quit:
+  - eject[-f] dispositivo:
+  - change device filename:
+  - screendump filename:
+  - savevm ta|id:
+  - loadvm tag|id:
+  - delvm tag|id:
+  - stop / c| cont:
+  - sendkey keys:
+  - system_reset:
+  - system_powerdown:
+
+
+#### Redefinir teclas:  
+
+
+
 ## <a name="ai">AGRADECIMIENTOS</a>  
 
 Documentation/Networking --[QEMU][QEM]  
