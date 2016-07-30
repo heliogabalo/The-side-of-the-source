@@ -299,7 +299,7 @@ carrera o tras el apagado del sitema.
   - libvirt: usa el comando 'savevm' cuando el SUPUESTO está _encendido_.  
 
 > AVISO: savevm(captura en vivo), es un comando accedido a través del monitor qemu.  
-> __ctrl+alt+2__ abre el monitor. El _comando_ help lista la ayuda.  
+> __ctrl+alt+2__ abre el monitor. El comando  _help_ lista la ayuda.  
 > __ctrl+alt+1__ para volver al modo en el que hayamos lanzado la VM(gráfico/texto).  
 
 #### <a name="2i2b">**Captura externa:**</a>
