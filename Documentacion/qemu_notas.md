@@ -339,35 +339,38 @@ facilitar la escritura del supuesto. La imagen previa se convierte en _captura_.
 
 
 __Crear capturas internas de disco__
-Dada la máquina `myVm`, es posible crear una captura con el siguiente comando de línea:
+Dada la máquina `myVm`, es posible crear una captura con el siguiente comando de línea:  
 
   ~~~  
   # virsh snapshot-create-as `myVm` capt1 `descripción-deCaptura`  
   ~~~  
-Funciona de la misma forma con o sin la _VM_ encendida. Se añade una breve descripción.
-Ahora sería oportuno listar y revisar los datos:
+Funciona de la misma forma con o sin la _VM_ encendida. Se añade una breve descripción.  
+Ahora sería oportuno listar y revisar los datos:  
   ~~~  
   # virsh snapshot-list myVm  
   # qemu-img info /far/beyondThe/su/myVm.qcow2  
   ~~~  
-> _qemu-img info_ arroja información con detalle, sobre la captura interna.
+> _qemu-img info_ arroja información con detalle, sobre la captura interna.  
 
 
-__Crear capturas externas de  disco__
+__Crear capturas externas de  disco__  
 
-Primero es listado el dispositivo de bloque asociado a la supuesta.
+Primero es listado el dispositivo de bloque asociado a la supuesta.  
 
   ~~~  
   # virsh domblklist myVm-base   <- domain block list  
   ~~~  
 
-A continuación es creada la captura, con la supuesta en carrera.
+A continuación es creada la captura, con la supuesta en carrera.  
 
   ~~~  
   # virsh snapshot-create-as --domain myVm-base capt1 capt1-desc \
   --disk-only --diskspec vda,snapshot=external,file=/path/to/capt-de-myVm-base.qcow2 \
   --atomic  
   ~~~  
+
+La shell devuelve algo parecido a: `Domain snapshot capt1 created`  
+Es entonces cuando la imagen de disco original myVm-base es convertida a un `backing_file`  
 
 
 
@@ -379,15 +382,16 @@ A continuación es creada la captura, con la supuesta en carrera.
 
 
 #### Borrado de capturas
-Borrar __capturas internas__ sea en vivo o con la máquina apagada, no es complicado:
+Borrar __capturas internas__ sea en vivo o con la máquina apagada, no es complicado:  
 
   ~~~  
   # virsh snapshot-delete --domain myVm --snapshotname snap6  
   ~~~  
-...alternativamente
+...alternativamente  
   ~~~  
   # virsh snapshot-delete myVm snap6  
   ~~~  
+
 Mencionar aquí, que se está borrando la última captura, por lo que el vínculo con la  
 _base_ no se rompe. Es de suponer, que si varias capturas han sido creadas, el orden  
 en que borramos éstas, es importante. Alternativamente podemos corromper tranquilamente  
@@ -437,10 +441,11 @@ Con la máquina apagada, de dos formas, puede realizarse la tarea:
 
 #### Metodo 1
 El diagrama muestra la intención de hacer _desaparecer_ la captura 2, pero no sin antes  
-_aceptar_ los cambios en alguna de las capturas contiguas. 
+_aceptar_ los cambios en alguna de las capturas contiguas.  
 Igualmente, es necesario que sn1 no sea la _base_ de ninguna otra captura, de lo contrario  
-tendríamos una base a la que han sido aplicados cambios, donde otras capturas esperan
-encontrarla sin esos cambios, consecuentemente los datos se malograían.
+tendríamos una base a la que han sido aplicados cambios, donde otras capturas esperan  
+encontrarla sin esos cambios, consecuentemente los datos se malograían.  
+
 
 
 
