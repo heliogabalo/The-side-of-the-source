@@ -301,6 +301,7 @@ carrera o tras el apagado del sitema.
 > AVISO: savevm(captura en vivo), es un comando accedido a través del monitor qemu.  
 > __ctrl+alt+2__ abre el monitor. El comando  _help_ lista la ayuda.  
 > __ctrl+alt+1__ para volver al modo en el que hayamos lanzado la VM(gráfico/texto).  
+> __q|quit__cierra qemu en modo monitor.  
 
 #### <a name="2i2b">**Captura externa:**</a>
 Al tomar la captura se almacena el estado de disco en un archivo. En ese punto, la imagen  
@@ -628,7 +629,7 @@ Comprobar si el módulo está cargado o no, en el sistema. Puede determinarse co
 - Através de tubería cuantificamos su número, por razones de stress!!
 - y le pasamos un filtro grep, para concretar la salida.
 
-Si el modulo no está cargado, lo cargamos dándole un parámetro 'max_part'  
+Si el modulo no está cargado, lo cargamos dándole un parámetro `max_part`  
 para poder acceder a los nodos de cada una de las particiones.  
 En caso de no iniciar la variable, como el valor por defecto es 0(cero)  
 podrá accederse al disco, pero no a los nodos de ninguna de las particiones  
@@ -849,25 +850,25 @@ __ctrl + alt + tecla__:
   - ctrl+alt+2: Monitor de qemu.
   - ctrl+alt+3: Cónsola en serie.
   - ctrl+alt+4: Cónsola en paralelo. 
-  - ctrl+alt+avance página;
-  - ctrl+alt+retroceso página:
-  - ctrl+alt+arriba:
-  - ctrl+alt+abajo:
+  - ctrl+alt+avance página: control de panatalla en qemu monitor y cónsolas.
+  - ctrl+alt+retroceso página: control de panatalla en qemu monitor y cónsolas.
+  - ctrl+alt+arriba: control de panatalla en qemu monitor y cónsolas.
+  - ctrl+alt+abajo: control de panatalla en qemu monitor y cónsolas.
 
 #### Comandos del monitor __Qemu__
-  - commit device|all:
-  - info subcommand:
-  - q| quit:
-  - eject[-f] dispositivo:
-  - change device filename:
-  - screendump filename:
-  - savevm ta|id:
-  - loadvm tag|id:
-  - delvm tag|id:
-  - stop / c| cont:
-  - sendkey keys:
-  - system_reset:
-  - system_powerdown:
+  - commit device|all: Aplica cambios en imagenes de disco (capturas).
+  - info subcommand: información de la VM.  
+  - q| quit: cierra qemu.  
+  - eject[-f] dispositivo: expulsa un soportes en la supuesta, cd/flopy(probar HD?)
+  - change device filename: cambia uno de los soportes de la VM. CD y floppy (HD?)
+  - screendump filename: captura de pantalla.
+  - savevm ta|id: guarda recupera y borra instantáneas de la supuesta.
+  - loadvm tag|id: guarda recupera y borra instantáneas de la supuesta.
+  - delvm tag|id: guarda recupera y borra instantáneas de la supuesta.
+  - stop / c| cont: detiene y reanuda la emulación.  
+  - sendkey keys: envía secuencia de teclas a la VM. Ejem. inicio sesion Windows.
+  - `system_reset`: equivale a reset(reboot).
+  - `system_powerdown`: equivale a apagado(shutdown).
 
 
 #### Redefinir teclas:  
@@ -884,7 +885,7 @@ Departamento de informática de IPC -[IPC][elpuig]
 Suse --[QEMU][suse]  
 Debian --[VLAN][debian]  
 IEEE 802.1Q --[Wikia][dot1Q]  
-Markdowns y otras recomendaciones --[Javier Cristóbal][Markdown] \- [productividad mac][limni]  
+Javier Cristóbal -- [Markdowns y otras recomendaciones][Markdown] \- [productividad mac][limni]  
 HeavyMetalRadio [hmr][HMR]
 
 ---
@@ -901,7 +902,7 @@ HeavyMetalRadio [hmr][HMR]
 [HMR]:http://stream.kazancity.net:8000/14-heavymetalradio
  
 
--->
+
 
 
 
