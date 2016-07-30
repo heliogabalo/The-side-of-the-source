@@ -233,7 +233,7 @@ _qemu_ actual. Es utilizado junto al comando _commit_ que será visto, mas adela
 
 Es importante comprobar que el _vínculo_ entre ambos archivos, es el _adecuado:_  
   ~~~  
-  $ file *archivo*  
+  $ file _archivo_  
   $ qemu-img info --backing-chain $mi_ruta/Overlays/overlay2.qcow2  
   ~~~  
 
