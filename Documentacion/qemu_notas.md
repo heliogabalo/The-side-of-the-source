@@ -354,7 +354,6 @@ Ahora sería oportuno listar y revisar los datos:
 
 
 __Crear capturas externas de  disco__  
-
 Primero es listado el dispositivo de bloque asociado a la supuesta.  
 
   ~~~  
