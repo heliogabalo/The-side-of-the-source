@@ -879,6 +879,7 @@ Documentation/Networking --[QEMU][QEM]
 Virtualization Api --[Libvirt][lib]
 Manual Capturas(inglés) --[snapshots-handout][fedora]  
 ArchWiki --[QEMU][archi]  
+Departamento de informática de IPC -[IPC][elpuig]
 Suse --[QEMU][suse]  
 Debian --[VLAN][debian]  
 IEEE 802.1Q --[Wikia][dot1Q]  
@@ -890,6 +891,7 @@ HeavyMetalRadio [hmr][HMR]
 [lib]: http://libvirt.org/index.html
 [fedora]: https://kashyapc.fedorapeople.org/virt/lc-2012/snapshots-handout.html
 [archi]: https://wiki.archlinux.org/index.php/QEMU#qxl
+[elpuig]: http://elpuig.xeill.net/Members/vcarceler/articulos/qemu
 [suse]: https://www.suse.com/documentation/sles11/book_kvm/data/cha_qemu_guest_inst_qemu-img.html 
 [debian]: https://wiki.debian.org/es/NetworkConfiguration#C.2BAPM-mo_utilizar_VLAN_.28dot1q.2C_802.1q.2C_trunk.29_.28Etch.2C_Lenny.29
 [dot1Q]: https://es.wikipedia.org/wiki/IEEE_802.1Q
