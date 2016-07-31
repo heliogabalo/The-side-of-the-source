@@ -461,7 +461,7 @@ intentarlo no es suciente tochomosca!
 
 
 
-
+---
 > La implentación de la librería _libvirt_ está aún en desarrollo, por lo que parte  
 > de su funcionalidad no se encuentra disponible, al menos en la rama estable. En  
 > Debian los paquetes necesarios son libvirt-bin y libvirt-daemon, pero es probable  
@@ -650,7 +650,7 @@ Vemos que únicamente contiene una partición. A continuación, tan sólo queda 
 imagen. Para esto utilizamos la aplicación _losetup:_  
 
   ~~~  
-    $ losetup /dev/loop0 /punto_de_montaje/imagen.iso
+    $ losetup /dev/loop0 /path/to/imagen.iso
   ~~~  
 
 En caso de utilizar este método _montaje simple_, para evitar que el sistema nos devuelva  
@@ -658,7 +658,7 @@ algún mensaje de aviso, acerca de los permisos con los que se monta la unidad, 
 especificar que lo haga en modo solo lectura.
 
   ~~~  
-    # mount -o ro,loop image.iso /mnt/point
+    # mount -o ro,loop /path/to/image.iso /mnt/point
   ~~~
 
 
