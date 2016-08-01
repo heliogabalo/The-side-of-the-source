@@ -67,6 +67,7 @@ Me gustaría saber como es posible que el livebox muestre actividad, si tanto
 mi madre como mi hermana estan viendo la sexta por los nacionales y yo estoy
 aquí en mi ordenador.!!.
   ~~~  
+ 16:15 01/08/16
  779 Captured ARP Req/Rep packets, from 4 hosts.   Total size: 46740
 `_____________________________________________________________________________`
    IP            At MAC Address      Count  Len   MAC Vendor
@@ -84,5 +85,5 @@ aquí en mi ordenador.!!.
 Eso me hace reflexionar: Para que narices voy a tirarme dos días programando
 reglas para la Nat, la dmz y mi vlan, si aún configurando un filtro de macs
 en el DHCP del enrutador, sigo viendo IP's como 10.14.124.199!!
-
+Iptables no funciona!
 
