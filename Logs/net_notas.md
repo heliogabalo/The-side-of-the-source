@@ -85,5 +85,4 @@ aquí en mi ordenador.!!.
 Eso me hace reflexionar: Para que narices voy a tirarme dos días programando
 reglas para la Nat, la dmz y mi vlan, si aún configurando un filtro de macs
 en el DHCP del enrutador, sigo viendo IP's como 10.14.124.199!!
-Iptables no funciona!
 
