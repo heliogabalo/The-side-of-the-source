@@ -26,6 +26,21 @@ Desde la línea de comandos:
 
 - La ejecución sobre shell, arrastra el binario, en el arbol de procesos,  
   durante la carga en el sistema. (aleatoriOh???)  
+  ~~~  
+$ ps
+  PID TTY          TIME CMD
+10470 pts/1    00:00:00 bash
+10723 pts/1    00:00:00 ps
+  ~~~  
+... cuando se está lanzando la aplicación mediante `exec`  
+  ~~~  
+tmux
+6 S  0.0  0.1  0:00.15 │  ├─ su user
+6 S  0.0  0.1  0:00.22 │  │  └─ bash
+2 S  0.0  0.1  0:00.06 │  │     └─ bash
+  ~~~   
+
+
 - Gnome-shell shell se cuelga 'irremediablemente' si mantenemos un directorio  
   ocupado, mientras tratamos de desmontar la unidad.  
 - He comprobado que ciertas aplicaciones de sistema, no están isntaladas. Sin 
@@ -41,3 +56,4 @@ Desde la línea de comandos:
   Pongo otro ejemplo; es estúpido abrir 10 conexiones, para hacer una búsqueda en
   google. Seguramente habrá gente que se crea, que esto es normal. Ciertamente  
   no lo es.
+
