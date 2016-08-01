@@ -28,4 +28,9 @@ Desde la línea de comandos:
   durante la carga en el sistema. (aleatoriOh???)  
 - Gnome-shell shell se cuelga 'irremediablemente' si mantenemos un directorio  
   ocupado, mientras tratamos de desmontar la unidad.  
+- He comprobado que ciertas aplicaciones de sistema, no están isntaladas. Sin 
+  embargo, hay manual de referencia. Esto no parece algo normal.
+  - tgkill no está instalado: se trata de una aplicación para cerrar hilos 
+  selectivamente. A diferencia de kill, que mandaría una señal aleatoria sobre el  
+  hilo en cuestión, cerrando el proceso principal.  
 
