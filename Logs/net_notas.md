@@ -43,20 +43,23 @@ Aug  1 11:33:04 NR021AA pulseaudio[1160]: Error opening PCM device front:0: Perm
 Aug  1 12:10:33 NR021AA pulseaudio[1160]: Error opening PCM device front:0: Permiso denegado  
   ~~~  
 Parece que mi madre es una experta programadora, lol!! y eso sólo utilizando 
-el móbil. Que ignorante soy!
+el móbil. Que ignorante soy!  
 
- Currently scanning: 10.57.59.0/8   |   Screen View: Unique Hosts
+  ~~~  
+   Currently scanning: 10.57.59.0/8   |   Screen View: Unique Hosts
+  
+   1311 Captured ARP Req/Rep packets, from 6 hosts.   Total size: 78660
+  ` _____________________________________________________________________________`
+     IP            At MAC Address      Count  Len   MAC Vendor
+   -----------------------------------------------------------------------------
+   192.168.0.1     5c:dc:96:5b:cf:b3    62    3720   Unknown vendor
+   192.168.0.4     cc:af:78:7d:56:09    1032    61920   Unknown vendor
+   192.168.0.3     24:1f:a0:a9:7a:73    200    12000   Unknown vendor
+   0.0.0.0         cc:af:78:7d:56:09    03    180   Unknown vendor
+   0.0.0.0         24:1f:a0:a9:7a:73    01    060   Unknown vendor
+   10.14.124.199   24:1f:a0:a9:7a:73    13    780   Unknown vendor  
+  ~~~  
 
- 1311 Captured ARP Req/Rep packets, from 6 hosts.   Total size: 78660
-` _____________________________________________________________________________`
-   IP            At MAC Address      Count  Len   MAC Vendor
- -----------------------------------------------------------------------------
- 192.168.0.1     5c:dc:96:5b:cf:b3    62    3720   Unknown vendor
- 192.168.0.4     cc:af:78:7d:56:09    1032    61920   Unknown vendor
- 192.168.0.3     24:1f:a0:a9:7a:73    200    12000   Unknown vendor
- 0.0.0.0         cc:af:78:7d:56:09    03    180   Unknown vendor
- 0.0.0.0         24:1f:a0:a9:7a:73    01    060   Unknown vendor
- 10.14.124.199   24:1f:a0:a9:7a:73    13    780   Unknown vendor
 
 > Ya no solo maneja el _whasa_ ahora también sabe configurar direcciones IP.
 
