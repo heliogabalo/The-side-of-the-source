@@ -1,10 +1,13 @@
 Llevo un buen rato contectado a internet, mirando páginas, etc, de hecho  
-ahoramismo he lanzado un vídeo desde youtube, de hora y media que se esta  
+ahora mismo he lanzado un vídeo desde youtube, de hora y media que se esta  
 reproduciendo con mi explorador iceweasel.  
 
 Sin embargo las únicas direcciones que parecen mostrar transferencias de datos  
-son el getaway: 192.168.0.1, el teléfono de mi madre: 192.168.0.3 y el de   
-de mi hermana: 192.168.0.4. Por qué no sale mi IP?  
+son el getaway: 192.168.0.1, el teléfono de mi madre: 192.168.0.3 y el ordenador   
+de mi hermana: 192.168.0.4. La 192.168.0.04, hace referencia a la tarjeta de red 
+inhalámbrica de su ordenador portátil.
+
+Por qué no sale mi IP?  
 
   ~~~  
    Currently scanning: 172.18.57.0/16   |   Screen View: Unique Hosts
