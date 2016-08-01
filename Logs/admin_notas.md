@@ -33,4 +33,11 @@ Desde la línea de comandos:
   - tgkill no está instalado: se trata de una aplicación para cerrar hilos 
   selectivamente. A diferencia de kill, que mandaría una señal aleatoria sobre el  
   hilo en cuestión, cerrando el proceso principal.  
-
+- Pongo un ejemplo de este comentario anterior: hay exploradores, que funcionan
+  bastante bien sin necesidad de abrir decenas de hilos, de forma absurda e inutil.  
+  Esta idea, es razonable, si pensamos que los exploradores trabajan con aplicaciones  
+  externas, la cuales son las que realmente deben gestionar los _hilos_, cuando es  
+  necesario. 
+  Pongo otro ejemplo; es estúpido abrir 10 conexiones, para hacer una búsqueda en
+  google. Seguramente habrá gente que se crea, que esto es normal. Ciertamente  
+  no lo es.
