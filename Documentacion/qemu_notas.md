@@ -166,26 +166,7 @@ no se rompiese.
   qemu overlay.cow -m 128 
   ~~~  
 
-> CAZADO!!
-> EXPERIMENTAL: Debo probar hacer una copia de una instalación normal y una vez   
-> terminada la  instalación, formar el 'backing' sobre una copia de la imagen que ya  
-> contiene el sistema operativo instalado.  
-> En este caso, se conseguiría una imagen sin 'tocar' o como backup, sobre la cual hacemos  
-> una copia, es decir, copiamos el archivo renombrándolo, antes de formar el 'backing'.  
-> Una vez hecho esto, lo creamos. Al crear el backing de esta forma, conseguimos  
-> una imagen que no está tocada.  
-> Esto puede ser interesante si por algún motivo, no queremos crear una imagen en crudo,  
-> o si queremos conservar una copia de una determinada instalación en un estado inicial.  
-> También puede resultar útil, cuando hemos aplicado muchas actualizaciones a nuestra  
-> imagen, y resulta mas complicado volver a un estado anterior, que comezar desde el  
-> principio.  
-> Efectivamente es interesante -- pero no pasa de ahí, por que si haces eso... después  
-> no puedes trabajar con el modelo Snapshot. Qemu dice algo así como: la imagen  
-> fue creada sin esa característica. Asi que no es viable. No podrás aplicar esa  
-> funcionalidad al overlay, que por cierto se crea sin problema!!! Lo mejor es un  
-> copy simple. Recuerda que al hacer esto, conviertes la imagen en crudo en el  
-> 'backing' desmadrando tu buena intención. La idea era hacer la copia al final, pero 
-> una vez creado el overlay, desconozco como añadir esa funcionalidad.  
+
 
 
 #### <a name="2i2">SnapShots</a>
@@ -937,8 +918,76 @@ Here are some examples of operations that can be performed from a live Knoppix t
 
 ---  
 ##                  E X P E R I M E N T A L  
+### test 1
+> CAZADO!!
+> EXPERIMENTAL: Debo probar hacer una copia de una instalación normal y una vez   
+> terminada la  instalación, formar el 'backing' sobre una copia de la imagen que ya  
+> contiene el sistema operativo instalado.  
+> En este caso, se conseguiría una imagen sin 'tocar' o como backup, sobre la cual hacemos  
+> una copia, es decir, copiamos el archivo renombrándolo, antes de formar el 'backing'.  
+> Una vez hecho esto, lo creamos. Al crear el backing de esta forma, conseguimos  
+> una imagen que no está tocada.  
+> Esto puede ser interesante si por algún motivo, no queremos crear una imagen en crudo,  
+> o si queremos conservar una copia de una determinada instalación en un estado inicial.  
+> También puede resultar útil, cuando hemos aplicado muchas actualizaciones a nuestra  
+> imagen, y resulta mas complicado volver a un estado anterior, que comezar desde el  
+> principio.  
+> Efectivamente es interesante -- pero no pasa de ahí, por que si haces eso... después  
+> no puedes trabajar con el modelo Snapshot. Qemu dice algo así como: la imagen  
+> fue creada sin esa característica. Asi que no es viable. No podrás aplicar esa  
+> funcionalidad al overlay, que por cierto se crea sin problema!!! Lo mejor es un  
+> copy simple. Recuerda que al hacer esto, conviertes la imagen en crudo en el  
+> 'backing' desmadrando tu buena intención. La idea era hacer la copia al final, pero 
+> una vez creado el overlay, desconozco como añadir esa funcionalidad.
 
 
+### test 2
+Ahora, vamos a probar hacer la instalación sobre el overlay, a ver que pasa!
+
+### test 3
+Aprovechando una coexion ssh sobre otro host, hay dos formas de interactuar sobre la VM
+
+  - 1 Aquí la comunicación es a 'pelo', es decir, directamente a través de la conexión 
+  encriptada.
+  - 2 Aquí avanzamos el servidor de las Xs(Xorg). Para ello iniciamos una nueva instancia
+  del dispositivo
+  ~~~  
+  $ xinit -- :1  
+  ~~~  
+  Conectamos al host, via ssh y explicitamos que vamos a pasar gnome a través de la
+  conexión:
+  ~~~  
+  $ ssh -XY user@host  
+  ~~~  
+
+Ventajas de la primera opción: en una máquina lenta, como el cacharro que yo uso,
+es la mejor alternativa, porque evidentemente no se hace uso del host para procresar
+gnome. Es qemu quien emula la gráfica y, por tonto ahorramos recursos. Es aaalgo mas
+rápido así.
+Otra ventaja es que qemu corre instanciado en nuestro host y podemos recolocar la ventana
+como si fuera cualquier otra. También he comprobado que las teclas de 'foco' falla menos.
+Pero es un desastre igualmente. A veces funciona, a veces no.
+
+Ventajas de la segunda opción: En una máquina tan desesperádamente lenta como la mía,
+la verdad es que la diferencia es tan microscópica, que de todas formas irá lenta. Así
+que es una opción tan buena como la primera.
+La tecla de foco, aquí, definitivamente no chuta ni a ostias. Lo bueno es que no hace falta
+por que como corremos la guest en otra instancia, le des como le des, las teclas son las del
+target!!. 
+
+En ambos escenarios es recomendable ajustar los procesos 'bonitamente'. Se nota, que es findus!
+pruebas hechas con prioridad sobre libvirt y, qemu! y ajuste feoto sobre gnome y otros procesos
+chorras que no he desinstalado por falta de ganas!
+
+La super idea guay que lo flipas es exterminar gnome del SO, y cargar un only text full. El
+problema es que sin WM decente qemu sólo lanza guests en texto. La existencia de Windows aquí
+es sólo a título informativo.
+
+Ah, otra cosa que he podido comprobar, es que si queremos adquirir el escritorio remoto, a la
+primera no funciona nunca. Hay que --replace el dispositivo o no funcionará. 
+
+
+---
 VIRTIO -- https://wiki.archlinux.org/index.php/QEMU#qxl
 
 virtio-vga / virtio-gpu is a paravirtual 3D graphics driver based on virgl. Currently  
