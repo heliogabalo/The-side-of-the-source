@@ -166,7 +166,7 @@ no se rompiese.
   qemu overlay.cow -m 128 
   ~~~  
 
-
+> CAZADO!!
 > EXPERIMENTAL: Debo probar hacer una copia de una instalación normal y una vez   
 > terminada la  instalación, formar el 'backing' sobre una copia de la imagen que ya  
 > contiene el sistema operativo instalado.  
@@ -179,7 +179,13 @@ no se rompiese.
 > También puede resultar útil, cuando hemos aplicado muchas actualizaciones a nuestra  
 > imagen, y resulta mas complicado volver a un estado anterior, que comezar desde el  
 > principio.  
-
+> Efectivamente es interesante -- pero no pasa de ahí, por que si haces eso... después  
+> no puedes trabajar con el modelo Snapshot. Qemu dice algo así como: la imagen  
+> fue creada sin esa característica. Asi que no es viable. No podrás aplicar esa  
+> funcionalidad al overlay, que por cierto se crea sin problema!!! Lo mejor es un  
+> copy simple. Recuerda que al hacer esto, conviertes la imagen en crudo en el  
+> 'backing' desmadrando tu buena intención. La idea era hacer la copia al final, pero 
+> una vez creado el overlay, desconozco como añadir esa funcionalidad.  
 
 
 #### <a name="2i2">SnapShots</a>
