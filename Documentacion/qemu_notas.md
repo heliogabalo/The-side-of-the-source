@@ -986,6 +986,38 @@ es sólo a título informativo.
 Ah, otra cosa que he podido comprobar, es que si queremos adquirir el escritorio remoto, a la
 primera no funciona nunca. Hay que --replace el dispositivo o no funcionará. 
 
+### test 4
+Pruebas sobre el loopback. Una forma rápida y sencilla de montarnos un loopback es la 
+siguiente:
+
+  - 1 Creamos una imagen en crudo como se explica en este mismo artículo -crear imagen.
+  - 2 Creamos la particion con Fdisk
+    - m - muestra el menu de opciones.
+    - n - nueva particion. 
+      Nos piden que escojamos el tipo de partición. Como provablemente ya sabemos...
+      Una partición primaria, es una partición generalmente usada para cargar un sistema
+      de arranque. Esto ha cambiado notoriamente en nuestros días. Actualmente la antigua
+      Bios, ha sido reemplazada en máquinas mas modernas por otro sistema de carga, llamado
+      UEFI, capaz de arrancar un sistema operativo en qualquier tipo de partición.
+      Anotado esto, continuo explicando: en nuestro caso no tiene mucho sentido esta primera
+      elección, una primaria, por que vamos a utilizar la imagen como loopback, así que 
+      la elección es una partición lógica. Pero como ya sabemos, para crear una lógica el 
+      sistema por defecto crea una extendida, desde la que cuelga las sucesivas lógicas. 
+      la 'extendida', no es más que un par de bytes donde el SO guarda el própio ID de 
+      partición, o número denominativo de partición. 
+      __nota:__ aquí hay una gran controversia, sobre la gran cagadota que metió Sir Windows
+      en cuanto a la interpretación del código hexadecimal utilizado para identificar este
+      ID de partición. Algún día nos reiremos de windows todos juntos, por que pienso traducir
+      el artículo original. No veo el momento!!!
+      Aquí seguimos los pasos generalmente aceptando los valores por
+      defecto para el sector de inicio y fin.
+    - t para escoger el tipo de partición deseada. Si es windows NTFS el 87.
+    - w escribimos la tabla de particiones a disco y salimos.
+
+Aquí hay una técnica avanzda, que consiste en crear una partición de intercambio en primer
+lugar(o swap en linux). A continuación crear nestra partición. Esta técnica se merece un 
+análisis más extenso!!!
+
 
 ---
 VIRTIO -- https://wiki.archlinux.org/index.php/QEMU#qxl
@@ -996,6 +1028,7 @@ a work in progress, supporting only very recent (>= 4.4) Linux guests.
 QEMU offers guests the ability to use paravirtualized block and network devices using  
 the virtio drivers, which provide better performance and lower overhead.  
 
+      
 > A virtio block device requires the option  
 > -drive instead of the simple -hdX plus if=virtio:  
 > ~~~  
