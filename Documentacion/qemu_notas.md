@@ -1017,6 +1017,131 @@ siguiente:
 Aquí hay una técnica avanzda, que consiste en crear una partición de intercambio en primer
 lugar(o swap en linux). A continuación crear nestra partición. Esta técnica se merece un 
 análisis más extenso!!!
+    - 3 Y ahora lo montamos y fracasa estrepitosamente nuestro proyecto. Por que se nos olvida
+    algo. Efectivamente, formatear el dispositivo. Si miramos el man del comando 
+    
+
+### test del 5 al 237
+Los valores sobre particiones son erroneos desde distintas aplicaciones. Por ejemplo:
+Fdisk muestra una tabla de particiones de cuatro particiones creadas, despues de formatear
+con objeto de conseguir un sistema de fichero sobre el que trabajar.
+
+Arroja datos tan desorvitadamente estúpidos, que es dificil entender el por qué.
+sobre un archivo se pretende montar un dispositivo de bloque, llamémoslo virtual!.
+Creamos el archivo con límite a 3G. Montamos el dispositivo sobre el loop0. A continuación,
+formateamos la partición tipo extended con etiqueta ntfs( logical) con gparted.
+Volvemos a comprovar con fdisk -lu sobre el /dev/loop0 y vuala. Encontramos cuatro particiones
+de 914.5G 867,2G 5k y 25,3M respectivamente. Esto parece el milagro de los peces y el pan.
+
+La única idea que justificaría algo tan brutalmente ABSURDO es la velocidad-absurda con la que
+formatea el disco, también el hecho de que mi otro ordenador, con el que NO estoy haciendo 
+todas estas operaciones, después de restar algo parecido al 5% de espacio reservado en un 
+sistema de archivos, se parece a eso, un Terabyte. 
+
+Vuelvo a mirar con gparted y /dev/loop0/ tiene un tamaño de 3G,
+con fdisk -lu sobre fichero, lo mismo, pero fdisk cuelga 4 ...pNº respectivamente contando
+de 1 a 4. con los valores de tamaño de disco descritos anteriormente. ejem:
+ /dev/loop0p2 ... 867,2G. No tiene sentido!.  
+
+He montado el loopback sin calcular el offset, por que en principio sólo había una partición.
+Esperando encontrar otros datos, entre ellos el límite de inicio para el sector de disco,
+que debería ser algo así como 2097Kb y sale una burrada como 657974 para la primera partición
+y 2642463409 para el final de la última. 
+
+El formateo se realiza con mkfs.ntfs sobre el dispositivo -F forzando el formato pues de
+otra forma es imposible efectuar operación sobre archivo.
+
+### test desde el 238 ...
+
+Intentamos generar un dispositivo con el que trabajar desde la VM, esto es generalmente
+un dispositivo de bloque. En este caso será utilizado un _disco duro virtual_. 
+
+  - 1 Metodo cp instalation source file.
+  - 2 Metodo crear dispositivo de bloque, 'disco virtual'.
+
+2. Lo pimero es crear el archivo con el tamaño deseado por ejemplo 100MegaBytes.
+
+  ~~~  
+  $ dd if=/dev/zero of=VHD-file bs=1M count=100  
+  ~~~  
+
+Aquí creamos un archivo de 100Megas de 100 sectores de 1Mega cada uno. Si damos un tamaño
+mayor por sector, corremos el risgo de perder datos en la escritura. 512 sería lo mejor.
+
+Normalmente el sistema operativo tiene asociados al menos un dispositivo loopback por  
+defecto, pero en todo caso crear uno para hacer pruebas, puede realizarse así:
+Con un simple `ls -l` sobre `/dev/loop*` comprovar de que estamos hablando.
+
+  ~~~  
+  # mknod /dev/fake-dev0 -b 7 200  
+  ~~~  
+
+Independientemente de si usamos un dispositivo de loopback ya creado por el sistema, o el
+que acabamos de crear nosotros, antes de particionarlo y darle formato de archivo, habrá
+que montarlo:
+
+Existen varias opciones para hacer esto. Estamos trabajando con loopbacks(recordatorio),
+por ejemplo losetup o kpartx. Debian y derivados, disponen de losetup, Fedora tiene ambos!
+Por compatibilidad usaremos `losetup`:
+
+  ~~~  
+  $ losetup /dev/loop0 VHD-file  
+  ~~~  
+
+A continuación, creamos la partición/s del VHD sobre el dispositivo de loopback sobre el que
+hemos montado nuestro 'futuro' dispositivo de bloque virtual, o VHD.
+También encontramos varias herramientas para hacer esto cfdisk, fdisk. Utilizaremos fdisk, 
+que viene en la mayoría de sistemas Linux.
+
+  ~~~  
+  # fdisk /dev/loop200  
+  ~~~ 
+
+He variado el dispositivo, para mostrar que esta operación puede realizarse igualmente sobre
+cualquiera de ellos tanto en /dev/loop0 como /dev/loop200.
+
+Dentro de fdisk `m` lista el menú de opciones.
+
+Comprobamos la particion con -- `p`
+Comprovamos el espacio libre para crear la/las partion/es -- `F`.
+Crear una partición, en este caso primaria, con `n`. A continuación comprobamos que los
+valores por defecto se ajustan a los valores que hemos visto cuando hicimos `F`. Si son
+corectos(si no lo son es que algo va mal), podemos aceptar con simple `return` el valor
+sugerido.
+
+Ahora queda detinir en la tabla de particiones el tipo de sistema de archivo con el que 
+será formateada la 'unidad virtual'. Para esto podemos listar todas las alternativas con
+`l`, aún dentro de `fdisk`. Vemos que hay un número de dos cifras, seguido por una breve
+descripción.
+
+Para ntfs, es habitual seleccionar el 87. Ya sólo queda escribir los datos a disco y salir.
+Ambas acciones con `w`.
+
+Para comprobar que los datos se han escrito correctamente no hace falta entrar a fdisk otra
+vez, tan sólo hacemos un `fdisk -l /dev/loop0`.
+
+En este punto, recalco que aún no tenemos un punto de montaje -lo que está montado es el 
+dispositivo loopback, asociado a nuestro fichero 'proto VHD', sobre el que hemos hecho
+las anteriores operaciones.
+
+Lo siguiente es formatear el 'proto-disco'. Con `mkfs` puede llevarse a cabo de la siguiente  
+manera. Advertencia, este proceso está aún bajo revisión. 
+
+  ~~~  
+ # mkfs -t ntfs /dev/loop200  
+  ~~~  
+
+Después de llevar a cabo esta última acción, se consigue un disco completamente operativo.
+Sin embargo, he encontrado ciertos errores que aún no tengo muy claro como solventar: 
+
+- sector de inicio de la partición. 
+- sectores por pista.
+- número de cabezas o cabezales.
+- el cluster es ajustado automáticamente.
+
+Mkfs advierte que el sector de inicio no fué especificado, y que al no poder determinarlo 
+automáticamente, se establece a valor 0. Lo mismo con los sectores por pista y el número 
+de cabezales. El tamaño de cluster es ajustado automáticamente 4096 bytes.
 
 
 ---
