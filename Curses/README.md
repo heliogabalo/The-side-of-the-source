@@ -62,3 +62,34 @@ própias de un entorno gráfico.
   N.T.d.A: Esta aplicación está basada en fuentes de código abierto.
   Gracias de antemano, a todos aquellos que en su día compartieron el
   "source".
+
+
+Indice antiguo (copiado aquí sólo como seguimiento)
+Los archivos relacionados con la interface_proyect de Ncurses, están bajo el
+directorio Curses. Otros que estaban en el root, han sido mividos al directorio
+`C` como archivos sueltos(Lenguaje C).
+
+*  TODO
+
+      - README.md in english.  
+      - [x] función exec - function  
+      - [x] función login - function  
+      - función stty - function  
+      - [x]Menú functional - cusrse_menu  
+      - Paneles - curse_pane  
+      - [x] Ventanas - curse_win  
+      - Directorio Curses. Readme_curses.txt
+      - función check - function. Comprueba tipo tty.
+      - función grub - UEFI nuevo estilo. Nuevo entre comillas *"algo aquí"*.
+      - Integración de artículos en la web:
+      - linux4free - function
+      - SVGA/VGA/EGA/CGA - function
+      - check_arch - function
+      - controlador frontend - via emacs(lisp scheme-guile)
+      - mapa de red
+
+
+
+
+
+
