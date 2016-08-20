@@ -1160,6 +1160,8 @@ the virtio drivers, which provide better performance and lower overhead.
 > $ qemu-system-i386 -boot order=c -drive file=disk_image,if=virtio  
 > ~~~  
 ---
+
+
 Indicio DFB 
 
 (qemu) dump-guest-memory gdbserver getfd getfd name  
