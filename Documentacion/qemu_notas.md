@@ -226,24 +226,24 @@ Es importante comprobar que el _vínculo_ entre ambos archivos, es el _adecuado:
 
 __file__ ofrece una versión resumida si únicamente buscamos comprabar el vínculo.  
 __qemu-img info --backing-chain__ aporta información más detallada:  
-  ~~~  
-    image: /path/to/BF/Overlays/img1.cow
-    file format: qcow2
-    virtual size: 3.0G (3221225472 bytes)
-    disk size: 1.5G
-    cluster_size: 65536
-    backing file: /path/to/BF/image_file.raw
-    backing file format: raw
-    Format specific information:
-        compat: 1.1
-        lazy refcounts: false
-        refcount bits: 16
-        corrupt: false
+  ~~~   
+    image: /path/to/BF/Overlays/img1.cow  
+    file format: qcow2  
+    virtual size: 3.0G (3221225472 bytes)  
+    disk size: 1.5G  
+    cluster_size: 65536  
+    backing file: /path/to/BF/image_file.raw  
+    backing file format: raw  
+    Format specific information:  
+        compat: 1.1  
+        lazy refcounts: false  
+        refcount bits: 16  
+        corrupt: false  
     
-    image: /path/to/BF/image_file.raw
-    file format: raw
-    virtual size: 3.0G (3221225472 bytes)
-    disk size: 1.4G
+    image: /path/to/BF/image_file.raw  
+    file format: raw  
+    virtual size: 3.0G (3221225472 bytes)  
+    disk size: 1.4G  
   ~~~  
 
 Otro usuario **Linux**, desde la distribución _Fedora_, ha querido incluir en su documentación,  
@@ -1269,4 +1269,12 @@ Esto es | una prueba
 ctr+alt+ | afecta a `todas`
 ctrl+alt+
 ctrl+alt+
+
+
+        codigo-ini
+        codigo-fin
+  
+  dsdfasdf
+
+
 
