@@ -38,4 +38,10 @@ Hay otra _primera_ aproximación a eteos preliminares con la opción:
     
     # mysqld_safe --skip-grant-tables &
 
+Para ver el código de una función o procedimiento se utiliza el comando show:
+
+    mysql> SHOW FUNCTION CODE Nombre_Funcion;
+
+Pero debe haberse compilado `mysql` con la opción `--wit-debug`.
+
 
