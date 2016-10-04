@@ -8,4 +8,3 @@ class Interface:
 ventana = Tk()
 miInterface = Interface(ventana) 
 ventana.mainloop()
-
