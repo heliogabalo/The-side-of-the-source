@@ -1,0 +1,16 @@
+<driconf>
+   <device screen="0" driver="radeon">
+      <application name="all">
+         <!-- Always synchronize with vertical refresh to avoid tearing -->
+         <option name="vblank_mode" value="3"/>
+      </application>
+      <application name="glxgears" executable="glxgears">
+         <!-- glxgears should not synchronize with vertical refresh, show full fps -->
+         <option name="vblank_mode" value="0"/>
+      </application>
+      <application name="tuxracer" executable="tuxracer">
+         <!-- Tuxrace has some artifacts with hardware TCL -->
+         <option name="tcl_mode" value="0"/>
+      </application>
+   </device>
+</driconf>
