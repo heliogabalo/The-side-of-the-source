@@ -1,7 +1,50 @@
-
-
 var canvas = document.getElementById("myCanvas");
+var lvlText = document.getElementById("test");
 var ctx = canvas.getContext("2d");
+
+  var gems = [
+    {
+      id: 1,
+      name: 'Level-1',
+      row: {
+        r1: '*****',
+        r2: '-***-',
+        r3: '--*--'
+        },
+      canPushtoDb: true,
+      hideLevel: false,
+      status: 1
+      //canvas
+    },
+    {
+      id: 2,
+      name: 'Level-2',
+      row: {
+        r1: '**-**',
+        r2: '-*-*-',
+        r3: '-***-',
+        },
+      canPushtoDb: true,
+      hideLevel: false,
+      status: 1
+      //canvas
+    },
+    {
+      id: 3,
+      name: 'Level-3',
+      row: {
+        r1: '*-*-*',
+        r2: '**-**',
+        r3: '*-*-*'
+        },
+      canPushtoDb: true,
+      hideLevel: true,
+      status: 1
+      //canvas
+    }    
+    
+  ];
+
 
 var x = canvas.width/2;
 var y = canvas.height-30;
@@ -29,6 +72,7 @@ var score = 0;
 var lives = 3;
 
 var level = 1;
+
 var totalScore = 0;
 
 var bricks = [];
@@ -83,7 +127,7 @@ function checkStatus() {
     for(r=0; r<brickRowCount; r++) {
       bricks[c][r].status = 1;
     }
-  }
+  }  
 }
 
 function collisionDetection() {
@@ -95,29 +139,20 @@ function collisionDetection() {
           dy = -dy;
           b.status = 0;
           score++;
-          if(score == brickRowCount*brickColumnCount) {
-            alert("YOU WIN, Congratulations!");            
-            //document.location.reload();
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            totalScore = score; 
-            level++;
-            checkStatus();
-            drawBricks();            
-          }
-          else if(score == brickRowCount*brickColumnCount+totalScore) {
-              alert("Another lvl?");
+          if(score == brickRowCount*brickColumnCount+totalScore) {
+              alert("- CONGRATULATIONS !! - Another lvl?");
               ctx.clearRect(0, 0, canvas.width, canvas.height);
-              level++;
+              //level++           // moved to getLevel;
+              getLevel();              
               totalScore = score;
               checkStatus();
-              drawBricks();              
-          }
+              drawBricks();
+          }          
         }
       }
     }
   }
 }
-
 
 function drawScore() {
   ctx.font = "16px Arial";
@@ -125,10 +160,14 @@ function drawScore() {
   ctx.fillText("Score: "+score, 8, 20);
 }
 
-function drawLevel() {
+function drawLevel() {  
   ctx.font = "16px Arial";
   ctx.fillStyle = "#0095DD";
-  ctx.fillText("Level: "+level, canvas.width-150, 20);
+  ctx.fillText("Level: "+ level, canvas.width-150, 20);  
+}
+
+function getLevel() {
+  level++;  
 }
 
 function drawBall() {
@@ -140,7 +179,6 @@ function drawBall() {
   ctx.closePath();
 }
 
-
 function drawPaddle() {
   ctx.beginPath();
   ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
@@ -149,6 +187,40 @@ function drawPaddle() {
   ctx.closePath();
 }
 
+function activeLevel(){
+	var checkLevel; 					// Actual level.
+	var levelArray = ['r1','r2','r3'];  // string inside object.row.
+	var stringLvl = [];	
+  
+  
+  gems.forEach(function(value, i) {
+    if(gems[i].id == level){
+      checkLevel = gems[i].row;
+    }
+  });
+
+  //console.log("step 1 - checkLevel is:", checkLevel);
+
+  levelArray.forEach(function (value, i) {    
+    stringLvl[i] = checkLevel[value].split(''); 
+    });
+  
+  //console.log("step 2 - stringLvl is:", stringLvl);  
+  
+  stringLvl.forEach(function(c, r) {    
+    stringLvl[r].forEach(function(value, index) {      
+      if(stringLvl[r][index] == "-") {        
+        bricks[index][r].status = 0;
+      }
+      else {        
+        bricks[index][r].status = 1;
+      }
+    });
+  });  
+
+  drawBricks();
+  
+}
 
 function drawBricks() {
   for(c=0; c<brickColumnCount; c++) {
@@ -168,16 +240,16 @@ function drawBricks() {
   }
 }
 
-
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  drawBricks();
+	activeLevel();
+  //drawBricks();
   drawBall();
   drawPaddle();
   drawScore();
   drawLives();
-  drawLevel();
-  collisionDetection();
+  drawLevel();  
+  collisionDetection();  
 
   if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
       dx = -dx;
@@ -215,25 +287,56 @@ function draw() {
 
   x += dx;
   y += dy;
-  requestAnimationFrame(draw);
+  requestAnimationFrame(draw);  
 }
 
 
+window.confirm("Press Ok to start!!");
 draw();
+//////////////////////////////////////////
+/// Anoter elements called after Canvas //
+//////////////////////////////////////////
 
+
+
+lvlText.innerHTML = "ARKA-NO-ITS -v9.1" + arr + '<br />' +
+'<em>' + "... continue the batle !! " + '</em>';
 /* Intérvalo de refresco de dibujo
 
-setInterval(draw, 10);
+
+
+TODO:
+    * Refactorizadion:
+    * [] Aislar array de bloques, Jason file.
+    * [] Encapsular variables globales.
+    * [] Crear función Init() - el Main!
+    * [*] primer paso refactorización activeLevel()
+    * ****************************
+    * Lógoca:
+    * [*] Crear marcador de nivel.    
+    * []  Sustituir llamadas a varibles constantes por llaves del struct(gems!).
+    * [*] Crear Loop de niveles "pasar pantalla, eliminados bloques".
+    * [*] Función de nivel independiente. Ahora podemos dar o quitar niveles,
+    *     en función del "Bonus" de bloque.
+    * [*] Diccionario para el constructor de nivel.
+    * [*]  Motor de nivel - datos externos desde array.
+    * [*] Editor de nivel. -- Angular!!
+    * [] Formulario para el editor de nivel. -- Angular!!
+    * [] Menú de partida, modal boxes - Angular!!
+    * [] Colaiders mejorados.
+    * [] Mensaje alerta comenzar partida. Debe ser fuera de la función
+    *    draw(), puede que con un switch con break; Podria ser cuando
+    *    se dibujan los bloques y comprobando el status on/off.
+    *    [*] Un confirm antes de dibujar?
+    *    Tambien puedo dibujar un botón en medio de la pantalla vinculado a
+    *    draw().
+    * ******************************
+    * Desarrollo gráfico:
+    * [] I'd have a better dream if someone do that!
+    * [] Necesarias tres imagenes de paleta, en tono gris con capa transparente.
+    * [] Imagen nave para paleta.
+    * [] Similar para la bola. Los bloques necesitan al menos dos imagenes.
+    *   - Ancho normal y ancho reducido(mitad del normal).
 */
 
-/* Color aleatorio
-function getRandomColor() {
-    var letters = '0123456789ABCDEF';
-    var color = '#';
-    for (var i = 0; i < 6; i++ ) {
-        color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-}
-var randColor = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
-*/
+

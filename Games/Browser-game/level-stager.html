@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html ng-app="gemStager">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="Css/site.css"/>
+    <link rel="stylesheet" type="text/css" href="Css/bootstrap.min.css"/>    
+    <title>Index of Levels & Former</title>
+    <script type="text/javascript" src="Js/angular.min.js"></script>   
+    <script type="text/javascript" src="Js/app.js"></script>
+</head>
+
+<body ng-controller="StagerController as stager">
+    <div class="stager row" ng-hide="stager.hideLevel"
+         ng-repeat="stager in stager.levellers">
+        <h3>{{stager.name}}
+            <em class="pull-right">{{stager.row.r1}}</em><br>
+            <em class="pull-right">{{stager.row.r2}}</em><br>
+            <em class="pull-right">{{stager.row.r3}}</em><br>
+        </h3>
+        <button ng-show="stager.canPushtoDb">Add to Db</button>
+        <hr />        
+    </div>
+    
+
+
+
+    <!-- Form to push levels structure of blocks -->
+    <!--    End Form structure of blocks         -->
+    <script> 
+        
+        
+        //document.getElementById('test').innerHTML = "test";
+    </script>
+
+
+</body>
+
+</html>
+

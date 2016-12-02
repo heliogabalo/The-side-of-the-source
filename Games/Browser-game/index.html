@@ -1,23 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="gemStager">
 <head>
     <meta charset="utf-8" />
-    <title>Gamedev Canvas Workshop</title>
+    <title>myGamedev customCanvas Workshop</title>
     <link rel="stylesheet" type="text/css" href="Css/main.css"/>
-    <style>
-    	* { padding: 0; margin: 0; }
-    	canvas { background: #eee; display: block; margin: 0 auto; }
-    </style>
+	<link rel="stylesheet" type="text/css" href="Css/bootstrap.min.css"/>
 </head>
-<body>
+<body ng-controller="StagerController as stager">
+	<div id="test"></div>
+	<canvas id="myCanvas" width="480" height="320"></canvas>
+	
+   <!-- <div class="stager row" ng-hide="stager.levellers.hideLevel"
+         ng-repeat="stager in stager.levellers">
+        <h3>{{stager.name}}
+            <em class="pull-right">{{stager.row.r1}}</em><br>
+            <em class="pull-right">{{stager.row.r2}}</em><br>
+            <em class="pull-right">{{stager.row.r3}}</em><br>
+        </h3>
+        <button ng-show="stager.canPushtoDb">Add to Db</button>
+        
+    </div>
+-->
+	
 
-<canvas id="myCanvas" width="480" height="320"></canvas>
+	
 
-<script>
-	// JavaScript code goes here
-</script>
-<script src="Js/main.js"></script>
-
-
+	<script src="Js/mainDevel.js"></script>
+<!--    <script type="text/javascript" src="Js/angular.min.js"></script>
+    <script type="text/javascript" src="Js/app.js"></script> -->
 </body>
 </html>
