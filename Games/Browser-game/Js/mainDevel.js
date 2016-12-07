@@ -187,9 +187,9 @@ function drawPaddle() {
   ctx.closePath();
 }
 
-function activeLevel(){
-	var checkLevel; 					// Actual level.
-	var levelArray = ['r1','r2','r3'];  // string inside object.row.
+function activeLevel(){       // Data base Levels - Active Level!!
+	var checkLevel; 					
+	var levelArray = ['r1','r2','r3'];
 	var stringLvl = [];	
   
   
@@ -199,13 +199,9 @@ function activeLevel(){
     }
   });
 
-  //console.log("step 1 - checkLevel is:", checkLevel);
-
   levelArray.forEach(function (value, i) {    
     stringLvl[i] = checkLevel[value].split(''); 
     });
-  
-  //console.log("step 2 - stringLvl is:", stringLvl);  
   
   stringLvl.forEach(function(c, r) {    
     stringLvl[r].forEach(function(value, index) {      
@@ -222,7 +218,7 @@ function activeLevel(){
   
 }
 
-function drawBricks() {
+function drawBricks() {                 // Draw bricks on Canvas
   for(c=0; c<brickColumnCount; c++) {
     for (r=0; r<brickRowCount; r++) {
       if(bricks[c][r].status == 1) {
@@ -240,7 +236,7 @@ function drawBricks() {
   }
 }
 
-function draw() {
+function draw() {                 // Main function, it must be Init()
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 	activeLevel();
   //drawBricks();
@@ -307,13 +303,22 @@ lvlText.innerHTML = "ARKA-NO-ITS -v9.1" + arr + '<br />' +
 
 TODO:
     * Refactorizadion:
+    * [*] Refactorizado espacio global accedido por 'función de página'.
     * [] Aislar array de bloques, Jason file.
     * [] Encapsular variables globales.
     * [] Crear función Init() - el Main!
-    * [*] primer paso refactorización activeLevel()
+    * [*] primer paso refactorización activeLevel().
+    * [*] Cambio 'Alertas' por customAlerts gameOver y nextLevel.
+    * [*] Merged drawBricks on bricksLoop() to avoid loop duplicity.
     * ****************************
     * Lógoca:
-    * [*] Crear marcador de nivel.    
+    * [] Función init() - iniciar la página
+    * [] Modificar canvas - ocupa toda la ventana/explorador!!.
+    *    muestra en 31 dias JS - 
+    *    --> http://creativejs.com/2013/05
+    *     /make-a-shoot-em-up-in-20-minutes/index.html
+    * [*] Crear marcador de nivel.
+    * [] Identificar variables constantes.
     * []  Sustituir llamadas a varibles constantes por llaves del struct(gems!).
     * [*] Crear Loop de niveles "pasar pantalla, eliminados bloques".
     * [*] Función de nivel independiente. Ahora podemos dar o quitar niveles,
@@ -321,9 +326,15 @@ TODO:
     * [*] Diccionario para el constructor de nivel.
     * [*]  Motor de nivel - datos externos desde array.
     * [*] Editor de nivel. -- Angular!!
+    * [] Función subir a DB. -- Angular??
     * [] Formulario para el editor de nivel. -- Angular!!
-    * [] Menú de partida, modal boxes - Angular!!
-    * [] Colaiders mejorados.
+    * [] Menú de partida, modal boxes - Angular!!    
+    * [] Colaiders bloques mejorados.
+    * [*] Funcion canvasBounder() - Limites del canvas.
+    * [] Cambio de ángulo de rebote(bola) respecto paleta.
+    * [] Velocidad aumentada(acumul/temporal!!) con respecto rebote en bloque.
+    * [] Velecidad alterada +/-Bonus de bloque.
+    * [] Esquema de colores {bloques-Bonus}.
     * [] Mensaje alerta comenzar partida. Debe ser fuera de la función
     *    draw(), puede que con un switch con break; Podria ser cuando
     *    se dibujan los bloques y comprobando el status on/off.

@@ -1,4 +1,36 @@
-  
+//////////////////////////////////////////
+// ESQUEMA DE CLASES  ////////////////////
+//////////////////////////////////////////
+
+//class MouseEvent
+//  |- keyDownHandler
+//  |- keyUpHandler
+//  |_ mouseMoveHandler
+//class Draw
+//  |- activeLevel
+//      |_ drawBricks
+//  |- drawBall
+//  |- drawPaddle
+//class Hub o marcador
+//  |- drawScore
+//  |- drawLives
+//  |- drawLevel
+// class Collaiders
+//  |- collisionDetection
+//        |- checkStatus
+//        |_ canvasBounder
+
+/////////////////////////////////////////////////////////
+/////     ALTERNATIVAS DE ENCAPSULADO DE VARIABLES    ///
+/////////////////////////////////////////////////////////
+// Una idea para evitar el uso masivo de variables globales
+// es crear un puntero, que será sobreescrito a medida que sea
+// necesitado, como si fuera la papelera(reusable!!).
+// Esto podria implementarse mediante un 'circuito auxiliar'.
+
+// También puedo meter las varibles globales en una función e iniciarla en
+// en el Init().
+
 // http://kopy.io/CuT7d
 ///////////////////////////////////////
 ///// The checkLevel() Function notes /
