@@ -310,8 +310,9 @@ TODO:
     * [*] primer paso refactorización activeLevel().
     * [*] Cambio 'Alertas' por customAlerts gameOver y nextLevel.
     * [*] Merged drawBricks on bricksLoop() to avoid loop duplicity.
+    * [*] Ball GPS (The axis for ball is embeded on canvas!!!(var x & y))
     * ****************************
-    * Lógoca:
+    * Lógica:
     * [] Función init() - iniciar la página
     * [] Modificar canvas - ocupa toda la ventana/explorador!!.
     *    muestra en 31 dias JS - 
@@ -329,7 +330,7 @@ TODO:
     * [] Función subir a DB. -- Angular??
     * [] Formulario para el editor de nivel. -- Angular!!
     * [] Menú de partida, modal boxes - Angular!!    
-    * [] Colaiders bloques mejorados.
+    * [*] Colaiders bloques mejorados(added ballradius).
     * [*] Funcion canvasBounder() - Limites del canvas.
     * [] Cambio de ángulo de rebote(bola) respecto paleta.
     * [] Velocidad aumentada(acumul/temporal!!) con respecto rebote en bloque.

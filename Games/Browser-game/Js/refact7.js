@@ -68,18 +68,21 @@
     for(c=0; c<brickColumnCount; c++){
       bricks[c] = [];
       for(r=0; r<brickRowCount; r++) {
-        bricks[c][r] = {x: 0, y: 0 };
-        var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;
-        var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
-        bricks[c][r].x = brickX;
-        bricks[c][r].y = brickY;
-        ctx.beginPath();
-        ctx.rect(brickX,brickY,brickWidth,brickHeight);
-        ctx.fillStyle = "#0095DD";
-        ctx.fill();
-        ctx.closePath();
-      }
-    }    
+        bricks[c][r] = {x: 0, y: 0, status: 1 };
+        if(bricks[c][r].status == 1) {          
+          var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;
+          var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
+          bricks[c][r].x = brickX;
+          bricks[c][r].y = brickY;
+          ctx.beginPath();
+          ctx.rect(brickX,brickY,brickWidth,brickHeight);
+          ctx.fillStyle = "#0095DD";
+          ctx.fill();
+          ctx.closePath();
+        }        
+      }    
+    }
+    collisionDetection();
   }
 
   function canvasBounder() {
@@ -103,12 +106,32 @@
     }
   }
   
+  // Another time it is iterating over a brick loop,
+  // should be possible to merge again on bricksLoop().
+  // That will produce a huge function, It must be a way to
+  // hard refactor the whole function().
+  function collisionDetection() {
+    for(c=0; c<brickColumnCount; c++) {
+      for(r=0; r<brickRowCount; r++) {
+        var b = bricks[c][r];        
+        if(b.status == 1) {
+          if(x > b.x && x < b.x+brickWidth+ballRadius &&
+             y > b.y && y < b.y+brickHeight+ballRadius) {
+            dy = -dy;
+            b.status = 0;
+          }
+        }        
+      }
+    }    
+  }
+  
   function draw() {
     ctx.clearRect(0,0,canvas.width, canvas.height);    
     
     bricksLoop();    
     drawBall();
     drawPaddle();
+    
     
     // Fija limite de paleta respecto canvas !!
     if(rightPressed && paddleX < canvas.width-paddleWidth) {
@@ -128,7 +151,7 @@
   
   setInterval(draw, 10);
   
-  test.innerHTML = "ARKA-NO-ITS v0.07"; 
+  test.innerHTML = "ARKA-NO-ITS v0.01"; 
   
   
   })();
