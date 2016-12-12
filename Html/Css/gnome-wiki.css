@@ -1,3 +1,11 @@
+elemento {
+}
+#main_content, #header_tabs, #footer_content {
+    /*width: 960px;*/
+    margin: auto;
+}
 body {
-  width: 80%,auto;
+    font-family: 'Cantarell', sans-serif;
+    color: black;
+    width: 80%;
 }
