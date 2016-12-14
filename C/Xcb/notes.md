@@ -1,4 +1,4 @@
-## Basic knowledge
+## __KCB__ Basic knowledge 
 
 - An X app first needs to open the connection to the X server using:
 
