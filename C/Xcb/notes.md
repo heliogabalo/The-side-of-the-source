@@ -1,4 +1,4 @@
-## __KCB__ Basic knowledge 
+## __KCB__ Basic knowledge
 
 - An X app first needs to open the connection to the X server using:
 
@@ -38,3 +38,10 @@ We could retrieve the first screen of the connection by using:
 
   `xcb_screen_iterator_t xcb_setup_roots_iterator(xcb_setup_t *R);`
 > see retrieve_screen on .
+
+#### Eventos
+En un programa bajo las _X_ **_todo_** es un evento, incluso en una ventanas que
+fue escondida, si se _expone_, el servidor _X_ manda un _evento_ para hacer conocer
+al programa, qué parte de la ventana debe volver a redibujarse.
+La entradas de usuario -pulsación de tecla, movimiento de ratón, etc- son recividas
+como conjunto de eventos.
