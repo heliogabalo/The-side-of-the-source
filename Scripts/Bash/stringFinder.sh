@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# first search for file in current dir
+# then filter string and output those result.
+
+for file in *
+do
+  if grep -l POSIX $file
+    then
+    echo $file
+  fi
+done
+exit 0

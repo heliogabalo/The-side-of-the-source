@@ -1,7 +1,7 @@
 EscritorioCurse
 
-El objeto de esta aplicación, es crear un entorno de programación, con las 
-capacidades de un entorno de texto, libre de cargas de grandes librerias, 
+El objeto de esta aplicación, es crear un entorno de programación, con las
+capacidades de un entorno de texto, libre de cargas de grandes librerias,
 própias de un entorno gráfico.
 
 
@@ -10,8 +10,8 @@ própias de un entorno gráfico.
 *   La aplicación:
 
         - [x] Main(). Inicializa ventana.
-        - [x] Cabecera.h 
-        - [x] Aislar funciones del main(). 
+        - [x] Cabecera.h
+        - [x] Aislar funciones del main().
         - [x] Menú principal.
         - [x] Tags para VIM. ctags.
         - [x] Recolocar ventana.
@@ -42,7 +42,7 @@ própias de un entorno gráfico.
 
 
 
-  Para comilar: 
+  Para compilar:
   <pre><code>
     $cd Curses
     $make
@@ -56,7 +56,7 @@ própias de un entorno gráfico.
   integrada en las plataformas más comunes. No debería suponer ningún
   problema su compilación.
   De cualquier forma únicamente ha sido probada en la cónsola de linux
-  Esto es, Bash y Zsh. 
+  Esto es, Bash y Zsh.
 
 
   N.T.d.A: Esta aplicación está basada en fuentes de código abierto.
@@ -87,9 +87,3 @@ directorio Curses. Otros que estaban en el root, han sido mividos al directorio
       - check_arch - function
       - controlador frontend - via emacs(lisp scheme-guile)
       - mapa de red
-
-
-
-
-
-
