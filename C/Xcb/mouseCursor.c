@@ -1,3 +1,6 @@
+// Hay un error en el dibujo del botón, renderiza sobre
+// el mensaje de fin de applicación.
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
