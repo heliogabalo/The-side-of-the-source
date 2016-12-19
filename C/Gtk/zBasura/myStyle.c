@@ -47,7 +47,7 @@ static void my_style_class_init(MyStyleClass *class) {
 
 MyStyle * my_style_new(void) {
   return g_object_new(MY_STYLE_TYPE,
-                      "application-id", "org.gtk.myStyle",
+                      "application-id", "home.Helio.Github.The-side-of-the-source.C.Gtk.zBasura",
                       "flags", G_APPLICATION_HANDLES_OPEN,
                       NULL);
 

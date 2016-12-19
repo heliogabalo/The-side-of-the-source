@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <gresources>
-    <gresource prefix="myStyle">
+    <gresource prefix="/home/Helio/Github/The-side-of-the-source/C/Gtk/zBasura">
       <file preprocess="xml-stripblanks">window.ui</file>
     </gresource>
   </gresources>
