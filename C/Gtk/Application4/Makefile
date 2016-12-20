@@ -12,7 +12,7 @@ OBJS = $(BUILT_SRC:.c=.o) $(SRC:.c=.o)
 
 all: myStyle
 
-resources.c: myStyle.gresources.xml window.ui
+resources.c: myStyle.gresources.xml window.ui app-menu.ui
 	$(GLIB_COMPILE_RESOURCES) myStyle.gresources.xml --target=$@ --sourcedir=. --generate-source
 
 %.o: %.c

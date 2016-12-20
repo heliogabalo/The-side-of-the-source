@@ -20,14 +20,16 @@ static void my_style_window_init(MyStyleWindow *win) {
 }
 
 static void my_style_window_class_init(MyStyleWindowClass *class) {
+
   gtk_widget_class_set_template_from_resource(GTK_WIDGET_CLASS(class),
-                                              "/home/Helio/Github/The-side-of-the-source/C/Gtk/zBasura/window.ui");
+                                              "/org/gtk/Example/window.ui");
 
   gtk_widget_class_bind_template_child_private(GTK_WIDGET_CLASS(class), MyStyleWindow, stack);
 }
 
 
 MyStyleWindow * my_style_window_new(MyStyle *app) {
+  
   return g_object_new(MY_STYLE_WINDOW_TYPE, "application", app, NULL);
 }
 
