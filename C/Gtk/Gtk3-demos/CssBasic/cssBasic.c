@@ -110,6 +110,8 @@ do_css_basics (GtkWidget *do_widget)
   return window;
 }
 
+//////// This is a provisional main() //////////////
+/*
 int main(int argc, char  **argv) {
   GtkWidget *window;
 
@@ -120,3 +122,4 @@ int main(int argc, char  **argv) {
 
   return 0;
 }
+*/
