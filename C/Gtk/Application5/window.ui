@@ -2,6 +2,7 @@
 <interface>
   <!-- interface-requires gtk+ 3.8 -->
   <template class="MyStyleWindow" parent="GtkApplicationWindow">
+    <!-- <style><class name="some-css-class" /></style> -->
     <property name="title" translatable="yes">Custom Style</property>
     <property name="default-width">600</property>
     <property name="default-height">400</property>

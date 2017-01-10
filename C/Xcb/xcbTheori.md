@@ -71,7 +71,7 @@ Una interfase gráfica de usuario(GUI), utiliza habitualmente un modelo asíncro
 de programación, también conocido como _programación de evento conducido_. Esto
 significa que, mayormente el programa presenta un estado de reposo, esperando Eventos
 enviados por el servidor, y actuar entonces, contra esos eventos.
-Un evento prodría ser: _el usuario a pulsado `1`, en la coordenada `(x,y)`_, o _la
+Un evento prodría ser: _el usuario ha pulsado `1`, en la coordenada `(x,y)`_, o _la
 ventana que controlas necesita ser redibujada_.
 Para que un programa pueda actuar/reflejar las entradas/acciones de usuario o refrescar
 las solicitudes, necesita manejar cada evento en un breve periodo de tiempo -ejem. 200ms

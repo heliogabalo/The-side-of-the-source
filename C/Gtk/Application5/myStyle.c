@@ -2,6 +2,7 @@
 
 #include "myStyle.h"
 #include "myStyleWin.h"
+#include "myStylePrefs.h"
 
 struct _MyStyle {
   GtkApplication parent;
@@ -13,7 +14,14 @@ static void my_style_init(MyStyle *app) {}
 
 static void preferences_activated(GSimpleAction *action,
                                   GVariant *parameter,
-                                  gpointer app) {}
+                                  gpointer app) {
+  MyStylePrefs *prefs;
+  GtkWindow *win;
+
+  win = gtk_application_get_active_window(GTK_APPLICATION(app));
+  prefs = my_style_prefs_new(MY_STYLE_WINDOW(win));
+  gtk_window_present(GTK_WINDOW(prefs));
+}
 
 static void quit_activated(GSimpleAction *action,
                            GVariant *parameter,

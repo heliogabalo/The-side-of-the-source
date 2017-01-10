@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# this an automated history on some kinf
+
+. ~/.bashrc
+tail -F ~/.bashrc
+
+# then use:
+xterm -e "bash --rcrile $HOME/.term-rcfile -1"
+
+# or in gnome-terminal:
+gnome-terminal -e "bash --rcfile $HOME/.term-rcfile -i"
