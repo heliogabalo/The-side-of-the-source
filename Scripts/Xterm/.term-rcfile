@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# this an automated history on some kinf
+# this an automated history on some kind
 
 . ~/.bashrc
 tail -F ~/.bashrc
