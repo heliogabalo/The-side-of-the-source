@@ -1,0 +1,18 @@
+xterm*font: terminus-12
+xterm*boldFont: terminus-8
+xterm*dynamicColors: true
+xterm*background: rgb:00/00/00
+xterm*foreground: rgb:ff/ff/ff
+! xterm*utf8: 2
+xterm*eightBitInput: true
+xterm*saveLines: 100
+xterm*scrollTtyKeypress: true
+xterm*scrollTtyOutput: false
+xterm*scrollBar: false
+xterm*loginShell: true
+xterm*faceName:
+Monospace:pixelsize=12
+xterm*jumpScroll: trueq
+xterm*multiScroll: true
+xterm*toolBar: false
+xterm*geometry: 100x10
