@@ -1,0 +1,49 @@
+SELinux is preventing 57656220436F6E74656E74 from create access on the rawip_socket Unknown.
+
+*****  Plugin mozplugger (99.1 confidence) suggests   ************************
+
+If quiere usar el paquete plugin
+Then debe deshabilitar los controles de SELinux en los complementos de Firefox.
+Do
+# setsebool -P unconfined_mozilla_plugin_transition 0
+
+*****  Plugin catchall (1.81 confidence) suggests   **************************
+
+If cree que de manera predeterminada, 57656220436F6E74656E74 debería permitir acceso create sobre Unknown rawip_socket.     
+Then debería reportar esto como un error.
+Puede generar un módulo de política local para permitir este acceso.
+Do
+allow this access for now by executing:
+# ausearch -c '57656220436F6E74656E74' --raw | audit2allow -M my-57656220436F6E74656E74
+# semodule -X 300 -i my-57656220436F6E74656E74.pp
+
+Additional Information:
+Source Context                unconfined_u:unconfined_r:mozilla_plugin_t:s0-s0:c
+                              0.c1023
+Target Context                unconfined_u:unconfined_r:mozilla_plugin_t:s0-s0:c
+                              0.c1023
+Target Objects                Unknown [ rawip_socket ]
+Source                        57656220436F6E74656E74
+Source Path                   57656220436F6E74656E74
+Port                          <Unknown>
+Host                          NR021AA
+Source RPM Packages           
+Target RPM Packages           
+Policy RPM                    selinux-policy-3.13.1-190.fc24.noarch
+Selinux Enabled               True
+Policy Type                   targeted
+Enforcing Mode                Enforcing
+Host Name                     NR021AA
+Platform                      Linux NR021AA 4.5.5-300.fc24.x86_64 #1 SMP Thu May
+                              19 13:05:32 UTC 2016 x86_64 x86_64
+Alert Count                   2
+First Seen                    2017-03-11 15:07:30 CET
+Last Seen                     2017-03-11 15:07:30 CET
+Local ID                      27a509ba-f294-4112-89e3-49710fa66da8
+
+Raw Audit Messages
+type=AVC msg=audit(1489241250.949:487): avc:  denied  { create } for  pid=6385 comm=57656220436F6E74656E74 scontext=unconfined_u:unconfined_r:mozilla_plugin_t:s0-s0:c0.c1023 tcontext=unconfined_u:unconfined_r:mozilla_plugin_t:s0-s0:c0.c1023 tclass=rawip_socket permissive=0
+
+
+Hash: 57656220436F6E74656E74,mozilla_plugin_t,mozilla_plugin_t,rawip_socket,create
+
