@@ -119,7 +119,7 @@ trabajando sobre dispositivos montados.
 		# mkfs.ext3 /dev/mapper/server1-backups
 		# mkdir /backups
 		# mount /dev/mapper/server1-backups /backups
-Dejo anotados todos los pasos, donde se entiende, que el segundo disco está vacío.
+
 >En este escenario, es creado un dispositivo desde el segundo disco (/dev/sdb1
 >	--primera partición primaria del segundo disco) y acoplado el
 >dispositivo al único _LVM_ en el sistema!!.  
@@ -169,7 +169,7 @@ Me parece oportuno explicar aquí, el proceso que yo he seguido, para que
 nadie lo tome en consideración -o quizás sí!!, y sirva de ejemplo auto-correctivo
 y escarnio público.
 
-Como dije, mi sistema ya contenia la partición y _LVM_ en el segundo disco:
+Como dije, mi sistema ya contenía la partición y _LVM_ en el segundo disco:
 
 		--- Logical volume ---
 		LV Path                /dev/multimedia/home-extra
@@ -208,20 +208,23 @@ así lo refleja con el tamaño del _LV_. Pero el tamaño de la tabla `COW`
 _copy-on-write_, es de sólo `10G`.  
 Si mi interpretación del significado de `COW` copia-sobre-escritura, es correcta,
 esto significa que una vez el disco contenga más información que el límite
-marcado en la tabla `COW`, los datos excedidos no se escribiran en la captura,
-dejándo un espacio inútil, que jamás será escrito a disco.  
+marcado en la tabla `COW`, los datos excedidos, no sólo _NO_ se escribiran en la
+captura, sino que dejarán inútil la imagen.
 
-Al margen de las consecuencias, que podría tener un _gambazo_ así, quiero pensar,
-que como los datos de relevancia están contenidos en los primeros `4,5G`
-realmente no se ha perdido información, todo lo que tenía que estar, está, y es
-espacio vacío, el que completa la tabla y el tamaño total del dispositivo.
+¿De qué sirve entonces proceder de esta forma? pués cuando conocemos de antemano
+el espacio que va contener la partición donde se realiza la captura. Es una forma
+rápida de crear un _backup_.
+
+Aunque la forma en que son recuperados los datos, difiere a como se haría
+habitualmente.
+
+> ver Restaurar un backup.
 
 
 </div>
 <button title="Click to show/hide content" type="button" onclick="if(document.getElementById('spoiler') .style.display=='none') {document.getElementById('spoiler') .style.display=''}else{document.getElementById('spoiler') .style.display='none'}">Oficial de derrota -- Click mostrar/ocultar</button>
 
 ---  
-
 
 #### Siguiendo con el tema, antes de ascender a oficial, al sujeto de prueba.
 
@@ -242,15 +245,6 @@ captura.
 		19513344+0 records in
 		19513344+0 records out
 		9990832128 bytes (10 GB) copied, 320.059 seconds, 31.2 MB/s
-
-> __WARNING!!:__ Los discos duros más actuales -o con mejores prestaciones,  
-acostumbran a incluir una característica que modelos anteriores no incluían.
-_Advanced Format(AF)_,se trata de una característica perteneciente a cualquier
-formato de sector de disco(NTFS, EXT3, BtrFs, etc), que excede de los 512-528 bytes
-por sector.  
-Mayores sectores, facilitan la integración de algoritmos de _corrección de errores_,
-para el mantenimiento de la integridad de datos, en dispositivos de almacenamiento
-de alta densidad.
 
 ---
 

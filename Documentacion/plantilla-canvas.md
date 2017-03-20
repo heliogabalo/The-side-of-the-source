@@ -38,5 +38,5 @@ Js:
   console.log('hola threejs!')
 
 Esto debe salir en la cónsola de desarrollo(_pequeño test_)pequeño test.
-Podemos nombrarlo como queramos, pera asegúrate de enlazar el archivo correcto!.
+Podemos nombrarlo como queramos, pero asegúrate de enlazar el archivo correcto!.
  

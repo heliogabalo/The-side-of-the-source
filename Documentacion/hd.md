@@ -16,3 +16,14 @@ basta YA.
 
 
   __test__ _test_
+
+
+
+	> __WARNING!!:__ Los discos duros más actuales -o con mejores prestaciones,  
+	acostumbran a incluir una característica que modelos anteriores no incluían.
+	_Advanced Format(AF)_,se trata de una característica perteneciente a cualquier
+	formato de sector de disco(NTFS, EXT3, BtrFs, etc), que excede de los 512-528 bytes
+	por sector.  
+	Mayores sectores, facilitan la integración de algoritmos de _corrección de errores_,
+	para el mantenimiento de la integridad de datos, en dispositivos de almacenamiento
+	de alta densidad.
