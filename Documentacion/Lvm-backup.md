@@ -46,7 +46,7 @@ ha sido acoplado al recurso.
 
 		#vgdisplay
 
-El grupo de volúmenes, va a justificar que figemos la atención en el nombre
+El grupo de volúmenes, va a justificar que fijemos la atención en el nombre
 del dispositivo, es decir, `VG Name:  _mi_VG_` debe hacer referencia al
 nombre del _LVM_ con el que se vaya a trabajar.
 Por ejemplo, si trabajamos con dos discos duros, quizá hayamos acoplado ambos
@@ -161,73 +161,6 @@ Seguidamente creamos un directorio y montamos la captura.
 		# mkdir -p /mnt/server1/rootsnapshot  
 		# mount /dev/server1/rootsnapshot /mnt/server1/rootsnapshot  
 
----
-
-<div id="spoiler" style="display:none">
-
-Me parece oportuno explicar aquí, el proceso que yo he seguido, para que
-nadie lo tome en consideración -o quizás sí!!, y sirva de ejemplo auto-correctivo
-y escarnio público.
-
-Como dije, mi sistema ya contenía la partición y _LVM_ en el segundo disco:
-
-		--- Logical volume ---
-		LV Path                /dev/multimedia/home-extra
-		LV Name                home-extra
-		VG Name                multimedia
-
-Lo único que hice fue crear un _LV_, donde contener las capturas.
-El problema es que al tomar la decisión de crear la captura, con la
-siguiente comprovación:
-
-		# df -h /
-		S.ficheros              Tamaño Usados  Disp Uso% Montado en
-		/dev/mapper/mi-root		    15G   4,5G  9,5G  32% 	/
-
-_Pensé; vale, si el disco es de `15G` y sólo he usado `4,5`, voy a crear una
-"imagen" de `10G`, y de ésta forma ahorro un poco de disco!!. Craso error, por
-que la primera regla a la hora copiar una imagen de disco es:_
-> La imagen destino debe ser, mayor o igual a la imagen origen, _NUNCA_  
-> inferior.
-
-		# lvcreate -L 10G -s -n rootcaptura /dev/mi_VG/root
-		Logical volume "rootcaptura" created.
-
-Con lo que al realizar de nuevo la comprovación:
-
-		# lvdisplay
-		...
-		# open                 0
-		LV Size                15,00 GiB
-		Current LE             3840
-		COW-table size         10,00 GiB
-
-Aparece un dato desconcertante, el gestor _LVM_ ha sido capaz de entender que
-estaba tratando de copiar una imagen más grande de lo que le dije que sería, y
-así lo refleja con el tamaño del _LV_. Pero el tamaño de la tabla `COW`
-_copy-on-write_, es de sólo `10G`.  
-Si mi interpretación del significado de `COW` copia-sobre-escritura, es correcta,
-esto significa que una vez el disco contenga más información que el límite
-marcado en la tabla `COW`, los datos excedidos, no sólo _NO_ se escribiran en la
-captura, sino que dejarán inútil la imagen.
-
-¿De qué sirve entonces proceder de esta forma? pués cuando conocemos de antemano
-el espacio que va contener la partición donde se realiza la captura. Es una forma
-rápida de crear un _backup_.
-
-Aunque la forma en que son recuperados los datos, difiere a como se haría
-habitualmente.
-
-> ver Restaurar un backup.
-
-
-</div>
-<button title="Click to show/hide content" type="button" onclick="if(document.getElementById('spoiler') .style.display=='none') {document.getElementById('spoiler') .style.display=''}else{document.getElementById('spoiler') .style.display='none'}">Oficial de derrota -- Click mostrar/ocultar</button>
-
----  
-
-#### Siguiendo con el tema, antes de ascender a oficial, al sujeto de prueba.
-
 3. Después de haber montado la imagen, es conveniente ver el contenido de la
 misma, para ello:
 
@@ -262,47 +195,121 @@ innecesario en el sistema:
 		# umount /mnt/server1/rootsnapshot
 		# lvremove /dev/server1/rootsnapshot
 
+---
 
-#### Restaurar partición _LVM_ después de una captura.
+<div id="spoiler" style="display:none">
 
+#### Backups rápidos.
+
+Me parece oportuno explicar aquí, el proceso que yo he seguido, para que
+nadie lo tome en consideración -o quizás sí!!, y sirva de ejemplo auto-correctivo
+y escarnio público.
+
+		--- Logical volume ---
+		LV Path                /dev/multimedia/home-extra
+		LV Name                home-extra
+		VG Name                multimedia
+
+Lo único que hice fue crear un _LV_, donde contener las capturas.
+El problema es que al tomar la decisión de crear la captura, con la
+siguiente comprovación:
+
+		# df -h /
+		S.ficheros              Tamaño Usados  Disp Uso% Montado en
+		/dev/mapper/mi-root		    15G   4,5G  9,5G  32% 	/
+
+_Pensé; vale, si el disco es de `15G` y sólo he usado `4,5`, voy a crear una
+"imagen" de `10G`, y de ésta forma ahorro un poco de disco!!. Craso error, por
+que la primera regla a la hora de copiar una imagen de disco es:_
+> La imagen destino debe ser, mayor o igual a la imagen origen, _NUNCA_  
+> inferior.
+
+		# lvcreate -L 10G -s -n rootcaptura /dev/mi_VG/root
+		Logical volume "rootcaptura" created.
+
+Con lo que al realizar de nuevo la comprovación:
+
+		# lvdisplay
+		...
+		# open                 0
+		LV Size                15,00 GiB
+		Current LE             3840
+		COW-table size         10,00 GiB
+		...
+		Allocated to snapshot  0.00%
+		...
+
+Aparece un dato desconcertante, el gestor _LVM_ ha sido capaz de entender que
+estaba tratando de copiar una imagen más grande de lo que le dije que sería, y
+así lo refleja con el tamaño del _LV_. Pero el tamaño de la tabla `COW`
+_copy-on-write_, es de sólo `10G`.  
+Esto significa que una vez el disco contenga más información que el límite
+marcado en la tabla `COW`, los datos excedidos, no sólo _NO_ se escribiran en la
+captura, sino que dejarán inútil la imagen.
+
+¿De qué sirve entonces proceder de esta forma? pués cuando conocemos de antemano
+el espacio que va contener la partición donde se realiza la captura. Es una forma
+rápida de crear un _"backup"_.
+
+A continuación debe montarse el dispositivo:
+		# mkdir /mnt/backup-of
+		# mount /dev/mapper/rootcaptura /mnt/backup-of
+
+Comprovación sobre el directorio montado:
+		# ls -l /mnt/backup-of
+> Debe aparecer el contenido de la partición que hemos montado.
+
+El dato en el que hay que fijarse es el progreso de la información guardada en
+la captura:
+
+Al principio miramos el estado de _LV_ con `# lvdisplay`, volvemos hacerlo
+buscando el siguiente dato:
+
+		...
+		Allocated to snapshot  0.00%
+		...
+> Antes de borrar el contenido del directorio '/mnt/backup-of'
+
+		...
+		Allocated to snapshot  12.30%
+		...
+> Después de borrar los datos.
+
+
+
+Ahora, sin desmontar el _LV_, borramos el contenido del directorio.
+		`# rm -f /mnt/backup-of/*.iso`
+		# ls -l /mnt/backup-of
+> Deben haberse borrado los datos.
+
+Para recuperarlo:
+		# umount /mnt/backup-of
+		# lvconvert --merge /dev/mapper/rootcaptura
+		# mount /dev/mapper/rootcaptura /mnt/backup-of
+		# ls -l /mnt/backup-of
+
+> Primero se desmonta el _LV_, a continuación se _fusionan_ los datos de la
+captura, vuelve a montarse el dispositivo y comprobamos nuevamente.
+
+
+__Conclusión:__, técnicamente hablando, esto no es una copia de respaldo o _backup_,
+es _algo_ parecido. Resulta interesante el espacio alojado en la captura,
+__después__ de borrar los datos. Parece el _mundo al revés_, y en cierta manera
+es así; en la captura se está copiando la diferencia de información, con respecto
+al momento en que tomamos la _instantánea_, es decir, no se ha clonado la información,
+sino que se ha guardado un registro, con todos los:
+_cambios/modificaciones/añadidos/sustraidos_ en el momento de tomar la captura.
+
+
+> ver [Restaurar un backup][].
+
+
+</div>
+<button title="Click to show/hide content" type="button" onclick="if(document.getElementById('spoiler') .style.display=='none') {document.getElementById('spoiler') .style.display=''}else{document.getElementById('spoiler') .style.display='none'}">Oficial de derrota -- Click mostrar/ocultar</button>
+
+
+
+https://blog.inittab.org/administracion-sistemas/lvm-para-torpes-i/
 
 https://www.howtoforge.com/linux_lvm_snapshots_p3
-//migrate -l myLV hd1 hd2
-
-
----
-
-[1]:https://blog.inittab.org/administracion-sistemas/lvm-para-torpes-i/
-
-
-#### Consideraciones
-
-Al parecer el disco(LV) me esta dando problemas:
-		ls: leyendo el directorio '/mnt/home-extra/': Input/output error
-
-Tras completar la copia de la captura, pude acceder normalmente al espacio de
-disco donde coloque el _backup_ de la _captura_. Sin embargo, al día siguiente
-el simple listado del directorio, arroja la salida _I/O_ indicada unas pocas
-líneas arriba.
-
-Puede ser debido al _AF_ del sector de disco, con el que se construyeron las  
-particiones. El disco principal sé que dispone de esta capacidad.
-Por otro lado los discos USB almacenan la memoria de forma completamente
-distinta ya que no se trata de un cambio magnético como ocurre con un HDD, sino
-de un cambio de estado que se produce en la célula de memoria.
-
----
-
-To create a logical volume to be allocated from a specific physical volume in
-the volume group, specify the physical volume or volumes at the end at the
-lvcreate command line. The following command creates a logical volume named
-testlv in volume group testvg allocated from the physical volume /dev/sdg1,
-
-lvcreate -L 1500 -ntestlv testvg /dev/sdg1
-
-Para crear un _LV_ que pueda ser recolocado sobre un específico _PV_ dentro de
-un _VG_, se debe especificar el _PV_ o volúmenes al final del comando `lvcreate`.
-El siguiente comando crea un _LV_ llamado `testlv` en el _VG_ `testvg` alojado en
-`/dev/sdg1`:
-
-		lvcreate -L 1500 -ntestlv testvg /dev/sdg1
+grate -l myLV hd1 hd2

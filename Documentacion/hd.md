@@ -7,6 +7,7 @@ basta YA.
 2. Tabla de particiones  
 2. Espacio vacío  
 3. Particionado de disco  
+	- LVM _versus_ particionado tradicional.
 4. Formateo de disco  
 5. EXPERIMENTAL  
 	- Técnicas de particionado y formateo  
