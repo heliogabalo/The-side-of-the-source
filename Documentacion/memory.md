@@ -12,7 +12,7 @@ En otros lenguajes como _C_ y derivados, es el programador quien minucionsamente
 
 A medida que el programador declara las variables -técnicamente hablando esto es _iniciar la variable_-, se reserva la memoria. Por lo que el primer y segundo paso  son considerados _explícitos_  en todos los lenguajes.
 
-Sin embargo, es en el tercer paso, al liberar la memoria, donde aparecen las diferencias; en lenguajes de _medio/bajo_ nivel, es un proceso iguamente _explícito_, es decir, debe `progrmarse` el _cómo_ el sistema operativo libera el espacio que han ido ocupando las _variables_.
+Sin embargo, es en el tercer paso, al liberar la memoria, donde aparecen las diferencias; en lenguajes de _medio/bajo_ nivel, es un proceso igulamente _explícito_, es decir, debe `progrmarse` el _cómo_ el sistema operativo libera el espacio que han ido ocupando las _variables_.
 
 Como contrapartida, en algunos lenguajes de _alto_ nivel, esta gesteión de la memoria es llevada a cabo por el _núcleo_ del lenguaje, que hace las veces de compilador.
 

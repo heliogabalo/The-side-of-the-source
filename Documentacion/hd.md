@@ -3,7 +3,7 @@ Ya estoy hasta las narices de que se me escape lo básico con los discos duros
 basta YA.
 
 1. El disco duro  
-2. El Mbr  
+2. [El Mbr][1]  
 2. Tabla de particiones  
 2. Espacio vacío  
 3. Particionado de disco  
@@ -28,3 +28,7 @@ basta YA.
 	Mayores sectores, facilitan la integración de algoritmos de _corrección de errores_,
 	para el mantenimiento de la integridad de datos, en dispositivos de almacenamiento
 	de alta densidad.
+
+
+---
+[1]:[mbr.md]

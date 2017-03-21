@@ -309,7 +309,7 @@ _cambios/modificaciones/añadidos/sustraidos_ en el momento de tomar la captura.
 
 
 
-https://blog.inittab.org/administracion-sistemas/lvm-para-torpes-i/
+[1]:https://blog.inittab.org/administracion-sistemas/lvm-para-torpes-i/
 
 https://www.howtoforge.com/linux_lvm_snapshots_p3
 grate -l myLV hd1 hd2

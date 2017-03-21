@@ -1,4 +1,4 @@
-1. [PROCESO DE INSTALACION DE UNA IMAGEN](#i1) 
+1. [PROCESO DE INSTALACION DE UNA IMAGEN](#i1)
     1. [Crear imagen](#i1)  
     2. [Convertir imagen](#1i2)
 
@@ -15,7 +15,10 @@
     7. Aceptación o emisión de bloque  
     8. Flujo de línea?  
     9. Borrado de capturas  
-    10. Notas de autor 
+    10. Notas de autor
+22. [KVM](#22a)
+    1. [Virt-install](#22i1)
+    2. [virtio](#22i2)
 3. [CON O SIN CONEXION A INTERNET](#3i)
     1. [Modo usuario](#3i1)  
        - [Configurar una MAC específica](#3i1a)  
@@ -26,7 +29,7 @@
       - Lanzar la VM apuntando al servidor NBD
 6. EXPERIMENTAL
 7. ATAJOS DEL TECLADO  
-    1. Comandos del monitor qemu 
+    1. Comandos del monitor qemu
     2. Redefinir teclas
 8. [AGRADECIMIENTOS](#ai)
 
@@ -38,9 +41,9 @@
 Bien sea porque tenemos el disco original (en este caso un SO windows)  
 o bien porque lo hayamos descargado, deberemos antes CREAR una imagen GUEST  
 con la que  QEMU, pueda trabajar.
-  
-- Para esto primero creamos la imagen. Una "caja" vacía. 
-   
+
+- Para esto primero creamos la imagen. Una "caja" vacía.
+
   ~~~
  qemu-img create -f qcow2 mi_imagen.img 1G
   ~~~
@@ -79,7 +82,7 @@ disco duro y 'd' a un CD-ROM.
 Desde una perspectiva Windows, habrá que asegurarse. Pués windows utiliza letras para  
 denominar los dispositivos de almacenamiento.
 
-#### <a name="1i2">Convertir imagen</a> 
+#### <a name="1i2">Convertir imagen</a>
 
 Por qué convertir imágenes antes de instalarlas:  
 
@@ -161,9 +164,9 @@ no se rompiese.
 
 
 - La VM arranca con:  
-  
-  ~~~ 
-  qemu overlay.cow -m 128 
+
+  ~~~
+  qemu overlay.cow -m 128
   ~~~  
 
 
@@ -184,7 +187,7 @@ Esto evita tener que modificar el proceso original, y trabajar directamente en �
 todas, o muchas, de sus características.
 
 La casualidad no existe. Qcow2(copy-on-write)podría traducirse como:  
-"escritura sobre la copia", que es exáctamente lo que se pretende en este _proceso_. 
+"escritura sobre la copia", que es exáctamente lo que se pretende en este _proceso_.
 
 Esta ténica puede ser tan complicada o simple como la necesidad a cubrir, pero siempre  
 guarda la misma idea: mantener a salvo el archivo original, y realizar cambios, sobre  
@@ -239,7 +242,7 @@ __qemu-img info --backing-chain__ aporta información más detallada:
         lazy refcounts: false  
         refcount bits: 16  
         corrupt: false  
-    
+
     image: /path/to/BF/image_file.raw  
     file format: raw  
     virtual size: 3.0G (3221225472 bytes)  
@@ -258,7 +261,7 @@ modificación.
 
   ~~~  
     $ ls -sh $my_path && ls -sh $my_path/Overlays
-    1,5G image_file.raw  2,1G test01.img 
+    1,5G image_file.raw  2,1G test01.img
        0 Overlays           0 Unsafe     
     total 1,7G
     1,6G img1.cow  134M test_over.qcow2
@@ -290,7 +293,7 @@ carrera.
 > __q|quit__cierra qemu en modo monitor.  
 
   ~~~  
-  $ qemu-img info /path/to/img.qcow2 
+  $ qemu-img info /path/to/img.qcow2
   ~~~  
 > Éste comando lista las capturas que hayamos tomado. Si no establecemos Id o tag  
 > durante la captura con `(qemu )savevm id/tag`, es creado un nuevo archivo.
@@ -299,7 +302,7 @@ carrera.
 Al tomar la captura se almacena el estado de disco en un archivo. En ese punto, la imagen  
 se convierte a sólo lectura(_base_) y, un nuevo archivo(_overlay_) recogerá los _deltas_ del  
 _estado_ guardado.  
- 
+
 **Captura externa de disco:**  
 La captura de disco, es guardada en un archivo y, _delta_ hasta la captura, _seguido_ en uno  
 nuevo, con formato qcow2. Puede ser tomada en _vivo_ o con la máquina apagada.  
@@ -307,7 +310,7 @@ nuevo, con formato qcow2. Puede ser tomada en _vivo_ o con la máquina apagada.
   - libvirt: esta librería, usa el comando de shell 'transaction', durante la carrera del  
     SUPUESTO.  
   - libvirt: usa el comando de cónsola 'qemu-img' cuando el SUPUESTO está apagado.  
-    
+
 
 **Punto de guardado externo del sistema:**  
 Aquí, el estado de disco del SUPUESTO será guardado en un archivo, su RAM y el estado  
@@ -457,7 +460,63 @@ encontrarla sin esos cambios, consecuentemente los datos se malograían.
 > Herramientas como _transaction_ _virsh_ no están disponibles.
 > [Manual snapShots][fedora] -- en inglés.  
 
----  
+---
+## 22. <a name="22a">KVM</a>  
+KVM: Kernel Virtual Machine; núcleo de máquina virtual. Es un módulo del núcleo
+Linux, que permite a un programa, dentro del espacio de usuario, la utilización de la
+característica _virtualización por hardware_, de varios procesadores.
+
+Hoy en día, esta característica, es soportada por varios procesadores, tales
+como _Intel_, _AMD_ y otros.
+
+_Qemu_, puede hacer uso de _KVM_, cuando la arquitectura de la _supesta_, es la
+misma que la del _host_. De esta forma, cuando lanzamos `qemu-system-x86` en un
+procesador compatible en modo x86, podemos aprovechar la ventaja de la aceleración
+de _KVM_, beneficiando tanto al _host_ como al _supuesto_.
+
+El proyecto _KVM_ enlaza con _QEMU_, para mantener un enlace directo a otro
+proyecto llamado _qemu-kvm_. Todas las diferencias entre características, han
+sido fusionadas, dentro de la rama principal, del proyecto _QEMU_, y el desarrollo
+del proyecto derivado, ha sido suspendido.
+
+Ahora _kvm_ se utiliza así:
+    # ... --enable-kvm
+> Esto indica que la característica _kvm_, pasa a ser un _argumento_ de la
+función principal _"qemu-system-"_.
+
+> Así que, ahora viene cuando empezamos a hablar de la _paravirtualización_.
+Es decir, una forma de trabajar con máquinas virtuales, donde la tecnólogía que
+constituye el propio equipo, es aprovechada, para comunicarse directamente con
+la _VM_. De esta forma, en lugar de simular desde cero, el chip del procesador,
+los cálculos que deba hacer el _procesador_ de la _guest_, los va ha hacer el
+_procesador_ del _host_.
+
+Es muy simple reconocer este comportamiento, basta sacar un _monitor se sistema_
+y comprobrar el rendimiento del equipo, con dos máquinas distintas, una con la
+característica _kvm_ y la otra sin ella.
+
+... podremos comprobar que con la primera, la _guest_ hace un uso del procesador
+muy inferior al de la segunda(completamente _virtualizada!!_).
+
+>Es habitual el uso del término _bare-metal(en inglés)_, para referirse al
+comportamiento de un _PC_, utilizando un sistema operativo de forma natural, _sin
+virtualizar!_. Sería algo así como _metal básico_.
+
+#### <a name="22i1">Virt-install</a>
+
+> `$ man virt-install:` Es una herramienta de línea de comando para la creación
+de nuevos contenedores Linux tipo _KVM, Xen_ de máquinas virtuales. Usa la librería
+_libvirt_ para la gestión del _hypervisor_...
+La herramienta `virt-install` soporta instalaciones gráficas, mediante el uso de
+de protocolos como _VNC o SPICE_, así como también el modo _sólo texto_ sobre
+cónsolas en serie.
+El _supesto_, puede ser configurado para utilizar uno o más, discos, interfases
+de red, dispositivos de audio, dispositivos _USB_ o _PCI_, además de otros...
+
+
+#### <a name="22i2">Virtio</a>
+
+---
 ## <a name="3i">CON O SIN CONEXION A INTERNET !!</a>
 
 > __nota:__
@@ -571,7 +630,7 @@ hexadecimales arbitrarios, pero recuerda conservar las primeras dos cifras, que 
 referencia al _id_ de fabricante(qemu).  
 
 
-> _Notas:_ 
+> _Notas:_
 >
 
 >   Otra idea es probar qemu-ga. Éste es un demonio que funciona desde dentro de la  
@@ -622,7 +681,7 @@ En este caso como trabajaremos sobre una imagen ISO, parece apropiado seguir los
 descritos al principio del artículo. Crear la caja vaía, y escribirla en el formato  
 apropiado. Pero como problamente no queramos lanzar otra GUEST, sino únicamente acceder  
 al contenido del la imagem. La operación de calcular el offset de la partición, puede  
-ser omitida _-ver mas adelante_. 
+ser omitida _-ver mas adelante_.
 
 Esto es de lo que hablaba: el _montaje simple_. Puede determinarse mirando el contenido de  
 la imagen:
@@ -654,15 +713,15 @@ especificar que lo haga en modo solo lectura.
 > una imagen con permisos de escritura. IMPORTANTE INVESTIGAR!  
 
 #### <a name="4i1">MONTAR UN LOOPBACK PARA COMUNICARNOS CON LA VM SIN CONEXION</a>  
-Este método es útil cuando necesitamos averiguar donde empieza la partición con la 
+Este método es útil cuando necesitamos averiguar donde empieza la partición con la
 que vamos a trabajar. En el punto dos, puede verse en la última columna _System_
-el tipo de partición que contiene la imagen de disco. La primera es una swap, la 
-segunda debe ser una tipo EXT. 
+el tipo de partición que contiene la imagen de disco. La primera es una swap, la
+segunda debe ser una tipo EXT.
 
 Qemu-img no formatea la imagen de disco, crea una imagen de disco vacía, con una formato
-de archivo, pero aún no tiene partición. Esto se ve claro cuando instalamos un sistema 
+de archivo, pero aún no tiene partición. Esto se ve claro cuando instalamos un sistema
 operativo dentro de la imagen creada con qemu-img. Es el propio sistema operativo que
-vamos a instalar, quien crea la partición y le da formato. 
+vamos a instalar, quien crea la partición y le da formato.
 
 Solo quiero aclarar, que si creamos una imagen con qemu-img y, tratamos de copiar un
 archivo dentro, NUNCA FUNCIONARÁ. Por que es como si antes de instalar el sistema operativo
@@ -672,26 +731,26 @@ duro, No chutaría nada, ni siquiera se encendería la pantalla.
 Link aquí a fdisk dd gpart crear imagenes.
 
   Calcular el _offset_ antes de montar la imagen de disco.  
-    
+
  1. Asociar el dispositivo de imagen de disco, a la partición que vayamos a montar.
     ~~~
     tux@venus:~> losetup /dev/loop0 /images/sles11sp1_base.raw  
     ~~~
-    
+
  2. Tamaño de sector y número de inicio de sector, de la partición a montar.
     ~~~
     tux@venus:~> fdisk -lu /dev/loop0  
-    
+
     Disk /dev/loop0: 4294 MB, 4294967296 bytes  
     255 heads, 63 sectors/track, 522 cylinders, total 8388608 sectors  
     Units = sectors of 1 * 512 = 512[1] bytes  
     Disk identifier: 0x000ceca8  
-  
+
            Device Boot      Start         End      Blocks   Id  System  
     /dev/loop0p1              63     1542239      771088+  82  Linux swap  
     /dev/loop0p2   *     1542240[2]    8385929     3421845   83  Linux  
     ~~~
-  
+
     [1] Tamaño del sector.
 
     [2] Sector de inicio de la partición.
@@ -723,7 +782,7 @@ Link aquí a fdisk dd gpart crear imagenes.
     tux@venus:~> ls -l /mnt/sles11sp1/root/tmp  
     tux@venus:~> umount /mnt/sles11sp1/  
 
- 
+
 #### <a name="4i2">LOOPBACK PARA UNA IMAGEN (USANDO MODUOS EN EL KERNEL)</a>  
 
 Aquí primero preparamos el dispositivo que será leído por el módulo de kernel NBD.  
@@ -757,7 +816,7 @@ Esto puede hacerse en una misma línea(root):
   Por lo que teniendo esto en cuenta, debe ajustarse con criterio!!  
   Si se trata de una imagen, sin una partición especifica, puede omitirse el  
   parametro.  
- 
+
 > Dato sin verificar!
 
 Si el módulo está cargado, lo mejor es descargarlo y cargarlo de nuevo, iniciando la  
@@ -773,7 +832,7 @@ Si está cargado, lo descargamos:
   ~~~  
 
 ...vemos que aparece la ĺinea, pero no el entero! parece un bug. Es la segunda línea  
-empezando por abajo. 
+empezando por abajo.
 > _nota:_ deberías comprobar si en el mailing de Debian se ha escrito el 'report'.  
 
 __antes:__
@@ -820,7 +879,7 @@ Este comando identifica la imagen, como un dispositivo de bloque llamado
   # modprobe nbd -- Esto carga el módulo de no estar cargado.  
   # modprobe nbd max_part=16  
   ~~~  
- 
+
  2. A continuación preparamos el dispositivo donde montaremos la unidad.  
     Este proceso inicia una especie de servidor. Realmente la carga en memoria es  
     mínima, es decir, no es como si lanzásemos Apache!!!  
@@ -857,7 +916,7 @@ Este comando identifica la imagen, como un dispositivo de bloque llamado
 
 #### http://bethesignal.org/blog/2011/01/05/how-to-mount-virtualbox-vdi-image/ ####
 
- 
+
 
 Ahora podríamos ejecutar cfdisk en el dispositivo de bloque, y montarlo
 como partición individual.  
@@ -937,7 +996,7 @@ Here are some examples of operations that can be performed from a live Knoppix t
 > fue creada sin esa característica. Asi que no es viable. No podrás aplicar esa  
 > funcionalidad al overlay, que por cierto se crea sin problema!!! Lo mejor es un  
 > copy simple. Recuerda que al hacer esto, conviertes la imagen en crudo en el  
-> 'backing' desmadrando tu buena intención. La idea era hacer la copia al final, pero 
+> 'backing' desmadrando tu buena intención. La idea era hacer la copia al final, pero
 > una vez creado el overlay, desconozco como añadir esa funcionalidad.
 
 
@@ -947,7 +1006,7 @@ Ahora, vamos a probar hacer la instalación sobre el overlay, a ver que pasa!
 ### test 3
 Aprovechando una coexion ssh sobre otro host, hay dos formas de interactuar sobre la VM
 
-  - 1 Aquí la comunicación es a 'pelo', es decir, directamente a través de la conexión 
+  - 1 Aquí la comunicación es a 'pelo', es decir, directamente a través de la conexión
   encriptada.
   - 2 Aquí avanzamos el servidor de las Xs(Xorg). Para ello iniciamos una nueva instancia
   del dispositivo
@@ -973,7 +1032,7 @@ la verdad es que la diferencia es tan microscópica, que de todas formas irá le
 que es una opción tan buena como la primera.
 La tecla de foco, aquí, definitivamente no chuta ni a ostias. Lo bueno es que no hace falta
 por que como corremos la guest en otra instancia, le des como le des, las teclas son las del
-target!!. 
+target!!.
 
 En ambos escenarios es recomendable ajustar los procesos 'bonitamente'. Se nota, que es findus!
 pruebas hechas con prioridad sobre libvirt y, qemu! y ajuste feoto sobre gnome y otros procesos
@@ -984,27 +1043,27 @@ problema es que sin WM decente qemu sólo lanza guests en texto. La existencia d
 es sólo a título informativo.
 
 Ah, otra cosa que he podido comprobar, es que si queremos adquirir el escritorio remoto, a la
-primera no funciona nunca. Hay que --replace el dispositivo o no funcionará. 
+primera no funciona nunca. Hay que --replace el dispositivo o no funcionará.
 
 ### test 4
-Pruebas sobre el loopback. Una forma rápida y sencilla de montarnos un loopback es la 
+Pruebas sobre el loopback. Una forma rápida y sencilla de montarnos un loopback es la
 siguiente:
 
   - 1 Creamos una imagen en crudo como se explica en este mismo artículo -crear imagen.
   - 2 Creamos la particion con Fdisk
     - m - muestra el menu de opciones.
-    - n - nueva particion. 
+    - n - nueva particion.
       Nos piden que escojamos el tipo de partición. Como provablemente ya sabemos...
       Una partición primaria, es una partición generalmente usada para cargar un sistema
       de arranque. Esto ha cambiado notoriamente en nuestros días. Actualmente la antigua
       Bios, ha sido reemplazada en máquinas mas modernas por otro sistema de carga, llamado
       UEFI, capaz de arrancar un sistema operativo en qualquier tipo de partición.
       Anotado esto, continuo explicando: en nuestro caso no tiene mucho sentido esta primera
-      elección, una primaria, por que vamos a utilizar la imagen como loopback, así que 
-      la elección es una partición lógica. Pero como ya sabemos, para crear una lógica el 
-      sistema por defecto crea una extendida, desde la que cuelga las sucesivas lógicas. 
-      la 'extendida', no es más que un par de bytes donde el SO guarda el própio ID de 
-      partición, o número denominativo de partición. 
+      elección, una primaria, por que vamos a utilizar la imagen como loopback, así que
+      la elección es una partición lógica. Pero como ya sabemos, para crear una lógica el
+      sistema por defecto crea una extendida, desde la que cuelga las sucesivas lógicas.
+      la 'extendida', no es más que un par de bytes donde el SO guarda el própio ID de
+      partición, o número denominativo de partición.
       __nota:__ aquí hay una gran controversia, sobre la gran cagadota que metió Sir Windows
       en cuanto a la interpretación del código hexadecimal utilizado para identificar este
       ID de partición. Algún día nos reiremos de windows todos juntos, por que pienso traducir
@@ -1015,11 +1074,11 @@ siguiente:
     - w escribimos la tabla de particiones a disco y salimos.
 
 Aquí hay una técnica avanzda, que consiste en crear una partición de intercambio en primer
-lugar(o swap en linux). A continuación crear nestra partición. Esta técnica se merece un 
+lugar(o swap en linux). A continuación crear nestra partición. Esta técnica se merece un
 análisis más extenso!!!
     - 3 Y ahora lo montamos y fracasa estrepitosamente nuestro proyecto. Por que se nos olvida
-    algo. Efectivamente, formatear el dispositivo. Si miramos el man del comando 
-    
+    algo. Efectivamente, formatear el dispositivo. Si miramos el man del comando
+
 
 ### test del 5 al 237
 Los valores sobre particiones son erroneos desde distintas aplicaciones. Por ejemplo:
@@ -1034,9 +1093,9 @@ Volvemos a comprovar con fdisk -lu sobre el /dev/loop0 y vuala. Encontramos cuat
 de 914.5G 867,2G 5k y 25,3M respectivamente. Esto parece el milagro de los peces y el pan.
 
 La única idea que justificaría algo tan brutalmente ABSURDO es la velocidad-absurda con la que
-formatea el disco, también el hecho de que mi otro ordenador, con el que NO estoy haciendo 
-todas estas operaciones, después de restar algo parecido al 5% de espacio reservado en un 
-sistema de archivos, se parece a eso, un Terabyte. 
+formatea el disco, también el hecho de que mi otro ordenador, con el que NO estoy haciendo
+todas estas operaciones, después de restar algo parecido al 5% de espacio reservado en un
+sistema de archivos, se parece a eso, un Terabyte.
 
 Vuelvo a mirar con gparted y /dev/loop0/ tiene un tamaño de 3G,
 con fdisk -lu sobre fichero, lo mismo, pero fdisk cuelga 4 ...pNº respectivamente contando
@@ -1046,7 +1105,7 @@ de 1 a 4. con los valores de tamaño de disco descritos anteriormente. ejem:
 He montado el loopback sin calcular el offset, por que en principio sólo había una partición.
 Esperando encontrar otros datos, entre ellos el límite de inicio para el sector de disco,
 que debería ser algo así como 2097Kb y sale una burrada como 657974 para la primera partición
-y 2642463409 para el final de la última. 
+y 2642463409 para el final de la última.
 
 El formateo se realiza con mkfs.ntfs sobre el dispositivo -F forzando el formato pues de
 otra forma es imposible efectuar operación sobre archivo.
@@ -1054,7 +1113,7 @@ otra forma es imposible efectuar operación sobre archivo.
 ### test desde el 238 ...
 
 Intentamos generar un dispositivo con el que trabajar desde la VM, esto es generalmente
-un dispositivo de bloque. En este caso será utilizado un _disco duro virtual_. 
+un dispositivo de bloque. En este caso será utilizado un _disco duro virtual_.
 
   - 1 Metodo cp instalation source file.
   - 2 Metodo crear dispositivo de bloque, 'disco virtual'.
@@ -1090,12 +1149,12 @@ Por compatibilidad usaremos `losetup`:
 
 A continuación, creamos la partición/s del VHD sobre el dispositivo de loopback sobre el que
 hemos montado nuestro 'futuro' dispositivo de bloque virtual, o VHD.
-También encontramos varias herramientas para hacer esto cfdisk, fdisk. Utilizaremos fdisk, 
+También encontramos varias herramientas para hacer esto cfdisk, fdisk. Utilizaremos fdisk,
 que viene en la mayoría de sistemas Linux.
 
   ~~~  
   # fdisk /dev/loop200  
-  ~~~ 
+  ~~~
 
 He variado el dispositivo, para mostrar que esta operación puede realizarse igualmente sobre
 cualquiera de ellos tanto en /dev/loop0 como /dev/loop200.
@@ -1109,7 +1168,7 @@ valores por defecto se ajustan a los valores que hemos visto cuando hicimos `F`.
 corectos(si no lo son es que algo va mal), podemos aceptar con simple `return` el valor
 sugerido.
 
-Ahora queda detinir en la tabla de particiones el tipo de sistema de archivo con el que 
+Ahora queda detinir en la tabla de particiones el tipo de sistema de archivo con el que
 será formateada la 'unidad virtual'. Para esto podemos listar todas las alternativas con
 `l`, aún dentro de `fdisk`. Vemos que hay un número de dos cifras, seguido por una breve
 descripción.
@@ -1120,27 +1179,27 @@ Ambas acciones con `w`.
 Para comprobar que los datos se han escrito correctamente no hace falta entrar a fdisk otra
 vez, tan sólo hacemos un `fdisk -l /dev/loop0`.
 
-En este punto, recalco que aún no tenemos un punto de montaje -lo que está montado es el 
+En este punto, recalco que aún no tenemos un punto de montaje -lo que está montado es el
 dispositivo loopback, asociado a nuestro fichero 'proto VHD', sobre el que hemos hecho
 las anteriores operaciones.
 
 Lo siguiente es formatear el 'proto-disco'. Con `mkfs` puede llevarse a cabo de la siguiente  
-manera. Advertencia, este proceso está aún bajo revisión. 
+manera. Advertencia, este proceso está aún bajo revisión.
 
   ~~~  
  # mkfs -t ntfs /dev/loop200  
   ~~~  
 
 Después de llevar a cabo esta última acción, se consigue un disco completamente operativo.
-Sin embargo, he encontrado ciertos errores que aún no tengo muy claro como solventar: 
+Sin embargo, he encontrado ciertos errores que aún no tengo muy claro como solventar:
 
-- sector de inicio de la partición. 
+- sector de inicio de la partición.
 - sectores por pista.
 - número de cabezas o cabezales.
 - el cluster es ajustado automáticamente.
 
-Mkfs advierte que el sector de inicio no fué especificado, y que al no poder determinarlo 
-automáticamente, se establece a valor 0. Lo mismo con los sectores por pista y el número 
+Mkfs advierte que el sector de inicio no fué especificado, y que al no poder determinarlo
+automáticamente, se establece a valor 0. Lo mismo con los sectores por pista y el número
 de cabezales. El tamaño de cluster es ajustado automáticamente 4096 bytes.
 
 
@@ -1153,7 +1212,7 @@ a work in progress, supporting only very recent (>= 4.4) Linux guests.
 QEMU offers guests the ability to use paravirtualized block and network devices using  
 the virtio drivers, which provide better performance and lower overhead.  
 
-      
+
 > A virtio block device requires the option  
 > -drive instead of the simple -hdX plus if=virtio:  
 > ~~~  
@@ -1162,7 +1221,7 @@ the virtio drivers, which provide better performance and lower overhead.
 ---
 
 
-Indicio DFB 
+Indicio DFB
 
 (qemu) dump-guest-memory gdbserver getfd getfd name  
 qemu-io: shell type?
@@ -1198,7 +1257,7 @@ __ctrl + alt + tecla__:
   - ctrl+alt+1: volver al modo en el que hayamos lanzado la VM(gráfico/texto).
   - ctrl+alt+2: Monitor de qemu.
   - ctrl+alt+3: Cónsola en serie.
-  - ctrl+alt+4: Cónsola en paralelo. 
+  - ctrl+alt+4: Cónsola en paralelo.
   - ctrl+alt+avance página: control de panatalla en qemu monitor y cónsolas.
   - ctrl+alt+retroceso página: control de panatalla en qemu monitor y cónsolas.
   - ctrl+alt+arriba: control de panatalla en qemu monitor y cónsolas.
@@ -1243,13 +1302,13 @@ HeavyMetalRadio [hmr][HMR]
 [fedora]: https://kashyapc.fedorapeople.org/virt/lc-2012/snapshots-handout.html
 [archi]: https://wiki.archlinux.org/index.php/QEMU#qxl
 [elpuig]: http://elpuig.xeill.net/Members/vcarceler/articulos/qemu
-[suse]: https://www.suse.com/documentation/sles11/book_kvm/data/cha_qemu_guest_inst_qemu-img.html 
+[suse]: https://www.suse.com/documentation/sles11/book_kvm/data/cha_qemu_guest_inst_qemu-img.html
 [debian]: https://wiki.debian.org/es/NetworkConfiguration#C.2BAPM-mo_utilizar_VLAN_.28dot1q.2C_802.1q.2C_trunk.29_.28Etch.2C_Lenny.29
 [dot1Q]: https://es.wikipedia.org/wiki/IEEE_802.1Q
 [Markdown]: http://markdown.es/sintaxis-markdown/
 [limni]: http://limni.net/blog/
 [HMR]:http://stream.kazancity.net:8000/14-heavymetalradio
- 
+
 
 
 
@@ -1273,8 +1332,5 @@ ctrl+alt+
 
         codigo-ini
         codigo-fin
-  
+
   dsdfasdf
-
-
-
