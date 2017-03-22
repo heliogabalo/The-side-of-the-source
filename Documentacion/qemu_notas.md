@@ -19,6 +19,7 @@
 22. [KVM](#22a)
     1. [Virt-install](#22i1)
     2. [virtio](#22i2)
+    3. [apuntes-variopintos](#22i3)
 3. [CON O SIN CONEXION A INTERNET](#3i)
     1. [Modo usuario](#3i1)  
        - [Configurar una MAC específica](#3i1a)  
@@ -515,6 +516,35 @@ de red, dispositivos de audio, dispositivos _USB_ o _PCI_, además de otros...
 
 
 #### <a name="22i2">Virtio</a>
+
+
+#### <a name="22i2">apuntes-variopintos</a>
+
+Esto es para reescribir.
+
+Podemos listar los _guests_ que tengamos asociados.
+
+    # virsh list --all
+> Parece que cuando la _VM_ está apagada, el simple `...list` no la _muestra_,
+por lo que hay que forzar con `--all`.
+
+Antes de borrar un _LV_, hay que haber desvinculado la máquina primero. Así
+que el procedimiento quedaría así:
+    # virsh list --all    
+    # virsh dumpxml --domain _vm-name_ |grep 'source file' <-- __nota__
+      <source file='/mnt/vm-inicio/f24.img'/>
+    # virsh destroy _vm-name_ <-- lo suyo es un `shutdown` o un `virsh shutdown`
+    # virsh undefine --domain _vm-name_ <-- lo quitamos de la lista
+    # rm -rf /path/to/vm-image.img <-- le damos un _recursive force_
+
+>__nota:__ Hemos asociado un dispositivo de bloque cuando construimos la _vm_,
+hay ver como se llama el archivo y donde está.
+
+Esto puede dar error si tenemos instantáneas(_snapshot_) de la _vm_. Lo comprobamos
+con:
+    # virsh snapshot-list --domain _vm-name_
+    # virsh snapshot-delete --domain _vm-name_ --snapshotname _snapshot-name_
+
 
 ---
 ## <a name="3i">CON O SIN CONEXION A INTERNET !!</a>

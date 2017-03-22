@@ -1,9 +1,36 @@
-## Restaurar backups dentro del _LVM_.
+## Restaurar backups
 
+#### Restauración del _LVM_.
+El Gestor de volúmenes lógicos, guarda un registro de ls _VG's_ creados en el
+sistema. Esto resulta muy útil a la hora de restaurar un esquema, por ejemplo
+para una máquina virtual:
+    # ls /etc/lvm/archive
 
+Obviamente se trata _únicamente_ del esquema, es cierto que registra tamaño,
+nombres(_PV's, LV's_), _UUID_, en definitiva, toda la información relacionada
+con el _LVM_ en cuestión. Sin embargo lo que __no__ guarda son los __datos!__.
 
+Los datos deberán haber sido previamente guardados, para poder recuperarse.
+Así que lo primero, será abrise paso hasta el directorio y, determinar cuál
+de ellos es el más conveniente.
 
+Una vez hecho esto, bastará fijarse en el _UUID(universally unique identifier)_
+y el _archivo de configuración_:
+    # pvcreate --uuid "xxxxxx-xxxx-xxxx-xxxx-xxxx-xxxx-xxxxxx" \
+    --restorefile /etc/lvm/archive/vg_storage_00000-000000000.vg
 
+Si el Grupo de volúmenes fue creado con más de un _PV_, habrá que realizar este
+proceso con cada uno de ellos.
+> Habrá que comprobar dos veces el _UUID_.
+
+Después habrá que recuperar el _VG_ con:
+    # vgcfgrestore -f /etc/lvm/archive/vg_storage_00000-000000000.vg vg_storage
+> Si el _UUID_ fue el correcto, podremos comprobar con `# vgdisplay` que el
+_VG_ es el adecuado.
+
+Por último se deberán activar el/los _VG's_. Algunas veces el _LVM_ recupera los
+_VG's_ pero los marca como inactivos. Para alterar su estado puede utilizarse:
+    # vgchange -a y vg_storage
 
 #### Siguiendo con el tema, antes de ascender a oficial, al sujeto de prueba.
 

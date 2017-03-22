@@ -1,4 +1,26 @@
-#### Consideraciones
+## Consideraciones
+
+#### Encontrar punto de montaje asiciado al _LV_.
+
+El gestor _LVM_ se construyó para que arrojase información via `...display` o `...s`
+acerca del dispositivo de bloque, no del sistema de fichero. Por lo que si estamos
+buscando como encontrar el punto de montaje de un determinado _LV_, deberemos
+recurrir a:
+
+		# mount | grep volume_group-lvname
+
+¿Alguno recuerda el comentario que hice sobre los `guiones`?. Maldito _lol_!!.
+> __caso práctico__: _LV_ llamado "mi-volumen" montanodo sobre `/mnt/mi_puntoM`
+, el _PV_ se llama "infierno".
+`# mount|grep infierno-mi--volumen`.
+Esto funciona sobre una distribución Fedora. Hay otra notación por _siaca!_.
+		# mount |grep VG/lvname
+
+#### Ruta asociada a SeLinux
+
+En teoría deberíamos utilizar por defecto la ruta configurada para que SeLinux
+no dé problemas, esto es: `/var/lib/libvirt/images/`
+
 
 Al parecer el disco(LV) me esta dando problemas:
 		ls: leyendo el directorio '/mnt/home-extra/': Input/output error
