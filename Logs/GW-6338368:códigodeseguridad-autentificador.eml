@@ -1,0 +1,154 @@
+Delivered-To: jonitjuego@gmail.com
+Received: by 10.223.139.152 with SMTP id o24csp379044wra;
+        Wed, 22 Mar 2017 11:13:42 -0700 (PDT)
+X-Received: by 10.55.6.7 with SMTP id 7mr41356535qkg.200.1490206422830;
+        Wed, 22 Mar 2017 11:13:42 -0700 (PDT)
+Return-Path: <support@guildwars2.zendesk.com>
+Received: from out4.pod6.iad1.zdsys.com (out4.pod6.iad1.zdsys.com. [192.161.153.103])
+        by mx.google.com with ESMTPS id v42si1708640qta.232.2017.03.22.11.13.42
+        for <jonitjuego@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 22 Mar 2017 11:13:42 -0700 (PDT)
+Received-SPF: pass (google.com: domain of support@guildwars2.zendesk.com designates 192.161.153.103 as permitted sender) client-ip=192.161.153.103;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@zendesk.com;
+       spf=pass (google.com: domain of support@guildwars2.zendesk.com designates 192.161.153.103 as permitted sender) smtp.mailfrom=support@guildwars2.zendesk.com
+Received: from zendesk.com (work6.pod6.iad1.zdsys.com [10.112.38.16])
+	by out4.pod6.iad1.zdsys.com (Postfix) with ESMTP id C09382219EA2
+	for <jonitjuego@gmail.com>; Wed, 22 Mar 2017 18:13:41 +0000 (UTC)
+Date: Wed, 22 Mar 2017 18:13:41 +0000
+From: Guild Wars 2 Support <support@guildwars2.com>
+Reply-To: Guild Wars 2 Support <support@guildwars2.com>
+To: Jonitjuego <jonitjuego@gmail.com>
+Message-ID: <J5YO6V93E2_58d2bed58753b_1ba43fc289ccd338815a1_sprut@zendesk.com>
+In-Reply-To: <J5YO6V93E2@zendesk.com>
+Subject: =?UTF-8?Q?Solicitud_recibida:_6338368:_c=C3=B3digo_de_seguridad-?=
+ =?UTF-8?Q?_autentificador?=
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_58d2bed5b7f89_1ba43fc289ccd338817f9";
+ charset=utf-8
+Content-Transfer-Encoding: 7bit
+X-Auto-Response-Suppress: All
+Auto-Submitted: auto-generated
+X-Mailer: Zendesk Mailer
+X-Delivery-Context: event-id-270447430207
+X-Zendesk-From-Account-Id: e59d338
+DKIM-Signature:  v=1; a=rsa-sha256; c=relaxed/relaxed; d=zendesk.com;
+ q=dns/txt; s=zendesk1; t=1490206421;
+ bh=QtLq6RmJjLYh8vVlih5H5hFd4MBEcuuQWzAhE6/LJvg=;
+ h=date:from:reply-to:to:message-id:in-reply-to:subject:mime-version:content-type:content-transfer-encoding;
+ b=hF1nmD/im+/OFzsdTfzG6efKTjQMzcZ5uK/6Ro4LfV9FCUwPoSd/csf/NQ1MNW0FD/cLr/ixEJ2YfxFkM8wVPdMrKzLMAL4Xaxu7vKxbCj/yEm8MzupN2cCgZ8Wh91aE6Ndbum48m9TyOue+mN3yMtfr6k4uYMBSnMAGt2TbdI0=
+X-CMAE-Score: 0
+X-CMAE-Analysis: v=2.1 cv=Ibh6Ijea c=1 sm=1 tr=0
+	a=sIMn1IVJFd1Tmdot84pCFw==:117 a=L9H7d07YOLsA:10 a=9cW_t1CCXrUA:10
+	a=s5jvgZ67dGcA:10 a=KiCxJD0x+Pe5VASQKmYoJrcyuOo=:19 a=IkcTkHD0fZMA:10
+	a=KfxYTcfiGtQA:10 a=ZZnuYtJkoWoA:10 a=-E5mqGeEvNG3ofbmxX8A:9
+	a=QEXdDO2ut3YA:10 a=SSmOFEACAAAA:8 a=RIsIgIO2LkCHwnzCtTIA:9
+	a=g4H0irzCtDKgSR1D:21 a=_W_S_7VecoQA:10 a=frz4AuCg-hUA:10 a=p403mkujtbAA:10
+	a=zjWhRoSqWz9hl55Hdlzg:22
+
+
+----==_mimepart_58d2bed5b7f89_1ba43fc289ccd338817f9
+Content-Type: text/plain;
+ charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+##- Por favor, escriba su respuesta por encima de esta l=C3=ADnea -##
+
+Hola:
+
+Gracias por ponerte en contacto con nosotros. Tu solicitud (6338368: c=C3=
+=B3digo de seguridad- autentificador) se ha recibido y est=C3=A1 siendo r=
+evisada por nuestro equipo de ayuda t=C3=A9cnica. =
+
+
+Te escribiremos tan pronto como podamos proporcionarte una respuesta. =
+
+
+Si necesitas a=C3=B1adir informaci=C3=B3n a tu solicitud, solo tienes que=
+ responder a este mensaje. Si ya no necesitas ayuda, responde "Ya no nece=
+sito ayuda=E2=80=9D.
+
+----------------------------------------------
+
+Actualizado por: Jonitjuego, 22 mar. 11:13 PDT
+
+Reinstalaci=C3=B3n -- he perdido el autentificador y los datos asociados-=
+ solicito desbloqueo temporal
+
+
+--------------------------------
+Este correo electr=C3=B3nico es un servicio de Guild Wars 2 Support.
+
+
+
+
+
+
+
+
+
+[J5YO6V-93E2]=
+
+----==_mimepart_58d2bed5b7f89_1ba43fc289ccd338817f9
+Content-Type: text/html;
+ charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://ww=
+w.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+" />
+  <style type=3D"text/css">
+    table td {
+      border-collapse: collapse;
+    }
+  </style>
+</head>
+<body style=3D"width: 100%!important; margin: 0; padding: 0;">
+  <div style=3D"padding: 10px ; line-height: 18px; font-family: 'Lucida G=
+rande',Verdana,Arial,sans-serif; font-size: 12px; color:#444444;">
+    <div style=3D"color: #b5b5b5;">##- Por favor, escriba su respuesta po=
+r encima de esta l=C3=ADnea -##</div>
+    <p>Hola:</p><p>Gracias por ponerte en contacto con nosotros. Tu solic=
+itud (6338368: c=C3=B3digo de seguridad- autentificador) se ha recibido y=
+ est=C3=A1 siendo revisada por nuestro equipo de ayuda t=C3=A9cnica. </p>=
+<p>Te escribiremos tan pronto como podamos proporcionarte una respuesta. =
+</p><p>Si necesitas a=C3=B1adir informaci=C3=B3n a tu solicitud, solo tie=
+nes que responder a este mensaje. Si ya no necesitas ayuda, responde "Ya =
+no necesito ayuda=E2=80=9D.</p><p></p><div style=3D"margin-top: 25px" dat=
+a-version=3D"2"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0"=
+ border=3D"0"><tr><td width=3D"100%" style=3D"padding: 15px 0; border-top=
+: 1px dotted #c5c5c5;">      <table width=3D"100%" cellpadding=3D"0" cell=
+spacing=3D"0" border=3D"0" style=3D" table-layout:fixed;"><tr><td width=3D=
+"100%" style=3D"padding: 0; margin: 0;" valign=3D"top">            <p sty=
+le=3D"font-family: 'Lucida Grande','Lucida Sans Unicode','Lucida Sans',Ve=
+rdana,Tahoma,sans-serif; font-size: 15px; line-height: 18px; margin-botto=
+m: 0; margin-top: 0; padding: 0; color:#1b1d1e;">                        =
+      <strong>Jonitjuego</strong>                          </p>          =
+  <p style=3D"font-family: 'Lucida Grande','Lucida Sans Unicode','Lucida =
+Sans',Verdana,Tahoma,sans-serif; font-size: 13px; line-height: 25px; marg=
+in-bottom: 15px; margin-top: 0; padding: 0; color:#bbbbbb;">             =
+ 22 mar. 11:13 PDT            </p>                                    <di=
+v class=3D"zd-comment" style=3D"color: #2b2e2f; font-family: 'Lucida Sans=
+ Unicode', 'Lucida Grande', 'Tahoma', Verdana, sans-serif; font-size: 14p=
+x; line-height: 22px; margin: 15px 0"><p style=3D"color: #2b2e2f; font-fa=
+mily: 'Lucida Sans Unicode', 'Lucida Grande', 'Tahoma', Verdana, sans-ser=
+if; font-size: 14px; line-height: 22px; margin: 15px 0" dir=3D"auto">Rein=
+stalaci=C3=B3n -- he perdido el autentificador y los datos asociados- sol=
+icito desbloqueo temporal</p></div>                                  </td=
+>        </tr></table></td>  </tr></table></div>
+    <div style=3D"color: #aaaaaa; margin: 10px 0 14px 0; padding-top: 10p=
+x; border-top: 1px solid #eeeeee;">
+     Este correo electr=C3=B3nico es un servicio de Guild Wars 2 Support.=
+ =
+
+    </div>
+  </div>
+<span style=3D'color:#FFFFFF'>[J5YO6V-93E2]</span></body>
+</html>
+
+----==_mimepart_58d2bed5b7f89_1ba43fc289ccd338817f9--

@@ -538,7 +538,7 @@ que el procedimiento quedaría así:
     # rm -rf /path/to/vm-image.img <-- le damos un _recursive force_
 
 >__nota:__ Hemos asociado un dispositivo de bloque cuando construimos la _vm_,
-hay ver como se llama el archivo y donde está.
+hay que ver como se llama el archivo y donde está.
 
 Esto puede dar error si tenemos instantáneas(_snapshot_) de la _vm_. Lo comprobamos
 con:

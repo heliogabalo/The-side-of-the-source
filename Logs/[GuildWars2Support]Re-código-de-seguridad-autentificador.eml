@@ -1,0 +1,259 @@
+Delivered-To: jonitjuego@gmail.com
+Received: by 10.223.139.152 with SMTP id o24csp382485wra;
+        Wed, 22 Mar 2017 11:23:15 -0700 (PDT)
+X-Received: by 10.237.35.218 with SMTP id k26mr42162612qtc.60.1490206995365;
+        Wed, 22 Mar 2017 11:23:15 -0700 (PDT)
+Return-Path: <support@guildwars2.zendesk.com>
+Received: from out4.pod6.iad1.zdsys.com (out4.pod6.iad1.zdsys.com. [192.161.153.103])
+        by mx.google.com with ESMTPS id a128si1732835qkb.211.2017.03.22.11.23.15
+        for <jonitjuego@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 22 Mar 2017 11:23:15 -0700 (PDT)
+Received-SPF: pass (google.com: domain of support@guildwars2.zendesk.com designates 192.161.153.103 as permitted sender) client-ip=192.161.153.103;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@zendesk.com;
+       spf=pass (google.com: domain of support@guildwars2.zendesk.com designates 192.161.153.103 as permitted sender) smtp.mailfrom=support@guildwars2.zendesk.com
+Received: from zendesk.com (work10.pod6.iad1.zdsys.com [10.112.38.49])
+	by out4.pod6.iad1.zdsys.com (Postfix) with ESMTP id 470F92219EAB
+	for <jonitjuego@gmail.com>; Wed, 22 Mar 2017 18:23:14 +0000 (UTC)
+Date: Wed, 22 Mar 2017 18:23:14 +0000
+From: Guild Wars 2 Support <support@guildwars2.com>
+Reply-To: Guild Wars 2 Support <support@guildwars2.com>
+To: Jonitjuego <jonitjuego@gmail.com>
+Message-ID: <J5YO6V93E2_58d2c111e9ea7_22c183ff4952cd32c700e8_sprut@zendesk.com>
+In-Reply-To: <J5YO6V93E2@zendesk.com>
+ <J5YO6V93E2_58d2bed58753b_1ba43fc289ccd338815a1_sprut@zendesk.com>
+Subject: =?UTF-8?Q?[Guild_Wars_2_Support]_Re:_c=C3=B3digo_de_seguridad-?=
+ =?UTF-8?Q?_autentificador?=
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_58d2c1123bca1_22c183ff4952cd32c7028f";
+ charset=utf-8
+Content-Transfer-Encoding: 7bit
+X-Auto-Response-Suppress: All
+Auto-Submitted: auto-generated
+X-Mailer: Zendesk Mailer
+X-Delivery-Context: event-id-270453992167
+X-Zendesk-From-Account-Id: e59d338
+DKIM-Signature:  v=1; a=rsa-sha256; c=relaxed/relaxed; d=zendesk.com;
+ q=dns/txt; s=zendesk1; t=1490206994;
+ bh=iLfCU44BuslDOnqRZ5WXM2fajQoj6+gHw09XUakKYB4=;
+ h=date:from:reply-to:to:message-id:in-reply-to:subject:mime-version:content-type:content-transfer-encoding;
+ b=XmKRevADHnkLym/PayRevf03cNL+8W4mHLMeMOMc2pEWayCRleGqvvrpRSPcbf2u8Fypl/KSkD7LDj6J4FrX7x1n5L5A1377QOMd7R+uKwQH8bZkh60rIymo2qkhzLqTroo7pNlyB51HH8fUPOlf9Ql6sxBUKPmfZYob9IAMMNc=
+X-CMAE-Score: 0
+X-CMAE-Analysis: v=2.1 cv=Ibh6Ijea c=1 sm=1 tr=0
+	a=rdwkXOfsrI2rfusiElPVPg==:117 a=L9H7d07YOLsA:10 a=9cW_t1CCXrUA:10
+	a=s5jvgZ67dGcA:10 a=KiCxJD0x+Pe5VASQKmYoJrcyuOo=:19 a=IkcTkHD0fZMA:10
+	a=8rBugnxZ1OkA:10 a=ZZnuYtJkoWoA:10 a=-ZFFe9f7AAAA:8
+	a=-hytj-0cUZEUX2MUrUUA:9 a=QEXdDO2ut3YA:10 a=SSmOFEACAAAA:8
+	a=1obMZdCd-s6hLOlRFB4A:9 a=i2uUVsoGD47dYAAX:21 a=_W_S_7VecoQA:10
+	a=frz4AuCg-hUA:10 a=p403mkujtbAA:10 a=0qrgxmgiELHR4nnsaAMy:22
+	a=zjWhRoSqWz9hl55Hdlzg:22
+
+
+----==_mimepart_58d2c1123bca1_22c183ff4952cd32c7028f
+Content-Type: text/plain;
+ charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+##- Por favor, escriba su respuesta por encima de esta l=C3=ADnea -##
+
+Hola:
+
+Tu solicitud (6338368:c=C3=B3digo de seguridad- autentificador) se ha act=
+ualizado. Si necesitas a=C3=B1adir informaci=C3=B3n a tu solicitud, solo =
+tienes que responder a este mensaje. Si ya no necesitas ayuda, responde "=
+Ya no necesito ayuda=E2=80=9D.
+
+----------------------------------------------
+
+Actualizado por: GM Turbo Taco, 22 mar. 11:23 PDT
+
+Hola Heliogabalo,
+
+Gracias por ponerte en contacto con el equipo de ayuda t=C3=A9cnica de Gu=
+ild Wars 2.
+
+Nos gustar=C3=ADa ayudarte, pero primero necesitamos m=C3=A1s informaci=C3=
+=B3n para comprobar que eres el titular de esta cuenta de Guild Wars 2. P=
+or favor, responde a este mensaje de correo electr=C3=B3nico incluyendo t=
+anta informaci=C3=B3n de registro como puedas. Esta informaci=C3=B3n debe=
+ incluir:
+
+
+- Tu c=C3=B3digo de serie de Guild Wars 2
+- Nombre real
+- Fecha de nacimiento
+- N=C3=BAmero de tel=C3=A9fono
+- Direcci=C3=B3n postal
+- Fecha de creaci=C3=B3n de la cuenta
+- Nombre de uno o m=C3=A1s personajes
+
+Si nos has comprado Guild Wars 2 directamente a nosotros, tambi=C3=A9n de=
+bes incluir:
+
+
+- El n=C3=BAmero de pedido
+- Los cuatro =C3=BAltimos d=C3=ADgitos (_=C3=BAnicamente_ los cuatro =C3=BA=
+ltimos) de la tarjeta de cr=C3=A9dito/d=C3=A9bito que utilizaste
+- La direcci=C3=B3n de facturaci=C3=B3n (incluido el c=C3=B3digo postal)
+- La identificaci=C3=B3n del recibo de PayPal=C2=AE asociado a la compra
+
+Entendemos que quiz=C3=A1 no puedas darnos toda la informaci=C3=B3n que h=
+emos solicitado, pero intenta proporcionar tanta como te sea posible. Nos=
+ pondremos en contacto contigo tan pronto como podamos una vez recibamos =
+tu respuesta.
+
+Un saludo,
+
+GM Turbo Taco
+Equipo de Soporte de Guild Wars 2
+http://help.guildwars2.com
+
+----------------------------------------------
+
+Actualizado por: Jonitjuego, 22 mar. 11:13 PDT
+
+Reinstalaci=C3=B3n -- he perdido el autentificador y los datos asociados-=
+ solicito desbloqueo temporal
+
+--------------------------------
+Este correo electr=C3=B3nico es un servicio de Guild Wars 2 Support.
+
+
+
+
+
+
+
+
+
+[J5YO6V-93E2]=
+
+----==_mimepart_58d2c1123bca1_22c183ff4952cd32c7028f
+Content-Type: text/html;
+ charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://ww=
+w.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+" />
+  <style type=3D"text/css">
+    table td {
+      border-collapse: collapse;
+    }
+  </style>
+</head>
+<body style=3D"width: 100%!important; margin: 0; padding: 0;">
+  <div style=3D"padding: 10px ; line-height: 18px; font-family: 'Lucida G=
+rande',Verdana,Arial,sans-serif; font-size: 12px; color:#444444;">
+    <div style=3D"color: #b5b5b5;">##- Por favor, escriba su respuesta po=
+r encima de esta l=C3=ADnea -##</div>
+    <p>Hola:</p><p>Tu solicitud (6338368:c=C3=B3digo de seguridad- autent=
+ificador) se ha actualizado. Si necesitas a=C3=B1adir informaci=C3=B3n a =
+tu solicitud, solo tienes que responder a este mensaje. Si ya no necesita=
+s ayuda, responde "Ya no necesito ayuda=E2=80=9D.</p><p></p><div style=3D=
+"margin-top: 25px" data-version=3D"2"><table width=3D"100%" cellpadding=3D=
+"0" cellspacing=3D"0" border=3D"0"><tr><td width=3D"100%" style=3D"paddin=
+g: 15px 0; border-top: 1px dotted #c5c5c5;">      <table width=3D"100%" c=
+ellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D" table-layout:fi=
+xed;"><tr><td width=3D"100%" style=3D"padding: 0; margin: 0;" valign=3D"t=
+op">            <p style=3D"font-family: 'Lucida Grande','Lucida Sans Uni=
+code','Lucida Sans',Verdana,Tahoma,sans-serif; font-size: 15px; line-heig=
+ht: 18px; margin-bottom: 0; margin-top: 0; padding: 0; color:#1b1d1e;">  =
+                                              <strong>GM Turbo Taco</stro=
+ng> <span class=3D"directional_text_wrapper">(Guild Wars 2 Support)</span=
+>                                          </p>            <p style=3D"fo=
+nt-family: 'Lucida Grande','Lucida Sans Unicode','Lucida Sans',Verdana,Ta=
+homa,sans-serif; font-size: 13px; line-height: 25px; margin-bottom: 15px;=
+ margin-top: 0; padding: 0; color:#bbbbbb;">              22 mar. 11:23 P=
+DT            </p>                                    <div class=3D"zd-co=
+mment" style=3D"color: #2b2e2f; font-family: 'Lucida Sans Unicode', 'Luci=
+da Grande', 'Tahoma', Verdana, sans-serif; font-size: 14px; line-height: =
+22px; margin: 15px 0">Hola Heliogabalo,<br /><br />Gracias por ponerte en=
+ contacto con el equipo de ayuda t=C3=A9cnica de Guild Wars 2.<br /><br /=
+>Nos gustar=C3=ADa ayudarte, pero primero necesitamos m=C3=A1s informaci=C3=
+=B3n para comprobar que eres el titular de esta cuenta de Guild Wars 2. P=
+or favor, responde a este mensaje de correo electr=C3=B3nico incluyendo t=
+anta informaci=C3=B3n de registro como puedas. Esta informaci=C3=B3n debe=
+ incluir:<br /><br /><ul style=3D"list-style: disc; margin: 10px 0 15px 3=
+0px; padding-left: 15px"><li style=3D"font-family: 'Lucida Sans Unicode',=
+ 'Lucida Grande', 'tahoma', Verdana, sans-serif; font-size: 14px; line-he=
+ight: 22px; margin: 10px 0">Tu c=C3=B3digo de serie de Guild Wars 2</li><=
+li style=3D"font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'tahoma'=
+, Verdana, sans-serif; font-size: 14px; line-height: 22px; margin: 10px 0=
+">Nombre real</li><li style=3D"font-family: 'Lucida Sans Unicode', 'Lucid=
+a Grande', 'tahoma', Verdana, sans-serif; font-size: 14px; line-height: 2=
+2px; margin: 10px 0">Fecha de nacimiento</li><li style=3D"font-family: 'L=
+ucida Sans Unicode', 'Lucida Grande', 'tahoma', Verdana, sans-serif; font=
+-size: 14px; line-height: 22px; margin: 10px 0">N=C3=BAmero de tel=C3=A9f=
+ono</li><li style=3D"font-family: 'Lucida Sans Unicode', 'Lucida Grande',=
+ 'tahoma', Verdana, sans-serif; font-size: 14px; line-height: 22px; margi=
+n: 10px 0">Direcci=C3=B3n postal</li><li style=3D"font-family: 'Lucida Sa=
+ns Unicode', 'Lucida Grande', 'tahoma', Verdana, sans-serif; font-size: 1=
+4px; line-height: 22px; margin: 10px 0">Fecha de creaci=C3=B3n de la cuen=
+ta</li><li style=3D"font-family: 'Lucida Sans Unicode', 'Lucida Grande', =
+'tahoma', Verdana, sans-serif; font-size: 14px; line-height: 22px; margin=
+: 10px 0">Nombre de uno o m=C3=A1s personajes<br /></li></ul><br />Si nos=
+ has comprado Guild Wars 2 directamente a nosotros, tambi=C3=A9n debes in=
+cluir:<br /><br /><ul style=3D"list-style: disc; margin: 10px 0 15px 30px=
+; padding-left: 15px"><li style=3D"font-family: 'Lucida Sans Unicode', 'L=
+ucida Grande', 'tahoma', Verdana, sans-serif; font-size: 14px; line-heigh=
+t: 22px; margin: 10px 0">El n=C3=BAmero de pedido</li><li style=3D"font-f=
+amily: 'Lucida Sans Unicode', 'Lucida Grande', 'tahoma', Verdana, sans-se=
+rif; font-size: 14px; line-height: 22px; margin: 10px 0">Los cuatro =C3=BA=
+ltimos d=C3=ADgitos (<em>=C3=BAnicamente</em> los cuatro =C3=BAltimos) de=
+ la tarjeta de cr=C3=A9dito/d=C3=A9bito que utilizaste</li><li style=3D"f=
+ont-family: 'Lucida Sans Unicode', 'Lucida Grande', 'tahoma', Verdana, sa=
+ns-serif; font-size: 14px; line-height: 22px; margin: 10px 0">La direcci=C3=
+=B3n de facturaci=C3=B3n (incluido el c=C3=B3digo postal)</li><li style=3D=
+"font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'tahoma', Verdana, =
+sans-serif; font-size: 14px; line-height: 22px; margin: 10px 0">La identi=
+ficaci=C3=B3n del recibo de PayPal=C2=AE asociado a la compra</li></ul><b=
+r />Entendemos que quiz=C3=A1 no puedas darnos toda la informaci=C3=B3n q=
+ue hemos solicitado, pero intenta proporcionar tanta como te sea posible.=
+ Nos pondremos en contacto contigo tan pronto como podamos una vez reciba=
+mos tu respuesta.<br /><div class=3D"signature"><p style=3D"color: #2b2e2=
+f; font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Tahoma', Verdana=
+, sans-serif; font-size: 14px; line-height: 22px; margin: 15px 0" dir=3D"=
+auto">Un saludo,</p><p style=3D"color: #2b2e2f; font-family: 'Lucida Sans=
+ Unicode', 'Lucida Grande', 'Tahoma', Verdana, sans-serif; font-size: 14p=
+x; line-height: 22px; margin: 15px 0" dir=3D"auto">GM Turbo Taco<br />Equ=
+ipo de Soporte de Guild Wars 2<br /><a href=3D"http://help.guildwars2.com=
+" rel=3D"noreferrer">http://help.guildwars2.com</a></p></div></div><p>   =
+                               </p></td>        </tr></table></td>  </tr>=
+</table><p></p><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+border=3D"0"><tr><td width=3D"100%" style=3D"padding: 15px 0; border-top:=
+ 1px dotted #c5c5c5;">      <table width=3D"100%" cellpadding=3D"0" cells=
+pacing=3D"0" border=3D"0" style=3D" table-layout:fixed;"><tr><td width=3D=
+"100%" style=3D"padding: 0; margin: 0;" valign=3D"top">            <p sty=
+le=3D"font-family: 'Lucida Grande','Lucida Sans Unicode','Lucida Sans',Ve=
+rdana,Tahoma,sans-serif; font-size: 15px; line-height: 18px; margin-botto=
+m: 0; margin-top: 0; padding: 0; color:#1b1d1e;">                        =
+      <strong>Jonitjuego</strong>                          </p>          =
+  <p style=3D"font-family: 'Lucida Grande','Lucida Sans Unicode','Lucida =
+Sans',Verdana,Tahoma,sans-serif; font-size: 13px; line-height: 25px; marg=
+in-bottom: 15px; margin-top: 0; padding: 0; color:#bbbbbb;">             =
+ 22 mar. 11:13 PDT            </p>                                    <di=
+v class=3D"zd-comment" style=3D"color: #2b2e2f; font-family: 'Lucida Sans=
+ Unicode', 'Lucida Grande', 'Tahoma', Verdana, sans-serif; font-size: 14p=
+x; line-height: 22px; margin: 15px 0"><p style=3D"color: #2b2e2f; font-fa=
+mily: 'Lucida Sans Unicode', 'Lucida Grande', 'Tahoma', Verdana, sans-ser=
+if; font-size: 14px; line-height: 22px; margin: 15px 0" dir=3D"auto">Rein=
+stalaci=C3=B3n -- he perdido el autentificador y los datos asociados- sol=
+icito desbloqueo temporal</p></div>                                  </td=
+>        </tr></table></td>  </tr></table></div>
+    <div style=3D"color: #aaaaaa; margin: 10px 0 14px 0; padding-top: 10p=
+x; border-top: 1px solid #eeeeee;">
+     Este correo electr=C3=B3nico es un servicio de Guild Wars 2 Support.=
+ =
+
+    </div>
+  </div>
+<span style=3D'color:#FFFFFF'>[J5YO6V-93E2]</span></body>
+</html>
+
+----==_mimepart_58d2c1123bca1_22c183ff4952cd32c7028f--
