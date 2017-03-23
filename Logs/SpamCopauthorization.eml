@@ -1,0 +1,53 @@
+Delivered-To: jonitjuego@gmail.com
+Received: by 10.223.139.152 with SMTP id o24csp727855wra;
+        Thu, 23 Mar 2017 06:57:30 -0700 (PDT)
+X-Received: by 10.84.230.135 with SMTP id e7mr3903504plk.20.1490277449955;
+        Thu, 23 Mar 2017 06:57:29 -0700 (PDT)
+Return-Path: <spamcop@devnull.spamcop.net>
+Received: from vmx.spamcop.net (vmx.spamcop.net. [184.94.240.112])
+        by mx.google.com with ESMTP id p91si5794269plb.87.2017.03.23.06.57.29
+        for <jonitjuego@gmail.com>;
+        Thu, 23 Mar 2017 06:57:29 -0700 (PDT)
+Received-SPF: pass (google.com: domain of spamcop@devnull.spamcop.net designates 184.94.240.112 as permitted sender) client-ip=184.94.240.112;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of spamcop@devnull.spamcop.net designates 184.94.240.112 as permitted sender) smtp.mailfrom=spamcop@devnull.spamcop.net
+DomainKey-Signature: s=devnull; d=spamcop.net; c=nofws; q=dns;
+  h=Received:From:To:Subject:Precedence:Message-ID:Date:
+   X-Mailer;
+  b=Wks5HfS3vN4K/7tV9YEsXECx5vMfdIEGoW7J17BuHFFAkA35r4nNdyWf
+   UhnjBwUw4esnTlNmlaUS/sPbXBIknWPhp5DXuF15dRPaHTnFV89HNJMtr
+   bkSECDbzcjbG0uF;
+Received: from prod-sc-www02.sv4.ironport.com (HELO prod-sc-www02.spamcop.net) ([10.8.129.226])
+  by prod-sc-smtp-vip.sv4.ironport.com with SMTP; 23 Mar 2017 06:57:29 -0700
+From: SpamCop Authorization System <spamcop@devnull.spamcop.net>
+To: "heliogabalo santos jugon" <jonitjuego@gmail.com>
+Subject: SpamCop authorization
+Precedence: list
+Message-ID: <wh58d3d449g63cc@msgid.spamcop.net>
+Date: Thu, 23 Mar 2017 13:57:29 GMT
+X-Mailer: https://www.spamcop.net/ v4.8.6
+
+Someone (probably you) has requested that SpamCop email you a password.
+Do not share your password with anyone.  If you forget your password, you
+may have it emailed to you.  Please ensure you keep your email address 
+current.
+
+Passwords are cAse sENsiTive and may contain lookalike digits such as, 
+"one" and "ell" or "Oh" and "zero."  Our system will allow you to paste in 
+your password if your browser will.  After you log in, you can use the 
+"Preferences" link at the left side of the page to change your password.
+
+username:  jonitjuego@gmail.com
+password:  HipzADqX
+
+Cookie log-in:
+https://www.spamcop.net/mcgi?action=loginform;returnurl=%2F
+
+HTTP authentication (no cookies required):
+https://members.spamcop.net/
+
+If you have questions or problems, please visit:
+https://www.spamcop.net/help.shtml
+
+Thanks for helping rid the Internet of spam!
+
