@@ -15,9 +15,9 @@ Los certificados son una _forma_ segura de comunicarnos entre computadoras. A es
 establecer la comunicación la llamamos _protocolo_. Hoy en día existen dos tipos de protocolos
 ampliamente utilizados; protocolos SSl y TLS.
 
-En esta documentación se hablará exclusivamente del protocolo TLS, que es una versión mas 
+En esta documentación se hablará exclusivamente del protocolo TLS, que es una versión mas
 moderna o actualizada del protocolo SSL(capa de sockets seguros).
-Algunos desarrolladores siguen llamándolos: certificado SSL; aunque en realidad se trata 
+Algunos desarrolladores siguen llamándolos: certificado SSL; aunque en realidad se trata
 igualmente del protocolo TLS(seguridad de la capa de transporte), con opciones ECC,RSA o DSA.
 > Estos últimos son _algoritmos de cifrado_.
 
@@ -41,7 +41,7 @@ caso en particular.
 
 #### <a name = '2c2'>Concepto central</a>
 
-En esencia, _la capa segura de transporte_ es una forma de comunicarnos entre dos máquina, 
+En esencia, _la capa segura de transporte_ es una forma de comunicarnos entre dos máquina,
 donde será utilizada una aproximación llamada __PKI__; infraestructura de llave pública.Es un concepto bastante simple, el cuál involucra siempre a dos computadoras; un _cliente_
 establece conexión con otra máquina llamada _servidor_.
 
@@ -49,12 +49,12 @@ establece conexión con otra máquina llamada _servidor_.
 
 Para la comunicación, TLS usa archivos llamados _Certificados_; el cliente establece la comunicación
 con un _Certificado de cliente_. La computadora que recibe la conexión, hace uso del _Certificado
-de servidor_. 
+de servidor_.
 
 ![alt text](/images/connection.png)
 
 Si la necesidad, es comunicar dos computadoras en ambos sentidos, para poder hacer uso del protocolo
-TLS, habrá que instalar los dos tipos de certificados en los dos equipos. 
+TLS, habrá que instalar los dos tipos de certificados en los dos equipos.
 
 ![alt text](/images/cruzado.png)
 > Es éste ejemplo, nuestro escenario.
@@ -69,11 +69,11 @@ El segundo; recibe el nombre __host2__.
 En éste escenario, los servidores necesitarán comunicarse puntualmente, el uno con el otro. Por
 ejemplo, cuando movemos un _supuesto_, desde el _host1_ al _host2_ o _vice versa_.
 Para que esto funcione, ambos servidores deben poseer su própio certificado cliente/servidor.
-> ... término inglés para referirse a una máquina virtualizada(guest).
+> ... término en inglés, para referirse a una máquina virtualizada(guest).
 
 ![alt text](/images/ser-crs.png)
 
-En éste punto, será introducido el concepto _servidor administrativo_. Desde el _servidor 
+En éste punto, será introducido el concepto _servidor administrativo_. Desde el _servidor
 administrativo_, se llevarán a cabo tareas de administración; como crear nuevos _supestos_,
 moverlos entre servidores y reconfigurarlos o borrarlos.
 
@@ -86,7 +86,7 @@ cliente_, o lo que es lo mismo; no contará con el _certifidcado de servidor_.
 
 #### <a name = '2c4'>Llaves privadas</a>
 Como parte de la aproximación __PKI__, usada en __TLS__ (infraestructura de llave pública), cabe
-mencionar, que cada certificado de contar con dos entidades: _llave pública_ y _llave privada_.
+mencionar, que cada certificado debe contar con dos entidades: _llave pública_ y _llave privada_.
 
 ![alt text](/images/key-par.png)
 
@@ -96,7 +96,7 @@ a sí misma, como la descrita _en el própio certificado!!_.
 
 Por ejemplo, el servidor _host1_, tiene ambos certificados: _certificado de cliente y servidor_.
 Estos certificados, indican su pertenencia al _host1_. Por que sólo el _host1_ tiene la llave
-privada del par de certificados(cliente/servidor); es el único que muede decir: _"yo soy el host1"_.
+privada del par de certificados(cliente/servidor); es el único que puede decir: _"yo soy el host1"_.
 
 En caso de que una persona no autorizada obtenga el archivo de _llave_, podría generar su própio
 certificado y, reclamar la posesión del servidor _host1_ en su lugar, por lo que potencialmente
@@ -110,9 +110,78 @@ pieza segura de información criptográfica, indicando la autenticidad, del cert
 siendo firmado.
 
 Es importante, por que condiciona si una _web_ es de confianza o no. Donde todos los certificados
-han sido firmados por los otros, o por un certificado central -__admindesktop__, que 
+han sido firmados por los otros, o por un certificado central -__admindesktop__, que
 se sabe es seguro.
 
 #### <a name = '2c6'>Certificado de autoridad</a>
+Mediante esta aproximación, contar con un certificado central, capaz de firmar
+muchos otros, es considerado _como buena práctica de seguridad_. También
+permite su administración, mediante un, razonablemente, simple certificado,
+comparado con otras alternativas y, es la aproximación usada por _libvirt_.
+
+Éste certificado central, se refiere al __Certificado de Autoridad__. Será creado
+uno, al principio de nuestra configuración __TLS__, en la próxima sección.
+Después, usado para firmar cada certificado _Cliente_ y _Servidor_.
+
+![relacion-certificado-autoridad](/images/image_ca.png)
 
 
+## TLSCreateCACert
+
+1. [Pasos para crear un archivo _Certificado de Autoridad_ TLS para _libvirt_](#1)  
+    1.1 [Lista completa de pasos](#1i1)  
+    1.2 [Plantilla para el _Certificado de Autoridad_, usando un editor de textos](#1i2)  
+    1.3 [Creando un archivo _llave_: _Certificado de Autoridad_ con `certtool`](#1i3)  
+    1.4 [Combinación de la plantilla con la _llave rpivada_, para crear el _CA_](#1i4)  
+    1.5 [La plantilla no se necesitará mas, puede descartarse](#1i5)  
+    1.6 [Mover el certificado a su lugar](#1i6)  
+    - 1.6.1 [Permisos de propietario](#1i6i1)  
+    - 1.6.2 [Transferencia y configuración del certificado](#1i6i2)  
+      - 1.6.2.1 [Transfiriendo al _host1_](1i6i2i1)  
+      - 1.6.2.2 [Conexión al host1](1i6i2i2)  
+      - 1.6.2.3 [Transfiriendo el certificado al host2](1i6i2i3)  
+      - 1.6.2.4 [Conexción al host2](1i6i2i4)  
+      - 1.6.2.5 [Transfiriendo los archivos al _puesto administrativo_](1i6i2i5)  
+      - 1.6.2.6 [Conexión al _puesto administrativo_](#1i6i2i6)  
+      - 1.6.2.7 [La parte del _Certificado de Autoridad_, ya está completa](#1i6i2i7)  
+
+  1.7 [Lista completa de pasos](#1i7)  
+
+
+---
+#### <a name="1">Pasos para crear un archivo _Certificado de Autoridad_ TLS para _libvirt_</a>  
+
+El primer paso en la configuración de `libvirt` para su uso con __TLS__, es crear
+el _Certificado de Autoridad__, usado para firmar todos los demás certificados que
+iremos creando.
+
+Sigue estas instrucciones para crear el __certificado__ _Certificado de Autoridad_,
+después, continúa navegando a través de las páginas para completar la configuración.
+
+#### <a name="1i1">Lista completa de pasos</a>  
+ESTO ES EL ÍNDICE GENERAL // FERENCIAS RELATIVAS:
+
+[textoAlEnlace][text-j1]
+
+-x3
+[text-j1]: http://estoEsElenlace
+
+#### <a name="1i2">Plantilla para el _Certificado de Autoridad_, usando un editor de textos</a>  
+
+
+
+
+#### <a name="1i3">Creando un archivo _llave_: _Certificado de Autoridad_ con `certtool`</a>  
+#### <a name="1i4">Combinación de la plantilla con la _llave rpivada_, para crear el _CA_</a>  
+#### <a name="1i5">La plantilla no se necesitará mas, puede descartarse</a>  
+#### <a name="1i6">Mover el certificado a su lugar</a>  
+#### <a name="1i6i1">Permisos de propietario</a>  
+#### <a name="1i6i2"></a>  
+#### <a name="1i6i2i1">Transferencia y configuración del certificado</a>  
+#### <a name="1i6i2i2">Transfiriendo al _host1_</a>  
+#### <a name="1i6i2i3">Transfiriendo el certificado al host2</a>  
+#### <a name="1i6i2i4">Conexción al host2</a>  
+#### <a name="1i6i2i5">Transfiriendo los archivos al _puesto administrativo_</a>  
+#### <a name="1i6i2i6">Conexión al _puesto administrativo_</a>  
+#### <a name="1i6i2i7">La parte del _Certificado de Autoridad_, ya está completa</a>  
+#### <a name="1i7">Lista completa de pasos</a>  
