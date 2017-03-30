@@ -16,3 +16,12 @@
     - `ld`: cargador dinámico(dynamic loader).
     - `lsb`: Linux Standard Base.
     - `ldd`: presenta las librerías requeridas por el programa. Su sintaxis es: `<ldd> <programa>`.
+
+#### Uso del depurador
+`GDB` es la navaja suiza del programador, _El depurador_. Voy a dejarme aquí un
+apunte a un pequeño script que yo uso para arrancar el programa, dentro del
+depurador, y no estar repitiendo lo mismo sobre la cónsola, una y otra vez:
+
+No tiene mucho sentido hacer un tuto aquí, por que la red tiene más _tutos_ sobre
+`gdb` que _chinos_, la playa de _china gorda_.
+> mirar en el directorio Xcb
