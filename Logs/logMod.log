@@ -1,0 +1,2 @@
+$ P11_KIT_DEBUG=all modutil -list
+modutil: function failed: SEC_ERROR_LEGACY_DATABASE: The certificate/key database is in an old, unsupported format.

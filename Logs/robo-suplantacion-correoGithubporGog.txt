@@ -1,0 +1,359 @@
+Delivered-To: jonitjuego@gmail.com
+Received: by 10.223.173.46 with SMTP id p43csp724694wrc;
+        Sat, 1 Apr 2017 04:11:03 -0700 (PDT)
+X-Received: by 10.46.15.17 with SMTP id 17mr2588205ljp.3.1491045063867;
+        Sat, 01 Apr 2017 04:11:03 -0700 (PDT)
+Return-Path: <newsletter@gog.com>
+Received: from gog.com ([77.79.249.26])
+        by mx.google.com with ESMTPS id d15si4738792lfb.100.2017.04.01.04.11.03
+        for <jonitjuego@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 01 Apr 2017 04:11:03 -0700 (PDT)
+Received-SPF: pass (google.com: domain of newsletter@gog.com designates 77.79.249.26 as permitted sender) client-ip=77.79.249.26;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gog.com;
+       spf=pass (google.com: domain of newsletter@gog.com designates 77.79.249.26 as permitted sender) smtp.mailfrom=newsletter@gog.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=gog.com
+Received: from [127.0.0.1] (unknown [172.16.200.82])
+	by gog.com (Postfix) with ESMTP id C0933862FD
+	for <jonitjuego@gmail.com>; Sat,  1 Apr 2017 13:10:48 +0200 (CEST)
+Authentication-Results: gog.com; dmarc=none header.from=gog.com
+DKIM-Filter: OpenDKIM Filter v2.9.2 gog.com C0933862FD
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gog.com; s=batch;
+	t=1491045048; bh=vmcG0Tjby4Zg9sFA6IO2+N6EssOkHZ8YpEBkH6EHX8k=;
+	h=Date:Subject:From:To:Sender:From;
+	z=Date:=20Sat,=2001=20Apr=202017=2014:10:48=20+0300|Subject:=20Up=2
+	 0to=2090%=20off=20Metro:=20Last=20Light,=20Shadow=20Tactics,=20hot
+	 =20new=20releases,=0D=0A=20adventure=20games=20sale=20and=20more!|
+	 From:=20"GOG.com=20Team"=20<newsletter@gog.com>|To:=20""=20<jonitj
+	 uego@gmail.com>;
+	b=esFdB3GpftgoXU8XNHG8R2AcI+ivnyP7BbWArmJTN9kO3lX6w4jW8i7qO7QFBTg+E
+	 mKilxX56nkaanGt/RN5ZQhdQ35SWMXc58LyBgPnAu/CR0DfbTTqrN+r3K5NohKr77g
+	 nq95KFcaAeSiMzVUbBBP9MMbSJo8Wwr1O4syciLXkzU1Cdkkww8Wb2WaBYnBBEYMM4
+	 +pZgr98hlLl+Uox3U3Qaj7sPe8l8M8F1qVncYPCtcmU5mDEVrfb9Dx1cwRTrEX1Ivl
+	 yXu8IJFn8FZv3GVt8isPAI54i+gd9u+O2zivYrCaVd11/RyyBaCkXHQHe9GObCq8ZK
+	 17gEY3PYd2FtA==
+Message-ID: <1491045048.58df8ab8bb381@swift.generated>
+Date: Sat, 01 Apr 2017 14:10:48 +0300
+Subject: Up to 90% off Metro: Last Light, Shadow Tactics, hot new releases,
+ adventure games sale and more!
+From: "GOG.com Team" <newsletter@gog.com>
+To: "" <jonitjuego@gmail.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="_=_swift_v4_149104504858df8ab8bb793_=_"
+
+
+--_=_swift_v4_149104504858df8ab8bb793_=_
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+If you can see this text it means that your email client couldn't display o=
+ur newsletter properly.=0APlease visit this link to view the newsletter on =
+our website: http://www.gog.com/newsletter/20170331_weekly_sale_EN=0A=0A- G=
+OG.com Team=0A
+
+--_=_swift_v4_149104504858df8ab8bb793_=_
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "https://www=
+.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv=3D"Content-Type" c=
+ontent=3D"text/html; charset=3DUTF-8"><meta name=3D"viewport" content=3D"wi=
+dth=3Ddevice-width, initial-scale=3D1"><meta http-equiv=3D"X-UA-Compatible"=
+ content=3D"IE=3Dedge"><meta name=3D"format-detection" content=3D"telephone=
+=3Dno"><style type=3D"text/css">body{height:100% !important;width:100% !imp=
+ortant;margin:0px !important;padding:0px !important}#emBodyTable{height:aut=
+o !important;width:100% !important;margin:0px !important;padding:0px !impor=
+tant}table,td{border-collapse:collapse}img,a img{border-style:none;border-w=
+idth:0px;outline:none;text-decoration:none}.ReadMsgBody{width:100%}.Externa=
+lClass{width:100%}.ExternalClass,.ExternalClass p,.ExternalClass span,.Exte=
+rnalClass font,.ExternalClass td,.ExternalClass div{line-height:100%}table,=
+td{mso-table-lspace:0pt;mso-table-rspace:0pt}img{-ms-interpolation-mode:bic=
+ubic}body,table,td,p,a,li,blockquote{-ms-text-size-adjust:100%;-webkit-text=
+-size-adjust:100%}table a,table a:link,table a:visited{color:#9fbf00;border=
+:none;cursor:pointer;text-decoration:none;font-weight:100}td[class~=3D"em_b=
+utton"] a:link,td[class~=3D"em_button"] a:visited,td[class~=3D"em_tag"] a:l=
+ink,td[class~=3D"em_tag"] a:visited{color:#FFF;font-weight:600;text-decorat=
+ion:none;text-transform:uppercase}span[class~=3D"em_link_fix_808080"] a{col=
+or:#808080 !important;text-decoration:none !important}span[class~=3D"em_lin=
+k_fix_262626"] a{color:#262626 !important;text-decoration:none !important}i=
+mg[class~=3D"em_image_fix"]{display:block}@media only screen and (max-width=
+: 480px){td[class~=3D"em_main_section"]{padding-left:6px !important;padding=
+-right:6px !important}table[class~=3D"em_content_wrapper"],td[class~=3D"em_=
+content_600"]{width:100% !important;max-width:480px !important}td[class~=3D=
+"em_content_297"]{width:49% !important;max-width:237px !important}td[class~=
+=3D"em_content_196"]{width:32% !important;max-width:156px !important}td[cla=
+ss~=3D"em_tile_space_col"]{width:2% !important}td[class~=3D"em_bg_image"]{b=
+ackground-size: 150% !important}img[class~=3D"em_image"]{height:auto !impor=
+tant;width:100% !important}img[class~=3D"em_image_600"]{max-width:600px !im=
+portant}img[class~=3D"em_image_297"]{max-width:297px !important}img[class~=
+=3D"em_image_196"]{max-width:196px !important}div[class~=3D"em_text_12"],p[=
+class~=3D"em_text_12"],a[class~=3D"em_text_12"],li[class~=3D"em_text_12"],t=
+d[class~=3D"em_text_12"]{-webkit-text-size-adjust:none}}</style></head><bod=
+y topmargin=3D"0" rightmargin=3D"0" bottommargin=3D"0" leftmargin=3D"0" mar=
+ginwidth=3D"0" marginheight=3D"0"><!-- preview text --><div class=3D"em_pre=
+view_text" style=3D"color:#FFF;display:none;font-size:1px;line-height:1px;m=
+ax-height:0px;max-width:0px;opacity:0;overflow:hidden;"> We&#039;re having =
+an Adventurous Week: Thimbleweek Park is out and dozens of Adventure games =
+are now on sale! </div><!-- /preview text --><!-- WRAPPER --><table bgcolor=
+=3D"#f2f2f2" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" height=3D"100=
+%" width=3D"100%" id=3D"emBodyTable" class=3D"em_main_wrapper em_bg_f2f2f2"=
+ style=3D"border-style:none;border-width:0px;min-width:100%;width:100%;back=
+ground-color:#f2f2f2"><!-- logo/language selection --><tr class=3D"wwwno"><=
+td bgcolor=3D"#262626" align=3D"center" valign=3D"top" class=3D"em_main_sec=
+tion em_bg_262626" style=3D"border-style:none;border-width:0px;margin-top:0=
+px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;paddi=
+ng-right:12px;padding-bottom:0px;padding-left:12px;background-color:#262626=
+"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"em_conte=
+nt_wrapper" style=3D"border-style:none;border-width:0px;margin-top:0px;marg=
+in-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-bott=
+om:0px;padding-right:0px;padding-left:0px"><tr><td align=3D"center" valign=
+=3D"top" width=3D"600" class=3D"em_content_600 em_padding_6" style=3D"width=
+:600px;max-width:600px;vertical-align:top;padding-top:6px;padding-right:0px=
+;padding-bottom:6px;padding-left:0px"><table border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" width=3D"100%" class=3D"em_content_wrapper" style=3D"bor=
+der-style:none;border-width:0px;margin-top:0px;margin-bottom:0px;margin-rig=
+ht:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0px=
+;padding-left:0px"><tr><!-- logo --><td align=3D"left" valign=3D"middle" he=
+ight=3D"32" width=3D"34" class=3D"em_image_wrapper" style=3D"font-size:0px;=
+line-height:0px;margin-top:0px;margin-bottom:0px;margin-right:0px;margin-le=
+ft:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;padding-left:0p=
+x"><a href=3D"https://www.gog.com/" class=3D"em_image_wrapper" style=3D"fon=
+t-size:0px;line-height:0px;margin-top:0px;margin-bottom:0px;margin-right:0p=
+x;margin-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;padd=
+ing-left:0px"><img border=3D"0" hspace=3D"0" vspace=3D"0" height=3D"32" wid=
+th=3D"34" class=3D"em_image em_image_fix" src=3D"https://static.gog.com/upl=
+oad/newsletters/img_common/logo_gogcom_white_2x.png" alt=3D"GOG.com" style=
+=3D"margin-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;paddi=
+ng-top:0px;padding-bottom:0px;padding-right:0px;padding-left:0px"></a></td>=
+<!-- /logo --><!-- view in browser --><td align=3D"right" valign=3D"middle"=
+><div class=3D"em_text_wrapper em_text_808080 em_text_12" style=3D"font-fam=
+ily:Helvetica,Arial,sans-serif;font-style:normal;font-weight:100;margin-top=
+:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;pad=
+ding-bottom:0px;padding-right:0px;padding-left:0px;color:#808080;font-size:=
+12px;line-height:16px;"> View in browser: <a href=3D"https://www.gog.com/ne=
+wsletter/20170331_weekly_sale_en" class=3D"em_text_9fbf00" style=3D"color:#=
+9fbf00">EN</a> &bull; <a href=3D"https://www.gog.com/newsletter/20170331_we=
+ekly_sale_de" class=3D"em_text_9fbf00" style=3D"color:#9fbf00">DE</a> &bull=
+; <a href=3D"https://www.gog.com/newsletter/20170331_weekly_sale_fr" class=
+=3D"em_text_9fbf00" style=3D"color:#9fbf00">FR</a> &bull; <a href=3D"https:=
+//www.gog.com/newsletter/20170331_weekly_sale_ru" class=3D"em_text_9fbf00" =
+style=3D"color:#9fbf00">RU</a> &bull; <a href=3D"https://www.gog.com/newsle=
+tter/20170331_weekly_sale_br" class=3D"em_text_9fbf00" style=3D"color:#9fbf=
+00">PT-BR</a></div></td><!-- view in browser --></tr></table></td></tr></ta=
+ble></td></tr><!-- /logo/language selection --><!-- BODY (actual content) -=
+-><tr><td bgcolor=3D"#f2f2f2" align=3D"center" valign=3D"top" class=3D"em_m=
+ain_section em_bg_f2f2f2 em_bg_image" style=3D"border-style:none;border-wid=
+th:0px;margin-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;pa=
+dding-top:0px;padding-right:12px;padding-bottom:0px;padding-left:12px;backg=
+round-color:#f2f2f2;background-image:url('https://static.gog.com/upload/new=
+sletters/img_common/bg_default_f2f2f2.jpg');background-position:center top;=
+background-repeat:no-repeat;background-attachment:scroll;background-size:10=
+0%"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"em_con=
+tent_wrapper" style=3D"border-style:none;border-width:0px;margin-top:0px;ma=
+rgin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-bo=
+ttom:0px;padding-right:0px;padding-left:0px"><!-- HEADER (main content) -->=
+<tr><td align=3D"center" valign=3D"top" width=3D"600" class=3D"em_content_6=
+00 em_padding_48_12" style=3D"width:600px;max-width:600px;vertical-align:to=
+p;padding-top:48px;padding-right:0px;padding-bottom:12px;padding-left:0px">=
+<div class=3D"em_text_wrapper em_text_262626 em_text_24 em_header" style=3D=
+"font-family:Helvetica,Arial,sans-serif;font-style:normal;font-weight:100;m=
+argin-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-to=
+p:0px;padding-bottom:0px;padding-right:0px;padding-left:0px;color:#262626;f=
+ont-size:24px;line-height:32px;text-transform:uppercase;"><span class=3D"em=
+_link_fix_262626"> Deals up to -90% =E2=80=A2 A week full of Adventure </sp=
+an></div><div class=3D"em_text_wrapper em_text_262626 em_text_18" style=3D"=
+font-family:Helvetica,Arial,sans-serif;font-style:normal;font-weight:100;ma=
+rgin-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top=
+:0px;padding-bottom:0px;padding-right:0px;padding-left:0px;color:#262626;fo=
+nt-size:18px;line-height:26px;"><span class=3D"em_link_fix_262626"> Recent =
+releases and notable promotions </span></div></td></tr><tr><td align=3D"cen=
+ter" valign=3D"top" width=3D"600" class=3D"em_content_600 em_padding_0_24" =
+style=3D"width:600px;max-width:600px;vertical-align:top;padding-top:0px;pad=
+ding-right:0px;padding-bottom:24px;padding-left:0px"><table border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0"><tr><td align=3D"center" bgcolor=3D"#9fbf=
+00" class=3D"em_button em_bg_9fbf00" style=3D"background-color:#9fbf00;-web=
+kit-border-radius:3px;-moz-border-radius:3px;border-radius:3px"><a href=3D"=
+https://www.gog.com/promo/20170327_weekly_sale?utm_medium=3Demail&amp;utm_s=
+ource=3Dnewsletter&amp;utm_campaign=3D20170331_weekly_sale&amp;utm_term=3DE=
+N" class=3D"em_button_a em_text_14 em_text_ffffff em_border_9fbf00" style=
+=3D"border-color:#9fbf00;font-size:14px;line-height:20px;color:#FFF;font-fa=
+mily:Helvetica,Arial,sans-serif;font-weight:bold;text-decoration:none;text-=
+transform:uppercase;-webkit-border-radius:3px;-moz-border-radius:3px;border=
+-radius:3px;border-width:1px;border-style:solid;padding-left:13px;padding-r=
+ight:13px;padding-top:12px;padding-bottom:11px;display:inline-block;"> SHOP=
+ NOW </a></td></tr></table></td></tr><!-- /HEADER --><!-- SECTION (weekend =
+promo) --><!-- header --><!-- /header --><!-- tiles --><!-- medium tiles --=
+><!-- /big tile --><!-- medium tiles --><tr><td align=3D"center" valign=3D"=
+top" width=3D"600" class=3D"em_content_600 em_padding_0_6" style=3D"width:6=
+00px;max-width:600px;vertical-align:top;padding-top:0px;padding-right:0px;p=
+adding-bottom:6px;padding-left:0px"><table border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" width=3D"100%" class=3D"em_content_wrapper" style=3D"borde=
+r-style:none;border-width:0px;margin-top:0px;margin-bottom:0px;margin-right=
+:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;p=
+adding-left:0px"><tr><td align=3D"center" valign=3D"top" width=3D"297" clas=
+s=3D"em_content_297" style=3D"width:297px;max-width:297px;vertical-align:to=
+p"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"><=
+tr><td align=3D"center" valign=3D"top" width=3D"297" class=3D"em_content_29=
+7 em_border_bottom_2 em_border_d4a800 em_image_wrapper" style=3D"width:297p=
+x;max-width:297px;vertical-align:top;font-size:0px;line-height:0px;margin-t=
+op:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;p=
+adding-bottom:0px;padding-right:0px;padding-left:0px;border-color:#d4a800;b=
+order-bottom-style:solid;border-bottom-width:2px"><a href=3D"https://www.go=
+g.com/game/guardians_of_the_galaxy?utm_medium=3Demail&amp;utm_source=3Dnews=
+letter&amp;utm_campaign=3D20170331_weekly_sale&amp;utm_term=3DEN" class=3D"=
+em_image_wrapper" style=3D"font-size:0px;line-height:0px;margin-top:0px;mar=
+gin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-bot=
+tom:0px;padding-right:0px;padding-left:0px"><img border=3D"0" hspace=3D"0" =
+vspace=3D"0" height=3D"160" class=3D"em_image em_image_297 em_image_fix" sr=
+c=3D"https://images.gog.com/88d53c69d08b94ded12075c4e7fbc2a3009c66eab832cfa=
+8f957268dca60aeef_email_297_2x.jpg" alt=3D"Marvel=E2=80=99s Guardians of th=
+e Galaxy: The Telltale Series" style=3D"margin-top:0px;margin-bottom:0px;ma=
+rgin-right:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;padding-r=
+ight:0px;padding-left:0px"></a></td></tr><!-- tile caption --><tr><td align=
+=3D"center" valign=3D"top" width=3D"297" class=3D"em_content_297" style=3D"=
+width:297px;max-width:297px;vertical-align:top"><table border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"em_content_wrapper" st=
+yle=3D"border-style:none;border-width:0px;margin-top:0px;margin-bottom:0px;=
+margin-right:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;padding=
+-right:0px;padding-left:0px"><tr><td align=3D"left" valign=3D"top"><!-- til=
+e description --><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><t=
+r><td align=3D"left" class=3D"em_padding_6" style=3D"padding-top:6px;paddin=
+g-right:0px;padding-bottom:6px;padding-left:0px"><div class=3D"em_text_wrap=
+per em_text_808080 em_text_12" style=3D"font-family:Helvetica,Arial,sans-se=
+rif;font-style:normal;font-weight:100;margin-top:0px;margin-bottom:0px;marg=
+in-right:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;padding-rig=
+ht:0px;padding-left:0px;color:#808080;font-size:12px;line-height:16px;"> Ad=
+venture, Point-and-click, Sci-fi <br><span class=3D"em_emphasis" style=3D"f=
+ont-weight:bold"> Pre-order </span></div></td></tr></table><!-- /tile descr=
+iption --></td><td align=3D"right" valign=3D"top"><!-- price tag --><table =
+border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tr><td align=3D"center" b=
+gcolor=3D"#d4a800" class=3D"em_tag em_bg_d4a800" style=3D"background-color:=
+#d4a800"><a href=3D"https://www.gog.com/game/guardians_of_the_galaxy?utm_me=
+dium=3Demail&amp;utm_source=3Dnewsletter&amp;utm_campaign=3D20170331_weekly=
+_sale&amp;utm_term=3DEN" class=3D"em_tag_a em_text_14 em_text_ffffff em_bor=
+der_d4a800" style=3D"border-color:#d4a800;font-size:14px;line-height:20px;c=
+olor:#FFF;font-family:Helvetica,Arial,sans-serif;font-weight:bold;text-deco=
+ration:none;text-transform:uppercase;border-width:1px;border-style:solid;pa=
+dding-left:9px;padding-right:5px;padding-top:3px;padding-bottom:5px;display=
+:inline-block;"> -10% </a></td></tr></table><!-- /price tag --></td></tr></=
+table></td></tr><!-- /tile caption --></table></td><td class=3D"em_tile_spa=
+ce_col" style=3D"font-size:0px;line-height:0px;margin-top:0px;margin-bottom=
+:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;pa=
+dding-right:0px;padding-left:0px;height:100%;width:6px"></td><td align=3D"c=
+enter" valign=3D"top" width=3D"297" class=3D"em_content_297" style=3D"width=
+:297px;max-width:297px;vertical-align:top"><table border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" width=3D"100%"><tr><td align=3D"center" valign=3D"=
+top" width=3D"297" class=3D"em_content_297 em_border_bottom_2 em_border_d4a=
+800 em_image_wrapper" style=3D"width:297px;max-width:297px;vertical-align:t=
+op;font-size:0px;line-height:0px;margin-top:0px;margin-bottom:0px;margin-ri=
+ght:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0p=
+x;padding-left:0px;border-color:#d4a800;border-bottom-style:solid;border-bo=
+ttom-width:2px"><a href=3D"https://www.gog.com/game/rain_world?utm_medium=
+=3Demail&amp;utm_source=3Dnewsletter&amp;utm_campaign=3D20170331_weekly_sal=
+e&amp;utm_term=3DEN" class=3D"em_image_wrapper" style=3D"font-size:0px;line=
+-height:0px;margin-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0=
+px;padding-top:0px;padding-bottom:0px;padding-right:0px;padding-left:0px"><=
+img border=3D"0" hspace=3D"0" vspace=3D"0" height=3D"160" class=3D"em_image=
+ em_image_297 em_image_fix" src=3D"https://images.gog.com/6910d41fb07e3ffab=
+c89c9080294ff3496644d02f711862dc9a93aac725aebc9_email_297_2x.jpg" alt=3D"Ra=
+in World" style=3D"margin-top:0px;margin-bottom:0px;margin-right:0px;margin=
+-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;padding-left=
+:0px"></a></td></tr><!-- tile caption --><tr><td align=3D"center" valign=3D=
+"top" width=3D"297" class=3D"em_content_297" style=3D"width:297px;max-width=
+:297px;vertical-align:top"><table border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" width=3D"100%" class=3D"em_content_wrapper" style=3D"border-style:n=
+one;border-width:0px;margin-top:0px;margin-bottom:0px;margin-right:0px;marg=
+in-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;padding-le=
+ft:0px"><tr><td align=3D"left" valign=3D"top"><!-- tile description --><tab=
+le border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tr><td align=3D"left" =
+class=3D"em_padding_6" style=3D"padding-top:6px;padding-right:0px;padding-b=
+ottom:6px;padding-left:0px"><div class=3D"em_text_wrapper em_text_808080 em=
+_text_12" style=3D"font-family:Helvetica,Arial,sans-serif;font-style:normal=
+;font-weight:100;margin-top:0px;margin-bottom:0px;margin-right:0px;margin-l=
+eft:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;padding-left:0=
+px;color:#808080;font-size:12px;line-height:16px;"> Action, Adventure, Plat=
+former </div></td></tr></table><!-- /tile description --></td><td align=3D"=
+right" valign=3D"top"><!-- price tag --><table border=3D"0" cellspacing=3D"=
+0" cellpadding=3D"0"><tr><td align=3D"center" bgcolor=3D"#d4a800" class=3D"=
+em_tag em_bg_d4a800" style=3D"background-color:#d4a800"><a href=3D"https://=
+www.gog.com/game/rain_world?utm_medium=3Demail&amp;utm_source=3Dnewsletter&=
+amp;utm_campaign=3D20170331_weekly_sale&amp;utm_term=3DEN" class=3D"em_tag_=
+a em_text_14 em_text_ffffff em_border_d4a800" style=3D"border-color:#d4a800=
+;font-size:14px;line-height:20px;color:#FFF;font-family:Helvetica,Arial,san=
+s-serif;font-weight:bold;text-decoration:none;text-transform:uppercase;bord=
+er-width:1px;border-style:solid;padding-left:9px;padding-right:5px;padding-=
+top:3px;padding-bottom:5px;display:inline-block;"> -20% </a></td></tr></tab=
+le><!-- /price tag --></td></tr></table></td></tr><!-- /tile caption --></t=
+able></td></tr></table></td></tr><!-- /medium tiles --><!-- big tile --><!-=
+- /big tile --><!-- medium tiles --><tr><td align=3D"center" valign=3D"top"=
+ width=3D"600" class=3D"em_content_600 em_padding_0_6" style=3D"width:600px=
+;max-width:600px;vertical-align:top;padding-top:0px;padding-right:0px;paddi=
+ng-bottom:6px;padding-left:0px"><table border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" width=3D"100%" class=3D"em_content_wrapper" style=3D"border-st=
+yle:none;border-width:0px;margin-top:0px;margin-bottom:0px;margin-right:0px=
+;margin-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;paddi=
+ng-left:0px"><tr><td align=3D"center" valign=3D"top" width=3D"600" class=3D=
+"em_content_600 em_border_bottom_2 em_border_808080 em_image_wrapper" style=
+=3D"width:600px;max-width:600px;vertical-align:top;font-size:0px;line-heigh=
+t:0px;margin-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;pad=
+ding-top:0px;padding-bottom:0px;padding-right:0px;padding-left:0px;border-c=
+olor:#808080;border-bottom-style:solid;border-bottom-width:2px"><a href=3D"=
+https://www.gog.com/game/thimbleweed_park?utm_medium=3Demail&amp;utm_source=
+=3Dnewsletter&amp;utm_campaign=3D20170331_weekly_sale&amp;utm_term=3DEN" cl=
+ass=3D"em_image_wrapper" style=3D"font-size:0px;line-height:0px;margin-top:=
+0px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padd=
+ing-bottom:0px;padding-right:0px;padding-left:0px"><img border=3D"0" hspace=
+=3D"0" vspace=3D"0" height=3D"278" class=3D"em_image em_image_600 em_image_=
+fix" src=3D"https://images.gog.com/31e65bb51db85cdf0415a350eab784240a8490c7=
+c0857aeba2a35c2f269c646f_email_600_2x.jpg" alt=3D"Thimbleweed Park" style=
+=3D"margin-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;paddi=
+ng-top:0px;padding-bottom:0px;padding-right:0px;padding-left:0px"></a></td>=
+</tr><!-- tile caption --><tr><td align=3D"left" valign=3D"top" width=3D"60=
+0" class=3D"em_content_600 em_padding_6" style=3D"width:600px;max-width:600=
+px;vertical-align:top;padding-top:6px;padding-right:0px;padding-bottom:6px;=
+padding-left:0px"><div class=3D"em_text_wrapper em_text_808080 em_text_12" =
+style=3D"font-family:Helvetica,Arial,sans-serif;font-style:normal;font-weig=
+ht:100;margin-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;pa=
+dding-top:0px;padding-bottom:0px;padding-right:0px;padding-left:0px;color:#=
+808080;font-size:12px;line-height:16px;"> Adventure, Point-and-click, Detec=
+tive-mystery </div></td></tr><!-- /tile caption --></table></td></tr><!-- /=
+big tile --><!-- medium tiles --><!-- /big tile --><!-- medium tiles --><tr=
+><td align=3D"center" valign=3D"top" width=3D"600" class=3D"em_content_600 =
+em_padding_0_6" style=3D"width:600px;max-width:600px;vertical-align:top;pad=
+ding-top:0px;padding-right:0px;padding-bottom:6px;padding-left:0px"><table =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"em=
+_content_wrapper" style=3D"border-style:none;border-width:0px;margin-top:0p=
+x;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;paddin=
+g-bottom:0px;padding-right:0px;padding-left:0px"><tr><td align=3D"center" v=
+align=3D"top" width=3D"297" class=3D"em_content_297" style=3D"width:297px;m=
+ax-width:297px;vertical-align:top"><table border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" width=3D"100%"><tr><td align=3D"center" valign=3D"top" widt=
+h=3D"297" class=3D"em_content_297 em_border_bottom_2 em_border_ec721b em_im=
+age_wrapper" style=3D"width:297px;max-width:297px;vertical-align:top;font-s=
+ize:0px;line-height:0px;margin-top:0px;margin-bottom:0px;margin-right:0px;m=
+argin-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;padding=
+-left:0px;border-color:#ec721b;border-bottom-style:solid;border-bottom-widt=
+h:2px"><a href=3D"https://www.gog.com/game/grim_fandango_remastered?utm_med=
+ium=3Demail&amp;utm_source=3Dnewsletter&amp;utm_campaign=3D20170331_weekly_=
+sale&amp;utm_term=3DEN" class=3D"em_image_wrapper" style=3D"font-size:0px;l=
+ine-height:0px;margin-top:0px;margin-bottom:0px;margin-right:0px;margin-lef=
+t:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;padding-left:0px=
+"><img border=3D"0" hspace=3D"0" vspace=3D"0" height=3D"160" class=3D"em_im=
+age em_image_297 em_image_fix" src=3D"https://images.gog.com/95910410e5529a=
+2355205f99a459c2c5ef1186cb741d40eb41bf7dcaa9690823_email_297_2x.jpg" alt=3D=
+"Grim Fandango Remastered" style=3D"margin-top:0px;margin-bottom:0px;margin=
+-right:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;padding-right=
+:0px;padding-left:0px"></a></td></tr><!-- tile caption --><tr><td align=3D"=
+center" valign=3D"top" width=3D"297" class=3D"em_content_297" style=3D"widt=
+h:297px;max-width:297px;vertical-align:top"><table border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"em_content_wrapper" style=
+=3D"border-style:none;border-width:0px;margin-top:0px;margin-bottom:0px;mar=
+gin-right:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;padding-ri=
+ght:0px;padding-left:0px"><tr><td align=3D"left" valign=3D"top"><!-- tile d=
+escription --><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tr><=
+td align=3D"left" class=3D"em_padding_6" style=3D"padding-top:6px;padding-r=
+ight:0px;padding-bottom:6px;padding-left:0px"><div class=3D"em_text_wrapper=
+ em_text_808080 em_text_12" style=3D"font-family:Helvetica,Arial,sans-serif=
+;font-st

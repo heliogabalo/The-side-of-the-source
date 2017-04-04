@@ -1,0 +1,72 @@
+$ P11_KIT_DEBUG=all p11-kit list-modules
+(p11-kit:8584) p11_library_init_impl: initializing library
+(p11-kit:8584) p11_kit_modules_load: in
+(p11-kit:8584) _p11_conf_parse_file: reading config file: /etc/pkcs11/pkcs11.conf
+(p11-kit:8584) _p11_conf_parse_file: config value: user-config: merge
+(p11-kit:8584) _p11_conf_parse_file: reading config file: /home/helio/.config/pkcs11/pkcs11.conf
+(p11-kit:8584) load_configs_from_directory: loading module configs in: /home/helio/.config/pkcs11/modules
+(p11-kit:8584) _p11_conf_parse_file: reading config file: /home/helio/.config/pkcs11/modules/nss.module
+(p11-kit:8584) _p11_conf_parse_file: config value: module: /usr/lib64/libsoftokn3.so
+(p11-kit:8584) _p11_conf_parse_file: config value: x-init-reserved: configdir='sql:/home/test/.pki/nssdb' certPrefix='' keyPrefix='' secmod='socmod.db'
+(p11-kit:8584) _p11_conf_parse_file: config value: critical: yes
+(p11-kit:8584) _p11_conf_parse_file: config value: disable-in: firefox, thunderbird, evolution
+(p11-kit:8584) _p11_conf_parse_file: config value: log-calls: yes
+(p11-kit:8584) _p11_conf_parse_file: reading config file: /home/helio/.config/pkcs11/modules/my-module.module
+(p11-kit:8584) load_configs_from_directory: loading module configs in: /etc/pkcs11/modules
+p11-kit: invalid config filename, will be ignored in the future: /etc/pkcs11/modules/my-module
+(p11-kit:8584) _p11_conf_parse_file: reading config file: /etc/pkcs11/modules/my-module
+(p11-kit:8584) _p11_conf_parse_file: config value: module: my-pkcs11-module.so
+(p11-kit:8584) _p11_conf_parse_file: config value: critical: no
+(p11-kit:8584) load_configs_from_directory: loading module configs in: /usr/share/p11-kit/modules
+(p11-kit:8584) _p11_conf_parse_file: reading config file: /usr/share/p11-kit/modules/gnome-keyring.module
+(p11-kit:8584) _p11_conf_parse_file: config value: module: gnome-keyring-pkcs11.so
+(p11-kit:8584) _p11_conf_parse_file: config value: x-trust-store: pkcs11:library-manufacturer=GNOME%20Keyring;serial=1:XDG:DEFAULT
+(p11-kit:8584) _p11_conf_parse_file: config value: x-trust-lookup: pkcs11:library-manufacturer=GNOME%20Keyring
+(p11-kit:8584) _p11_conf_parse_file: reading config file: /usr/share/p11-kit/modules/p11-kit-trust.module
+(p11-kit:8584) _p11_conf_parse_file: config value: module: p11-kit-trust.so
+(p11-kit:8584) _p11_conf_parse_file: config value: priority: 1
+(p11-kit:8584) _p11_conf_parse_file: config value: trust-policy: yes
+(p11-kit:8584) _p11_conf_parse_file: config value: x-trust-lookup: pkcs11:library-description=PKCS%2311%20Kit%20Trust%20Module
+(p11-kit:8584) load_module_from_file_inlock: module path is relative, loading from: /usr/lib64/pkcs11
+(p11-kit:8584) load_module_from_file_inlock: loading module my-module from path: /usr/lib64/pkcs11/my-pkcs11-module.so
+p11-kit: couldn't load module: /usr/lib64/pkcs11/my-pkcs11-module.so: /usr/lib64/pkcs11/my-pkcs11-module.so: cannot open shared object file: No such file or directory
+(p11-kit:8584) load_module_from_file_inlock: module path is relative, loading from: /usr/lib64/pkcs11
+(p11-kit:8584) load_module_from_file_inlock: loading module p11-kit-trust from path: /usr/lib64/pkcs11/p11-kit-trust.so
+(p11-kit:8584) p11_library_init_impl: initializing library
+(p11-kit:8584) dlopen_and_get_function_list: opened module: /usr/lib64/pkcs11/p11-kit-trust.so
+(p11-kit:8584) load_module_from_file_inlock: module path is relative, loading from: /usr/lib64/pkcs11
+(p11-kit:8584) load_module_from_file_inlock: loading module gnome-keyring from path: /usr/lib64/pkcs11/gnome-keyring-pkcs11.so
+(p11-kit:8584) dlopen_and_get_function_list: opened module: /usr/lib64/pkcs11/gnome-keyring-pkcs11.so
+(p11-kit:8584) is_module_enabled_unlocked: enabled module 'nss' running in 'p11-kit'
+(p11-kit:8584) load_module_from_file_inlock: loading module nss from path: /usr/lib64/libsoftokn3.so
+(p11-kit:8584) dlopen_and_get_function_list: opened module: /usr/lib64/libsoftokn3.so
+(p11-kit:8584) is_module_enabled_unlocked: enabled module 'nss' running in 'p11-kit'
+(p11-kit:8584) p11_kit_modules_load: out: success
+(p11-kit:8584) managed_C_Initialize: in
+(p11-kit:8584) initialize_module_inlock_reentrant: C_Initialize: calling
+(p11-kit:8584) sys_C_Initialize: in
+(p11-kit:8584) sys_C_Initialize: doing initialization
+(p11-kit:8584) create_tokens_inlock: using paths: /etc/pki/ca-trust/source:/usr/share/pki/ca-trust-source
+(p11-kit:8584) p11_token_new: token: System Trust: /etc/pki/ca-trust/source
+(p11-kit:8584) p11_token_new: token: Default Trust: /usr/share/pki/ca-trust-source
+(p11-kit:8584) sys_C_Initialize: out: 0x0
+(p11-kit:8584) initialize_module_inlock_reentrant: C_Initialize: result: 0
+(p11-kit:8584) managed_C_Initialize: out: 0
+(p11-kit:8584) managed_C_Initialize: in
+(p11-kit:8584) initialize_module_inlock_reentrant: C_Initialize: calling
+(p11-kit:8584) initialize_module_inlock_reentrant: C_Initialize: result: 0
+(p11-kit:8584) managed_C_Initialize: out: 0
+C_Initialize
+  IN: pInitArgs = NULL
+(p11-kit:8584) managed_C_Initialize: in
+(p11-kit:8584) initialize_module_inlock_reentrant: C_Initialize: calling
+(p11-kit:8584) initialize_module_inlock_reentrant: C_Initialize: result: 3461563217
+(p11-kit:8584) managed_C_Initialize: out: 3461563217
+C_Initialize = CKR_0xCE534351
+p11-kit: nss: module failed to initialize: Unknown error
+(p11-kit:8584) p11_kit_module_release: in
+(p11-kit:8584) p11_kit_module_release: out
+(p11-kit:8584) p11_kit_modules_release: in
+(p11-kit:8584) p11_kit_modules_release: out
+(p11-kit:8584) uninit_common: uninitializing library
+(p11-kit:8584) uninit_common: uninitializing library

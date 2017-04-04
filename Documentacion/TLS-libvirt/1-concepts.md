@@ -1,4 +1,3 @@
-
 ## Contenido
 1. [Cestificados](#1c)
 2. [Configurando __libvirt__ para TLS](#2c)
@@ -124,64 +123,3 @@ uno, al principio de nuestra configuración __TLS__, en la próxima sección.
 Después, usado para firmar cada certificado _Cliente_ y _Servidor_.
 
 ![relacion-certificado-autoridad](/images/image_ca.png)
-
-
-## TLSCreateCACert
-
-1. [Pasos para crear un archivo _Certificado de Autoridad_ TLS para _libvirt_](#1)  
-    1.1 [Lista completa de pasos](#1i1)  
-    1.2 [Plantilla para el _Certificado de Autoridad_, usando un editor de textos](#1i2)  
-    1.3 [Creando un archivo _llave_: _Certificado de Autoridad_ con `certtool`](#1i3)  
-    1.4 [Combinación de la plantilla con la _llave rpivada_, para crear el _CA_](#1i4)  
-    1.5 [La plantilla no se necesitará mas, puede descartarse](#1i5)  
-    1.6 [Mover el certificado a su lugar](#1i6)  
-    - 1.6.1 [Permisos de propietario](#1i6i1)  
-    - 1.6.2 [Transferencia y configuración del certificado](#1i6i2)  
-      - 1.6.2.1 [Transfiriendo al _host1_](1i6i2i1)  
-      - 1.6.2.2 [Conexión al host1](1i6i2i2)  
-      - 1.6.2.3 [Transfiriendo el certificado al host2](1i6i2i3)  
-      - 1.6.2.4 [Conexción al host2](1i6i2i4)  
-      - 1.6.2.5 [Transfiriendo los archivos al _puesto administrativo_](1i6i2i5)  
-      - 1.6.2.6 [Conexión al _puesto administrativo_](#1i6i2i6)  
-      - 1.6.2.7 [La parte del _Certificado de Autoridad_, ya está completa](#1i6i2i7)  
-
-  1.7 [Lista completa de pasos](#1i7)  
-
-
----
-#### <a name="1">Pasos para crear un archivo _Certificado de Autoridad_ TLS para _libvirt_</a>  
-
-El primer paso en la configuración de `libvirt` para su uso con __TLS__, es crear
-el _Certificado de Autoridad__, usado para firmar todos los demás certificados que
-iremos creando.
-
-Sigue estas instrucciones para crear el __certificado__ _Certificado de Autoridad_,
-después, continúa navegando a través de las páginas para completar la configuración.
-
-#### <a name="1i1">Lista completa de pasos</a>  
-ESTO ES EL ÍNDICE GENERAL // FERENCIAS RELATIVAS:
-
-[textoAlEnlace][text-j1]
-
--x3
-[text-j1]: http://estoEsElenlace
-
-#### <a name="1i2">Plantilla para el _Certificado de Autoridad_, usando un editor de textos</a>  
-
-
-
-
-#### <a name="1i3">Creando un archivo _llave_: _Certificado de Autoridad_ con `certtool`</a>  
-#### <a name="1i4">Combinación de la plantilla con la _llave rpivada_, para crear el _CA_</a>  
-#### <a name="1i5">La plantilla no se necesitará mas, puede descartarse</a>  
-#### <a name="1i6">Mover el certificado a su lugar</a>  
-#### <a name="1i6i1">Permisos de propietario</a>  
-#### <a name="1i6i2"></a>  
-#### <a name="1i6i2i1">Transferencia y configuración del certificado</a>  
-#### <a name="1i6i2i2">Transfiriendo al _host1_</a>  
-#### <a name="1i6i2i3">Transfiriendo el certificado al host2</a>  
-#### <a name="1i6i2i4">Conexción al host2</a>  
-#### <a name="1i6i2i5">Transfiriendo los archivos al _puesto administrativo_</a>  
-#### <a name="1i6i2i6">Conexión al _puesto administrativo_</a>  
-#### <a name="1i6i2i7">La parte del _Certificado de Autoridad_, ya está completa</a>  
-#### <a name="1i7">Lista completa de pasos</a>  
