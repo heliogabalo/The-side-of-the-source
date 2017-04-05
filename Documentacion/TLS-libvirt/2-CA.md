@@ -47,7 +47,7 @@ ESTO ES EL ÍNDICE GENERAL // FERENCIAS RELATIVAS:
 
 #### <a name="1i2">Plantilla para el _Certificado de Autoridad_, usando un editor de textos</a>  
 
-![editor-template](/images/editor-template/.png)  
+![editor-template](/images/Cert-img/editor-template.png)  
 Esto es un archivo en texto plano, con los siguientes campos:  
 
   `cn` = ___Nombre de tu organización___  
