@@ -1,0 +1,433 @@
+Filtro de mail en Thunderbird no programado situa tres mensajes
+en una carpeta aún sin filtros definidos:
+
+---------------inicio mensaje--------------------
+Delivered-To: jonitjuego@gmail.com
+Received: by 10.223.173.46 with SMTP id p43csp139463wrc;
+        Sat, 1 Apr 2017 20:29:43 -0700 (PDT)
+X-Received: by 10.223.150.41 with SMTP id b38mr9186171wra.98.1491103783590;
+        Sat, 01 Apr 2017 20:29:43 -0700 (PDT)
+Return-Path: <bounce-debian-devel=jonitjuego=gmail.com@lists.debian.org>
+Received: from bendel.debian.org (bendel.debian.org. [2001:41b8:202:deb:216:36ff:fe40:4002])
+        by mx.google.com with ESMTPS id b74si9758881wmi.80.2017.04.01.20.29.43
+        for <jonitjuego@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 01 Apr 2017 20:29:43 -0700 (PDT)
+Received-SPF: pass (google.com: manual fallback record for domain of bounce-debian-devel=jonitjuego=gmail.com@lists.debian.org designates 2001:41b8:202:deb:216:36ff:fe40:4002 as permitted sender) client-ip=2001:41b8:202:deb:216:36ff:fe40:4002;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com;
+       spf=pass (google.com: manual fallback record for domain of bounce-debian-devel=jonitjuego=gmail.com@lists.debian.org designates 2001:41b8:202:deb:216:36ff:fe40:4002 as permitted sender) smtp.mailfrom=bounce-debian-devel=jonitjuego=gmail.com@lists.debian.org
+Received: from localhost (localhost [127.0.0.1])
+	by bendel.debian.org (Postfix) with QMQP
+	id 4605C15B; Sun,  2 Apr 2017 03:29:40 +0000 (UTC)
+X-Mailbox-Line: From debian-devel-request@lists.debian.org  Sun Apr  2 03:29:40 2017
+Old-Return-Path: <paul.is.wise@gmail.com>
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on bendel.debian.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-9.4 required=4.0 tests=DKIM_SIGNED,DKIM_VALID,
+	DKIM_VERIFIED,FREEMAIL_FORGED_FROMDOMAIN,FREEMAIL_FROM,
+	HEADER_FROM_DIFFERENT_DOMAINS,LDOSUBSCRIBER,LDO_WHITELIST,PHONENUMBER,
+	RCVD_IN_DNSWL_NONE autolearn=unavailable autolearn_force=no version=3.4.0
+X-Original-To: lists-debian-devel@bendel.debian.org
+Delivered-To: lists-debian-devel@bendel.debian.org
+Received: from localhost (localhost [127.0.0.1])
+	by bendel.debian.org (Postfix) with ESMTP id 98446149
+	for <lists-debian-devel@bendel.debian.org>; Sun,  2 Apr 2017 03:29:31 +0000 (UTC)
+X-Virus-Scanned: at lists.debian.org with policy bank en-ht
+X-Amavis-Spam-Status: No, score=-5.249 tagged_above=-10000 required=5.3
+	tests=[BAYES_00=-2, DKIM_SIGNED=0.1, DKIM_VALID=-0.1,
+	FREEMAIL_FORGED_FROMDOMAIN=0.249, FREEMAIL_FROM=0.001,
+	HEADER_FROM_DIFFERENT_DOMAINS=0.001, LDO_WHITELIST=-5,
+	PHONENUMBER=1.5, RCVD_IN_DNSWL_NONE=-0.0001]
+	autolearn=no autolearn_force=no
+Received: from bendel.debian.org ([127.0.0.1])
+	by localhost (lists.debian.org [127.0.0.1]) (amavisd-new, port 2525)
+	with ESMTP id kgg8NwFBK2h2 for <lists-debian-devel@bendel.debian.org>;
+	Sun,  2 Apr 2017 03:29:27 +0000 (UTC)
+X-policyd-weight: using cached result; rate: -7
+Received: from mail-oi0-x243.google.com (mail-oi0-x243.google.com [IPv6:2607:f8b0:4003:c06::243])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+	(Client CN "smtp.gmail.com", Issuer "Google Internet Authority G2" (not verified))
+	by bendel.debian.org (Postfix) with ESMTPS id D1E90132
+	for <debian-devel@lists.debian.org>; Sun,  2 Apr 2017 03:29:26 +0000 (UTC)
+Received: by mail-oi0-x243.google.com with SMTP id t11so14921324oib.1
+        for <debian-devel@lists.debian.org>; Sat, 01 Apr 2017 20:29:26 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:sender:in-reply-to:references:from:date:message-id
+         :subject:to;
+        bh=LZf/Ua+n1N7EdHhPNTBxW+rVnoEIrfOh8CN5ELoA9Cw=;
+        b=EMR5tpVc3JzG5h+tkkWLTUz3EgyY4YmdmImBEGocyBq/IUYO+YjMcfkmOTn0m115Rm
+         vpmE7tZGA4GeONo3HYmlnr3shXHUluBSLg6TSGOKhaJctuw+QXZ9TBDSCRx7dGNUcX+Y
+         QBmwGFey0A2nKOOCm6Ab3GvIZEf7Qr1wYGyM9DsRSrqxioVpCYcbOtXNUDL4vZkbL5XH
+         rY1T6owsnMGcx62RiiLP+pYkFtgkcUzcCj97Cf/gi67j4l429qDxzub5m+6iBN4VNCdJ
+         3oyBVlEgQi++YFiL3qz69xBpBBRa7k4yWA5atedgOK/OENpspNLOj/TdpScvmKb8NQB1
+         ckVA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:sender:in-reply-to:references:from
+         :date:message-id:subject:to;
+        bh=LZf/Ua+n1N7EdHhPNTBxW+rVnoEIrfOh8CN5ELoA9Cw=;
+        b=DmC6ONLWo6aRtWLto1dyntjsELXImgcE5hZzfW/wOF/H4BVrBP9+67p9vTBZqRd7GK
+         vn5jngqm1d3piNik/q6kYNOtC6bllR3fDyFFEFGfkEOGe6ztR4ZZy4BWzHoOxdKkS4JV
+         BkQHIdWvl/nwOv1kjy0JefNDSiMy018G2zwVny0GL+Oq8mLjHwJeDqP/lvgT9IU75s1Q
+         UCYq3NX6YZTlBmMl8nm1CTjDZMmGLe36gpSpQNdRVAC54550beOkhR2OaX8UTe1Qr3+N
+         gQD3WwpCybXTbFLxgxi+N70yzcfCPDjAX3X59Q2QX6/N0EDjNxddK2m6Tb1y9DPFw4ks
+         tVCQ==
+X-Gm-Message-State: AFeK/H0Oi4BBLdpw+vnuY1rtul56VOe20qqMmgsPDaKYIoTJNyKx6gTurHunplrVbPsshMzH7eUkNMhffNtGng==
+X-Received: by 10.157.15.253 with SMTP id m58mr6324049otd.264.1491103762456;
+ Sat, 01 Apr 2017 20:29:22 -0700 (PDT)
+MIME-Version: 1.0
+Sender: paul.is.wise@gmail.com
+Received: by 10.74.110.214 with HTTP; Sat, 1 Apr 2017 20:29:22 -0700 (PDT)
+In-Reply-To: <20170401230629.jxhy7k3vipkhraeh@jadzia.comodo.priv.at>
+References: <20170401224017.nlmgdg4ulf5b5mjk@iris.silentflame.com> <20170401230629.jxhy7k3vipkhraeh@jadzia.comodo.priv.at>
+From: Paul Wise <pabs@debian.org>
+Date: Sun, 2 Apr 2017 11:29:22 +0800
+X-Google-Sender-Auth: 6D1w0kN3tvCvcvKm31GZ_VUtYRs
+Message-ID: <CAKTje6FZsAJdejJCCKnryts6P2BF0zkDU9LEZjjJtjCxA9nZLw@mail.gmail.com>
+Subject: Re: Convenient access to Debian keyrings
+To: debian-devel@lists.debian.org, pkg-gnupg-maint@lists.alioth.debian.org, 
+	keyring-maint@debian.org
+Content-Type: text/plain; charset=UTF-8
+X-Rc-Virus: 2007-09-13_01
+X-Rc-Spam: 2008-11-04_01
+Resent-Message-ID: <oC0jfWudCkC.A.gmH.kAH4YB@bendel>
+Resent-From: debian-devel@lists.debian.org
+X-Mailing-List: <debian-devel@lists.debian.org> archive/latest/325936
+X-Loop: debian-devel@lists.debian.org
+List-Id: <debian-devel.lists.debian.org>
+List-URL: <https://lists.debian.org/debian-devel/>
+List-Post: <mailto:debian-devel@lists.debian.org>
+List-Help: <mailto:debian-devel-request@lists.debian.org?subject=help>
+List-Subscribe: <mailto:debian-devel-request@lists.debian.org?subject=subscribe>
+List-Unsubscribe: <mailto:debian-devel-request@lists.debian.org?subject=unsubscribe>
+Precedence: list
+Resent-Sender: debian-devel-request@lists.debian.org
+List-Archive: https://lists.debian.org/msgid-search/CAKTje6FZsAJdejJCCKnryts6P2BF0zkDU9LEZjjJtjCxA9nZLw@mail.gmail.com
+Resent-Date: Sun,  2 Apr 2017 03:29:40 +0000 (UTC)
+
+On Sun, Apr 2, 2017 at 7:06 AM, gregor herrmann wrote:
+
+> % crontab -l | grep debian-keyring
+> 30 17 * * * /usr/bin/rsync -rlptDq "keyring.debian.org::keyrings/keyrings/*.gpg" /home/gregoa/.gnupg/debian-keyring
+
+The rsync protocol is unencrypted, I'd suggest switching this to SSH
+(one colon instead of two). You could also use rsync over TLS on port
+1873 (uses the same cert as via http). I couldn't easily work out how
+to do it with stunnel but the following works with socat. I thought
+there was also a way to verify the keyring when it was at rest but
+can't find where I saw that.
+
+rsync --rsh 'sh -c "socat OPENSSL:keyring.debian.org:1873 STDIO"'
+keyring.debian.org::keyrings .
+
+-- 
+bye,
+pabs
+
+https://wiki.debian.org/PaulWise
+
+
+---------------final mensaje---------------------
+
+---------------inicio mensaje--------------------
+Delivered-To: jonitjuego@gmail.com
+Received: by 10.223.173.46 with SMTP id p43csp92325wrc;
+        Sat, 1 Apr 2017 16:06:58 -0700 (PDT)
+X-Received: by 10.28.29.138 with SMTP id d132mr3520131wmd.40.1491088018309;
+        Sat, 01 Apr 2017 16:06:58 -0700 (PDT)
+Return-Path: <bounce-debian-devel=jonitjuego=gmail.com@lists.debian.org>
+Received: from bendel.debian.org (bendel.debian.org. [82.195.75.100])
+        by mx.google.com with ESMTPS id a128si9126057wmc.82.2017.04.01.16.06.58
+        for <jonitjuego@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 01 Apr 2017 16:06:58 -0700 (PDT)
+Received-SPF: pass (google.com: manual fallback record for domain of bounce-debian-devel=jonitjuego=gmail.com@lists.debian.org designates 82.195.75.100 as permitted sender) client-ip=82.195.75.100;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: manual fallback record for domain of bounce-debian-devel=jonitjuego=gmail.com@lists.debian.org designates 82.195.75.100 as permitted sender) smtp.mailfrom=bounce-debian-devel=jonitjuego=gmail.com@lists.debian.org
+Received: from localhost (localhost [127.0.0.1])
+	by bendel.debian.org (Postfix) with QMQP
+	id F273D109; Sat,  1 Apr 2017 23:06:54 +0000 (UTC)
+X-Mailbox-Line: From debian-devel-request@lists.debian.org  Sat Apr  1 23:06:54 2017
+Old-Return-Path: <gregoa@debian.org>
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on bendel.debian.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-18.2 required=4.0 tests=FOURLA,LDOSUBSCRIBER,
+	LDO_WHITELIST,PGPSIGNATURE,RCVD_IN_DNSWL_MED autolearn=unavailable
+	autolearn_force=no version=3.4.0
+X-Original-To: lists-debian-devel@bendel.debian.org
+Delivered-To: lists-debian-devel@bendel.debian.org
+Received: from localhost (localhost [127.0.0.1])
+	by bendel.debian.org (Postfix) with ESMTP id 5179CED
+	for <lists-debian-devel@bendel.debian.org>; Sat,  1 Apr 2017 23:06:46 +0000 (UTC)
+X-Virus-Scanned: at lists.debian.org with policy bank en-ht
+X-Amavis-Spam-Status: No, score=-14.2 tagged_above=-10000 required=5.3
+	tests=[BAYES_00=-2, FOURLA=0.1, LDO_WHITELIST=-5, PGPSIGNATURE=-5,
+	RCVD_IN_DNSWL_MED=-2.3] autolearn=ham autolearn_force=no
+Received: from bendel.debian.org ([127.0.0.1])
+	by localhost (lists.debian.org [127.0.0.1]) (amavisd-new, port 2525)
+	with ESMTP id kwqaC7pMgqIh for <lists-debian-devel@bendel.debian.org>;
+	Sat,  1 Apr 2017 23:06:41 +0000 (UTC)
+X-policyd-weight: using cached result; rate: -5
+Received: from colleen.colgarra.priv.at (colleen.colgarra.priv.at [IPv6:2a02:5d8:2:5:f:f:f:f])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(Client did not present a certificate)
+	by bendel.debian.org (Postfix) with ESMTPS id 9FC6EC8
+	for <debian-devel@lists.debian.org>; Sat,  1 Apr 2017 23:06:41 +0000 (UTC)
+Received: from [2001:15c0:66bc:0:f2de:f1ff:fe77:7ecb] (helo=jadzia.comodo.priv.at)
+	by colleen.colgarra.priv.at with esmtpsa (TLS1.2:ECDHE_RSA_AES_256_GCM_SHA384:256)
+	(Exim 4.87)
+	(envelope-from <gregoa@debian.org>)
+	id 1cuS6Q-0002og-Br; Sun, 02 Apr 2017 01:06:38 +0200
+Received: from gregoa by jadzia.comodo.priv.at with local (Exim 4.89)
+	(envelope-from <gregoa@debian.org>)
+	id 1cuS6P-0008Ty-Gn; Sun, 02 Apr 2017 01:06:37 +0200
+Date: Sun, 2 Apr 2017 01:06:29 +0200
+From: gregor herrmann <gregoa@debian.org>
+To: debian-devel@lists.debian.org, pkg-gnupg-maint@lists.alioth.debian.org
+Subject: Re: Convenient access to Debian keyrings
+Message-ID: <20170401230629.jxhy7k3vipkhraeh@jadzia.comodo.priv.at>
+Mail-Followup-To: debian-devel@lists.debian.org,
+	pkg-gnupg-maint@lists.alioth.debian.org
+References: <20170401224017.nlmgdg4ulf5b5mjk@iris.silentflame.com>
+MIME-Version: 1.0
+In-Reply-To: <20170401224017.nlmgdg4ulf5b5mjk@iris.silentflame.com>
+X-Face: -kg'V!M2hYTiiEt:oj$rToa+c^7N.t}]V^j}|%+]%3J&tOm^9mc^1-#9o=\8VJpV7b~nxIM!qu>r_:w\EtWQA01;$jp>,cgp9EWV:i9B]LCgiNn\jA=un9d-ZcRzyq~9vYUf*tx9B}de^fH5Q(d(_N"0WXs%Jh!~.*g.iC=bSTqL:/EE0Y~\g_QCvwS6=cv]$tB7z<Xh[Wxa.2d"m?]^f
+X-Temperature-Innsbruck: 15 C (2017-04-02 01:03:01 CEST)
+User-Agent: NeoMutt/20170306 (1.8.0)
+Content-Type: multipart/signed; boundary="----------=_1491087997-1926-33"; micalg="pgp-sha512"; protocol="application/pgp-signature"
+X-Rc-Virus: 2007-09-13_01
+X-Rc-Spam: 2008-11-04_01
+Resent-Message-ID: <P1VGhFXHjFE.A.AfE.OKD4YB@bendel>
+Resent-From: debian-devel@lists.debian.org
+X-Mailing-List: <debian-devel@lists.debian.org> archive/latest/325935
+X-Loop: debian-devel@lists.debian.org
+List-Id: <debian-devel.lists.debian.org>
+List-URL: <https://lists.debian.org/debian-devel/>
+List-Post: <mailto:debian-devel@lists.debian.org>
+List-Help: <mailto:debian-devel-request@lists.debian.org?subject=help>
+List-Subscribe: <mailto:debian-devel-request@lists.debian.org?subject=subscribe>
+List-Unsubscribe: <mailto:debian-devel-request@lists.debian.org?subject=unsubscribe>
+Precedence: list
+Resent-Sender: debian-devel-request@lists.debian.org
+List-Archive: https://lists.debian.org/msgid-search/20170401230629.jxhy7k3vipkhraeh@jadzia.comodo.priv.at
+Resent-Date: Sat,  1 Apr 2017 23:06:54 +0000 (UTC)
+
+------------=_1491087997-1926-33
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+
+On Sat, 01 Apr 2017 15:40:17 -0700, Sean Whitton wrote:
+
+> Currently, I have mutt pass `--keyring /usr/share/keyrings/...` for each
+> of the keyrings, so that I can verify signatures on e-mails.  It would
+> be more natural to just add `keyring /usr/share/keyrings/...` to
+> ~/.gnupg/gpg.conf, but when I tried this I often got errors from gpg
+> trying to write to the keyrings in /usr/share/keyrings.  Is there some
+> way to mark a keyring as read-only?
+
+I'm using the keyrings from keyring.debian.org instead of the
+packaged ones. That way they are up to date and I don't have the
+write errors:
+
+% crontab -l | grep debian-keyring
+30 17 * * * /usr/bin/rsync -rlptDq "keyring.debian.org::keyrings/keyrings/*.gpg" /home/gregoa/.gnupg/debian-keyring
+
+(copied from someone/somewhere)
+
+% grep debian-keyring ~/.gnupg/gpg.conf 
+keyring /home/gregoa/.gnupg/debian-keyring/debian-keyring.gpg
+keyring /home/gregoa/.gnupg/debian-keyring/debian-maintainers.gpg
+keyring /home/gregoa/.gnupg/debian-keyring/debian-nonupload.gpg
+keyring /home/gregoa/.gnupg/debian-keyring/debian-role-keys.gpg
+keyring /home/gregoa/.gnupg/debian-keyring/emeritus-keyring.gpg
+
+
+Cheers,
+gregor
+
+-- 
+ .''`.  https://info.comodo.priv.at/ - Debian Developer https://www.debian.org
+ : :' : OpenPGP fingerprint D1E1 316E 93A7 60A8 104D  85FA BB3A 6801 8649 AA06
+ `. `'  Member of VIBE!AT & SPI, fellow of the Free Software Foundation Europe
+   `-   NP: Status Quo: Caroline
+
+------------=_1491087997-1926-33
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Disposition: inline; filename="signature.asc"
+Content-Transfer-Encoding: 7bit
+Content-Description: Digital Signature
+
+-----BEGIN PGP SIGNATURE-----
+
+iQKTBAEBCgB9FiEE0eExbpOnYKgQTYX6uzpoAYZJqgYFAljgMn1fFIAAAAAALgAo
+aXNzdWVyLWZwckBub3RhdGlvbnMub3BlbnBncC5maWZ0aGhvcnNlbWFuLm5ldEQx
+RTEzMTZFOTNBNzYwQTgxMDREODVGQUJCM0E2ODAxODY0OUFBMDYACgkQuzpoAYZJ
+qgZEgA/8DTI/wwJVvhyKLKZ/eE5n/B3TaS8CWhq7E5wej6GFji2FZL7RZPaarn+G
+rHHuKEIG1AxyJ0envHvNZovegSWBU/MtfRjYTUDTmuQSQeq9vO79Q1fswR0NmDsr
+Gek3cxQO/t22Aj82CezRXnuF7lSbA9W07xGW0vOwQcKHDtNH5Ycg0q8i+zaCoBfG
+oFK5QiY1UwWSq7C3ZNkNxsAHPbdzbSMK5nlBOO2olPo8pkSYkDdaGzgu/HQtbsyL
+PmLRJamuj9zp/np+NY7hFfGmln7vgxz9JcwH/NEsNLPcyhh87AWYSN66R3CxKa5Q
+1OugVKew1dGRfCOcINy8OVf+N7LatijfdoS13DKcTw7kjUa1lSO/oc/PnabLIbxY
+tTz2bo9MkfyAWIQutLOFEiu4O1SBFjgdoNdIJLaMJl9MB0Lzd3FY1Os2abWuVXXQ
+0EiPdJDS6raxCktTO+zekAvEGczF/uM6bRhhePJ9Z3LozuNoMiysb4Ak+38NyRAZ
+bfOuVNC0NjUA510eHZUZgEyCd7+Pr5l7R3FgX3NaE+ahd1CSsUl5/NEllDbuxcJZ
+ORduTmPpG7NGnJREzVbPYnyeJs50KCeWmRhKB5xeJqHdxUJMkIQRwe2FQ3s4YTmF
+DTFIdPCAj82lpzKr8T/Mu7lDq+B+wKKxG8+I0tLBNV8hRrswf1E=
+=rLdN
+-----END PGP SIGNATURE-----
+
+------------=_1491087997-1926-33--
+
+
+---------------final mensaje---------------------
+
+---------------inicio mensaje--------------------
+Delivered-To: jonitjuego@gmail.com
+Received: by 10.223.173.46 with SMTP id p43csp20239wrc;
+        Sat, 1 Apr 2017 10:51:27 -0700 (PDT)
+X-Received: by 10.223.167.66 with SMTP id e2mr7858870wrd.48.1491069087621;
+        Sat, 01 Apr 2017 10:51:27 -0700 (PDT)
+Return-Path: <bounce-debian-devel=jonitjuego=gmail.com@lists.debian.org>
+Received: from bendel.debian.org (bendel.debian.org. [82.195.75.100])
+        by mx.google.com with ESMTPS id 129si8328939wmh.108.2017.04.01.10.51.27
+        for <jonitjuego@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 01 Apr 2017 10:51:27 -0700 (PDT)
+Received-SPF: pass (google.com: manual fallback record for domain of bounce-debian-devel=jonitjuego=gmail.com@lists.debian.org designates 82.195.75.100 as permitted sender) client-ip=82.195.75.100;
+Authentication-Results: mx.google.com;
+       dkim=neutral (bad format) header.i=@eddelbuettel.com;
+       spf=pass (google.com: manual fallback record for domain of bounce-debian-devel=jonitjuego=gmail.com@lists.debian.org designates 82.195.75.100 as permitted sender) smtp.mailfrom=bounce-debian-devel=jonitjuego=gmail.com@lists.debian.org
+Received: from localhost (localhost [127.0.0.1])
+	by bendel.debian.org (Postfix) with QMQP
+	id A1E54150; Sat,  1 Apr 2017 17:51:24 +0000 (UTC)
+X-Mailbox-Line: From debian-devel-request@lists.debian.org  Sat Apr  1 17:51:24 2017
+Old-Return-Path: <debbugs@buxtehude.debian.org>
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on bendel.debian.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-7.3 required=4.0 tests=DKIM_SIGNED,LDO_WHITELIST,
+	RCVD_IN_DNSWL_MED,RP_MATCHES_RCVD,T_DKIM_INVALID autolearn=unavailable
+	autolearn_force=no version=3.4.0
+X-Original-To: lists-debian-devel@bendel.debian.org
+Delivered-To: lists-debian-devel@bendel.debian.org
+Received: from localhost (localhost [127.0.0.1])
+	by bendel.debian.org (Postfix) with ESMTP id 0F8D015E
+	for <lists-debian-devel@bendel.debian.org>; Sat,  1 Apr 2017 17:51:15 +0000 (UTC)
+X-Virus-Scanned: at lists.debian.org with policy bank en-ht
+X-Amavis-Spam-Status: No, score=-9.191 tagged_above=-10000 required=5.3
+	tests=[BAYES_00=-2, DKIM_SIGNED=0.1, LDO_WHITELIST=-5,
+	RCVD_IN_DNSWL_MED=-2.3, RP_MATCHES_RCVD=-0.001, T_DKIM_INVALID=0.01]
+	autolearn=ham autolearn_force=no
+Received: from bendel.debian.org ([127.0.0.1])
+	by localhost (lists.debian.org [127.0.0.1]) (amavisd-new, port 2525)
+	with ESMTP id qmFbioIG9qyb for <lists-debian-devel@bendel.debian.org>;
+	Sat,  1 Apr 2017 17:51:08 +0000 (UTC)
+Received: from buxtehude.debian.org (buxtehude.debian.org [IPv6:2607:f8f0:614:1::1274:39])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+	(Client CN "buxtehude.debian.org", Issuer "Debian SMTP CA" (not verified))
+	by bendel.debian.org (Postfix) with ESMTPS id 28082EE;
+	Sat,  1 Apr 2017 17:51:08 +0000 (UTC)
+Received: from debbugs by buxtehude.debian.org with local (Exim 4.84_2)
+	(envelope-from <debbugs@buxtehude.debian.org>)
+	id 1cuNB2-0007q5-ST; Sat, 01 Apr 2017 17:51:04 +0000
+X-Loop: owner@bugs.debian.org
+Subject: Bug#859291: ITP: r-cran-viridislite -- Default Color Maps from 'matplotlib' (Lite Version)
+Reply-To: Dirk Eddelbuettel <edd@debian.org>, 859291@bugs.debian.org
+Resent-From: Dirk Eddelbuettel <edd@debian.org>
+Original-Sender: Dirk Eddelbuettel <dirk.eddelbuettel@gmail.com>
+Resent-To: debian-bugs-dist@lists.debian.org
+Resent-CC: edd@debian.org, debian-devel@lists.debian.org, wnpp@debian.org
+X-Loop: owner@bugs.debian.org
+Resent-Date: Sat, 01 Apr 2017 17:51:02 +0000
+Resent-Message-ID: <handler.859291.B.149106886428997@bugs.debian.org>
+X-Debian-PR-Message: report 859291
+X-Debian-PR-Package: wnpp
+X-Debian-PR-Keywords: 
+Received: via spool by submit@bugs.debian.org id=B.149106886428997
+          (code B); Sat, 01 Apr 2017 17:51:02 +0000
+Received: (at submit) by bugs.debian.org; 1 Apr 2017 17:47:44 +0000
+Received: from mail-it0-x22b.google.com ([2607:f8b0:4001:c0b::22b])
+	by buxtehude.debian.org with esmtps (TLS1.2:ECDHE_RSA_AES_128_GCM_SHA256:128)
+	(Exim 4.84_2)
+	(envelope-from <dirk.eddelbuettel@gmail.com>)
+	id 1cuN7o-0007XN-6p
+	for submit@bugs.debian.org; Sat, 01 Apr 2017 17:47:44 +0000
+Received: by mail-it0-x22b.google.com with SMTP id e75so28479624itd.1
+        for <submit@bugs.debian.org>; Sat, 01 Apr 2017 10:47:43 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:sender:dkim-signature:from:to:subject:date
+         :message-id:mime-version;
+        bh=PSiO6kKbAljHDZbdYDNljovlXVgIS7DyYnZIppwfPsQ=;
+        b=WPLIEDPSwcraZOuTj8+/mjWuDHMcJRNXKL5kUqhUuQ+yfni4YNY9+ojDMdQo+TeQpQ
+         o8DN22UKX+XmFnkP+BoKHprp5V3u6NvK4EAQw38C3WpT0T3I/RJqEHFI8HNLFFq0L9Xp
+         8gLE11C0TQrMh0Wi4+sSCik2vHKKuVajz6MXfuPXysYyGtdT+FE7FjKUk7pFHnhsjzhj
+         C1OEDo9KRJKgbp5KHWrAOJBBue+zZ6pc+KuYO/dzxD7QbnIcsYIyOtvPus/qh3uqHfbZ
+         +xZMHZ9aNRBHzF5MDZV5yXbo2TXd2OJ+gx1L2HVgvEyxbauZLJPA309KOgGQ6nXvO6mJ
+         boZA==
+X-Gm-Message-State: AFeK/H3+BMesCbyi0+APshxVAkboEsghqIFBLZYZcVFLkqxObwmh9OzN
+	00cD2pmB6zBXdNwBH3g=
+X-Received: by 10.36.61.79 with SMTP id n76mr3395655itn.94.1491068857206;
+        Sat, 01 Apr 2017 10:47:37 -0700 (PDT)
+Received: from max.eddelbuettel.com (c-98-227-64-95.hsd1.il.comcast.net. [98.227.64.95])
+        by smtp.googlemail.com with ESMTPSA id o14sm5074293ioe.49.2017.04.01.10.47.36
+        for <submit@bugs.debian.org>
+        (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
+        Sat, 01 Apr 2017 10:47:36 -0700 (PDT)
+Sender: Dirk Eddelbuettel <dirk.eddelbuettel@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=eddelbuettel.com; s=20161230; h=true;
+	bh=PSiO6kKbAljHDZbdYDNljovlXVgIS7DyYnZIppwfPsQ=; b=KQoV2jR1G7k6k5OoPmh7jW+asC
+	/dEHCj83GHfh1vO/9aNOQq/UwSPDfNy4GLgTflVNTsIO6thrCg/iTPNZvpy/RTPuMdtplxbvWGW8P
+	4kj3i9e0e7xYSBEFoITgu6NBfZ+lDzATtB5BR+N+9YkENy49fLqflbPZFLe9CIIsXoA4=;
+Received: from edd by max.eddelbuettel.com with local (Exim 4.87)
+	(envelope-from <dirk@eddelbuettel.com>)
+	id 1cuN7f-0007pf-So
+	for submit@bugs.debian.org; Sat, 01 Apr 2017 12:47:35 -0500
+From: Dirk Eddelbuettel <edd@debian.org>
+To: Debian Bug Tracking System <submit@bugs.debian.org> 
+Date: Sat, 01 Apr 2017 12:47:35 -0500
+Message-ID: <87y3vk3tqg.fsf@max.eddelbuettel.com>
+MIME-Version: 1.0
+Content-Type: text/plain
+Delivered-To: submit@bugs.debian.org
+X-Rc-Virus: 2007-09-13_01
+X-Rc-Spam: 2008-11-04_01
+X-Mailing-List: <debian-devel@lists.debian.org> archive/latest/325933
+X-Loop: debian-devel@lists.debian.org
+List-Id: <debian-devel.lists.debian.org>
+List-URL: <https://lists.debian.org/debian-devel/>
+List-Post: <mailto:debian-devel@lists.debian.org>
+List-Help: <mailto:debian-devel-request@lists.debian.org?subject=help>
+List-Subscribe: <mailto:debian-devel-request@lists.debian.org?subject=subscribe>
+List-Unsubscribe: <mailto:debian-devel-request@lists.debian.org?subject=unsubscribe>
+Precedence: list
+Resent-Sender: debian-devel-request@lists.debian.org
+List-Archive: https://lists.debian.org/msgid-search/87y3vk3tqg.fsf@max.eddelbuettel.com
+
+
+Package: wnpp
+Owner: Dirk Eddelbuettel <edd@debian.org>
+Severity: wishlist
+
+* Package name    : r-cran-viridislite
+  Version         : 0.2.0
+  Upstream Author : Simon Garnier
+* URL or Web page : https://cloud.r-project.org/web/packages/viridisLite/index.html
+* License         : MIT
+  Description     : Default Color Maps from 'matplotlib' (Lite Version)
+
+The already-existing fuller-scale package r-cran-viridis now has a
+Build-Depends on this ligher version.
+
+It provides color scales from (Python's) matplotlib which are becoming quite
+popular.
+
+Dirk
+
+-- 
+http://dirk.eddelbuettel.com | @eddelbuettel | edd@debian.org
+
+
+---------------final mensaje---------------------
