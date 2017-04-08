@@ -12,7 +12,7 @@
 
 Los certificados son una _forma_ segura de comunicarnos entre computadoras. A esta _forma_ de
 establecer la comunicación la llamamos _protocolo_. Hoy en día existen dos tipos de protocolos
-ampliamente utilizados; protocolos SSl y TLS.
+ampliamente utilizados; protocolos SSL y TLS.
 
 En esta documentación se hablará exclusivamente del protocolo TLS, que es una versión mas
 moderna o actualizada del protocolo SSL(capa de sockets seguros).

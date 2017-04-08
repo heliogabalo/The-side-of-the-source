@@ -169,17 +169,210 @@ apropiadamente.
 
     Signing certificate...  
 
+Esto creará el archivo _TLS_ Certificado de Servidor `host2_server_certificate.pem`
+para el segundo huesped.
 
-
+    # ls -la *server_certificate.pem
+    -rw-r--r--. 1 root root 1164 Aug 25 14:05 host1_server_certificate.pem
+    -rw-r--r--. 1 root root 1164 Aug 25 14:06 host2_server_certificate.pem
+    ******************************* <-- just to avoid md confilcts(deprecated).  
 
 #### <a name="1i1i4">La plantillas pueden ser descartadas</a>  
+
+![borrarPlantilla](/images/Cert-img/trashTemplate.png)  
+
+    # rm host1_server_template.info host2_server_template.info
+
 #### <a name="1i2">Moviendo los Certificados a su lugar</a>  
+
+Ahora que el cirtificado ha sido creado, es el momente de moverlo a su lugar.
+
+![moverCertAsuLugar](/images/Cert-img/movCertToHost.png)  
+
+La localización  -por defecto, donde el demonio _libvirt_ busca el archivo
+`servercert.pem`, es en `/etc/pki/libvirt/`.
+Para la la _llave_, la ruta será `/etc/pki/libvirt/private/`. Así que moveremos
+los archivos a su lugar respectivo.
+
+El archivo de _llave privada_, debe mantenerse en lugar seguro, donde sólo pueda
+ser accedido por el usuario `root`. El archivo _Certificado de Servidos_, es algo
+menos sensible.
+
 #### <a name="1i2i1">Propietario, Permisos, y etiquetas SELinux</a>  
+
+La pertenencia y permisos de ambos archivos, será ajustada consecuentemente.
+Los directorios son los siguientes:
+
+    Directory: /etc/pki/libvirt/
+    Ownership: root:qemu
+    Permissions: u=rwx,g=rx,o=rx (755)
+    SELinux label: system_u:object_r:cert_t:s0
+
+    Server Certificate path: /etc/pki/libvirt/servercert.pem
+    Ownership: root:qemu
+    Permissions: u=r,g=r,o= (440)
+    SELinux label: system_u:object_r:cert_t:s0
+
+    Directory: /etc/pki/libvirt/private/
+    Ownership: root:qemu
+    Permissions: u=rwx,g=rx,o= (750)
+    SELinux label: system_u:object_r:cert_t:s0
+
+    Private Key for Server Certificate: /etc/pki/libvirt/private/serverkey.pem
+    Ownership: root:qemu
+    Permissions: u=r,g=r,o= (440)
+    SELinux label: system_u:object_r:cert_t:s0
+
+Las etiquetas _SELinux_, únicamente son relevantes si el servidor tiene activado
+_SELinux_. De qualquier otra forma, pueden ser ignoradas.
+
+Otras consideraciones como prácticas de seguridad y requisitos específicos para
+el servidor, deberán ser atendidas igualmente.
+
 #### <a name="1i2i2">Transfiriendo los archivos y, congirurándolos</a>  
+
+En el ejemplo de abajo, se utiliza la `scp` para transferir el par de _llaves_,
+a cada huestped. Después, se conecta a cada uno de ellos, para colocarlos en su
+lugar correcto.
+
 #### <a name="1i2i2i1">Transfiriendo los archivos al host1</a>  
+
+![moverElparAsuLugar](/images/Cert-img/transferToHost1.png)  
+> El nombre de los archivos es cambiado al transferirlos.
+
+    # scp -p host1_server_certificate.pem someuser@host1:servercert.pem
+    someuser@host1's password:
+    host1_server_certificate.pem           100% 1164     1.1KB/s   00:00
+
+    # scp -p host1_server_key.pem someuser@host1:serverkey.pem
+    someuser@host1's password:
+    host1_server_key.pem                   100% 1675     1.6KB/s   00:00
+
 #### <a name="1i2i2i2">Conexión al host1</a>  
+
+Primero son creados los directorios y asignados los permisos(del directorio):
+
+    # mkdir -p /etc/pki/libvirt/private
+    # chmod 755 /etc/pki/libvirt
+    # chmod 750 /etc/pki/libvirt/private
+
+Después son movidos los archivos y ajustados sus permisos:
+
+    # mv servercert.pem /etc/pki/libvirt
+    # mv serverkey.pem /etc/pki/libvirt/private  
+
+    # chgrp qemu /etc/pki/libvirt \
+                  /etc/pki/libvirt/servercert.pem \
+                  /etc/pki/libvirt/private \
+                  /etc/pki/libvirt/private/serverkey.pem  
+
+    # chmod 440 /etc/pki/libvirt/servercert.pem \
+                /etc/pki/libvirt/private/serverkey.pem  
+
+Si el servidor tiene SELinux activado, se actualizan las etiquetas:
+
+    # restorecon -R /etc/pki/libvirt \
+                    /etc/pki/libvirt/private  
+
+    $ ls -laZ /etc/pki/libvirt
+    /etc/pki/libvirt:
+    total 20
+    drwxr-xr-x  3 root qemu system_u:object_r:cert_t:s0 .
+    drwxr-xr-x. 8 root root system_u:object_r:cert_t:s0 ..
+    drwxr-x---  2 root qemu system_u:object_r:cert_t:s0 private
+    -r--r-----. 1 root qemu system_u:object_r:cert_t:s0 servercert.pem
+
+    $ ls -laZ /etc/pki/libvirt/private/  
+    /etc/pki/libvirt/private/:
+    total 16
+    drwxr-x---  2 root qemu system_u:object_r:cert_t:s0
+    drwxr-xr-x  3 root qemu system_u:object_r:cert_t:s0 ..
+    -r--r-----. 1 root qemu system_u:object_r:cert_t:s0 serverkey.pem
+
 #### <a name="1i2i2i3">Transfiriendo los archivos al host2</a>  
+
+![moverElparAsuLugarHost2](/images/Cert-img/transferToHost2.png)  
+> El nombre de los archivos es cambiado al transferirlos.
+
+    # scp -p host2_server_certificate.pem someuser@host2:servercert.pem
+    someuser@host2's password:
+    host2_server_certificate.pem           100% 1164     1.2KB/s   00:00
+
+    # scp -p host2_server_key.pem someuser@host2:serverkey.pem
+    someuser@host2's password:
+    host2_server_key.pem                   100% 1675     1.8KB/s   00:00
+
 #### <a name="1i2i2i4">Conexción al host2</a>  
+
+Primero son creados los directorios y asignados los permisos(del directorio):
+
+    $ sudo mkdir -p /etc/pki/libvirt/private
+    $ sudo chmod 755 /etc/pki/libvirt
+    $ sudo chmod 750 /etc/pki/libvirt/private
+
+Después son movidos los archivos y ajustados sus permisos:
+
+    # mv servercert.pem /etc/pki/libvirt
+    # mv serverkey.pem /etc/pki/libvirt/private  
+
+    # chgrp qemu /etc/pki/libvirt \
+                  /etc/pki/libvirt/servercert.pem \
+                  /etc/pki/libvirt/private \
+                  /etc/pki/libvirt/private/serverkey.pem  
+
+    # chmod 440 /etc/pki/libvirt/servercert.pem \
+    /etc/pki/libvirt/private/serverkey.pem  
+
+Si el servidor tiene SELinux activado, se actualizan las etiquetas:
+
+    # restorecon -R /etc/pki/libvirt \
+                    /etc/pki/libvirt/private  
+
+    $ ls -laZ /etc/pki/libvirt
+    /etc/pki/libvirt:
+    total 20
+    drwxr-xr-x  3 root qemu system_u:object_r:cert_t:s0 .
+    drwxr-xr-x. 8 root root system_u:object_r:cert_t:s0 ..
+    drwxr-x---  2 root qemu system_u:object_r:cert_t:s0 private
+    -r--r-----. 1 root qemu system_u:object_r:cert_t:s0 servercert.pem
+
+    $ ls -laZ /etc/pki/libvirt/private/  
+    /etc/pki/libvirt/private/:
+    total 16
+    drwxr-x---  2 root qemu system_u:object_r:cert_t:s0
+    drwxr-xr-x  3 root qemu system_u:object_r:cert_t:s0 ..
+    -r--r-----. 1 root qemu system_u:object_r:cert_t:s0 serverkey.pem
+
 #### <a name="1i2i2i5">La configurarión del certificado de servidor, está ahora completa</a>  
+
+![ConfiguraciónCompleta](/images/Cert-img/setupComplete.png)  
+
 #### <a name="1i2i3">Sobreescribiendo la ruta por defecto</a>  
+
+Si es necesario que el archivo de _Certificado_ y la _llave_, estén en otro
+lugar del servidor, deberá ajustarse mediante el archivo de configuaración
+`/etc/libvirt/libvirtd.conf`.
+
+Las dos variables son:
+
+    cert_file = "Full path to new Server Certificate location"
+    key_file = "Full path to new Server Certificate Private Key location"
+
+La ruta debe ser encerrada entre comillas dobles `"`. Por ejemplo:
+
+    cert_file = "/opt/libvirt/etc/pki/libvirt/servercert.pem"
+    key_file = "/opt/libvirt/etc/pki/libvirt/private/serverkey.pem"
+
 #### <a name="1i3">Lista completa de pasos</a>  
+
+[textoAlEnlace][text-j1]
+
+#### <a name = '2c1'>Lista completa del proceso </a>
+  1. Crear certificado de __Autiridad de certificados(CA)__.
+  2. Crear certificado de servidor.
+  3. Crear certificado de cliente.
+  4. Configuración de _demonio_ __libvirt__.
+  5. Otras referencias.
+
+-x3
+[text-j1]: http://estoEsElenlace

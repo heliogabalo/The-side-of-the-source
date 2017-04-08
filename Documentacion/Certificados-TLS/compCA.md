@@ -23,7 +23,7 @@ Almacenes de claves:
 
 - _Local Machine(máquina local): aplicables a todos los usuarios.
 - _Current User(Usuario en uso): específico para el usuario en uso.
-  - _Enterprise:_ similar a _local machine_, 
+- _Enterprise:_ similar a _local machine_, 
 
 ---
 conexión http:80

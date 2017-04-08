@@ -1,6 +1,4 @@
-Ya estoy hasta las narices de que se me escape lo básico con los discos duros
 
-basta YA.
 
 1. El disco duro  
 2. [El Mbr][1]  
