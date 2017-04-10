@@ -1,0 +1,10 @@
+Después de resetear el router 100417h0925 a valores de fábrica, se autoconfigura
+dirección Wan, DNS y demás con direcciones falsas. La aplicación 
+gnome-screenshot deja de funcionar correctamente; se ha anulado la llamada a
+la ruta donde se guardan los archivos. 
+También ha desaparecido la configuración por defecto de Git. Resulta imposible
+sincronizar con el repositorio remoto.
+
+El reloj del Router marca la siguiente fecha y hora: 25.01.2017(mier) 00:05:39
+
+

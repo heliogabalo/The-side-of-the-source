@@ -1,0 +1,73 @@
+04/10/2017  09:06:28 sending DHCP ACK to 192.168.1.100
+04/10/2017  09:06:28 sending DHCP OFFER to 192.168.1.100
+04/10/2017  09:04:29 192.168.1.102 login success
+04/10/2017  09:01:44 sending DHCP ACK to 192.168.1.102
+04/10/2017  09:01:44 sending DHCP OFFER to 192.168.1.102
+04/10/2017  08:51:04 If(3) receives RA router lifetime: 4500
+04/10/2017  08:45:28 sending DHCP ACK to 192.168.1.100
+04/10/2017  08:21:35 If(3) receives RA router lifetime: 4500
+04/10/2017  08:15:26 sending DHCP ACK to 192.168.1.100
+04/10/2017  07:53:34 If(3) receives RA router lifetime: 4500
+04/10/2017  07:45:25 sending DHCP ACK to 192.168.1.100
+04/10/2017  07:30:25 If(3) receives RA router lifetime: 4500
+04/10/2017  07:15:24 sending DHCP ACK to 192.168.1.100
+04/10/2017  07:05:20 If(3) receives RA router lifetime: 4500
+04/10/2017  06:45:23 sending DHCP ACK to 192.168.1.100
+04/10/2017  06:36:13 If(3) receives RA router lifetime: 4500
+04/10/2017  06:15:22 sending DHCP ACK to 192.168.1.100
+04/10/2017  06:11:14 If(3) receives RA router lifetime: 4500
+04/10/2017  05:50:51 If(3) receives RA router lifetime: 4500
+04/10/2017  05:45:21 sending DHCP ACK to 192.168.1.100
+04/10/2017  05:25:10 If(3) receives RA router lifetime: 4500
+04/10/2017  05:15:20 sending DHCP ACK to 192.168.1.100
+04/10/2017  04:57:12 If(3) receives RA router lifetime: 4500
+04/10/2017  04:45:19 sending DHCP ACK to 192.168.1.100
+04/10/2017  04:41:48 If(3) receives RA router lifetime: 4500
+04/10/2017  04:15:18 sending DHCP ACK to 192.168.1.100
+04/10/2017  04:13:49 If(3) receives RA router lifetime: 4500
+04/10/2017  03:54:14 If(3) receives RA router lifetime: 4500
+04/10/2017  03:45:17 sending DHCP ACK to 192.168.1.100
+04/10/2017  03:29:35 If(3) receives RA router lifetime: 4500
+04/10/2017  03:15:16 sending DHCP ACK to 192.168.1.100
+04/10/2017  03:11:50 If(3) receives RA router lifetime: 4500
+04/10/2017  02:49:34 If(3) receives RA router lifetime: 4500
+04/10/2017  02:45:15 sending DHCP ACK to 192.168.1.100
+04/10/2017  02:26:44 If(3) receives RA router lifetime: 4500
+04/10/2017  02:15:14 sending DHCP ACK to 192.168.1.100
+04/10/2017  02:03:07 If(3) receives RA router lifetime: 4500
+04/10/2017  01:47:26 If(3) receives RA router lifetime: 4500
+04/10/2017  01:45:13 sending DHCP ACK to 192.168.1.100
+04/10/2017  01:21:40 If(3) receives RA router lifetime: 4500
+04/10/2017  01:15:12 sending DHCP ACK to 192.168.1.100
+04/10/2017  00:55:01 If(3) receives RA router lifetime: 4500
+04/10/2017  00:45:11 sending DHCP ACK to 192.168.1.100
+04/10/2017  00:29:12 If(3) receives RA router lifetime: 4500
+04/10/2017  00:15:10 sending DHCP ACK to 192.168.1.100
+04/10/2017  00:11:58 If(3) receives RA router lifetime: 4500
+04/09/2017  23:55:55 If(3) receives RA router lifetime: 4500
+04/09/2017  23:45:09 sending DHCP ACK to 192.168.1.100
+04/09/2017  23:26:28 If(3) receives RA router lifetime: 4500
+04/09/2017  23:15:08 sending DHCP ACK to 192.168.1.100
+04/09/2017  23:07:53 If(3) receives RA router lifetime: 4500
+04/09/2017  22:45:07 sending DHCP ACK to 192.168.1.100
+04/09/2017  22:39:11 If(3) receives RA router lifetime: 4500
+04/09/2017  22:23:04 If(3) receives RA router lifetime: 4500
+04/09/2017  22:15:06 sending DHCP ACK to 192.168.1.100
+04/09/2017  21:55:27 If(3) receives RA router lifetime: 4500
+04/09/2017  21:45:05 sending DHCP ACK to 192.168.1.100
+04/09/2017  21:45:05 sending DHCP OFFER to 192.168.1.100
+04/09/2017  21:38:28 SMTP> Fail to send alert mail. Delay 10 seconds.
+04/09/2017  21:38:15 NTP Date/Time updated.
+01/25/2017  00:01:00 Get system time from NTP server:2A01:C500:0000:0000:0000:0000:0000:0003.
+01/25/2017  00:00:59 SMTP> Fail to send alert mail. Delay 10 seconds.
+01/25/2017  00:00:46 SMTP> Fail to send alert mail. Delay 10 seconds.
+01/25/2017  00:00:32 SMTP> Fail to send alert mail. Delay 10 seconds.
+01/25/2017  00:00:19 SMTP> Fail to send alert mail. Delay 10 seconds.
+01/25/2017  00:00:15 ***** AFTER open PCP socket:102,rcode=255*****
+01/25/2017  00:00:10 *****OpenPCPSocket():2A01:C50E:3605:2500:E63E:D7FF:FE6C:C5B3,FD00:30BF::1*******
+01/25/2017  00:00:09 Sub-delegate prefix: 2a01:c50e:3605:2500::/64 to LAN
+01/25/2017  00:00:08 If(3) obtains IA prefix: 2a01:c50e:3605:2500::/56, preferred lifetime: 86400, valid lifetime: 86400
+01/25/2017  00:00:08 Router configures DNSv6 Server Address: 2A01:C500:0000:0000:0000:0000:0000:0002
+01/25/2017  00:00:08 Router configures DNSv6 Server Address: 2A01:C500:0000:0000:0000:0000:0000:0001
+01/25/2017  00:00:06 From internet service provider transferred Gateway IPv6 address: fe80:0000:0000:0000:8626:2bff:fee0
+01/25/2017  00:00:06 If(3) receives RA router lifetime: 4500
