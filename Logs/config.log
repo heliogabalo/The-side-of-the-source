@@ -1,0 +1,37 @@
+  <HW>=Hardware Type.
+  List of possible hardware types:
+    loop (Local Loopback) slip (Serial Line IP) cslip (VJ Serial Line IP) 
+    slip6 (6-bit Serial Line IP) cslip6 (VJ 6-bit Serial Line IP) adaptive (Adaptive Serial Line IP) 
+    ash (Ash) ether (Ethernet) ax25 (AMPR AX.25) 
+    netrom (AMPR NET/ROM) rose (AMPR ROSE) tunnel (IPIP Tunnel) 
+    ppp (Point-to-Point Protocol) hdlc ((Cisco)-HDLC) lapb (LAPB) 
+    arcnet (ARCnet) dlci (Frame Relay DLCI) frad (Frame Relay Access Device) 
+    sit (IPv6-in-IPv4) fddi (Fiber Distributed Data Interface) hippi (HIPPI) 
+    irda (IrLAP) x25 (generic X.25) infiniband (InfiniBand) 
+    eui64 (Generic EUI-64) 
+  <AF>=Address family. Default: inet
+  List of possible address families:
+    unix (UNIX Domain) inet (DARPA Internet) inet6 (IPv6) 
+    ax25 (AMPR AX.25) netrom (AMPR NET/ROM) rose (AMPR ROSE) 
+    ipx (Novell IPX) ddp (Appletalk DDP) ash (Ash) 
+    x25 (CCITT X.25) 
+
+## 
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    RX: bytes  packets  errors  dropped overrun mcast   
+    288972     3460     0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    288972     3460     0       0       0       0       
+2: enp2s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP mode DEFAULT group default qlen 1000
+    link/ether 00:24:21:28:f7:65 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped overrun mcast   
+    12391745   17220    0       0       0       199     
+    TX: bytes  packets  errors  dropped carrier collsns 
+    2304644    15439    0       0       0       0       
+3: pte0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN mode DEFAULT group default qlen 1000
+    link/ether 26:ca:2d:ce:68:22 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped overrun mcast   
+    0          0        0       0       0       0       
+    TX: bytes  packets  errors  dropped carrier collsns 
+    0          0        0       0       0       0

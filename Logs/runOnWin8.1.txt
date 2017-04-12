@@ -1,0 +1,103 @@
+110417 h 1632
+
+04/11/2017  16:29:59 NTP Date/Time updated.
+01/25/2017  00:01:30 Get system time from NTP server:62.36.16.6.
+01/25/2017  00:01:06 If(3) can not receive RA message.
+01/25/2017  00:00:57 DHCP Client: [ATM1]Receive Ack from 81.52.127.249,Lease time=86400
+01/25/2017  00:00:57 DHCP Client: [ATM1]Domain name = orange.es
+01/25/2017  00:00:57 DHCP Client: [ATM1]Send Request, Request IP=90.75.213.228
+01/25/2017  00:00:57 DHCP Client: [ATM1]Receive Offer from 81.52.127.249
+01/25/2017  00:00:57 DHCP Client: [ATM1]Domain name = orange.es
+01/25/2017  00:00:57 DHCP Client: [ATM1]Send Discover
+01/25/2017  00:00:57 DHCP Client: [ATM1]Send Discover
+01/25/2017  00:00:36 If(3) can not receive RA message.
+01/25/2017  00:00:33 DHCP Client: [ATM1]Send Discover
+01/25/2017  00:00:29 DHCP Client: [ATM1]Send Discover
+01/25/2017  00:00:27 DHCP Client: [ATM1]Send Discover
+01/25/2017  00:00:27 DHCP Client: [ATM1]Send Discover
+01/25/2017  00:00:26 If(3) can not receive RA message.
+01/25/2017  00:00:23 192.168.1.102 login success
+01/25/2017  00:00:16 sending DHCP ACK to 192.168.1.101
+01/25/2017  00:00:03 sending DHCP ACK to 192.168.1.100
+01/25/2017  00:00:03 sending DHCP OFFER to 192.168.1.100
+01/25/2017  00:00:03 sending DHCP ACK to 192.168.1.102
+01/25/2017  00:00:03 sending DHCP OFFER to 192.168.1.100
+01/25/2017  00:00:03 sending DHCP ACK to 192.168.1.102
+01/25/2017  00:00:03 sending DHCP ACK to 192.168.1.102
+
+110417 h 1637
+/////////////////////////////////////////////////////////
+04/11/2017  16:35:55 192.168.1.102 login success
+04/11/2017  16:35:55 Duplicate user login from 255.255.255.255
+04/11/2017  16:35:31 sending DHCP ACK to 192.168.1.100
+04/11/2017  16:35:31 sending DHCP OFFER to 192.168.1.100
+04/11/2017  16:35:20 sending DHCP ACK to 192.168.1.100
+04/11/2017  16:35:20 sending DHCP OFFER to 192.168.1.100
+04/11/2017  16:29:59 NTP Date/Time updated.
+01/25/2017  00:01:30 Get system time from NTP server:62.36.16.6.
+01/25/2017  00:01:06 If(3) can not receive RA message.
+01/25/2017  00:00:57 DHCP Client: [ATM1]Receive Ack from 81.52.127.249,Lease time=86400
+01/25/2017  00:00:57 DHCP Client: [ATM1]Domain name = orange.es
+01/25/2017  00:00:57 DHCP Client: [ATM1]Send Request, Request IP=90.75.213.228
+01/25/2017  00:00:57 DHCP Client: [ATM1]Receive Offer from 81.52.127.249
+01/25/2017  00:00:57 DHCP Client: [ATM1]Domain name = orange.es
+01/25/2017  00:00:57 DHCP Client: [ATM1]Send Discover
+01/25/2017  00:00:57 DHCP Client: [ATM1]Send Discover
+01/25/2017  00:00:36 If(3) can not receive RA message.
+01/25/2017  00:00:33 DHCP Client: [ATM1]Send Discover
+01/25/2017  00:00:29 DHCP Client: [ATM1]Send Discover
+01/25/2017  00:00:27 DHCP Client: [ATM1]Send Discover
+01/25/2017  00:00:27 DHCP Client: [ATM1]Send Discover
+01/25/2017  00:00:26 If(3) can not receive RA message.
+01/25/2017  00:00:23 192.168.1.102 login success
+01/25/2017  00:00:16 sending DHCP ACK to 192.168.1.101
+01/25/2017  00:00:03 sending DHCP ACK to 192.168.1.100
+01/25/2017  00:00:03 sending DHCP OFFER to 192.168.1.100
+01/25/2017  00:00:03 sending DHCP ACK to 192.168.1.102
+01/25/2017  00:00:03 sending DHCP OFFER to 192.168.1.100
+01/25/2017  00:00:03 sending DHCP ACK to 192.168.1.102
+01/25/2017  00:00:03 sending DHCP ACK to 192.168.1.102
+
+110417 h 1649
+///////////////////////////////////////////////////
+
+Después de reinicio sin conexión
+
+01/25/2017  00:00:26 If(3) can not receive RA message.
+01/25/2017  00:00:24 192.168.1.102 login success
+01/25/2017  00:00:03 sending DHCP ACK to 192.168.1.100
+01/25/2017  00:00:03 sending DHCP OFFER to 192.168.1.100
+01/25/2017  00:00:03 sending DHCP ACK to 192.168.1.102
+01/25/2017  00:00:03 sending DHCP OFFER to 192.168.1.100
+01/25/2017  00:00:03 sending DHCP ACK to 192.168.1.102
+01/25/2017  00:00:03 sending DHCP ACK to 192.168.1.102
+
+110417 h 1652
+////////////////////////////////////////////////
+
+04/11/2017  16:51:39 NTP Date/Time updated.
+01/25/2017  00:05:00 Get system time from NTP server:2A01:C500:0000:0000:0000:0000:0000:0003.
+01/25/2017  00:04:39 sending DHCP ACK to 192.168.1.102
+01/25/2017  00:04:13 ***** AFTER open PCP socket:91,rcode=255*****
+01/25/2017  00:04:10 If(3) receives RA router lifetime: 4500
+01/25/2017  00:04:08 *****OpenPCPSocket():2A01:C50E:3605:2500:E63E:D7FF:FE6C:C5B3,FD00:30BF::1*******
+01/25/2017  00:04:07 Sub-delegate prefix: 2a01:c50e:3605:2500::/64 to LAN
+01/25/2017  00:04:06 From internet service provider transferred Gateway IPv6 address: fe80:0000:0000:0000:8626:2bff:fee0
+01/25/2017  00:04:06 If(3) receives RA router lifetime: 4500
+01/25/2017  00:04:05 If(3) obtains IA prefix: 2a01:c50e:3605:2500::/56, preferred lifetime: 86400, valid lifetime: 86400
+01/25/2017  00:04:05 Router configures DNSv6 Server Address: 2A01:C500:0000:0000:0000:0000:0000:0002
+01/25/2017  00:04:05 Router configures DNSv6 Server Address: 2A01:C500:0000:0000:0000:0000:0000:0001
+01/25/2017  00:04:00 If(3) can not receive RA message.
+01/25/2017  00:03:56 DHCP Client: [ATM1]Send Discover
+01/25/2017  00:03:52 DHCP Client: [ATM1]Send Discover
+01/25/2017  00:03:50 DHCP Client: [ATM1]Send Discover
+01/25/2017  00:03:50 DHCP Client: [ATM1]Send Discover
+01/25/2017  00:03:50 DHCP Client: [ATM1]Send Discover
+01/25/2017  00:00:26 If(3) can not receive RA message.
+01/25/2017  00:00:24 192.168.1.102 login success
+01/25/2017  00:00:03 sending DHCP ACK to 192.168.1.100
+01/25/2017  00:00:03 sending DHCP OFFER to 192.168.1.100
+01/25/2017  00:00:03 sending DHCP ACK to 192.168.1.102
+01/25/2017  00:00:03 sending DHCP OFFER to 192.168.1.100
+01/25/2017  00:00:03 sending DHCP ACK to 192.168.1.102
+01/25/2017  00:00:03 sending DHCP ACK to 192.168.1.102

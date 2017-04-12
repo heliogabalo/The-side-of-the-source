@@ -1,0 +1,100 @@
+04/12/2017  10:38:48 192.168.1.104 login success
+04/12/2017  10:38:44 User from 192.168.1.104 timed out
+04/12/2017  10:38:30 sending DHCP ACK to 192.168.1.104
+04/12/2017  10:23:53 Wireless F0:43:47:01:64:B3 released
+04/12/2017  10:18:08 If(3) receives RA router lifetime: 4500
+04/12/2017  10:12:53 sending DHCP ACK to 192.168.1.102
+04/12/2017  10:09:37 sending DHCP ACK to 192.168.1.104
+04/12/2017  10:08:00 192.168.1.104 login success
+04/12/2017  09:58:28 sending DHCP ACK to 192.168.1.102
+04/12/2017  09:57:53 Wireless F0:43:47:01:64:B3 released
+04/12/2017  09:57:43 ***** AFTER open PCP socket:98,rcode=255*****
+04/12/2017  09:57:38 *****OpenPCPSocket():2A01:C50E:3605:2500:E63E:D7FF:FE6C:C5B3,FD00:30BF::1*******
+04/12/2017  09:57:38 Sub-delegate prefix: 2a01:c50e:3605:2500::/64 to LAN
+04/12/2017  09:57:36 If(3) obtains IA prefix: 2a01:c50e:3605:2500::/56, preferred lifetime: 86400, valid lifetime: 86400
+04/12/2017  09:57:36 Router configures DNSv6 Server Address: 2A01:C500:0000:0000:0000:0000:0000:0002
+04/12/2017  09:57:36 Router configures DNSv6 Server Address: 2A01:C500:0000:0000:0000:0000:0000:0001
+04/12/2017  09:57:35 From internet service provider transferred Gateway IPv6 address: fe80:0000:0000:0000:8626:2bff:fee0
+04/12/2017  09:57:35 If(3) receives RA router lifetime: 4500
+04/12/2017  09:57:34 sending DHCP ACK to 192.168.1.104
+04/12/2017  09:57:34 sending DHCP ACK to 192.168.1.104
+04/12/2017  09:56:31 192.168.1.104 login success
+04/12/2017  09:55:38 sending DHCP ACK to 192.168.1.104
+04/12/2017  09:55:38 sending DHCP OFFER to 192.168.1.104
+04/12/2017  09:54:58 If(3) receives RA router lifetime: 4500
+04/12/2017  09:39:55 If(3) receives RA router lifetime: 4500
+04/12/2017  09:22:08 If(3) receives RA router lifetime: 4500
+04/12/2017  08:53:56 If(3) receives RA router lifetime: 4500
+04/12/2017  08:28:28 If(3) receives RA router lifetime: 4500
+04/12/2017  08:10:09 If(3) receives RA router lifetime: 4500
+04/12/2017  07:53:09 If(3) receives RA router lifetime: 4500
+04/12/2017  07:31:35 If(3) receives RA router lifetime: 4500
+04/12/2017  07:01:56 If(3) receives RA router lifetime: 4500
+04/12/2017  06:40:07 If(3) receives RA router lifetime: 4500
+04/12/2017  06:10:05 If(3) receives RA router lifetime: 4500
+04/12/2017  05:43:48 If(3) receives RA router lifetime: 4500
+04/12/2017  05:28:57 Sub-delegate prefix: 2a01:c50e:3605:2500::/64 to LAN
+04/12/2017  05:28:57 If(3) obtains IA prefix: 2a01:c50e:3605:2500::/56, preferred lifetime: 86400, valid lifetime: 86400
+04/12/2017  05:28:57 Router configures DNSv6 Server Address: 2A01:C500:0000:0000:0000:0000:0000:0002
+04/12/2017  05:28:57 Router configures DNSv6 Server Address: 2A01:C500:0000:0000:0000:0000:0000:0001
+04/12/2017  05:28:49 NTP Date/Time updated.
+04/12/2017  05:28:45 Get system time from NTP server:2A01:C500:0000:0000:0000:0000:0000:0003.
+04/12/2017  05:25:22 If(3) receives RA router lifetime: 4500
+04/12/2017  04:59:55 If(3) receives RA router lifetime: 4500
+04/12/2017  04:32:12 If(3) receives RA router lifetime: 4500
+04/12/2017  04:16:59 If(3) receives RA router lifetime: 4500
+04/12/2017  03:52:36 If(3) receives RA router lifetime: 4500
+04/12/2017  03:22:55 If(3) receives RA router lifetime: 4500
+04/12/2017  03:03:09 If(3) receives RA router lifetime: 4500
+04/12/2017  02:41:26 If(3) receives RA router lifetime: 4500
+04/12/2017  02:20:51 If(3) receives RA router lifetime: 4500
+04/12/2017  02:00:17 If(3) receives RA router lifetime: 4500
+04/12/2017  01:31:04 If(3) receives RA router lifetime: 4500
+04/12/2017  01:02:13 If(3) receives RA router lifetime: 4500
+04/12/2017  00:54:20 sending DHCP ACK to 192.168.1.100
+04/12/2017  00:54:20 sending DHCP OFFER to 192.168.1.100
+04/12/2017  00:35:40 If(3) receives RA router lifetime: 4500
+04/12/2017  00:19:55 If(3) receives RA router lifetime: 4500
+04/11/2017  23:58:56 If(3) receives RA router lifetime: 4500
+04/11/2017  23:36:08 If(3) receives RA router lifetime: 4500
+04/11/2017  23:09:28 If(3) receives RA router lifetime: 4500
+04/11/2017  22:50:40 If(3) receives RA router lifetime: 4500
+04/11/2017  22:22:45 If(3) receives RA router lifetime: 4500
+04/11/2017  21:55:10 If(3) receives RA router lifetime: 4500
+04/11/2017  21:31:51 If(3) receives RA router lifetime: 4500
+04/11/2017  21:11:34 sending DHCP ACK to 192.168.1.100
+04/11/2017  21:11:34 sending DHCP OFFER to 192.168.1.100
+04/11/2017  21:10:11 If(3) receives RA router lifetime: 4500
+04/11/2017  20:44:44 If(3) receives RA router lifetime: 4500
+04/11/2017  20:43:24 sending DHCP ACK to 192.168.1.100
+04/11/2017  20:43:24 sending DHCP OFFER to 192.168.1.100
+04/11/2017  20:20:45 If(3) receives RA router lifetime: 4500
+04/11/2017  20:00:58 If(3) receives RA router lifetime: 4500
+04/11/2017  19:44:45 If(3) receives RA router lifetime: 4500
+04/11/2017  19:17:40 If(3) receives RA router lifetime: 4500
+04/11/2017  18:53:14 If(3) receives RA router lifetime: 4500
+04/11/2017  18:31:13 If(3) receives RA router lifetime: 4500
+04/11/2017  18:24:00 sending DHCP ACK to 192.168.1.103
+04/11/2017  18:15:11 If(3) receives RA router lifetime: 4500
+04/11/2017  17:49:18 If(3) receives RA router lifetime: 4500
+04/11/2017  17:30:09 sending DHCP ACK to 192.168.1.102
+04/11/2017  17:30:09 sending DHCP OFFER to 192.168.1.102
+04/11/2017  17:29:37 NTP Date/Time updated.
+01/25/2017  00:01:30 Get system time from NTP server:2A01:C500:0000:0000:0000:0000:0000:0003.
+01/25/2017  00:00:51 ***** AFTER open PCP socket:93,rcode=255*****
+01/25/2017  00:00:46 *****OpenPCPSocket():2A01:C50E:3605:2500:E63E:D7FF:FE6C:C5B3,FD00:30BF::1*******
+01/25/2017  00:00:45 From internet service provider transferred Gateway IPv6 address: fe80:0000:0000:0000:8626:2bff:fee0
+01/25/2017  00:00:45 If(3) receives RA router lifetime: 4500
+01/25/2017  00:00:44 Sub-delegate prefix: 2a01:c50e:3605:2500::/64 to LAN
+01/25/2017  00:00:43 If(3) obtains IA prefix: 2a01:c50e:3605:2500::/56, preferred lifetime: 86400, valid lifetime: 86400
+01/25/2017  00:00:43 Router configures DNSv6 Server Address: 2A01:C500:0000:0000:0000:0000:0000:0002
+01/25/2017  00:00:43 Router configures DNSv6 Server Address: 2A01:C500:0000:0000:0000:0000:0000:0001
+01/25/2017  00:00:37 If(3) can not receive RA message.
+01/25/2017  00:00:33 DHCP Client: [ATM1]Send Discover
+01/25/2017  00:00:29 DHCP Client: [ATM1]Send Discover
+01/25/2017  00:00:27 DHCP Client: [ATM1]Send Discover
+01/25/2017  00:00:27 DHCP Client: [ATM1]Send Discover
+01/25/2017  00:00:26 If(3) can not receive RA message.
+01/25/2017  00:00:05 sending DHCP ACK to 192.168.1.101
+01/25/2017  00:00:05 sending DHCP ACK to 192.168.1.101
+01/25/2017  00:00:03 sending DHCP ACK to 192.168.1.101

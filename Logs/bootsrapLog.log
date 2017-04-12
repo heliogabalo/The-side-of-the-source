@@ -1,0 +1,2709 @@
+-- Logs begin at lun 2017-03-06 16:24:49 CET, end at mar 2017-04-11 08:19:04 CEST. --
+abr 11 10:15:51 NR021AA systemd-journald[137]: Runtime journal (/run/log/journal/) is 8.0M, max 197.5M, 189.5M free.
+-- Subject: Disk space used by the journal
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Runtime journal (/run/log/journal/) is currently using 8.0M.
+-- Maximum allowed usage is set to 197.5M.
+-- Leaving at least 296.2M free (of currently available 1.9G of disk space).
+-- Enforced usage limit is thus 197.5M, of which 189.5M are still available.
+-- 
+-- The limits controlling how much disk space is used by the journal may
+-- be configured with SystemMaxUse=, SystemKeepFree=, SystemMaxFileSize=,
+-- RuntimeMaxUse=, RuntimeKeepFree=, RuntimeMaxFileSize= settings in
+-- /etc/systemd/journald.conf. See journald.conf(5) for details.
+abr 11 10:15:51 NR021AA kernel: Linux version 4.5.5-300.fc24.x86_64 (mockbuild@bkernel01.phx2.fedoraproject.org) (gcc version 6.1.1 20160510 (Red Hat 6.1.1-2) (GCC) ) #1 SMP Thu May 19 13:05:32 UTC 2016
+abr 11 10:15:51 NR021AA kernel: Command line: BOOT_IMAGE=/boot/vmlinuz-4.5.5-300.fc24.x86_64 root=/dev/mapper/fedora-root ro rd.lvm.lv=fedora/root rd.lvm.lv=fedora/swap rhgb quiet
+abr 11 10:15:51 NR021AA kernel: x86/fpu: Supporting XSAVE feature 0x01: 'x87 floating point registers'
+abr 11 10:15:51 NR021AA kernel: x86/fpu: Supporting XSAVE feature 0x02: 'SSE registers'
+abr 11 10:15:51 NR021AA kernel: x86/fpu: Enabled xstate features 0x3, context size is 576 bytes, using 'standard' format.
+abr 11 10:15:51 NR021AA kernel: x86/fpu: Using 'lazy' FPU context switches.
+abr 11 10:15:51 NR021AA kernel: e820: BIOS-provided physical RAM map:
+abr 11 10:15:51 NR021AA kernel: BIOS-e820: [mem 0x0000000000000000-0x000000000009f3ff] usable
+abr 11 10:15:51 NR021AA kernel: BIOS-e820: [mem 0x000000000009f400-0x000000000009ffff] reserved
+abr 11 10:15:51 NR021AA kernel: BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
+abr 11 10:15:51 NR021AA kernel: BIOS-e820: [mem 0x0000000000100000-0x00000000cfe8ffff] usable
+abr 11 10:15:51 NR021AA kernel: BIOS-e820: [mem 0x00000000cfe90000-0x00000000cfee2fff] ACPI NVS
+abr 11 10:15:51 NR021AA kernel: BIOS-e820: [mem 0x00000000cfee3000-0x00000000cfeeffff] ACPI data
+abr 11 10:15:51 NR021AA kernel: BIOS-e820: [mem 0x00000000cfef0000-0x00000000cfefffff] reserved
+abr 11 10:15:51 NR021AA kernel: BIOS-e820: [mem 0x00000000e0000000-0x00000000efffffff] reserved
+abr 11 10:15:51 NR021AA kernel: BIOS-e820: [mem 0x00000000fec00000-0x00000000ffffffff] reserved
+abr 11 10:15:51 NR021AA kernel: BIOS-e820: [mem 0x0000000100000000-0x000000012fffffff] usable
+abr 11 10:15:51 NR021AA kernel: NX (Execute Disable) protection: active
+abr 11 10:15:51 NR021AA kernel: SMBIOS 2.5 present.
+abr 11 10:15:51 NR021AA kernel: DMI: HP-Pavilion NR021AA-ABE p6027es/Boston, BIOS 5.19 03/06/2009
+abr 11 10:15:51 NR021AA kernel: e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+abr 11 10:15:51 NR021AA kernel: e820: remove [mem 0x000a0000-0x000fffff] usable
+abr 11 10:15:51 NR021AA kernel: e820: last_pfn = 0x130000 max_arch_pfn = 0x400000000
+abr 11 10:15:51 NR021AA kernel: MTRR default type: uncachable
+abr 11 10:15:51 NR021AA kernel: MTRR fixed ranges enabled:
+abr 11 10:15:51 NR021AA kernel:   00000-9FFFF write-back
+abr 11 10:15:51 NR021AA kernel:   A0000-BFFFF uncachable
+abr 11 10:15:51 NR021AA kernel:   C0000-CFFFF write-protect
+abr 11 10:15:51 NR021AA kernel:   D0000-EFFFF uncachable
+abr 11 10:15:51 NR021AA kernel:   F0000-FFFFF write-through
+abr 11 10:15:51 NR021AA kernel: MTRR variable ranges enabled:
+abr 11 10:15:51 NR021AA kernel:   0 base 100000000 mask FE0000000 write-back
+abr 11 10:15:51 NR021AA kernel:   1 base 120000000 mask FF0000000 write-back
+abr 11 10:15:51 NR021AA kernel:   2 base 000000000 mask F80000000 write-back
+abr 11 10:15:51 NR021AA kernel:   3 base 080000000 mask FC0000000 write-back
+abr 11 10:15:51 NR021AA kernel:   4 base 0C0000000 mask FF0000000 write-back
+abr 11 10:15:51 NR021AA kernel:   5 base 0CFF00000 mask FFFF00000 uncachable
+abr 11 10:15:51 NR021AA kernel:   6 disabled
+abr 11 10:15:51 NR021AA kernel:   7 disabled
+abr 11 10:15:51 NR021AA kernel: x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WC  UC- WT  
+abr 11 10:15:51 NR021AA kernel: e820: update [mem 0xcff00000-0xffffffff] usable ==> reserved
+abr 11 10:15:51 NR021AA kernel: e820: last_pfn = 0xcfe90 max_arch_pfn = 0x400000000
+abr 11 10:15:51 NR021AA kernel: found SMP MP-table at [mem 0x000f4280-0x000f428f] mapped at [ffff8800000f4280]
+abr 11 10:15:51 NR021AA kernel: Base memory trampoline at [ffff880000099000] 99000 size 24576
+abr 11 10:15:51 NR021AA kernel: BRK [0x0205f000, 0x0205ffff] PGTABLE
+abr 11 10:15:51 NR021AA kernel: BRK [0x02060000, 0x02060fff] PGTABLE
+abr 11 10:15:51 NR021AA kernel: BRK [0x02061000, 0x02061fff] PGTABLE
+abr 11 10:15:51 NR021AA kernel: BRK [0x02062000, 0x02062fff] PGTABLE
+abr 11 10:15:51 NR021AA kernel: RAMDISK: [mem 0x35616000-0x36b02fff]
+abr 11 10:15:51 NR021AA kernel: ACPI: Early table checksum verification disabled
+abr 11 10:15:51 NR021AA kernel: ACPI: RSDP 0x00000000000F8300 000024 (v02 HPQOEM)
+abr 11 10:15:51 NR021AA kernel: ACPI: XSDT 0x00000000CFEE3080 000054 (v01 HPQOEM SLIC-CPC 42302E31 AWRD 00000000)
+abr 11 10:15:51 NR021AA kernel: ACPI: FACP 0x00000000CFEE7300 0000F4 (v03 HPQOEM SLIC-CPC 42302E31 AWRD 00000000)
+abr 11 10:15:51 NR021AA kernel: ACPI BIOS Warning (bug): 32/64X length mismatch in FADT/Pm1aEventBlock: 32/8 (20160108/tbfadt-623)
+abr 11 10:15:51 NR021AA kernel: ACPI BIOS Warning (bug): 32/64X length mismatch in FADT/Pm1aControlBlock: 16/8 (20160108/tbfadt-623)
+abr 11 10:15:51 NR021AA kernel: ACPI BIOS Warning (bug): 32/64X length mismatch in FADT/PmTimerBlock: 32/8 (20160108/tbfadt-623)
+abr 11 10:15:51 NR021AA kernel: ACPI BIOS Warning (bug): 32/64X length mismatch in FADT/Gpe0Block: 64/8 (20160108/tbfadt-623)
+abr 11 10:15:51 NR021AA kernel: ACPI BIOS Warning (bug): Invalid length for FADT/Pm1aEventBlock: 8, using default 32 (20160108/tbfadt-704)
+abr 11 10:15:51 NR021AA kernel: ACPI BIOS Warning (bug): Invalid length for FADT/Pm1aControlBlock: 8, using default 16 (20160108/tbfadt-704)
+abr 11 10:15:51 NR021AA kernel: ACPI BIOS Warning (bug): Invalid length for FADT/PmTimerBlock: 8, using default 32 (20160108/tbfadt-704)
+abr 11 10:15:51 NR021AA kernel: ACPI: DSDT 0x00000000CFEE3240 004097 (v01 HPQOEM SLIC-CPC 00001000 MSFT 03000000)
+abr 11 10:15:51 NR021AA kernel: ACPI: FACS 0x00000000CFE90000 000040
+abr 11 10:15:51 NR021AA kernel: ACPI: FACS 0x00000000CFE90000 000040
+abr 11 10:15:51 NR021AA kernel: ACPI: SLIC 0x00000000CFEE74C0 000176 (v01 HPQOEM SLIC-CPC 42302E31 AWRD 00000000)
+abr 11 10:15:51 NR021AA kernel: ACPI: HPET 0x00000000CFEE7740 000038 (v01 HPQOEM SLIC-CPC 42302E31 AWRD 00000098)
+abr 11 10:15:51 NR021AA kernel: ACPI: MCFG 0x00000000CFEE7780 00003C (v01 HPQOEM SLIC-CPC 42302E31 AWRD 00000000)
+abr 11 10:15:51 NR021AA kernel: ACPI: APIC 0x00000000CFEE7400 000084 (v01 HPQOEM SLIC-CPC 42302E31 AWRD 00000000)
+abr 11 10:15:51 NR021AA kernel: ACPI: SSDT 0x00000000CFEE7E20 000380 (v01 HPQOEM SLIC-CPC 00003000 INTL 20041203)
+abr 11 10:15:51 NR021AA kernel: ACPI: Local APIC address 0xfee00000
+abr 11 10:15:51 NR021AA kernel: No NUMA configuration found
+abr 11 10:15:51 NR021AA kernel: Faking a node at [mem 0x0000000000000000-0x000000012fffffff]
+abr 11 10:15:51 NR021AA kernel: NODE_DATA(0) allocated [mem 0x12ffe5000-0x12fffbfff]
+abr 11 10:15:51 NR021AA kernel: Zone ranges:
+abr 11 10:15:51 NR021AA kernel:   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+abr 11 10:15:51 NR021AA kernel:   DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
+abr 11 10:15:51 NR021AA kernel:   Normal   [mem 0x0000000100000000-0x000000012fffffff]
+abr 11 10:15:51 NR021AA kernel:   Device   empty
+abr 11 10:15:51 NR021AA kernel: Movable zone start for each node
+abr 11 10:15:51 NR021AA kernel: Early memory node ranges
+abr 11 10:15:51 NR021AA kernel:   node   0: [mem 0x0000000000001000-0x000000000009efff]
+abr 11 10:15:51 NR021AA kernel:   node   0: [mem 0x0000000000100000-0x00000000cfe8ffff]
+abr 11 10:15:51 NR021AA kernel:   node   0: [mem 0x0000000100000000-0x000000012fffffff]
+abr 11 10:15:51 NR021AA kernel: Initmem setup node 0 [mem 0x0000000000001000-0x000000012fffffff]
+abr 11 10:15:51 NR021AA kernel: On node 0 totalpages: 1048110
+abr 11 10:15:51 NR021AA kernel:   DMA zone: 64 pages used for memmap
+abr 11 10:15:51 NR021AA kernel:   DMA zone: 21 pages reserved
+abr 11 10:15:51 NR021AA kernel:   DMA zone: 3998 pages, LIFO batch:0
+abr 11 10:15:51 NR021AA kernel:   DMA32 zone: 13243 pages used for memmap
+abr 11 10:15:51 NR021AA kernel:   DMA32 zone: 847504 pages, LIFO batch:31
+abr 11 10:15:51 NR021AA kernel:   Normal zone: 3072 pages used for memmap
+abr 11 10:15:51 NR021AA kernel:   Normal zone: 196608 pages, LIFO batch:31
+abr 11 10:15:51 NR021AA kernel: ACPI: PM-Timer IO Port: 0x408
+abr 11 10:15:51 NR021AA kernel: ACPI: Local APIC address 0xfee00000
+abr 11 10:15:51 NR021AA kernel: ACPI: LAPIC_NMI (acpi_id[0x00] high edge lint[0x1])
+abr 11 10:15:51 NR021AA kernel: ACPI: LAPIC_NMI (acpi_id[0x01] high edge lint[0x1])
+abr 11 10:15:51 NR021AA kernel: ACPI: LAPIC_NMI (acpi_id[0x02] high edge lint[0x1])
+abr 11 10:15:51 NR021AA kernel: ACPI: LAPIC_NMI (acpi_id[0x03] high edge lint[0x1])
+abr 11 10:15:51 NR021AA kernel: IOAPIC[0]: apic_id 4, version 32, address 0xfec00000, GSI 0-23
+abr 11 10:15:51 NR021AA kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+abr 11 10:15:51 NR021AA kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+abr 11 10:15:51 NR021AA kernel: ACPI: IRQ0 used by override.
+abr 11 10:15:51 NR021AA kernel: ACPI: IRQ9 used by override.
+abr 11 10:15:51 NR021AA kernel: Using ACPI (MADT) for SMP configuration information
+abr 11 10:15:51 NR021AA kernel: ACPI: HPET id: 0x8086a201 base: 0xfed00000
+abr 11 10:15:51 NR021AA kernel: smpboot: Allowing 4 CPUs, 2 hotplug CPUs
+abr 11 10:15:51 NR021AA kernel: PM: Registered nosave memory: [mem 0x00000000-0x00000fff]
+abr 11 10:15:51 NR021AA kernel: PM: Registered nosave memory: [mem 0x0009f000-0x0009ffff]
+abr 11 10:15:51 NR021AA kernel: PM: Registered nosave memory: [mem 0x000a0000-0x000effff]
+abr 11 10:15:51 NR021AA kernel: PM: Registered nosave memory: [mem 0x000f0000-0x000fffff]
+abr 11 10:15:51 NR021AA kernel: PM: Registered nosave memory: [mem 0xcfe90000-0xcfee2fff]
+abr 11 10:15:51 NR021AA kernel: PM: Registered nosave memory: [mem 0xcfee3000-0xcfeeffff]
+abr 11 10:15:51 NR021AA kernel: PM: Registered nosave memory: [mem 0xcfef0000-0xcfefffff]
+abr 11 10:15:51 NR021AA kernel: PM: Registered nosave memory: [mem 0xcff00000-0xdfffffff]
+abr 11 10:15:51 NR021AA kernel: PM: Registered nosave memory: [mem 0xe0000000-0xefffffff]
+abr 11 10:15:51 NR021AA kernel: PM: Registered nosave memory: [mem 0xf0000000-0xfebfffff]
+abr 11 10:15:51 NR021AA kernel: PM: Registered nosave memory: [mem 0xfec00000-0xffffffff]
+abr 11 10:15:51 NR021AA kernel: e820: [mem 0xcff00000-0xdfffffff] available for PCI devices
+abr 11 10:15:51 NR021AA kernel: Booting paravirtualized kernel on bare hardware
+abr 11 10:15:51 NR021AA kernel: clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1910969940391419 ns
+abr 11 10:15:51 NR021AA kernel: setup_percpu: NR_CPUS:1024 nr_cpumask_bits:4 nr_cpu_ids:4 nr_node_ids:1
+abr 11 10:15:51 NR021AA kernel: PERCPU: Embedded 34 pages/cpu @ffff88012fc00000 s98648 r8192 d32424 u524288
+abr 11 10:15:51 NR021AA kernel: pcpu-alloc: s98648 r8192 d32424 u524288 alloc=1*2097152
+abr 11 10:15:51 NR021AA kernel: pcpu-alloc: [0] 0 1 2 3 
+abr 11 10:15:51 NR021AA kernel: Built 1 zonelists in Node order, mobility grouping on.  Total pages: 1031710
+abr 11 10:15:51 NR021AA kernel: Policy zone: Normal
+abr 11 10:15:51 NR021AA kernel: Kernel command line: BOOT_IMAGE=/boot/vmlinuz-4.5.5-300.fc24.x86_64 root=/dev/mapper/fedora-root ro rd.lvm.lv=fedora/root rd.lvm.lv=fedora/swap rhgb quiet
+abr 11 10:15:51 NR021AA kernel: PID hash table entries: 4096 (order: 3, 32768 bytes)
+abr 11 10:15:51 NR021AA kernel: Memory: 4021652K/4192440K available (8014K kernel code, 1336K rwdata, 3512K rodata, 1552K init, 1544K bss, 170788K reserved, 0K cma-reserved)
+abr 11 10:15:51 NR021AA kernel: SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+abr 11 10:15:51 NR021AA kernel: Hierarchical RCU implementation.
+abr 11 10:15:51 NR021AA kernel:         Build-time adjustment of leaf fanout to 64.
+abr 11 10:15:51 NR021AA kernel:         RCU restricting CPUs from NR_CPUS=1024 to nr_cpu_ids=4.
+abr 11 10:15:51 NR021AA kernel: RCU: Adjusting geometry for rcu_fanout_leaf=64, nr_cpu_ids=4
+abr 11 10:15:51 NR021AA kernel: NR_IRQS:65792 nr_irqs:456 16
+abr 11 10:15:51 NR021AA kernel:         Offload RCU callbacks from all CPUs
+abr 11 10:15:51 NR021AA kernel:         Offload RCU callbacks from CPUs: 0-3.
+abr 11 10:15:51 NR021AA kernel: Console: colour VGA+ 80x25
+abr 11 10:15:51 NR021AA kernel: console [tty0] enabled
+abr 11 10:15:51 NR021AA kernel: clocksource: hpet: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 133484882848 ns
+abr 11 10:15:51 NR021AA kernel: hpet clockevent registered
+abr 11 10:15:51 NR021AA kernel: tsc: Fast TSC calibration using PIT
+abr 11 10:15:51 NR021AA kernel: tsc: Detected 3333.356 MHz processor
+abr 11 10:15:51 NR021AA kernel: Calibrating delay loop (skipped), value calculated using timer frequency.. 6666.71 BogoMIPS (lpj=3333356)
+abr 11 10:15:51 NR021AA kernel: pid_max: default: 32768 minimum: 301
+abr 11 10:15:51 NR021AA kernel: ACPI: Core revision 20160108
+abr 11 10:15:51 NR021AA kernel: ACPI: 2 ACPI AML tables successfully acquired and loaded
+abr 11 10:15:51 NR021AA kernel: 
+abr 11 10:15:51 NR021AA kernel: Security Framework initialized
+abr 11 10:15:51 NR021AA kernel: Yama: becoming mindful.
+abr 11 10:15:51 NR021AA kernel: SELinux:  Initializing.
+abr 11 10:15:51 NR021AA kernel: SELinux:  Starting in permissive mode
+abr 11 10:15:51 NR021AA kernel: Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes)
+abr 11 10:15:51 NR021AA kernel: Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes)
+abr 11 10:15:51 NR021AA kernel: Mount-cache hash table entries: 8192 (order: 4, 65536 bytes)
+abr 11 10:15:51 NR021AA kernel: Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes)
+abr 11 10:15:51 NR021AA kernel: CPU: Physical Processor ID: 0
+abr 11 10:15:51 NR021AA kernel: CPU: Processor Core ID: 0
+abr 11 10:15:51 NR021AA kernel: mce: CPU supports 6 MCE banks
+abr 11 10:15:51 NR021AA kernel: CPU0: Thermal monitoring enabled (TM2)
+abr 11 10:15:51 NR021AA kernel: process: using mwait in idle threads
+abr 11 10:15:51 NR021AA kernel: Last level iTLB entries: 4KB 128, 2MB 4, 4MB 4
+abr 11 10:15:51 NR021AA kernel: Last level dTLB entries: 4KB 256, 2MB 0, 4MB 32, 1GB 0
+abr 11 10:15:51 NR021AA kernel: Freeing SMP alternatives memory: 32K (ffffffff81ed3000 - ffffffff81edb000)
+abr 11 10:15:51 NR021AA kernel: ftrace: allocating 29874 entries in 117 pages
+abr 11 10:15:51 NR021AA kernel: ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+abr 11 10:15:51 NR021AA kernel: smpboot: CPU0: Intel(R) Core(TM)2 Duo CPU     E8600  @ 3.33GHz (family: 0x6, model: 0x17, stepping: 0xa)
+abr 11 10:15:51 NR021AA kernel: Performance Events: PEBS fmt0+, 4-deep LBR, Core2 events, Intel PMU driver.
+abr 11 10:15:51 NR021AA kernel: ... version:                2
+abr 11 10:15:51 NR021AA kernel: ... bit width:              40
+abr 11 10:15:51 NR021AA kernel: ... generic registers:      2
+abr 11 10:15:51 NR021AA kernel: ... value mask:             000000ffffffffff
+abr 11 10:15:51 NR021AA kernel: ... max period:             000000007fffffff
+abr 11 10:15:51 NR021AA kernel: ... fixed-purpose events:   3
+abr 11 10:15:51 NR021AA kernel: ... event mask:             0000000700000003
+abr 11 10:15:51 NR021AA kernel: x86: Booting SMP configuration:
+abr 11 10:15:51 NR021AA kernel: .... node  #0, CPUs:      #1
+abr 11 10:15:51 NR021AA kernel: x86: Booted up 1 node, 2 CPUs
+abr 11 10:15:51 NR021AA kernel: smpboot: Total of 2 processors activated (13333.42 BogoMIPS)
+abr 11 10:15:51 NR021AA kernel: NMI watchdog: enabled on all CPUs, permanently consumes one hw-PMU counter.
+abr 11 10:15:51 NR021AA kernel: devtmpfs: initialized
+abr 11 10:15:51 NR021AA kernel: PM: Registering ACPI NVS region [mem 0xcfe90000-0xcfee2fff] (339968 bytes)
+abr 11 10:15:51 NR021AA kernel: clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+abr 11 10:15:51 NR021AA kernel: atomic64_test: passed for x86-64 platform with CX8 and with SSE
+abr 11 10:15:51 NR021AA kernel: pinctrl core: initialized pinctrl subsystem
+abr 11 10:15:51 NR021AA kernel: RTC time:  8:15:51, date: 04/11/17
+abr 11 10:15:51 NR021AA kernel: NET: Registered protocol family 16
+abr 11 10:15:51 NR021AA kernel: cpuidle: using governor menu
+abr 11 10:15:51 NR021AA kernel: ACPI: bus type PCI registered
+abr 11 10:15:51 NR021AA kernel: acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+abr 11 10:15:51 NR021AA kernel: PCI: MMCONFIG for domain 0000 [bus 00-ff] at [mem 0xe0000000-0xefffffff] (base 0xe0000000)
+abr 11 10:15:51 NR021AA kernel: PCI: MMCONFIG at [mem 0xe0000000-0xefffffff] reserved in E820
+abr 11 10:15:51 NR021AA kernel: PCI: Using configuration type 1 for base access
+abr 11 10:15:51 NR021AA kernel: HugeTLB registered 2 MB page size, pre-allocated 0 pages
+abr 11 10:15:51 NR021AA kernel: ACPI: Added _OSI(Module Device)
+abr 11 10:15:51 NR021AA kernel: ACPI: Added _OSI(Processor Device)
+abr 11 10:15:51 NR021AA kernel: ACPI: Added _OSI(3.0 _SCP Extensions)
+abr 11 10:15:51 NR021AA kernel: ACPI: Added _OSI(Processor Aggregator Device)
+abr 11 10:15:51 NR021AA kernel: ACPI: Dynamic OEM Table Load:
+abr 11 10:15:51 NR021AA kernel: ACPI: SSDT 0xFFFF88012A580C00 00026C (v01 PmRef  Cpu0Ist  00003000 INTL 20041203)
+abr 11 10:15:51 NR021AA kernel: ACPI: Dynamic OEM Table Load:
+abr 11 10:15:51 NR021AA kernel: ACPI: SSDT 0xFFFF88012A5B0400 000152 (v01 PmRef  Cpu1Ist  00003000 INTL 20041203)
+abr 11 10:15:51 NR021AA kernel: ACPI: Interpreter enabled
+abr 11 10:15:51 NR021AA kernel: ACPI: (supports S0 S1 S3 S4 S5)
+abr 11 10:15:51 NR021AA kernel: ACPI: Using IOAPIC for interrupt routing
+abr 11 10:15:51 NR021AA kernel: PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+abr 11 10:15:51 NR021AA kernel: ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+abr 11 10:15:51 NR021AA kernel: acpi PNP0A08:00: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI]
+abr 11 10:15:51 NR021AA kernel: acpi PNP0A08:00: _OSC failed (AE_NOT_FOUND); disabling ASPM
+abr 11 10:15:51 NR021AA kernel: PCI host bridge to bus 0000:00
+abr 11 10:15:51 NR021AA kernel: pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+abr 11 10:15:51 NR021AA kernel: pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+abr 11 10:15:51 NR021AA kernel: pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+abr 11 10:15:51 NR021AA kernel: pci_bus 0000:00: root bus resource [mem 0x000c0000-0x000dffff window]
+abr 11 10:15:51 NR021AA kernel: pci_bus 0000:00: root bus resource [mem 0xcff00000-0xfebfffff window]
+abr 11 10:15:51 NR021AA kernel: pci_bus 0000:00: root bus resource [bus 00-ff]
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:00.0: [8086:29c0] type 00 class 0x060000
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:01.0: [8086:29c1] type 01 class 0x060400
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:01.0: PME# supported from D0 D3hot D3cold
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1c.0: [8086:27d0] type 01 class 0x060400
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1c.0: PME# supported from D0 D3hot D3cold
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1c.0: System wakeup disabled by ACPI
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1d.0: [8086:27c8] type 00 class 0x0c0300
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1d.0: reg 0x20: [io  0xf500-0xf51f]
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1d.0: System wakeup disabled by ACPI
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1d.1: [8086:27c9] type 00 class 0x0c0300
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1d.1: reg 0x20: [io  0xf600-0xf61f]
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1d.1: System wakeup disabled by ACPI
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1d.2: [8086:27ca] type 00 class 0x0c0300
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1d.2: reg 0x20: [io  0xf700-0xf71f]
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1d.2: System wakeup disabled by ACPI
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1d.3: [8086:27cb] type 00 class 0x0c0300
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1d.3: reg 0x20: [io  0xf800-0xf81f]
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1d.3: System wakeup disabled by ACPI
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1d.7: [8086:27cc] type 00 class 0x0c0320
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1d.7: reg 0x10: [mem 0xfdfff000-0xfdfff3ff]
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1d.7: PME# supported from D0 D3hot D3cold
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1d.7: System wakeup disabled by ACPI
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1e.0: [8086:244e] type 01 class 0x060401
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1e.0: System wakeup disabled by ACPI
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1f.0: [8086:27b8] type 00 class 0x060100
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1f.0: quirk: [io  0x0400-0x047f] claimed by ICH6 ACPI/GPIO/TCO
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1f.0: quirk: [io  0x0480-0x04bf] claimed by ICH6 GPIO
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1f.0: ICH7 LPC Generic IO decode 1 PIO at 0800 (mask 003f)
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1f.0: ICH7 LPC Generic IO decode 2 PIO at 0290 (mask 001f)
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1f.2: [8086:27c0] type 00 class 0x01018a
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1f.2: reg 0x10: [io  0x0000-0x0007]
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1f.2: reg 0x14: [io  0x0000-0x0003]
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1f.2: reg 0x18: [io  0x0000-0x0007]
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1f.2: reg 0x1c: [io  0x0000-0x0003]
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1f.2: reg 0x20: [io  0xf900-0xf90f]
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1f.2: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1f.2: legacy IDE quirk: reg 0x14: [io  0x03f6]
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1f.2: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1f.2: legacy IDE quirk: reg 0x1c: [io  0x0376]
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1f.2: PME# supported from D3hot
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1f.3: [8086:27da] type 00 class 0x0c0500
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1f.3: reg 0x20: [io  0x0500-0x051f]
+abr 11 10:15:51 NR021AA kernel: pci 0000:01:00.0: [1002:6779] type 00 class 0x030000
+abr 11 10:15:51 NR021AA kernel: pci 0000:01:00.0: reg 0x10: [mem 0xd0000000-0xdfffffff 64bit pref]
+abr 11 10:15:51 NR021AA kernel: pci 0000:01:00.0: reg 0x18: [mem 0xfdaa0000-0xfdabffff 64bit]
+abr 11 10:15:51 NR021AA kernel: pci 0000:01:00.0: reg 0x20: [io  0xce00-0xceff]
+abr 11 10:15:51 NR021AA kernel: pci 0000:01:00.0: reg 0x30: [mem 0x00000000-0x0001ffff pref]
+abr 11 10:15:51 NR021AA kernel: pci 0000:01:00.0: supports D1 D2
+abr 11 10:15:51 NR021AA kernel: pci 0000:01:00.1: [1002:aa98] type 00 class 0x040300
+abr 11 10:15:51 NR021AA kernel: pci 0000:01:00.1: reg 0x10: [mem 0xfdafc000-0xfdafffff 64bit]
+abr 11 10:15:51 NR021AA kernel: pci 0000:01:00.1: supports D1 D2
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:01.0: PCI bridge to [bus 01]
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:01.0:   bridge window [io  0xc000-0xcfff]
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:01.0:   bridge window [mem 0xfda00000-0xfdafffff]
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:01.0:   bridge window [mem 0xd0000000-0xdfffffff 64bit pref]
+abr 11 10:15:51 NR021AA kernel: pci 0000:02:00.0: [10ec:8136] type 00 class 0x020000
+abr 11 10:15:51 NR021AA kernel: pci 0000:02:00.0: reg 0x10: [io  0xde00-0xdeff]
+abr 11 10:15:51 NR021AA kernel: pci 0000:02:00.0: reg 0x18: [mem 0xfdbff000-0xfdbfffff 64bit]
+abr 11 10:15:51 NR021AA kernel: pci 0000:02:00.0: reg 0x30: [mem 0x00000000-0x0001ffff pref]
+abr 11 10:15:51 NR021AA kernel: pci 0000:02:00.0: supports D1 D2
+abr 11 10:15:51 NR021AA kernel: pci 0000:02:00.0: PME# supported from D1 D2 D3hot D3cold
+abr 11 10:15:51 NR021AA kernel: pci 0000:02:00.0: disabling ASPM on pre-1.1 PCIe device.  You can enable it with 'pcie_aspm=force'
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1c.0: PCI bridge to [bus 02]
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1c.0:   bridge window [io  0xd000-0xdfff]
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1c.0:   bridge window [mem 0xfdb00000-0xfdbfffff]
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1c.0:   bridge window [mem 0xfdc00000-0xfdcfffff 64bit pref]
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1e.0: PCI bridge to [bus 05] (subtractive decode)
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1e.0:   bridge window [io  0xe000-0xefff]
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1e.0:   bridge window [mem 0xfdd00000-0xfddfffff]
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1e.0:   bridge window [mem 0xfde00000-0xfdefffff 64bit pref]
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1e.0:   bridge window [io  0x0000-0x0cf7 window] (subtractive decode)
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1e.0:   bridge window [io  0x0d00-0xffff window] (subtractive decode)
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1e.0:   bridge window [mem 0x000a0000-0x000bffff window] (subtractive decode)
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1e.0:   bridge window [mem 0x000c0000-0x000dffff window] (subtractive decode)
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1e.0:   bridge window [mem 0xcff00000-0xfebfffff window] (subtractive decode)
+abr 11 10:15:51 NR021AA kernel: ACPI: PCI Interrupt Link [LNKA] (IRQs 3 4 5 7 9 *10 11 12 14 15)
+abr 11 10:15:51 NR021AA kernel: ACPI: PCI Interrupt Link [LNKB] (IRQs 3 4 *5 7 9 10 11 12 14 15)
+abr 11 10:15:51 NR021AA kernel: ACPI: PCI Interrupt Link [LNKC] (IRQs *3 4 5 7 9 10 11 12 14 15)
+abr 11 10:15:51 NR021AA kernel: ACPI: PCI Interrupt Link [LNKD] (IRQs 3 4 5 7 9 10 *11 12 14 15)
+abr 11 10:15:51 NR021AA kernel: ACPI: PCI Interrupt Link [LNKE] (IRQs 3 4 5 7 9 10 11 12 14 15) *0, disabled.
+abr 11 10:15:51 NR021AA kernel: ACPI: PCI Interrupt Link [LNKF] (IRQs 3 4 5 7 9 10 11 12 14 15) *0, disabled.
+abr 11 10:15:51 NR021AA kernel: ACPI: PCI Interrupt Link [LNK0] (IRQs 3 4 5 7 9 10 11 12 14 15) *0, disabled.
+abr 11 10:15:51 NR021AA kernel: ACPI: PCI Interrupt Link [LNK1] (IRQs 3 4 5 *7 9 10 11 12 14 15)
+abr 11 10:15:51 NR021AA kernel: ACPI: Enabled 2 GPEs in block 00 to 1F
+abr 11 10:15:51 NR021AA kernel: vgaarb: setting as boot device: PCI:0000:01:00.0
+abr 11 10:15:51 NR021AA kernel: vgaarb: device added: PCI:0000:01:00.0,decodes=io+mem,owns=io+mem,locks=none
+abr 11 10:15:51 NR021AA kernel: vgaarb: loaded
+abr 11 10:15:51 NR021AA kernel: vgaarb: bridge control possible 0000:01:00.0
+abr 11 10:15:51 NR021AA kernel: SCSI subsystem initialized
+abr 11 10:15:51 NR021AA kernel: libata version 3.00 loaded.
+abr 11 10:15:51 NR021AA kernel: ACPI: bus type USB registered
+abr 11 10:15:51 NR021AA kernel: usbcore: registered new interface driver usbfs
+abr 11 10:15:51 NR021AA kernel: usbcore: registered new interface driver hub
+abr 11 10:15:51 NR021AA kernel: usbcore: registered new device driver usb
+abr 11 10:15:51 NR021AA kernel: PCI: Using ACPI for IRQ routing
+abr 11 10:15:51 NR021AA kernel: PCI: pci_cache_line_size set to 64 bytes
+abr 11 10:15:51 NR021AA kernel: e820: reserve RAM buffer [mem 0x0009f400-0x0009ffff]
+abr 11 10:15:51 NR021AA kernel: e820: reserve RAM buffer [mem 0xcfe90000-0xcfffffff]
+abr 11 10:15:51 NR021AA kernel: NetLabel: Initializing
+abr 11 10:15:51 NR021AA kernel: NetLabel:  domain hash size = 128
+abr 11 10:15:51 NR021AA kernel: NetLabel:  protocols = UNLABELED CIPSOv4
+abr 11 10:15:51 NR021AA kernel: NetLabel:  unlabeled traffic allowed by default
+abr 11 10:15:51 NR021AA kernel: HPET: 3 timers in total, 0 timers will be used for per-cpu timer
+abr 11 10:15:51 NR021AA kernel: hpet0: at MMIO 0xfed00000, IRQs 2, 8, 0
+abr 11 10:15:51 NR021AA kernel: hpet0: 3 comparators, 64-bit 14.318180 MHz counter
+abr 11 10:15:51 NR021AA kernel: clocksource: Switched to clocksource hpet
+abr 11 10:15:51 NR021AA kernel: VFS: Disk quotas dquot_6.6.0
+abr 11 10:15:51 NR021AA kernel: VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+abr 11 10:15:51 NR021AA kernel: pnp: PnP ACPI init
+abr 11 10:15:51 NR021AA kernel: system 00:00: [io  0x04d0-0x04d1] has been reserved
+abr 11 10:15:51 NR021AA kernel: system 00:00: [io  0x0800-0x087f] has been reserved
+abr 11 10:15:51 NR021AA kernel: system 00:00: [io  0x0290-0x0297] has been reserved
+abr 11 10:15:51 NR021AA kernel: system 00:00: [io  0x0880-0x088f] has been reserved
+abr 11 10:15:51 NR021AA kernel: system 00:00: Plug and Play ACPI device, IDs PNP0c02 (active)
+abr 11 10:15:51 NR021AA kernel: pnp 00:01: Plug and Play ACPI device, IDs PNP0b00 (active)
+abr 11 10:15:51 NR021AA kernel: system 00:02: [io  0x0400-0x04bf] could not be reserved
+abr 11 10:15:51 NR021AA kernel: system 00:02: Plug and Play ACPI device, IDs PNP0c02 (active)
+abr 11 10:15:51 NR021AA kernel: system 00:03: [mem 0xe0000000-0xefffffff] has been reserved
+abr 11 10:15:51 NR021AA kernel: system 00:03: Plug and Play ACPI device, IDs PNP0c02 (active)
+abr 11 10:15:51 NR021AA kernel: system 00:04: [mem 0x000f0000-0x000fffff] could not be reserved
+abr 11 10:15:51 NR021AA kernel: system 00:04: [mem 0xcff00000-0xcfffffff] has been reserved
+abr 11 10:15:51 NR021AA kernel: system 00:04: [mem 0xfed00000-0xfed000ff] has been reserved
+abr 11 10:15:51 NR021AA kernel: system 00:04: [mem 0xcfe90000-0xcfefffff] could not be reserved
+abr 11 10:15:51 NR021AA kernel: system 00:04: [mem 0x00000000-0x0009ffff] could not be reserved
+abr 11 10:15:51 NR021AA kernel: system 00:04: [mem 0x00100000-0xcfe8ffff] could not be reserved
+abr 11 10:15:51 NR021AA kernel: system 00:04: [mem 0xfec00000-0xfec00fff] could not be reserved
+abr 11 10:15:51 NR021AA kernel: system 00:04: [mem 0xfed13000-0xfed1dfff] has been reserved
+abr 11 10:15:51 NR021AA kernel: system 00:04: [mem 0xfed20000-0xfed8ffff] has been reserved
+abr 11 10:15:51 NR021AA kernel: system 00:04: [mem 0xfee00000-0xfee00fff] has been reserved
+abr 11 10:15:51 NR021AA kernel: system 00:04: [mem 0xffb00000-0xffb7ffff] has been reserved
+abr 11 10:15:51 NR021AA kernel: system 00:04: [mem 0xfff00000-0xffffffff] has been reserved
+abr 11 10:15:51 NR021AA kernel: system 00:04: [mem 0x000e0000-0x000effff] has been reserved
+abr 11 10:15:51 NR021AA kernel: system 00:04: Plug and Play ACPI device, IDs PNP0c01 (active)
+abr 11 10:15:51 NR021AA kernel: pnp: PnP ACPI: found 5 devices
+abr 11 10:15:51 NR021AA kernel: clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+abr 11 10:15:51 NR021AA kernel: pci 0000:01:00.0: BAR 6: assigned [mem 0xfda00000-0xfda1ffff pref]
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:01.0: PCI bridge to [bus 01]
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:01.0:   bridge window [io  0xc000-0xcfff]
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:01.0:   bridge window [mem 0xfda00000-0xfdafffff]
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:01.0:   bridge window [mem 0xd0000000-0xdfffffff 64bit pref]
+abr 11 10:15:51 NR021AA kernel: pci 0000:02:00.0: BAR 6: assigned [mem 0xfdb00000-0xfdb1ffff pref]
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1c.0: PCI bridge to [bus 02]
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1c.0:   bridge window [io  0xd000-0xdfff]
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1c.0:   bridge window [mem 0xfdb00000-0xfdbfffff]
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1c.0:   bridge window [mem 0xfdc00000-0xfdcfffff 64bit pref]
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1e.0: PCI bridge to [bus 05]
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1e.0:   bridge window [io  0xe000-0xefff]
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1e.0:   bridge window [mem 0xfdd00000-0xfddfffff]
+abr 11 10:15:51 NR021AA kernel: pci 0000:00:1e.0:   bridge window [mem 0xfde00000-0xfdefffff 64bit pref]
+abr 11 10:15:51 NR021AA kernel: pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
+abr 11 10:15:51 NR021AA kernel: pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]
+abr 11 10:15:51 NR021AA kernel: pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]
+abr 11 10:15:51 NR021AA kernel: pci_bus 0000:00: resource 7 [mem 0x000c0000-0x000dffff window]
+abr 11 10:15:51 NR021AA kernel: pci_bus 0000:00: resource 8 [mem 0xcff00000-0xfebfffff window]
+abr 11 10:15:51 NR021AA kernel: pci_bus 0000:01: resource 0 [io  0xc000-0xcfff]
+abr 11 10:15:51 NR021AA kernel: pci_bus 0000:01: resource 1 [mem 0xfda00000-0xfdafffff]
+abr 11 10:15:51 NR021AA kernel: pci_bus 0000:01: resource 2 [mem 0xd0000000-0xdfffffff 64bit pref]
+abr 11 10:15:51 NR021AA kernel: pci_bus 0000:02: resource 0 [io  0xd000-0xdfff]
+abr 11 10:15:51 NR021AA kernel: pci_bus 0000:02: resource 1 [mem 0xfdb00000-0xfdbfffff]
+abr 11 10:15:51 NR021AA kernel: pci_bus 0000:02: resource 2 [mem 0xfdc00000-0xfdcfffff 64bit pref]
+abr 11 10:15:51 NR021AA kernel: pci_bus 0000:05: resource 0 [io  0xe000-0xefff]
+abr 11 10:15:51 NR021AA kernel: pci_bus 0000:05: resource 1 [mem 0xfdd00000-0xfddfffff]
+abr 11 10:15:51 NR021AA kernel: pci_bus 0000:05: resource 2 [mem 0xfde00000-0xfdefffff 64bit pref]
+abr 11 10:15:51 NR021AA kernel: pci_bus 0000:05: resource 4 [io  0x0000-0x0cf7 window]
+abr 11 10:15:51 NR021AA kernel: pci_bus 0000:05: resource 5 [io  0x0d00-0xffff window]
+abr 11 10:15:51 NR021AA kernel: pci_bus 0000:05: resource 6 [mem 0x000a0000-0x000bffff window]
+abr 11 10:15:51 NR021AA kernel: pci_bus 0000:05: resource 7 [mem 0x000c0000-0x000dffff window]
+abr 11 10:15:51 NR021AA kernel: pci_bus 0000:05: resource 8 [mem 0xcff00000-0xfebfffff window]
+abr 11 10:15:51 NR021AA kernel: NET: Registered protocol family 2
+abr 11 10:15:51 NR021AA kernel: TCP established hash table entries: 32768 (order: 6, 262144 bytes)
+abr 11 10:15:51 NR021AA kernel: TCP bind hash table entries: 32768 (order: 7, 524288 bytes)
+abr 11 10:15:51 NR021AA kernel: TCP: Hash tables configured (established 32768 bind 32768)
+abr 11 10:15:51 NR021AA kernel: UDP hash table entries: 2048 (order: 4, 65536 bytes)
+abr 11 10:15:51 NR021AA kernel: UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes)
+abr 11 10:15:51 NR021AA kernel: NET: Registered protocol family 1
+abr 11 10:15:51 NR021AA kernel: pci 0000:01:00.0: Video device with shadowed ROM
+abr 11 10:15:51 NR021AA kernel: PCI: CLS 64 bytes, default 64
+abr 11 10:15:51 NR021AA kernel: Unpacking initramfs...
+abr 11 10:15:51 NR021AA kernel: Freeing initrd memory: 21428K (ffff880035616000 - ffff880036b03000)
+abr 11 10:15:51 NR021AA kernel: PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+abr 11 10:15:51 NR021AA kernel: software IO TLB [mem 0xcbe90000-0xcfe90000] (64MB) mapped at [ffff8800cbe90000-ffff8800cfe8ffff]
+abr 11 10:15:51 NR021AA kernel: futex hash table entries: 1024 (order: 4, 65536 bytes)
+abr 11 10:15:51 NR021AA kernel: audit: initializing netlink subsys (disabled)
+abr 11 10:15:51 NR021AA kernel: audit: type=2000 audit(1491898550.348:1): initialized
+abr 11 10:15:51 NR021AA kernel: Initialise system trusted keyring
+abr 11 10:15:51 NR021AA kernel: zbud: loaded
+abr 11 10:15:51 NR021AA kernel: Key type big_key registered
+abr 11 10:15:51 NR021AA kernel: SELinux:  Registering netfilter hooks
+abr 11 10:15:51 NR021AA kernel: NET: Registered protocol family 38
+abr 11 10:15:51 NR021AA kernel: Key type asymmetric registered
+abr 11 10:15:51 NR021AA kernel: Asymmetric key parser 'x509' registered
+abr 11 10:15:51 NR021AA kernel: Block layer SCSI generic (bsg) driver version 0.4 loaded (major 250)
+abr 11 10:15:51 NR021AA kernel: io scheduler noop registered
+abr 11 10:15:51 NR021AA kernel: io scheduler deadline registered
+abr 11 10:15:51 NR021AA kernel: io scheduler cfq registered (default)
+abr 11 10:15:51 NR021AA kernel: pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+abr 11 10:15:51 NR021AA kernel: pciehp: PCI Express Hot Plug Controller Driver version: 0.4
+abr 11 10:15:51 NR021AA kernel: intel_idle: does not run on family 6 model 23
+abr 11 10:15:51 NR021AA kernel: input: Power Button as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0C:00/input/input0
+abr 11 10:15:51 NR021AA kernel: ACPI: Power Button [PWRB]
+abr 11 10:15:51 NR021AA kernel: input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input1
+abr 11 10:15:51 NR021AA kernel: ACPI: Power Button [PWRF]
+abr 11 10:15:51 NR021AA kernel: GHES: HEST is not enabled!
+abr 11 10:15:51 NR021AA kernel: Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+abr 11 10:15:51 NR021AA kernel: Non-volatile memory driver v1.3
+abr 11 10:15:51 NR021AA kernel: Linux agpgart interface v0.103
+abr 11 10:15:51 NR021AA kernel: ata_piix 0000:00:1f.2: version 2.13
+abr 11 10:15:51 NR021AA kernel: ata_piix 0000:00:1f.2: MAP [ P0 P2 P1 P3 ]
+abr 11 10:15:51 NR021AA kernel: scsi host0: ata_piix
+abr 11 10:15:51 NR021AA kernel: scsi host1: ata_piix
+abr 11 10:15:51 NR021AA kernel: ata1: SATA max UDMA/133 cmd 0x1f0 ctl 0x3f6 bmdma 0xf900 irq 14
+abr 11 10:15:51 NR021AA kernel: ata2: SATA max UDMA/133 cmd 0x170 ctl 0x376 bmdma 0xf908 irq 15
+abr 11 10:15:51 NR021AA kernel: libphy: Fixed MDIO Bus: probed
+abr 11 10:15:51 NR021AA kernel: ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+abr 11 10:15:51 NR021AA kernel: ehci-pci: EHCI PCI platform driver
+abr 11 10:15:51 NR021AA kernel: ehci-pci 0000:00:1d.7: EHCI Host Controller
+abr 11 10:15:51 NR021AA kernel: ehci-pci 0000:00:1d.7: new USB bus registered, assigned bus number 1
+abr 11 10:15:51 NR021AA kernel: ehci-pci 0000:00:1d.7: debug port 1
+abr 11 10:15:51 NR021AA kernel: ehci-pci 0000:00:1d.7: cache line size of 64 is not supported
+abr 11 10:15:51 NR021AA kernel: ehci-pci 0000:00:1d.7: irq 23, io mem 0xfdfff000
+abr 11 10:15:51 NR021AA kernel: ehci-pci 0000:00:1d.7: USB 2.0 started, EHCI 1.00
+abr 11 10:15:51 NR021AA kernel: usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+abr 11 10:15:51 NR021AA kernel: usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+abr 11 10:15:51 NR021AA kernel: usb usb1: Product: EHCI Host Controller
+abr 11 10:15:51 NR021AA kernel: usb usb1: Manufacturer: Linux 4.5.5-300.fc24.x86_64 ehci_hcd
+abr 11 10:15:51 NR021AA kernel: usb usb1: SerialNumber: 0000:00:1d.7
+abr 11 10:15:51 NR021AA kernel: hub 1-0:1.0: USB hub found
+abr 11 10:15:51 NR021AA kernel: hub 1-0:1.0: 8 ports detected
+abr 11 10:15:51 NR021AA kernel: ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+abr 11 10:15:51 NR021AA kernel: ohci-pci: OHCI PCI platform driver
+abr 11 10:15:51 NR021AA kernel: uhci_hcd: USB Universal Host Controller Interface driver
+abr 11 10:15:51 NR021AA kernel: uhci_hcd 0000:00:1d.0: UHCI Host Controller
+abr 11 10:15:51 NR021AA kernel: uhci_hcd 0000:00:1d.0: new USB bus registered, assigned bus number 2
+abr 11 10:15:51 NR021AA kernel: uhci_hcd 0000:00:1d.0: detected 2 ports
+abr 11 10:15:51 NR021AA kernel: uhci_hcd 0000:00:1d.0: irq 23, io base 0x0000f500
+abr 11 10:15:51 NR021AA kernel: usb usb2: New USB device found, idVendor=1d6b, idProduct=0001
+abr 11 10:15:51 NR021AA kernel: usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+abr 11 10:15:51 NR021AA kernel: usb usb2: Product: UHCI Host Controller
+abr 11 10:15:51 NR021AA kernel: usb usb2: Manufacturer: Linux 4.5.5-300.fc24.x86_64 uhci_hcd
+abr 11 10:15:51 NR021AA kernel: usb usb2: SerialNumber: 0000:00:1d.0
+abr 11 10:15:51 NR021AA kernel: hub 2-0:1.0: USB hub found
+abr 11 10:15:51 NR021AA kernel: hub 2-0:1.0: 2 ports detected
+abr 11 10:15:51 NR021AA kernel: uhci_hcd 0000:00:1d.1: UHCI Host Controller
+abr 11 10:15:51 NR021AA kernel: uhci_hcd 0000:00:1d.1: new USB bus registered, assigned bus number 3
+abr 11 10:15:51 NR021AA kernel: uhci_hcd 0000:00:1d.1: detected 2 ports
+abr 11 10:15:51 NR021AA kernel: uhci_hcd 0000:00:1d.1: irq 19, io base 0x0000f600
+abr 11 10:15:51 NR021AA kernel: usb usb3: New USB device found, idVendor=1d6b, idProduct=0001
+abr 11 10:15:51 NR021AA kernel: usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+abr 11 10:15:51 NR021AA kernel: usb usb3: Product: UHCI Host Controller
+abr 11 10:15:51 NR021AA kernel: usb usb3: Manufacturer: Linux 4.5.5-300.fc24.x86_64 uhci_hcd
+abr 11 10:15:51 NR021AA kernel: usb usb3: SerialNumber: 0000:00:1d.1
+abr 11 10:15:51 NR021AA kernel: hub 3-0:1.0: USB hub found
+abr 11 10:15:51 NR021AA kernel: hub 3-0:1.0: 2 ports detected
+abr 11 10:15:51 NR021AA kernel: uhci_hcd 0000:00:1d.2: UHCI Host Controller
+abr 11 10:15:51 NR021AA kernel: uhci_hcd 0000:00:1d.2: new USB bus registered, assigned bus number 4
+abr 11 10:15:51 NR021AA kernel: uhci_hcd 0000:00:1d.2: detected 2 ports
+abr 11 10:15:51 NR021AA kernel: uhci_hcd 0000:00:1d.2: irq 18, io base 0x0000f700
+abr 11 10:15:51 NR021AA kernel: usb usb4: New USB device found, idVendor=1d6b, idProduct=0001
+abr 11 10:15:51 NR021AA kernel: usb usb4: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+abr 11 10:15:51 NR021AA kernel: usb usb4: Product: UHCI Host Controller
+abr 11 10:15:51 NR021AA kernel: usb usb4: Manufacturer: Linux 4.5.5-300.fc24.x86_64 uhci_hcd
+abr 11 10:15:51 NR021AA kernel: usb usb4: SerialNumber: 0000:00:1d.2
+abr 11 10:15:51 NR021AA kernel: hub 4-0:1.0: USB hub found
+abr 11 10:15:51 NR021AA kernel: hub 4-0:1.0: 2 ports detected
+abr 11 10:15:51 NR021AA kernel: uhci_hcd 0000:00:1d.3: UHCI Host Controller
+abr 11 10:15:51 NR021AA kernel: uhci_hcd 0000:00:1d.3: new USB bus registered, assigned bus number 5
+abr 11 10:15:51 NR021AA kernel: uhci_hcd 0000:00:1d.3: detected 2 ports
+abr 11 10:15:51 NR021AA kernel: uhci_hcd 0000:00:1d.3: irq 16, io base 0x0000f800
+abr 11 10:15:51 NR021AA kernel: usb usb5: New USB device found, idVendor=1d6b, idProduct=0001
+abr 11 10:15:51 NR021AA kernel: usb usb5: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+abr 11 10:15:51 NR021AA kernel: usb usb5: Product: UHCI Host Controller
+abr 11 10:15:51 NR021AA kernel: usb usb5: Manufacturer: Linux 4.5.5-300.fc24.x86_64 uhci_hcd
+abr 11 10:15:51 NR021AA kernel: usb usb5: SerialNumber: 0000:00:1d.3
+abr 11 10:15:51 NR021AA kernel: hub 5-0:1.0: USB hub found
+abr 11 10:15:51 NR021AA kernel: hub 5-0:1.0: 2 ports detected
+abr 11 10:15:51 NR021AA kernel: usbcore: registered new interface driver usbserial
+abr 11 10:15:51 NR021AA kernel: usbcore: registered new interface driver usbserial_generic
+abr 11 10:15:51 NR021AA kernel: usbserial: USB Serial support registered for generic
+abr 11 10:15:51 NR021AA kernel: i8042: PNP: No PS/2 controller found. Probing ports directly.
+abr 11 10:15:51 NR021AA kernel: serio: i8042 KBD port at 0x60,0x64 irq 1
+abr 11 10:15:51 NR021AA kernel: serio: i8042 AUX port at 0x60,0x64 irq 12
+abr 11 10:15:51 NR021AA kernel: mousedev: PS/2 mouse device common for all mice
+abr 11 10:15:51 NR021AA kernel: rtc_cmos 00:01: RTC can wake from S4
+abr 11 10:15:51 NR021AA kernel: rtc_cmos 00:01: rtc core: registered rtc_cmos as rtc0
+abr 11 10:15:51 NR021AA kernel: rtc_cmos 00:01: alarms up to one month, 242 bytes nvram, hpet irqs
+abr 11 10:15:51 NR021AA kernel: device-mapper: uevent: version 1.0.3
+abr 11 10:15:51 NR021AA kernel: device-mapper: ioctl: 4.34.0-ioctl (2015-10-28) initialised: dm-devel@redhat.com
+abr 11 10:15:51 NR021AA kernel: hidraw: raw HID events driver (C) Jiri Kosina
+abr 11 10:15:51 NR021AA kernel: usbcore: registered new interface driver usbhid
+abr 11 10:15:51 NR021AA kernel: usbhid: USB HID core driver
+abr 11 10:15:51 NR021AA kernel: drop_monitor: Initializing network drop monitor service
+abr 11 10:15:51 NR021AA kernel: ip_tables: (C) 2000-2006 Netfilter Core Team
+abr 11 10:15:51 NR021AA kernel: Initializing XFRM netlink socket
+abr 11 10:15:51 NR021AA kernel: NET: Registered protocol family 10
+abr 11 10:15:51 NR021AA kernel: mip6: Mobile IPv6
+abr 11 10:15:51 NR021AA kernel: NET: Registered protocol family 17
+abr 11 10:15:51 NR021AA kernel: microcode: CPU0 sig=0x1067a, pf=0x1, revision=0xa07
+abr 11 10:15:51 NR021AA kernel: microcode: CPU1 sig=0x1067a, pf=0x1, revision=0xa07
+abr 11 10:15:51 NR021AA kernel: microcode: Microcode Update Driver: v2.01 <tigran@aivazian.fsnet.co.uk>, Peter Oruba
+abr 11 10:15:51 NR021AA kernel: registered taskstats version 1
+abr 11 10:15:51 NR021AA kernel: Loading compiled-in X.509 certificates
+abr 11 10:15:51 NR021AA kernel: Loaded X.509 cert 'Fedora kernel signing key: 1304c420836ce81b5a1692090e4eee89aac431dd'
+abr 11 10:15:51 NR021AA kernel: zswap: loaded using pool lzo/zbud
+abr 11 10:15:51 NR021AA kernel:   Magic number: 13:379:270
+abr 11 10:15:51 NR021AA kernel: rtc_cmos 00:01: setting system clock to 2017-04-11 08:15:51 UTC (1491898551)
+abr 11 10:15:51 NR021AA kernel: PM: Hibernation image not present or could not be loaded.
+abr 11 10:15:51 NR021AA kernel: ata1.00: ATA-9: ST1000DM003-1ER162, CC45, max UDMA/133
+abr 11 10:15:51 NR021AA kernel: ata1.00: 1953525168 sectors, multi 16: LBA48 NCQ (depth 0/32)
+abr 11 10:15:51 NR021AA kernel: ata1.01: ATAPI: TSSTcorp CDDVDW TS-H653Z, 4303, max UDMA/33
+abr 11 10:15:51 NR021AA kernel: ata1.00: configured for UDMA/133
+abr 11 10:15:51 NR021AA kernel: ata1.01: configured for UDMA/33
+abr 11 10:15:51 NR021AA kernel: scsi 0:0:0:0: Direct-Access     ATA      ST1000DM003-1ER1 CC45 PQ: 0 ANSI: 5
+abr 11 10:15:51 NR021AA kernel: sd 0:0:0:0: [sda] 1953525168 512-byte logical blocks: (1.00 TB/932 GiB)
+abr 11 10:15:51 NR021AA kernel: sd 0:0:0:0: [sda] 4096-byte physical blocks
+abr 11 10:15:51 NR021AA kernel: sd 0:0:0:0: Attached scsi generic sg0 type 0
+abr 11 10:15:51 NR021AA kernel: sd 0:0:0:0: [sda] Write Protect is off
+abr 11 10:15:51 NR021AA kernel: sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
+abr 11 10:15:51 NR021AA kernel: sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+abr 11 10:15:51 NR021AA kernel: scsi 0:0:1:0: CD-ROM            TSSTcorp CDDVDW TS-H653Z  4303 PQ: 0 ANSI: 5
+abr 11 10:15:51 NR021AA kernel:  sda: sda1 sda2 sda3
+abr 11 10:15:51 NR021AA kernel: sr 0:0:1:0: [sr0] scsi3-mmc drive: 40x/40x writer dvd-ram cd/rw xa/form2 cdda tray
+abr 11 10:15:51 NR021AA kernel: cdrom: Uniform CD-ROM driver Revision: 3.20
+abr 11 10:15:51 NR021AA kernel: sd 0:0:0:0: [sda] Attached SCSI disk
+abr 11 10:15:51 NR021AA kernel: sr 0:0:1:0: Attached scsi CD-ROM sr0
+abr 11 10:15:51 NR021AA kernel: sr 0:0:1:0: Attached scsi generic sg1 type 5
+abr 11 10:15:51 NR021AA kernel: Freeing unused kernel memory: 1552K (ffffffff81d4f000 - ffffffff81ed3000)
+abr 11 10:15:51 NR021AA kernel: Write protecting the kernel read-only data: 12288k
+abr 11 10:15:51 NR021AA kernel: Freeing unused kernel memory: 168K (ffff8800017d6000 - ffff880001800000)
+abr 11 10:15:51 NR021AA kernel: Freeing unused kernel memory: 584K (ffff880001b6e000 - ffff880001c00000)
+abr 11 10:15:51 NR021AA kernel: random: systemd urandom read with 13 bits of entropy available
+abr 11 10:15:51 NR021AA systemd[1]: systemd 229 running in system mode. (+PAM +AUDIT +SELINUX +IMA -APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD +IDN)
+abr 11 10:15:51 NR021AA systemd[1]: Detected architecture x86-64.
+abr 11 10:15:51 NR021AA systemd[1]: Running in initial RAM disk.
+abr 11 10:15:51 NR021AA systemd[1]: Set hostname to <NR021AA>.
+abr 11 10:15:51 NR021AA systemd[1]: Created slice System Slice.
+abr 11 10:15:51 NR021AA systemd[1]: Listening on udev Kernel Socket.
+abr 11 10:15:51 NR021AA systemd[1]: Reached target Slices.
+abr 11 10:15:51 NR021AA systemd[1]: Reached target Timers.
+abr 11 10:15:51 NR021AA systemd[1]: Listening on Journal Socket (/dev/log).
+abr 11 10:15:51 NR021AA systemd[1]: Listening on Journal Audit Socket.
+abr 11 10:15:51 NR021AA systemd[1]: Listening on udev Control Socket.
+abr 11 10:15:51 NR021AA systemd[1]: Listening on Journal Socket.
+abr 11 10:15:51 NR021AA systemd[1]: Reached target Sockets.
+abr 11 10:15:51 NR021AA systemd[1]: Starting Create list of required static device nodes for the current kernel...
+abr 11 10:15:51 NR021AA systemd[1]: Starting dracut cmdline hook...
+abr 11 10:15:51 NR021AA systemd[1]: Starting Setup Virtual Console...
+abr 11 10:15:51 NR021AA systemd[1]: Reached target Local File Systems.
+abr 11 10:15:51 NR021AA systemd[1]: Starting Apply Kernel Variables...
+abr 11 10:15:51 NR021AA systemd[1]: Starting Journal Service...
+abr 11 10:15:51 NR021AA systemd[1]: Reached target Swap.
+abr 11 10:15:51 NR021AA systemd[1]: Started Create list of required static device nodes for the current kernel.
+abr 11 10:15:51 NR021AA systemd[1]: Started Apply Kernel Variables.
+abr 11 10:15:51 NR021AA systemd[1]: Starting Create Static Device Nodes in /dev...
+abr 11 10:15:51 NR021AA systemd[1]: Started Create Static Device Nodes in /dev.
+abr 11 10:15:51 NR021AA kernel: audit: type=1130 audit(1491898551.797:2): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-tmpfiles-setup-dev comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:51 NR021AA systemd-journald[137]: Journal started
+-- Subject: The journal has been started
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- The system journal process has started up, opened the journal
+-- files for writing and is now ready to process requests.
+abr 11 10:15:51 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-tmpfiles-setup-dev comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:51 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-journald comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:51 NR021AA systemd-sysctl[134]: Couldn't write '0' to 'net/bridge/bridge-nf-call-ip6tables', ignoring: No such file or directory
+abr 11 10:15:51 NR021AA systemd[1]: Started Journal Service.
+abr 11 10:15:51 NR021AA kernel: audit: type=1130 audit(1491898551.810:3): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-journald comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:51 NR021AA systemd-sysctl[134]: Couldn't write '0' to 'net/bridge/bridge-nf-call-arptables', ignoring: No such file or directory
+abr 11 10:15:51 NR021AA systemd-sysctl[134]: Couldn't write '0' to 'net/bridge/bridge-nf-call-iptables', ignoring: No such file or directory
+abr 11 10:15:51 NR021AA dracut-cmdline[132]: dracut-24 (Workstation Edition) dracut-044-18.git20160108.fc24
+abr 11 10:15:51 NR021AA dracut-cmdline[132]: Using kernel command line parameters: BOOT_IMAGE=/boot/vmlinuz-4.5.5-300.fc24.x86_64 root=/dev/mapper/fedora-root ro rd.lvm.lv=fedora/root rd.lvm.lv=fedora/swap rhgb quiet
+abr 11 10:15:51 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=dracut-cmdline comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:51 NR021AA kernel: audit: type=1130 audit(1491898551.850:4): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=dracut-cmdline comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:51 NR021AA systemd[1]: Started dracut cmdline hook.
+-- Subject: Unit dracut-cmdline.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit dracut-cmdline.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 10:15:51 NR021AA systemd[1]: Starting dracut pre-udev hook...
+-- Subject: Unit dracut-pre-udev.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit dracut-pre-udev.service has begun starting up.
+abr 11 10:15:51 NR021AA kernel: audit: type=1130 audit(1491898551.859:5): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-vconsole-setup comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:51 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-vconsole-setup comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:51 NR021AA systemd[1]: Started Setup Virtual Console.
+-- Subject: Unit systemd-vconsole-setup.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-vconsole-setup.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 10:15:51 NR021AA kernel: audit: type=1130 audit(1491898551.876:6): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=dracut-pre-udev comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:51 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=dracut-pre-udev comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:51 NR021AA systemd[1]: Started dracut pre-udev hook.
+-- Subject: Unit dracut-pre-udev.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit dracut-pre-udev.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 10:15:51 NR021AA systemd[1]: Starting udev Kernel Device Manager...
+-- Subject: Unit systemd-udevd.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-udevd.service has begun starting up.
+abr 11 10:15:51 NR021AA systemd[1]: Started udev Kernel Device Manager.
+-- Subject: Unit systemd-udevd.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-udevd.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 10:15:51 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-udevd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:51 NR021AA kernel: audit: type=1130 audit(1491898551.885:7): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-udevd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:51 NR021AA systemd[1]: Starting udev Coldplug all Devices...
+-- Subject: Unit systemd-udev-trigger.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-udev-trigger.service has begun starting up.
+abr 11 10:15:51 NR021AA systemd[1]: Mounting Configuration File System...
+-- Subject: Unit sys-kernel-config.mount has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit sys-kernel-config.mount has begun starting up.
+abr 11 10:15:51 NR021AA systemd[1]: Mounted Configuration File System.
+-- Subject: Unit sys-kernel-config.mount has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit sys-kernel-config.mount has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 10:15:51 NR021AA kernel: usb 2-1: new low-speed USB device number 2 using uhci_hcd
+abr 11 10:15:51 NR021AA kernel: audit: type=1130 audit(1491898551.929:8): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-udev-trigger comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:51 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-udev-trigger comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:51 NR021AA systemd[1]: Started udev Coldplug all Devices.
+-- Subject: Unit systemd-udev-trigger.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-udev-trigger.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 10:15:51 NR021AA systemd[1]: Starting Show Plymouth Boot Screen...
+-- Subject: Unit plymouth-start.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit plymouth-start.service has begun starting up.
+abr 11 10:15:51 NR021AA systemd[1]: Reached target System Initialization.
+-- Subject: Unit sysinit.target has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit sysinit.target has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 10:15:51 NR021AA systemd[1]: Starting dracut initqueue hook...
+-- Subject: Unit dracut-initqueue.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit dracut-initqueue.service has begun starting up.
+abr 11 10:15:51 NR021AA kernel: r8169 Gigabit Ethernet driver 2.3LK-NAPI loaded
+abr 11 10:15:51 NR021AA kernel: r8169 0000:02:00.0: can't disable ASPM; OS doesn't have ASPM control
+abr 11 10:15:51 NR021AA kernel: r8169 0000:02:00.0 eth0: RTL8101e at 0xffffc90000750000, 00:24:21:28:f7:65, XID 94200000 IRQ 26
+abr 11 10:15:51 NR021AA kernel: [drm] Initialized drm 1.1.0 20060810
+abr 11 10:15:51 NR021AA kernel: FUJITSU Extended Socket Network Device Driver - version 1.0 - Copyright (c) 2015 FUJITSU LIMITED
+abr 11 10:15:52 NR021AA kernel: r8169 0000:02:00.0 enp2s0: renamed from eth0
+abr 11 10:15:52 NR021AA kernel: [drm] radeon kernel modesetting enabled.
+abr 11 10:15:52 NR021AA kernel: AMD IOMMUv2 driver by Joerg Roedel <jroedel@suse.de>
+abr 11 10:15:52 NR021AA kernel: AMD IOMMUv2 functionality not available on this system
+abr 11 10:15:52 NR021AA kernel: CRAT table not found
+abr 11 10:15:52 NR021AA kernel: Finished initializing topology ret=0
+abr 11 10:15:52 NR021AA kernel: kfd kfd: Initialized module
+abr 11 10:15:52 NR021AA kernel: [drm] initializing kernel modesetting (CAICOS 0x1002:0x6779 0x174B:0xE199).
+abr 11 10:15:52 NR021AA kernel: [drm] register mmio base: 0xFDAA0000
+abr 11 10:15:52 NR021AA kernel: [drm] register mmio size: 131072
+abr 11 10:15:52 NR021AA kernel: ATOM BIOS: AMD
+abr 11 10:15:52 NR021AA kernel: radeon 0000:01:00.0: VRAM: 2048M 0x0000000000000000 - 0x000000007FFFFFFF (2048M used)
+abr 11 10:15:52 NR021AA kernel: radeon 0000:01:00.0: GTT: 1024M 0x0000000080000000 - 0x00000000BFFFFFFF
+abr 11 10:15:52 NR021AA kernel: [drm] Detected VRAM RAM=2048M, BAR=256M
+abr 11 10:15:52 NR021AA kernel: [drm] RAM width 64bits DDR
+abr 11 10:15:52 NR021AA kernel: [TTM] Zone  kernel: Available graphics memory: 2022708 kiB
+abr 11 10:15:52 NR021AA kernel: [TTM] Initializing pool allocator
+abr 11 10:15:52 NR021AA kernel: [TTM] Initializing DMA pool allocator
+abr 11 10:15:52 NR021AA kernel: [drm] radeon: 2048M of VRAM memory ready
+abr 11 10:15:52 NR021AA kernel: [drm] radeon: 1024M of GTT memory ready.
+abr 11 10:15:52 NR021AA kernel: [drm] Loading CAICOS Microcode
+abr 11 10:15:52 NR021AA kernel: [drm] Internal thermal controller without fan control
+abr 11 10:15:52 NR021AA kernel: [drm] radeon: dpm initialized
+abr 11 10:15:52 NR021AA kernel: [drm] GART: num cpu pages 262144, num gpu pages 262144
+abr 11 10:15:52 NR021AA kernel: [drm] PCIE GART of 1024M enabled (table at 0x0000000000274000).
+abr 11 10:15:52 NR021AA kernel: radeon 0000:01:00.0: WB enabled
+abr 11 10:15:52 NR021AA kernel: radeon 0000:01:00.0: fence driver on ring 0 use gpu addr 0x0000000080000c00 and cpu addr 0xffff880129b02c00
+abr 11 10:15:52 NR021AA kernel: radeon 0000:01:00.0: fence driver on ring 3 use gpu addr 0x0000000080000c0c and cpu addr 0xffff880129b02c0c
+abr 11 10:15:52 NR021AA kernel: radeon 0000:01:00.0: fence driver on ring 5 use gpu addr 0x0000000000072118 and cpu addr 0xffffc90000c32118
+abr 11 10:15:52 NR021AA kernel: [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+abr 11 10:15:52 NR021AA kernel: [drm] Driver supports precise vblank timestamp query.
+abr 11 10:15:52 NR021AA kernel: radeon 0000:01:00.0: radeon: MSI limited to 32-bit
+abr 11 10:15:52 NR021AA kernel: radeon 0000:01:00.0: radeon: using MSI.
+abr 11 10:15:52 NR021AA kernel: [drm] radeon: irq initialized.
+abr 11 10:15:52 NR021AA kernel: [drm] ring test on 0 succeeded in 2 usecs
+abr 11 10:15:52 NR021AA kernel: [drm] ring test on 3 succeeded in 6 usecs
+abr 11 10:15:52 NR021AA kernel: usb 2-1: New USB device found, idVendor=046d, idProduct=c05a
+abr 11 10:15:52 NR021AA kernel: usb 2-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+abr 11 10:15:52 NR021AA kernel: usb 2-1: Product: USB Optical Mouse
+abr 11 10:15:52 NR021AA kernel: usb 2-1: Manufacturer: Logitech
+abr 11 10:15:52 NR021AA systemd[1]: dev-disk-by\x2dpath-pci\x2d0000:00:1f.2\x2data\x2d1.device: Dev dev-disk-by\x2dpath-pci\x2d0000:00:1f.2\x2data\x2d1.device appeared twice with different sysfs paths /sys/devices/pci0000:00/0000:00:1f.2/ata1/host0/target0:0:1/0:0:1:0/block/sr0 and /sys/devices/pci0000:00/0000:00:1f.2/ata1/host0/target0:0:0/0:0:0:0/block/sda
+abr 11 10:15:52 NR021AA kernel: input: Logitech USB Optical Mouse as /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1:1.0/0003:046D:C05A.0001/input/input5
+abr 11 10:15:52 NR021AA kernel: hid-generic 0003:046D:C05A.0001: input,hidraw0: USB HID v1.11 Mouse [Logitech USB Optical Mouse] on usb-0000:00:1d.0-1/input0
+abr 11 10:15:52 NR021AA kernel: [drm] ring test on 5 succeeded in 2 usecs
+abr 11 10:15:52 NR021AA kernel: [drm] UVD initialized successfully.
+abr 11 10:15:52 NR021AA kernel: [drm] ib test on ring 0 succeeded in 0 usecs
+abr 11 10:15:52 NR021AA kernel: [drm] ib test on ring 3 succeeded in 0 usecs
+abr 11 10:15:52 NR021AA kernel: tsc: Refined TSC clocksource calibration: 3333.269 MHz
+abr 11 10:15:52 NR021AA kernel: clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x300c1087868, max_idle_ns: 440795347510 ns
+abr 11 10:15:52 NR021AA kernel: usb 2-2: new low-speed USB device number 3 using uhci_hcd
+abr 11 10:15:52 NR021AA kernel: [drm] ib test on ring 5 succeeded
+abr 11 10:15:52 NR021AA kernel: [drm] Radeon Display Connectors
+abr 11 10:15:52 NR021AA kernel: [drm] Connector 0:
+abr 11 10:15:52 NR021AA kernel: [drm]   HDMI-A-1
+abr 11 10:15:52 NR021AA kernel: [drm]   HPD1
+abr 11 10:15:52 NR021AA kernel: [drm]   DDC: 0x6460 0x6460 0x6464 0x6464 0x6468 0x6468 0x646c 0x646c
+abr 11 10:15:52 NR021AA kernel: [drm]   Encoders:
+abr 11 10:15:52 NR021AA kernel: [drm]     DFP1: INTERNAL_UNIPHY1
+abr 11 10:15:52 NR021AA kernel: [drm] Connector 1:
+abr 11 10:15:52 NR021AA kernel: [drm]   DVI-D-1
+abr 11 10:15:52 NR021AA kernel: [drm]   HPD4
+abr 11 10:15:52 NR021AA kernel: [drm]   DDC: 0x6440 0x6440 0x6444 0x6444 0x6448 0x6448 0x644c 0x644c
+abr 11 10:15:52 NR021AA kernel: [drm]   Encoders:
+abr 11 10:15:52 NR021AA kernel: [drm]     DFP2: INTERNAL_UNIPHY
+abr 11 10:15:52 NR021AA kernel: [drm] Connector 2:
+abr 11 10:15:52 NR021AA kernel: [drm]   VGA-1
+abr 11 10:15:52 NR021AA kernel: [drm]   DDC: 0x6430 0x6430 0x6434 0x6434 0x6438 0x6438 0x643c 0x643c
+abr 11 10:15:52 NR021AA kernel: [drm]   Encoders:
+abr 11 10:15:52 NR021AA kernel: [drm]     CRT1: INTERNAL_KLDSCP_DAC1
+abr 11 10:15:53 NR021AA kernel: [drm] fb mappable at 0xD0475000
+abr 11 10:15:53 NR021AA kernel: [drm] vram apper at 0xD0000000
+abr 11 10:15:53 NR021AA kernel: [drm] size 8294400
+abr 11 10:15:53 NR021AA kernel: [drm] fb depth is 24
+abr 11 10:15:53 NR021AA kernel: [drm]    pitch is 7680
+abr 11 10:15:53 NR021AA kernel: fbcon: radeondrmfb (fb0) is primary device
+abr 11 10:15:53 NR021AA kernel: usb 2-2: New USB device found, idVendor=046d, idProduct=c31c
+abr 11 10:15:53 NR021AA kernel: usb 2-2: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+abr 11 10:15:53 NR021AA kernel: usb 2-2: Product: USB Keyboard
+abr 11 10:15:53 NR021AA kernel: usb 2-2: Manufacturer: Logitech
+abr 11 10:15:53 NR021AA kernel: input: Logitech USB Keyboard as /devices/pci0000:00/0000:00:1d.0/usb2/2-2/2-2:1.0/0003:046D:C31C.0002/input/input6
+abr 11 10:15:53 NR021AA kernel: hid-generic 0003:046D:C31C.0002: input,hidraw1: USB HID v1.10 Keyboard [Logitech USB Keyboard] on usb-0000:00:1d.0-2/input0
+abr 11 10:15:53 NR021AA kernel: input: Logitech USB Keyboard as /devices/pci0000:00/0000:00:1d.0/usb2/2-2/2-2:1.1/0003:046D:C31C.0003/input/input7
+abr 11 10:15:53 NR021AA kernel: Console: switching to colour frame buffer device 180x56
+abr 11 10:15:53 NR021AA kernel: radeon 0000:01:00.0: fb0: radeondrmfb frame buffer device
+abr 11 10:15:53 NR021AA kernel: [drm] Initialized radeon 2.43.0 20080528 for 0000:01:00.0 on minor 0
+abr 11 10:15:53 NR021AA kernel: hid-generic 0003:046D:C31C.0003: input,hidraw2: USB HID v1.10 Device [Logitech USB Keyboard] on usb-0000:00:1d.0-2/input1
+abr 11 10:15:53 NR021AA dracut-initqueue[301]: Scanning devices sda3  for LVM logical volumes fedora/root fedora/swap
+abr 11 10:15:53 NR021AA systemd[1]: Received SIGRTMIN+20 from PID 302 (plymouthd).
+abr 11 10:15:53 NR021AA kernel: audit: type=1130 audit(1491898553.358:9): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=plymouth-start comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:53 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=plymouth-start comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:53 NR021AA systemd[1]: Started Show Plymouth Boot Screen.
+-- Subject: Unit plymouth-start.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit plymouth-start.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 10:15:53 NR021AA systemd[1]: Reached target Paths.
+-- Subject: Unit paths.target has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit paths.target has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 10:15:53 NR021AA systemd[1]: Started Forward Password Requests to Plymouth Directory Watch.
+-- Subject: Unit systemd-ask-password-plymouth.path has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-ask-password-plymouth.path has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 10:15:53 NR021AA systemd[1]: Reached target Basic System.
+-- Subject: Unit basic.target has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit basic.target has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 10:15:53 NR021AA dracut-initqueue[301]: inactive '/dev/fedora/tmp' [3.00 GiB] inherit
+abr 11 10:15:53 NR021AA dracut-initqueue[301]: inactive '/dev/fedora/root' [15.00 GiB] inherit
+abr 11 10:15:53 NR021AA dracut-initqueue[301]: inactive '/dev/fedora/home' [5.00 GiB] inherit
+abr 11 10:15:53 NR021AA dracut-initqueue[301]: inactive '/dev/fedora/swap' [2.00 GiB] inherit
+abr 11 10:15:53 NR021AA kernel: clocksource: Switched to clocksource tsc
+abr 11 10:15:53 NR021AA systemd[1]: Found device /dev/mapper/fedora-root.
+-- Subject: Unit dev-mapper-fedora\x2droot.device has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit dev-mapper-fedora\x2droot.device has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 10:15:53 NR021AA kernel: random: nonblocking pool is initialized
+abr 11 10:15:53 NR021AA systemd[1]: Started dracut initqueue hook.
+-- Subject: Unit dracut-initqueue.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit dracut-initqueue.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 10:15:53 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=dracut-initqueue comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:53 NR021AA kernel: audit: type=1130 audit(1491898553.597:10): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=dracut-initqueue comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:53 NR021AA systemd[1]: Starting File System Check on /dev/mapper/fedora-root...
+-- Subject: Unit systemd-fsck-root.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-fsck-root.service has begun starting up.
+abr 11 10:15:53 NR021AA systemd[1]: Reached target Remote File Systems (Pre).
+-- Subject: Unit remote-fs-pre.target has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit remote-fs-pre.target has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 10:15:53 NR021AA systemd[1]: Reached target Remote File Systems.
+-- Subject: Unit remote-fs.target has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit remote-fs.target has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 10:15:53 NR021AA systemd-fsck[422]: lvm-root: recovering journal
+abr 11 10:15:53 NR021AA systemd-fsck[422]: lvm-root: clean, 157163/983040 files, 1909805/3932160 blocks
+abr 11 10:15:54 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-fsck-root comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:54 NR021AA systemd[1]: Started File System Check on /dev/mapper/fedora-root.
+-- Subject: Unit systemd-fsck-root.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-fsck-root.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 10:15:54 NR021AA systemd[1]: Mounting /sysroot...
+-- Subject: Unit sysroot.mount has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit sysroot.mount has begun starting up.
+abr 11 10:15:54 NR021AA systemd[1]: Mounted /sysroot.
+-- Subject: Unit sysroot.mount has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit sysroot.mount has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 10:15:54 NR021AA systemd[1]: Reached target Initrd Root File System.
+-- Subject: Unit initrd-root-fs.target has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit initrd-root-fs.target has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 10:15:54 NR021AA kernel: EXT4-fs (dm-0): mounted filesystem with ordered data mode. Opts: (null)
+abr 11 10:15:54 NR021AA systemd[1]: Starting Reload Configuration from the Real Root...
+-- Subject: Unit initrd-parse-etc.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit initrd-parse-etc.service has begun starting up.
+abr 11 10:15:54 NR021AA systemd[1]: Reloading.
+abr 11 10:15:54 NR021AA systemd[1]: Started Reload Configuration from the Real Root.
+-- Subject: Unit initrd-parse-etc.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit initrd-parse-etc.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 10:15:54 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=initrd-parse-etc comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:54 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=initrd-parse-etc comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:54 NR021AA systemd[1]: Reached target Initrd File Systems.
+-- Subject: Unit initrd-fs.target has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit initrd-fs.target has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 10:15:54 NR021AA systemd[1]: Reached target Initrd Default Target.
+-- Subject: Unit initrd.target has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit initrd.target has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 10:15:54 NR021AA systemd[1]: Starting dracut pre-pivot and cleanup hook...
+-- Subject: Unit dracut-pre-pivot.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit dracut-pre-pivot.service has begun starting up.
+abr 11 10:15:54 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=dracut-pre-pivot comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:54 NR021AA systemd[1]: Started dracut pre-pivot and cleanup hook.
+-- Subject: Unit dracut-pre-pivot.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit dracut-pre-pivot.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 10:15:54 NR021AA systemd[1]: Starting Cleaning Up and Shutting Down Daemons...
+-- Subject: Unit initrd-cleanup.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit initrd-cleanup.service has begun starting up.
+abr 11 10:15:54 NR021AA systemd[1]: Stopped target Timers.
+-- Subject: Unit timers.target has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit timers.target has finished shutting down.
+abr 11 10:15:54 NR021AA systemd[1]: Starting Plymouth switch root service...
+-- Subject: Unit plymouth-switch-root.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit plymouth-switch-root.service has begun starting up.
+abr 11 10:15:54 NR021AA systemd[1]: Stopped Cleaning Up and Shutting Down Daemons.
+-- Subject: Unit initrd-cleanup.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit initrd-cleanup.service has finished shutting down.
+abr 11 10:15:54 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=initrd-cleanup comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:54 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=initrd-cleanup comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:54 NR021AA systemd[1]: Stopped dracut pre-pivot and cleanup hook.
+-- Subject: Unit dracut-pre-pivot.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit dracut-pre-pivot.service has finished shutting down.
+abr 11 10:15:54 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=dracut-pre-pivot comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:54 NR021AA systemd[1]: Stopped target Remote File Systems.
+-- Subject: Unit remote-fs.target has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit remote-fs.target has finished shutting down.
+abr 11 10:15:54 NR021AA systemd[1]: Stopped target Remote File Systems (Pre).
+-- Subject: Unit remote-fs-pre.target has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit remote-fs-pre.target has finished shutting down.
+abr 11 10:15:54 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=dracut-initqueue comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:54 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=dracut-initqueue comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:54 NR021AA systemd[1]: Stopped dracut initqueue hook.
+-- Subject: Unit dracut-initqueue.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit dracut-initqueue.service has finished shutting down.
+abr 11 10:15:54 NR021AA systemd[1]: Stopped target Initrd Default Target.
+-- Subject: Unit initrd.target has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit initrd.target has finished shutting down.
+abr 11 10:15:54 NR021AA systemd[1]: Stopped target Basic System.
+-- Subject: Unit basic.target has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit basic.target has finished shutting down.
+abr 11 10:15:54 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-sysctl comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:54 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-sysctl comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:54 NR021AA systemd[1]: Stopped target System Initialization.
+-- Subject: Unit sysinit.target has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit sysinit.target has finished shutting down.
+abr 11 10:15:54 NR021AA systemd[1]: Stopped target Local File Systems.
+-- Subject: Unit local-fs.target has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit local-fs.target has finished shutting down.
+abr 11 10:15:54 NR021AA systemd[1]: Stopped Apply Kernel Variables.
+-- Subject: Unit systemd-sysctl.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-sysctl.service has finished shutting down.
+abr 11 10:15:54 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-udev-trigger comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:54 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-udev-trigger comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:54 NR021AA systemd[1]: Stopped target Swap.
+-- Subject: Unit swap.target has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit swap.target has finished shutting down.
+abr 11 10:15:54 NR021AA systemd[1]: Stopped udev Coldplug all Devices.
+-- Subject: Unit systemd-udev-trigger.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-udev-trigger.service has finished shutting down.
+abr 11 10:15:54 NR021AA systemd[1]: Stopping udev Kernel Device Manager...
+-- Subject: Unit systemd-udevd.service has begun shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-udevd.service has begun shutting down.
+abr 11 10:15:54 NR021AA systemd[1]: Stopped target Slices.
+-- Subject: Unit slices.target has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit slices.target has finished shutting down.
+abr 11 10:15:54 NR021AA systemd[1]: Stopped target Paths.
+-- Subject: Unit paths.target has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit paths.target has finished shutting down.
+abr 11 10:15:54 NR021AA systemd[1]: Stopped target Sockets.
+-- Subject: Unit sockets.target has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit sockets.target has finished shutting down.
+abr 11 10:15:54 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-udevd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:54 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-udevd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:54 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=dracut-pre-udev comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:54 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=dracut-pre-udev comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:54 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=dracut-cmdline comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:54 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=dracut-cmdline comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:54 NR021AA systemd[1]: Stopped udev Kernel Device Manager.
+-- Subject: Unit systemd-udevd.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-udevd.service has finished shutting down.
+abr 11 10:15:54 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-tmpfiles-setup-dev comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:54 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-tmpfiles-setup-dev comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:54 NR021AA systemd[1]: Stopped dracut pre-udev hook.
+-- Subject: Unit dracut-pre-udev.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit dracut-pre-udev.service has finished shutting down.
+abr 11 10:15:54 NR021AA systemd[1]: Stopped dracut cmdline hook.
+-- Subject: Unit dracut-cmdline.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit dracut-cmdline.service has finished shutting down.
+abr 11 10:15:54 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=kmod-static-nodes comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:54 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=kmod-static-nodes comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:54 NR021AA systemd[1]: Stopped Create Static Device Nodes in /dev.
+-- Subject: Unit systemd-tmpfiles-setup-dev.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-tmpfiles-setup-dev.service has finished shutting down.
+abr 11 10:15:54 NR021AA systemd[1]: Stopped Create list of required static device nodes for the current kernel.
+-- Subject: Unit kmod-static-nodes.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit kmod-static-nodes.service has finished shutting down.
+abr 11 10:15:54 NR021AA systemd[1]: Closed udev Control Socket.
+-- Subject: Unit systemd-udevd-control.socket has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-udevd-control.socket has finished shutting down.
+abr 11 10:15:54 NR021AA systemd[1]: Closed udev Kernel Socket.
+-- Subject: Unit systemd-udevd-kernel.socket has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-udevd-kernel.socket has finished shutting down.
+abr 11 10:15:54 NR021AA systemd[1]: Starting Cleanup udevd DB...
+-- Subject: Unit initrd-udevadm-cleanup-db.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit initrd-udevadm-cleanup-db.service has begun starting up.
+abr 11 10:15:54 NR021AA systemd[1]: Started Cleanup udevd DB.
+-- Subject: Unit initrd-udevadm-cleanup-db.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit initrd-udevadm-cleanup-db.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 10:15:54 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=initrd-udevadm-cleanup-db comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:54 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=initrd-udevadm-cleanup-db comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:54 NR021AA systemd[1]: Reached target Switch Root.
+-- Subject: Unit initrd-switch-root.target has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit initrd-switch-root.target has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 10:15:54 NR021AA systemd[1]: Started Plymouth switch root service.
+-- Subject: Unit plymouth-switch-root.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit plymouth-switch-root.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 10:15:54 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=plymouth-switch-root comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:54 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=plymouth-switch-root comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 10:15:54 NR021AA systemd[1]: Starting Switch Root...
+-- Subject: Unit initrd-switch-root.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit initrd-switch-root.service has begun starting up.
+abr 11 10:15:54 NR021AA systemd[1]: Switching root.
+abr 11 10:15:54 NR021AA systemd-journald[137]: Journal stopped
+-- Subject: The journal has been stopped
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- The system journal process has shut down and closed all currently
+-- active journal files.
+abr 11 08:15:56 NR021AA systemd-journald[530]: Runtime journal (/run/log/journal/) is 8.0M, max 197.5M, 189.5M free.
+-- Subject: Disk space used by the journal
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Runtime journal (/run/log/journal/) is currently using 8.0M.
+-- Maximum allowed usage is set to 197.5M.
+-- Leaving at least 296.2M free (of currently available 1.9G of disk space).
+-- Enforced usage limit is thus 197.5M, of which 189.5M are still available.
+-- 
+-- The limits controlling how much disk space is used by the journal may
+-- be configured with SystemMaxUse=, SystemKeepFree=, SystemMaxFileSize=,
+-- RuntimeMaxUse=, RuntimeKeepFree=, RuntimeMaxFileSize= settings in
+-- /etc/systemd/journald.conf. See journald.conf(5) for details.
+abr 11 08:15:56 NR021AA systemd-journald[530]: System journal (/var/log/journal/) is 304.0M, max 1.4G, 1.1G free.
+-- Subject: Disk space used by the journal
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- System journal (/var/log/journal/) is currently using 304.0M.
+-- Maximum allowed usage is set to 1.4G.
+-- Leaving at least 2.1G free (of currently available 6.9G of disk space).
+-- Enforced usage limit is thus 1.4G, of which 1.1G are still available.
+-- 
+-- The limits controlling how much disk space is used by the journal may
+-- be configured with SystemMaxUse=, SystemKeepFree=, SystemMaxFileSize=,
+-- RuntimeMaxUse=, RuntimeKeepFree=, RuntimeMaxFileSize= settings in
+-- /etc/systemd/journald.conf. See journald.conf(5) for details.
+abr 11 08:15:58 NR021AA systemd-journald[530]: Time spent on flushing to /var is 2.412988s for 793 entries.
+abr 11 08:15:58 NR021AA systemd-journald[137]: Received SIGTERM from PID 1 (systemd).
+abr 11 08:15:58 NR021AA kernel: SELinux: 32768 avtab hash slots, 104786 rules.
+abr 11 08:15:58 NR021AA kernel: SELinux: 32768 avtab hash slots, 104786 rules.
+abr 11 08:15:58 NR021AA kernel: SELinux:  8 users, 14 roles, 5012 types, 303 bools, 1 sens, 1024 cats
+abr 11 08:15:58 NR021AA kernel: SELinux:  92 classes, 104786 rules
+abr 11 08:15:58 NR021AA kernel: SELinux:  Permission validate_trans in class security not defined in policy.
+abr 11 08:15:58 NR021AA kernel: SELinux: the above unknown classes and permissions will be allowed
+abr 11 08:15:58 NR021AA kernel: SELinux:  Completing initialization.
+abr 11 08:15:58 NR021AA kernel: SELinux:  Setting up existing superblocks.
+abr 11 08:15:58 NR021AA systemd[1]: Successfully loaded SELinux policy in 107.153ms.
+abr 11 08:15:58 NR021AA systemd[1]: RTC configured in localtime, applying delta of 120 minutes to system time.
+abr 11 08:15:58 NR021AA systemd[1]: Relabelled /dev and /run in 14.785ms.
+abr 11 08:15:58 NR021AA kernel: EXT4-fs (dm-0): re-mounted. Opts: (null)
+abr 11 08:15:58 NR021AA kernel: RPC: Registered named UNIX socket transport module.
+abr 11 08:15:58 NR021AA kernel: RPC: Registered udp transport module.
+abr 11 08:15:58 NR021AA kernel: RPC: Registered tcp transport module.
+abr 11 08:15:58 NR021AA kernel: RPC: Registered tcp NFSv4.1 backchannel transport module.
+abr 11 08:15:58 NR021AA kernel: audit_printk_skb: 120 callbacks suppressed
+abr 11 08:15:58 NR021AA kernel: audit: type=1130 audit(1491891356.514:51): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=lvm2-lvmetad comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:15:58 NR021AA kernel: audit: type=1130 audit(1491891356.579:52): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-tmpfiles-setup-dev comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:15:58 NR021AA kernel: Installing knfsd (copyright (C) 1996 okir@monad.swb.de).
+abr 11 08:15:58 NR021AA kernel: audit: type=1130 audit(1491891357.084:53): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-udevd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:15:58 NR021AA kernel: audit: type=1130 audit(1491891357.125:54): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=fedora-readonly comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:15:58 NR021AA kernel: audit: type=1130 audit(1491891357.139:55): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=lvm2-monitor comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:15:58 NR021AA kernel: audit: type=1130 audit(1491891357.268:56): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-random-seed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:15:58 NR021AA kernel: shpchp: Standard Hot Plug PCI Controller Driver version: 0.4
+abr 11 08:15:58 NR021AA kernel: intel_rng: FWH not detected
+abr 11 08:15:58 NR021AA kernel: ACPI Warning: SystemIO range 0x0000000000000428-0x000000000000042F conflicts with OpRegion 0x0000000000000429-0x0000000000000429 (\PM2S) (20160108/utaddress-255)
+abr 11 08:15:58 NR021AA kernel: ACPI: If an ACPI driver is available for this device, you should use it instead of the native driver
+abr 11 08:15:58 NR021AA kernel: ACPI Warning: SystemIO range 0x00000000000004B0-0x00000000000004BF conflicts with OpRegion 0x00000000000004B8-0x00000000000004BB (\GPO2) (20160108/utaddress-255)
+abr 11 08:15:58 NR021AA kernel: ACPI: If an ACPI driver is available for this device, you should use it instead of the native driver
+abr 11 08:15:58 NR021AA kernel: ACPI Warning: SystemIO range 0x0000000000000480-0x00000000000004AF conflicts with OpRegion 0x000000000000048C-0x000000000000048F (\GPO) (20160108/utaddress-255)
+abr 11 08:15:58 NR021AA kernel: ACPI: If an ACPI driver is available for this device, you should use it instead of the native driver
+abr 11 08:15:58 NR021AA kernel: lpc_ich: Resource conflict(s) found affecting gpio_ich
+abr 11 08:15:58 NR021AA kernel: i801_smbus 0000:00:1f.3: SMBus using PCI interrupt
+abr 11 08:15:58 NR021AA kernel: leds_ss4200: no LED devices found
+abr 11 08:15:58 NR021AA kernel: iTCO_vendor_support: vendor-support=0
+abr 11 08:15:58 NR021AA kernel: iTCO_wdt: Intel TCO WatchDog Timer Driver v1.11
+abr 11 08:15:58 NR021AA kernel: iTCO_wdt: Found a ICH7 or ICH7R TCO device (Version=2, TCOBASE=0x0460)
+abr 11 08:15:58 NR021AA kernel: iTCO_wdt: initialized. heartbeat=30 sec (nowayout=0)
+abr 11 08:15:58 NR021AA kernel: Adding 2097148k swap on /dev/mapper/fedora-swap.  Priority:-1 extents:1 across:2097148k FS
+abr 11 08:15:58 NR021AA kernel: snd_hda_intel 0000:01:00.1: Handle vga_switcheroo audio client
+abr 11 08:15:58 NR021AA kernel: input: HDA ATI HDMI HDMI/DP,pcm=3 as /devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card0/input8
+abr 11 08:15:58 NR021AA systemd-journald[530]: Journal started
+-- Subject: The journal has been started
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- The system journal process has started up, opened the journal
+-- files for writing and is now ready to process requests.
+abr 11 10:15:54 NR021AA audit: MAC_STATUS enforcing=1 old_enforcing=0 auid=4294967295 ses=4294967295
+abr 11 10:15:54 NR021AA audit: MAC_POLICY_LOAD policy loaded auid=4294967295 ses=4294967295
+abr 11 08:15:55 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-journald comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:15:55 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-journald comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:15:55 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=initrd-switch-root comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:15:55 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=initrd-switch-root comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:15:55 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-journald comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:15:55 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-journald comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:15:55 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=kmod-static-nodes comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:15:56 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-sysctl comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:15:56 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-remount-fs comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:15:56 NR021AA audit: CONFIG_CHANGE audit_enabled=1 old=1 auid=4294967295 ses=4294967295 subj=system_u:system_r:syslogd_t:s0 res=1
+abr 11 08:15:56 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-udev-trigger comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:15:56 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=lvm2-lvmetad comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:15:56 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-tmpfiles-setup-dev comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:15:58 NR021AA kernel: audit: type=1130 audit(1491891358.789:57): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-journald comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:15:57 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-udevd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:15:57 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=fedora-readonly comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:15:57 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=lvm2-monitor comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:15:57 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-random-seed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:15:58 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-journald comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:15:57 NR021AA mtp-probe[607]: checking bus 2, device 2: "/sys/devices/pci0000:00/0000:00:1d.0/usb2/2-1"
+abr 11 08:15:55 NR021AA systemd[1]: systemd 229 running in system mode. (+PAM +AUDIT +SELINUX +IMA -APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD +IDN)
+abr 11 08:15:57 NR021AA mtp-probe[606]: checking bus 2, device 3: "/sys/devices/pci0000:00/0000:00:1d.0/usb2/2-2"
+abr 11 08:15:55 NR021AA systemd[1]: Detected architecture x86-64.
+abr 11 08:15:57 NR021AA mtp-probe[607]: bus: 2, device: 2 was not an MTP device
+abr 11 08:15:58 NR021AA lvm[534]:   2 logical volume(s) in volume group "fedora" monitored
+abr 11 08:15:55 NR021AA systemd[1]: Set hostname to <NR021AA>.
+abr 11 08:15:57 NR021AA mtp-probe[606]: bus: 2, device: 3 was not an MTP device
+abr 11 08:15:56 NR021AA systemd-sysctl[550]: Couldn't write '0' to 'net/bridge/bridge-nf-call-ip6tables', ignoring: No such file or directory
+abr 11 08:15:56 NR021AA systemd-sysctl[550]: Couldn't write '0' to 'net/bridge/bridge-nf-call-arptables', ignoring: No such file or directory
+abr 11 08:15:56 NR021AA systemd-sysctl[550]: Couldn't write '0' to 'net/bridge/bridge-nf-call-iptables', ignoring: No such file or directory
+abr 11 08:15:58 NR021AA systemd[1]: Starting Flush Journal to Persistent Storage...
+-- Subject: Unit systemd-journal-flush.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-journal-flush.service has begun starting up.
+abr 11 08:16:02 NR021AA kernel: audit: type=1130 audit(1491891359.102:58): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=lvm2-pvscan@8:3 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:16:02 NR021AA kernel: audit: type=1130 audit(1491891359.103:59): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-udev-settle comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:16:02 NR021AA kernel: audit: type=1130 audit(1491891360.829:60): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=dmraid-activation comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:16:02 NR021AA kernel: audit_printk_skb: 3 callbacks suppressed
+abr 11 08:16:02 NR021AA kernel: audit: type=1130 audit(1491891361.985:62): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-fsck@dev-mapper-fedora\x2dhome comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:16:02 NR021AA kernel: audit: type=1130 audit(1491891362.079:63): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-fsck@dev-mapper-fedora\x2dtmp comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:16:02 NR021AA kernel: EXT4-fs (dm-3): mounted filesystem with ordered data mode. Opts: (null)
+abr 11 08:16:02 NR021AA kernel: EXT4-fs (dm-2): mounted filesystem with ordered data mode. Opts: (null)
+abr 11 08:16:02 NR021AA kernel: audit: type=1130 audit(1491891362.612:64): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-journal-flush comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:15:59 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=lvm2-pvscan@8:3 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:15:59 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-udev-settle comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:16:00 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=dmraid-activation comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:16:00 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=dmraid-activation comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:16:01 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-fsck@dev-mapper-fedora\x2dhome comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:16:02 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-fsck@dev-mapper-fedora\x2dtmp comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:16:02 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-journal-flush comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:15:59 NR021AA systemd[1]: Found device /dev/mapper/fedora-tmp.
+-- Subject: Unit dev-mapper-fedora\x2dtmp.device has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit dev-mapper-fedora\x2dtmp.device has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 08:16:02 NR021AA lvm[638]:   4 logical volume(s) in volume group "fedora" now active
+abr 11 08:15:59 NR021AA systemd[1]: Found device /dev/mapper/fedora-home.
+-- Subject: Unit dev-mapper-fedora\x2dhome.device has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit dev-mapper-fedora\x2dhome.device has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 08:15:59 NR021AA systemd[1]: Started LVM2 PV scan on device 8:3.
+-- Subject: Unit lvm2-pvscan@8:3.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit lvm2-pvscan@8:3.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 08:15:59 NR021AA systemd[1]: Started udev Wait for Complete Device Initialization.
+-- Subject: Unit systemd-udev-settle.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-udev-settle.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 08:16:02 NR021AA systemd-fsck[669]: lvm-tmp: limpio, 30/196608 ficheros, 29890/786432 bloques
+abr 11 08:15:59 NR021AA systemd[1]: Starting Activation of DM RAID sets...
+-- Subject: Unit dmraid-activation.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit dmraid-activation.service has begun starting up.
+abr 11 08:16:02 NR021AA systemd-fsck[671]: lvm-home: limpio, 35139/327680 ficheros, 340057/1310720 bloques
+abr 11 08:16:00 NR021AA systemd[1]: Started Activation of DM RAID sets.
+-- Subject: Unit dmraid-activation.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit dmraid-activation.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 08:16:00 NR021AA systemd[1]: Reached target Local File Systems (Pre).
+-- Subject: Unit local-fs-pre.target has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit local-fs-pre.target has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 08:16:00 NR021AA systemd[1]: Starting File System Check on /dev/mapper/fedora-tmp...
+-- Subject: Unit systemd-fsck@dev-mapper-fedora\x2dtmp.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-fsck@dev-mapper-fedora\x2dtmp.service has begun starting up.
+abr 11 08:16:00 NR021AA systemd[1]: Starting File System Check on /dev/mapper/fedora-home...
+-- Subject: Unit systemd-fsck@dev-mapper-fedora\x2dhome.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-fsck@dev-mapper-fedora\x2dhome.service has begun starting up.
+abr 11 08:16:00 NR021AA systemd[1]: Reached target Encrypted Volumes.
+-- Subject: Unit cryptsetup.target has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit cryptsetup.target has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 08:16:01 NR021AA systemd[1]: Started File System Check on /dev/mapper/fedora-home.
+-- Subject: Unit systemd-fsck@dev-mapper-fedora\x2dhome.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-fsck@dev-mapper-fedora\x2dhome.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 08:16:02 NR021AA systemd[1]: Mounting /home...
+-- Subject: Unit home.mount has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit home.mount has begun starting up.
+abr 11 08:16:02 NR021AA systemd[1]: Started File System Check on /dev/mapper/fedora-tmp.
+-- Subject: Unit systemd-fsck@dev-mapper-fedora\x2dtmp.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-fsck@dev-mapper-fedora\x2dtmp.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 08:16:02 NR021AA systemd[1]: Mounting /tmp...
+-- Subject: Unit tmp.mount has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit tmp.mount has begun starting up.
+abr 11 08:16:02 NR021AA systemd[1]: Mounted /home.
+-- Subject: Unit home.mount has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit home.mount has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 08:16:02 NR021AA systemd[1]: Mounted /tmp.
+-- Subject: Unit tmp.mount has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit tmp.mount has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 08:16:02 NR021AA systemd[1]: Started Flush Journal to Persistent Storage.
+-- Subject: Unit systemd-journal-flush.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-journal-flush.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 08:17:26 NR021AA systemd[1]: sys-devices-virtual-misc-vmbus\x21hv_kvp.device: Job sys-devices-virtual-misc-vmbus\x21hv_kvp.device/start timed out.
+abr 11 08:17:26 NR021AA systemd[1]: Timed out waiting for device sys-devices-virtual-misc-vmbus\x21hv_kvp.device.
+-- Subject: Unit sys-devices-virtual-misc-vmbus\x21hv_kvp.device has failed
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit sys-devices-virtual-misc-vmbus\x21hv_kvp.device has failed.
+-- 
+-- The result is timeout.
+abr 11 08:17:26 NR021AA systemd[1]: Dependency failed for Hyper-V KVP daemon.
+-- Subject: Unit hypervkvpd.service has failed
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit hypervkvpd.service has failed.
+-- 
+-- The result is dependency.
+abr 11 08:17:26 NR021AA systemd[1]: hypervkvpd.service: Job hypervkvpd.service/start failed with result 'dependency'.
+abr 11 08:17:26 NR021AA systemd[1]: sys-devices-virtual-misc-vmbus\x21hv_kvp.device: Job sys-devices-virtual-misc-vmbus\x21hv_kvp.device/start failed with result 'timeout'.
+abr 11 08:17:26 NR021AA systemd[1]: sys-devices-virtual-misc-vmbus\x21hv_fcopy.device: Job sys-devices-virtual-misc-vmbus\x21hv_fcopy.device/start timed out.
+abr 11 08:17:26 NR021AA systemd[1]: Timed out waiting for device sys-devices-virtual-misc-vmbus\x21hv_fcopy.device.
+-- Subject: Unit sys-devices-virtual-misc-vmbus\x21hv_fcopy.device has failed
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit sys-devices-virtual-misc-vmbus\x21hv_fcopy.device has failed.
+-- 
+-- The result is timeout.
+abr 11 08:17:26 NR021AA systemd[1]: Dependency failed for Hyper-V FCOPY daemon.
+-- Subject: Unit hypervfcopyd.service has failed
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit hypervfcopyd.service has failed.
+-- 
+-- The result is dependency.
+abr 11 08:17:26 NR021AA systemd[1]: hypervfcopyd.service: Job hypervfcopyd.service/start failed with result 'dependency'.
+abr 11 08:17:26 NR021AA systemd[1]: sys-devices-virtual-misc-vmbus\x21hv_fcopy.device: Job sys-devices-virtual-misc-vmbus\x21hv_fcopy.device/start failed with result 'timeout'.
+abr 11 08:17:26 NR021AA systemd[1]: sys-devices-virtual-misc-vmbus\x21hv_vss.device: Job sys-devices-virtual-misc-vmbus\x21hv_vss.device/start timed out.
+abr 11 08:17:26 NR021AA systemd[1]: Timed out waiting for device sys-devices-virtual-misc-vmbus\x21hv_vss.device.
+-- Subject: Unit sys-devices-virtual-misc-vmbus\x21hv_vss.device has failed
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit sys-devices-virtual-misc-vmbus\x21hv_vss.device has failed.
+-- 
+-- The result is timeout.
+abr 11 08:17:26 NR021AA systemd[1]: Dependency failed for Hyper-V VSS daemon.
+-- Subject: Unit hypervvssd.service has failed
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit hypervvssd.service has failed.
+-- 
+-- The result is dependency.
+abr 11 08:17:26 NR021AA systemd[1]: hypervvssd.service: Job hypervvssd.service/start failed with result 'dependency'.
+abr 11 08:17:26 NR021AA systemd[1]: sys-devices-virtual-misc-vmbus\x21hv_vss.device: Job sys-devices-virtual-misc-vmbus\x21hv_vss.device/start failed with result 'timeout'.
+abr 11 08:17:26 NR021AA systemd[1]: dev-multimedia-backups.device: Job dev-multimedia-backups.device/start timed out.
+abr 11 08:17:26 NR021AA systemd[1]: Timed out waiting for device dev-multimedia-backups.device.
+-- Subject: Unit dev-multimedia-backups.device has failed
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit dev-multimedia-backups.device has failed.
+-- 
+-- The result is timeout.
+abr 11 08:17:26 NR021AA systemd[1]: Dependency failed for /mnt/backups.
+-- Subject: Unit mnt-backups.mount has failed
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit mnt-backups.mount has failed.
+-- 
+-- The result is dependency.
+abr 11 08:17:26 NR021AA systemd[1]: Dependency failed for Local File Systems.
+-- Subject: Unit local-fs.target has failed
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit local-fs.target has failed.
+-- 
+-- The result is dependency.
+abr 11 08:17:26 NR021AA systemd[1]: Dependency failed for Mark the need to relabel after reboot.
+-- Subject: Unit fedora-autorelabel-mark.service has failed
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit fedora-autorelabel-mark.service has failed.
+-- 
+-- The result is dependency.
+abr 11 08:17:26 NR021AA systemd[1]: fedora-autorelabel-mark.service: Job fedora-autorelabel-mark.service/start failed with result 'dependency'.
+abr 11 08:17:26 NR021AA systemd[1]: Dependency failed for Relabel all filesystems, if necessary.
+-- Subject: Unit fedora-autorelabel.service has failed
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit fedora-autorelabel.service has failed.
+-- 
+-- The result is dependency.
+abr 11 08:17:26 NR021AA systemd[1]: fedora-autorelabel.service: Job fedora-autorelabel.service/start failed with result 'dependency'.
+abr 11 08:17:26 NR021AA systemd[1]: local-fs.target: Job local-fs.target/start failed with result 'dependency'.
+abr 11 08:17:26 NR021AA systemd[1]: local-fs.target: Triggering OnFailure= dependencies.
+abr 11 08:17:26 NR021AA systemd[1]: mnt-backups.mount: Job mnt-backups.mount/start failed with result 'dependency'.
+abr 11 08:17:26 NR021AA systemd[1]: Dependency failed for File System Check on /dev/multimedia/backups.
+-- Subject: Unit systemd-fsck@dev-multimedia-backups.service has failed
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-fsck@dev-multimedia-backups.service has failed.
+-- 
+-- The result is dependency.
+abr 11 08:17:26 NR021AA systemd[1]: systemd-fsck@dev-multimedia-backups.service: Job systemd-fsck@dev-multimedia-backups.service/start failed with result 'dependency'.
+abr 11 08:17:26 NR021AA systemd[1]: dev-multimedia-backups.device: Job dev-multimedia-backups.device/start failed with result 'timeout'.
+abr 11 08:17:26 NR021AA systemd[1]: Starting Restore /run/initramfs on shutdown...
+-- Subject: Unit dracut-shutdown.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit dracut-shutdown.service has begun starting up.
+abr 11 08:17:26 NR021AA systemd[1]: Starting Preprocess NFS configuration...
+-- Subject: Unit nfs-config.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit nfs-config.service has begun starting up.
+abr 11 08:17:26 NR021AA systemd[1]: Closed RPCbind Server Activation Socket.
+-- Subject: Unit rpcbind.socket has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit rpcbind.socket has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Stopped Save/Restore Sound Card State.
+-- Subject: Unit alsa-restore.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit alsa-restore.service has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Stopped GSSAPI Proxy Daemon.
+-- Subject: Unit gssproxy.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit gssproxy.service has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Stopped daily update of the root trust anchor for DNSSEC.
+-- Subject: Unit unbound-anchor.timer has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit unbound-anchor.timer has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Closed Open-iSCSI iscsiuio Socket.
+-- Subject: Unit iscsiuio.socket has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit iscsiuio.socket has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Closed Virtual machine log manager socket.
+-- Subject: Unit virtlogd.socket has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit virtlogd.socket has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Closed CUPS Scheduler.
+-- Subject: Unit cups.socket has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit cups.socket has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Stopped target Graphical Interface.
+-- Subject: Unit graphical.target has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit graphical.target has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Stopped Disk Manager.
+-- Subject: Unit udisks2.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit udisks2.service has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Stopped Accounts Service.
+-- Subject: Unit accounts-daemon.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit accounts-daemon.service has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Stopped target Multi-User System.
+-- Subject: Unit multi-user.target has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit multi-user.target has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Stopped Network Manager.
+-- Subject: Unit NetworkManager.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit NetworkManager.service has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Stopped Command Scheduler.
+-- Subject: Unit crond.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit crond.service has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Stopped Modem Manager.
+-- Subject: Unit ModemManager.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit ModemManager.service has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Stopped Virtualization daemon.
+-- Subject: Unit libvirtd.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit libvirtd.service has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Stopped Avahi mDNS/DNS-SD Stack.
+-- Subject: Unit avahi-daemon.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit avahi-daemon.service has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Stopped Hardware RNG Entropy Gatherer Daemon.
+-- Subject: Unit rngd.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit rngd.service has finished shutting down.
+abr 11 08:17:26 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=iscsi-shutdown comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:17:26 NR021AA kernel: audit: type=1130 audit(1491891446.177:65): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=iscsi-shutdown comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:17:26 NR021AA systemd[1]: Stopped Login Service.
+-- Subject: Unit systemd-logind.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-logind.service has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Stopped Service for virtual machines hosted on VMware.
+-- Subject: Unit vmtoolsd.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit vmtoolsd.service has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Stopped SYSV: Late init script for live image..
+-- Subject: Unit livesys-late.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit livesys-late.service has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Stopped Wait for Plymouth Boot Screen to Quit.
+-- Subject: Unit plymouth-quit-wait.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit plymouth-quit-wait.service has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Stopped Harvest vmcores for ABRT.
+-- Subject: Unit abrt-vmcore.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit abrt-vmcore.service has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Stopped NTP client/server.
+-- Subject: Unit chronyd.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit chronyd.service has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Stopped Machine Check Exception Logging Daemon.
+-- Subject: Unit mcelog.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit mcelog.service has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Stopped Install ABRT coredump hook.
+-- Subject: Unit abrt-ccpp.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit abrt-ccpp.service has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Stopped RealtimeKit Scheduling Policy Service.
+-- Subject: Unit rtkit-daemon.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit rtkit-daemon.service has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Stopped Software RAID monitoring and management.
+-- Subject: Unit mdmonitor.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit mdmonitor.service has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Closed Virtual machine lock manager socket.
+-- Subject: Unit virtlockd.socket has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit virtlockd.socket has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Stopped GNOME Display Manager.
+-- Subject: Unit gdm.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit gdm.service has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Stopped Daily Cleanup of Temporary Directories.
+-- Subject: Unit systemd-tmpfiles-clean.timer has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-tmpfiles-clean.timer has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Stopped ABRT kernel log watcher.
+-- Subject: Unit abrt-oops.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit abrt-oops.service has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Stopped ABRT Xorg log watcher.
+-- Subject: Unit abrt-xorg.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit abrt-xorg.service has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Stopped Updates mlocate database every day.
+-- Subject: Unit mlocate-updatedb.timer has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit mlocate-updatedb.timer has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Stopped CUPS Scheduler.
+-- Subject: Unit cups.path has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit cups.path has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Closed Avahi mDNS/DNS-SD Stack Activation Socket.
+-- Subject: Unit avahi-daemon.socket has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit avahi-daemon.socket has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Closed Open-iSCSI iscsid Socket.
+-- Subject: Unit iscsid.socket has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit iscsid.socket has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Stopped firewalld - dynamic firewall daemon.
+-- Subject: Unit firewalld.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit firewalld.service has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Stopped D-Bus System Message Bus.
+-- Subject: Unit dbus.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit dbus.service has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Reached target Network.
+-- Subject: Unit network.target has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit network.target has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 08:17:26 NR021AA systemd[1]: Started Logout off all iSCSI sessions on shutdown.
+-- Subject: Unit iscsi-shutdown.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit iscsi-shutdown.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 08:17:26 NR021AA systemd[1]: Starting Availability of block devices...
+-- Subject: Unit blk-availability.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit blk-availability.service has begun starting up.
+abr 11 08:17:26 NR021AA systemd[1]: Stopped Job spooling tools.
+-- Subject: Unit atd.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit atd.service has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Stopped Permit User Sessions.
+-- Subject: Unit systemd-user-sessions.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-user-sessions.service has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Stopped ABRT Automated Bug Reporting Tool.
+-- Subject: Unit abrtd.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit abrtd.service has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Stopped LSB: Init script for live image..
+-- Subject: Unit livesys.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit livesys.service has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Stopped VGAuth Service for open-vm-tools.
+-- Subject: Unit vgauthd.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit vgauthd.service has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Stopped Manage Sound Card State (restore and store).
+-- Subject: Unit alsa-state.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit alsa-state.service has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Stopped IIO Sensor Proxy service.
+-- Subject: Unit iio-sensor-proxy.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit iio-sensor-proxy.service has finished shutting down.
+abr 11 08:17:26 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=dracut-shutdown comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:17:26 NR021AA systemd[1]: Closed D-Bus System Message Bus Socket.
+-- Subject: Unit dbus.socket has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit dbus.socket has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Stopped target Basic System.
+-- Subject: Unit basic.target has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit basic.target has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Stopped dnf makecache timer.
+-- Subject: Unit dnf-makecache.timer has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit dnf-makecache.timer has finished shutting down.
+abr 11 08:17:26 NR021AA kernel: audit: type=1130 audit(1491891446.189:66): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=dracut-shutdown comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:17:26 NR021AA systemd[1]: Reached target Timers.
+-- Subject: Unit timers.target has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit timers.target has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 08:17:26 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=nfs-config comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:17:26 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=nfs-config comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:17:26 NR021AA systemd[1]: Reached target Paths.
+-- Subject: Unit paths.target has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit paths.target has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 08:17:26 NR021AA systemd[1]: Reached target Sockets.
+-- Subject: Unit sockets.target has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit sockets.target has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 08:17:26 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=blk-availability comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:17:26 NR021AA systemd[1]: Starting Import network configuration from initramfs...
+-- Subject: Unit fedora-import-state.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit fedora-import-state.service has begun starting up.
+abr 11 08:17:26 NR021AA systemd[1]: Stopped target System Initialization.
+-- Subject: Unit sysinit.target has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit sysinit.target has finished shutting down.
+abr 11 08:17:26 NR021AA systemd[1]: Starting Tell Plymouth To Write Out Runtime Data...
+-- Subject: Unit plymouth-read-write.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit plymouth-read-write.service has begun starting up.
+abr 11 08:17:26 NR021AA kernel: audit: type=1130 audit(1491891446.190:67): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=nfs-config comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:17:26 NR021AA kernel: audit: type=1131 audit(1491891446.190:68): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=nfs-config comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:17:26 NR021AA kernel: audit: type=1130 audit(1491891446.190:69): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=blk-availability comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:17:26 NR021AA systemd[1]: Started Restore /run/initramfs on shutdown.
+-- Subject: Unit dracut-shutdown.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit dracut-shutdown.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 08:17:26 NR021AA systemd[1]: Started Preprocess NFS configuration.
+-- Subject: Unit nfs-config.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit nfs-config.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 08:17:26 NR021AA systemd[1]: Started Availability of block devices.
+-- Subject: Unit blk-availability.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit blk-availability.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 08:17:26 NR021AA systemd[1]: Starting Notify NFS peers of a restart...
+-- Subject: Unit rpc-statd-notify.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit rpc-statd-notify.service has begun starting up.
+abr 11 08:17:26 NR021AA systemd[1]: Started Tell Plymouth To Write Out Runtime Data.
+-- Subject: Unit plymouth-read-write.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit plymouth-read-write.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 08:17:26 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=plymouth-read-write comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:17:26 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=plymouth-read-write comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:17:26 NR021AA kernel: audit: type=1130 audit(1491891446.234:70): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=plymouth-read-write comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:17:26 NR021AA kernel: audit: type=1131 audit(1491891446.234:71): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=plymouth-read-write comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:17:26 NR021AA sm-notify[710]: Version 1.3.3 starting
+abr 11 08:17:26 NR021AA kernel: audit: type=1130 audit(1491891446.324:72): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=rpc-statd-notify comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:17:26 NR021AA kernel: audit: type=1131 audit(1491891446.324:73): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=rpc-statd-notify comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:17:26 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=rpc-statd-notify comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:17:26 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=rpc-statd-notify comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:17:26 NR021AA systemd[1]: Started Notify NFS peers of a restart.
+-- Subject: Unit rpc-statd-notify.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit rpc-statd-notify.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 08:17:26 NR021AA systemd[1]: Started Import network configuration from initramfs.
+-- Subject: Unit fedora-import-state.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit fedora-import-state.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 08:17:26 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=fedora-import-state comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:17:26 NR021AA kernel: audit: type=1130 audit(1491891446.375:74): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=fedora-import-state comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:17:26 NR021AA systemd[1]: Starting Create Volatile Files and Directories...
+-- Subject: Unit systemd-tmpfiles-setup.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-tmpfiles-setup.service has begun starting up.
+abr 11 08:17:26 NR021AA systemd[1]: Started Emergency Shell.
+-- Subject: Unit emergency.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit emergency.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 08:17:26 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=emergency comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:17:26 NR021AA systemd[1]: Reached target Emergency Mode.
+-- Subject: Unit emergency.target has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit emergency.target has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 08:17:26 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-tmpfiles-setup comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:17:26 NR021AA systemd[1]: Started Create Volatile Files and Directories.
+-- Subject: Unit systemd-tmpfiles-setup.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-tmpfiles-setup.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 08:17:26 NR021AA systemd[1]: Starting Security Auditing Service...
+-- Subject: Unit auditd.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit auditd.service has begun starting up.
+abr 11 08:17:26 NR021AA systemd[1]: Mounting RPC Pipe File System...
+-- Subject: Unit var-lib-nfs-rpc_pipefs.mount has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit var-lib-nfs-rpc_pipefs.mount has begun starting up.
+abr 11 08:17:26 NR021AA systemd[1]: Mounted RPC Pipe File System.
+-- Subject: Unit var-lib-nfs-rpc_pipefs.mount has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit var-lib-nfs-rpc_pipefs.mount has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 08:17:26 NR021AA systemd[1]: Reached target NFS client services.
+-- Subject: Unit nfs-client.target has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit nfs-client.target has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 08:17:26 NR021AA systemd[1]: Reached target Remote File Systems (Pre).
+-- Subject: Unit remote-fs-pre.target has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit remote-fs-pre.target has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 08:17:26 NR021AA systemd[1]: Reached target Remote File Systems.
+-- Subject: Unit remote-fs.target has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit remote-fs.target has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 08:17:26 NR021AA auditd[726]: Started dispatcher: /sbin/audispd pid: 734
+abr 11 08:17:26 NR021AA audispd[734]: priority_boost_parser called with: 4
+abr 11 08:17:26 NR021AA audit: CONFIG_CHANGE audit_enabled=1 old=1 auid=4294967295 ses=4294967295 subj=system_u:system_r:auditd_t:s0 res=1
+abr 11 08:17:26 NR021AA audit: CONFIG_CHANGE audit_pid=726 old=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:auditd_t:s0 res=1
+abr 11 08:17:26 NR021AA audispd[734]: max_restarts_parser called with: 10
+abr 11 08:17:26 NR021AA audispd[734]: audispd initialized with q_depth=150 and 1 active plugins
+abr 11 08:17:26 NR021AA auditd[726]: Init complete, auditd 2.5.2 listening for events (startup state enable)
+abr 11 08:17:26 NR021AA augenrules[727]: /sbin/augenrules: No change
+abr 11 08:17:26 NR021AA audit: CONFIG_CHANGE auid=4294967295 ses=4294967295 subj=system_u:system_r:unconfined_service_t:s0 op="add_rule" key=(null) list=1 res=1
+abr 11 08:17:26 NR021AA augenrules[727]: No rules
+abr 11 08:17:26 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=auditd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:17:26 NR021AA systemd[1]: Started Security Auditing Service.
+-- Subject: Unit auditd.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit auditd.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 08:17:26 NR021AA systemd[1]: Starting Update UTMP about System Boot/Shutdown...
+-- Subject: Unit systemd-update-utmp.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-update-utmp.service has begun starting up.
+abr 11 08:17:26 NR021AA audit[751]: SYSTEM_BOOT pid=751 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg=' comm="systemd-update-utmp" exe="/usr/lib/systemd/systemd-update-utmp" hostname=? addr=? terminal=? res=success'
+abr 11 08:17:26 NR021AA systemd[1]: Started Update UTMP about System Boot/Shutdown.
+-- Subject: Unit systemd-update-utmp.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-update-utmp.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 08:17:26 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-update-utmp comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:17:26 NR021AA systemd[1]: Starting Update UTMP about System Runlevel Changes...
+-- Subject: Unit systemd-update-utmp-runlevel.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-update-utmp-runlevel.service has begun starting up.
+abr 11 08:17:26 NR021AA systemd[1]: Started Update UTMP about System Runlevel Changes.
+-- Subject: Unit systemd-update-utmp-runlevel.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-update-utmp-runlevel.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 08:17:26 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-update-utmp-runlevel comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:17:26 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-update-utmp-runlevel comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:17:26 NR021AA systemd[1]: Startup finished in 594ms (kernel) + 3.100s (initrd) + 1min 32.001s (userspace) = 1min 35.696s.
+-- Subject: System start-up is now complete
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- All system services necessary queued for starting at boot have been
+-- successfully started. Note that this does not mean that the machine is
+-- now idle as services might still be busy with completing start-up.
+-- 
+-- Kernel start-up required 594070 microseconds.
+-- 
+-- Initial RAM disk start-up required 3100599 microseconds.
+-- 
+-- Userspace start-up required 92001357 microseconds.
+abr 11 08:17:26 NR021AA systemd[1]: Received SIGRTMIN+21 from PID 302 (plymouthd).
+abr 11 08:17:27 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=plymouth-start comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:17:27 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=plymouth-start comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:17:33 NR021AA systemd[1]: Starting Show Plymouth Boot Screen...
+-- Subject: Unit plymouth-start.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit plymouth-start.service has begun starting up.
+abr 11 08:17:33 NR021AA systemd[1]: Starting Activation of DM RAID sets...
+-- Subject: Unit dmraid-activation.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit dmraid-activation.service has begun starting up.
+abr 11 08:17:33 NR021AA systemd[1]: Stopped target Emergency Mode.
+-- Subject: Unit emergency.target has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit emergency.target has finished shutting down.
+abr 11 08:17:33 NR021AA systemd[1]: Stopping LVM2 PV scan on device 8:3...
+-- Subject: Unit lvm2-pvscan@8:3.service has begun shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit lvm2-pvscan@8:3.service has begun shutting down.
+abr 11 08:17:33 NR021AA systemd[1]: Stopping Emergency Shell...
+-- Subject: Unit emergency.service has begun shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit emergency.service has begun shutting down.
+abr 11 08:17:33 NR021AA systemd[1]: Stopped target Sound Card.
+-- Subject: Unit sound.target has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit sound.target has finished shutting down.
+abr 11 08:17:33 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=emergency comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:17:33 NR021AA systemd[1]: Stopped Emergency Shell.
+-- Subject: Unit emergency.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit emergency.service has finished shutting down.
+abr 11 08:17:33 NR021AA systemd[1]: Started Activation of DM RAID sets.
+-- Subject: Unit dmraid-activation.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit dmraid-activation.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 08:17:33 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=dmraid-activation comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:17:33 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=dmraid-activation comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:17:33 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=lvm2-pvscan@8:3 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:17:33 NR021AA systemd[1]: Stopped LVM2 PV scan on device 8:3.
+-- Subject: Unit lvm2-pvscan@8:3.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit lvm2-pvscan@8:3.service has finished shutting down.
+abr 11 08:17:33 NR021AA systemd[1]: Stopping LVM2 metadata daemon...
+-- Subject: Unit lvm2-lvmetad.service has begun shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit lvm2-lvmetad.service has begun shutting down.
+abr 11 08:17:33 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=lvm2-lvmetad comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:17:33 NR021AA systemd[1]: Stopped LVM2 metadata daemon.
+-- Subject: Unit lvm2-lvmetad.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit lvm2-lvmetad.service has finished shutting down.
+abr 11 08:17:33 NR021AA systemd[1]: Received SIGRTMIN+20 from PID 785 (plymouthd).
+abr 11 08:17:33 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=plymouth-start comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:17:33 NR021AA systemd[1]: Started Show Plymouth Boot Screen.
+-- Subject: Unit plymouth-start.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit plymouth-start.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 08:19:03 NR021AA systemd[1]: sys-devices-virtual-misc-vmbus\x21hv_kvp.device: Job sys-devices-virtual-misc-vmbus\x21hv_kvp.device/start timed out.
+abr 11 08:19:03 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=emergency comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:19:03 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=nfs-config comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:19:03 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=nfs-config comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:19:03 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-update-utmp-runlevel comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:19:03 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-update-utmp-runlevel comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:19:03 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=plymouth-read-write comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:19:03 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=plymouth-read-write comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:19:03 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=rpc-statd-notify comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:19:03 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=rpc-statd-notify comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 11 08:19:03 NR021AA sm-notify[811]: Version 1.3.3 starting
+abr 11 08:19:03 NR021AA systemd[1]: Timed out waiting for device sys-devices-virtual-misc-vmbus\x21hv_kvp.device.
+-- Subject: Unit sys-devices-virtual-misc-vmbus\x21hv_kvp.device has failed
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit sys-devices-virtual-misc-vmbus\x21hv_kvp.device has failed.
+-- 
+-- The result is timeout.
+abr 11 08:19:03 NR021AA sm-notify[811]: Already notifying clients; Exiting!
+abr 11 08:19:03 NR021AA systemd[1]: Dependency failed for Hyper-V KVP daemon.
+-- Subject: Unit hypervkvpd.service has failed
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit hypervkvpd.service has failed.
+-- 
+-- The result is dependency.
+abr 11 08:19:03 NR021AA systemd[1]: hypervkvpd.service: Job hypervkvpd.service/start failed with result 'dependency'.
+abr 11 08:19:03 NR021AA systemd[1]: sys-devices-virtual-misc-vmbus\x21hv_kvp.device: Job sys-devices-virtual-misc-vmbus\x21hv_kvp.device/start failed with result 'timeout'.
+abr 11 08:19:03 NR021AA systemd[1]: sys-devices-virtual-misc-vmbus\x21hv_fcopy.device: Job sys-devices-virtual-misc-vmbus\x21hv_fcopy.device/start timed out.
+abr 11 08:19:03 NR021AA systemd[1]: Timed out waiting for device sys-devices-virtual-misc-vmbus\x21hv_fcopy.device.
+-- Subject: Unit sys-devices-virtual-misc-vmbus\x21hv_fcopy.device has failed
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit sys-devices-virtual-misc-vmbus\x21hv_fcopy.device has failed.
+-- 
+-- The result is timeout.
+abr 11 08:19:03 NR021AA systemd[1]: Dependency failed for Hyper-V FCOPY daemon.
+-- Subject: Unit hypervfcopyd.service has failed
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit hypervfcopyd.service has failed.
+-- 
+-- The result is dependency.
+abr 11 08:19:03 NR021AA systemd[1]: hypervfcopyd.service: Job hypervfcopyd.service/start failed with result 'dependency'.
+abr 11 08:19:03 NR021AA systemd[1]: sys-devices-virtual-misc-vmbus\x21hv_fcopy.device: Job sys-devices-virtual-misc-vmbus\x21hv_fcopy.device/start failed with result 'timeout'.
+abr 11 08:19:03 NR021AA systemd[1]: sys-devices-virtual-misc-vmbus\x21hv_vss.device: Job sys-devices-virtual-misc-vmbus\x21hv_vss.device/start timed out.
+abr 11 08:19:03 NR021AA systemd[1]: Timed out waiting for device sys-devices-virtual-misc-vmbus\x21hv_vss.device.
+-- Subject: Unit sys-devices-virtual-misc-vmbus\x21hv_vss.device has failed
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit sys-devices-virtual-misc-vmbus\x21hv_vss.device has failed.
+-- 
+-- The result is timeout.
+abr 11 08:19:03 NR021AA systemd[1]: Dependency failed for Hyper-V VSS daemon.
+-- Subject: Unit hypervvssd.service has failed
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit hypervvssd.service has failed.
+-- 
+-- The result is dependency.
+abr 11 08:19:03 NR021AA systemd[1]: hypervvssd.service: Job hypervvssd.service/start failed with result 'dependency'.
+abr 11 08:19:03 NR021AA systemd[1]: sys-devices-virtual-misc-vmbus\x21hv_vss.device: Job sys-devices-virtual-misc-vmbus\x21hv_vss.device/start failed with result 'timeout'.
+abr 11 08:19:03 NR021AA systemd[1]: dev-multimedia-backups.device: Job dev-multimedia-backups.device/start timed out.
+abr 11 08:19:03 NR021AA systemd[1]: Timed out waiting for device dev-multimedia-backups.device.
+-- Subject: Unit dev-multimedia-backups.device has failed
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit dev-multimedia-backups.device has failed.
+-- 
+-- The result is timeout.
+abr 11 08:19:03 NR021AA systemd[1]: Dependency failed for /mnt/backups.
+-- Subject: Unit mnt-backups.mount has failed
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit mnt-backups.mount has failed.
+-- 
+-- The result is dependency.
+abr 11 08:19:03 NR021AA systemd[1]: Dependency failed for Local File Systems.
+-- Subject: Unit local-fs.target has failed
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit local-fs.target has failed.
+-- 
+-- The result is dependency.
+abr 11 08:19:03 NR021AA systemd[1]: Dependency failed for Mark the need to relabel after reboot.
+-- Subject: Unit fedora-autorelabel-mark.service has failed
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit fedora-autorelabel-mark.service has failed.
+-- 
+-- The result is dependency.
+abr 11 08:19:03 NR021AA systemd[1]: fedora-autorelabel-mark.service: Job fedora-autorelabel-mark.service/start failed with result 'dependency'.
+abr 11 08:19:03 NR021AA systemd[1]: Dependency failed for Relabel all filesystems, if necessary.
+-- Subject: Unit fedora-autorelabel.service has failed
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit fedora-autorelabel.service has failed.
+-- 
+-- The result is dependency.
+abr 11 08:19:03 NR021AA systemd[1]: fedora-autorelabel.service: Job fedora-autorelabel.service/start failed with result 'dependency'.
+abr 11 08:19:03 NR021AA systemd[1]: local-fs.target: Job local-fs.target/start failed with result 'dependency'.
+abr 11 08:19:03 NR021AA systemd[1]: local-fs.target: Triggering OnFailure= dependencies.
+abr 11 08:19:03 NR021AA systemd[1]: mnt-backups.mount: Job mnt-backups.mount/start failed with result 'dependency'.
+abr 11 08:19:03 NR021AA systemd[1]: Dependency failed for File System Check on /dev/multimedia/backups.
+-- Subject: Unit systemd-fsck@dev-multimedia-backups.service has failed
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-fsck@dev-multimedia-backups.service has failed.
+-- 
+-- The result is dependency.
+abr 11 08:19:03 NR021AA systemd[1]: systemd-fsck@dev-multimedia-backups.service: Job systemd-fsck@dev-multimedia-backups.service/start failed with result 'dependency'.
+abr 11 08:19:03 NR021AA systemd[1]: dev-multimedia-backups.device: Job dev-multimedia-backups.device/start failed with result 'timeout'.
+abr 11 08:19:03 NR021AA systemd[1]: Starting Preprocess NFS configuration...
+-- Subject: Unit nfs-config.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit nfs-config.service has begun starting up.
+abr 11 08:19:03 NR021AA systemd[1]: Stopped GSSAPI Proxy Daemon.
+-- Subject: Unit gssproxy.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit gssproxy.service has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Closed CUPS Scheduler.
+-- Subject: Unit cups.socket has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit cups.socket has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Stopped target Graphical Interface.
+-- Subject: Unit graphical.target has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit graphical.target has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Stopped GNOME Display Manager.
+-- Subject: Unit gdm.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit gdm.service has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Stopped target Multi-User System.
+-- Subject: Unit multi-user.target has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit multi-user.target has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Stopped Avahi mDNS/DNS-SD Stack.
+-- Subject: Unit avahi-daemon.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit avahi-daemon.service has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Stopped CUPS Scheduler.
+-- Subject: Unit cups.path has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit cups.path has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Stopped Job spooling tools.
+-- Subject: Unit atd.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit atd.service has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Stopped ABRT kernel log watcher.
+-- Subject: Unit abrt-oops.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit abrt-oops.service has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Stopped Network Manager.
+-- Subject: Unit NetworkManager.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit NetworkManager.service has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Stopped Wait for Plymouth Boot Screen to Quit.
+-- Subject: Unit plymouth-quit-wait.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit plymouth-quit-wait.service has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Stopped NTP client/server.
+-- Subject: Unit chronyd.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit chronyd.service has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Stopped Service for virtual machines hosted on VMware.
+-- Subject: Unit vmtoolsd.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit vmtoolsd.service has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Stopped VGAuth Service for open-vm-tools.
+-- Subject: Unit vgauthd.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit vgauthd.service has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Starting Update UTMP about System Runlevel Changes...
+-- Subject: Unit systemd-update-utmp-runlevel.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-update-utmp-runlevel.service has begun starting up.
+abr 11 08:19:03 NR021AA systemd[1]: Stopped Virtualization daemon.
+-- Subject: Unit libvirtd.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit libvirtd.service has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Closed Open-iSCSI iscsid Socket.
+-- Subject: Unit iscsid.socket has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit iscsid.socket has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Stopped Modem Manager.
+-- Subject: Unit ModemManager.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit ModemManager.service has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Stopped ABRT Xorg log watcher.
+-- Subject: Unit abrt-xorg.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit abrt-xorg.service has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Stopped Updates mlocate database every day.
+-- Subject: Unit mlocate-updatedb.timer has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit mlocate-updatedb.timer has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Stopped SYSV: Late init script for live image..
+-- Subject: Unit livesys-late.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit livesys-late.service has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Closed Avahi mDNS/DNS-SD Stack Activation Socket.
+-- Subject: Unit avahi-daemon.socket has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit avahi-daemon.socket has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Stopped Install ABRT coredump hook.
+-- Subject: Unit abrt-ccpp.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit abrt-ccpp.service has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Closed Virtual machine log manager socket.
+-- Subject: Unit virtlogd.socket has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit virtlogd.socket has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Stopped Machine Check Exception Logging Daemon.
+-- Subject: Unit mcelog.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit mcelog.service has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Stopped Disk Manager.
+-- Subject: Unit udisks2.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit udisks2.service has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Stopped Accounts Service.
+-- Subject: Unit accounts-daemon.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit accounts-daemon.service has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Stopped firewalld - dynamic firewall daemon.
+-- Subject: Unit firewalld.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit firewalld.service has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Stopped D-Bus System Message Bus.
+-- Subject: Unit dbus.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit dbus.service has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Closed RPCbind Server Activation Socket.
+-- Subject: Unit rpcbind.socket has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit rpcbind.socket has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Closed Virtual machine lock manager socket.
+-- Subject: Unit virtlockd.socket has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit virtlockd.socket has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Stopped Harvest vmcores for ABRT.
+-- Subject: Unit abrt-vmcore.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit abrt-vmcore.service has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Stopped ABRT Automated Bug Reporting Tool.
+-- Subject: Unit abrtd.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit abrtd.service has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Stopped LSB: Init script for live image..
+-- Subject: Unit livesys.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit livesys.service has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Stopped daily update of the root trust anchor for DNSSEC.
+-- Subject: Unit unbound-anchor.timer has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit unbound-anchor.timer has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Stopped Software RAID monitoring and management.
+-- Subject: Unit mdmonitor.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit mdmonitor.service has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Stopped Command Scheduler.
+-- Subject: Unit crond.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit crond.service has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Stopped Permit User Sessions.
+-- Subject: Unit systemd-user-sessions.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-user-sessions.service has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Stopped Hardware RNG Entropy Gatherer Daemon.
+-- Subject: Unit rngd.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit rngd.service has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Stopped Daily Cleanup of Temporary Directories.
+-- Subject: Unit systemd-tmpfiles-clean.timer has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-tmpfiles-clean.timer has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Stopped Login Service.
+-- Subject: Unit systemd-logind.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-logind.service has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Closed Open-iSCSI iscsiuio Socket.
+-- Subject: Unit iscsiuio.socket has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit iscsiuio.socket has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Stopped RealtimeKit Scheduling Policy Service.
+-- Subject: Unit rtkit-daemon.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit rtkit-daemon.service has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Closed D-Bus System Message Bus Socket.
+-- Subject: Unit dbus.socket has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit dbus.socket has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Stopped Save/Restore Sound Card State.
+-- Subject: Unit alsa-restore.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit alsa-restore.service has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Stopped Manage Sound Card State (restore and store).
+-- Subject: Unit alsa-state.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit alsa-state.service has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Stopped target Basic System.
+-- Subject: Unit basic.target has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit basic.target has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Stopped dnf makecache timer.
+-- Subject: Unit dnf-makecache.timer has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit dnf-makecache.timer has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Stopped target System Initialization.
+-- Subject: Unit sysinit.target has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit sysinit.target has finished shutting down.
+abr 11 08:19:03 NR021AA systemd[1]: Started Emergency Shell.
+-- Subject: Unit emergency.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit emergency.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 08:19:03 NR021AA systemd[1]: Starting Tell Plymouth To Write Out Runtime Data...
+-- Subject: Unit plymouth-read-write.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit plymouth-read-write.service has begun starting up.
+abr 11 08:19:03 NR021AA systemd[1]: Reached target Emergency Mode.
+-- Subject: Unit emergency.target has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit emergency.target has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 08:19:03 NR021AA systemd[1]: Started Preprocess NFS configuration.
+-- Subject: Unit nfs-config.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit nfs-config.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 08:19:03 NR021AA systemd[1]: Started Update UTMP about System Runlevel Changes.
+-- Subject: Unit systemd-update-utmp-runlevel.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-update-utmp-runlevel.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 08:19:03 NR021AA systemd[1]: Started Tell Plymouth To Write Out Runtime Data.
+-- Subject: Unit plymouth-read-write.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit plymouth-read-write.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 08:19:03 NR021AA systemd[1]: Starting Notify NFS peers of a restart...
+-- Subject: Unit rpc-statd-notify.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit rpc-statd-notify.service has begun starting up.
+abr 11 08:19:03 NR021AA systemd[1]: Started Notify NFS peers of a restart.
+-- Subject: Unit rpc-statd-notify.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit rpc-statd-notify.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 11 08:19:03 NR021AA systemd[1]: Received SIGRTMIN+21 from PID 785 (plymouthd).
+abr 11 08:19:04 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=plymouth-start comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
