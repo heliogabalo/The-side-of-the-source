@@ -1,0 +1,14 @@
+04/12/2017  17:08:18 NTP Date/Time updated.
+01/25/2017  00:01:00 Get system time from NTP server:62.36.16.6.
+01/25/2017  00:00:35 If(3) can not receive RA message.
+01/25/2017  00:00:27 DHCP Client: [ATM1]Receive Ack from 81.52.127.249,Lease time=86400
+01/25/2017  00:00:27 DHCP Client: [ATM1]Domain name = orange.es
+01/25/2017  00:00:27 DHCP Client: [ATM1]Send Request, Request IP=90.75.213.228
+01/25/2017  00:00:27 DHCP Client: [ATM1]Receive Offer from 81.52.127.249
+01/25/2017  00:00:27 DHCP Client: [ATM1]Domain name = orange.es
+01/25/2017  00:00:26 DHCP Client: [ATM1]Send Discover
+01/25/2017  00:00:26 DHCP Client: [ATM1]Send Discover
+01/25/2017  00:00:25 If(3) can not receive RA message.
+01/25/2017  00:00:10 192.168.1.104 login success
+01/25/2017  00:00:04 sending DHCP ACK to 192.168.1.104
+01/25/2017  00:00:04 sending DHCP ACK to 192.168.1.104
