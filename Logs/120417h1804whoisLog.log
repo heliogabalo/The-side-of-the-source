@@ -1,0 +1,162 @@
+[Preguntando whois.ripe.net]
+[whois.ripe.net]
+% This is the RIPE Database query service.
+% The objects are in RPSL format.
+%
+% The RIPE Database is subject to Terms and Conditions.
+% See http://www.ripe.net/db/support/db-terms-conditions.pdf
+
+% Note: this output has been filtered.
+%       To receive output for a database update, use the "-B" flag.
+
+% Information related to '62.36.16.0 - 62.36.16.255'
+
+% Abuse contact for '62.36.16.0 - 62.36.16.255' is 'abuse@orange.es'
+
+inetnum:        62.36.16.0 - 62.36.16.255
+netname:        Servicios_VOICE
+descr:          Red Servicios VOICE +
+country:        ES
+admin-c:        HTF15-RIPE
+tech-c:         HTF15-RIPE
+status:         ASSIGNED PA
+remarks:        For complaints of abuse from these
+remarks:        addresses  abuse@es.francetelecom.com
+mnt-by:         FTE-GGRR-MNT
+created:        2005-08-23T09:16:38Z
+last-modified:  2005-08-23T09:16:38Z
+source:         RIPE
+
+role:           Hostmaster Technician FTE
+address:        company France Telecom España
+address:        Calle Meneses, 2
+address:        28045
+address:        Madrid, Spain
+admin-c:        HT874-RIPE
+admin-c:        HT876-RIPE
+tech-c:         HT874-RIPE
+tech-c:         HT876-RIPE
+nic-hdl:        HTF15-RIPE
+remarks:        spam, abuse reports....mailto:abuse@orange.es
+abuse-mailbox:  abuseftes.es@orange-ftgroup.com
+mnt-by:         UNI2-MNT
+created:        2005-08-22T13:25:06Z
+last-modified:  2009-02-11T12:29:41Z
+source:         RIPE # Filtered
+
+% Information related to '62.36.0.0/16AS12479'
+
+route:          62.36.0.0/16
+descr:          Uni2 PA Block 1
+origin:         AS12479
+mnt-by:         UNI2-MNT
+created:        1970-01-01T00:00:00Z
+last-modified:  2005-08-29T09:25:11Z
+source:         RIPE
+
+% This query was served by the RIPE Database Query Service version 1.88.1 (WAGYU)
+
+
+[Preguntando whois.ripe.net]
+[whois.ripe.net]
+% This is the RIPE Database query service.
+% The objects are in RPSL format.
+%
+% The RIPE Database is subject to Terms and Conditions.
+% See http://www.ripe.net/db/support/db-terms-conditions.pdf
+
+% Note: this output has been filtered.
+%       To receive output for a database update, use the "-B" flag.
+
+% Information related to '90.75.0.0 - 90.75.255.255'
+
+% Abuse contact for '90.75.0.0 - 90.75.255.255' is 'gestionip.ft@orange.com'
+
+inetnum:        90.75.0.0 - 90.75.255.255
+netname:        UNI2-NET
+descr:          Orange Spain Network
+country:        ES
+admin-c:        HAF10-RIPE
+tech-c:         HAF10-RIPE
+status:         ASSIGNED PA
+remarks:        for hacking, spamming or security problems send mail to
+remarks:        abuse@orange.es
+mnt-by:         FT-BRX
+mnt-routes:     UNI2-MNT
+created:        2015-03-04T08:40:01Z
+last-modified:  2015-03-27T10:52:14Z
+source:         RIPE
+
+role:           Hostmaster Administrator FTE
+address:        Parque Empresarial La Finca
+address:        Edificio 9
+address:        Paseo del Club Deportivo, 1
+address:        28223 Pozuelo de Alarcon
+address:        Madrid, Spain
+admin-c:        HA1066-RIPE
+admin-c:        HA1067-RIPE
+tech-c:         HA1066-RIPE
+tech-c:         HA1067-RIPE
+nic-hdl:        HAF10-RIPE
+remarks:        spam, abuse reports....mailto:abuse@orange.es
+abuse-mailbox:  abuse@orange.es
+mnt-by:         UNI2-MNT
+created:        2005-08-19T10:24:55Z
+last-modified:  2013-01-17T16:47:17Z
+source:         RIPE # Filtered
+
+% Information related to '90.75.0.0/16AS12479'
+
+route:          90.75.0.0/16
+descr:          UNI2-NET - Orange Spain Network
+origin:         AS12479
+mnt-by:         UNI2-MNT
+created:        2015-04-09T13:16:19Z
+last-modified:  2015-04-09T13:16:19Z
+source:         RIPE
+
+% This query was served by the RIPE Database Query Service version 1.88.1 (BLAARKOP)
+
+
+[Preguntando whois.ripe.net]
+[whois.ripe.net]
+% This is the RIPE Database query service.
+% The objects are in RPSL format.
+%
+% The RIPE Database is subject to Terms and Conditions.
+% See http://www.ripe.net/db/support/db-terms-conditions.pdf
+
+% Note: this output has been filtered.
+%       To receive output for a database update, use the "-B" flag.
+
+% Information related to '81.52.127.248 - 81.52.127.255'
+
+% Abuse contact for '81.52.127.248 - 81.52.127.255' is 'gestionip.ft@orange.com'
+
+inetnum:        81.52.127.248 - 81.52.127.255
+netname:        DPS-MSAP-OSP
+descr:          Network Infrastructure
+country:        FR
+admin-c:        FTD3-RIPE
+tech-c:         FTD3-RIPE
+status:         ASSIGNED PA
+remarks:        INFRA-AW
+mnt-by:         RAIN-TRANSPAC
+created:        2010-07-15T09:28:20Z
+last-modified:  2014-11-13T15:59:11Z
+source:         RIPE
+
+role:           France Telecom DEPFS
+address:        71 rue Georges Gosnat
+address:        94200 Ivry sur Seine
+admin-c:        FTD3-RIPE
+tech-c:         FTD3-RIPE
+nic-hdl:        FTD3-RIPE
+mnt-by:         FT-BRX
+created:        2010-06-10T14:41:39Z
+last-modified:  2010-06-10T14:45:09Z
+source:         RIPE # Filtered
+
+% This query was served by the RIPE Database Query Service version 1.88.1 (ANGUS)
+
+
