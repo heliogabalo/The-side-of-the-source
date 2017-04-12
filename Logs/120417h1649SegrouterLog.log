@@ -1,0 +1,410 @@
+04/12/2017  16:28:32 192.168.1.104 login success
+04/12/2017  16:28:32 Duplicate user login from 255.255.255.255
+04/12/2017  16:23:54 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:23:53 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:23:52 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:23:44 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:23:44 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:23:43 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:23:42 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:23:40 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:23:38 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:23:37 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:23:32 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:23:25 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:23:22 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:23:22 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:23:22 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:23:21 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:23:21 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:23:19 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:23:18 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:23:17 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:23:17 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:23:17 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:23:16 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:23:15 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:23:15 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:23:15 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:22:54 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:22:54 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:22:50 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:22:50 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:22:49 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:22:48 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:22:46 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:22:46 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:22:46 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:22:45 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:22:44 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:22:44 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:22:44 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:22:44 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:22:44 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:22:44 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:22:44 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:22:44 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:22:44 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:22:43 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:22:28 ***** AFTER open PCP socket:103,rcode=0*****
+04/12/2017  16:22:28 received a response for deleting a mapping.
+04/12/2017  16:22:28 Recived Process: Result Code OK
+
+04/12/2017  16:22:28 *****OpenPCPSocket():2A01:C50E:3605:2500:E63E:D7FF:FE6C:C5B3,FD00:30BF::1*******
+04/12/2017  16:22:27 Sub-delegate prefix: 2a01:c50e:3605:2500::/64 to LAN
+04/12/2017  16:22:25 If(3) obtains IA prefix: 2a01:c50e:3605:2500::/56, preferred lifetime: 86400, valid lifetime: 86400
+04/12/2017  16:22:25 Router configures DNSv6 Server Address: 2A01:C500:0000:0000:0000:0000:0000:0002
+04/12/2017  16:22:25 Router configures DNSv6 Server Address: 2A01:C500:0000:0000:0000:0000:0000:0001
+04/12/2017  16:22:24 From internet service provider transferred Gateway IPv6 address: fe80:0000:0000:0000:8626:2bff:fee0
+04/12/2017  16:22:24 If(3) receives RA router lifetime: 4500
+04/12/2017  16:22:22 sending DHCP ACK to 192.168.1.104
+04/12/2017  16:22:22 sending DHCP ACK to 192.168.1.104
+04/12/2017  16:22:22 sending DHCP ACK to 192.168.1.104
+04/12/2017  16:22:13 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:22:13 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:22:13 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:22:12 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:22:11 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:22:09 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:22:09 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:22:07 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:22:07 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:22:06 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:22:06 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:21:58 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:21:55 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:21:55 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:21:54 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:21:54 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:21:54 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:21:53 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:21:52 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:21:50 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:21:50 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:21:49 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:21:49 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:21:48 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:21:48 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:21:47 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:21:46 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:21:12 sending DHCP ACK to 192.168.1.104
+04/12/2017  16:21:02 If(3) receives RA router lifetime: 4500
+04/12/2017  16:20:16 Wireless F0:43:47:01:64:B3 released
+04/12/2017  16:19:12 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:19:11 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:19:10 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:19:10 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:19:10 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:19:10 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:19:10 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:19:10 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:19:10 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:19:10 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:19:09 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:19:08 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:19:05 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:19:05 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:19:05 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:19:04 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:19:04 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:19:03 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:19:03 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:19:02 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:19:01 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:19:00 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:19:00 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:19:00 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:59 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:59 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:58 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:58 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:57 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:57 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:56 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:55 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:55 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:55 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:55 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:55 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:54 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:54 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:54 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:54 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:54 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:54 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:54 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:54 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:54 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:54 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:54 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:54 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:53 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:53 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:53 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:53 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:53 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:52 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:52 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:52 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:52 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:51 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:50 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:50 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:50 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:49 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:49 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:49 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:49 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:49 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:49 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:49 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:49 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:49 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:49 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:49 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:48 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:48 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:48 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:48 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:48 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:47 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:47 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:47 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:46 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:46 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:46 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:46 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:46 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:45 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:45 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:45 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:44 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:44 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:44 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:43 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:43 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:42 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:41 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:40 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:40 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:39 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:39 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:38 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:38 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:37 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:37 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:36 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:36 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:34 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:33 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:33 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:32 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:32 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:31 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:29 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:28 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:27 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:27 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:26 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:24 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:23 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:22 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:21 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:20 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:20 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:20 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:19 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:19 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:19 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:19 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:19 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:19 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:18 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:18 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:18 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:17 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:14 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:13 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:12 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:12 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:10 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:08 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:08 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:18:07 **Mac filter** 00:00:00:00:00:00  (from WLAN Inbound)
+04/12/2017  16:17:47 sending DHCP ACK to 192.168.1.102
+04/12/2017  16:16:48 192.168.1.104 login success
+04/12/2017  16:16:45 User from 192.168.1.104 timed out
+04/12/2017  16:06:16 sending DHCP ACK to 192.168.1.104
+04/12/2017  16:03:22 sending DHCP ACK to 192.168.1.102
+04/12/2017  16:03:22 sending DHCP OFFER to 192.168.1.102
+04/12/2017  15:58:55 If(3) receives RA router lifetime: 4500
+04/12/2017  15:53:11 sending DHCP ACK to 192.168.1.104
+04/12/2017  15:41:19 If(3) receives RA router lifetime: 4500
+04/12/2017  15:41:16 00:18:F3:09:19:52 released
+04/12/2017  15:38:31 192.168.1.104 login success
+04/12/2017  15:38:28 User from 192.168.1.104 timed out
+04/12/2017  15:38:20 sending DHCP ACK to 192.168.1.104
+04/12/2017  15:38:20 sending DHCP OFFER to 192.168.1.104
+04/12/2017  15:37:37 sending DHCP ACK to 192.168.1.104
+04/12/2017  15:32:12 sending DHCP ACK to 192.168.1.104
+04/12/2017  15:28:56 Wireless F0:43:47:01:64:B3 released
+04/12/2017  15:28:40 sending DHCP ACK to 192.168.1.104
+04/12/2017  15:28:40 sending DHCP OFFER to 192.168.1.104
+04/12/2017  15:24:51 sending DHCP ACK to 192.168.1.102
+04/12/2017  15:12:34 If(3) receives RA router lifetime: 4500
+04/12/2017  15:11:22 sending DHCP ACK to 192.168.1.130
+04/12/2017  15:10:26 sending DHCP ACK to 192.168.1.102
+04/12/2017  14:56:22 sending DHCP ACK to 192.168.1.130
+04/12/2017  14:55:18 If(3) receives RA router lifetime: 4500
+04/12/2017  14:54:56 Wireless F0:43:47:01:64:B3 released
+04/12/2017  14:51:00 sending DHCP ACK to 192.168.1.102
+04/12/2017  14:47:53 18:28:61:8B:BB:C2 released
+04/12/2017  14:41:23 sending DHCP ACK to 192.168.1.130
+04/12/2017  14:41:23 sending DHCP OFFER to 192.168.1.130
+04/12/2017  14:36:34 sending DHCP ACK to 192.168.1.102
+04/12/2017  14:34:28 If(3) receives RA router lifetime: 4500
+04/12/2017  14:27:53 Wireless F0:43:47:01:64:B3 released
+04/12/2017  14:21:09 sending DHCP ACK to 192.168.1.102
+04/12/2017  14:18:13 sending DHCP ACK to 192.168.1.100
+04/12/2017  14:17:06 If(3) receives RA router lifetime: 4500
+04/12/2017  14:06:44 sending DHCP ACK to 192.168.1.102
+04/12/2017  14:03:11 sending DHCP ACK to 192.168.1.100
+04/12/2017  13:55:29 If(3) receives RA router lifetime: 4500
+04/12/2017  13:52:19 sending DHCP ACK to 192.168.1.102
+04/12/2017  13:48:09 sending DHCP ACK to 192.168.1.100
+04/12/2017  13:47:53 Wireless F0:43:47:01:64:B3 released
+04/12/2017  13:37:27 sending DHCP ACK to 192.168.1.102
+04/12/2017  13:33:07 sending DHCP ACK to 192.168.1.100
+04/12/2017  13:30:29 If(3) receives RA router lifetime: 4500
+04/12/2017  13:23:03 sending DHCP ACK to 192.168.1.102
+04/12/2017  13:19:53 00:18:F3:09:19:52 released
+04/12/2017  13:18:05 sending DHCP ACK to 192.168.1.100
+04/12/2017  13:14:48 If(3) receives RA router lifetime: 4500
+04/12/2017  13:08:39 sending DHCP ACK to 192.168.1.102
+04/12/2017  13:03:03 sending DHCP ACK to 192.168.1.100
+04/12/2017  13:03:03 sending DHCP OFFER to 192.168.1.100
+04/12/2017  13:02:44 sending DHCP ACK to 192.168.1.100
+04/12/2017  13:02:44 sending DHCP OFFER to 192.168.1.100
+04/12/2017  12:54:13 sending DHCP ACK to 192.168.1.102
+04/12/2017  12:54:13 sending DHCP OFFER to 192.168.1.102
+04/12/2017  12:49:55 sending DHCP ACK to 192.168.1.130
+04/12/2017  12:49:20 If(3) receives RA router lifetime: 4500
+04/12/2017  12:34:55 sending DHCP ACK to 192.168.1.130
+04/12/2017  12:34:55 sending DHCP ACK to 192.168.1.130
+04/12/2017  12:31:15 If(3) receives RA router lifetime: 4500
+04/12/2017  12:14:53 sending DHCP ACK to 192.168.1.130
+04/12/2017  12:14:53 sending DHCP ACK to 192.168.1.130
+04/12/2017  12:12:02 If(3) receives RA router lifetime: 4500
+04/12/2017  11:58:01 sending DHCP ACK to 192.168.1.130
+04/12/2017  11:58:01 sending DHCP ACK to 192.168.1.130
+04/12/2017  11:46:13 00:24:21:28:F7:65 released
+04/12/2017  11:45:59 If(3) receives RA router lifetime: 4500
+04/12/2017  11:29:15 If(3) receives RA router lifetime: 4500
+04/12/2017  11:16:17 sending DHCP ACK to 192.168.1.104
+04/12/2017  11:04:02 sending DHCP ACK to 192.168.1.104
+04/12/2017  11:03:21 If(3) receives RA router lifetime: 4500
+04/12/2017  11:02:21 192.168.1.104 login success
+04/12/2017  11:02:18 User from 192.168.1.104 timed out
+04/12/2017  10:56:20 192.168.1.104 login success
+04/12/2017  10:56:17 User from 192.168.1.104 timed out
+04/12/2017  10:50:33 sending DHCP ACK to 192.168.1.104
+04/12/2017  10:38:48 192.168.1.104 login success
+04/12/2017  10:38:44 User from 192.168.1.104 timed out
+04/12/2017  10:38:30 sending DHCP ACK to 192.168.1.104
+04/12/2017  10:23:53 Wireless F0:43:47:01:64:B3 released
+04/12/2017  10:18:08 If(3) receives RA router lifetime: 4500
+04/12/2017  10:12:53 sending DHCP ACK to 192.168.1.102
+04/12/2017  10:09:37 sending DHCP ACK to 192.168.1.104
+04/12/2017  10:08:00 192.168.1.104 login success
+04/12/2017  09:58:28 sending DHCP ACK to 192.168.1.102
+04/12/2017  09:57:53 Wireless F0:43:47:01:64:B3 released
+04/12/2017  09:57:43 ***** AFTER open PCP socket:98,rcode=255*****
+04/12/2017  09:57:38 *****OpenPCPSocket():2A01:C50E:3605:2500:E63E:D7FF:FE6C:C5B3,FD00:30BF::1*******
+04/12/2017  09:57:38 Sub-delegate prefix: 2a01:c50e:3605:2500::/64 to LAN
+04/12/2017  09:57:36 If(3) obtains IA prefix: 2a01:c50e:3605:2500::/56, preferred lifetime: 86400, valid lifetime: 86400
+04/12/2017  09:57:36 Router configures DNSv6 Server Address: 2A01:C500:0000:0000:0000:0000:0000:0002
+04/12/2017  09:57:36 Router configures DNSv6 Server Address: 2A01:C500:0000:0000:0000:0000:0000:0001
+04/12/2017  09:57:35 From internet service provider transferred Gateway IPv6 address: fe80:0000:0000:0000:8626:2bff:fee0
+04/12/2017  09:57:35 If(3) receives RA router lifetime: 4500
+04/12/2017  09:57:34 sending DHCP ACK to 192.168.1.104
+04/12/2017  09:57:34 sending DHCP ACK to 192.168.1.104
+04/12/2017  09:56:31 192.168.1.104 login success
+04/12/2017  09:55:38 sending DHCP ACK to 192.168.1.104
+04/12/2017  09:55:38 sending DHCP OFFER to 192.168.1.104
+04/12/2017  09:54:58 If(3) receives RA router lifetime: 4500
+04/12/2017  09:39:55 If(3) receives RA router lifetime: 4500
+04/12/2017  09:22:08 If(3) receives RA router lifetime: 4500
+04/12/2017  08:53:56 If(3) receives RA router lifetime: 4500
+04/12/2017  08:28:28 If(3) receives RA router lifetime: 4500
+04/12/2017  08:10:09 If(3) receives RA router lifetime: 4500
+04/12/2017  07:53:09 If(3) receives RA router lifetime: 4500
+04/12/2017  07:31:35 If(3) receives RA router lifetime: 4500
+04/12/2017  07:01:56 If(3) receives RA router lifetime: 4500
+04/12/2017  06:40:07 If(3) receives RA router lifetime: 4500
+04/12/2017  06:10:05 If(3) receives RA router lifetime: 4500
+04/12/2017  05:43:48 If(3) receives RA router lifetime: 4500
+04/12/2017  05:28:57 Sub-delegate prefix: 2a01:c50e:3605:2500::/64 to LAN
+04/12/2017  05:28:57 If(3) obtains IA prefix: 2a01:c50e:3605:2500::/56, preferred lifetime: 86400, valid lifetime: 86400
+04/12/2017  05:28:57 Router configures DNSv6 Server Address: 2A01:C500:0000:0000:0000:0000:0000:0002
+04/12/2017  05:28:57 Router configures DNSv6 Server Address: 2A01:C500:0000:0000:0000:0000:0000:0001
+04/12/2017  05:28:49 NTP Date/Time updated.
+04/12/2017  05:28:45 Get system time from NTP server:2A01:C500:0000:0000:0000:0000:0000:0003.
+04/12/2017  05:25:22 If(3) receives RA router lifetime: 4500
+04/12/2017  04:59:55 If(3) receives RA router lifetime: 4500
+04/12/2017  04:32:12 If(3) receives RA router lifetime: 4500
+04/12/2017  04:16:59 If(3) receives RA router lifetime: 4500
+04/12/2017  03:52:36 If(3) receives RA router lifetime: 4500
+04/12/2017  03:22:55 If(3) receives RA router lifetime: 4500
+04/12/2017  03:03:09 If(3) receives RA router lifetime: 4500
+04/12/2017  02:41:26 If(3) receives RA router lifetime: 4500
+04/12/2017  02:20:51 If(3) receives RA router lifetime: 4500
+04/12/2017  02:00:17 If(3) receives RA router lifetime: 4500
+04/12/2017  01:31:04 If(3) receives RA router lifetime: 4500
+04/12/2017  01:02:13 If(3) receives RA router lifetime: 4500
+04/12/2017  00:54:20 sending DHCP ACK to 192.168.1.100
+04/12/2017  00:54:20 sending DHCP OFFER to 192.168.1.100
+04/12/2017  00:35:40 If(3) receives RA router lifetime: 4500
+04/12/2017  00:19:55 If(3) receives RA router lifetime: 4500
+04/11/2017  23:58:56 If(3) receives RA router lifetime: 4500
+04/11/2017  23:36:08 If(3) receives RA router lifetime: 4500
+04/11/2017  23:09:28 If(3) receives RA router lifetime: 4500
+04/11/2017  22:50:40 If(3) receives RA router lifetime: 4500
+04/11/2017  22:22:45 If(3) receives RA router lifetime: 4500
+04/11/2017  21:55:10 If(3) receives RA router lifetime: 4500
+04/11/2017  21:31:51 If(3) receives RA router lifetime: 4500
+04/11/2017  21:11:34 sending DHCP ACK to 192.168.1.100
+04/11/2017  21:11:34 sending DHCP OFFER to 192.168.1.100
+04/11/2017  21:10:11 If(3) receives RA router lifetime: 4500
+04/11/2017  20:44:44 If(3) receives RA router lifetime: 4500
+04/11/2017  20:43:24 sending DHCP ACK to 192.168.1.100
+04/11/2017  20:43:24 sending DHCP OFFER to 192.168.1.100
+04/11/2017  20:20:45 If(3) receives RA router lifetime: 4500
+04/11/2017  20:00:58 If(3) receives RA router lifetime: 4500
+04/11/2017  19:44:45 If(3) receives RA router lifetime: 4500
+04/11/2017  19:17:40 If(3) receives RA router lifetime: 4500
+04/11/2017  18:53:14 If(3) receives RA router lifetime: 4500
+04/11/2017  18:31:13 If(3) receives RA router lifetime: 4500
+04/11/2017  18:24:00 sending DHCP ACK to 192.168.1.103
+04/11/2017  18:15:11 If(3) receives RA router lifetime: 4500
+04/11/2017  17:49:18 If(3) receives RA router lifetime: 4500
+04/11/2017  17:30:09 sending DHCP ACK to 192.168.1.102
+04/11/2017  17:30:09 sending DHCP OFFER to 192.168.1.102
+04/11/2017  17:29:37 NTP Date/Time updated.
+01/25/2017  00:01:30 Get system time from NTP server:2A01:C500:0000:0000:0000:0000:0000:0003.
+01/25/2017  00:00:51 ***** AFTER open PCP socket:93,rcode=255*****
+01/25/2017  00:00:46 *****OpenPCPSocket():2A01:C50E:3605:2500:E63E:D7FF:FE6C:C5B3,FD00:30BF::1*******
+01/25/2017  00:00:45 From internet service provider transferred Gateway IPv6 address: fe80:0000:0000:0000:8626:2bff:fee0
+01/25/2017  00:00:45 If(3) receives RA router lifetime: 4500
+01/25/2017  00:00:44 Sub-delegate prefix: 2a01:c50e:3605:2500::/64 to LAN
+01/25/2017  00:00:43 If(3) obtains IA prefix: 2a01:c50e:3605:2500::/56, preferred lifetime: 86400, valid lifetime: 86400
+01/25/2017  00:00:43 Router configures DNSv6 Server Address: 2A01:C500:0000:0000:0000:0000:0000:0002
+01/25/2017  00:00:43 Router configures DNSv6 Server Address: 2A01:C500:0000:0000:0000:0000:0000:0001
+01/25/2017  00:00:37 If(3) can not receive RA message.
+01/25/2017  00:00:33 DHCP Client: [ATM1]Send Discover
+01/25/2017  00:00:29 DHCP Client: [ATM1]Send Discover
+01/25/2017  00:00:27 DHCP Client: [ATM1]Send Discover
+01/25/2017  00:00:27 DHCP Client: [ATM1]Send Discover
+01/25/2017  00:00:26 If(3) can not receive RA message.
+01/25/2017  00:00:05 sending DHCP ACK to 192.168.1.101
+01/25/2017  00:00:05 sending DHCP ACK to 192.168.1.101
+01/25/2017  00:00:03 sending DHCP ACK to 192.168.1.101
