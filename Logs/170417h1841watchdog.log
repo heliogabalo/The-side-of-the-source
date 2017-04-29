@@ -1,0 +1,9 @@
+wdctl: falló la escritura: Invalid argument
+Dispositivo:   /dev/watchdog
+Identidad:     iTCO_wdt [versión 0]
+Tiempo de espera: 30 segundos
+Tiempo restante: 30 segundos
+FLAG           DESCRIPTION               STATUS BOOT-STATUS
+KEEPALIVEPING  Keep alive ping reply          0           0
+MAGICCLOSE     Supports magic close char      0           0
+SETTIMEOUT     Set timeout (in seconds)       0           0

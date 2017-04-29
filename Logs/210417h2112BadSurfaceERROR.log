@@ -1,0 +1,1441 @@
+-- Logs begin at lun 2017-03-06 16:24:49 CET. --
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon QE (AGP), ATI Radeon QF (AGP), ATI Radeon QG (AGP),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI FireGL 8700/8800 QH (AGP), ATI Radeon 8500 QL (AGP),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon 9100 QM (AGP), ATI Radeon 7500 QW (AGP/PCI),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon 7500 QX (AGP/PCI), ATI Radeon VE/7000 QY (AGP/PCI),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon VE/7000 QZ (AGP/PCI), ATI ES1000 515E (PCI),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon Mobility X300 (M22) 5460 (PCIE),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon Mobility X600 SE (M24C) 5462 (PCIE),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI FireGL M22 GL 5464 (PCIE), ATI Radeon X800 (R423) UH (PCIE),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon X800PRO (R423) UI (PCIE),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon X800LE (R423) UJ (PCIE),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon X800SE (R423) UK (PCIE),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon X800 XTP (R430) (PCIE), ATI Radeon X800 XL (R430) (PCIE),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon X800 SE (R430) (PCIE), ATI Radeon X800 (R430) (PCIE),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI FireGL V7100 (R423) (PCIE), ATI FireGL V5100 (R423) UQ (PCIE),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI FireGL unknown (R423) UR (PCIE),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI FireGL unknown (R423) UT (PCIE),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility FireGL V5000 (M26) (PCIE),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility FireGL V5000 (M26) (PCIE),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility Radeon X700 XL (M26) (PCIE),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility Radeon X700 (M26) (PCIE),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility Radeon X700 (M26) (PCIE),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon X550XTX 5657 (PCIE), ATI Radeon 9100 IGP (A5) 5834,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon Mobility 9100 IGP (U3) 5835,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon XPRESS 200 5954 (PCIE),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon XPRESS 200M 5955 (PCIE), ATI Radeon 9250 5960 (AGP),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon 9200 5961 (AGP), ATI Radeon 9200 5962 (AGP),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon 9200SE 5964 (AGP), ATI FireMV 2200 (PCI),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI ES1000 5969 (PCI), ATI Radeon XPRESS 200 5974 (PCIE),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon XPRESS 200M 5975 (PCIE),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon XPRESS 200 5A41 (PCIE),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon XPRESS 200M 5A42 (PCIE),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon XPRESS 200 5A61 (PCIE),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon XPRESS 200M 5A62 (PCIE),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon X300 (RV370) 5B60 (PCIE),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon X600 (RV370) 5B62 (PCIE),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon X550 (RV370) 5B63 (PCIE),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI FireGL V3100 (RV370) 5B64 (PCIE),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI FireMV 2200 PCIE (RV370) 5B65 (PCIE),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon Mobility 9200 (M9+) 5C61 (AGP),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon Mobility 9200 (M9+) 5C63 (AGP),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility Radeon X800 XT (M28) (PCIE),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility FireGL V5100 (M28) (PCIE),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility Radeon X800 (M28) (PCIE), ATI Radeon X850 5D4C (PCIE),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon X850 XT PE (R480) (PCIE),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon X850 SE (R480) (PCIE), ATI Radeon X850 PRO (R480) (PCIE),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI unknown Radeon / FireGL (R480) 5D50 (PCIE),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon X850 XT (R480) (PCIE),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon X800XT (R423) 5D57 (PCIE),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI FireGL V5000 (RV410) (PCIE), ATI Radeon X700 XT (RV410) (PCIE),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon X700 PRO (RV410) (PCIE),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon X700 SE (RV410) (PCIE), ATI Radeon X700 (RV410) (PCIE),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon X700 SE (RV410) (PCIE), ATI Radeon X1800,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility Radeon X1800 XT, ATI Mobility Radeon X1800,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility FireGL V7200, ATI FireGL V7200, ATI FireGL V5300,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility FireGL V7100, ATI Radeon X1800, ATI Radeon X1800,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon X1800, ATI Radeon X1800, ATI Radeon X1800,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI FireGL V7300, ATI FireGL V7350, ATI Radeon X1600, ATI RV505,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon X1300/X1550, ATI Radeon X1550, ATI M54-GL,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility Radeon X1400, ATI Radeon X1300/X1550,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon X1550 64-bit, ATI Mobility Radeon X1300,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility Radeon X1300, ATI Mobility Radeon X1300,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility Radeon X1300, ATI Radeon X1300, ATI Radeon X1300,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI RV505, ATI RV505, ATI FireGL V3300, ATI FireGL V3350,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon X1300, ATI Radeon X1550 64-bit, ATI Radeon X1300/X1550,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon X1600, ATI Radeon X1300/X1550, ATI Mobility Radeon X1450,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon X1300/X1550, ATI Mobility Radeon X2300,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility Radeon X2300, ATI Mobility Radeon X1350,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility Radeon X1350, ATI Mobility Radeon X1450,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon X1300, ATI Radeon X1550, ATI Mobility Radeon X1350,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI FireMV 2250, ATI Radeon X1550 64-bit, ATI Radeon X1600,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon X1650, ATI Radeon X1600, ATI Radeon X1600,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility FireGL V5200, ATI Mobility Radeon X1600,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon X1650, ATI Radeon X1650, ATI Radeon X1600,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon X1300 XT/X1600 Pro, ATI FireGL V3400,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility FireGL V5250, ATI Mobility Radeon X1700,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility Radeon X1700 XT, ATI FireGL V5200,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility Radeon X1700, ATI Radeon X2300HD,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility Radeon HD 2300, ATI Mobility Radeon HD 2300,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon X1950, ATI Radeon X1900, ATI Radeon X1950,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon X1900, ATI Radeon X1900, ATI Radeon X1900,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon X1900, ATI Radeon X1900, ATI Radeon X1900,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon X1900, ATI Radeon X1900, ATI Radeon X1900,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI AMD Stream Processor, ATI Radeon X1900, ATI Radeon X1950,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI RV560, ATI RV560, ATI Mobility Radeon X1900, ATI RV560,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon X1950 GT, ATI RV570, ATI RV570, ATI FireGL V7400,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI RV560, ATI Radeon X1650, ATI Radeon X1650, ATI RV560,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon 9100 PRO IGP 7834, ATI Radeon Mobility 9200 IGP 7835,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon X1200, ATI Radeon X1200, ATI Radeon X1200,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon X1200, ATI Radeon X1200, ATI RS740, ATI RS740M, ATI RS740,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI RS740M, ATI Radeon HD 2900 XT, ATI Radeon HD 2900 XT,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon HD 2900 XT, ATI Radeon HD 2900 Pro, ATI Radeon HD 2900 GT,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI FireGL V8650, ATI FireGL V8600, ATI FireGL V7600,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon 4800 Series, ATI Radeon HD 4870 x2,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon 4800 Series, ATI Radeon HD 4850 x2,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI FirePro V8750 (FireGL), ATI FirePro V7760 (FireGL),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility RADEON HD 4850, ATI Mobility RADEON HD 4850 X2,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon 4800 Series, ATI FirePro RV770, AMD FireStream 9270,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         AMD FireStream 9250, ATI FirePro V8700 (FireGL),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility RADEON HD 4870, ATI Mobility RADEON M98,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility RADEON HD 4870, ATI Radeon 4800 Series,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon 4800 Series, ATI FirePro M7750, ATI M98, ATI M98, ATI M98,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility Radeon HD 4650, ATI Radeon RV730 (AGP),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility Radeon HD 4670, ATI FirePro M5750,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility Radeon HD 4670, ATI Radeon RV730 (AGP),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI RV730XT [Radeon HD 4670], ATI RADEON E4600,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon HD 4600 Series, ATI RV730 PRO [Radeon HD 4650],
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI FirePro V7750 (FireGL), ATI FirePro V5700 (FireGL),
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI FirePro V3750 (FireGL), ATI Mobility Radeon HD 4830,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility Radeon HD 4850, ATI FirePro M7740, ATI RV740,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon HD 4770, ATI Radeon HD 4700 Series, ATI Radeon HD 4770,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI FirePro M5750, ATI RV610, ATI Radeon HD 2400 XT,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon HD 2400 Pro, ATI Radeon HD 2400 PRO AGP, ATI FireGL V4000,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI RV610, ATI Radeon HD 2350, ATI Mobility Radeon HD 2400 XT,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility Radeon HD 2400, ATI RADEON E2400, ATI RV610,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI FireMV 2260, ATI RV670, ATI Radeon HD3870,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility Radeon HD 3850, ATI Radeon HD3850,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility Radeon HD 3850 X2, ATI RV670,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility Radeon HD 3870, ATI Mobility Radeon HD 3870 X2,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon HD3870 X2, ATI FireGL V7700, ATI Radeon HD3850,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon HD3690, AMD Firestream 9170, ATI Radeon HD 4550,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon RV710, ATI Radeon RV710, ATI Radeon RV710,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon HD 4350, ATI Mobility Radeon 4300 Series,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility Radeon 4500 Series, ATI Mobility Radeon 4500 Series,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI FirePro RG220, ATI Mobility Radeon 4330, ATI RV630,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility Radeon HD 2600, ATI Mobility Radeon HD 2600 XT,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon HD 2600 XT AGP, ATI Radeon HD 2600 Pro AGP,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon HD 2600 XT, ATI Radeon HD 2600 Pro, ATI Gemini RV630,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Gemini Mobility Radeon HD 2600 XT, ATI FireGL V5600,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI FireGL V3600, ATI Radeon HD 2600 LE,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility FireGL Graphics Processor, ATI Radeon HD 3470,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility Radeon HD 3430, ATI Mobility Radeon HD 3400 Series,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon HD 3450, ATI Radeon HD 3450, ATI Radeon HD 3430,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon HD 3450, ATI FirePro V3700, ATI FireMV 2450,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI FireMV 2260, ATI FireMV 2260, ATI Radeon HD 3600 Series,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon HD 3650 AGP, ATI Radeon HD 3600 PRO,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon HD 3600 XT, ATI Radeon HD 3600 PRO,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility Radeon HD 3650, ATI Mobility Radeon HD 3670,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility FireGL V5700, ATI Mobility FireGL V5725,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon HD 3200 Graphics, ATI Radeon 3100 Graphics,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon HD 3200 Graphics, ATI Radeon 3100 Graphics,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon HD 3300 Graphics, ATI Radeon HD 3200 Graphics,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon 3000 Graphics, SUMO, SUMO, SUMO2, SUMO2, SUMO2, SUMO2,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         SUMO, SUMO, SUMO2, SUMO, SUMO, SUMO, SUMO, SUMO, ATI Radeon HD 4200,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon 4100, ATI Mobility Radeon HD 4200,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility Radeon 4100, ATI Radeon HD 4290, ATI Radeon HD 4250,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         AMD Radeon HD 6310 Graphics, AMD Radeon HD 6310 Graphics,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         AMD Radeon HD 6250 Graphics, AMD Radeon HD 6250 Graphics,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         AMD Radeon HD 6300 Series Graphics,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         AMD Radeon HD 6200 Series Graphics, PALM, PALM, PALM, CYPRESS,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI FirePro (FireGL) Graphics Adapter,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI FirePro (FireGL) Graphics Adapter,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI FirePro (FireGL) Graphics Adapter, AMD Firestream 9370,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         AMD Firestream 9350, ATI Radeon HD 5800 Series,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon HD 5800 Series, ATI Radeon HD 5800 Series,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon HD 5800 Series, ATI Radeon HD 5900 Series,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon HD 5900 Series, ATI Mobility Radeon HD 5800 Series,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility Radeon HD 5800 Series,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI FirePro (FireGL) Graphics Adapter,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI FirePro (FireGL) Graphics Adapter,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility Radeon HD 5800 Series, ATI Radeon HD 5700 Series,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon HD 5700 Series, ATI Radeon HD 6700 Series,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon HD 5700 Series, ATI Radeon HD 6700 Series,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility Radeon HD 5000 Series,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility Radeon HD 5000 Series, ATI Mobility Radeon HD 5570,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI FirePro (FireGL) Graphics Adapter,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI FirePro (FireGL) Graphics Adapter, ATI Radeon HD 5670,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon HD 5570, ATI Radeon HD 5500 Series, REDWOOD,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility Radeon HD 5000 Series,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility Radeon HD 5000 Series, ATI Mobility Radeon Graphics,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Mobility Radeon Graphics, CEDAR,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI FirePro (FireGL) Graphics Adapter,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI FirePro (FireGL) Graphics Adapter, ATI FirePro 2270, CEDAR,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ATI Radeon HD 5450, CEDAR, CEDAR, CAYMAN, CAYMAN, CAYMAN, CAYMAN,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         CAYMAN, CAYMAN, CAYMAN, CAYMAN, CAYMAN, CAYMAN,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         AMD Radeon HD 6900 Series, AMD Radeon HD 6900 Series, CAYMAN, CAYMAN,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         CAYMAN, AMD Radeon HD 6900M Series, Mobility Radeon HD 6000 Series,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         BARTS, BARTS, Mobility Radeon HD 6000 Series,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         Mobility Radeon HD 6000 Series, BARTS, BARTS, BARTS, BARTS,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         AMD Radeon HD 6800 Series, AMD Radeon HD 6800 Series,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         AMD Radeon HD 6700 Series, TURKS, TURKS, TURKS, TURKS, TURKS, TURKS,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         TURKS, TURKS, TURKS, TURKS, TURKS, TURKS, TURKS, TURKS, TURKS, TURKS,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         TURKS, TURKS, TURKS, TURKS, TURKS, TURKS, TURKS, TURKS, TURKS, TURKS,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         CAICOS, CAICOS, CAICOS, CAICOS, CAICOS, CAICOS, CAICOS, CAICOS,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         CAICOS, CAICOS, CAICOS, CAICOS, CAICOS, CAICOS, CAICOS, ARUBA, ARUBA,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ARUBA, ARUBA, ARUBA, ARUBA, ARUBA, ARUBA, ARUBA, ARUBA, ARUBA, ARUBA,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ARUBA, ARUBA, ARUBA, ARUBA, ARUBA, ARUBA, ARUBA, ARUBA, ARUBA, ARUBA,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ARUBA, ARUBA, ARUBA, ARUBA, ARUBA, ARUBA, ARUBA, ARUBA, ARUBA, ARUBA,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ARUBA, ARUBA, ARUBA, ARUBA, ARUBA, TAHITI, TAHITI, TAHITI, TAHITI,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         TAHITI, TAHITI, TAHITI, TAHITI, TAHITI, TAHITI, TAHITI, TAHITI,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         TAHITI, PITCAIRN, PITCAIRN, PITCAIRN, PITCAIRN, PITCAIRN, PITCAIRN,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         PITCAIRN, PITCAIRN, PITCAIRN, PITCAIRN, PITCAIRN, PITCAIRN, PITCAIRN,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         VERDE, VERDE, VERDE, VERDE, VERDE, VERDE, VERDE, VERDE, VERDE, VERDE,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         VERDE, VERDE, VERDE, VERDE, VERDE, VERDE, VERDE, VERDE, VERDE, VERDE,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         VERDE, VERDE, VERDE, VERDE, OLAND, OLAND, OLAND, OLAND, OLAND, OLAND,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         OLAND, OLAND, OLAND, OLAND, OLAND, OLAND, OLAND, OLAND, OLAND, OLAND,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         OLAND, HAINAN, HAINAN, HAINAN, HAINAN, HAINAN, HAINAN, BONAIRE,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         BONAIRE, BONAIRE, BONAIRE, BONAIRE, BONAIRE, BONAIRE, BONAIRE,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         BONAIRE, BONAIRE, BONAIRE, KABINI, KABINI, KABINI, KABINI, KABINI,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         KABINI, KABINI, KABINI, KABINI, KABINI, KABINI, KABINI, KABINI,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         KABINI, KABINI, KABINI, MULLINS, MULLINS, MULLINS, MULLINS, MULLINS,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         MULLINS, MULLINS, MULLINS, MULLINS, MULLINS, MULLINS, MULLINS,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         MULLINS, MULLINS, MULLINS, MULLINS, KAVERI, KAVERI, KAVERI, KAVERI,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         KAVERI, KAVERI, KAVERI, KAVERI, KAVERI, KAVERI, KAVERI, KAVERI,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         KAVERI, KAVERI, KAVERI, KAVERI, KAVERI, KAVERI, KAVERI, KAVERI,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         KAVERI, KAVERI, HAWAII, HAWAII, HAWAII, HAWAII, HAWAII, HAWAII,
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         HAWAII, HAWAII, HAWAII, HAWAII, HAWAII, HAWAII
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) modesetting: Driver for Modesetting Kernel Drivers: kms
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) FBDEV: driver for framebuffer: fbdev
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) VESA: driver for VESA chipsets: vesa
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: xf86EnableIOPorts: failed to set IOPL for I/O (Operation not permitted)
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) [KMS] Kernel modesetting enabled.
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (WW) Falling back to old probe method for modesetting
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (WW) Falling back to old probe method for fbdev
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) Loading sub module "fbdevhw"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) LoadModule: "fbdevhw"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) Loading /usr/lib64/xorg/modules/libfbdevhw.so
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) Module fbdevhw: vendor="X.Org Foundation"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         compiled for 1.18.3, module version = 0.0.2
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ABI class: X.Org Video Driver, version 20.0
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (EE) open /dev/fb0: Permission denied
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (WW) Falling back to old probe method for vesa
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (WW) VGA arbiter: cannot open kernel arbiter, no multi-card support
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Creating default Display subsection in Screen section
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         "Default Screen Section" for depth/fbbpp 24/32
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (==) RADEON(0): Depth 24, (--) framebuffer bpp 32
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Pixel depth = 24 bits stored in 4 bytes (32 bpp pixmaps)
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (==) RADEON(0): Default visual is TrueColor
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (==) RADEON(0): RGB weight 888
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Using 8 bits per RGB (8 bit DAC)
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (--) RADEON(0): Chipset: "CAICOS" (ChipID = 0x6779)
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) Loading sub module "fb"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) LoadModule: "fb"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) Loading /usr/lib64/xorg/modules/libfb.so
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) Module fb: vendor="X.Org Foundation"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         compiled for 1.18.3, module version = 1.0.0
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ABI class: X.Org ANSI C Emulation, version 0.4
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) Loading sub module "dri2"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) LoadModule: "dri2"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) Module "dri2" already built-in
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) Loading sub module "exa"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) LoadModule: "exa"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) Loading /usr/lib64/xorg/modules/libexa.so
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) Module exa: vendor="X.Org Foundation"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         compiled for 1.18.3, module version = 2.6.0
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ABI class: X.Org Video Driver, version 20.0
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): KMS Color Tiling: enabled
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): KMS Color Tiling 2D: enabled
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): KMS Pageflipping: enabled
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): SwapBuffers wait for vsync: enabled
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Output HDMI-0 has no monitor section
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Output DVI-0 has no monitor section
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Output VGA-0 has no monitor section
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): EDID for output HDMI-0
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): EDID for output DVI-0
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): EDID for output VGA-0
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Manufacturer: HWP  Model: 26a2  Serial#: 16843009
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Year: 2008  Week: 43
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): EDID Version: 1.3
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Analog Display Input,  Input Voltage Level: 0.700/0.700 V
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Sync:  Separate
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Max Image Size [cm]: horiz.: 41  vert.: 26
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Gamma: 2.20
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): DPMS capabilities: StandBy Suspend Off; RGB/Color Display
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Default color space is primary color space
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): First detailed timing is preferred mode
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): redX: 0.640 redY: 0.329   greenX: 0.300 greenY: 0.600
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): blueX: 0.150 blueY: 0.060   whiteX: 0.313 whiteY: 0.329
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Supported established timings:
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): 720x400@70Hz
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): 640x480@60Hz
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): 640x480@75Hz
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): 800x600@60Hz
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): 800x600@75Hz
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): 832x624@75Hz
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): 1024x768@60Hz
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): 1024x768@75Hz
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): 1280x1024@75Hz
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): 1152x864@75Hz
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Manufacturer's mask: 0
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Supported standard timings:
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): #0: hsize: 1440  vsize 900  refresh: 60  vid: 149
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): #1: hsize: 1152  vsize 720  refresh: 60  vid: 113
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): #2: hsize: 1280  vsize 960  refresh: 60  vid: 16513
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): #3: hsize: 1280  vsize 1024  refresh: 60  vid: 32897
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Supported detailed timing:
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): clock: 106.5 MHz   Image Size:  408 x 255 mm
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): h_active: 1440  h_sync: 1520  h_sync_end 1672 h_blank_end 1904 h_border: 0
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): v_active: 900  v_sync: 903  v_sync_end 909 v_blanking: 934 v_border: 0
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Ranges: V min: 50 V max: 76 Hz, H min: 24 H max: 83 kHz, PixClock max 145 MHz
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Monitor name: HP w1907
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Serial No: 3CQ8431K9V
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): EDID (in hex):
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0):         00ffffffffffff0022f0a22601010101
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0):         2b12010368291a78eede95a3544c9926
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0):         0f5054a56b8095007100814081800101
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0):         0101010101019a29a0d0518422305098
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0):         360098ff1000001c000000fd00324c18
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0):         530e000a202020202020000000fc0048
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0):         502077313930370a20202020000000ff
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0):         00334351383433314b39560a20200015
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Printing probed modes for output VGA-0
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1440x900"x59.9  106.50  1440 1520 1672 1904  900 903 909 934 -hsync +vsync (55.9 kHz eP)
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1280x1024"x75.0  135.00  1280 1296 1440 1688  1024 1025 1028 1066 +hsync +vsync (80.0 kHz e)
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1280x1024"x60.0  108.00  1280 1328 1440 1688  1024 1025 1028 1066 +hsync +vsync (64.0 kHz e)
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1280x960"x60.0  108.00  1280 1376 1488 1800  960 961 964 1000 +hsync +vsync (60.0 kHz e)
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1152x864"x75.0  108.00  1152 1216 1344 1600  864 865 868 900 +hsync +vsync (67.5 kHz e)
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1152x720"x60.0   67.28  1152 1208 1328 1504  720 721 724 746 -hsync +vsync (44.7 kHz)
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1024x768"x75.1   78.80  1024 1040 1136 1312  768 769 772 800 +hsync +vsync (60.1 kHz e)
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1024x768"x60.0   65.00  1024 1048 1184 1344  768 771 777 806 -hsync -vsync (48.4 kHz e)
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "832x624"x74.6   57.28  832 864 928 1152  624 625 628 667 -hsync -vsync (49.7 kHz e)
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "800x600"x75.0   49.50  800 816 896 1056  600 601 604 625 +hsync +vsync (46.9 kHz e)
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "800x600"x60.3   40.00  800 840 968 1056  600 601 605 628 +hsync +vsync (37.9 kHz e)
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "640x480"x75.0   31.50  640 656 720 840  480 481 484 500 -hsync -vsync (37.5 kHz e)
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "640x480"x60.0   25.20  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "720x400"x70.1   28.32  720 738 846 900  400 412 414 449 -hsync +vsync (31.5 kHz e)
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Output HDMI-0 disconnected
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Output DVI-0 disconnected
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Output VGA-0 connected
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Using exact sizes for initial modes
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Output VGA-0 using initial mode 1440x900 +0+0
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Using default gamma of (1.0, 1.0, 1.0) unless otherwise stated.
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): mem size init: gart size :3fdde000 vram size: s:80000000 visible:7f12d000
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): EXA: Driver will allow EXA pixmaps in VRAM
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (==) RADEON(0): DPI set to (96, 96)
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) Loading sub module "ramdac"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) LoadModule: "ramdac"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) Module "ramdac" already built-in
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) UnloadModule: "modesetting"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) Unloading modesetting
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) UnloadModule: "fbdev"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) Unloading fbdev
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) UnloadSubModule: "fbdevhw"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) Unloading fbdevhw
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) UnloadModule: "vesa"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) Unloading vesa
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (--) Depth 24 pixmap format is 32 bpp
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): [DRI2] Setup complete
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): [DRI2]   DRI driver: r600
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): [DRI2]   VDPAU driver: r600
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Front buffer size: 5400K
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): VRAM usage limit set to 1868857K
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (==) RADEON(0): DRI3 disabled
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (==) RADEON(0): Backing store enabled
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Direct rendering enabled
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) EXA(0): Driver allocated offscreen pixmaps
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) EXA(0): Driver registered support for the following operations:
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II)         Solid
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II)         Copy
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II)         Composite (RENDER acceleration)
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II)         UploadToScreen
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II)         DownloadFromScreen
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Acceleration enabled
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (==) RADEON(0): DPMS enabled
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (==) RADEON(0): Silken mouse enabled
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Set up textured video
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): [XvMC] Associated with Radeon Textured Video.
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): [XvMC] Extension initialized.
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): RandR 1.2 enabled, ignore the following RandR disabled message.
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (--) RandR disabled
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) SELinux: Disabled by boolean
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) AIGLX: enabled GLX_MESA_copy_sub_buffer
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) AIGLX: enabled GLX_ARB_create_context
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) AIGLX: enabled GLX_ARB_create_context_profile
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) AIGLX: enabled GLX_EXT_create_context_es{,2}_profile
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) AIGLX: enabled GLX_INTEL_swap_event
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) AIGLX: enabled GLX_SGI_swap_control and GLX_MESA_swap_control
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) AIGLX: enabled GLX_EXT_framebuffer_sRGB
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) AIGLX: enabled GLX_ARB_fbconfig_float
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) AIGLX: enabled GLX_EXT_fbconfig_packed_float
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) AIGLX: GLX_EXT_texture_from_pixmap backed by buffer objects
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) AIGLX: enabled GLX_ARB_create_context_robustness
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) AIGLX: Loaded and initialized r600
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) GLX: Initialized DRI2 GL provider for screen 0
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Setting screen physical size to 381 x 238
+abr 21 20:40:24 NR021AA kernel: radeon 0000:01:00.0: evergreen_surface_check_2d:281 texture pitch 1472 invalid must be aligned with 128
+abr 21 20:40:24 NR021AA kernel: radeon 0000:01:00.0: evergreen_cs_track_validate_texture:830 texture invalid 0x167c2dc1 0x40000383 0x060a0000 0x00000000 0x80000000 0x800204da
+abr 21 20:40:24 NR021AA kernel: [drm:radeon_cs_ioctl [radeon]] *ERROR* Invalid command stream !
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) config/udev: Adding input device Power Button (/dev/input/event1)
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Power Button: Applying InputClass "evdev keyboard catchall"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Power Button: Applying InputClass "libinput keyboard catchall"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Power Button: Applying InputClass "system-keyboard"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) LoadModule: "libinput"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) Loading /usr/lib64/xorg/modules/input/libinput_drv.so
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) Module libinput: vendor="X.Org Foundation"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         compiled for 1.18.0, module version = 0.16.0
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         Module class: X.Org XInput Driver
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]:         ABI class: X.Org XInput driver, version 22.1
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got fd for /dev/input/event1 13:65 fd 14 paused 0
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) Using input driver 'libinput' for 'Power Button'
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Power Button: always reports core events
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "Device" "/dev/input/event1"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "_source" "server/udev"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Power Button', /dev/input/event1 is tagged by udev as: Keyboard
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Power Button', /dev/input/event1 is a keyboard
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "config_info" "udev:/sys/devices/LNXSYSTM:00/LNXPWRBN:00/input/input1/event1"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) XINPUT: Adding extended input device "Power Button" (type: KEYBOARD, id 6)
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "xkb_layout" "es"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Power Button', /dev/input/event1 is tagged by udev as: Keyboard
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Power Button', /dev/input/event1 is a keyboard
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) config/udev: Adding input device Power Button (/dev/input/event0)
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Power Button: Applying InputClass "evdev keyboard catchall"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Power Button: Applying InputClass "libinput keyboard catchall"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Power Button: Applying InputClass "system-keyboard"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got fd for /dev/input/event0 13:64 fd 17 paused 0
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) Using input driver 'libinput' for 'Power Button'
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Power Button: always reports core events
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "Device" "/dev/input/event0"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "_source" "server/udev"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Power Button', /dev/input/event0 is tagged by udev as: Keyboard
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Power Button', /dev/input/event0 is a keyboard
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "config_info" "udev:/sys/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0C:00/input/input0/event0"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) XINPUT: Adding extended input device "Power Button" (type: KEYBOARD, id 7)
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "xkb_layout" "es"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Power Button', /dev/input/event0 is tagged by udev as: Keyboard
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Power Button', /dev/input/event0 is a keyboard
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) config/udev: Adding input device Logitech USB Optical Mouse (/dev/input/event2)
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Logitech USB Optical Mouse: Applying InputClass "evdev pointer catchall"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Logitech USB Optical Mouse: Applying InputClass "libinput pointer catchall"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got fd for /dev/input/event2 13:66 fd 18 paused 0
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) Using input driver 'libinput' for 'Logitech USB Optical Mouse'
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Logitech USB Optical Mouse: always reports core events
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "Device" "/dev/input/event2"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "_source" "server/udev"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Logitech USB Optical Mouse', /dev/input/event2 is tagged by udev as: Mouse
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) Device 'Logitech USB Optical Mouse' set to 1000 DPI
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Logitech USB Optical Mouse', /dev/input/event2 is a pointer caps
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1:1.0/0003:046D:C05A.0001/input/input5/event2"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) XINPUT: Adding extended input device "Logitech USB Optical Mouse" (type: MOUSE, id 8)
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "AccelerationScheme" "none"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Logitech USB Optical Mouse: (accel) selected scheme none/0
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Logitech USB Optical Mouse: (accel) acceleration factor: 2.000
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Logitech USB Optical Mouse: (accel) acceleration threshold: 4
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Logitech USB Optical Mouse', /dev/input/event2 is tagged by udev as: Mouse
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) Device 'Logitech USB Optical Mouse' set to 1000 DPI
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Logitech USB Optical Mouse', /dev/input/event2 is a pointer caps
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) config/udev: Adding input device Logitech USB Optical Mouse (/dev/input/mouse0)
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) No input driver specified, ignoring this device.
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) This device may have been added with another device file.
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) config/udev: Adding input device Logitech USB Keyboard (/dev/input/event3)
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Logitech USB Keyboard: Applying InputClass "evdev keyboard catchall"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Logitech USB Keyboard: Applying InputClass "libinput keyboard catchall"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Logitech USB Keyboard: Applying InputClass "system-keyboard"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got fd for /dev/input/event3 13:67 fd 19 paused 0
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) Using input driver 'libinput' for 'Logitech USB Keyboard'
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Logitech USB Keyboard: always reports core events
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "Device" "/dev/input/event3"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "_source" "server/udev"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Logitech USB Keyboard', /dev/input/event3 is tagged by udev as: Keyboard
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Logitech USB Keyboard', /dev/input/event3 is a keyboard
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:1d.1/usb3/3-1/3-1:1.0/0003:046D:C31C.0002/input/input6/event3"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) XINPUT: Adding extended input device "Logitech USB Keyboard" (type: KEYBOARD, id 9)
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "xkb_layout" "es"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Logitech USB Keyboard', /dev/input/event3 is tagged by udev as: Keyboard
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Logitech USB Keyboard', /dev/input/event3 is a keyboard
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) config/udev: Adding input device Logitech USB Keyboard (/dev/input/event4)
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Logitech USB Keyboard: Applying InputClass "evdev keyboard catchall"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Logitech USB Keyboard: Applying InputClass "libinput keyboard catchall"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Logitech USB Keyboard: Applying InputClass "system-keyboard"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got fd for /dev/input/event4 13:68 fd 20 paused 0
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) Using input driver 'libinput' for 'Logitech USB Keyboard'
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Logitech USB Keyboard: always reports core events
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "Device" "/dev/input/event4"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "_source" "server/udev"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Logitech USB Keyboard', /dev/input/event4 is tagged by udev as: Keyboard
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Logitech USB Keyboard', /dev/input/event4 is a keyboard
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:1d.1/usb3/3-1/3-1:1.1/0003:046D:C31C.0003/input/input7/event4"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) XINPUT: Adding extended input device "Logitech USB Keyboard" (type: KEYBOARD, id 10)
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "xkb_layout" "es"
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Logitech USB Keyboard', /dev/input/event4 is tagged by udev as: Keyboard
+abr 21 20:40:24 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Logitech USB Keyboard', /dev/input/event4 is a keyboard
+abr 21 20:40:24 NR021AA systemd[1165]: Started D-Bus User Message Bus.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is done.
+abr 21 20:40:24 NR021AA dbus-daemon[1216]: Activating service name='com.redhat.imsettings'
+abr 21 20:40:25 NR021AA dbus-daemon[1216]: Activating via systemd: service name='org.gtk.vfs.Daemon' unit='gvfs-daemon.service'
+abr 21 20:40:25 NR021AA systemd[1165]: Starting Virtual filesystem service...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit UNIT has begun starting up.
+abr 21 20:40:25 NR021AA systemd[1165]: Started Virtual filesystem service.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is done.
+abr 21 20:40:25 NR021AA dbus-daemon[1216]: Successfully activated service 'org.gtk.vfs.Daemon'
+abr 21 20:40:25 NR021AA dbus-daemon[1216]: Successfully activated service 'com.redhat.imsettings'
+abr 21 20:40:25 NR021AA com.redhat.imsettings[1216]: [ 1492800025.074583]: IMSettings-Daemon[1230]: INFO: Starting imsettings-daemon...
+abr 21 20:40:25 NR021AA com.redhat.imsettings[1216]: [ 1492800025.074639]: IMSettings-Daemon[1230]: INFO:   [HOME=/home/helio/.config/imsettings]
+abr 21 20:40:25 NR021AA com.redhat.imsettings[1216]: [ 1492800025.074659]: IMSettings-Daemon[1230]: INFO:   [XINPUTRCDIR=/etc/X11/xinit/]
+abr 21 20:40:25 NR021AA com.redhat.imsettings[1216]: [ 1492800025.074677]: IMSettings-Daemon[1230]: INFO:   [XINPUTDIR=/etc/X11/xinit/xinput.d/]
+abr 21 20:40:25 NR021AA com.redhat.imsettings[1216]: [ 1492800025.074695]: IMSettings-Daemon[1230]: INFO:   [MODULEDIR=/usr/lib64/imsettings]
+abr 21 20:40:25 NR021AA com.redhat.imsettings[1216]: [ 1492800025.074713]: IMSettings-Daemon[1230]: INFO:   [MODULES=gsettings]
+abr 21 20:40:25 NR021AA dbus-daemon[1216]: Activating via systemd: service name='org.a11y.Bus' unit='at-spi-dbus-bus.service'
+abr 21 20:40:25 NR021AA systemd[1165]: Starting Accessibility services bus...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit UNIT has begun starting up.
+abr 21 20:40:25 NR021AA systemd[1165]: Started Accessibility services bus.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is done.
+abr 21 20:40:25 NR021AA at-spi-bus-launcher[1356]: ** (process:1356): WARNING **: Failed to register client: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.gnome.SessionManager was not provided by any .service files
+abr 21 20:40:25 NR021AA dbus-daemon[1216]: Successfully activated service 'org.a11y.Bus'
+abr 21 20:40:25 NR021AA at-spi-bus-launcher[1356]: Activating service name='org.a11y.atspi.Registry'
+abr 21 20:40:25 NR021AA at-spi-bus-launcher[1356]: Successfully activated service 'org.a11y.atspi.Registry'
+abr 21 20:40:25 NR021AA org.a11y.atspi.Registry[1361]: SpiRegistry daemon is running with well-known name - org.a11y.atspi.Registry
+abr 21 20:40:26 NR021AA gnome-keyring-ssh.desktop[1378]: SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+abr 21 20:40:26 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): EDID vendor "HWP", prod id 9890
+abr 21 20:40:26 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Using EDID range info for horizontal sync
+abr 21 20:40:26 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Using EDID range info for vertical refresh
+abr 21 20:40:26 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Printing DDC gathered Modelines:
+abr 21 20:40:26 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1440x900"x0.0  106.50  1440 1520 1672 1904  900 903 909 934 -hsync +vsync (55.9 kHz eP)
+abr 21 20:40:26 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "800x600"x0.0   40.00  800 840 968 1056  600 601 605 628 +hsync +vsync (37.9 kHz e)
+abr 21 20:40:26 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "640x480"x0.0   31.50  640 656 720 840  480 481 484 500 -hsync -vsync (37.5 kHz e)
+abr 21 20:40:26 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "640x480"x0.0   25.18  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+abr 21 20:40:26 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "720x400"x0.0   28.32  720 738 846 900  400 412 414 449 -hsync +vsync (31.5 kHz e)
+abr 21 20:40:26 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1280x1024"x0.0  135.00  1280 1296 1440 1688  1024 1025 1028 1066 +hsync +vsync (80.0 kHz e)
+abr 21 20:40:26 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1024x768"x0.0   78.75  1024 1040 1136 1312  768 769 772 800 +hsync +vsync (60.0 kHz e)
+abr 21 20:40:26 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1024x768"x0.0   65.00  1024 1048 1184 1344  768 771 777 806 -hsync -vsync (48.4 kHz e)
+abr 21 20:40:26 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "832x624"x0.0   57.28  832 864 928 1152  624 625 628 667 -hsync -vsync (49.7 kHz e)
+abr 21 20:40:26 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "800x600"x0.0   49.50  800 816 896 1056  600 601 604 625 +hsync +vsync (46.9 kHz e)
+abr 21 20:40:26 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1152x864"x0.0  108.00  1152 1216 1344 1600  864 865 868 900 +hsync +vsync (67.5 kHz e)
+abr 21 20:40:26 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1152x720"x60.0   67.32  1152 1208 1328 1504  720 721 724 746 -hsync +vsync (44.8 kHz e)
+abr 21 20:40:26 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1280x960"x0.0  108.00  1280 1376 1488 1800  960 961 964 1000 +hsync +vsync (60.0 kHz e)
+abr 21 20:40:26 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1280x1024"x0.0  108.00  1280 1328 1440 1688  1024 1025 1028 1066 +hsync +vsync (64.0 kHz e)
+abr 21 20:40:26 NR021AA rtkit-daemon[759]: Successfully made thread 1392 of process 1392 (/usr/bin/pulseaudio) owned by '1000' high priority at nice level -11.
+abr 21 20:40:26 NR021AA rtkit-daemon[759]: Supervising 2 threads of 2 processes of 2 users.
+abr 21 20:40:27 NR021AA dbus[760]: [system] Activating via systemd: service name='org.bluez' unit='dbus-org.bluez.service'
+abr 21 20:40:27 NR021AA dbus-daemon[1216]: Activating service name='org.gnome.Shell.CalendarServer'
+abr 21 20:40:28 NR021AA dbus[760]: [system] Activating via systemd: service name='org.freedesktop.GeoClue2' unit='geoclue.service'
+abr 21 20:40:28 NR021AA systemd[1]: Starting Location Lookup Service...
+-- Subject: Unit geoclue.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit geoclue.service has begun starting up.
+abr 21 20:40:28 NR021AA dbus-daemon[1216]: Activating service name='ca.desrt.dconf'
+abr 21 20:40:28 NR021AA dbus[760]: [system] Successfully activated service 'org.freedesktop.GeoClue2'
+abr 21 20:40:28 NR021AA systemd[1]: Started Location Lookup Service.
+-- Subject: Unit geoclue.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit geoclue.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 21 20:40:28 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=geoclue comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 21 20:40:28 NR021AA polkitd[784]: Registered Authentication Agent for unix-session:1 (system bus name :1.38 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale es_ES.UTF-8)
+abr 21 20:40:28 NR021AA dbus-daemon[1216]: Activating via systemd: service name='org.gtk.vfs.UDisks2VolumeMonitor' unit='gvfs-udisks2-volume-monitor.service'
+abr 21 20:40:28 NR021AA dbus-daemon[1216]: Successfully activated service 'ca.desrt.dconf'
+abr 21 20:40:28 NR021AA systemd[1165]: Starting Virtual filesystem service - disk device monitor...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit UNIT has begun starting up.
+abr 21 20:40:29 NR021AA dbus-daemon[1216]: Successfully activated service 'org.gtk.vfs.UDisks2VolumeMonitor'
+abr 21 20:40:29 NR021AA dbus-daemon[1216]: Activating via systemd: service name='org.gtk.vfs.GoaVolumeMonitor' unit='gvfs-goa-volume-monitor.service'
+abr 21 20:40:29 NR021AA dbus-daemon[1216]: Activating service name='org.gnome.OnlineAccounts'
+abr 21 20:40:29 NR021AA dbus-daemon[1216]: Activating via systemd: service name='org.gnome.evolution.dataserver.Sources5' unit='evolution-source-registry.service'
+abr 21 20:40:28 NR021AA systemd[1165]: Started Virtual filesystem service - disk device monitor.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is done.
+abr 21 20:40:28 NR021AA systemd[1165]: Starting Virtual filesystem service - GNOME Online Accounts monitor...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit UNIT has begun starting up.
+abr 21 20:40:29 NR021AA org.gnome.OnlineAccounts[1216]: goa-daemon-Message: goa-daemon version 3.20.1 starting
+abr 21 20:40:30 NR021AA dbus-daemon[1216]: Activating service name='org.gnome.Identity'
+abr 21 20:40:30 NR021AA dbus-daemon[1216]: Successfully activated service 'org.gnome.OnlineAccounts'
+abr 21 20:40:30 NR021AA dbus-daemon[1216]: Successfully activated service 'org.gtk.vfs.GoaVolumeMonitor'
+abr 21 20:40:30 NR021AA dbus-daemon[1216]: Activating via systemd: service name='org.gtk.vfs.MTPVolumeMonitor' unit='gvfs-mtp-volume-monitor.service'
+abr 21 20:40:30 NR021AA systemd[1165]: Started Virtual filesystem service - GNOME Online Accounts monitor.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is done.
+abr 21 20:40:30 NR021AA dbus-daemon[1216]: Successfully activated service 'org.gnome.Identity'
+abr 21 20:40:30 NR021AA org.gnome.Identity[1216]: (process:1444): libgoaidentity-WARNING **: GoaKerberosIdentityManager: Using polling for change notification for credential cache type 'KEYRING'
+abr 21 20:40:30 NR021AA systemd[1165]: Starting Virtual filesystem service - Media Transfer Protocol monitor...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit UNIT has begun starting up.
+abr 21 20:40:30 NR021AA systemd[1165]: Starting Evolution source registry...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit UNIT has begun starting up.
+abr 21 20:40:30 NR021AA dbus-daemon[1216]: Successfully activated service 'org.gtk.vfs.MTPVolumeMonitor'
+abr 21 20:40:30 NR021AA systemd[1165]: Started Virtual filesystem service - Media Transfer Protocol monitor.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is done.
+abr 21 20:40:30 NR021AA dbus-daemon[1216]: Activating via systemd: service name='org.gtk.vfs.AfcVolumeMonitor' unit='gvfs-afc-volume-monitor.service'
+abr 21 20:40:30 NR021AA systemd[1165]: Starting Virtual filesystem service - Apple File Conduit monitor...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit UNIT has begun starting up.
+abr 21 20:40:30 NR021AA gvfs-afc-volume-monitor[1454]: Volume monitor alive
+abr 21 20:40:30 NR021AA dbus-daemon[1216]: Successfully activated service 'org.gtk.vfs.AfcVolumeMonitor'
+abr 21 20:40:30 NR021AA systemd[1165]: Started Virtual filesystem service - Apple File Conduit monitor.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is done.
+abr 21 20:40:30 NR021AA dbus-daemon[1216]: Activating via systemd: service name='org.gtk.vfs.GPhoto2VolumeMonitor' unit='gvfs-gphoto2-volume-monitor.service'
+abr 21 20:40:30 NR021AA systemd[1165]: Starting Virtual filesystem service - digital camera monitor...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit UNIT has begun starting up.
+abr 21 20:40:30 NR021AA dbus-daemon[1216]: Successfully activated service 'org.gtk.vfs.GPhoto2VolumeMonitor'
+abr 21 20:40:30 NR021AA systemd[1165]: Started Virtual filesystem service - digital camera monitor.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is done.
+abr 21 20:40:31 NR021AA dbus-daemon[1216]: Successfully activated service 'org.gnome.evolution.dataserver.Sources5'
+abr 21 20:40:31 NR021AA systemd[1165]: Started Evolution source registry.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is done.
+abr 21 20:40:31 NR021AA dbus-daemon[1216]: Successfully activated service 'org.gnome.Shell.CalendarServer'
+abr 21 20:40:31 NR021AA org.gnome.OnlineAccounts[1216]: (goa-daemon:1434): GoaBackend-WARNING **: g_socket_client_connect_to_host() failed: Could not connect to proxy server 89.46.101.22: Network is unreachable (g-io-error-quark, 38)
+abr 21 20:40:31 NR021AA org.gnome.OnlineAccounts[1216]: goa-daemon-Message: /org/gnome/OnlineAccounts/Accounts/account_1488822850_1: Setting AttentionNeeded to TRUE because EnsureCredentials() failed with: Invalid imap-password with username ?heliogabalo@territoriolinux.net? (goa-error-quark, 0): Could not connect to proxy server 89.46.101.22: Network is unreachable (goa-error-quark, 4)
+abr 21 20:40:31 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): EDID vendor "HWP", prod id 9890
+abr 21 20:40:31 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Using hsync ranges from config file
+abr 21 20:40:31 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Using vrefresh ranges from config file
+abr 21 20:40:31 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Printing DDC gathered Modelines:
+abr 21 20:40:31 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1440x900"x0.0  106.50  1440 1520 1672 1904  900 903 909 934 -hsync +vsync (55.9 kHz eP)
+abr 21 20:40:31 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "800x600"x0.0   40.00  800 840 968 1056  600 601 605 628 +hsync +vsync (37.9 kHz e)
+abr 21 20:40:31 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "640x480"x0.0   31.50  640 656 720 840  480 481 484 500 -hsync -vsync (37.5 kHz e)
+abr 21 20:40:31 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "640x480"x0.0   25.18  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+abr 21 20:40:31 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "720x400"x0.0   28.32  720 738 846 900  400 412 414 449 -hsync +vsync (31.5 kHz e)
+abr 21 20:40:31 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1280x1024"x0.0  135.00  1280 1296 1440 1688  1024 1025 1028 1066 +hsync +vsync (80.0 kHz e)
+abr 21 20:40:31 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1024x768"x0.0   78.75  1024 1040 1136 1312  768 769 772 800 +hsync +vsync (60.0 kHz e)
+abr 21 20:40:31 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1024x768"x0.0   65.00  1024 1048 1184 1344  768 771 777 806 -hsync -vsync (48.4 kHz e)
+abr 21 20:40:31 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "832x624"x0.0   57.28  832 864 928 1152  624 625 628 667 -hsync -vsync (49.7 kHz e)
+abr 21 20:40:31 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "800x600"x0.0   49.50  800 816 896 1056  600 601 604 625 +hsync +vsync (46.9 kHz e)
+abr 21 20:40:31 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1152x864"x0.0  108.00  1152 1216 1344 1600  864 865 868 900 +hsync +vsync (67.5 kHz e)
+abr 21 20:40:31 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1152x720"x60.0   67.32  1152 1208 1328 1504  720 721 724 746 -hsync +vsync (44.8 kHz e)
+abr 21 20:40:31 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1280x960"x0.0  108.00  1280 1376 1488 1800  960 961 964 1000 +hsync +vsync (60.0 kHz e)
+abr 21 20:40:31 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1280x1024"x0.0  108.00  1280 1328 1440 1688  1024 1025 1028 1066 +hsync +vsync (64.0 kHz e)
+abr 21 20:40:31 NR021AA spice-vdagent[1480]: Cannot access vdagent virtio channel /dev/virtio-ports/com.redhat.spice.0
+abr 21 20:40:31 NR021AA gnome-session[1204]: gnome-session-binary[1204]: WARNING: App 'spice-vdagent.desktop' exited with code 1
+abr 21 20:40:31 NR021AA gnome-session-binary[1204]: WARNING: App 'spice-vdagent.desktop' exited with code 1
+abr 21 20:40:32 NR021AA gnome-settings-daemon.desktop[1481]: ** (gnome-settings-daemon:1481): WARNING **: Schemas 'org.gnome.desktop.a11y' has not been setup
+abr 21 20:40:32 NR021AA org.gnome.Shell.desktop[1383]: (gnome-shell:1383): Gtk-WARNING **: Theme directory base/ of theme oxygen has no size field
+abr 21 20:40:32 NR021AA dbus-daemon[1216]: Activating via systemd: service name='org.gnome.evolution.dataserver.Calendar7' unit='evolution-calendar-factory.service'
+abr 21 20:40:32 NR021AA systemd[1165]: Starting Evolution calendar service...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit UNIT has begun starting up.
+abr 21 20:40:32 NR021AA org.gnome.Shell.desktop[1383]: (gnome-shell:1383): Gjs-WARNING **: JS ERROR: could not get remote objects for service org.gnome.SettingsDaemon.Smartcard path /org/gnome/SettingsDaemon/Smartcard: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.gnome.SettingsDaemon.Smartcard was not provided by any .service files
+abr 21 20:40:32 NR021AA org.gnome.Shell.desktop[1383]: _proxyInvoker/asyncCallback@resource:///org/gnome/gjs/modules/overrides/Gio.js:83
+abr 21 20:40:33 NR021AA gnome-shell[1383]: GNOME Shell started at Fri Apr 21 2017 20:40:31 GMT+0200 (CEST)
+abr 21 20:40:33 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=geoclue comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 21 20:40:33 NR021AA dbus-daemon[1216]: Successfully activated service 'org.gnome.evolution.dataserver.Calendar7'
+abr 21 20:40:33 NR021AA systemd[1165]: Started Evolution calendar service.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is done.
+abr 21 20:40:33 NR021AA dbus-daemon[1216]: Activating via systemd: service name='org.gnome.evolution.dataserver.AddressBook9' unit='evolution-addressbook-factory.service'
+abr 21 20:40:33 NR021AA systemd[1165]: Starting Evolution address book service...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit UNIT has begun starting up.
+abr 21 20:40:33 NR021AA gnome-settings-daemon.desktop[1079]: (gnome-settings-daemon:1079): color-plugin-WARNING **: failed to set screen _ICC_PROFILE: Falló al abrir el archivo «/home/helio/.local/share/icc/edid-e27ab337b434b86a8654cab964ee6fd5.icc»: Permission denied
+abr 21 20:40:33 NR021AA gnome-settings-daemon.desktop[1079]: (gnome-settings-daemon:1079): color-plugin-WARNING **: failed to set screen _ICC_PROFILE: Falló al abrir el archivo «/home/helio/.local/share/icc/edid-e27ab337b434b86a8654cab964ee6fd5.icc»: Permission denied
+abr 21 20:40:33 NR021AA dbus-daemon[1216]: Activating service name='org.freedesktop.Tracker1'
+abr 21 20:40:34 NR021AA libcanberra-login-sound.desktop[1561]: Failed to play sound: File or data not found
+abr 21 20:40:34 NR021AA com.redhat.imsettings[1216]: [ 1492800034.280639]: IMSettings-Daemon[1230]: INFO: Attempting to switch IM to IBus [lang=es_ES.UTF-8, desktop=GNOME, update=false]
+abr 21 20:40:34 NR021AA dbus-daemon[1216]: Successfully activated service 'org.gnome.evolution.dataserver.AddressBook9'
+abr 21 20:40:34 NR021AA systemd[1165]: Started Evolution address book service.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is done.
+abr 21 20:40:34 NR021AA vmware-user.desktop[1799]: vmware-user: could not open /proc/fs/vmblock/dev
+abr 21 20:40:34 NR021AA dbus[760]: [system] Activating service name='org.freedesktop.fwupd' (using servicehelper)
+abr 21 20:40:34 NR021AA gnome-session-binary[1204]: Entering running state
+abr 21 20:40:34 NR021AA dbus[760]: [system] Activating service name='org.freedesktop.problems' (using servicehelper)
+abr 21 20:40:34 NR021AA com.redhat.imsettings[1216]: [ 1492800034.875069]: IMSettings-Daemon[1230]: WARNING **: Current desktop isn't targeted by IMSettings.
+abr 21 20:40:34 NR021AA imsettings-start.desktop[1550]: GDBus.Error:org.gtk.GDBus.UnmappedGError.Quark._imsettings_2derror_2dquark.Code5: Current desktop isn't targeted by IMSettings.
+abr 21 20:40:34 NR021AA com.redhat.imsettings[1216]: Exiting...
+abr 21 20:40:34 NR021AA com.redhat.imsettings[1216]: [ 1492800034.879800]: IMSettings-Daemon[1230]: INFO: Unloading imesttings module: gsettings
+abr 21 20:40:34 NR021AA com.redhat.imsettings[1216]: [ 1492800034.880086]: IMSettings-Daemon[1230]: INFO: imsettings-daemon is shut down.
+abr 21 20:40:35 NR021AA dbus[760]: [system] Successfully activated service 'org.freedesktop.problems'
+abr 21 20:40:35 NR021AA org.gnome.Shell.desktop[1383]: (gnome-shell:1383): mutter-WARNING **: STACK_OP_ADD: window 0x1400001 already in stack
+abr 21 20:40:35 NR021AA org.gnome.Shell.desktop[1383]: (gnome-shell:1383): mutter-WARNING **: STACK_OP_ADD: window 0x1400001 already in stack
+abr 21 20:40:35 NR021AA dbus-daemon[1216]: Successfully activated service 'org.freedesktop.Tracker1'
+abr 21 20:40:35 NR021AA tracker-store.desktop[1956]: (uint32 1,)
+abr 21 20:40:35 NR021AA org.freedesktop.fwupd[760]: (fwupd:1958): Fu-WARNING **: Failed to coldplug: UEFI firmware updating not supported
+abr 21 20:40:35 NR021AA dbus[760]: [system] Successfully activated service 'org.freedesktop.fwupd'
+abr 21 20:40:39 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=fprintd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 21 20:40:47 NR021AA dbus-daemon[1216]: Activating via systemd: service name='org.gnome.Terminal' unit='gnome-terminal-server.service'
+abr 21 20:40:47 NR021AA systemd[1165]: Starting GNOME Terminal Server...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit UNIT has begun starting up.
+abr 21 20:40:47 NR021AA dbus-daemon[1216]: Successfully activated service 'org.gnome.Terminal'
+abr 21 20:40:47 NR021AA systemd[1165]: Started GNOME Terminal Server.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is done.
+abr 21 20:40:52 NR021AA dbus[760]: [system] Failed to activate service 'org.bluez': timed out
+abr 21 20:40:52 NR021AA pulseaudio[1392]: [pulseaudio] bluez5-util.c: GetManagedObjects() failed: org.freedesktop.DBus.Error.NoReply: Did not receive a reply. Possible causes include: the remote application did not send a reply, the message bus security policy blocked the reply, the reply timeout expired, or the network connection was broken.
+abr 21 20:41:03 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-hostnamed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 21 20:41:04 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-localed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 21 20:41:10 NR021AA realmd[1096]: quitting realmd service after timeout
+abr 21 20:41:10 NR021AA realmd[1096]: stopping service
+abr 21 20:41:15 NR021AA systemd[1]: sys-devices-virtual-misc-vmbus\x21hv_vss.device: Job sys-devices-virtual-misc-vmbus\x21hv_vss.device/start timed out.
+abr 21 20:41:15 NR021AA systemd[1]: Timed out waiting for device sys-devices-virtual-misc-vmbus\x21hv_vss.device.
+-- Subject: Unit sys-devices-virtual-misc-vmbus\x21hv_vss.device has failed
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit sys-devices-virtual-misc-vmbus\x21hv_vss.device has failed.
+-- 
+-- The result is timeout.
+abr 21 20:41:15 NR021AA systemd[1]: Dependency failed for Hyper-V VSS daemon.
+-- Subject: Unit hypervvssd.service has failed
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit hypervvssd.service has failed.
+-- 
+-- The result is dependency.
+abr 21 20:41:15 NR021AA systemd[1]: hypervvssd.service: Job hypervvssd.service/start failed with result 'dependency'.
+abr 21 20:41:15 NR021AA systemd[1]: sys-devices-virtual-misc-vmbus\x21hv_vss.device: Job sys-devices-virtual-misc-vmbus\x21hv_vss.device/start failed with result 'timeout'.
+abr 21 20:41:15 NR021AA systemd[1]: sys-devices-virtual-misc-vmbus\x21hv_fcopy.device: Job sys-devices-virtual-misc-vmbus\x21hv_fcopy.device/start timed out.
+abr 21 20:41:15 NR021AA systemd[1]: Timed out waiting for device sys-devices-virtual-misc-vmbus\x21hv_fcopy.device.
+-- Subject: Unit sys-devices-virtual-misc-vmbus\x21hv_fcopy.device has failed
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit sys-devices-virtual-misc-vmbus\x21hv_fcopy.device has failed.
+-- 
+-- The result is timeout.
+abr 21 20:41:15 NR021AA systemd[1]: Dependency failed for Hyper-V FCOPY daemon.
+-- Subject: Unit hypervfcopyd.service has failed
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit hypervfcopyd.service has failed.
+-- 
+-- The result is dependency.
+abr 21 20:41:15 NR021AA systemd[1]: hypervfcopyd.service: Job hypervfcopyd.service/start failed with result 'dependency'.
+abr 21 20:41:15 NR021AA systemd[1]: sys-devices-virtual-misc-vmbus\x21hv_fcopy.device: Job sys-devices-virtual-misc-vmbus\x21hv_fcopy.device/start failed with result 'timeout'.
+abr 21 20:41:15 NR021AA systemd[1]: sys-devices-virtual-misc-vmbus\x21hv_kvp.device: Job sys-devices-virtual-misc-vmbus\x21hv_kvp.device/start timed out.
+abr 21 20:41:15 NR021AA systemd[1]: Timed out waiting for device sys-devices-virtual-misc-vmbus\x21hv_kvp.device.
+-- Subject: Unit sys-devices-virtual-misc-vmbus\x21hv_kvp.device has failed
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit sys-devices-virtual-misc-vmbus\x21hv_kvp.device has failed.
+-- 
+-- The result is timeout.
+abr 21 20:41:15 NR021AA systemd[1]: Dependency failed for Hyper-V KVP daemon.
+-- Subject: Unit hypervkvpd.service has failed
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit hypervkvpd.service has failed.
+-- 
+-- The result is dependency.
+abr 21 20:41:15 NR021AA systemd[1]: hypervkvpd.service: Job hypervkvpd.service/start failed with result 'dependency'.
+abr 21 20:41:15 NR021AA systemd[1]: sys-devices-virtual-misc-vmbus\x21hv_kvp.device: Job sys-devices-virtual-misc-vmbus\x21hv_kvp.device/start failed with result 'timeout'.
+abr 21 20:41:15 NR021AA systemd[1]: Reached target Multi-User System.
+-- Subject: Unit multi-user.target has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit multi-user.target has finished starting up.
+-- 
+-- The start-up result is done.
+abr 21 20:41:15 NR021AA systemd[1]: Reached target Graphical Interface.
+-- Subject: Unit graphical.target has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit graphical.target has finished starting up.
+-- 
+-- The start-up result is done.
+abr 21 20:41:15 NR021AA systemd[1]: Starting Update UTMP about System Runlevel Changes...
+-- Subject: Unit systemd-update-utmp-runlevel.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-update-utmp-runlevel.service has begun starting up.
+abr 21 20:41:15 NR021AA audit[2103]: SYSTEM_RUNLEVEL pid=2103 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='old-level=N new-level=5 comm="systemd-update-utmp" exe="/usr/lib/systemd/systemd-update-utmp" hostname=? addr=? terminal=? res=success'
+abr 21 20:41:15 NR021AA systemd[1]: Started Update UTMP about System Runlevel Changes.
+-- Subject: Unit systemd-update-utmp-runlevel.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-update-utmp-runlevel.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 21 20:41:15 NR021AA systemd[1]: Startup finished in 599ms (kernel) + 2.469s (initrd) + 1min 31.147s (userspace) = 1min 34.216s.
+-- Subject: System start-up is now complete
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- All system services necessary queued for starting at boot have been
+-- successfully started. Note that this does not mean that the machine is
+-- now idle as services might still be busy with completing start-up.
+-- 
+-- Kernel start-up required 599064 microseconds.
+-- 
+-- Initial RAM disk start-up required 2469368 microseconds.
+-- 
+-- Userspace start-up required 91147583 microseconds.
+abr 21 20:41:15 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-update-utmp-runlevel comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 21 20:41:15 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-update-utmp-runlevel comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 21 20:41:37 NR021AA dbus-daemon[1216]: Activating via systemd: service name='org.gtk.vfs.Metadata' unit='gvfs-metadata.service'
+abr 21 20:41:37 NR021AA systemd[1165]: Starting Virtual filesystem metadata service...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit UNIT has begun starting up.
+abr 21 20:41:37 NR021AA dbus-daemon[1216]: Successfully activated service 'org.gtk.vfs.Metadata'
+abr 21 20:41:37 NR021AA systemd[1165]: Started Virtual filesystem metadata service.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is done.
+abr 21 20:41:54 NR021AA dbus[760]: [system] Activating via systemd: service name='net.reactivated.Fprint' unit='fprintd.service'
+abr 21 20:41:54 NR021AA systemd[1]: Starting Fingerprint Authentication Daemon...
+-- Subject: Unit fprintd.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit fprintd.service has begun starting up.
+abr 21 20:41:54 NR021AA dbus[760]: [system] Successfully activated service 'net.reactivated.Fprint'
+abr 21 20:41:54 NR021AA systemd[1]: Started Fingerprint Authentication Daemon.
+-- Subject: Unit fprintd.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit fprintd.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 21 20:41:54 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=fprintd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 21 20:41:59 NR021AA audit[2184]: USER_AUTH pid=2184 uid=1000 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:authentication grantors=pam_unix acct="root" exe="/usr/bin/su" hostname=? addr=? terminal=pts/1 res=success'
+abr 21 20:41:59 NR021AA audit[2184]: USER_ACCT pid=2184 uid=1000 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:accounting grantors=pam_unix,pam_localuser acct="root" exe="/usr/bin/su" hostname=? addr=? terminal=pts/1 res=success'
+abr 21 20:41:59 NR021AA su[2184]: (to root) heliogabalo on pts/1
+abr 21 20:41:59 NR021AA audit[2184]: CRED_ACQ pid=2184 uid=1000 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_unix acct="root" exe="/usr/bin/su" hostname=? addr=? terminal=pts/1 res=success'
+abr 21 20:41:59 NR021AA su[2184]: pam_systemd(su:session): Cannot create session: Already occupied by a session
+abr 21 20:41:59 NR021AA su[2184]: pam_unix(su:session): session opened for user root by (uid=1000)
+abr 21 20:41:59 NR021AA audit[2184]: USER_START pid=2184 uid=1000 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:session_open grantors=pam_keyinit,pam_limits,pam_systemd,pam_unix,pam_xauth acct="root" exe="/usr/bin/su" hostname=? addr=? terminal=pts/1 res=success'
+abr 21 20:42:25 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=fprintd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 21 20:46:26 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "fd" "14"
+abr 21 20:46:26 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=getty@tty3 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 21 20:46:26 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "fd" "17"
+abr 21 20:46:26 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "fd" "18"
+abr 21 20:46:26 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "fd" "19"
+abr 21 20:46:26 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "fd" "20"
+abr 21 20:46:26 NR021AA /usr/libexec/gdm-x-session[1185]: (II) AIGLX: Suspending AIGLX clients for VT switch
+abr 21 20:46:26 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got pause for 13:68
+abr 21 20:46:26 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got pause for 13:65
+abr 21 20:46:26 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got pause for 13:64
+abr 21 20:46:26 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got pause for 13:67
+abr 21 20:46:26 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got pause for 13:66
+abr 21 20:46:26 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got pause for 226:0
+abr 21 20:46:26 NR021AA systemd[1]: Started Getty on tty3.
+-- Subject: Unit getty@tty3.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit getty@tty3.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 21 20:46:32 NR021AA dbus[760]: [system] Activating via systemd: service name='net.reactivated.Fprint' unit='fprintd.service'
+abr 21 20:46:32 NR021AA systemd[1]: Starting Fingerprint Authentication Daemon...
+-- Subject: Unit fprintd.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit fprintd.service has begun starting up.
+abr 21 20:46:32 NR021AA dbus[760]: [system] Successfully activated service 'net.reactivated.Fprint'
+abr 21 20:46:32 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=fprintd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 21 20:46:32 NR021AA systemd[1]: Started Fingerprint Authentication Daemon.
+-- Subject: Unit fprintd.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit fprintd.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 21 20:46:46 NR021AA gdm-password][2285]: gkr-pam: unlocked login keyring
+abr 21 20:46:46 NR021AA audit[2285]: USER_AUTH pid=2285 uid=0 auid=1000 ses=1 subj=system_u:system_r:xdm_t:s0-s0:c0.c1023 msg='op=PAM:authentication grantors=pam_unix,pam_gnome_keyring acct="heliogabalo" exe="/usr/libexec/gdm-session-worker" hostname=? addr=? terminal=/dev/tty1 res=success'
+abr 21 20:46:46 NR021AA audit[2285]: USER_ACCT pid=2285 uid=0 auid=1000 ses=1 subj=system_u:system_r:xdm_t:s0-s0:c0.c1023 msg='op=PAM:accounting grantors=pam_unix,pam_localuser acct="heliogabalo" exe="/usr/libexec/gdm-session-worker" hostname=? addr=? terminal=/dev/tty1 res=success'
+abr 21 20:46:46 NR021AA audit[2285]: CRED_REFR pid=2285 uid=0 auid=1000 ses=1 subj=system_u:system_r:xdm_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_unix,pam_gnome_keyring acct="heliogabalo" exe="/usr/libexec/gdm-session-worker" hostname=? addr=? terminal=/dev/tty1 res=success'
+abr 21 20:46:46 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got resume for 13:68
+abr 21 20:46:46 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got resume for 13:65
+abr 21 20:46:46 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got resume for 13:64
+abr 21 20:46:46 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got resume for 13:67
+abr 21 20:46:46 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got resume for 13:66
+abr 21 20:46:46 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got resume for 226:0
+abr 21 20:46:46 NR021AA /usr/libexec/gdm-x-session[1185]: (II) AIGLX: Resuming AIGLX clients after VT switch
+abr 21 20:46:46 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): EDID vendor "HWP", prod id 9890
+abr 21 20:46:46 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Using hsync ranges from config file
+abr 21 20:46:46 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Using vrefresh ranges from config file
+abr 21 20:46:46 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Printing DDC gathered Modelines:
+abr 21 20:46:46 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1440x900"x0.0  106.50  1440 1520 1672 1904  900 903 909 934 -hsync +vsync (55.9 kHz eP)
+abr 21 20:46:46 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "800x600"x0.0   40.00  800 840 968 1056  600 601 605 628 +hsync +vsync (37.9 kHz e)
+abr 21 20:46:46 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "640x480"x0.0   31.50  640 656 720 840  480 481 484 500 -hsync -vsync (37.5 kHz e)
+abr 21 20:46:46 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "640x480"x0.0   25.18  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+abr 21 20:46:46 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "720x400"x0.0   28.32  720 738 846 900  400 412 414 449 -hsync +vsync (31.5 kHz e)
+abr 21 20:46:46 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1280x1024"x0.0  135.00  1280 1296 1440 1688  1024 1025 1028 1066 +hsync +vsync (80.0 kHz e)
+abr 21 20:46:46 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1024x768"x0.0   78.75  1024 1040 1136 1312  768 769 772 800 +hsync +vsync (60.0 kHz e)
+abr 21 20:46:46 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1024x768"x0.0   65.00  1024 1048 1184 1344  768 771 777 806 -hsync -vsync (48.4 kHz e)
+abr 21 20:46:46 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "832x624"x0.0   57.28  832 864 928 1152  624 625 628 667 -hsync -vsync (49.7 kHz e)
+abr 21 20:46:46 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "800x600"x0.0   49.50  800 816 896 1056  600 601 604 625 +hsync +vsync (46.9 kHz e)
+abr 21 20:46:46 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1152x864"x0.0  108.00  1152 1216 1344 1600  864 865 868 900 +hsync +vsync (67.5 kHz e)
+abr 21 20:46:46 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1152x720"x60.0   67.32  1152 1208 1328 1504  720 721 724 746 -hsync +vsync (44.8 kHz e)
+abr 21 20:46:46 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1280x960"x0.0  108.00  1280 1376 1488 1800  960 961 964 1000 +hsync +vsync (60.0 kHz e)
+abr 21 20:46:46 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1280x1024"x0.0  108.00  1280 1328 1440 1688  1024 1025 1028 1066 +hsync +vsync (64.0 kHz e)
+abr 21 20:46:46 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Power Button', /dev/input/event1 is tagged by udev as: Keyboard
+abr 21 20:46:46 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Power Button', /dev/input/event1 is a keyboard
+abr 21 20:46:46 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Power Button', /dev/input/event0 is tagged by udev as: Keyboard
+abr 21 20:46:46 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Power Button', /dev/input/event0 is a keyboard
+abr 21 20:46:46 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Logitech USB Optical Mouse', /dev/input/event2 is tagged by udev as: Mouse
+abr 21 20:46:46 NR021AA /usr/libexec/gdm-x-session[1185]: (II) Device 'Logitech USB Optical Mouse' set to 1000 DPI
+abr 21 20:46:46 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Logitech USB Optical Mouse', /dev/input/event2 is a pointer caps
+abr 21 20:46:46 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Logitech USB Keyboard', /dev/input/event3 is tagged by udev as: Keyboard
+abr 21 20:46:46 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Logitech USB Keyboard', /dev/input/event3 is a keyboard
+abr 21 20:46:46 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Logitech USB Keyboard', /dev/input/event4 is tagged by udev as: Keyboard
+abr 21 20:46:46 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Logitech USB Keyboard', /dev/input/event4 is a keyboard
+abr 21 20:46:48 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "fd" "18"
+abr 21 20:46:48 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "fd" "19"
+abr 21 20:46:48 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "fd" "28"
+abr 21 20:46:48 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "fd" "20"
+abr 21 20:46:48 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "fd" "17"
+abr 21 20:46:48 NR021AA /usr/libexec/gdm-x-session[1185]: (II) AIGLX: Suspending AIGLX clients for VT switch
+abr 21 20:46:48 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got pause for 13:68
+abr 21 20:46:48 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got pause for 13:65
+abr 21 20:46:48 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got pause for 13:64
+abr 21 20:46:48 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got pause for 13:67
+abr 21 20:46:48 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got pause for 13:66
+abr 21 20:46:48 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got pause for 226:0
+abr 21 20:46:50 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got resume for 13:68
+abr 21 20:46:50 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got resume for 13:65
+abr 21 20:46:50 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got resume for 13:64
+abr 21 20:46:50 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got resume for 13:67
+abr 21 20:46:50 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got resume for 13:66
+abr 21 20:46:50 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got resume for 226:0
+abr 21 20:46:50 NR021AA /usr/libexec/gdm-x-session[1185]: (II) AIGLX: Resuming AIGLX clients after VT switch
+abr 21 20:46:51 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): EDID vendor "HWP", prod id 9890
+abr 21 20:46:51 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Using hsync ranges from config file
+abr 21 20:46:51 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Using vrefresh ranges from config file
+abr 21 20:46:51 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Printing DDC gathered Modelines:
+abr 21 20:46:51 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1440x900"x0.0  106.50  1440 1520 1672 1904  900 903 909 934 -hsync +vsync (55.9 kHz eP)
+abr 21 20:46:51 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "800x600"x0.0   40.00  800 840 968 1056  600 601 605 628 +hsync +vsync (37.9 kHz e)
+abr 21 20:46:51 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "640x480"x0.0   31.50  640 656 720 840  480 481 484 500 -hsync -vsync (37.5 kHz e)
+abr 21 20:46:51 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "640x480"x0.0   25.18  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+abr 21 20:46:51 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "720x400"x0.0   28.32  720 738 846 900  400 412 414 449 -hsync +vsync (31.5 kHz e)
+abr 21 20:46:51 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1280x1024"x0.0  135.00  1280 1296 1440 1688  1024 1025 1028 1066 +hsync +vsync (80.0 kHz e)
+abr 21 20:46:51 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1024x768"x0.0   78.75  1024 1040 1136 1312  768 769 772 800 +hsync +vsync (60.0 kHz e)
+abr 21 20:46:51 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1024x768"x0.0   65.00  1024 1048 1184 1344  768 771 777 806 -hsync -vsync (48.4 kHz e)
+abr 21 20:46:51 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "832x624"x0.0   57.28  832 864 928 1152  624 625 628 667 -hsync -vsync (49.7 kHz e)
+abr 21 20:46:51 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "800x600"x0.0   49.50  800 816 896 1056  600 601 604 625 +hsync +vsync (46.9 kHz e)
+abr 21 20:46:51 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1152x864"x0.0  108.00  1152 1216 1344 1600  864 865 868 900 +hsync +vsync (67.5 kHz e)
+abr 21 20:46:51 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1152x720"x60.0   67.32  1152 1208 1328 1504  720 721 724 746 -hsync +vsync (44.8 kHz e)
+abr 21 20:46:51 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1280x960"x0.0  108.00  1280 1376 1488 1800  960 961 964 1000 +hsync +vsync (60.0 kHz e)
+abr 21 20:46:51 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1280x1024"x0.0  108.00  1280 1328 1440 1688  1024 1025 1028 1066 +hsync +vsync (64.0 kHz e)
+abr 21 20:46:51 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Power Button', /dev/input/event1 is tagged by udev as: Keyboard
+abr 21 20:46:51 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Power Button', /dev/input/event1 is a keyboard
+abr 21 20:46:51 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Power Button', /dev/input/event0 is tagged by udev as: Keyboard
+abr 21 20:46:51 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Power Button', /dev/input/event0 is a keyboard
+abr 21 20:46:51 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Logitech USB Optical Mouse', /dev/input/event2 is tagged by udev as: Mouse
+abr 21 20:46:51 NR021AA /usr/libexec/gdm-x-session[1185]: (II) Device 'Logitech USB Optical Mouse' set to 1000 DPI
+abr 21 20:46:51 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Logitech USB Optical Mouse', /dev/input/event2 is a pointer caps
+abr 21 20:46:51 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Logitech USB Keyboard', /dev/input/event3 is tagged by udev as: Keyboard
+abr 21 20:46:51 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Logitech USB Keyboard', /dev/input/event3 is a keyboard
+abr 21 20:46:51 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Logitech USB Keyboard', /dev/input/event4 is tagged by udev as: Keyboard
+abr 21 20:46:51 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Logitech USB Keyboard', /dev/input/event4 is a keyboard
+abr 21 20:46:52 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "fd" "19"
+abr 21 20:46:52 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "fd" "20"
+abr 21 20:46:52 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "fd" "30"
+abr 21 20:46:52 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "fd" "27"
+abr 21 20:46:52 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "fd" "18"
+abr 21 20:46:52 NR021AA /usr/libexec/gdm-x-session[1185]: (II) AIGLX: Suspending AIGLX clients for VT switch
+abr 21 20:46:52 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got pause for 13:68
+abr 21 20:46:52 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got pause for 13:65
+abr 21 20:46:52 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got pause for 13:64
+abr 21 20:46:52 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got pause for 13:67
+abr 21 20:46:52 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got pause for 13:66
+abr 21 20:46:52 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got pause for 226:0
+abr 21 20:46:54 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got resume for 13:68
+abr 21 20:46:54 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got resume for 13:65
+abr 21 20:46:54 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got resume for 13:64
+abr 21 20:46:54 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got resume for 13:67
+abr 21 20:46:54 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got resume for 13:66
+abr 21 20:46:54 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got resume for 226:0
+abr 21 20:46:54 NR021AA /usr/libexec/gdm-x-session[1185]: (II) AIGLX: Resuming AIGLX clients after VT switch
+abr 21 20:46:54 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): EDID vendor "HWP", prod id 9890
+abr 21 20:46:54 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Using hsync ranges from config file
+abr 21 20:46:54 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Using vrefresh ranges from config file
+abr 21 20:46:54 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Printing DDC gathered Modelines:
+abr 21 20:46:54 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1440x900"x0.0  106.50  1440 1520 1672 1904  900 903 909 934 -hsync +vsync (55.9 kHz eP)
+abr 21 20:46:54 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "800x600"x0.0   40.00  800 840 968 1056  600 601 605 628 +hsync +vsync (37.9 kHz e)
+abr 21 20:46:54 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "640x480"x0.0   31.50  640 656 720 840  480 481 484 500 -hsync -vsync (37.5 kHz e)
+abr 21 20:46:54 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "640x480"x0.0   25.18  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+abr 21 20:46:54 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "720x400"x0.0   28.32  720 738 846 900  400 412 414 449 -hsync +vsync (31.5 kHz e)
+abr 21 20:46:54 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1280x1024"x0.0  135.00  1280 1296 1440 1688  1024 1025 1028 1066 +hsync +vsync (80.0 kHz e)
+abr 21 20:46:54 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1024x768"x0.0   78.75  1024 1040 1136 1312  768 769 772 800 +hsync +vsync (60.0 kHz e)
+abr 21 20:46:54 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1024x768"x0.0   65.00  1024 1048 1184 1344  768 771 777 806 -hsync -vsync (48.4 kHz e)
+abr 21 20:46:54 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "832x624"x0.0   57.28  832 864 928 1152  624 625 628 667 -hsync -vsync (49.7 kHz e)
+abr 21 20:46:54 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "800x600"x0.0   49.50  800 816 896 1056  600 601 604 625 +hsync +vsync (46.9 kHz e)
+abr 21 20:46:54 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1152x864"x0.0  108.00  1152 1216 1344 1600  864 865 868 900 +hsync +vsync (67.5 kHz e)
+abr 21 20:46:54 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1152x720"x60.0   67.32  1152 1208 1328 1504  720 721 724 746 -hsync +vsync (44.8 kHz e)
+abr 21 20:46:54 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1280x960"x0.0  108.00  1280 1376 1488 1800  960 961 964 1000 +hsync +vsync (60.0 kHz e)
+abr 21 20:46:54 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1280x1024"x0.0  108.00  1280 1328 1440 1688  1024 1025 1028 1066 +hsync +vsync (64.0 kHz e)
+abr 21 20:46:54 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Power Button', /dev/input/event1 is tagged by udev as: Keyboard
+abr 21 20:46:54 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Power Button', /dev/input/event1 is a keyboard
+abr 21 20:46:54 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Power Button', /dev/input/event0 is tagged by udev as: Keyboard
+abr 21 20:46:54 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Power Button', /dev/input/event0 is a keyboard
+abr 21 20:46:54 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Logitech USB Optical Mouse', /dev/input/event2 is tagged by udev as: Mouse
+abr 21 20:46:54 NR021AA /usr/libexec/gdm-x-session[1185]: (II) Device 'Logitech USB Optical Mouse' set to 1000 DPI
+abr 21 20:46:54 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Logitech USB Optical Mouse', /dev/input/event2 is a pointer caps
+abr 21 20:46:54 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Logitech USB Keyboard', /dev/input/event3 is tagged by udev as: Keyboard
+abr 21 20:46:54 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Logitech USB Keyboard', /dev/input/event3 is a keyboard
+abr 21 20:46:54 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Logitech USB Keyboard', /dev/input/event4 is tagged by udev as: Keyboard
+abr 21 20:46:54 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Logitech USB Keyboard', /dev/input/event4 is a keyboard
+abr 21 20:46:58 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "fd" "20"
+abr 21 20:46:58 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "fd" "27"
+abr 21 20:46:58 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "fd" "31"
+abr 21 20:46:58 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "fd" "28"
+abr 21 20:46:58 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "fd" "19"
+abr 21 20:46:58 NR021AA /usr/libexec/gdm-x-session[1185]: (II) AIGLX: Suspending AIGLX clients for VT switch
+abr 21 20:46:58 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got pause for 13:68
+abr 21 20:46:58 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got pause for 13:65
+abr 21 20:46:58 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got pause for 13:64
+abr 21 20:46:58 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got pause for 13:67
+abr 21 20:46:58 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got pause for 13:66
+abr 21 20:46:58 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got pause for 226:0
+abr 21 20:47:03 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=fprintd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 21 20:47:10 NR021AA gdm-password][2432]: gkr-pam: unlocked login keyring
+abr 21 20:47:10 NR021AA audit[2432]: USER_AUTH pid=2432 uid=0 auid=1000 ses=1 subj=system_u:system_r:xdm_t:s0-s0:c0.c1023 msg='op=PAM:authentication grantors=pam_unix,pam_gnome_keyring acct="heliogabalo" exe="/usr/libexec/gdm-session-worker" hostname=? addr=? terminal=/dev/tty1 res=success'
+abr 21 20:47:10 NR021AA audit[2432]: USER_ACCT pid=2432 uid=0 auid=1000 ses=1 subj=system_u:system_r:xdm_t:s0-s0:c0.c1023 msg='op=PAM:accounting grantors=pam_unix,pam_localuser acct="heliogabalo" exe="/usr/libexec/gdm-session-worker" hostname=? addr=? terminal=/dev/tty1 res=success'
+abr 21 20:47:10 NR021AA audit[2432]: CRED_REFR pid=2432 uid=0 auid=1000 ses=1 subj=system_u:system_r:xdm_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_unix,pam_gnome_keyring acct="heliogabalo" exe="/usr/libexec/gdm-session-worker" hostname=? addr=? terminal=/dev/tty1 res=success'
+abr 21 20:47:10 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got resume for 13:68
+abr 21 20:47:10 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got resume for 13:65
+abr 21 20:47:10 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got resume for 13:64
+abr 21 20:47:10 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got resume for 13:67
+abr 21 20:47:10 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got resume for 13:66
+abr 21 20:47:10 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got resume for 226:0
+abr 21 20:47:10 NR021AA /usr/libexec/gdm-x-session[1185]: (II) AIGLX: Resuming AIGLX clients after VT switch
+abr 21 20:47:10 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): EDID vendor "HWP", prod id 9890
+abr 21 20:47:10 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Using hsync ranges from config file
+abr 21 20:47:10 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Using vrefresh ranges from config file
+abr 21 20:47:10 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Printing DDC gathered Modelines:
+abr 21 20:47:10 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1440x900"x0.0  106.50  1440 1520 1672 1904  900 903 909 934 -hsync +vsync (55.9 kHz eP)
+abr 21 20:47:10 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "800x600"x0.0   40.00  800 840 968 1056  600 601 605 628 +hsync +vsync (37.9 kHz e)
+abr 21 20:47:10 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "640x480"x0.0   31.50  640 656 720 840  480 481 484 500 -hsync -vsync (37.5 kHz e)
+abr 21 20:47:10 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "640x480"x0.0   25.18  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+abr 21 20:47:10 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "720x400"x0.0   28.32  720 738 846 900  400 412 414 449 -hsync +vsync (31.5 kHz e)
+abr 21 20:47:10 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1280x1024"x0.0  135.00  1280 1296 1440 1688  1024 1025 1028 1066 +hsync +vsync (80.0 kHz e)
+abr 21 20:47:10 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1024x768"x0.0   78.75  1024 1040 1136 1312  768 769 772 800 +hsync +vsync (60.0 kHz e)
+abr 21 20:47:10 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1024x768"x0.0   65.00  1024 1048 1184 1344  768 771 777 806 -hsync -vsync (48.4 kHz e)
+abr 21 20:47:10 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "832x624"x0.0   57.28  832 864 928 1152  624 625 628 667 -hsync -vsync (49.7 kHz e)
+abr 21 20:47:10 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "800x600"x0.0   49.50  800 816 896 1056  600 601 604 625 +hsync +vsync (46.9 kHz e)
+abr 21 20:47:10 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1152x864"x0.0  108.00  1152 1216 1344 1600  864 865 868 900 +hsync +vsync (67.5 kHz e)
+abr 21 20:47:10 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1152x720"x60.0   67.32  1152 1208 1328 1504  720 721 724 746 -hsync +vsync (44.8 kHz e)
+abr 21 20:47:10 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1280x960"x0.0  108.00  1280 1376 1488 1800  960 961 964 1000 +hsync +vsync (60.0 kHz e)
+abr 21 20:47:10 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1280x1024"x0.0  108.00  1280 1328 1440 1688  1024 1025 1028 1066 +hsync +vsync (64.0 kHz e)
+abr 21 20:47:10 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Power Button', /dev/input/event1 is tagged by udev as: Keyboard
+abr 21 20:47:10 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Power Button', /dev/input/event1 is a keyboard
+abr 21 20:47:10 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Power Button', /dev/input/event0 is tagged by udev as: Keyboard
+abr 21 20:47:10 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Power Button', /dev/input/event0 is a keyboard
+abr 21 20:47:10 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Logitech USB Optical Mouse', /dev/input/event2 is tagged by udev as: Mouse
+abr 21 20:47:10 NR021AA /usr/libexec/gdm-x-session[1185]: (II) Device 'Logitech USB Optical Mouse' set to 1000 DPI
+abr 21 20:47:10 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Logitech USB Optical Mouse', /dev/input/event2 is a pointer caps
+abr 21 20:47:10 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Logitech USB Keyboard', /dev/input/event3 is tagged by udev as: Keyboard
+abr 21 20:47:10 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Logitech USB Keyboard', /dev/input/event3 is a keyboard
+abr 21 20:47:10 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Logitech USB Keyboard', /dev/input/event4 is tagged by udev as: Keyboard
+abr 21 20:47:10 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Logitech USB Keyboard', /dev/input/event4 is a keyboard
+abr 21 20:47:18 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "fd" "27"
+abr 21 20:47:18 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "fd" "28"
+abr 21 20:47:18 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "fd" "32"
+abr 21 20:47:18 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "fd" "30"
+abr 21 20:47:18 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "fd" "20"
+abr 21 20:47:18 NR021AA /usr/libexec/gdm-x-session[1185]: (II) AIGLX: Suspending AIGLX clients for VT switch
+abr 21 20:47:18 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got pause for 13:68
+abr 21 20:47:18 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got pause for 13:65
+abr 21 20:47:18 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got pause for 13:64
+abr 21 20:47:18 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got pause for 13:67
+abr 21 20:47:18 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got pause for 13:66
+abr 21 20:47:18 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got pause for 226:0
+abr 21 20:47:20 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got resume for 13:68
+abr 21 20:47:20 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got resume for 13:65
+abr 21 20:47:20 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got resume for 13:64
+abr 21 20:47:20 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got resume for 13:67
+abr 21 20:47:20 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got resume for 13:66
+abr 21 20:47:20 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got resume for 226:0
+abr 21 20:47:20 NR021AA /usr/libexec/gdm-x-session[1185]: (II) AIGLX: Resuming AIGLX clients after VT switch
+abr 21 20:47:20 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): EDID vendor "HWP", prod id 9890
+abr 21 20:47:20 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Using hsync ranges from config file
+abr 21 20:47:20 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Using vrefresh ranges from config file
+abr 21 20:47:20 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Printing DDC gathered Modelines:
+abr 21 20:47:20 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1440x900"x0.0  106.50  1440 1520 1672 1904  900 903 909 934 -hsync +vsync (55.9 kHz eP)
+abr 21 20:47:20 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "800x600"x0.0   40.00  800 840 968 1056  600 601 605 628 +hsync +vsync (37.9 kHz e)
+abr 21 20:47:20 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "640x480"x0.0   31.50  640 656 720 840  480 481 484 500 -hsync -vsync (37.5 kHz e)
+abr 21 20:47:20 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "640x480"x0.0   25.18  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+abr 21 20:47:20 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "720x400"x0.0   28.32  720 738 846 900  400 412 414 449 -hsync +vsync (31.5 kHz e)
+abr 21 20:47:20 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1280x1024"x0.0  135.00  1280 1296 1440 1688  1024 1025 1028 1066 +hsync +vsync (80.0 kHz e)
+abr 21 20:47:20 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1024x768"x0.0   78.75  1024 1040 1136 1312  768 769 772 800 +hsync +vsync (60.0 kHz e)
+abr 21 20:47:20 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1024x768"x0.0   65.00  1024 1048 1184 1344  768 771 777 806 -hsync -vsync (48.4 kHz e)
+abr 21 20:47:20 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "832x624"x0.0   57.28  832 864 928 1152  624 625 628 667 -hsync -vsync (49.7 kHz e)
+abr 21 20:47:20 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "800x600"x0.0   49.50  800 816 896 1056  600 601 604 625 +hsync +vsync (46.9 kHz e)
+abr 21 20:47:20 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1152x864"x0.0  108.00  1152 1216 1344 1600  864 865 868 900 +hsync +vsync (67.5 kHz e)
+abr 21 20:47:20 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1152x720"x60.0   67.32  1152 1208 1328 1504  720 721 724 746 -hsync +vsync (44.8 kHz e)
+abr 21 20:47:20 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1280x960"x0.0  108.00  1280 1376 1488 1800  960 961 964 1000 +hsync +vsync (60.0 kHz e)
+abr 21 20:47:20 NR021AA /usr/libexec/gdm-x-session[1185]: (II) RADEON(0): Modeline "1280x1024"x0.0  108.00  1280 1328 1440 1688  1024 1025 1028 1066 +hsync +vsync (64.0 kHz e)
+abr 21 20:47:20 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Power Button', /dev/input/event1 is tagged by udev as: Keyboard
+abr 21 20:47:20 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Power Button', /dev/input/event1 is a keyboard
+abr 21 20:47:20 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Power Button', /dev/input/event0 is tagged by udev as: Keyboard
+abr 21 20:47:20 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Power Button', /dev/input/event0 is a keyboard
+abr 21 20:47:20 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Logitech USB Optical Mouse', /dev/input/event2 is tagged by udev as: Mouse
+abr 21 20:47:20 NR021AA /usr/libexec/gdm-x-session[1185]: (II) Device 'Logitech USB Optical Mouse' set to 1000 DPI
+abr 21 20:47:20 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Logitech USB Optical Mouse', /dev/input/event2 is a pointer caps
+abr 21 20:47:20 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Logitech USB Keyboard', /dev/input/event3 is tagged by udev as: Keyboard
+abr 21 20:47:20 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Logitech USB Keyboard', /dev/input/event3 is a keyboard
+abr 21 20:47:20 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Logitech USB Keyboard', /dev/input/event4 is tagged by udev as: Keyboard
+abr 21 20:47:20 NR021AA /usr/libexec/gdm-x-session[1185]: (II) input device 'Logitech USB Keyboard', /dev/input/event4 is a keyboard
+abr 21 20:47:22 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "fd" "28"
+abr 21 20:47:22 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "fd" "30"
+abr 21 20:47:22 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "fd" "33"
+abr 21 20:47:22 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "fd" "31"
+abr 21 20:47:22 NR021AA /usr/libexec/gdm-x-session[1185]: (**) Option "fd" "27"
+abr 21 20:47:22 NR021AA /usr/libexec/gdm-x-session[1185]: (II) AIGLX: Suspending AIGLX clients for VT switch
+abr 21 20:47:22 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got pause for 13:68
+abr 21 20:47:22 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got pause for 13:65
+abr 21 20:47:22 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got pause for 13:64
+abr 21 20:47:22 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got pause for 13:67
+abr 21 20:47:22 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got pause for 13:66
+abr 21 20:47:22 NR021AA /usr/libexec/gdm-x-session[1185]: (II) systemd-logind: got pause for 226:0
+abr 21 20:47:28 NR021AA dbus[760]: [system] Activating via systemd: service name='net.reactivated.Fprint' unit='fprintd.service'
+abr 21 20:47:28 NR021AA systemd[1]: Starting Fingerprint Authentication Daemon...
+-- Subject: Unit fprintd.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit fprintd.service has begun starting up.
+abr 21 20:47:28 NR021AA dbus[760]: [system] Successfully activated service 'net.reactivated.Fprint'
+abr 21 20:47:28 NR021AA systemd[1]: Started Fingerprint Authentication Daemon.
+-- Subject: Unit fprintd.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit fprintd.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 21 20:47:28 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=fprintd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 21 20:47:31 NR021AA audit[2250]: USER_AUTH pid=2250 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:local_login_t:s0-s0:c0.c1023 msg='op=PAM:authentication grantors=pam_unix acct="root" exe="/usr/bin/login" hostname=? addr=? terminal=tty3 res=success'
+abr 21 20:47:31 NR021AA audit[2250]: USER_ACCT pid=2250 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:local_login_t:s0-s0:c0.c1023 msg='op=PAM:accounting grantors=pam_unix,pam_localuser acct="root" exe="/usr/bin/login" hostname=? addr=? terminal=tty3 res=success'
+abr 21 20:47:31 NR021AA audit[2250]: CRED_ACQ pid=2250 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:local_login_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_unix acct="root" exe="/usr/bin/login" hostname=? addr=? terminal=tty3 res=success'
+abr 21 20:47:31 NR021AA audit[2250]: USER_ROLE_CHANGE pid=2250 uid=0 auid=0 ses=2 subj=system_u:system_r:local_login_t:s0-s0:c0.c1023 msg='pam: default-context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 selected-context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 exe="/usr/bin/login" hostname=? addr=? terminal=tty3 res=success'
+abr 21 20:47:31 NR021AA audit[1]: USER_AVC pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='Unknown permission start for class system exe="/usr/lib/systemd/systemd" sauid=0 hostname=? addr=? terminal=?'
+abr 21 20:47:31 NR021AA audit[1]: USER_AVC pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='Unknown permission start for class system exe="/usr/lib/systemd/systemd" sauid=0 hostname=? addr=? terminal=?'
+abr 21 20:47:31 NR021AA systemd[1]: Created slice User Slice of root.
+-- Subject: Unit user-0.slice has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit user-0.slice has finished starting up.
+-- 
+-- The start-up result is done.
+abr 21 20:47:31 NR021AA systemd[1]: Starting User Manager for UID 0...
+-- Subject: Unit user@0.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit user@0.service has begun starting up.
+abr 21 20:47:31 NR021AA audit[1]: USER_AVC pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='Unknown permission start for class system exe="/usr/lib/systemd/systemd" sauid=0 hostname=? addr=? terminal=?'
+abr 21 20:47:31 NR021AA audit[1]: USER_AVC pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='Unknown permission start for class system exe="/usr/lib/systemd/systemd" sauid=0 hostname=? addr=? terminal=?'
+abr 21 20:47:31 NR021AA systemd-logind[746]: New session 2 of user root.
+-- Subject: A new session 2 has been created for user root
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- Documentation: http://www.freedesktop.org/wiki/Software/systemd/multiseat
+-- 
+-- A new session with the ID 2 has been created for the user root.
+-- 
+-- The leading process of the session is 2250.
+abr 21 20:47:31 NR021AA audit[2507]: USER_ACCT pid=2507 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='op=PAM:accounting grantors=pam_unix,pam_localuser acct="root" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 21 20:47:31 NR021AA systemd[1]: Started Session 2 of user root.
+-- Subject: Unit session-2.scope has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit session-2.scope has finished starting up.
+-- 
+-- The start-up result is done.
+abr 21 20:47:31 NR021AA audit[2507]: USER_ROLE_CHANGE pid=2507 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='pam: default-context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 selected-context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 21 20:47:31 NR021AA systemd[2507]: pam_unix(systemd-user:session): session opened for user root by (uid=0)
+abr 21 20:47:31 NR021AA audit[2507]: USER_START pid=2507 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='op=PAM:session_open grantors=pam_selinux,pam_selinux,pam_keyinit,pam_limits,pam_systemd,pam_unix acct="root" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 21 20:47:31 NR021AA systemd[2507]: Reached target Timers.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is done.
+abr 21 20:47:31 NR021AA systemd[2507]: Starting D-Bus User Message Bus Socket.
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit UNIT has begun starting up.
+abr 21 20:47:31 NR021AA systemd[2507]: Reached target Paths.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is done.
+abr 21 20:47:31 NR021AA systemd[2507]: Listening on D-Bus User Message Bus Socket.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is done.
+abr 21 20:47:31 NR021AA systemd[2507]: Reached target Sockets.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is done.
+abr 21 20:47:31 NR021AA systemd[2507]: Reached target Basic System.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is done.
+abr 21 20:47:31 NR021AA systemd[2507]: Reached target Default.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is done.
+abr 21 20:47:31 NR021AA systemd[2507]: Startup finished in 57ms.
+-- Subject: System start-up is now complete
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- All system services necessary queued for starting at boot have been
+-- successfully started. Note that this does not mean that the machine is
+-- now idle as services might still be busy with completing start-up.
+-- 
+-- Kernel start-up required KERNEL_USEC microseconds.
+-- 
+-- Initial RAM disk start-up required INITRD_USEC microseconds.
+-- 
+-- Userspace start-up required 57080 microseconds.
+abr 21 20:47:31 NR021AA systemd[1]: Started User Manager for UID 0.
+-- Subject: Unit user@0.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit user@0.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 21 20:47:31 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=user@0 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 21 20:47:31 NR021AA login[2250]: pam_unix(login:session): session opened for user root by LOGIN(uid=0)
+abr 21 20:47:31 NR021AA audit[2250]: USER_START pid=2250 uid=0 auid=0 ses=2 subj=system_u:system_r:local_login_t:s0-s0:c0.c1023 msg='op=PAM:session_open grantors=pam_selinux,pam_loginuid,pam_console,pam_selinux,pam_namespace,pam_keyinit,pam_keyinit,pam_limits,pam_systemd,pam_unix,pam_lastlog acct="root" exe="/usr/bin/login" hostname=? addr=? terminal=tty3 res=success'
+abr 21 20:47:31 NR021AA audit[2250]: CRED_REFR pid=2250 uid=0 auid=0 ses=2 subj=system_u:system_r:local_login_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_unix acct="root" exe="/usr/bin/login" hostname=? addr=? terminal=tty3 res=success'
+abr 21 20:47:31 NR021AA audit[2250]: USER_LOGIN pid=2250 uid=0 auid=0 ses=2 subj=system_u:system_r:local_login_t:s0-s0:c0.c1023 msg='op=login id=0 exe="/usr/bin/login" hostname=? addr=? terminal=tty3 res=success'
+abr 21 20:47:31 NR021AA login[2250]: ROOT LOGIN ON tty3
+abr 21 20:47:58 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=fprintd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 21 20:50:13 NR021AA systemd[1]: Starting dnf makecache...
+-- Subject: Unit dnf-makecache.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit dnf-makecache.service has begun starting up.
+abr 21 20:50:14 NR021AA dnf[2563]: Caché de metadatos actualizado recientemente.
+abr 21 20:50:14 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=dnf-makecache comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 21 20:50:14 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=dnf-makecache comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 21 20:50:14 NR021AA systemd[1]: Started dnf makecache.
+-- Subject: Unit dnf-makecache.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit dnf-makecache.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 21 20:55:13 NR021AA systemd[1]: Starting Cleanup of Temporary Directories...
+-- Subject: Unit systemd-tmpfiles-clean.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-tmpfiles-clean.service has begun starting up.
+abr 21 20:55:14 NR021AA systemd[1]: Started Cleanup of Temporary Directories.
+-- Subject: Unit systemd-tmpfiles-clean.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-tmpfiles-clean.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 21 20:55:14 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-tmpfiles-clean comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 21 20:55:14 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-tmpfiles-clean comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 21 21:01:01 NR021AA CROND[2577]: (root) CMD (run-parts /etc/cron.hourly)
+abr 21 21:01:01 NR021AA run-parts[2580]: (/etc/cron.hourly) starting 0anacron
+abr 21 21:01:01 NR021AA run-parts[2586]: (/etc/cron.hourly) finished 0anacron
+abr 21 21:01:10 NR021AA systemd[1]: Started Getty on tty4.
+-- Subject: Unit getty@tty4.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit getty@tty4.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 21 21:01:10 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=getty@tty4 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 21 21:01:12 NR021AA dbus[760]: [system] Activating via systemd: service name='net.reactivated.Fprint' unit='fprintd.service'
+abr 21 21:01:12 NR021AA systemd[1]: Starting Fingerprint Authentication Daemon...
+-- Subject: Unit fprintd.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit fprintd.service has begun starting up.
+abr 21 21:01:12 NR021AA dbus[760]: [system] Successfully activated service 'net.reactivated.Fprint'
+abr 21 21:01:12 NR021AA systemd[1]: Started Fingerprint Authentication Daemon.
+-- Subject: Unit fprintd.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit fprintd.service has finished starting up.
+-- 
+-- The start-up result is done.
+abr 21 21:01:12 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=fprintd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+abr 21 21:01:16 NR021AA audit[2588]: USER_AUTH pid=2588 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:local_login_t:s0-s0:c0.c1023 msg='op=PAM:authentication grantors=pam_unix acct="root" exe="/usr/bin/login" hostname=? addr=? terminal=tty4 res=success'
+abr 21 21:01:16 NR021AA audit[2588]: USER_ACCT pid=2588 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:local_login_t:s0-s0:c0.c1023 msg='op=PAM:accounting grantors=pam_unix,pam_localuser acct="root" exe="/usr/bin/login" hostname=? addr=? terminal=tty4 res=success'
+abr 21 21:01:16 NR021AA audit[2588]: CRED_ACQ pid=2588 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:local_login_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_unix acct="root" exe="/usr/bin/login" hostname=? addr=? terminal=tty4 res=success'
+abr 21 21:01:16 NR021AA audit[2588]: USER_ROLE_CHANGE pid=2588 uid=0 auid=0 ses=3 subj=system_u:system_r:local_login_t:s0-s0:c0.c1023 msg='pam: default-context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 selected-context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 exe="/usr/bin/login" hostname=? addr=? terminal=tty4 res=success'
+abr 21 21:01:16 NR021AA audit[1]: USER_AVC pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='Unknown permission start for class system exe="/usr/lib/systemd/systemd" sauid=0 hostname=? addr=? terminal=?'
+abr 21 21:01:16 NR021AA audit[1]: USER_AVC pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='Unknown permission start for class system exe="/usr/lib/systemd/systemd" sauid=0 hostname=? addr=? terminal=?'
+abr 21 21:01:16 NR021AA systemd-logind[746]: New session 3 of user root.
+-- Subject: A new session 3 has been created for user root
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- Documentation: http://www.freedesktop.org/wiki/Software/systemd/multiseat
+-- 
+-- A new session with the ID 3 has been created for the user root.
+-- 
+-- The leading process of the session is 2588.
+abr 21 21:01:16 NR021AA systemd[1]: Started Session 3 of user root.
+-- Subject: Unit session-3.scope has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit session-3.scope has finished starting up.
+-- 
+-- The start-up result is done.
+abr 21 21:01:16 NR021AA audit[2588]: USER_START pid=2588 uid=0 auid=0 ses=3 subj=system_u:system_r:local_login_t:s0-s0:c0.c1023 msg='op=PAM:session_open grantors=pam_selinux,pam_loginuid,pam_console,pam_selinux,pam_namespace,pam_keyinit,pam_keyinit,pam_limits,pam_systemd,pam_unix,pam_lastlog acct="root" exe="/usr/bin/login" hostname=? addr=? terminal=tty4 res=success'
+abr 21 21:01:16 NR021AA audit[2588]: CRED_REFR pid=2588 uid=0 auid=0 ses=3 subj=system_u:system_r:local_login_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_unix acct="root" exe="/usr/bin/login" hostname=? addr=? terminal=tty4 res=success'
+abr 21 21:01:16 NR021AA audit[2588]: USER_LOGIN pid=2588 uid=0 auid=0 ses=3 subj=system_u:system_r:local_login_t:s0-s0:c0.c1023 msg='op=login id=0 exe="/usr/bin/login" hostname=? addr=? terminal=tty4 res=success'
+abr 21 21:01:16 NR021AA login[2588]: pam_unix(login:session): session opened for user root by LOGIN(uid=0)
+abr 21 21:01:16 NR021AA login[2588]: ROOT LOGIN ON tty4
+abr 21 21:01:43 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=fprintd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'

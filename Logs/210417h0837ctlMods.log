@@ -1,0 +1,197 @@
+libbonobo-activation.so.4
+libbonobo-activation.so.4.0.0
+libdrm_amdgpu.so.1
+libdrm_amdgpu.so.1.0.0
+libdrm_radeon.so.1
+libdrm_radeon.so.1.0.1
+libQt5EglDeviceIntegration.so.5
+libQt5EglDeviceIntegration.so.5.6
+libQt5EglDeviceIntegration.so.5.6.0
+libQtDeclarative.so.4
+libQtDeclarative.so.4.8
+libQtDeclarative.so.4.8.7
+libsamdb.so.0
+libsamdb.so.0.0.1
+libstartup-notification-1.so.0
+libstartup-notification-1.so.0.0.0
+libteamdctl.so.0
+libteamdctl.so.0.1.5
+***********************************************************
+
+     1	Module                  Size  Used by
+     2	fuse                   98304  5
+     3	kvm_intel             184320  0
+     4	kvm                   552960  1 kvm_intel
+     5	irqbypass              16384  1 kvm
+     6	acpi_cpufreq           20480  1
+     7	nfsd                  323584  1
+     8	auth_rpcgss            61440  1 nfsd
+     9	nfs_acl                16384  1 nfsd
+    10	lockd                  90112  1 nfsd
+    11	grace                  16384  2 nfsd,lockd
+    12	sunrpc                319488  7 nfsd,auth_rpcgss,lockd,nfs_acl
+    13	amdkfd                131072  1
+    14	amd_iommu_v2           20480  1 amdkfd
+    15	radeon               1503232  7
+    16	i2c_algo_bit           16384  1 radeon
+    17	drm_kms_helper        131072  1 radeon
+    18	ttm                    90112  1 radeon
+    19	drm                   335872  10 ttm,drm_kms_helper,radeon
+    20	serio_raw              16384  0
+    21	r8169                  81920  0
+    22	mii                    16384  1 r8169
+    23	ata_generic            16384  0
+    24	pata_acpi              16384  0
+    25	fjes                   28672  0
+****************************************************************
+
+     1	Module                  Size  Used by
+     2	fuse                   98304  5
+     3	kvm_intel             184320  0
+     4	kvm                   552960  1 kvm_intel
+     5	irqbypass              16384  1 kvm
+     6	acpi_cpufreq           20480  1
+     7	nfsd                  323584  1
+     8	auth_rpcgss            61440  1 nfsd
+     9	nfs_acl                16384  1 nfsd
+    10	lockd                  90112  1 nfsd
+    11	grace                  16384  2 nfsd,lockd
+    12	sunrpc                319488  7 nfsd,auth_rpcgss,lockd,nfs_acl
+    13	amdkfd                131072  1
+    14	amd_iommu_v2           20480  1 amdkfd
+    15	radeon               1503232  7
+    16	i2c_algo_bit           16384  1 radeon
+    17	drm_kms_helper        131072  1 radeon
+    18	ttm                    90112  1 radeon
+    19	drm                   335872  10 ttm,drm_kms_helper,radeon
+    20	serio_raw              16384  0
+    21	ata_generic            16384  0
+****************************************************************
+
+     1	Module                  Size  Used by
+     2	fuse                   98304  5
+     3	kvm_intel             184320  0
+     4	kvm                   552960  1 kvm_intel
+     5	irqbypass              16384  1 kvm
+     6	acpi_cpufreq           20480  1
+     7	nfsd                  323584  1
+     8	auth_rpcgss            61440  1 nfsd
+     9	nfs_acl                16384  1 nfsd
+    10	lockd                  90112  1 nfsd
+    11	grace                  16384  2 nfsd,lockd
+    12	sunrpc                319488  7 nfsd,auth_rpcgss,lockd,nfs_acl
+    13	amdkfd                131072  1
+    14	amd_iommu_v2           20480  1 amdkfd
+    15	radeon               1503232  7
+    16	i2c_algo_bit           16384  1 radeon
+    17	drm_kms_helper        131072  1 radeon
+    18	ttm                    90112  1 radeon
+    19	serio_raw              16384  0
+    20	r8169                  81920  0
+    21	ata_generic            16384  0
+    22	pata_acpi              16384  0
+    23	drm                   335872  10 ttm,drm_kms_helper,radeon
+    24	mii                    16384  1 r8169
+    25	fjes                   28672  0
+****************************************************************
+     1	Module                  Size  Used by
+     2	fuse                   98304  5
+     3	kvm_intel             184320  0
+     4	kvm                   552960  1 kvm_intel
+     5	irqbypass              16384  1 kvm
+     6	acpi_cpufreq           20480  1
+     7	nfsd                  323584  1
+     8	auth_rpcgss            61440  1 nfsd
+     9	nfs_acl                16384  1 nfsd
+    10	lockd                  90112  1 nfsd
+    11	grace                  16384  2 nfsd,lockd
+    12	sunrpc                319488  7 nfsd,auth_rpcgss,lockd,nfs_acl
+    13	amdkfd                131072  1
+    14	amd_iommu_v2           20480  1 amdkfd
+    15	radeon               1503232  7
+    16	i2c_algo_bit           16384  1 radeon
+    17	drm_kms_helper        131072  1 radeon
+    18	ttm                    90112  1 radeon
+    19	serio_raw              16384  0
+    20	ata_generic            16384  0
+    21	drm                   335872  10 ttm,drm_kms_helper,radeon
+    22	mii                    16384  0
+
+this after unload mii, fjes, r8169 mods
+
+****************************************************************
+
+     1	Module                  Size  Used by
+     2	fuse                   98304  5
+     3	kvm_intel             184320  0
+     4	kvm                   552960  1 kvm_intel
+     5	irqbypass              16384  1 kvm
+     6	acpi_cpufreq           20480  1
+     7	nfsd                  323584  1
+     8	auth_rpcgss            61440  1 nfsd
+     9	nfs_acl                16384  1 nfsd
+    10	lockd                  90112  1 nfsd
+    11	grace                  16384  2 nfsd,lockd
+    12	sunrpc                319488  7 nfsd,auth_rpcgss,lockd,nfs_acl
+    13	amdkfd                131072  1
+    14	amd_iommu_v2           20480  1 amdkfd
+    15	radeon               1503232  7
+    16	i2c_algo_bit           16384  1 radeon
+    17	drm_kms_helper        131072  1 radeon
+    18	ttm                    90112  1 radeon
+    19	serio_raw              16384  0
+    20	ata_generic            16384  0
+    21	drm                   335872  10 ttm,drm_kms_helper,radeon
+
+this after unload mii on second time
+
+
+Mention here the system was build under LVM over EXT4 except SDA1
+and SDA2, both over NTFS windows File System
+
+****************************************************************
+
+total 0
+drwxr-xr-x. 2 root root 0 abr 21 09:48 ./
+dr-xr-xr-x. 6 root root 0 abr 21 09:48 ../
+-r--r--r--. 1 root root 0 abr 21 09:48 export_features
+-r--r--r--. 1 root root 0 abr 21 09:48 exports
+-rw-------. 1 root root 0 abr 21 09:48 filehandle
+-rw-r--r--. 1 root root 0 abr 21 09:48 max_block_size
+-rw-r--r--. 1 root root 0 abr 21 09:48 max_connections
+-rw-------. 1 root root 0 abr 21 09:48 nfsv4gracetime
+-rw-------. 1 root root 0 abr 21 09:48 nfsv4leasetime
+-rw-------. 1 root root 0 abr 21 09:48 nfsv4recoverydir
+-r--r--r--. 1 root root 0 abr 21 09:48 pool_stats
+-rw-------. 1 root root 0 abr 21 09:48 pool_threads
+-rw-r--r--. 1 root root 0 abr 21 09:48 portlist
+-r--r--r--. 1 root root 0 abr 21 09:48 reply_cache_stats
+-r--r--r--. 1 root root 0 abr 21 09:48 supported_krb5_enctypes
+-rw-------. 1 root root 0 abr 21 09:48 threads
+-rw-------. 1 root root 0 abr 21 09:48 unlock_filesystem
+-rw-------. 1 root root 0 abr 21 09:48 unlock_ip
+-rw-r--r--. 1 root root 0 abr 21 09:48 v4_end_grace
+-rw-------. 1 root root 0 abr 21 09:48 versions
+******************************************************
+
+     1	Module                  Size  Used by
+     2	fuse                   98304  5
+     3	kvm_intel             184320  0
+     4	kvm                   552960  1 kvm_intel
+     5	irqbypass              16384  1 kvm
+     6	acpi_cpufreq           20480  1
+     7	nfsd                  323584  1
+     8	auth_rpcgss            61440  1 nfsd
+     9	nfs_acl                16384  1 nfsd
+    10	lockd                  90112  1 nfsd
+    11	grace                  16384  2 nfsd,lockd
+    12	sunrpc                319488  7 nfsd,auth_rpcgss,lockd,nfs_acl
+    13	amdkfd                131072  1
+    14	amd_iommu_v2           20480  1 amdkfd
+    15	radeon               1503232  7
+    16	i2c_algo_bit           16384  1 radeon
+    17	drm_kms_helper        131072  1 radeon
+    18	ttm                    90112  1 radeon
+    19	serio_raw              16384  0
+    20	ata_generic            16384  0
+    21	drm                   335872  10 ttm,drm_kms_helper,radeon

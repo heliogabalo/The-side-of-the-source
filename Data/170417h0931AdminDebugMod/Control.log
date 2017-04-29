@@ -1,0 +1,17 @@
+******************************\n
+    11	ebtable_nat            16384  1
+    12	ebtable_broute         16384  1
+    13	bridge                126976  1 ebtable_broute
+    32	ebtable_filter         16384  1
+    33	ebtables               32768  3 ebtable_broute,ebtable_nat,ebtable_filter
+******************************\n
+filename:       /lib/modules/4.5.5-300.fc24.x86_64/kernel/net/bridge/netfilter/ebtables.ko.xz
+license:        GPL
+depends:        
+intree:         Y
+vermagic:       4.5.5-300.fc24.x86_64 SMP mod_unload 
+******************************
+
+bluetooth mods aded to blacklist
+******************************
+

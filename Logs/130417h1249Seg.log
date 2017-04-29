@@ -1,0 +1,1486 @@
+<!--nombre archivo "1" -->
+
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<script language="JavaScript" src="/routine_data.js"></script>
+<script language="JavaScript" type="text/javascript" src="/msg_en.js"></script>
+<script language="JavaScript">
+setTimeout('parent.location.href="/login.stm";',300000);
+var remote_clt=0;
+var sipp_proxy_flag=1;
+var pcp_gui_enable=1;
+var nat_from_upnp=1;
+var my_auto_detect_fxo=0;
+var my_isolate_wlan=1;
+var X02_pf=1;
+var adsl_para_page=0;
+var my_ddns=1;
+var my_wlan_mac=0;
+var my_snmp=0;
+var my_dialup=0;
+var my_printer=0;
+var my_bridge=0;
+var my_8021x=0;
+var my_tiny=0;
+var my_vpn=0;
+var my_upnp=1;
+var my_usb=1;
+var my_usb_storage=1;
+var my_usb_printer=1;
+var operation_func=10;
+var my_wps=1;
+var my_wcn=1;
+var my_ralink_ver=0;
+var feature_func=1;
+var product_code=1024020;
+var my_file_share=1;
+var my_umts=0;
+var vlan_func_enable=1;
+var vlan_ip="";
+var vlan_mask="";
+var my_qos=2;
+var my_isdn=0;
+var my_voip=1;
+var FXS_Num=8;
+var my_voip_h323=0;
+var my_voip_sip=1;
+var ipsec_func=0;
+var pptp_func=0;
+var br_dhcpd_func=0;
+var iptv_func=0;
+var static_rt_func=0;
+var my_upnpIgd=1;
+var my_upnpAv=1;
+var PM="DSL Router";
+var BACKUP_LOG_NAME="dsl_log.log";
+var BACKUP_CONFIG_NAME="config_dsl.bin";
+var resetButton=0;
+var hasUpgrade=0;
+var ftpcRun=0;
+var dhcpd_fixip_func=1;
+var vendor_code=6;
+var my_http_redir=0;
+var arcor_umtsPin=0;
+var my_ncidd=0;
+var ipv6_service=1;
+var ipv6_enable=1;
+var hyper_link="<a href='http://www.arcadyan.com' target='_blank'>";
+var urlname="www.arcadyan.com";
+var product_name="Arcadyan ARV7519";
+var vendor_name="DSL-EasyBox";
+var company="Arcadyan Inc.";
+var mouseover="'#FF6600'";
+var mouseout="'#FFFFFF'";
+var wizardbg="'#FFFFFF'";
+var menu_link="<td height='0' align='left' bgColor='#FFFFFF' valign='middle'>";
+var vendor_no=2;
+var helplink="<p></p>";
+var logo_fn="logo.gif";
+var help_hyper_link="<a href='http://www.arcadyan.com/802' target='_blank'>";
+var help_urlname="www.arcadyan.com/802";
+var fw_hyper_link="<a href='http://www.arcadyan.com' target='_blank'>";
+var fw_urlname="www.arcadyan.com";
+var product_pic_fn="product_zz.gif";
+
+
+// ++++++++++++++++++++++++++  USB FTP ++++++++++++++++++++++
+var ftpFunc=0;
+var ftpRemore=0;
+
+function stZrk(){
+	top.frames[2].location.href = "usb_ftp_server.stm";
+}
+
+var profile_num = 0;
+var preSmbEnb;
+var extVar = 0;
+var defDiskSelect = -1;
+var maxSupportNum = 2;
+var shareMaxNum = 4;
+var diskMaxNum = 4;
+var prMaxNum = 1;
+var cpName = 'livebox';
+var gpName = 'WORKGROUP';
+var volMaxNum = 8;
+var mountMaxNum = 16;
+var usb_ms_devName = new Array(4);
+var usb_ms_vendor = new Array(4);
+var usb_ms_model = new Array(4);
+var usb_ms_drive_Info = new Array(4);
+var usb_ms_serial = new Array(4);
+var usb_ms_type = new Array(4);
+var usb_ms_removable = new Array(4);
+var usb_ms_reload = new Array(4);
+var reloadCnt = 0;
+var part_Num = new Array(4);
+var drive_Info = new Array(4);
+var dev_type = new Array(4);
+var dev_remove = new Array(4);
+var dev_eject = new Array(4);
+var pr_Info = new Array(1);
+part_Num[0] = 0;
+drive_Info[0] = '';
+dev_type[0] = 0;
+dev_remove[0] = false;
+dev_eject[0] = false;
+part_Num[1] = 0;
+drive_Info[1] = '';
+dev_type[1] = 0;
+dev_remove[1] = false;
+dev_eject[1] = false;
+part_Num[2] = 0;
+drive_Info[2] = '';
+dev_type[2] = 0;
+dev_remove[2] = false;
+dev_eject[2] = false;
+part_Num[3] = 0;
+drive_Info[3] = '';
+dev_type[3] = 0;
+dev_remove[3] = false;
+dev_eject[3] = false;
+var diskNum = 0;
+pr_Info[0] = '';
+var prUINum = 1;
+var prNum = 0;
+var ftpMaxNum = 16;
+
+
+var proIdx = 1;
+var diskSelect = 0;
+
+profile_num=16;
+var enb_value=new Array(16);
+var partition_value=new Array(16);
+var disk_value=new Array(16);
+var user_value=new Array(16);
+var pathValue=new Array(16);
+var pass_value=new Array(16);
+var secure_value=new Array(16);
+enb_value[0]=0;
+partition_value[0]=1;
+disk_value[0]=0;
+user_value[0]="";
+pathValue[0] = '';
+pass_value[0]="";
+secure_value[0]=0;
+enb_value[1]=0;
+partition_value[1]=1;
+disk_value[1]=0;
+user_value[1]="";
+pathValue[1] = '';
+pass_value[1]="";
+secure_value[1]=0;
+enb_value[2]=0;
+partition_value[2]=1;
+disk_value[2]=0;
+user_value[2]="";
+pathValue[2] = '';
+pass_value[2]="";
+secure_value[2]=0;
+enb_value[3]=0;
+partition_value[3]=1;
+disk_value[3]=0;
+user_value[3]="";
+pathValue[3] = '';
+pass_value[3]="";
+secure_value[3]=0;
+enb_value[4]=0;
+partition_value[4]=1;
+disk_value[4]=0;
+user_value[4]="";
+pathValue[4] = '';
+pass_value[4]="";
+secure_value[4]=0;
+enb_value[5]=0;
+partition_value[5]=1;
+disk_value[5]=0;
+user_value[5]="";
+pathValue[5] = '';
+pass_value[5]="";
+secure_value[5]=0;
+enb_value[6]=0;
+partition_value[6]=1;
+disk_value[6]=0;
+user_value[6]="";
+pathValue[6] = '';
+pass_value[6]="";
+secure_value[6]=0;
+enb_value[7]=0;
+partition_value[7]=1;
+disk_value[7]=0;
+user_value[7]="";
+pathValue[7] = '';
+pass_value[7]="";
+secure_value[7]=0;
+enb_value[8]=0;
+partition_value[8]=1;
+disk_value[8]=0;
+user_value[8]="";
+pathValue[8] = '';
+pass_value[8]="";
+secure_value[8]=0;
+enb_value[9]=0;
+partition_value[9]=1;
+disk_value[9]=0;
+user_value[9]="";
+pathValue[9] = '';
+pass_value[9]="";
+secure_value[9]=0;
+enb_value[10]=0;
+partition_value[10]=1;
+disk_value[10]=0;
+user_value[10]="";
+pathValue[10] = '';
+pass_value[10]="";
+secure_value[10]=0;
+enb_value[11]=0;
+partition_value[11]=1;
+disk_value[11]=0;
+user_value[11]="";
+pathValue[11] = '';
+pass_value[11]="";
+secure_value[11]=0;
+enb_value[12]=0;
+partition_value[12]=1;
+disk_value[12]=0;
+user_value[12]="";
+pathValue[12] = '';
+pass_value[12]="";
+secure_value[12]=0;
+enb_value[13]=0;
+partition_value[13]=1;
+disk_value[13]=0;
+user_value[13]="";
+pathValue[13] = '';
+pass_value[13]="";
+secure_value[13]=0;
+enb_value[14]=0;
+partition_value[14]=1;
+disk_value[14]=0;
+user_value[14]="";
+pathValue[14] = '';
+pass_value[14]="";
+secure_value[14]=0;
+enb_value[15]=0;
+partition_value[15]=1;
+disk_value[15]=0;
+user_value[15]="";
+pathValue[15] = '';
+pass_value[15]="";
+secure_value[15]=0;
+
+if (maxSupportNum > 1) {
+	disk_value[proIdx] = diskSelect;
+}
+var diskId = disk_value[proIdx];
+var range = ftpMaxNum / maxSupportNum;
+
+var mountNum = 0;
+var shEnable = new Array(4);
+var shDisk = new Array(4);
+var shVol = new Array(4);
+var shName = new Array(4);
+var shPathStr = new Array(4);
+var volNum = new Array(4);
+var resStartIdx = new Array(4);
+var resEndIdx = new Array(4);
+var volFsIdx = new Array(4);
+var volLabelMix = new Array(4);
+var volLabel = new Array(4);
+var volSerial = new Array(4);
+var volType = new Array(4);
+var volTypeID = new Array(4);
+var volID = new Array(4);
+var volMount = new Array(4);
+var volValid = new Array(4);
+var volSize = new Array(4);
+var volFree = new Array(4);
+var partInfo = new Array(4);
+var volShareNum = new Array(4);
+for (i = 0 ; i < 4 ; i++) {
+	resStartIdx[i] = new Array(9);
+	resEndIdx[i] = new Array(9);
+	volFsIdx[i] = new Array(9);
+	volLabelMix[i] = new Array(9);
+	volLabel[i] = new Array(9);
+	volSerial[i] = new Array(9);
+	volType[i] = new Array(9);
+	volTypeID[i] = new Array(9);
+	volID[i] = new Array(9);
+	volMount[i] = new Array(9);
+	volValid[i] = new Array(9);
+	volSize[i] = new Array(9);
+	volFree[i] = new Array(9);
+	partInfo[i] = new Array(9);
+	volShareNum[i] = new Array(9);
+}
+shEnable[0] = 0;
+shDisk[0] = 0;
+shVol[0] = 0;
+shName[0] = 'Printer';
+shPathStr[0] = '';
+shEnable[1] = 0;
+shDisk[1] = 0;
+shVol[1] = 0;
+shName[1] = 'Disk_Array';
+shPathStr[1] = '\\';
+shEnable[2] = 1;
+shDisk[2] = 255;
+shVol[2] = 0;
+shName[2] = 'discosUSB';
+shPathStr[2] = '\\mnt\\';
+shEnable[3] = 1;
+shDisk[3] = 255;
+shVol[3] = 0;
+shName[3] = 'liveboxNAS';
+shPathStr[3] = '\\mnt\\';
+resStartIdx[0][0] = -1;
+resEndIdx[0][0] = -1;
+resStartIdx[0][1] = -1;
+resEndIdx[0][1] = -1;
+resStartIdx[0][2] = -1;
+resEndIdx[0][2] = -1;
+resStartIdx[0][3] = -1;
+resEndIdx[0][3] = -1;
+resStartIdx[0][4] = -1;
+resEndIdx[0][4] = -1;
+resStartIdx[0][5] = -1;
+resEndIdx[0][5] = -1;
+resStartIdx[0][6] = -1;
+resEndIdx[0][6] = -1;
+resStartIdx[0][7] = -1;
+resEndIdx[0][7] = 0;
+volFsIdx[0][0] = -1;
+volLabelMix[0][0] = 'No Disk';
+volID[0][0] = 0;
+volValid[0][0] = true;
+volFsIdx[0][1] = -1;
+volValid[0][1] = false;
+volType[0][1] = 'Unknown';
+volLabelMix[0][1] = ''
+volLabel[0][1] = ''
+volID[0][1] = 1;
+volTypeID[0][1] = 0;
+volMount[0][1] = -1;
+partInfo[0][1] = 'Partition1 (Unknown)';
+
+volFsIdx[0][2] = -1;
+volValid[0][2] = false;
+volType[0][2] = 'Unknown';
+volLabelMix[0][2] = ''
+volLabel[0][2] = ''
+volID[0][2] = 1;
+volTypeID[0][2] = 0;
+volMount[0][2] = -1;
+partInfo[0][2] = 'Partition2 (Unknown)';
+
+volFsIdx[0][3] = -1;
+volValid[0][3] = false;
+volType[0][3] = 'Unknown';
+volLabelMix[0][3] = ''
+volLabel[0][3] = ''
+volID[0][3] = 1;
+volTypeID[0][3] = 0;
+volMount[0][3] = -1;
+partInfo[0][3] = 'Partition3 (Unknown)';
+
+volFsIdx[0][4] = -1;
+volValid[0][4] = false;
+volType[0][4] = 'Unknown';
+volLabelMix[0][4] = ''
+volLabel[0][4] = ''
+volID[0][4] = 1;
+volTypeID[0][4] = 0;
+volMount[0][4] = -1;
+partInfo[0][4] = 'Partition4 (Unknown)';
+
+volFsIdx[0][5] = -1;
+volValid[0][5] = false;
+volType[0][5] = 'Unknown';
+volLabelMix[0][5] = ''
+volLabel[0][5] = ''
+volID[0][5] = 1;
+volTypeID[0][5] = 0;
+volMount[0][5] = -1;
+partInfo[0][5] = 'Partition5 (Unknown)';
+
+volFsIdx[0][6] = -1;
+volValid[0][6] = false;
+volType[0][6] = 'Unknown';
+volLabelMix[0][6] = ''
+volLabel[0][6] = ''
+volID[0][6] = 1;
+volTypeID[0][6] = 0;
+volMount[0][6] = -1;
+partInfo[0][6] = 'Partition6 (Unknown)';
+
+volFsIdx[0][7] = -1;
+volValid[0][7] = false;
+volType[0][7] = 'Unknown';
+volLabelMix[0][7] = ''
+volLabel[0][7] = ''
+volID[0][7] = 1;
+volTypeID[0][7] = 0;
+volMount[0][7] = -1;
+partInfo[0][7] = 'Partition7 (Unknown)';
+
+volFsIdx[0][8] = -1;
+volValid[0][8] = false;
+volType[0][8] = 'Unknown';
+volLabelMix[0][8] = ''
+volLabel[0][8] = ''
+volID[0][8] = 1;
+volTypeID[0][8] = 0;
+volMount[0][8] = -1;
+partInfo[0][8] = 'Partition8 (Unknown)';
+
+volNum[0] = 9;
+resStartIdx[1][0] = -1;
+resEndIdx[1][0] = -1;
+resStartIdx[1][1] = -1;
+resEndIdx[1][1] = -1;
+resStartIdx[1][2] = -1;
+resEndIdx[1][2] = -1;
+resStartIdx[1][3] = -1;
+resEndIdx[1][3] = -1;
+resStartIdx[1][4] = -1;
+resEndIdx[1][4] = -1;
+resStartIdx[1][5] = -1;
+resEndIdx[1][5] = -1;
+resStartIdx[1][6] = -1;
+resEndIdx[1][6] = -1;
+resStartIdx[1][7] = -1;
+resEndIdx[1][7] = 0;
+volFsIdx[1][0] = -1;
+volLabelMix[1][0] = 'No Disk';
+volID[1][0] = 0;
+volValid[1][0] = true;
+volFsIdx[1][1] = -1;
+volValid[1][1] = false;
+volType[1][1] = 'Unknown';
+volLabelMix[1][1] = ''
+volLabel[1][1] = ''
+volID[1][1] = 1;
+volTypeID[1][1] = 0;
+volMount[1][1] = -1;
+partInfo[1][1] = 'Partition1 (Unknown)';
+
+volFsIdx[1][2] = -1;
+volValid[1][2] = false;
+volType[1][2] = 'Unknown';
+volLabelMix[1][2] = ''
+volLabel[1][2] = ''
+volID[1][2] = 1;
+volTypeID[1][2] = 0;
+volMount[1][2] = -1;
+partInfo[1][2] = 'Partition2 (Unknown)';
+
+volFsIdx[1][3] = -1;
+volValid[1][3] = false;
+volType[1][3] = 'Unknown';
+volLabelMix[1][3] = ''
+volLabel[1][3] = ''
+volID[1][3] = 1;
+volTypeID[1][3] = 0;
+volMount[1][3] = -1;
+partInfo[1][3] = 'Partition3 (Unknown)';
+
+volFsIdx[1][4] = -1;
+volValid[1][4] = false;
+volType[1][4] = 'Unknown';
+volLabelMix[1][4] = ''
+volLabel[1][4] = ''
+volID[1][4] = 1;
+volTypeID[1][4] = 0;
+volMount[1][4] = -1;
+partInfo[1][4] = 'Partition4 (Unknown)';
+
+volFsIdx[1][5] = -1;
+volValid[1][5] = false;
+volType[1][5] = 'Unknown';
+volLabelMix[1][5] = ''
+volLabel[1][5] = ''
+volID[1][5] = 1;
+volTypeID[1][5] = 0;
+volMount[1][5] = -1;
+partInfo[1][5] = 'Partition5 (Unknown)';
+
+volFsIdx[1][6] = -1;
+volValid[1][6] = false;
+volType[1][6] = 'Unknown';
+volLabelMix[1][6] = ''
+volLabel[1][6] = ''
+volID[1][6] = 1;
+volTypeID[1][6] = 0;
+volMount[1][6] = -1;
+partInfo[1][6] = 'Partition6 (Unknown)';
+
+volFsIdx[1][7] = -1;
+volValid[1][7] = false;
+volType[1][7] = 'Unknown';
+volLabelMix[1][7] = ''
+volLabel[1][7] = ''
+volID[1][7] = 1;
+volTypeID[1][7] = 0;
+volMount[1][7] = -1;
+partInfo[1][7] = 'Partition7 (Unknown)';
+
+volFsIdx[1][8] = -1;
+volValid[1][8] = false;
+volType[1][8] = 'Unknown';
+volLabelMix[1][8] = ''
+volLabel[1][8] = ''
+volID[1][8] = 1;
+volTypeID[1][8] = 0;
+volMount[1][8] = -1;
+partInfo[1][8] = 'Partition8 (Unknown)';
+
+volNum[1] = 9;
+resStartIdx[2][0] = -1;
+resEndIdx[2][0] = -1;
+resStartIdx[2][1] = -1;
+resEndIdx[2][1] = -1;
+resStartIdx[2][2] = -1;
+resEndIdx[2][2] = -1;
+resStartIdx[2][3] = -1;
+resEndIdx[2][3] = -1;
+resStartIdx[2][4] = -1;
+resEndIdx[2][4] = -1;
+resStartIdx[2][5] = -1;
+resEndIdx[2][5] = -1;
+resStartIdx[2][6] = -1;
+resEndIdx[2][6] = -1;
+resStartIdx[2][7] = -1;
+resEndIdx[2][7] = 0;
+volFsIdx[2][0] = -1;
+volLabelMix[2][0] = 'No Disk';
+volID[2][0] = 0;
+volValid[2][0] = true;
+volFsIdx[2][1] = -1;
+volValid[2][1] = false;
+volType[2][1] = 'Unknown';
+volLabelMix[2][1] = ''
+volLabel[2][1] = ''
+volID[2][1] = 1;
+volTypeID[2][1] = 0;
+volMount[2][1] = -1;
+partInfo[2][1] = 'Partition1 (Unknown)';
+
+volFsIdx[2][2] = -1;
+volValid[2][2] = false;
+volType[2][2] = 'Unknown';
+volLabelMix[2][2] = ''
+volLabel[2][2] = ''
+volID[2][2] = 1;
+volTypeID[2][2] = 0;
+volMount[2][2] = -1;
+partInfo[2][2] = 'Partition2 (Unknown)';
+
+volFsIdx[2][3] = -1;
+volValid[2][3] = false;
+volType[2][3] = 'Unknown';
+volLabelMix[2][3] = ''
+volLabel[2][3] = ''
+volID[2][3] = 1;
+volTypeID[2][3] = 0;
+volMount[2][3] = -1;
+partInfo[2][3] = 'Partition3 (Unknown)';
+
+volFsIdx[2][4] = -1;
+volValid[2][4] = false;
+volType[2][4] = 'Unknown';
+volLabelMix[2][4] = ''
+volLabel[2][4] = ''
+volID[2][4] = 1;
+volTypeID[2][4] = 0;
+volMount[2][4] = -1;
+partInfo[2][4] = 'Partition4 (Unknown)';
+
+volFsIdx[2][5] = -1;
+volValid[2][5] = false;
+volType[2][5] = 'Unknown';
+volLabelMix[2][5] = ''
+volLabel[2][5] = ''
+volID[2][5] = 1;
+volTypeID[2][5] = 0;
+volMount[2][5] = -1;
+partInfo[2][5] = 'Partition5 (Unknown)';
+
+volFsIdx[2][6] = -1;
+volValid[2][6] = false;
+volType[2][6] = 'Unknown';
+volLabelMix[2][6] = ''
+volLabel[2][6] = ''
+volID[2][6] = 1;
+volTypeID[2][6] = 0;
+volMount[2][6] = -1;
+partInfo[2][6] = 'Partition6 (Unknown)';
+
+volFsIdx[2][7] = -1;
+volValid[2][7] = false;
+volType[2][7] = 'Unknown';
+volLabelMix[2][7] = ''
+volLabel[2][7] = ''
+volID[2][7] = 1;
+volTypeID[2][7] = 0;
+volMount[2][7] = -1;
+partInfo[2][7] = 'Partition7 (Unknown)';
+
+volFsIdx[2][8] = -1;
+volValid[2][8] = false;
+volType[2][8] = 'Unknown';
+volLabelMix[2][8] = ''
+volLabel[2][8] = ''
+volID[2][8] = 1;
+volTypeID[2][8] = 0;
+volMount[2][8] = -1;
+partInfo[2][8] = 'Partition8 (Unknown)';
+
+volNum[2] = 9;
+resStartIdx[3][0] = -1;
+resEndIdx[3][0] = -1;
+resStartIdx[3][1] = -1;
+resEndIdx[3][1] = -1;
+resStartIdx[3][2] = -1;
+resEndIdx[3][2] = -1;
+resStartIdx[3][3] = -1;
+resEndIdx[3][3] = -1;
+resStartIdx[3][4] = -1;
+resEndIdx[3][4] = -1;
+resStartIdx[3][5] = -1;
+resEndIdx[3][5] = -1;
+resStartIdx[3][6] = -1;
+resEndIdx[3][6] = -1;
+resStartIdx[3][7] = -1;
+resEndIdx[3][7] = 0;
+volFsIdx[3][0] = -1;
+volLabelMix[3][0] = 'No Disk';
+volID[3][0] = 0;
+volValid[3][0] = true;
+volFsIdx[3][1] = -1;
+volValid[3][1] = false;
+volType[3][1] = 'Unknown';
+volLabelMix[3][1] = ''
+volLabel[3][1] = ''
+volID[3][1] = 1;
+volTypeID[3][1] = 0;
+volMount[3][1] = -1;
+partInfo[3][1] = 'Partition1 (Unknown)';
+
+volFsIdx[3][2] = -1;
+volValid[3][2] = false;
+volType[3][2] = 'Unknown';
+volLabelMix[3][2] = ''
+volLabel[3][2] = ''
+volID[3][2] = 1;
+volTypeID[3][2] = 0;
+volMount[3][2] = -1;
+partInfo[3][2] = 'Partition2 (Unknown)';
+
+volFsIdx[3][3] = -1;
+volValid[3][3] = false;
+volType[3][3] = 'Unknown';
+volLabelMix[3][3] = ''
+volLabel[3][3] = ''
+volID[3][3] = 1;
+volTypeID[3][3] = 0;
+volMount[3][3] = -1;
+partInfo[3][3] = 'Partition3 (Unknown)';
+
+volFsIdx[3][4] = -1;
+volValid[3][4] = false;
+volType[3][4] = 'Unknown';
+volLabelMix[3][4] = ''
+volLabel[3][4] = ''
+volID[3][4] = 1;
+volTypeID[3][4] = 0;
+volMount[3][4] = -1;
+partInfo[3][4] = 'Partition4 (Unknown)';
+
+volFsIdx[3][5] = -1;
+volValid[3][5] = false;
+volType[3][5] = 'Unknown';
+volLabelMix[3][5] = ''
+volLabel[3][5] = ''
+volID[3][5] = 1;
+volTypeID[3][5] = 0;
+volMount[3][5] = -1;
+partInfo[3][5] = 'Partition5 (Unknown)';
+
+volFsIdx[3][6] = -1;
+volValid[3][6] = false;
+volType[3][6] = 'Unknown';
+volLabelMix[3][6] = ''
+volLabel[3][6] = ''
+volID[3][6] = 1;
+volTypeID[3][6] = 0;
+volMount[3][6] = -1;
+partInfo[3][6] = 'Partition6 (Unknown)';
+
+volFsIdx[3][7] = -1;
+volValid[3][7] = false;
+volType[3][7] = 'Unknown';
+volLabelMix[3][7] = ''
+volLabel[3][7] = ''
+volID[3][7] = 1;
+volTypeID[3][7] = 0;
+volMount[3][7] = -1;
+partInfo[3][7] = 'Partition7 (Unknown)';
+
+volFsIdx[3][8] = -1;
+volValid[3][8] = false;
+volType[3][8] = 'Unknown';
+volLabelMix[3][8] = ''
+volLabel[3][8] = ''
+volID[3][8] = 1;
+volTypeID[3][8] = 0;
+volMount[3][8] = -1;
+partInfo[3][8] = 'Partition8 (Unknown)';
+
+volNum[3] = 9;
+mountNum = 0;
+
+
+var stri;
+function getDISK() {
+	var tmpSt, k4;
+
+	//var volType_name = "volType" + k4;
+	k4 = document.tF0.disk_value.value;
+	if (k4 == 99) partNum = -1;
+	else partNum = part_Num[k4] ;
+
+	stri = '<select size="1" name="ftp_partition" onChange="getNum();">';
+	stri += '<option value=99>-- Select Volumen --</option>';
+	if (partNum != -1) {
+		for (j = 1 ; j < (partNum + 1) ; j++) {
+			if (volMount[diskId][j] > 0) {
+				if (j == partition_value[proIdx]) tmpSt = ' selected';
+				else tmpSt = '';
+				stri += '<option value='+j+tmpSt+'>'+j+'. '+volLabelMix[k4][j]+'</option>';
+			}
+		}
+	}
+    stri += '</select>';
+
+	document.getElementById('keylen').innerHTML = stri;
+}
+
+var win = null;
+function openBrowse() {
+	//var volIdx = document.tF0.ftp_partition.value;
+	//var dskIdx = document.tF0.disk_value.value;
+	var volIdx = 0;
+	var dskIdx = -1;
+	var arg = volIdx * 1000 + proIdx + '/' + dskIdx;
+	var theURL = '/usb_ftp_tree.stm/' + arg;
+
+	//if ((dskIdx == 99) || (volIdx == 99)) {
+	//	alert(errVolume);
+	//	return false;
+	//}
+
+	if (window.win && (window.win.closed == false)) {
+		window.win.close();
+	}
+
+	browseIdx = proIdx;
+	win = window.open(theURL,'tree','scrollbars=yes,resizable=no,width=600,height=508');
+	return true;
+}
+
+var mountExceed = "Partition mounted number exceed!! Maximun allow mount " + mountMaxNum + " partitions.";
+
+function getNum() {
+	document.tF0.curPath.value = '\\';
+	if (document.tF0.ftp_partition.value != 99) {
+		document.tF0.curPath.disabled = false;
+	}
+	else {
+		document.tF0.curPath.disabled = true;
+	}
+}
+
+function removeRoot(param){
+	var out;
+	if (param.length > 0) {
+		if (param.substring(0,4) == '\\mnt')
+			out = param.substring(4, param.length);
+	}
+
+	return out;
+}
+
+function setFirstLoad() {
+	document.tF0.proIdx.value = proIdx;
+	document.tF0.ftpid.value = user_value[proIdx];
+	document.tF0.ftpPass.value = pass_value[proIdx];
+	document.tF0.ftpPassV.value = pass_value[proIdx];
+	document.tF0.access_mode.selectedIndex = secure_value[proIdx];
+	if (pathValue[proIdx] == '')
+		document.tF0.curPath.value = '\\';
+	else
+		document.tF0.curPath.value = removeRoot(pathValue[proIdx]);
+	//document.tF0.disk_value.value = disk_value[proIdx];
+
+	if (maxSupportNum > 1) {
+		//document.tF0.disk_value.value = disk_value[proIdx];
+		if ((proIdx % range) == 0) {
+			document.tF0.ftpid.value = "anonymous";
+		}
+	}
+
+	//if (document.tF0.disk_value.value != 99) {
+	//	if (document.tF0.ftp_partition.value == 99)
+	//		document.tF0.curPath.disabled = true;
+	//	else
+	//		document.tF0.curPath.disabled = false;
+	//}
+	//else {
+	//	document.tF0.ftp_partition.disabled = true;
+	//	document.tF0.curPath.disabled = true;
+	//}
+
+	if (document.tF0.ftpid.value != '') document.tF0.ftpid.disabled = true;
+}
+function setFTPDEnable(isEnable){
+	isEnable = !isEnable;
+	document.tF0.ftpPass.disabled = isEnable;
+	document.tF0.ftpPassV.disabled = isEnable;
+	document.tF0.ftpid.disabled = isEnable;
+	document.tF0.access_mode.disabled = isEnable;
+	document.tF0.curPath.disabled = isEnable;
+
+}
+function updateRemoteEnable(){
+	setFTPDEnable(document.tF0.remoteEnable.checked);
+}
+function evaltFUSBFTP() {
+	var k, tempStr;
+	setFTPDEnable(true);
+	if(document.tF0.remoteEnable.checked == true){
+		// make sure volume index is valid
+		//if (document.tF0.ftp_partition.value == 99) {
+		//	alert(errVolume);
+		//	document.tF0.ftp_partition.focus();
+		//	return false;
+		//}
+
+		// compare password mismatch
+		if (document.tF0.ftpPass.value != document.tF0.ftpPassV.value) {
+			alert(pwd_match_1);
+			document.tF0.ftpPass.value = "";
+			document.tF0.ftpPassV.value = "";
+			document.tF0.ftpPass.focus();
+			return false;
+		}
+
+		// check path empty
+		if (isBlank(document.tF0.curPath.value)) {
+		alert('No se ha introducido una ruta válida.');
+			document.tF0.curPath.focus();
+			return false;
+		}
+		if (document.tF0.curPath.value == '\\')
+			document.tF0.curPath.value = '\\mnt';
+		else
+			document.tF0.curPath.value = '\\mnt' + document.tF0.curPath.value;
+
+	if (isInvalidPath(document.tF0.curPath.value, "Ruta")) {
+			document.tF0.curPath.focus();
+			return false;
+		}
+
+		// check username duplicate
+		for (k = 0 ; k < profile_num ; k++) {
+			if (k == proIdx) continue;
+			if ((document.tF0.ftpid.value == user_value[k]) && ((k % range) != 0)) {
+			alert('El campo Usuario está vacío.');
+				document.tF0.ftpid.focus();
+				return false;
+			}
+		}
+		document.tF0.ftpidHid.value = document.tF0.ftpid.value;
+
+		// check userid empty
+		if (isBlank(document.tF0.ftpid.value)) {
+		alert('La Usuario está vacía.');
+			document.tF0.ftpid.focus();
+			return false;
+		}
+
+		// check blank in password
+		if (document.tF0.ftpPass.value.length>0) {
+			tempStr = new String(document.tF0.ftpPass.value);
+			if (tempStr.charCodeAt(0) == 32 || tempStr.charCodeAt(tempStr.length-1) == 32) {
+			alert('El primero y el último carácter de la contraseña no puede estar en blanco.');
+				document.tF0.ftpPass.value = "";
+				document.tF0.ftpPassV.value = "";
+				document.tF0.ftpPass.focus();
+				return false;
+			}
+		}
+
+	if (isInvalidDomain(document.tF0.ftpid.value, "Usuario")) {
+			document.tF0.ftpid.focus();
+			return false;
+		}
+	}
+}
+function evaltFFirewallURL()
+{
+	var i,n,idx, idx2;
+	var value = new Array(30);
+
+ 	for (i=1; i<=30; i++) {
+		n 	  = "B" + i;
+		idx   = getElementsByFieldName(document.tF0, n);
+		value[i-1] = document.tF0.elements[idx].value;
+
+		var str1 = value[i-1];
+		var str2 = str1.toLowerCase();
+		if (str2.match("karma") == "karma") { alert("This keyword is reserved word"); return false; }
+		if (str2.match("tr069") == "tr069") { alert("This keyword is reserved word"); return false; }
+		if (str2.match("orange") == "orange") { alert("This keyword is reserved word"); return false; }
+		if (str2.match("yacom") == "yacom") { alert("This keyword is reserved word"); return false; }
+
+		if (isSpecialChar(value,"Site " + i)) { return false; }
+
+		if (isEmpty(value[i-1]) == true)
+			continue;
+
+		idx = i-1;
+		for (idx2=0; idx2<idx; idx2++) {
+			if (isEmpty(value[idx2]) == true)
+				continue;
+
+			if (value[idx2] == value[idx]) {
+				//alert("The URL/Keyword settings of Site " + (idx2+1) + " and Site "+ (idx+1) + " are the same.");
+				alert(url_dup+ (idx2+1) +url_dup1+ (idx+1) +T_same);
+				return false;
+			}
+		}
+
+	}
+
+	return true;
+}
+function unloadHandler() {
+	if (window.win && (window.win.closed == false)) window.win.close();
+}
+
+function focusHandler() {
+	if (window.win && (window.win.closed == false)) window.win.focus();
+}
+// ----------------------  USB FTP --------------------------
+// ++++++++++++++++++++++++++  Mail Notification ++++++++++++++++++++++
+mail_addr="";
+smtp_addr="smtp.orange.es";
+pop_username="miliveboxmail@orange.es";
+pop_password="@#No password$%";
+event_missed_call=false;
+event_new_ip=false;
+event_new_device=false;
+
+// ++++++++++++++++++++++++++  Smart WiFi ++++++++++++++++++++++
+wpa_psk=0;
+sharedkey="6F3C9254";
+
+// ++++++++++++++++++++++++++  Firewall URL ++++++++++++++++++++++
+var urlPolicy=0;
+
+var urls = new Array(30);
+urls[0]="2a01:c50e:3605:2500";
+urls[1]="";
+urls[2]="";
+urls[3]="";
+urls[4]="";
+urls[5]="";
+urls[6]="";
+urls[7]="";
+urls[8]="";
+urls[9]="";
+urls[10]="";
+urls[11]="";
+urls[12]="";
+urls[13]="";
+urls[14]="";
+urls[15]="";
+urls[16]="";
+urls[17]="";
+urls[18]="";
+urls[19]="";
+urls[20]="";
+urls[21]="";
+urls[22]="";
+urls[23]="";
+urls[24]="";
+urls[25]="";
+urls[26]="";
+urls[27]="";
+urls[28]="";
+urls[29]="";
+
+
+
+
+function evaltF(addType) {
+	ret = true;
+	if ((addType == 1) || (edIdx > 0)) {
+		if ((document.tF0.w0.checked == false) && (document.tF0.w1.checked == false) && (document.tF0.w2.checked == false) &&
+			(document.tF0.w3.checked == false) && (document.tF0.w4.checked == false) && (document.tF0.w5.checked == false) &&
+			(document.tF0.w6.checked == false)) {
+			alert(err_schedule);
+			return false;
+		}
+
+        if(isNValidNum(document.tF0.stHr.value) || isNValidNum(document.tF0.stMin.value) ){
+			alert(err_start_time);
+			return false;
+        }
+		if ((document.tF0.stHr.value > 23) || (document.tF0.stHr.value < 0) || (document.tF0.stMin.value > 59) || (document.tF0.stMin.value < 0)) {
+			alert(err_start_time);
+			return false;
+		}
+
+        if(isNValidNum(document.tF0.edHr.value) || isNValidNum(document.tF0.edMin.value) ){
+			alert(err_end_time);
+			return false;
+        }
+		if ((document.tF0.edHr.value > 23) || (document.tF0.edHr.value < 0) || (document.tF0.edMin.value > 59) || (document.tF0.edMin.value < 0)) {
+			alert(err_end_time);
+			return false;
+		}
+
+
+		if (addType == 1) document.tF0.confType.value = 2;
+	}
+	else {
+		if (document.tF0.Wireless_enable[2].checked) {
+			if (rlNum == 0) {
+				confirm("Por favor, comprueba que la regla de programación no está vacía.");
+					return false;
+			}
+		}
+		ret = evaltFUSBFTP();
+		if(ret == false)
+			return ret;
+		ret = evaltFFirewallURL();
+		if(ret == false)
+			return ret;
+	}
+	if (isBlank(document.tF0.ssid.value)) {
+		alert(ssid_blank);
+		return false;
+	}
+
+   	if ((isBlank(document.tF0.sharedkey.value)||((document.tF0.sharedkey.value.length)<8)||((document.tF0.sharedkey.value.length)>=64))){
+		alert("Clave WiFi: La contraseña no debe incluir espacios en blanco y debe tener entre 8 y 63 caracteres.");
+   		return false;
+   	}
+	if (addType == 1) document.tF0.submit();
+	return true;
+}
+
+function Edit(i) {
+	var url;
+	var tmpId = 500 + i;
+
+	url = "/wireless_main.stm/" + tmpId;
+	document.location.href = url;
+    return true;
+}
+
+function Dele(i) {
+	document.tF0.confType.value = 1;
+	document.tF0.edIdx.value = i;
+	document.tF0.submit();
+    return true;
+}
+
+var weekStr = new Array(8);
+weekStr[0] = 'Dom';
+weekStr[1] = 'Lun';
+weekStr[2] = 'Mar';
+weekStr[3] = 'Miér';
+weekStr[4] = 'Jue';
+weekStr[5] = 'Vie';
+weekStr[6] = 'Sáb';
+weekStr[7] = 'Dom';
+rlAct = 0;
+rlNum = 0;
+edIdx = 0;
+
+
+function setPageValue() {
+	var i, f, fidx, realIdx;
+	window.status = "";
+// ++++++++++++++++++++++++++  Smart WiFi ++++++++++++++++++++++
+	//iDOD = 1-0;
+	iDOD = 0;
+	document.forms[0].bandwidth.selectedIndex = iDOD;
+	document.forms[0].sharedkey.value = sharedkey;
+// ++++++++++++++++++++++++++  Timer WiFi ++++++++++++++++++++++
+	if (edIdx == 0) {
+		document.tF0.defAct.value = (1 - rlAct);
+		realIdx = rlNum;
+	}
+	else if (edIdx > 0) {
+		realIdx = edIdx - 500;
+		for (i = 0 ; i < 7 ; i++) {
+			if (rlWeek[realIdx][i] == 1) {
+				f = "w" + i;
+				fidx = getElementsByFieldName(document.tF0, f);
+				document.tF0.elements[fidx].checked = true;
+				document.tF0.elements[fidx].defaultChecked = true;
+			}
+		}
+		document.tF0.stHr.value = rlStHr[realIdx];
+		document.tF0.stMin.value = rlStMin[realIdx];
+		document.tF0.edHr.value = rlEdHr[realIdx];
+		document.tF0.edMin.value = rlEdMin[realIdx];
+		document.tF0.confType.value = 3;
+	}
+	document.tF0.edIdx.value = realIdx;
+// ++++++++++++++++++++++++++  FTPD ++++++++++++++++++++++
+	if((ftpFunc == 1)&&(ftpRemore == 1))
+		document.tF0.remoteEnable.checked = true;
+	else
+		document.tF0.remoteEnable.checked = false;
+	setFirstLoad();
+	updateRemoteEnable();
+
+// ++++++++++++++++++++++++++  Mail Notification ++++++++++++++++++++++
+	document.tF0.event_missed_call.defaultChecked=event_missed_call;
+	document.tF0.event_missed_call.checked=event_missed_call;
+	document.tF0.mail_addr.value=mail_addr;
+// ++++++++++++++++++++++++++  Firewall URL ++++++++++++++++++++++
+	var obj;
+	for(i=0; i<urls.length; i++){
+		urlname = "B"+ eval(i+1);
+		obj = document.getElementById(urlname) ;
+		if(obj)
+			obj.value=urls[i];
+	}
+}
+
+</script>
+<link rel="stylesheet" type="text/css" media="screen" href="/c_voda_main.css">
+<style type="text/css">
+.tdTitle50 {width: 50px; background-color: #ced3d2; color: #000000; font-family: sans-serif; font-size: 9pt; text-align: left;}
+.tdText50	{width: 50px; background-color: gainsboro; color: #000000;	font-family: sans-serif; font-size: 9pt; text-align: left;}
+.snormalText {color: #FF6600; font-family: sans-serif; font-size: 9pt; text-align: left; font-weight : bold;}
+</style>
+</head>
+<body onload="setPageValue()">
+<form name="tF0" action="/cgi-bin/quicksettings.exe" method="post">
+<input type="hidden" name="wlan_ui_ver" value="1">
+<input type="hidden" name="edIdx">
+<input type="hidden" name="confType" value="0">
+<input type=hidden name="clear" value=0>
+<input type="hidden" name="urlPolicy_conf" value="0">
+<input type="hidden" name="ftp_enable" value=1>
+<input type="hidden" name="proIdx">
+<table width="100%" border="0" cellspacing="0" cellpadding="10" class="infosys">
+<!---- Smart WiFi  ----->
+<tr>
+	<td>
+        <p class=titlepage>Smart WiFi&nbsp;&nbsp;</p>
+		<p class=normalText>Configura tu red y contraseña. Configura el apagado y encendido del WiFi en función de los días y horas</p>
+	</td>
+</tr>
+<tr>
+	<td>
+		<table border="0" cellspacing="1" cellpadding="5" width=80%>
+			<tr>
+				<td class=tdTitle_200>
+					Nombre:
+				</td>
+				<td class=tdText>
+					<input type="text" class="textbox_nb" name="ssid" size=32 maxlength=32 value="Orange-C5B3">
+				</td>
+			</tr>
+			<tr>
+				<td class=tdTitle_200>
+				Función WiFi:
+				</td>
+				<td class=tdText>
+					<SCRIPT LANGUAGE="JavaScript">
+					var iDOD = 1 - 1;
+					var iDOD2 = 0;
+
+						document.write('<input type="radio" name="Wireless_enable" value=1>On&nbsp;&nbsp;');
+						document.write('<input type="radio" name="Wireless_enable" value=0>Off&nbsp;&nbsp;');
+						document.write('<input type="radio" name="Wireless_enable" value=2>Planificada por días y horas');
+						if (iDOD2 == 0) {
+							document.tF0.Wireless_enable[iDOD].defaultChecked = true;
+							document.tF0.Wireless_enable[iDOD].checked = true;
+						}
+						else {
+							document.tF0.Wireless_enable[2].defaultChecked = true;
+							document.tF0.Wireless_enable[2].checked = true;
+						}
+					</SCRIPT>
+				</td>
+			</tr>
+			<tr>
+				<td class=tdTitle_200>
+					Clave WiFi:
+				</td>
+				<td class=tdText>
+					<input type=text class="textbox_nb" name="sharedkey" size="26" maxlength="26">
+				</td>
+			</tr>
+			<tr>
+				<td class=tdTitle_200>
+					Velocidad:
+				</td>
+				<td class=tdText>
+					<select size="1" name="bandwidth" class=selectList>
+					<option value=0 >20 MHz</option>					
+					<option value=1 selected>20/40 MHz</option>
+					</select>
+
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td>
+            <p class=normalText>Atención!  La pulsación manual del botón de apagado y encendido de WiFi siempre tendrá preferencia sobre la planificación por días y horas.</p>
+	</td>
+</tr>
+<!---- WiFi Timer ----->
+<tr>
+	<td>
+            <p class=titlepage>Temporizador WiFi&nbsp;&nbsp;<a href="#" onClick="MM_openBrWindow('/help.stm#wireless_timer','help','scrollbars=yes,width=600,height=500')" class="button87b_help"><img src="/images/help.gif" border="0"></a></p>
+            <p class=normalText>Es posible configurar por día y hora la activación de la red WiFi de tu Livebox</p>
+	</td>
+</tr>
+<tr>
+	<td>
+		<table border="0" cellspacing="1" cellpadding="5" width=80%>
+			<tr>
+				<td class=tdTitle>Día de la semana</td>
+				<td class=tdTitle>Hora de Inicio</td>
+				<td class=tdTitle>Hora de Fin</td>
+				<td class=tdTitle>Configurar</td>
+				<td class=tdTitle>Estado</td>
+			</tr>
+			<script language="javascript">
+				var i, j, tmpStr;
+				for (i = 0 ; i < (rlNum + 1) ; i++) {
+					if (((edIdx == 0) && (i == rlNum) && (rlNum < 5)) || (edIdx == (i + 500))) {
+						document.write('<tr><td class=tdTextv>');
+						document.write('<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr>');
+						for (j = 1 ; j <= 7 ; j++) {
+							document.write('<td class=tdTextr width=15>');
+							if (j == 7) {
+								document.write('<input type="checkbox" name="w0" value="1"></td>');
+								tmpStr = '<font color="ff0000">' + weekStr[j] + '</font>';
+							}
+							else {
+								document.write('<input type="checkbox" name="w',j,'" value="1"></td>');
+								tmpStr = weekStr[j];
+							}
+							document.write('<td class=tdTextl>',tmpStr,'</td>');
+						}
+						document.write('</tr></table></td>');
+
+						document.write('<td class=tdTextv>');
+						document.write('<input type=text class="textbox_nb" name="stHr" size="3" maxlength="2">&nbsp;:&nbsp;<input type="text" class="textbox_nb" name="stMin" size="3" maxlength="2"></td>');
+						document.write('<td class=tdTextv>');
+						document.write('<input type=text class="textbox_nb" name="edHr" size="3" maxlength="2">&nbsp;:&nbsp;<input type="text" class="textbox_nb" name="edMin" size="3" maxlength="2"></td>');
+						document.write('<td class=tdTextv>');
+						if (edIdx == 0)
+							document.write('<a href="javascript:void(evaltF(1));" class="button87b_0margin"><img src="/images/add.gif" border="0" alt="Add"></a>');
+							//document.write('<input type="button" class="formsbutton" name="Add',rlNum,'" value="Add" onClick="evaltF(1);">');
+						else
+							document.write('&nbsp;');
+						document.write('</td>');
+						document.write('<td class=tdTextv>&nbsp;</td>');
+						document.write('</tr>');
+					}
+					else if (i < rlNum) {
+						document.write('<tr><td class=tdTextv>');
+						tmpStr = '';
+						for (j = 0 ; j < 7 ; j++) {
+							if (rlWeek[i][j] == 1) {
+								if (tmpStr != '')  tmpStr += ', ';
+								tmpStr += weekStr[j];
+							}
+						}
+						tmpStr += '</td>\n';
+						document.write(tmpStr);
+						document.write('<td class=tdTextv>'+rlStHr[i]+':'+rlStMin[i]+'</td>');
+						document.write('<td class=tdTextv>'+rlEdHr[i]+':'+rlEdMin[i]+'</td>');
+						document.write('<td class=tdTextv>');
+						document.write('<a href="javascript:void(Edit(',rlIdx[i],'));" class="button87b_0margin"><img src="/images/edit.gif" border="0" alt="Edit"></a>&nbsp;');
+						document.write('<a href="javascript:void(Dele(',rlIdx[i],'));" class="button87b_0margin"><img src="/images/deleted.gif" border="0" alt="Delete"></a></td>');
+						//document.write('<input type="button" class="formsbutton" name="edit',i,'" value="Edit" onClick="Edit(',i,');">&nbsp;');
+						//document.write('<input type="button" class="formsbutton" name="dele',i,'" value="Delete" onClick="Dele(',i,');"></td>');
+						document.write('<td class=tdTextv>');
+						if(cur_rlEnb[i] == 1){
+							State = "<span style=\"color:green\">Activa</span>"
+						}else{
+							State = "<span style=\"color:red\">Inactiva</span>"
+						}
+						document.write(State);
+						document.write('</td>');
+						document.write('</tr>');
+					}
+				}
+				if (edIdx == 0) {
+					document.write('<tr><td class=tdText colspan=5>');
+					document.write('Durante esos periodos el WiFi estará<span style="">&nbsp;');
+					document.write('<select size="1" name="defAct">');
+					document.write('<option value=1>desactivado</option>');
+					document.write('<option value=0>activado</option></select>.</td>');
+					document.write('</tr>');
+				}
+			</script>
+		</table>
+	</td>
+</tr>
+<!---- Your Personal Cloud  ----->
+<tr>
+	<td>
+            <p class=titlepage>Tu nube personal: Accede a los contenidos que tengas en tu hogar desde cualquier sitio&nbsp;&nbsp;<a href="#" onClick="MM_openBrWindow('/help.stm#wireless_timer','help','scrollbars=yes,width=600,height=500')" class="button87b_help"><img src="/images/help.gif" border="0"></a></p>
+            <p class=normalText>Configura tu usuario y contraseña, si quieres acceso total o sólo lectura, y la carpeta de tu disco a la que quieres tener acceso remoto FTP</p>
+    </td>
+</tr>
+<tr>
+	<td>
+		<table border="0" cellspacing="1" cellpadding="5" width=80%>
+			<tr>
+			<td class=tdTitle_200>Acceso Remoto&nbsp;&nbsp;&nbsp;<a href="/dns_ddns_main.stm">(Ir al DDNS)</td>
+				<td class=tdText_300>
+					<input type="checkbox" name="remoteEnable" value=1 onclick=updateRemoteEnable();>
+				</td>
+			</tr>
+		<tr>
+			<td class=tdTitle_200>Usuario</td>
+				<input type="hidden" name="ftpidHid">
+			<td class=tdText_300>
+				<SCRIPT language="javascript">
+				if ((proIdx % range) == 0) {
+					document.write('<input type="text" name="ftpid" class="textbox_180_nb" maxlength=32 disabled>');
+				}
+				else {
+					document.write('<input type="text" name="ftpid" class="textbox_180_nb" maxlength=32>');
+				}
+				</SCRIPT>
+			</td>
+		</tr>
+		<script language="javascript">
+		if ((proIdx % range) != 0) {
+			document.write('<tr><td class=tdTitle_200>Contraseña</td><td class=tdText_300>');
+			document.write('<input type="password" class="textbox_180_nb" name="ftpPass"" maxlength=32>');
+			document.write('</td></tr>');
+			document.write('<tr><td class=tdTitle_200>Confirmar Contraseña</td><td class=tdText_300>');
+			document.write('<input type="password" class="textbox_180_nb" name="ftpPassV" maxlength=32>');
+			document.write('</td></tr>');
+		}
+		else {
+			document.write('<input type="hidden" name="ftpPass" value="">');
+			document.write('<input type="hidden" name="ftpPassV" value="">');
+		}
+		</script>
+		<tr>
+			<td class=tdTitle_200>Modo de Acceso</td>
+			<td class=tdText_300>
+				<select name=access_mode class=selectList>
+					<option value=0>Solo Lectura</option>
+					<option value=1>Acceso Total</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td class=tdTitle_200>Ruta</td>
+			<td class=tdText>
+				<input type="text" class="textbox_350vt_nb" name="curPath" maxlength=255>&nbsp;<a href="javascript:void(openBrowse());" class="button87b_0margin"><img src="/images/browse.gif" border="0" alt="Browse"></a>
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+<!---- Mail Notification   ----->
+<tr>
+	<td>
+            <p class=titlepage>Siempre informado de las llamadas perdidas en tu número fijo&nbsp;&nbsp;</p>
+            <p class=normalText>Configura la cuenta de correo donde quieres que se envíen las notificaciones</p>
+	</td>
+</tr>
+<tr>
+	<td>
+		<table border="0" cellspacing="1" cellpadding="5" width=80%>
+		<tr>
+			<td class=tdTitle_300>Habilitar</td>
+			<td class=tdText_200><input type="checkbox" name="event_missed_call" value=1></td>
+		</tr>
+		<tr>
+			<td class=tdTitle_300>Tu dirección de e-mail</td>
+			<td class=tdText_200><input type="text" class="textbox_nb" name="mail_addr" size="50" maxlength="50">
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+<!---- Firewall URL   ----->
+<tr>
+	<td>
+            <p class=titlepage>Bloquea los contenidos que tú decidas</p>
+            <p class=normalText>Configura todas las reglas que quieras indicando las páginas web o las palabras clave que quieres bloquear</p>
+	</td>
+</tr>
+<tr>
+	<td>
+		<table border="0" cellspacing="1" cellpadding="5" width=80%>
+			<tr>
+				<td class=tdTitle50>Número de regla</td>
+				<td class=tdTitle>URL / Palabra Clave</td>
+			</tr>
+			<script language="javascript">
+			var i;
+			for(i=1;i<31;i++)
+			{
+				if(i<6){
+				document.write('<tr>');
+				document.write('<td class="tdText50">Literal&nbsp;&nbsp;',i,'</td>');
+				document.write('<td class="tdText"><input type="text" class="textbox_nb" id="B'+i+'" name="B'+i+'" SIZE=100 MAXLENGTH=127></td>');
+				document.write('</tr>');
+				}else{
+					document.write('<input type="hidden" id="B'+i+'" name="B'+i+'">');
+				}
+			}
+			</script>
+		</table>
+	</td>
+</tr>
+
+
+<tr>
+	<td>
+		<table border="0" cellspacing="0" cellpadding="0" width=80% height=100pt>
+			<tr>
+				<td width=20%>&nbsp;</td>
+				<td width=80% align=right class=mainmsgR>
+					<table border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td><a href="javascript:document.tF0.submit()" onClick="return evaltF(0);" class="button87b"><img src="/images/apply.gif" border="0"></a></td>
+							<td><a href=" " onclick="javascript:cancel_button(); return false;" class="button87b"><img src="/images/cancel.gif" border="0"></a></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+</table>
+</form>
+</body>
+</html>
+

@@ -1,0 +1,9 @@
+make -C src/ install
+make[1]: se entra en el directorio '/opt/Tplink/Drivers/tg3269/src'
+install -m 644 -c r1000.o /lib/modules/4.5.5-300.fc24.x86_64/kernel/drivers/net/
+install: no se puede efectuar `stat' sobre 'r1000.o': No such file or directory
+Makefile:24: fallo en las instrucciones para el objetivo 'install'
+make[1]: *** [install] Error 1
+make[1]: se sale del directorio '/opt/Tplink/Drivers/tg3269/src'
+Makefile:14: fallo en las instrucciones para el objetivo 'install'
+make: *** [install] Error 2

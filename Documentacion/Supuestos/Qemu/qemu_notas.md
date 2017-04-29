@@ -860,6 +860,7 @@ Si está cargado, lo descargamos:
   ~~~  
   # rmmod nbd  
   ~~~  
+> De igual forma, puede quitarse un módulo con `# modprobe -r`.
 
 ...vemos que aparece la ĺinea, pero no el entero! parece un bug. Es la segunda línea  
 empezando por abajo.

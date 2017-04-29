@@ -1,0 +1,440 @@
+// ALERT MESSAGE
+var ipm_0 = "Puede ser que no han entrado todos los números, ";
+var ipm_1 = "Puede ser que no haya introducido todos los números de direcciones IP, ";
+var ipm_2 = "\n o algunos de los números que has introducido no son válidos. ";
+var ipm_0255 = "\n Los números pueden ser o entre 0 a 255. ";
+var ipm_1254 = "\n Los números pueden ser o entre 1 a 254. ";
+var ipmT = ipm_1 +ipm_2;
+//var ipm = ipm_1 + ipm_2 + ipm_0255;
+//var ipmEnd = ipm_1 + ipm_2 + ipm_1254;
+var ipm = "O no has introducido ningún número o alguno de ellos es incorrecto. Asegúrate que introduces un número entre 0 y 255.";
+var ipmEnd = "O no has introducido ningún número o alguno de ellos es incorrecto. Asegúrate que introduces un número entre 1 y 254.";
+var ipmUcast = "La primera entrada de la dirección IP debe estar dentro del rango de 1 a 223. ";
+var svNrbt = "Por favor, haga clic en el botón Guardar y Reiniciar para activar su configuración. ";
+var svNrbtnow = "La configuración se guardar?para la misión actual, que podrían perderse sin ejecutar un Guardar y reiniciar. \n Presione Aceptar para hacer la opción Guardar y reiniciar inmediatamente, o haga clic en el botón Guardar y reiniciar más tarde para guardar la configuración, \n otherwise la modificación se podría perder una vez que se apague el router. ";
+var iperror = "Los números IP que ha introducido no son válidos. ";
+var ipmULastIP = "La primera entrada de la dirección IP debe estar dentro del rango de 1 a 254. ";
+var sm_err = "números de la máscara de subred que ha introducido no son válidos. ";
+var vlan_blank = "Usted debe introducir la descripción VLAN. ";
+var timem1 = "Puede ser que no han entrado en el. ";
+var timem2 = "sobre el terreno o el valor no es válido. ";
+var idle_sessionm = timem1 + 'Session Idle Timeout' + timem2;
+var re_authrnm = timem1 + 'Re-autenticación Período' + timem2;
+var radius_portm = timem1 + 'Puerto del servidor' + timem2;
+var err_ipm = "Dirección IP del equipo incorrecta.";
+var dns_msg = "O no has introducido ningún número o alguno de ellos es incorrecto. Asegúrate que introduces un número entre 0 y 255.";
+
+var lan_ip_err = "Dirección IP no válida.";
+var lan_port_err = "Puerto LAN no válida.";
+var port_range_err = "Rango de puerto no válida.";
+var port_range_err1 = "Límite superior del rango válido de puertos.";
+
+//alert('You just input the same description of No.'+(i+1)+' rule!');
+
+var same_desc_1 = "Usted acaba de introducir la misma descripción de No. ";
+var same_desc_2 = " regla. ";
+var blank_desc = "cadena de descripción no es válida. ";
+
+var ip_range_err1 = "rango de direcciones IP no pueden contener la dirección IP de la LAN. ";
+var ip_range_err2 = "límite superior del rango válido de direcciones IP. ";
+
+var null_sel = "Null seleccionar el tipo de servicio. ";
+var user_define_err = "Error de entrada del usuario Definir el campo de servicio. ";
+var pu_port_err = "Error de entrada Public Port campo. ";
+
+var macm = "Puede ser que no han entrado todos los dígitos hexadecimales \n o algunos de los dígitos hexadecimales que ha introducido no son válidos.\n Un dígito hexadecimal puede ser un número de 0-9 o una carta de la FA. ";
+
+// You have entered 8 items
+var access_num_1 = "Usted ha entrado. ";
+var access_num_2 = " artículos. ";
+
+var err_idle_time = "el tiempo de inactividad debe estar entre 1 y 32767. ";
+var msk = "Puede ser que no han entrado en todas la máscara de subred, \n o algunos de los números que has introducido no son válidos. ";
+var gwm = "dirección IP no válida de la configuración predeterminada de puerta de enlace. ";
+var ip_gateway_dup = "La configuración de la 'dirección IP' y 'Puerta de enlace predeterminada' es duplicado .";
+var mtu_err = "Ha ingresado un valor no válido en el campo de la MTU. ";
+var i_time_err = "Ha ingresado un valor no válido en el campo de tiempo de inactividad. ";
+var vpi_err = "Ha ingresado un valor no válido en el campo de VPI. ";
+var vci_err = "Ha ingresado un valor no válido en el campo de la VCI. ";
+var voice_pwd_mis_match = "Esta contraseña debe coincidir con la contraseña de confirmación. ";
+var pwd_mis_match = "Esta contraseña debe coincidir con la contraseña de confirmación. ";
+var pcr_err = "Ha ingresado un valor no válido en el campo de la PCR. ";
+var scr_err = "Ha ingresado un valor no válido en el campo de la SCR. ";
+var mbs_err = "Ha ingresado un valor no válido en el campo de la MBS. ";
+
+//str = "The same VPI/VCI value has been used by VC"+i+". Please modify \"VC"+i+"\" under \"WAN\" menu for the new settings.";
+var vpi_vci_same = "Lo mismo VPI / VCI valor ha sido usado por VC. ";
+var vpi_vci_same1 = ". Por favor, modifique VC";
+var Vpi_vci_same2 = ". Por favor, modifique VC";
+
+
+// WIRELESS
+var passm = "La contraseña no debe incluir espacios en blanco y debe tener entre 8 y 63 caracteres.";
+var hexm = "Puede que no hayas introducido todos los dígitos hexadecimales o alguno de ellos no sea válido. La clave tiene que estar formada por números del 0 al 9 y letras de la A a la F.";
+var c10 = "\nPor favor, introduce exactamente 10 dígitos hexadecimales.";
+var c26 = "\nPor favor, introduce exactamente 26 dígitos hexadecimales.";
+
+var ipmC = "El Re_Keying clave de grupo que ha introducido no son válidos. ";
+var notify1X_enable = "Aviso: \ autenticación n802.1X debe estar habilitado para hacer este trabajo la función. ";
+var pre_s_Key863 = "Pre-Shared Key (8 ~ 63):. ";
+var pre_s_Key64 = "Pre-Shared Key:. ";
+
+var blankm = "La clave por defecto no debe estar en blanco. ";
+var passm64 = "La contraseña no debe incluir espacios en blanco y debe tener 5 caracteres.";
+var passm128 = "La contraseña no debe incluir espacios en blanco y debe tener 13 caracteres.";
+
+var em = "Tienes que establecer al menos una entrada. ";
+var dup_mac = "Direcciones MAC duplicadas.";
+
+// WIRELESS
+//alert("No.1 & No.3 + : Duplicate MAC addresses.");
+
+//NAT
+//alert("No.2's and No.3's Global IPs are the same.");
+//alert("No.1's and No.2's Local IP ranges are overlapped");
+
+
+var dm = "Dirección IP Pública conflicto. ";
+var om = "PC Client IP Address conflicto. ";
+var ac = ' , ';
+var pc1m = "El número de";
+var p2m = "Dirección IP pública no es válida. ";
+var c2m = "Dirección IP de la PC del cliente no es válida.  ";
+
+var rc = "Equipo ";
+var rc1 = '\'s, y no. ';
+var same_g_ip = '\'s global son las mismas. ';
+var overlapped_l_ip = '\'s Local rangos de IP se superponen' ;
+var mcastm = "Broadcast / Multicast dirección MAC no est?permitido. ";
+var cls_rule_num_m = "El número máximo permitido de las normas es de 16. ";
+
+//alert('The '+idx+i_str+' Global IP address is invalid');
+var T_the = "La ";
+var global_ip_err = " dirección IP pública no es válida.";
+
+//alert('The '+idx+i_str+' Local IP address(From) is invalid');
+var from_ip_err = " dirección IP de inicio no es válida.";
+
+//alert('The '+idx+i_str+' Local IP address(To) is invalid');
+var to_ip_err = " dirección IP de destino no es válida.";
+
+var sm = "El número en la casilla de entrada a puerto no son válidos. ";
+var wan_ip_err = "no válido dirección IP WAN. ";
+
+//alert("The IP address of NAPT Pool supports a maximun of 11 entries");
+var napt_maximun = "La dirección IP de la piscina NAPT soporta un máximo de ";
+var T_entries = "entradas. ";
+
+var pu_port_err = "Public error de puerto. ";
+
+//alert("The port range of NAPT Pool supports a maximun of" + PORT_MAX + end_entries);
+var p_napt_maximun = "El rango de puertos de la piscina NAPT soporta un máximo de. ";
+
+var port_range = "El rango de puertos debe estar entre 1 y 65535.";
+var net_ip_err = "La dirección de red no es una dirección IP válida. ";
+var sub_mask_f_err = "La Máscara de Subred utiliza un formato no válido.";
+var sub_mask_err = "Máscara de Subred no válida.";
+
+var gw_err = "La dirección de la Puerta de enlace no es válida.";
+
+var net_ip_mask_err = "La configuración de Dirección de Red y Máscara de Subred no es correcta.";
+
+//alert("Conflict Setting between "+i+" and "+isQuickSetup);
+var r_tbl_1 = "El conflicto entre la Configuración. ";
+var T_and = "y. ";
+
+var primary_msg = "Debe especificar servidor DNS primario. ";
+var comm_blank = "campo de la comunidad est?vacía. ";
+var valuem = "Campo de la trampa de la comunidad est?vacía ";
+
+//alert("The IP address settings of Trap Receiver " + (i+1) + " and Trap Receiver "+ (j+1) + " are the same.");
+var ip_trap = "La dirección IP del receptor de capturas. ";
+var ip_trap1 = "y receptor de capturas. ";
+var T_same = "son los mismos. ";
+
+var userEmpty = "No se puede introducir una cadena nula en el Nombre de usuario nuevo campo. ";
+var pwd_match = "La contraseña de verificación debe coincidir con la nueva contraseña. ";
+var pwd_match_1 = "La contraseña es incorrecta.";
+
+var time_out_err = "Has introducido un valor no válido en el campo Tiempo de Inactividad.";
+
+var q_period_err='Período de Silencio campo est?en blanco o el valor no es válido. \ NEl número debe ser o entre 00-60';
+var user_pool_err = "modificar errores de los usuarios de la piscina. ";
+var username_err = "entrada de nombre de usuario válido. ";
+var username_dup = "de usuario duplicado de entrada de nombre. ";
+
+var ssid_blank = "El campo SSID est?vacío. ";
+var ssid_err = "SSID válido campo de entrada. ";
+
+//str = "The same VPI/VCI value has been used by VC"+i+". Please modify \"VC"+i+"\" under \"WAN\" menu for the new settings.";
+var s_VpiVci_1 = "Lo mismo VPI / VCI valor ha sido usado por VC. ";
+var s_VpiVci_2 = "Por favor, modifique VC ";
+var s_VpiVci_3 = "en el men?de WAN para la nueva configuración. ";
+
+var T_maximum = "La máxima. ";
+var conflict_lan_mac = "El conflicto con LAN MAC. ";
+
+//QOS
+var my_qos_wan_bw_m = "de ancho de banda WAN de salida debe estar entre 1-100000 Kbps. ";
+var my_qos_minbwm = "El mínimo ancho de banda asignada no es válida. \n Los números pueden ser o entre 0 ~ WAN ancho de banda. ";
+var my_qos_sumbwm = "suma del ancho de banda mínimo asignado debe ser igual o inferior a ancho de banda de salida WAN. ";
+var minbwm= "El mínimo ancho de banda asignada no es válida. \n Los números pueden ser o entre el 0% ~ 100. ";
+var sumbwm = "suma del ancho de banda mínimo asignado debe ser igual o inferior al 100%. ";
+
+var blockm = "Ajuste de ancho de banda mínimo de 0 y desactivando la casilla Permitir Más bloquear?todo el tráfico de esta clase de reenvío. ";
+var be_dscrpt = "Mejor Esfuerzo de reenvío. ";
+var af_dscrpt = "asegur?Forwarding, prev?la entrega de paquetes en cuatro clases de forma independiente remitido AF. Dentro de cada clase AF, un paquete IP se le puede asignar uno de los tres diferentes niveles de caída precedencia. ";
+var ef_dscrpt = "Expedited Forwarding, est?destinado a proporcionar bajo retardo, bajo jitter y la prestación de baja pérdida de paquetes. ";
+
+//FIREWALL_FULE_A
+//'Invalid time number in TUESDAY field'
+//'Invalid time period in SATURDAY field.\nEnd time must be larger than start time'
+
+var name_err = "Nombre no válido.";
+var comment_err = "Comentario no válido.";
+
+var rule_err = "El ";
+var T_field = "tiene un valor no válido.";
+
+var PER_err = "Período de tiempo no válido en el campo ";
+var T_field_1 = ". \nHora de finalización debe ser mayor que la hora de inicio.";
+
+var everyday_err = rule_err + 'Todos los días ' + T_field;
+var SUN_err = rule_err + 'Domingo ' + T_field;
+var MON_err = rule_err + 'Lunes ' + T_field;
+var TUE_err = rule_err + 'Martes ' + T_field;
+var WED_err = rule_err + 'Miércoles ' + T_field;
+var THU_err = rule_err + 'Jueves ' + T_field;
+var FRI_err = rule_err + 'Viernes ' + T_field;
+var SAT_err = rule_err + 'Sábado ' + T_field;
+
+var everyday_PER_err = PER_err + 'Todos los días '+ T_field_1;
+var SUN_PER_err = PER_err + 'Domingo ' + T_field_1;
+var MON_PER_err = PER_err + 'Lunes ' + T_field_1;
+var TUE_PER_err = PER_err + 'Martes ' + T_field_1;
+var WED_PER_err = PER_err + 'Miércoles ' + T_field_1;
+var THU_PER_err = PER_err + 'Jueves ' + T_field_1;
+var FRI_PER_err = PER_err + 'Viernes ' + T_field_1;
+var SAT_PER_err = PER_err + 'Sábado ' + T_field_1;
+
+var w_time_blank = "Los campos de hora están vacíos. Por favor, introduce un valor válido.";
+
+//FIREWALL_SPI_H
+var error = "de error de Service Conflict: \n . ";
+var head = "Usted debe verificar. ";
+var tcp = "servicio de TCP. ";
+var udp = "UDP servicio. ";
+var tcp_udp = "Usted debe marcar TCP servicio y el servicio UDP. ";
+var Numm = "Algunos de los números que has introducido no son válidos. ";
+
+var ftp_tcp_chk = "conexión TCP inspección se debe comprobar cuando el servicio FTP est?activada. ";
+var h323_tcpudp_chk = "conexión TCP / UDP sesión inspección se debe comprobar cuando H.323 servicio est?marcada. ";
+var tftp_udp_chk = "Sesión UDP inspección se debe comprobar que el servicio TFTP est?marcada. ";
+var frag_wait_err = "Fragmentación un valor no válido Espere! El valor válido debe estar entre 1 y 120. ";
+var tcp_syn_wait_err = "no válido TCP SYN valor Espera! El valor válido debe estar entre 1 y 120. ";
+var tcp_fin_wait_err = "FIN TCP no válido valor Espera! El valor válido debe estar entre 1 y 60. ";
+var tcp_idle_err = "no válido TCP valor de tiempo de inactividad! El valor válido debe estar entre 1800 y 7200. ";
+var udp_idle_err = "Invalid UDP valor de tiempo de inactividad! El valor válido debe estar entre 1 y 120. ";
+var h323_idle_err = "no válido H.323 valor de tiempo de inactividad!El valor válido debe estar entre 0 y 3600. ";
+var incom_high_err = "no válido Valor total incompletas ALTO! El valor válido debe estar entre 1 y 300. ";
+var incom_low_err = "no válido Valor total incompletas BAJO! El valor válido debe estar entre 1 y 250. ";
+var incom_high_low_L = "Total ALTO incompleto debe ser mayor que el total de valor de LOW incompleta. ";
+var Session_high = "Valor no válido Sesión incompleta ALTO! El valor válido debe estar entre 1 y 250. ";
+var Session_low = "Valor no válido Sesión incompleta BAJA! El valor válido debe estar entre 1 y 200. ";
+var Session_high_low = "valor máximo de la sesión incompleta debe ser mayor que el valor mínimo de la sesión incompleta. ";
+var Max_Session_err = "no válido Sesión Max incompleta mismo valor de Host! El valor válido debe estar entre 1 y 100. ";
+var Session_D_time_err = "Sesión no válida incompleta Detectar el valor de período de tiempo! El valor válido debe estar entre 50 y 5000. ";
+var Max_H_Frag_err = "no válido Max medio abierta la fragmentación de valor mismo host! El valor válido debe estar entre 1 y 150. ";
+var H_Frag_D_time_err = "Invalid medio abierta fragmentación Detectar el valor de período de tiempo! El valor válido debe estar entre 10 y 60000. ";
+var F_Block_time_err = "bloque no válido inundaciones de valor de tiempo!El valor válido debe estar entre 0 y 30000. ";
+
+var Email_err = "Dirección de correo electrónico no válida.";
+var SMTP_blank = "Por favor, introduzca la dirección del servidor SMTP. ";
+var username_blank = "Por favor ingrese su nombre de usuario. ";
+var pwd_blank = "Por favor, introduzca su contraseña. ";
+var pin_blank = "Por favor, introduzca su PIN. ";
+
+var all_lost_msg = "Atención: \n Los ajustes se perderán.\n ¿Estás seguro de que quieres hacer esto?";
+
+//alert("The URL/Keyword settings of Site " + (idx2+1) + " and Site "+ (idx+1) + " are the same.");
+var url_dup = "La URL / palabra clave de configuración del sitio. ";
+var url_dup1 = "y del sitio. ";
+
+//LAN
+var start_m = "no válido dirección IP inicial del conjunto DHCP. ";
+var end_m = "Invalid IP Ending Address del conjunto DHCP. ";
+var netm = "La piscina IP debe ser la misma subred que la IP de la puerta. ";
+var endm = "La IP final debe ser mayor que la IP de inicio. ";
+var poolm = "La dirección IP de la LAN puede \ 't estar en el conjunto de direcciones IP. ";
+
+var change_ip_msg = "¿Realmente desea cambiar la dirección IP LAN? . ";
+var change_ip_cfm = "Por favor, cambie el cuadro de entrada de direcciones en la barra de estado del navegador manualmente a la nueva dirección IP LAN. ";
+
+//SpecialChar
+//alert(name + ": \\ , \" , \/ and \' are invalid.");
+//alert (Name: \ , " , / and ' are invalid.)
+
+var portm = "Puede ser que no haya introducido todos los números de puerto, \n o algunos de los números que has introducido no son válidos. \n los números pueden ser o entre 0-65535. ";
+var inportm = "Por lo menos un puerto de entrada se debe comprobar. ";
+var matchdscpm = "Puede ser que no han entrado en el campo DSCP / TOS, \n o el número introducido no es válido. "
+
+var mac_err = "no válido de direcciones MAC. ";
+
+//SYSTEM_R
+var rst_router_cfm = "¿Estás seguro de que quieres reiniciar el router?";
+var rst_wait_time = "Puede tomar algún tiempo para completar este proceso y reiniciar el sistema. \n Por favor, don \ 't apague el router antes de que el proceso est?completo. ";
+var dup_1_2_srv = "servidor principal y servidor secundario debe ser diferente. ";
+
+var r_store_time = "Durante el reinicio, es necesario algún tiempo \n Por favor, no apague la puerta de entrada durante el tiempo... ;"
+
+var f_name_blank = "Por favor, introduzca un archivo. ";
+var f_upgrade_cfm = "¿Desea continuar con el proceso de actualización?";
+var f_upgrade_time = "Al final de la actualización, el router no responda \n a los comandos durante el tiempo de un minuto. \n Este comportamiento es normal y no se apaga del router en el tiempo. ";
+
+var domain_blank = "Campo de Nombre de Dominio vacío.";
+var account_blank = "Campo de Cuenta o Dirección de e-mail vacío.";
+
+var notyet_8021x = "El WPA se estableci?como el uso de la autenticación 802.1X, \n while el 802.1X no est?habilitada todavía. \n Por favor, compruebe la configuración del primero. ";
+
+var pinRequire = "Por favor, introduzca válida Modem-Installationcode que se puede encontrar en su carta de servicios de red. "
+var errSelect = "La selección no es válida. Por favor, trate de seleccionar de nuevo . ";
+var errSelectCustomer="No válido en el campo de selección del cliente. Por favor, intente seleccionar otra vez.";
+var reconnectWarn="Por favor, asegúrese de que el LED de alimentación se ha convertido en color azul.";
+
+// Voice
+var delLogConfirm = "Por favor, asegúrese de que desea borrar el registro de voz de. ";
+var inCall = "Llamada entrante. ";
+var outCall = "de llamadas salientes. ";
+
+var errUMTS = "Número no válido UMTS. ";
+var errISDN = "número RDSI no es válida. ";
+var errQuiet_Period = "El campo Período de Silencio est?vacía o el valor no es válido. \n El valor debe estar dentro del rango de 0 - 60 . ";
+var msdDup = "Duplicar entrada de MSN. ";
+
+//You just input the same description of No.'+(i+1)+' rule!
+var dup_desc = "Que acaba de introducir la misma descripción de No.'+(i+1)+' regla!";
+var err_desc = "Descripción no válida.";
+var err_lan = "Dirección IP LAN error  ";
+var err_lan_contain = "rango de direcciones IP no pueden contener la dirección IP de LAN . ";
+var err_lan_u_boundary = "límite superior del rango válido de direcciones IP. "
+var err_define_server = "Error de usuario de entrada Definir el campo de servicio. ";
+var empty_select = "Selecciona algún servicio.";
+var err_spec_backup="Intervalo de copia de seguridad Comprobar la entrada de valor est?fuera de límite. Número válido debe ser 0 ~ 1200.";
+var err_spec_mw="Espera máxima para la entrada de valor de RND est?fuera de límites. Número válido debe ser 0 ~ 120.";
+var err_spec_rc="Compruebe la recuperación del intervalo de entrada de valor est?fuera de límite. Número válido debe ser 0 ~ 1200.";
+
+var err_VCI = "Valor incorrecto VCI. Se debe establecer entre 0 y 65535. Además, los valores de 0 a 5 y 16 años no se les permite  ";
+var empty_pwd_key = "Campo de Contraseña vacío.";
+var err_lan_wan = "Subnet conflicto entre LAN y WAN ";
+
+//alert("No."+(i+1)+"'s and No."+(j+1)+"'s Global IPs are the same.");
+var dup_global = "No.1's y n ?2's Global de IP son los mismos. ";
+
+//alert("No."+(i+1)+"'s and No."+(j+1)+"'s Local IP ranges are overlapped");
+var overlap = "No.3's y n ?4's rangos de IP locales están comprometidos ";
+
+var err_wan2lan = "WAN a un error de IP LAN ";
+
+//alert( "No. "+(index+1)+": The "+port_name+" port settings are invalid." );
+var err_spec_ap = "No.1: La configuración del puerto de disparo no son válidos. ";
+
+//alert("No. "+(index+1)+": The "+port_name+" port range are too large. Only support a maximun of " + PORT_MAX + " entries.");
+var err_spec_ap_2long = "No.3: El rango de puertos de disparo es demasiado grande sólo admiten un máximo de 100 entradas. ";
+
+//alert( "No. "+(index+1)+": The "+port_name+" port range must be in 1~65535" );
+var err_spec_ap_range = "No.6: El rango de puertos de disparo debe ser de 1 ~ 65535 ";
+
+//alert( 'No. '+(i+1)+': trigger port is invalid.' )
+var err_trigger = "No.8: Puerto de disparo no es válida. ";
+
+//alert("Conflict Setting between No. "+(i+1)+" and "+ (j+1) );
+var err_conflict = " Configuración de los conflictos entre los 6 y N ?9 ";
+
+var dup_lan_public = " La cantidad de LAN y un puerto público no son los mismos. ";
+var err_match = " El rango de puertos no coincide ";
+
+var err_port = " error de puerto ";
+
+//alert("The port range of NAPT Pool supports a maximun of " + PORT_MAX + " entries");
+var err_portmax = " El rango de puertos de la piscina NAPT soporta un máximo de 100 entradas ";
+
+var err_vc = "Valor incorrecto VCI. Se debe establecer entre 0 y 65535. Además, los valores de 0 a 5 y 16 años no se les permite  ";
+var err_proxy = " El servidor proxy no es correcta ";
+var err_outbound = " servidor proxy de salida es incorrecta.  ";
+var err_sel_codec = " No codecs seleccionados.  ";
+
+var err_hook_flash = " Lo mínimo que sea inferior al máximo en Hook Timer Flash ";
+var err_hook_flash_num = "Gancho valor del temporizador de Flash están fuera de límite. Número válido debe estar en 1 ~ 999" ;
+var err_rtp_port = " Lo mínimo que sea inferior al máximo de RTP puerto y la diferencia msut ser mayor o igual a 4" ;
+var err_rtp_port_num = "RTP valor del puerto están fuera de límite. Número válido debe estar en 1 ~ 65535" ;
+var err_pmtu = "El tamaño PMTU debe ser mayor o igual a 596" ;
+
+
+var err_schedule = "No se ha seleccionado ningún día de la semana.";
+var err_start_time = "Valor no válido. Introduce un número entre 00:00 y 23:59.";
+var err_end_time = " El tiempo no válido valor de la entrada número final de vencimiento debe ser 00:00 y 23:59. ";
+
+var empty_item = " elemento principal es nulo favor navegador cerrar y abrir de nuevo. ";
+var phone_err = "Ha ingresado un valor no válido en el campo Número de teléfono. ";
+
+var vUserNum_blank = "Campo Número de teléfono est?vacía. ";
+var vProxyServer_blank = "Campo Servidor Proxy est?vacía. ";
+
+// USB message
+var fsrv_msg = "Están a punto de cambiar el servidor de archivos de. Todos los usuarios que acceden a los directorios de aprobado el servidor de archivos en la actualidad, están separados. Esto puede llevar a invadir en el almacenamiento de datos o un comportamiento inesperado de los equipos respectivos. \n ¿Desea continuar verdad ?" ;
+var s_name_blank = "Por favor, introduzca el nombre del servidor. ";
+var g_name_blank = "Por favor, introduzca el nombre del grupo. ";
+var lpr_name_blank = "Por favor, introduzca el nombre de cola LPR. ";
+var svr_gup_cfm = "El nombre del servidor y el nombre del grupo no puede ser el mismo. \n Por favor, cambiar su entrada para el nombre del servidor o el nombre del grupo. ";
+var remove_cfm = "Por favor, confirma que deseas extraer el disco USB. ";
+var remove_prcfm = "¿Le gustaría seguir en realidad y eliminar la impresora USB con seguridad? . ";
+var errVolume = "la selección de volumen no válido. ";
+var errPort = "puerto de entrada no válido número. Número válido debe ser de 1 ~ 65535. ";
+var errPath = "Ruta no válida de entrada de nombre. ";
+
+var errSpecialChar1 = "No se pueden utilizar espacios ni caracteres especiales ( ";
+var errSpecialChar2 = "El uso de caracteres especiales ( ";
+var errSpecialChar3 = " ) en el campo " ;
+var errSpecialChar4 = ".";
+var errSpecialChar5 = "";
+
+//Ethernet Uplink
+var change_wan_type = "Usted va a cambiar el tipo de conexión WAN, este se reiniciar?el dispositivo. \n Por favor confirmar. ";
+var err_vlan_id = "Invalid ID VLAN. El ID de VLAN debe estar en el rango de 1-4065. ";
+var warn_lanport1_uplink = "Advertencia: Por favor, conecte un módem externo al puerto LAN 1. El módem ADSL interno se apaga. Este ajuste sólo puede ser reseteado por el restablecimiento de fábrica por defecto. ";
+
+var config_samba_user_reading = "Leer ... ";
+var config_samba_user_error = "error. ";
+var config_samba_user_fail_list301 = "No se pudo asignar memoria. ";
+var config_samba_user_fail_list303 = "No se pudo obtener la lista de archivos. ";
+var config_samba_user_username_empty = "Por favor, introduzca un nombre de usuario. ";
+var config_samba_user_username_error = "Entrada no válida con algunos caracteres especiales. ";
+var config_samba_user_passwd_empty = "Por favor, introduzca una contraseña. ";
+var config_samba_user_passwd_error = "Entrada no válida con algunos caracteres especiales. ";
+var config_samba_user_profile_exist = "El perfil est?en uso en otros lugares. ";
+var config_samba_user_max_folder1 = "Usted puede crear hasta. ";
+var config_samba_user_max_folder2 = "carpetas. ";
+
+var errOpenNewWindow = 'No se puede abrir una nueva ventana!';
+
+var errInvalid = 'Inválido ';
+
+var display_name_blank = "Display campo Nombre est?vacío";
+var user_id_blank = "Campo ID de usuario est?vacío";
+var pwd_blank = "Campo Contraseña est?vacío";
+var auth_id_blank = "Autenticación del campo ID est?vacío";
+var domain_blank = "Campo Dominio est?vacía";
+var reg_expires_blank = "Registro Expira campo est?vacío";
+var reg_addr_blank = "Campo Dirección de Registro est?vacía";
+var reg_port_blank = "Campo Registrador puerto est?vacío";
+var proxy_addr_blank = "Campo Dirección proxy est?vacía";
+var proxy_port_blank = "Campo Puerto Proxy est?vacía";
+var user_id_repeat = "Usted acaba de introducir el mismo ID de usuario.";
+var invalid_integer = "El campo de entrada no es entero.";
+var invalid_port_number = "Número de puerto no válido";
+var invalid_priority_error = 'Hay uno o más valor de mayor prioridad no se ha establecido';
+//var invalid_select_err = "No seleccione el mismo número.";
+var invalid_priority_null = 'Valor de la prioridad 1 no puede estar vacío';
+var msg_confirm_del = '¿Est?seguro que desea eliminar el contacto de ';
+
+

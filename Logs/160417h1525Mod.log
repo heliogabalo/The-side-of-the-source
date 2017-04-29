@@ -1,0 +1,74 @@
+     1	Module                  Size  Used by
+     2	binfmt_misc            20480  1
+     3	fuse                   98304  7
+     4	ip6t_rpfilter          16384  1
+     5	ip6t_REJECT            16384  2
+     6	nf_reject_ipv6         16384  1 ip6t_REJECT
+     7	xt_conntrack           16384  21
+     8	ip_set                 36864  0
+     9	nfnetlink              16384  1 ip_set
+    10	ebtable_nat            16384  1
+    11	ebtable_broute         16384  1
+    12	bridge                126976  1 ebtable_broute
+    13	stp                    16384  1 bridge
+    14	llc                    16384  2 stp,bridge
+    15	ip6table_nat           16384  1
+    16	nf_conntrack_ipv6      20480  12
+    17	nf_defrag_ipv6         36864  1 nf_conntrack_ipv6
+    18	nf_nat_ipv6            16384  1 ip6table_nat
+    19	ip6table_raw           16384  1
+    20	ip6table_security      16384  1
+    21	ip6table_mangle        16384  1
+    22	iptable_nat            16384  1
+    23	nf_conntrack_ipv4      16384  11
+    24	nf_defrag_ipv4         16384  1 nf_conntrack_ipv4
+    25	nf_nat_ipv4            16384  1 iptable_nat
+    26	nf_nat                 24576  2 nf_nat_ipv4,nf_nat_ipv6
+    27	nf_conntrack          106496  6 nf_nat,nf_nat_ipv4,nf_nat_ipv6,xt_conntrack,nf_conntrack_ipv4,nf_conntrack_ipv6
+    28	iptable_raw            16384  1
+    29	iptable_security       16384  1
+    30	iptable_mangle         16384  1
+    31	ebtable_filter         16384  1
+    32	ebtables               32768  3 ebtable_broute,ebtable_nat,ebtable_filter
+    33	ip6table_filter        16384  1
+    34	ip6_tables             28672  5 ip6table_filter,ip6table_mangle,ip6table_security,ip6table_nat,ip6table_raw
+    35	snd_hda_codec_hdmi     53248  1
+    36	snd_hda_intel          36864  5
+    37	snd_hda_codec         126976  2 snd_hda_codec_hdmi,snd_hda_intel
+    38	snd_hda_core           61440  3 snd_hda_codec_hdmi,snd_hda_codec,snd_hda_intel
+    39	snd_hwdep              16384  1 snd_hda_codec
+    40	snd_seq                69632  0
+    41	snd_seq_device         16384  1 snd_seq
+    42	snd_pcm               114688  4 snd_hda_codec_hdmi,snd_hda_codec,snd_hda_intel,snd_hda_core
+    43	snd_timer              32768  2 snd_pcm,snd_seq
+    44	coretemp               16384  0
+    45	snd                    77824  18 snd_hwdep,snd_timer,snd_hda_codec_hdmi,snd_pcm,snd_seq,snd_hda_codec,snd_hda_intel,snd_seq_device
+    46	iTCO_wdt               16384  0
+    47	kvm_intel             184320  0
+    48	iTCO_vendor_support    16384  1 iTCO_wdt
+    49	soundcore              16384  1 snd
+    50	kvm                   552960  1 kvm_intel
+    51	irqbypass              16384  1 kvm
+    52	i2c_i801               20480  0
+    53	shpchp                 36864  0
+    54	acpi_cpufreq           20480  1
+    55	tpm_tis                20480  0
+    56	tpm                    40960  1 tpm_tis
+    57	nfsd                  323584  1
+    58	auth_rpcgss            61440  1 nfsd
+    59	nfs_acl                16384  1 nfsd
+    60	lockd                  90112  1 nfsd
+    61	grace                  16384  2 nfsd,lockd
+    62	sunrpc                319488  7 nfsd,auth_rpcgss,lockd,nfs_acl
+    63	amdkfd                131072  1
+    64	amd_iommu_v2           20480  1 amdkfd
+    65	radeon               1503232  7
+    66	i2c_algo_bit           16384  1 radeon
+    67	drm_kms_helper        131072  1 radeon
+    68	ttm                    90112  1 radeon
+    69	drm                   335872  10 ttm,drm_kms_helper,radeon
+    70	serio_raw              16384  0
+    71	ata_generic            16384  0
+    72	pata_acpi              16384  0
+    73	r8169                  81920  0
+    74	mii                    16384  1 r8169

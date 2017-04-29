@@ -1,0 +1,47 @@
+abi.vsyscall32 = 1
+crypto.fips_enabled = 0
+debug.exception-trace = 1
+debug.kprobes-optimization = 1
+dev.cdrom.autoclose = 1
+dev.cdrom.autoeject = 0
+dev.cdrom.check_media = 0
+dev.cdrom.debug = 0
+dev.cdrom.info = CD-ROM information, Id: cdrom.c 3.20 2003/12/17
+dev.cdrom.info = 
+dev.cdrom.info = drive name:		sr0
+dev.cdrom.info = drive speed:		40
+dev.cdrom.info = drive # of slots:	1
+dev.cdrom.info = Can close tray:		1
+dev.cdrom.info = Can open tray:		1
+dev.cdrom.info = Can lock tray:		1
+dev.cdrom.info = Can change speed:	1
+dev.cdrom.info = Can select disk:	0
+dev.cdrom.info = Can read multisession:	1
+dev.cdrom.info = Can read MCN:		1
+dev.cdrom.info = Reports media changed:	1
+dev.cdrom.info = Can play audio:		1
+dev.cdrom.info = Can write CD-R:		1
+dev.cdrom.info = Can write CD-RW:	1
+dev.cdrom.info = Can read DVD:		1
+dev.cdrom.info = Can write DVD-R:	1
+dev.cdrom.info = Can write DVD-RAM:	1
+dev.cdrom.info = Can read MRW:		1
+dev.cdrom.info = Can write MRW:		1
+dev.cdrom.info = Can write RAM:		1
+dev.cdrom.info = 
+dev.cdrom.info = 
+dev.cdrom.lock = 1
+dev.hpet.max-user-freq = 64
+dev.mac_hid.mouse_button2_keycode = 97
+dev.mac_hid.mouse_button3_keycode = 100
+dev.mac_hid.mouse_button_emulation = 0
+dev.raid.speed_limit_max = 200000
+dev.raid.speed_limit_min = 1000
+dev.scsi.logging_level = 0
+fs.aio-max-nr = 1048576
+fs.aio-nr = 0
+        
+^C
+
+sysctl falla bloqueando la salida standard. Ha sido necesario mandar 
+SIGKILL para terminar el proceso.

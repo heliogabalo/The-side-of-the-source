@@ -1,0 +1,504 @@
+150417
+***********************************************************
+Module                  Size  Used by
+binfmt_misc            20480  1
+fuse                   98304  7
+ip6t_rpfilter          16384  1
+ip6t_REJECT            16384  2
+nf_reject_ipv6         16384  1 ip6t_REJECT
+xt_conntrack           16384  21
+ip_set                 36864  0
+nfnetlink              16384  1 ip_set
+ebtable_nat            16384  1
+ebtable_broute         16384  1
+bridge                126976  1 ebtable_broute
+stp                    16384  1 bridge
+llc                    16384  2 stp,bridge
+ip6table_nat           16384  1
+nf_conntrack_ipv6      20480  12
+nf_defrag_ipv6         36864  1 nf_conntrack_ipv6
+nf_nat_ipv6            16384  1 ip6table_nat
+ip6table_raw           16384  1
+ip6table_security      16384  1
+ip6table_mangle        16384  1
+iptable_nat            16384  1
+nf_conntrack_ipv4      16384  11
+nf_defrag_ipv4         16384  1 nf_conntrack_ipv4
+nf_nat_ipv4            16384  1 iptable_nat
+nf_nat                 24576  2 nf_nat_ipv4,nf_nat_ipv6
+nf_conntrack          106496  6 nf_nat,nf_nat_ipv4,nf_nat_ipv6,xt_conntrack,nf_conntrack_ipv4,nf_conntrack_ipv6
+iptable_raw            16384  1
+iptable_security       16384  1
+iptable_mangle         16384  1
+ebtable_filter         16384  1
+ebtables               32768  3 ebtable_broute,ebtable_nat,ebtable_filter
+ip6table_filter        16384  1
+ip6_tables             28672  5 ip6table_filter,ip6table_mangle,ip6table_security,ip6table_nat,ip6table_raw
+snd_hda_codec_hdmi     53248  1
+snd_hda_intel          36864  5
+snd_hda_codec         126976  2 snd_hda_codec_hdmi,snd_hda_intel
+snd_hda_core           61440  3 snd_hda_codec_hdmi,snd_hda_codec,snd_hda_intel
+snd_hwdep              16384  1 snd_hda_codec
+snd_seq                69632  0
+snd_seq_device         16384  1 snd_seq
+snd_pcm               114688  4 snd_hda_codec_hdmi,snd_hda_codec,snd_hda_intel,snd_hda_core
+snd_timer              32768  2 snd_pcm,snd_seq
+coretemp               16384  0
+snd                    77824  18 snd_hwdep,snd_timer,snd_hda_codec_hdmi,snd_pcm,snd_seq,snd_hda_codec,snd_hda_intel,snd_seq_device
+iTCO_wdt               16384  0
+kvm_intel             184320  0
+iTCO_vendor_support    16384  1 iTCO_wdt
+soundcore              16384  1 snd
+kvm                   552960  1 kvm_intel
+irqbypass              16384  1 kvm
+i2c_i801               20480  0
+shpchp                 36864  0
+acpi_cpufreq           20480  1
+tpm_tis                20480  0
+tpm                    40960  1 tpm_tis
+nfsd                  323584  1
+auth_rpcgss            61440  1 nfsd
+nfs_acl                16384  1 nfsd
+lockd                  90112  1 nfsd
+grace                  16384  2 nfsd,lockd
+sunrpc                319488  7 nfsd,auth_rpcgss,lockd,nfs_acl
+amdkfd                131072  1
+amd_iommu_v2           20480  1 amdkfd
+radeon               1503232  7
+i2c_algo_bit           16384  1 radeon
+drm_kms_helper        131072  1 radeon
+ttm                    90112  1 radeon
+drm                   335872  10 ttm,drm_kms_helper,radeon
+serio_raw              16384  0
+ata_generic            16384  0
+pata_acpi              16384  0
+r8169                  81920  0
+mii                    16384  1 r8169
+fjes                   28672  0
+**************************************
+filename:       /lib/modules/4.5.5-300.fc24.x86_64/kernel/drivers/net/ethernet/realtek/r8169.ko.xz
+firmware:       rtl_nic/rtl8107e-2.fw
+firmware:       rtl_nic/rtl8107e-1.fw
+firmware:       rtl_nic/rtl8168h-2.fw
+firmware:       rtl_nic/rtl8168h-1.fw
+firmware:       rtl_nic/rtl8168g-3.fw
+firmware:       rtl_nic/rtl8168g-2.fw
+firmware:       rtl_nic/rtl8106e-2.fw
+firmware:       rtl_nic/rtl8106e-1.fw
+firmware:       rtl_nic/rtl8411-2.fw
+firmware:       rtl_nic/rtl8411-1.fw
+firmware:       rtl_nic/rtl8402-1.fw
+firmware:       rtl_nic/rtl8168f-2.fw
+firmware:       rtl_nic/rtl8168f-1.fw
+firmware:       rtl_nic/rtl8105e-1.fw
+firmware:       rtl_nic/rtl8168e-3.fw
+firmware:       rtl_nic/rtl8168e-2.fw
+firmware:       rtl_nic/rtl8168e-1.fw
+firmware:       rtl_nic/rtl8168d-2.fw
+firmware:       rtl_nic/rtl8168d-1.fw
+version:        2.3LK-NAPI
+license:        GPL
+description:    RealTek RTL-8169 Gigabit Ethernet driver
+author:         Realtek and the Linux r8169 crew <netdev@vger.kernel.org>
+srcversion:     5E021ACA5D19022B54A462E
+alias:          pci:v00000001d00008168sv*sd00002410bc*sc*i*
+alias:          pci:v00001737d00001032sv*sd00000024bc*sc*i*
+alias:          pci:v000016ECd00000116sv*sd*bc*sc*i*
+alias:          pci:v00001259d0000C107sv*sd*bc*sc*i*
+alias:          pci:v00001186d00004302sv*sd*bc*sc*i*
+alias:          pci:v00001186d00004300sv*sd*bc*sc*i*
+alias:          pci:v00001186d00004300sv00001186sd00004B10bc*sc*i*
+alias:          pci:v000010ECd00008169sv*sd*bc*sc*i*
+alias:          pci:v000010ECd00008168sv*sd*bc*sc*i*
+alias:          pci:v000010ECd00008167sv*sd*bc*sc*i*
+alias:          pci:v000010ECd00008136sv*sd*bc*sc*i*
+alias:          pci:v000010ECd00008129sv*sd*bc*sc*i*
+depends:        mii
+intree:         Y
+vermagic:       4.5.5-300.fc24.x86_64 SMP mod_unload 
+parm:           use_dac:Enable PCI DAC. Unsafe on 32 bit PCI slot. (int)
+parm:           debug:Debug verbosity level (0=none, ..., 16=all) (int)
+**************************************
+
+02:00.0 Ethernet controller: Realtek Semiconductor Co., Ltd. RTL8101/2/6E PCI Express Fast/Gigabit Ethernet controller (rev 01)
+05:00.0 Ethernet controller: Realtek Semiconductor Co., Ltd. RTL8169 PCI Gigabit Ethernet Controller (rev 10)
+**************************************\n
+extra/:
+drivers
+fs
+net
+
+extra/drivers:
+input
+isdn
+message
+net
+pci
+usb
+uwb
+w1
+
+extra/drivers/input:
+joystick
+
+extra/drivers/input/joystick:
+a3d.ko.xz
+adi.ko.xz
+analog.ko.xz
+cobra.ko.xz
+db9.ko.xz
+gamecon.ko.xz
+gf2k.ko.xz
+grip.ko.xz
+grip_mp.ko.xz
+guillemot.ko.xz
+iforce
+interact.ko.xz
+joydump.ko.xz
+magellan.ko.xz
+sidewinder.ko.xz
+spaceball.ko.xz
+spaceorb.ko.xz
+stinger.ko.xz
+tmdc.ko.xz
+turbografx.ko.xz
+twidjoy.ko.xz
+walkera0701.ko.xz
+warrior.ko.xz
+xpad.ko.xz
+zhenhua.ko.xz
+
+extra/drivers/input/joystick/iforce:
+iforce.ko.xz
+
+extra/drivers/isdn:
+capi
+divert
+gigaset
+hardware
+hisax
+hysdn
+mISDN
+
+extra/drivers/isdn/capi:
+capi.ko.xz
+
+extra/drivers/isdn/divert:
+dss1_divert.ko.xz
+
+extra/drivers/isdn/gigaset:
+bas_gigaset.ko.xz
+
+extra/drivers/isdn/hardware:
+avm
+eicon
+mISDN
+
+extra/drivers/isdn/hardware/avm:
+avm_cs.ko.xz
+
+extra/drivers/isdn/hardware/eicon:
+diva_idi.ko.xz
+divas.ko.xz
+
+extra/drivers/isdn/hardware/mISDN:
+avmfritz.ko.xz
+hfcmulti.ko.xz
+hfcpci.ko.xz
+netjet.ko.xz
+w6692.ko.xz
+
+extra/drivers/isdn/hisax:
+avma1_cs.ko.xz
+elsa_cs.ko.xz
+hfc4s8s_l1.ko.xz
+
+extra/drivers/isdn/hysdn:
+hysdn.ko.xz
+
+extra/drivers/isdn/mISDN:
+mISDN_dsp.ko.xz
+
+extra/drivers/message:
+fusion
+
+extra/drivers/message/fusion:
+mptctl.ko.xz
+mptfc.ko.xz
+
+extra/drivers/net:
+appletalk
+can
+hamradio
+irda
+slip
+wireless
+
+extra/drivers/net/appletalk:
+ipddp.ko.xz
+
+extra/drivers/net/can:
+c_can
+sja1000
+slcan.ko.xz
+softing
+usb
+vcan.ko.xz
+
+extra/drivers/net/can/c_can:
+c_can_platform.ko.xz
+
+extra/drivers/net/can/sja1000:
+ems_pci.ko.xz
+kvaser_pci.ko.xz
+plx_pci.ko.xz
+sja1000_platform.ko.xz
+
+extra/drivers/net/can/softing:
+softing.ko.xz
+
+extra/drivers/net/can/usb:
+ems_usb.ko.xz
+esd_usb2.ko.xz
+
+extra/drivers/net/hamradio:
+6pack.ko.xz
+baycom_par.ko.xz
+baycom_ser_fdx.ko.xz
+baycom_ser_hdx.ko.xz
+bpqether.ko.xz
+hdlcdrv.ko.xz
+mkiss.ko.xz
+yam.ko.xz
+
+extra/drivers/net/irda:
+act200l-sir.ko.xz
+actisys-sir.ko.xz
+ali-ircc.ko.xz
+esi-sir.ko.xz
+girbil-sir.ko.xz
+kingsun-sir.ko.xz
+ks959-sir.ko.xz
+ksdazzle-sir.ko.xz
+ma600-sir.ko.xz
+mcp2120-sir.ko.xz
+old_belkin-sir.ko.xz
+tekram-sir.ko.xz
+toim3232-sir.ko.xz
+
+extra/drivers/net/slip:
+slip.ko.xz
+
+extra/drivers/net/wireless:
+intersil
+
+extra/drivers/net/wireless/intersil:
+orinoco
+
+extra/drivers/net/wireless/intersil/orinoco:
+orinoco_cs.ko.xz
+orinoco.ko.xz
+orinoco_nortel.ko.xz
+orinoco_pci.ko.xz
+orinoco_plx.ko.xz
+orinoco_usb.ko.xz
+
+extra/drivers/pci:
+pcie
+
+extra/drivers/pci/pcie:
+aer
+
+extra/drivers/pci/pcie/aer:
+aer_inject.ko.xz
+
+extra/drivers/usb:
+misc
+usbip
+
+extra/drivers/usb/misc:
+trancevibrator.ko.xz
+
+extra/drivers/usb/usbip:
+usbip-core.ko.xz
+usbip-host.ko.xz
+vhci-hcd.ko.xz
+
+extra/drivers/uwb:
+hwa-rc.ko.xz
+
+extra/drivers/w1:
+masters
+slaves
+
+extra/drivers/w1/masters:
+ds1wm.ko.xz
+ds2482.ko.xz
+ds2490.ko.xz
+
+extra/drivers/w1/slaves:
+w1_bq27000.ko.xz
+w1_ds2408.ko.xz
+w1_ds2423.ko.xz
+w1_ds2431.ko.xz
+w1_ds2433.ko.xz
+w1_ds2760.ko.xz
+w1_ds2780.ko.xz
+w1_ds2781.ko.xz
+w1_ds28e04.ko.xz
+w1_smem.ko.xz
+w1_therm.ko.xz
+
+extra/fs:
+affs
+befs
+coda
+dlm
+fuse
+gfs2
+ncpfs
+nilfs2
+ocfs2
+sysv
+ubifs
+ufs
+
+extra/fs/affs:
+affs.ko.xz
+
+extra/fs/befs:
+befs.ko.xz
+
+extra/fs/coda:
+coda.ko.xz
+
+extra/fs/dlm:
+dlm.ko.xz
+
+extra/fs/fuse:
+cuse.ko.xz
+
+extra/fs/gfs2:
+gfs2.ko.xz
+
+extra/fs/ncpfs:
+ncpfs.ko.xz
+
+extra/fs/nilfs2:
+nilfs2.ko.xz
+
+extra/fs/ocfs2:
+cluster
+dlm
+dlmfs
+ocfs2.ko.xz
+ocfs2_stackglue.ko.xz
+ocfs2_stack_o2cb.ko.xz
+ocfs2_stack_user.ko.xz
+
+extra/fs/ocfs2/cluster:
+ocfs2_nodemanager.ko.xz
+
+extra/fs/ocfs2/dlm:
+ocfs2_dlm.ko.xz
+
+extra/fs/ocfs2/dlmfs:
+ocfs2_dlmfs.ko.xz
+
+extra/fs/sysv:
+sysv.ko.xz
+
+extra/fs/ubifs:
+ubifs.ko.xz
+
+extra/fs/ufs:
+ufs.ko.xz
+
+extra/net:
+appletalk
+atm
+ax25
+batman-adv
+dccp
+ipv4
+ipx
+l2tp
+netrom
+rds
+rose
+sched
+sctp
+
+extra/net/appletalk:
+appletalk.ko.xz
+
+extra/net/atm:
+br2684.ko.xz
+clip.ko.xz
+lec.ko.xz
+pppoatm.ko.xz
+
+extra/net/ax25:
+ax25.ko.xz
+
+extra/net/batman-adv:
+batman-adv.ko.xz
+
+extra/net/dccp:
+dccp_diag.ko.xz
+dccp_ipv4.ko.xz
+dccp_ipv6.ko.xz
+dccp.ko.xz
+
+extra/net/ipv4:
+tcp_bic.ko.xz
+tcp_highspeed.ko.xz
+tcp_htcp.ko.xz
+tcp_hybla.ko.xz
+tcp_illinois.ko.xz
+tcp_lp.ko.xz
+tcp_scalable.ko.xz
+tcp_vegas.ko.xz
+tcp_veno.ko.xz
+tcp_westwood.ko.xz
+tcp_yeah.ko.xz
+
+extra/net/ipx:
+ipx.ko.xz
+
+extra/net/l2tp:
+l2tp_debugfs.ko.xz
+l2tp_eth.ko.xz
+l2tp_ip.ko.xz
+l2tp_netlink.ko.xz
+l2tp_ppp.ko.xz
+
+extra/net/netrom:
+netrom.ko.xz
+
+extra/net/rds:
+rds.ko.xz
+rds_rdma.ko.xz
+rds_tcp.ko.xz
+
+extra/net/rose:
+rose.ko.xz
+
+extra/net/sched:
+sch_atm.ko.xz
+sch_cbq.ko.xz
+sch_choke.ko.xz
+sch_drr.ko.xz
+sch_dsmark.ko.xz
+sch_gred.ko.xz
+sch_mqprio.ko.xz
+sch_multiq.ko.xz
+sch_netem.ko.xz
+sch_qfq.ko.xz
+sch_red.ko.xz
+sch_sfb.ko.xz
+sch_teql.ko.xz
+
+extra/net/sctp:
+sctp.ko.xz
+sctp_probe.ko.xz

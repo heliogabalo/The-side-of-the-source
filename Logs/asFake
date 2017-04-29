@@ -1,0 +1,1491 @@
+AS(1)                        GNU Development Tools                       AS(1)
+
+[1mNAME[0m
+       AS - the portable GNU assembler.
+
+[1mSYNOPSIS[0m
+       as [[1m-a[22m[[1mcdghlns[22m][=[4mfile[24m]] [[1m--alternate[22m] [[1m-D[22m]
+        [[1m--compress-debug-sections[22m]  [[1m--nocompress-debug-sections[22m]
+        [[1m--debug-prefix-map [4m[22mold[24m=[4mnew[24m]
+        [[1m--defsym [4m[22msym[24m=[4mval[24m] [[1m-f[22m] [[1m-g[22m] [[1m--gstabs[22m]
+        [[1m--gstabs+[22m] [[1m--gdwarf-2[22m] [[1m--gdwarf-sections[22m]
+        [[1m--help[22m] [[1m-I [4m[22mdir[24m] [[1m-J[22m]
+        [[1m-K[22m] [[1m-L[22m] [[1m--listing-lhs-width[22m=[4mNUM[24m]
+        [[1m--listing-lhs-width2[22m=[4mNUM[24m] [[1m--listing-rhs-width[22m=[4mNUM[24m]
+        [[1m--listing-cont-lines[22m=[4mNUM[24m] [[1m--keep-locals[22m]
+        [[1m-o [4m[22mobjfile[24m] [[1m-R[22m]
+        [[1m--hash-size[22m=[4mNUM[24m] [[1m--reduce-memory-overheads[22m]
+        [[1m--statistics[22m]
+        [[1m-v[22m] [[1m-version[22m] [[1m--version[22m]
+        [[1m-W[22m] [[1m--warn[22m] [[1m--fatal-warnings[22m] [[1m-w[22m] [[1m-x[22m]
+        [[1m-Z[22m] [[1m@[4m[22mFILE[24m]
+        [[1m--sectname-subst[22m] [[1m--size-check=[error|warning][22m]
+        [[1m--target-help[22m] [[4mtarget-options[24m]
+        [[1m--[22m|[4mfiles[24m ...]
+
+       [4mTarget[24m [4mAArch64[24m [4moptions:[0m
+          [[1m-EB[22m|[1m-EL[22m]
+          [[1m-mabi[22m=[4mABI[24m]
+
+       [4mTarget[24m [4mAlpha[24m [4moptions:[0m
+          [[1m-m[4m[22mcpu[24m]
+          [[1m-mdebug [22m| [1m-no-mdebug[22m]
+          [[1m-replace [22m| [1m-noreplace[22m]
+          [[1m-relax[22m] [[1m-g[22m] [[1m-G[4m[22msize[24m]
+          [[1m-F[22m] [[1m-32addr[22m]
+
+       [4mTarget[24m [4mARC[24m [4moptions:[0m
+          [[1m-mcpu=[4m[22mcpu[24m]
+          [[1m-mA6[22m|[1m-mARC600[22m|[1m-mARC601[22m|[1m-mA7[22m|[1m-mARC700[22m|[1m-mEM[22m|[1m-mHS[22m]
+          [[1m-mcode-density[22m]
+          [[1m-EB[22m|[1m-EL[22m]
+
+       [4mTarget[24m [4mARM[24m [4moptions:[0m
+          [[1m-mcpu[22m=[4mprocessor[24m[+[4mextension[24m...]]
+          [[1m-march[22m=[4marchitecture[24m[+[4mextension[24m...]]
+          [[1m-mfpu[22m=[4mfloating-point-format[24m]
+          [[1m-mfloat-abi[22m=[4mabi[24m]
+          [[1m-meabi[22m=[4mver[24m]
+          [[1m-mthumb[22m]
+          [[1m-EB[22m|[1m-EL[22m]
+          [[1m-mapcs-32[22m|[1m-mapcs-26[22m|[1m-mapcs-float[22m|
+           [1m-mapcs-reentrant[22m]
+          [[1m-mthumb-interwork[22m] [[1m-k[22m]
+
+       [4mTarget[24m [4mBlackfin[24m [4moptions:[0m
+          [[1m-mcpu[22m=[4mprocessor[24m[-[4msirevision[24m]]
+          [[1m-mfdpic[22m]
+          [[1m-mno-fdpic[22m]
+          [[1m-mnopic[22m]
+
+       [4mTarget[24m [4mCRIS[24m [4moptions:[0m
+          [[1m--underscore [22m| [1m--no-underscore[22m]
+          [[1m--pic[22m] [[1m-N[22m]
+          [[1m--emulation=criself [22m| [1m--emulation=crisaout[22m]
+          [[1m--march=v0_v10 [22m| [1m--march=v10 [22m| [1m--march=v32 [22m|
+       [1m--march=common_v10_v32[22m]
+
+       [4mTarget[24m [4mD10V[24m [4moptions:[0m
+          [[1m-O[22m]
+
+       [4mTarget[24m [4mD30V[24m [4moptions:[0m
+          [[1m-O[22m|[1m-n[22m|[1m-N[22m]
+
+       [4mTarget[24m [4mEPIPHANY[24m [4moptions:[0m
+          [[1m-mepiphany[22m|[1m-mepiphany16[22m]
+
+       [4mTarget[24m [4mH8/300[24m [4moptions:[0m
+          [-h-tick-hex]
+
+       [4mTarget[24m [4mi386[24m [4moptions:[0m
+          [[1m--32[22m|[1m--x32[22m|[1m--64[22m] [[1m-n[22m]
+          [[1m-march[22m=[4mCPU[24m[+[4mEXTENSION[24m...]] [[1m-mtune[22m=[4mCPU[24m]
+
+       [4mTarget[24m [4mi960[24m [4moptions:[0m
+          [[1m-ACA[22m|[1m-ACA_A[22m|[1m-ACB[22m|[1m-ACC[22m|[1m-AKA[22m|[1m-AKB[22m|
+           [1m-AKC[22m|[1m-AMC[22m]
+          [[1m-b[22m] [[1m-no-relax[22m]
+
+       [4mTarget[24m [4mIA-64[24m [4moptions:[0m
+          [[1m-mconstant-gp[22m|[1m-mauto-pic[22m]
+          [[1m-milp32[22m|[1m-milp64[22m|[1m-mlp64[22m|[1m-mp64[22m]
+          [[1m-mle[22m|[1mmbe[22m]
+          [[1m-mtune=itanium1[22m|[1m-mtune=itanium2[22m]
+          [[1m-munwind-check=warning[22m|[1m-munwind-check=error[22m]
+          [[1m-mhint.b=ok[22m|[1m-mhint.b=warning[22m|[1m-mhint.b=error[22m]
+          [[1m-x[22m|[1m-xexplicit[22m] [[1m-xauto[22m] [[1m-xdebug[22m]
+
+       [4mTarget[24m [4mIP2K[24m [4moptions:[0m
+          [[1m-mip2022[22m|[1m-mip2022ext[22m]
+
+       [4mTarget[24m [4mM32C[24m [4moptions:[0m
+          [[1m-m32c[22m|[1m-m16c[22m] [-relax] [-h-tick-hex]
+
+       [4mTarget[24m [4mM32R[24m [4moptions:[0m
+          [[1m--m32rx[22m|[1m--[no-]warn-explicit-parallel-conflicts[22m|
+          [1m--W[n]p[22m]
+
+       [4mTarget[24m [4mM680X0[24m [4moptions:[0m
+          [[1m-l[22m] [[1m-m68000[22m|[1m-m68010[22m|[1m-m68020[22m|...]
+
+       [4mTarget[24m [4mM68HC11[24m [4moptions:[0m
+          [[1m-m68hc11[22m|[1m-m68hc12[22m|[1m-m68hcs12[22m|[1m-mm9s12x[22m|[1m-mm9s12xg[22m]
+          [[1m-mshort[22m|[1m-mlong[22m]
+          [[1m-mshort-double[22m|[1m-mlong-double[22m]
+          [[1m--force-long-branches[22m] [[1m--short-branches[22m]
+          [[1m--strict-direct-mode[22m] [[1m--print-insn-syntax[22m]
+          [[1m--print-opcodes[22m] [[1m--generate-example[22m]
+
+       [4mTarget[24m [4mMCORE[24m [4moptions:[0m
+          [[1m-jsri2bsr[22m] [[1m-sifilter[22m] [[1m-relax[22m]
+          [[1m-mcpu=[210|340][22m]
+
+       [4mTarget[24m [4mMeta[24m [4moptions:[0m
+          [[1m-mcpu=[4m[22mcpu[24m] [[1m-mfpu=[4m[22mcpu[24m] [[1m-mdsp=[4m[22mcpu[24m] [4mTarget[24m [4mMICROBLAZE[24m [4moptions:[0m
+
+       [4mTarget[24m [4mMIPS[24m [4moptions:[0m
+          [[1m-nocpp[22m] [[1m-EL[22m] [[1m-EB[22m] [[1m-O[22m[[4moptimization[24m [4mlevel[24m]]
+          [[1m-g[22m[[4mdebug[24m [4mlevel[24m]] [[1m-G [4m[22mnum[24m] [[1m-KPIC[22m] [[1m-call_shared[22m]
+          [[1m-non_shared[22m] [[1m-xgot [22m[[1m-mvxworks-pic[22m]
+          [[1m-mabi[22m=[4mABI[24m] [[1m-32[22m] [[1m-n32[22m] [[1m-64[22m] [[1m-mfp32[22m] [[1m-mgp32[22m]
+          [[1m-mfp64[22m] [[1m-mgp64[22m] [[1m-mfpxx[22m]
+          [[1m-modd-spreg[22m] [[1m-mno-odd-spreg[22m]
+          [[1m-march[22m=[4mCPU[24m] [[1m-mtune[22m=[4mCPU[24m] [[1m-mips1[22m] [[1m-mips2[22m]
+          [[1m-mips3[22m] [[1m-mips4[22m] [[1m-mips5[22m] [[1m-mips32[22m] [[1m-mips32r2[22m]
+          [[1m-mips32r3[22m] [[1m-mips32r5[22m] [[1m-mips32r6[22m] [[1m-mips64[22m] [[1m-mips64r2[22m]
+          [[1m-mips64r3[22m] [[1m-mips64r5[22m] [[1m-mips64r6[22m]
+          [[1m-construct-floats[22m] [[1m-no-construct-floats[22m]
+          [[1m-mnan=[4m[22mencoding[24m]
+          [[1m-trap[22m] [[1m-no-break[22m] [[1m-break[22m] [[1m-no-trap[22m]
+          [[1m-mips16[22m] [[1m-no-mips16[22m]
+          [[1m-mmicromips[22m] [[1m-mno-micromips[22m]
+          [[1m-msmartmips[22m] [[1m-mno-smartmips[22m]
+          [[1m-mips3d[22m] [[1m-no-mips3d[22m]
+          [[1m-mdmx[22m] [[1m-no-mdmx[22m]
+          [[1m-mdsp[22m] [[1m-mno-dsp[22m]
+          [[1m-mdspr2[22m] [[1m-mno-dspr2[22m]
+          [[1m-mmsa[22m] [[1m-mno-msa[22m]
+          [[1m-mxpa[22m] [[1m-mno-xpa[22m]
+          [[1m-mmt[22m] [[1m-mno-mt[22m]
+          [[1m-mmcu[22m] [[1m-mno-mcu[22m]
+          [[1m-minsn32[22m] [[1m-mno-insn32[22m]
+          [[1m-mfix7000[22m] [[1m-mno-fix7000[22m]
+          [[1m-mfix-rm7000[22m] [[1m-mno-fix-rm7000[22m]
+          [[1m-mfix-vr4120[22m] [[1m-mno-fix-vr4120[22m]
+          [[1m-mfix-vr4130[22m] [[1m-mno-fix-vr4130[22m]
+          [[1m-mdebug[22m] [[1m-no-mdebug[22m]
+          [[1m-mpdr[22m] [[1m-mno-pdr[22m]
+
+       [4mTarget[24m [4mMMIX[24m [4moptions:[0m
+          [[1m--fixed-special-register-names[22m] [[1m--globalize-symbols[22m]
+          [[1m--gnu-syntax[22m] [[1m--relax[22m] [[1m--no-predefined-symbols[22m]
+          [[1m--no-expand[22m] [[1m--no-merge-gregs[22m] [[1m-x[22m]
+          [[1m--linker-allocated-gregs[22m]
+
+       [4mTarget[24m [4mNios[24m [4mII[24m [4moptions:[0m
+          [[1m-relax-all[22m] [[1m-relax-section[22m] [[1m-no-relax[22m]
+          [[1m-EB[22m] [[1m-EL[22m]
+
+       [4mTarget[24m [4mNDS32[24m [4moptions:[0m
+           [[1m-EL[22m] [[1m-EB[22m] [[1m-O[22m] [[1m-Os[22m] [[1m-mcpu=[4m[22mcpu[24m]
+           [[1m-misa=[4m[22misa[24m] [[1m-mabi=[4m[22mabi[24m] [[1m-mall-ext[22m]
+           [[1m-m[no-]16-bit[22m]  [[1m-m[no-]perf-ext[22m] [[1m-m[no-]perf2-ext[22m]
+           [[1m-m[no-]string-ext[22m] [[1m-m[no-]dsp-ext[22m] [[1m-m[no-]mac[22m] [[1m-m[no-]div[22m]
+           [[1m-m[no-]audio-isa-ext[22m] [[1m-m[no-]fpu-sp-ext[22m] [[1m-m[no-]fpu-dp-ext[22m]
+           [[1m-m[no-]fpu-fma[22m] [[1m-mfpu-freg=[4m[22mFREG[24m] [[1m-mreduced-regs[22m]
+           [[1m-mfull-regs[22m] [[1m-m[no-]dx-regs[22m] [[1m-mpic[22m] [[1m-mno-relax[22m]
+           [[1m-mb2bb[22m]
+
+       [4mTarget[24m [4mPDP11[24m [4moptions:[0m
+          [[1m-mpic[22m|[1m-mno-pic[22m] [[1m-mall[22m] [[1m-mno-extensions[22m]
+          [[1m-m[4m[22mextension[24m|[1m-mno-[4m[22mextension[24m]
+          [[1m-m[4m[22mcpu[24m] [[1m-m[4m[22mmachine[24m]
+
+       [4mTarget[24m [4mpicoJava[24m [4moptions:[0m
+          [[1m-mb[22m|[1m-me[22m]
+
+       [4mTarget[24m [4mPowerPC[24m [4moptions:[0m
+          [[1m-a32[22m|[1m-a64[22m]
+          [[1m-mpwrx[22m|[1m-mpwr2[22m|[1m-mpwr[22m|[1m-m601[22m|[1m-mppc[22m|[1m-mppc32[22m|[1m-m603[22m|[1m-m604[22m|[1m-m403[22m|[1m-m405[22m|
+           [1m-m440[22m|[1m-m464[22m|[1m-m476[22m|[1m-m7400[22m|[1m-m7410[22m|[1m-m7450[22m|[1m-m7455[22m|[1m-m750cl[22m|[1m-mppc64[22m|
+           [1m-m620[22m|[1m-me500[22m|[1m-e500x2[22m|[1m-me500mc[22m|[1m-me500mc64[22m|[1m-me5500[22m|[1m-me6500[22m|[1m-mppc64bridge[22m|
+           [1m-mbooke[22m|[1m-mpower4[22m|[1m-mpwr4[22m|[1m-mpower5[22m|[1m-mpwr5[22m|[1m-mpwr5x[22m|[1m-mpower6[22m|[1m-mpwr6[22m|
+           [1m-mpower7[22m|[1m-mpwr7[22m|[1m-mpower8[22m|[1m-mpwr8[22m|[1m-mpower9[22m|[1m-mpwr9-ma2[22m|
+           [1m-mcell[22m|[1m-mspe[22m|[1m-mtitan[22m|[1m-me300[22m|[1m-mcom[22m]
+          [[1m-many[22m] [[1m-maltivec[22m|[1m-mvsx[22m|[1m-mhtm[22m|[1m-mvle[22m]
+          [[1m-mregnames[22m|[1m-mno-regnames[22m]
+          [[1m-mrelocatable[22m|[1m-mrelocatable-lib[22m|[1m-K PIC[22m] [[1m-memb[22m]
+          [[1m-mlittle[22m|[1m-mlittle-endian[22m|[1m-le[22m|[1m-mbig[22m|[1m-mbig-endian[22m|[1m-be[22m]
+          [[1m-msolaris[22m|[1m-mno-solaris[22m]
+          [[1m-nops=[4m[22mcount[24m]
+
+       [4mTarget[24m [4mRL78[24m [4moptions:[0m
+          [[1m-mg10[22m]
+          [[1m-m32bit-doubles[22m|[1m-m64bit-doubles[22m]
+
+       [4mTarget[24m [4mRX[24m [4moptions:[0m
+          [[1m-mlittle-endian[22m|[1m-mbig-endian[22m]
+          [[1m-m32bit-doubles[22m|[1m-m64bit-doubles[22m]
+          [[1m-muse-conventional-section-names[22m]
+          [[1m-msmall-data-limit[22m]
+          [[1m-mpid[22m]
+          [[1m-mrelax[22m]
+          [[1m-mint-register=[4m[22mnumber[24m]
+          [[1m-mgcc-abi[22m|[1m-mrx-abi[22m]
+
+       [4mTarget[24m [4ms390[24m [4moptions:[0m
+          [[1m-m31[22m|[1m-m64[22m] [[1m-mesa[22m|[1m-mzarch[22m] [[1m-march[22m=[4mCPU[24m]
+          [[1m-mregnames[22m|[1m-mno-regnames[22m]
+          [[1m-mwarn-areg-zero[22m]
+
+       [4mTarget[24m [4mSCORE[24m [4moptions:[0m
+          [[1m-EB[22m][[1m-EL[22m][[1m-FIXDD[22m][[1m-NWARN[22m]
+          [[1m-SCORE5[22m][[1m-SCORE5U[22m][[1m-SCORE7[22m][[1m-SCORE3[22m]
+          [[1m-march=score7[22m][[1m-march=score3[22m]
+          [[1m-USE_R1[22m][[1m-KPIC[22m][[1m-O0[22m][[1m-G [4m[22mnum[24m][[1m-V[22m]
+
+       [4mTarget[24m [4mSPARC[24m [4moptions:[0m
+          [[1m-Av6[22m|[1m-Av7[22m|[1m-Av8[22m|[1m-Asparclet[22m|[1m-Asparclite[0m
+           [1m-Av8plus[22m|[1m-Av8plusa[22m|[1m-Av9[22m|[1m-Av9a[22m]
+          [[1m-xarch=v8plus[22m|[1m-xarch=v8plusa[22m] [[1m-bump[22m]
+          [[1m-32[22m|[1m-64[22m]
+
+       [4mTarget[24m [4mTIC54X[24m [4moptions:[0m
+        [[1m-mcpu=54[123589][22m|[1m-mcpu=54[56]lp[22m] [[1m-mfar-mode[22m|[1m-mf[22m]
+        [[1m-merrors-to-file [4m[22m<filename>[24m|[1m-me [4m[22m<filename>[24m]
+
+       [4mTarget[24m [4mTIC6X[24m [4moptions:[0m
+          [[1m-march=[4m[22march[24m] [[1m-mbig-endian[22m|[1m-mlittle-endian[22m]
+          [[1m-mdsbt[22m|[1m-mno-dsbt[22m] [[1m-mpid=no[22m|[1m-mpid=near[22m|[1m-mpid=far[22m]
+          [[1m-mpic[22m|[1m-mno-pic[22m]
+
+       [4mTarget[24m [4mTILE-Gx[24m [4moptions:[0m
+          [[1m-m32[22m|[1m-m64[22m][[1m-EB[22m][[1m-EL[22m]
+
+       [4mTarget[24m [4mVisium[24m [4moptions:[0m
+          [[1m-mtune=[4m[22march[24m]
+
+       [4mTarget[24m [4mXtensa[24m [4moptions:[0m
+        [[1m--[no-]text-section-literals[22m] [[1m--[no-]auto-litpools[22m]
+        [[1m--[no-]absolute-literals[22m]
+        [[1m--[no-]target-align[22m] [[1m--[no-]longcalls[22m]
+        [[1m--[no-]transform[22m]
+        [[1m--rename-section [4m[22moldname[24m=[4mnewname[24m]
+        [[1m--[no-]trampolines[22m]
+
+       [4mTarget[24m [4mZ80[24m [4moptions:[0m
+         [[1m-z80[22m] [[1m-r800[22m]
+         [ [1m-ignore-undocumented-instructions[22m] [[1m-Wnud[22m]
+         [ [1m-ignore-unportable-instructions[22m] [[1m-Wnup[22m]
+         [ [1m-warn-undocumented-instructions[22m] [[1m-Wud[22m]
+         [ [1m-warn-unportable-instructions[22m] [[1m-Wup[22m]
+         [ [1m-forbid-undocumented-instructions[22m] [[1m-Fud[22m]
+         [ [1m-forbid-unportable-instructions[22m] [[1m-Fup[22m]
+
+[1mDESCRIPTION[0m
+       GNU [1mas [22mis really a family of assemblers.  If you use (or have used) the
+       GNU assembler on one architecture, you should find a fairly similar
+       environment when you use it on another architecture.  Each version has
+       much in common with the others, including object file formats, most
+       assembler directives (often called [4mpseudo-ops[24m) and assembler syntax.
+
+       [1mas [22mis primarily intended to assemble the output of the GNU C compiler
+       "gcc" for use by the linker "ld".  Nevertheless, we've tried to make [1mas[0m
+       assemble correctly everything that other assemblers for the same
+       machine would assemble.  Any exceptions are documented explicitly.
+       This doesn't mean [1mas [22malways uses the same syntax as another assembler
+       for the same architecture; for example, we know of several incompatible
+       versions of 680x0 assembly language syntax.
+
+       Each time you run [1mas [22mit assembles exactly one source program.  The
+       source program is made up of one or more files.  (The standard input is
+       also a file.)
+
+       You give [1mas [22ma command line that has zero or more input file names.  The
+       input files are read (from left file name to right).  A command line
+       argument (in any position) that has no special meaning is taken to be
+       an input file name.
+
+       If you give [1mas [22mno file names it attempts to read one input file from
+       the [1mas [22mstandard input, which is normally your terminal.  You may have
+       to type [1mctl-D [22mto tell [1mas [22mthere is no more program to assemble.
+
+       Use [1m-- [22mif you need to explicitly name the standard input file in your
+       command line.
+
+       If the source is empty, [1mas [22mproduces a small, empty object file.
+
+       [1mas [22mmay write warnings and error messages to the standard error file
+       (usually your terminal).  This should not happen when  a compiler runs
+       [1mas [22mautomatically.  Warnings report an assumption made so that [1mas [22mcould
+       keep assembling a flawed program; errors report a grave problem that
+       stops the assembly.
+
+       If you are invoking [1mas [22mvia the GNU C compiler, you can use the [1m-Wa[0m
+       option to pass arguments through to the assembler.  The assembler
+       arguments must be separated from each other (and the [1m-Wa[22m) by commas.
+       For example:
+
+               gcc -c -g -O -Wa,-alh,-L file.c
+
+       This passes two options to the assembler: [1m-alh [22m(emit a listing to
+       standard output with high-level and assembly source) and [1m-L [22m(retain
+       local symbols in the symbol table).
+
+       Usually you do not need to use this [1m-Wa [22mmechanism, since many compiler
+       command-line options are automatically passed to the assembler by the
+       compiler.  (You can call the GNU compiler driver with the [1m-v [22moption to
+       see precisely what options it passes to each compilation pass,
+       including the assembler.)
+
+[1mOPTIONS[0m
+       [1m@[4m[22mfile[0m
+           Read command-line options from [4mfile[24m.  The options read are inserted
+           in place of the original @[4mfile[24m option.  If [4mfile[24m does not exist, or
+           cannot be read, then the option will be treated literally, and not
+           removed.
+
+           Options in [4mfile[24m are separated by whitespace.  A whitespace
+           character may be included in an option by surrounding the entire
+           option in either single or double quotes.  Any character (including
+           a backslash) may be included by prefixing the character to be
+           included with a backslash.  The [4mfile[24m may itself contain additional
+           @[4mfile[24m options; any such options will be processed recursively.
+
+       [1m-a[cdghlmns][0m
+           Turn on listings, in any of a variety of ways:
+
+           [1m-ac [22momit false conditionals
+
+           [1m-ad [22momit debugging directives
+
+           [1m-ag [22minclude general information, like as version and options passed
+
+           [1m-ah [22minclude high-level source
+
+           [1m-al [22minclude assembly
+
+           [1m-am [22minclude macro expansions
+
+           [1m-an [22momit forms processing
+
+           [1m-as [22minclude symbols
+
+           [1m=file[0m
+               set the name of the listing file
+
+           You may combine these options; for example, use [1m-aln [22mfor assembly
+           listing without forms processing.  The [1m=file [22moption, if used, must
+           be the last one.  By itself, [1m-a [22mdefaults to [1m-ahls[22m.
+
+       [1m--alternate[0m
+           Begin in alternate macro mode.
+
+       [1m--compress-debug-sections[0m
+           Compress DWARF debug sections using zlib with SHF_COMPRESSED from
+           the ELF ABI.  The resulting object file may not be compatible with
+           older linkers and object file utilities.  Note if compression would
+           make a given section [4mlarger[24m then it is not compressed.
+
+       [1m--compress-debug-sections=none[0m
+       [1m--compress-debug-sections=zlib[0m
+       [1m--compress-debug-sections=zlib-gnu[0m
+       [1m--compress-debug-sections=zlib-gabi[0m
+           These options control how DWARF debug sections are compressed.
+           [1m--compress-debug-sections=none [22mis equivalent to
+           [1m--nocompress-debug-sections[22m.  [1m--compress-debug-sections=zlib [22mand
+           [1m--compress-debug-sections=zlib-gabi [22mare equivalent to
+           [1m--compress-debug-sections[22m.  [1m--compress-debug-sections=zlib-gnu[0m
+           compresses DWARF debug sections using zlib.  The debug sections are
+           renamed to begin with [1m.zdebug[22m.  Note if compression would make a
+           given section [4mlarger[24m then it is not compressed nor renamed.
+
+       [1m--nocompress-debug-sections[0m
+           Do not compress DWARF debug sections.  This is usually the default
+           for all targets except the x86/x86_64, but a configure time option
+           can be used to override this.
+
+       [1m-D  [22mIgnored.  This option is accepted for script compatibility with
+           calls to other assemblers.
+
+       [1m--debug-prefix-map [4m[22mold[24m[1m=[4m[22mnew[0m
+           When assembling files in directory [4mold[24m, record debugging
+           information describing them as in [4mnew[24m instead.
+
+       [1m--defsym [4m[22msym[24m[1m=[4m[22mvalue[0m
+           Define the symbol [4msym[24m to be [4mvalue[24m before assembling the input file.
+           [4mvalue[24m must be an integer constant.  As in C, a leading [1m0x [22mindicates
+           a hexadecimal value, and a leading [1m0 [22mindicates an octal value.  The
+           value of the symbol can be overridden inside a source file via the
+           use of a ".set" pseudo-op.
+
+       [1m-f  [22m"fast"---skip whitespace and comment preprocessing (assume source
+           is compiler output).
+
+       [1m-g[0m
+       [1m--gen-debug[0m
+           Generate debugging information for each assembler source line using
+           whichever debug format is preferred by the target.  This currently
+           means either STABS, ECOFF or DWARF2.
+
+       [1m--gstabs[0m
+           Generate stabs debugging information for each assembler line.  This
+           may help debugging assembler code, if the debugger can handle it.
+
+       [1m--gstabs+[0m
+           Generate stabs debugging information for each assembler line, with
+           GNU extensions that probably only gdb can handle, and that could
+           make other debuggers crash or refuse to read your program.  This
+           may help debugging assembler code.  Currently the only GNU
+           extension is the location of the current working directory at
+           assembling time.
+
+       [1m--gdwarf-2[0m
+           Generate DWARF2 debugging information for each assembler line.
+           This may help debugging assembler code, if the debugger can handle
+           it.  Note---this option is only supported by some targets, not all
+           of them.
+
+       [1m--gdwarf-sections[0m
+           Instead of creating a .debug_line section, create a series of
+           .debug_line.[4mfoo[24m sections where [4mfoo[24m is the name of the corresponding
+           code section.  For example a code section called [4m.text.func[24m will
+           have its dwarf line number information placed into a section called
+           [4m.debug_line.text.func[24m.  If the code section is just called [4m.text[0m
+           then debug line section will still be called just [4m.debug_line[0m
+           without any suffix.
+
+       [1m--size-check=error[0m
+       [1m--size-check=warning[0m
+           Issue an error or warning for invalid ELF .size directive.
+
+       [1m--help[0m
+           Print a summary of the command line options and exit.
+
+       [1m--target-help[0m
+           Print a summary of all target specific options and exit.
+
+       [1m-I [4m[22mdir[0m
+           Add directory [4mdir[24m to the search list for ".include" directives.
+
+       [1m-J  [22mDon't warn about signed overflow.
+
+       [1m-K  [22mIssue warnings when difference tables altered for long
+           displacements.
+
+       [1m-L[0m
+       [1m--keep-locals[0m
+           Keep (in the symbol table) local symbols.  These symbols start with
+           system-specific local label prefixes, typically [1m.L [22mfor ELF systems
+           or [1mL [22mfor traditional a.out systems.
+
+       [1m--listing-lhs-width=[4m[22mnumber[0m
+           Set the maximum width, in words, of the output data column for an
+           assembler listing to [4mnumber[24m.
+
+       [1m--listing-lhs-width2=[4m[22mnumber[0m
+           Set the maximum width, in words, of the output data column for
+           continuation lines in an assembler listing to [4mnumber[24m.
+
+       [1m--listing-rhs-width=[4m[22mnumber[0m
+           Set the maximum width of an input source line, as displayed in a
+           listing, to [4mnumber[24m bytes.
+
+       [1m--listing-cont-lines=[4m[22mnumber[0m
+           Set the maximum number of lines printed in a listing for a single
+           line of input to [4mnumber[24m + 1.
+
+       [1m-o [4m[22mobjfile[0m
+           Name the object-file output from [1mas [4m[22mobjfile[24m.
+
+       [1m-R  [22mFold the data section into the text section.
+
+       [1m--hash-size=[4m[22mnumber[0m
+           Set the default size of GAS's hash tables to a prime number close
+           to [4mnumber[24m.  Increasing this value can reduce the length of time it
+           takes the assembler to perform its tasks, at the expense of
+           increasing the assembler's memory requirements.  Similarly reducing
+           this value can reduce the memory requirements at the expense of
+           speed.
+
+       [1m--reduce-memory-overheads[0m
+           This option reduces GAS's memory requirements, at the expense of
+           making the assembly processes slower.  Currently this switch is a
+           synonym for [1m--hash-size=4051[22m, but in the future it may have other
+           effects as well.
+
+       [1m--sectname-subst[0m
+           Honor substitution sequences in section names.
+
+       [1m--statistics[0m
+           Print the maximum space (in bytes) and total time (in seconds) used
+           by assembly.
+
+       [1m--strip-local-absolute[0m
+           Remove local absolute symbols from the outgoing symbol table.
+
+       [1m-v[0m
+       [1m-version[0m
+           Print the [1mas [22mversion.
+
+       [1m--version[0m
+           Print the [1mas [22mversion and exit.
+
+       [1m-W[0m
+       [1m--no-warn[0m
+           Suppress warning messages.
+
+       [1m--fatal-warnings[0m
+           Treat warnings as errors.
+
+       [1m--warn[0m
+           Don't suppress warning messages or treat them as errors.
+
+       [1m-w  [22mIgnored.
+
+       [1m-x  [22mIgnored.
+
+       [1m-Z  [22mGenerate an object file even after errors.
+
+       [1m-- | [4m[22mfiles[24m [1m...[0m
+           Standard input, or source files to assemble.
+
+       The following options are available when as is configured for the
+       64-bit mode of the ARM Architecture (AArch64).
+
+       [1m-EB [22mThis option specifies that the output generated by the assembler
+           should be marked as being encoded for a big-endian processor.
+
+       [1m-EL [22mThis option specifies that the output generated by the assembler
+           should be marked as being encoded for a little-endian processor.
+
+       [1m-mabi=[4m[22mabi[0m
+           Specify which ABI the source code uses.  The recognized arguments
+           are: "ilp32" and "lp64", which decides the generated object file in
+           ELF32 and ELF64 format respectively.  The default is "lp64".
+
+       [1m-mcpu=[4m[22mprocessor[24m[1m[+[4m[22mextension[24m[1m...][0m
+           This option specifies the target processor.  The assembler will
+           issue an error message if an attempt is made to assemble an
+           instruction which will not execute on the target processor.  The
+           following processor names are recognized: "cortex-a35",
+           "cortex-a53", "cortex-a57", "cortex-a72", "exynos-m1", "qdf24xx",
+           "thunderx", "xgene1" and "xgene2".  The special name "all" may be
+           used to allow the assembler to accept instructions valid for any
+           supported processor, including all optional extensions.
+
+           In addition to the basic instruction set, the assembler can be told
+           to accept, or restrict, various extension mnemonics that extend the
+           processor.
+
+           If some implementations of a particular processor can have an
+           extension, then then those extensions are automatically enabled.
+           Consequently, you will not normally have to specify any additional
+           extensions.
+
+       [1m-march=[4m[22marchitecture[24m[1m[+[4m[22mextension[24m[1m...][0m
+           This option specifies the target architecture.  The assembler will
+           issue an error message if an attempt is made to assemble an
+           instruction which will not execute on the target architecture.  The
+           following architecture names are recognized: "armv8-a", "armv8.1-a"
+           and "armv8.2-a".
+
+           If both [1m-mcpu [22mand [1m-march [22mare specified, the assembler will use the
+           setting for [1m-mcpu[22m.  If neither are specified, the assembler will
+           default to [1m-mcpu=all[22m.
+
+           The architecture option can be extended with the same instruction
+           set extension options as the [1m-mcpu [22moption.  Unlike [1m-mcpu[22m,
+           extensions are not always enabled by default,
+
+       [1m-mverbose-error[0m
+           This option enables verbose error messages for AArch64 gas.  This
+           option is enabled by default.
+
+       [1m-mno-verbose-error[0m
+           This option disables verbose error messages in AArch64 gas.
+
+       The following options are available when as is configured for an Alpha
+       processor.
+
+       [1m-m[4m[22mcpu[0m
+           This option specifies the target processor.  If an attempt is made
+           to assemble an instruction which will not execute on the target
+           processor, the assembler may either expand the instruction as a
+           macro or issue an error message.  This option is equivalent to the
+           ".arch" directive.
+
+           The following processor names are recognized: 21064, "21064a",
+           21066, 21068, 21164, "21164a", "21164pc", 21264, "21264a",
+           "21264b", "ev4", "ev5", "lca45", "ev5", "ev56", "pca56", "ev6",
+           "ev67", "ev68".  The special name "all" may be used to allow the
+           assembler to accept instructions valid for any Alpha processor.
+
+           In order to support existing practice in OSF/1 with respect to
+           ".arch", and existing practice within [1mMILO [22m(the Linux ARC
+           bootloader), the numbered processor names (e.g. 21064) enable the
+           processor-specific PALcode instructions, while the "electro-vlasic"
+           names (e.g. "ev4") do not.
+
+       [1m-mdebug[0m
+       [1m-no-mdebug[0m
+           Enables or disables the generation of ".mdebug" encapsulation for
+           stabs directives and procedure descriptors.  The default is to
+           automatically enable ".mdebug" when the first stabs directive is
+           seen.
+
+       [1m-relax[0m
+           This option forces all relocations to be put into the object file,
+           instead of saving space and resolving some relocations at assembly
+           time.  Note that this option does not propagate all symbol
+           arithmetic into the object file, because not all symbol arithmetic
+           can be represented.  However, the option can still be useful in
+           specific applications.
+
+       [1m-replace[0m
+       [1m-noreplace[0m
+           Enables or disables the optimization of procedure calls, both at
+           assemblage and at link time.  These options are only available for
+           VMS targets and "-replace" is the default.  See section 1.4.1 of
+           the OpenVMS Linker Utility Manual.
+
+       [1m-g  [22mThis option is used when the compiler generates debug information.
+           When [1mgcc [22mis using [1mmips-tfile [22mto generate debug information for
+           ECOFF, local labels must be passed through to the object file.
+           Otherwise this option has no effect.
+
+       [1m-G[4m[22msize[0m
+           A local common symbol larger than [4msize[24m is placed in ".bss", while
+           smaller symbols are placed in ".sbss".
+
+       [1m-F[0m
+       [1m-32addr[0m
+           These options are ignored for backward compatibility.
+
+       The following options are available when as is configured for an ARC
+       processor.
+
+       [1m-mcpu=[4m[22mcpu[0m
+           This option selects the core processor variant.
+
+       [1m-EB | -EL[0m
+           Select either big-endian (-EB) or little-endian (-EL) output.
+
+       [1m-mcode-density[0m
+           Enable Code Density extenssion instructions.
+
+       The following options are available when as is configured for the ARM
+       processor family.
+
+       [1m-mcpu=[4m[22mprocessor[24m[1m[+[4m[22mextension[24m[1m...][0m
+           Specify which ARM processor variant is the target.
+
+       [1m-march=[4m[22marchitecture[24m[1m[+[4m[22mextension[24m[1m...][0m
+           Specify which ARM architecture variant is used by the target.
+
+       [1m-mfpu=[4m[22mfloating-point-format[0m
+           Select which Floating Point architecture is the target.
+
+       [1m-mfloat-abi=[4m[22mabi[0m
+           Select which floating point ABI is in use.
+
+       [1m-mthumb[0m
+           Enable Thumb only instruction decoding.
+
+       [1m-mapcs-32 | -mapcs-26 | -mapcs-float | -mapcs-reentrant[0m
+           Select which procedure calling convention is in use.
+
+       [1m-EB | -EL[0m
+           Select either big-endian (-EB) or little-endian (-EL) output.
+
+       [1m-mthumb-interwork[0m
+           Specify that the code has been generated with interworking between
+           Thumb and ARM code in mind.
+
+       [1m-mccs[0m
+           Turns on CodeComposer Studio assembly syntax compatibility mode.
+
+       [1m-k  [22mSpecify that PIC code has been generated.
+
+       The following options are available when as is configured for the
+       Blackfin processor family.
+
+       [1m-mcpu=[4m[22mprocessor[24m[[1m-[4m[22msirevision[24m]
+           This option specifies the target processor.  The optional
+           [4msirevision[24m is not used in assembler.  It's here such that GCC can
+           easily pass down its "-mcpu=" option.  The assembler will issue an
+           error message if an attempt is made to assemble an instruction
+           which will not execute on the target processor.  The following
+           processor names are recognized: "bf504", "bf506", "bf512", "bf514",
+           "bf516", "bf518", "bf522", "bf523", "bf524", "bf525", "bf526",
+           "bf527", "bf531", "bf532", "bf533", "bf534", "bf535" (not
+           implemented yet), "bf536", "bf537", "bf538", "bf539", "bf542",
+           "bf542m", "bf544", "bf544m", "bf547", "bf547m", "bf548", "bf548m",
+           "bf549", "bf549m", "bf561", and "bf592".
+
+       [1m-mfdpic[0m
+           Assemble for the FDPIC ABI.
+
+       [1m-mno-fdpic[0m
+       [1m-mnopic[0m
+           Disable -mfdpic.
+
+       See the info pages for documentation of the CRIS-specific options.
+
+       The following options are available when as is configured for a D10V
+       processor.
+
+       [1m-O  [22mOptimize output by parallelizing instructions.
+
+       The following options are available when as is configured for a D30V
+       processor.
+
+       [1m-O  [22mOptimize output by parallelizing instructions.
+
+       [1m-n  [22mWarn when nops are generated.
+
+       [1m-N  [22mWarn when a nop after a 32-bit multiply instruction is generated.
+
+       The following options are available when as is configured for an
+       Epiphany processor.
+
+       [1m-mepiphany[0m
+           Specifies that the both 32 and 16 bit instructions are allowed.
+           This is the default behavior.
+
+       [1m-mepiphany16[0m
+           Restricts the permitted instructions to just the 16 bit set.
+
+       The following options are available when as is configured for an H8/300
+       processor.  @chapter H8/300 Dependent Features
+
+   [1mOptions[0m
+       The Renesas H8/300 version of "as" has one machine-dependent option:
+
+       [1m-h-tick-hex[0m
+           Support H'00 style hex constants in addition to 0x00 style.
+
+       [1m-mach=[4m[22mname[0m
+           Sets the H8300 machine variant.  The following machine names are
+           recognised: "h8300h", "h8300hn", "h8300s", "h8300sn", "h8300sx" and
+           "h8300sxn".
+
+       The following options are available when as is configured for an i386
+       processor.
+
+       [1m--32 | --x32 | --64[0m
+           Select the word size, either 32 bits or 64 bits.  [1m--32 [22mimplies
+           Intel i386 architecture, while [1m--x32 [22mand [1m--64 [22mimply AMD x86-64
+           architecture with 32-bit or 64-bit word-size respectively.
+
+           These options are only available with the ELF object file format,
+           and require that the necessary BFD support has been included (on a
+           32-bit platform you have to add --enable-64-bit-bfd to configure
+           enable 64-bit usage and use x86-64 as target platform).
+
+       [1m-n  [22mBy default, x86 GAS replaces multiple nop instructions used for
+           alignment within code sections with multi-byte nop instructions
+           such as leal 0(%esi,1),%esi.  This switch disables the
+           optimization.
+
+       [1m--divide[0m
+           On SVR4-derived platforms, the character [1m/ [22mis treated as a comment
+           character, which means that it cannot be used in expressions.  The
+           [1m--divide [22moption turns [1m/ [22minto a normal character.  This does not
+           disable [1m/ [22mat the beginning of a line starting a comment, or affect
+           using [1m# [22mfor starting a comment.
+
+       [1m-march=[4m[22mCPU[24m[1m[+[4m[22mEXTENSION[24m[1m...][0m
+           This option specifies the target processor.  The assembler will
+           issue an error message if an attempt is made to assemble an
+           instruction which will not execute on the target processor.  The
+           following processor names are recognized: "i8086", "i186", "i286",
+           "i386", "i486", "i586", "i686", "pentium", "pentiumpro",
+           "pentiumii", "pentiumiii", "pentium4", "prescott", "nocona",
+           "core", "core2", "corei7", "l1om", "k1om", "iamcu", "k6", "k6_2",
+           "athlon", "opteron", "k8", "amdfam10", "bdver1", "bdver2",
+           "bdver3", "bdver4", "znver1", "btver1", "btver2", "generic32" and
+           "generic64".
+
+           In addition to the basic instruction set, the assembler can be told
+           to accept various extension mnemonics.  For example,
+           "-march=i686+sse4+vmx" extends [4mi686[24m with [4msse4[24m and [4mvmx[24m.  The
+           following extensions are currently supported: 8087, 287, 387,
+           "no87", "mmx", "nommx", "sse", "sse2", "sse3", "ssse3", "sse4.1",
+           "sse4.2", "sse4", "nosse", "avx", "avx2", "adx", "rdseed",
+           "prfchw", "smap", "mpx", "sha", "prefetchwt1", "clflushopt", "se1",
+           "clwb", "pcommit", "avx512f", "avx512cd", "avx512er", "avx512pf",
+           "avx512vl", "avx512bw", "avx512dq", "avx512ifma", "avx512vbmi",
+           "noavx", "vmx", "vmfunc", "smx", "xsave", "xsaveopt", "xsavec",
+           "xsaves", "aes", "pclmul", "fsgsbase", "rdrnd", "f16c", "bmi2",
+           "fma", "movbe", "ept", "lzcnt", "hle", "rtm", "invpcid", "clflush",
+           "mwaitx", "clzero", "lwp", "fma4", "xop", "cx16", "syscall",
+           "rdtscp", "3dnow", "3dnowa", "sse4a", "sse5", "svme", "abm" and
+           "padlock".  Note that rather than extending a basic instruction
+           set, the extension mnemonics starting with "no" revoke the
+           respective functionality.
+
+           When the ".arch" directive is used with [1m-march[22m, the ".arch"
+           directive will take precedent.
+
+       [1m-mtune=[4m[22mCPU[0m
+           This option specifies a processor to optimize for. When used in
+           conjunction with the [1m-march [22moption, only instructions of the
+           processor specified by the [1m-march [22moption will be generated.
+
+           Valid [4mCPU[24m values are identical to the processor list of [1m-march=[4m[22mCPU[24m.
+
+       [1m-msse2avx[0m
+           This option specifies that the assembler should encode SSE
+           instructions with VEX prefix.
+
+       [1m-msse-check=[4m[22mnone[0m
+       [1m-msse-check=[4m[22mwarning[0m
+       [1m-msse-check=[4m[22merror[0m
+           These options control if the assembler should check SSE
+           instructions.  [1m-msse-check=[4m[22mnone[24m will make the assembler not to
+           check SSE instructions,  which is the default.  [1m-msse-check=[4m[22mwarning[0m
+           will make the assembler issue a warning for any SSE instruction.
+           [1m-msse-check=[4m[22merror[24m will make the assembler issue an error for any
+           SSE instruction.
+
+       [1m-mavxscalar=[4m[22m128[0m
+       [1m-mavxscalar=[4m[22m256[0m
+           These options control how the assembler should encode scalar AVX
+           instructions.  [1m-mavxscalar=[4m[22m128[24m will encode scalar AVX instructions
+           with 128bit vector length, which is the default.  [1m-mavxscalar=[4m[22m256[0m
+           will encode scalar AVX instructions with 256bit vector length.
+
+       [1m-mevexlig=[4m[22m128[0m
+       [1m-mevexlig=[4m[22m256[0m
+       [1m-mevexlig=[4m[22m512[0m
+           These options control how the assembler should encode length-
+           ignored (LIG) EVEX instructions.  [1m-mevexlig=[4m[22m128[24m will encode LIG
+           EVEX instructions with 128bit vector length, which is the default.
+           [1m-mevexlig=[4m[22m256[24m and [1m-mevexlig=[4m[22m512[24m will encode LIG EVEX instructions
+           with 256bit and 512bit vector length, respectively.
+
+       [1m-mevexwig=[4m[22m0[0m
+       [1m-mevexwig=[4m[22m1[0m
+           These options control how the assembler should encode w-ignored
+           (WIG) EVEX instructions.  [1m-mevexwig=[4m[22m0[24m will encode WIG EVEX
+           instructions with evex.w = 0, which is the default.  [1m-mevexwig=[4m[22m1[0m
+           will encode WIG EVEX instructions with evex.w = 1.
+
+       [1m-mmnemonic=[4m[22matt[0m
+       [1m-mmnemonic=[4m[22mintel[0m
+           This option specifies instruction mnemonic for matching
+           instructions.  The ".att_mnemonic" and ".intel_mnemonic" directives
+           will take precedent.
+
+       [1m-msyntax=[4m[22matt[0m
+       [1m-msyntax=[4m[22mintel[0m
+           This option specifies instruction syntax when processing
+           instructions.  The ".att_syntax" and ".intel_syntax" directives
+           will take precedent.
+
+       [1m-mnaked-reg[0m
+           This opetion specifies that registers don't require a [1m% [22mprefix.
+           The ".att_syntax" and ".intel_syntax" directives will take
+           precedent.
+
+       [1m-madd-bnd-prefix[0m
+           This option forces the assembler to add BND prefix to all branches,
+           even if such prefix was not explicitly specified in the source
+           code.
+
+       [1m-mno-shared[0m
+           On ELF target, the assembler normally optimizes out non-PLT
+           relocations against defined non-weak global branch targets with
+           default visibility.  The [1m-mshared [22moption tells the assembler to
+           generate code which may go into a shared library where all non-weak
+           global branch targets with default visibility can be preempted.
+           The resulting code is slightly bigger.  This option only affects
+           the handling of branch instructions.
+
+       [1m-mbig-obj[0m
+           On x86-64 PE/COFF target this option forces the use of big object
+           file format, which allows more than 32768 sections.
+
+       [1m-momit-lock-prefix=[4m[22mno[0m
+       [1m-momit-lock-prefix=[4m[22myes[0m
+           These options control how the assembler should encode lock prefix.
+           This option is intended as a workaround for processors, that fail
+           on lock prefix. This option can only be safely used with single-
+           core, single-thread computers [1m-momit-lock-prefix=[4m[22myes[24m will omit all
+           lock prefixes.  [1m-momit-lock-prefix=[4m[22mno[24m will encode lock prefix as
+           usual, which is the default.
+
+       [1m-mevexrcig=[4m[22mrne[0m
+       [1m-mevexrcig=[4m[22mrd[0m
+       [1m-mevexrcig=[4m[22mru[0m
+       [1m-mevexrcig=[4m[22mrz[0m
+           These options control how the assembler should encode SAE-only EVEX
+           instructions.  [1m-mevexrcig=[4m[22mrne[24m will encode RC bits of EVEX
+           instruction with 00, which is the default.  [1m-mevexrcig=[4m[22mrd[24m,
+           [1m-mevexrcig=[4m[22mru[24m and [1m-mevexrcig=[4m[22mrz[24m will encode SAE-only EVEX
+           instructions with 01, 10 and 11 RC bits, respectively.
+
+       [1m-mamd64[0m
+       [1m-mintel64[0m
+           This option specifies that the assembler should accept only AMD64
+           or Intel64 ISA in 64-bit mode.  The default is to accept both.
+
+       The following options are available when as is configured for the Intel
+       80960 processor.
+
+       [1m-ACA | -ACA_A | -ACB | -ACC | -AKA | -AKB | -AKC | -AMC[0m
+           Specify which variant of the 960 architecture is the target.
+
+       [1m-b  [22mAdd code to collect statistics about branches taken.
+
+       [1m-no-relax[0m
+           Do not alter compare-and-branch instructions for long
+           displacements; error if necessary.
+
+       The following options are available when as is configured for the
+       Ubicom IP2K series.
+
+       [1m-mip2022ext[0m
+           Specifies that the extended IP2022 instructions are allowed.
+
+       [1m-mip2022[0m
+           Restores the default behaviour, which restricts the permitted
+           instructions to just the basic IP2022 ones.
+
+       The following options are available when as is configured for the
+       Renesas M32C and M16C processors.
+
+       [1m-m32c[0m
+           Assemble M32C instructions.
+
+       [1m-m16c[0m
+           Assemble M16C instructions (the default).
+
+       [1m-relax[0m
+           Enable support for link-time relaxations.
+
+       [1m-h-tick-hex[0m
+           Support H'00 style hex constants in addition to 0x00 style.
+
+       The following options are available when as is configured for the
+       Renesas M32R (formerly Mitsubishi M32R) series.
+
+       [1m--m32rx[0m
+           Specify which processor in the M32R family is the target.  The
+           default is normally the M32R, but this option changes it to the
+           M32RX.
+
+       [1m--warn-explicit-parallel-conflicts or --Wp[0m
+           Produce warning messages when questionable parallel constructs are
+           encountered.
+
+       [1m--no-warn-explicit-parallel-conflicts or --Wnp[0m
+           Do not produce warning messages when questionable parallel
+           constructs are encountered.
+
+       The following options are available when as is configured for the
+       Motorola 68000 series.
+
+       [1m-l  [22mShorten references to undefined symbols, to one word instead of
+           two.
+
+       [1m-m68000 | -m68008 | -m68010 | -m68020 | -m68030[0m
+       [1m| -m68040 | -m68060 | -m68302 | -m68331 | -m68332[0m
+       [1m| -m68333 | -m68340 | -mcpu32 | -m5200[0m
+           Specify what processor in the 68000 family is the target.  The
+           default is normally the 68020, but this can be changed at
+           configuration time.
+
+       [1m-m68881 | -m68882 | -mno-68881 | -mno-68882[0m
+           The target machine does (or does not) have a floating-point
+           coprocessor.  The default is to assume a coprocessor for 68020,
+           68030, and cpu32.  Although the basic 68000 is not compatible with
+           the 68881, a combination of the two can be specified, since it's
+           possible to do emulation of the coprocessor instructions with the
+           main processor.
+
+       [1m-m68851 | -mno-68851[0m
+           The target machine does (or does not) have a memory-management unit
+           coprocessor.  The default is to assume an MMU for 68020 and up.
+
+       The following options are available when as is configured for an Altera
+       Nios II processor.
+
+       [1m-relax-section[0m
+           Replace identified out-of-range branches with PC-relative "jmp"
+           sequences when possible.  The generated code sequences are suitable
+           for use in position-independent code, but there is a practical
+           limit on the extended branch range because of the length of the
+           sequences.  This option is the default.
+
+       [1m-relax-all[0m
+           Replace branch instructions not determinable to be in range and all
+           call instructions with "jmp" and "callr" sequences (respectively).
+           This option generates absolute relocations against the target
+           symbols and is not appropriate for position-independent code.
+
+       [1m-no-relax[0m
+           Do not replace any branches or calls.
+
+       [1m-EB [22mGenerate big-endian output.
+
+       [1m-EL [22mGenerate little-endian output.  This is the default.
+
+       [1m-march=[4m[22marchitecture[0m
+           This option specifies the target architecture.  The assembler
+           issues an error message if an attempt is made to assemble an
+           instruction which will not execute on the target architecture.  The
+           following architecture names are recognized: "r1", "r2".  The
+           default is "r1".
+
+       The following options are available when as is configured for a Meta
+       processor.
+
+       "-mcpu=metac11"
+           Generate code for Meta 1.1.
+
+       "-mcpu=metac12"
+           Generate code for Meta 1.2.
+
+       "-mcpu=metac21"
+           Generate code for Meta 2.1.
+
+       "-mfpu=metac21"
+           Allow code to use FPU hardware of Meta 2.1.
+
+       See the info pages for documentation of the MMIX-specific options.
+
+       The following options are available when as is configured for a NDS32
+       processor.
+
+       "-O1"
+           Optimize for performance.
+
+       "-Os"
+           Optimize for space.
+
+       "-EL"
+           Produce little endian data output.
+
+       "-EB"
+           Produce little endian data output.
+
+       "-mpic"
+           Generate PIC.
+
+       "-mno-fp-as-gp-relax"
+           Suppress fp-as-gp relaxation for this file.
+
+       "-mb2bb-relax"
+           Back-to-back branch optimization.
+
+       "-mno-all-relax"
+           Suppress all relaxation for this file.
+
+       "-march=<arch name>"
+           Assemble for architecture <arch name> which could be v3, v3j, v3m,
+           v3f, v3s, v2, v2j, v2f, v2s.
+
+       "-mbaseline=<baseline>"
+           Assemble for baseline <baseline> which could be v2, v3, v3m.
+
+       "-mfpu-freg=[4mFREG"[0m
+           Specify a FPU configuration.
+
+           "0      8 SP /  4 DP registers"
+           "1     16 SP /  8 DP registers"
+           "2     32 SP / 16 DP registers"
+           "3     32 SP / 32 DP registers"
+       "-mabi=[4mabi"[0m
+           Specify a abi version <abi> could be v1, v2, v2fp, v2fpp.
+
+       "-m[no-]mac"
+           Enable/Disable Multiply instructions support.
+
+       "-m[no-]div"
+           Enable/Disable Divide instructions support.
+
+       "-m[no-]16bit-ext"
+           Enable/Disable 16-bit extension
+
+       "-m[no-]dx-regs"
+           Enable/Disable d0/d1 registers
+
+       "-m[no-]perf-ext"
+           Enable/Disable Performance extension
+
+       "-m[no-]perf2-ext"
+           Enable/Disable Performance extension 2
+
+       "-m[no-]string-ext"
+           Enable/Disable String extension
+
+       "-m[no-]reduced-regs"
+           Enable/Disable Reduced Register configuration (GPR16) option
+
+       "-m[no-]audio-isa-ext"
+           Enable/Disable AUDIO ISA extension
+
+       "-m[no-]fpu-sp-ext"
+           Enable/Disable FPU SP extension
+
+       "-m[no-]fpu-dp-ext"
+           Enable/Disable FPU DP extension
+
+       "-m[no-]fpu-fma"
+           Enable/Disable FPU fused-multiply-add instructions
+
+       "-mall-ext"
+           Turn on all extensions and instructions support
+
+       The following options are available when as is configured for a PowerPC
+       processor.
+
+       [1m-a32[0m
+           Generate ELF32 or XCOFF32.
+
+       [1m-a64[0m
+           Generate ELF64 or XCOFF64.
+
+       [1m-K PIC[0m
+           Set EF_PPC_RELOCATABLE_LIB in ELF flags.
+
+       [1m-mpwrx | -mpwr2[0m
+           Generate code for POWER/2 (RIOS2).
+
+       [1m-mpwr[0m
+           Generate code for POWER (RIOS1)
+
+       [1m-m601[0m
+           Generate code for PowerPC 601.
+
+       [1m-mppc, -mppc32, -m603, -m604[0m
+           Generate code for PowerPC 603/604.
+
+       [1m-m403, -m405[0m
+           Generate code for PowerPC 403/405.
+
+       [1m-m440[0m
+           Generate code for PowerPC 440.  BookE and some 405 instructions.
+
+       [1m-m464[0m
+           Generate code for PowerPC 464.
+
+       [1m-m476[0m
+           Generate code for PowerPC 476.
+
+       [1m-m7400, -m7410, -m7450, -m7455[0m
+           Generate code for PowerPC 7400/7410/7450/7455.
+
+       [1m-m750cl[0m
+           Generate code for PowerPC 750CL.
+
+       [1m-m821, -m850, -m860[0m
+           Generate code for PowerPC 821/850/860.
+
+       [1m-mppc64, -m620[0m
+           Generate code for PowerPC 620/625/630.
+
+       [1m-me500, -me500x2[0m
+           Generate code for Motorola e500 core complex.
+
+       [1m-me500mc[0m
+           Generate code for Freescale e500mc core complex.
+
+       [1m-me500mc64[0m
+           Generate code for Freescale e500mc64 core complex.
+
+       [1m-me5500[0m
+           Generate code for Freescale e5500 core complex.
+
+       [1m-me6500[0m
+           Generate code for Freescale e6500 core complex.
+
+       [1m-mspe[0m
+           Generate code for Motorola SPE instructions.
+
+       [1m-mtitan[0m
+           Generate code for AppliedMicro Titan core complex.
+
+       [1m-mppc64bridge[0m
+           Generate code for PowerPC 64, including bridge insns.
+
+       [1m-mbooke[0m
+           Generate code for 32-bit BookE.
+
+       [1m-ma2[0m
+           Generate code for A2 architecture.
+
+       [1m-me300[0m
+           Generate code for PowerPC e300 family.
+
+       [1m-maltivec[0m
+           Generate code for processors with AltiVec instructions.
+
+       [1m-mvle[0m
+           Generate code for Freescale PowerPC VLE instructions.
+
+       [1m-mvsx[0m
+           Generate code for processors with Vector-Scalar (VSX) instructions.
+
+       [1m-mhtm[0m
+           Generate code for processors with Hardware Transactional Memory
+           instructions.
+
+       [1m-mpower4, -mpwr4[0m
+           Generate code for Power4 architecture.
+
+       [1m-mpower5, -mpwr5, -mpwr5x[0m
+           Generate code for Power5 architecture.
+
+       [1m-mpower6, -mpwr6[0m
+           Generate code for Power6 architecture.
+
+       [1m-mpower7, -mpwr7[0m
+           Generate code for Power7 architecture.
+
+       [1m-mpower8, -mpwr8[0m
+           Generate code for Power8 architecture.
+
+       [1m-mpower9, -mpwr9[0m
+           Generate code for Power9 architecture.
+
+       [1m-mcell[0m
+       [1m-mcell[0m
+           Generate code for Cell Broadband Engine architecture.
+
+       [1m-mcom[0m
+           Generate code Power/PowerPC common instructions.
+
+       [1m-many[0m
+           Generate code for any architecture (PWR/PWRX/PPC).
+
+       [1m-mregnames[0m
+           Allow symbolic names for registers.
+
+       [1m-mno-regnames[0m
+           Do not allow symbolic names for registers.
+
+       [1m-mrelocatable[0m
+           Support for GCC's -mrelocatable option.
+
+       [1m-mrelocatable-lib[0m
+           Support for GCC's -mrelocatable-lib option.
+
+       [1m-memb[0m
+           Set PPC_EMB bit in ELF flags.
+
+       [1m-mlittle, -mlittle-endian, -le[0m
+           Generate code for a little endian machine.
+
+       [1m-mbig, -mbig-endian, -be[0m
+           Generate code for a big endian machine.
+
+       [1m-msolaris[0m
+           Generate code for Solaris.
+
+       [1m-mno-solaris[0m
+           Do not generate code for Solaris.
+
+       [1m-nops=[4m[22mcount[0m
+           If an alignment directive inserts more than [4mcount[24m nops, put a
+           branch at the beginning to skip execution of the nops.
+
+       See the info pages for documentation of the RX-specific options.
+
+       The following options are available when as is configured for the s390
+       processor family.
+
+       [1m-m31[0m
+       [1m-m64[0m
+           Select the word size, either 31/32 bits or 64 bits.
+
+       [1m-mesa[0m
+       [1m-mzarch[0m
+           Select the architecture mode, either the Enterprise System
+           Architecture (esa) or the z/Architecture mode (zarch).
+
+       [1m-march=[4m[22mprocessor[0m
+           Specify which s390 processor variant is the target, [1mg6[22m, [1mg6[22m, [1mz900[22m,
+           [1mz990[22m, [1mz9-109[22m, [1mz9-ec[22m, [1mz10[22m, [1mz196[22m, [1mzEC12[22m, or [1mz13[22m.
+
+       [1m-mregnames[0m
+       [1m-mno-regnames[0m
+           Allow or disallow symbolic names for registers.
+
+       [1m-mwarn-areg-zero[0m
+           Warn whenever the operand for a base or index register has been
+           specified but evaluates to zero.
+
+       The following options are available when as is configured for a
+       TMS320C6000 processor.
+
+       [1m-march=[4m[22march[0m
+           Enable (only) instructions from architecture [4march[24m.  By default, all
+           instructions are permitted.
+
+           The following values of [4march[24m are accepted: "c62x", "c64x", "c64x+",
+           "c67x", "c67x+", "c674x".
+
+       [1m-mdsbt[0m
+       [1m-mno-dsbt[0m
+           The [1m-mdsbt [22moption causes the assembler to generate the
+           "Tag_ABI_DSBT" attribute with a value of 1, indicating that the
+           code is using DSBT addressing.  The [1m-mno-dsbt [22moption, the default,
+           causes the tag to have a value of 0, indicating that the code does
+           not use DSBT addressing.  The linker will emit a warning if objects
+           of different type (DSBT and non-DSBT) are linked together.
+
+       [1m-mpid=no[0m
+       [1m-mpid=near[0m
+       [1m-mpid=far[0m
+           The [1m-mpid= [22moption causes the assembler to generate the
+           "Tag_ABI_PID" attribute with a value indicating the form of data
+           addressing used by the code.  [1m-mpid=no[22m, the default, indicates
+           position-dependent data addressing, [1m-mpid=near [22mindicates position-
+           independent addressing with GOT accesses using near DP addressing,
+           and [1m-mpid=far [22mindicates position-independent addressing with GOT
+           accesses using far DP addressing.  The linker will emit a warning
+           if objects built with different settings of this option are linked
+           together.
+
+       [1m-mpic[0m
+       [1m-mno-pic[0m
+           The [1m-mpic [22moption causes the assembler to generate the "Tag_ABI_PIC"
+           attribute with a value of 1, indicating that the code is using
+           position-independent code addressing,  The "-mno-pic" option, the
+           default, causes the tag to have a value of 0, indicating position-
+           dependent code addressing.  The linker will emit a warning if
+           objects of different type (position-dependent and position-
+           independent) are linked together.
+
+       [1m-mbig-endian[0m
+       [1m-mlittle-endian[0m
+           Generate code for the specified endianness.  The default is little-
+           endian.
+
+       The following options are available when as is configured for a TILE-Gx
+       processor.
+
+       [1m-m32 | -m64[0m
+           Select the word size, either 32 bits or 64 bits.
+
+       [1m-EB | -EL[0m
+           Select the endianness, either big-endian (-EB) or little-endian
+           (-EL).
+
+       The following option is available when as is configured for a Visium
+       processor.
+
+       [1m-mtune=[4m[22march[0m
+           This option specifies the target architecture.  If an attempt is
+           made to assemble an instruction that will not execute on the target
+           architecture, the assembler will issue an error message.
+
+           The following names are recognized: "mcm24" "mcm" "gr5" "gr6"
+
+       The following options are available when as is configured for an Xtensa
+       processor.
+
+       [1m--text-section-literals | --no-text-section-literals[0m
+           Control the treatment of literal pools.  The default is
+           [1m--no-text-section-literals[22m, which places literals in separate
+           sections in the output file.  This allows the literal pool to be
+           placed in a data RAM/ROM.  With [1m--text-section-literals[22m, the
+           literals are interspersed in the text section in order to keep them
+           as close as possible to their references.  This may be necessary
+           for large assembly files, where the literals would otherwise be out
+           of range of the "L32R" instructions in the text section.  Literals
+           are grouped into pools following ".literal_position" directives or
+           preceding "ENTRY" instructions.  These options only affect literals
+           referenced via PC-relative "L32R" instructions; literals for
+           absolute mode "L32R" instructions are handled separately.
+
+       [1m--auto-litpools | --no-auto-litpools[0m
+           Control the treatment of literal pools.  The default is
+           [1m--no-auto-litpools[22m, which in the absence of [1m--text-section-literals[0m
+           places literals in separate sections in the output file.  This
+           allows the literal pool to be placed in a data RAM/ROM.  With
+           [1m--auto-litpools[22m, the literals are interspersed in the text section
+           in order to keep them as close as possible to their references,
+           explicit ".literal_position" directives are not required.  This may
+           be necessary for very large functions, where single literal pool at
+           the beginning of the function may not be reachable by "L32R"
+           instructions at the end.  These options only affect literals
+           referenced via PC-relative "L32R" instructions; literals for
+           absolute mode "L32R" instructions are handled separately.  When
+           used together with [1m--text-section-literals[22m, [1m--auto-litpools [22mtakes
+           precedence.
+
+       [1m--absolute-literals | --no-absolute-literals[0m
+           Indicate to the assembler whether "L32R" instructions use absolute
+           or PC-relative addressing.  If the processor includes the absolute
+           addressing option, the default is to use absolute "L32R"
+           relocations.  Otherwise, only the PC-relative "L32R" relocations
+           can be used.
+
+       [1m--target-align | --no-target-align[0m
+           Enable or disable automatic alignment to reduce branch penalties at
+           some expense in code size.    This optimization is enabled by
+           default.  Note that the assembler will always align instructions
+           like "LOOP" that have fixed alignment requirements.
+
+       [1m--longcalls | --no-longcalls[0m
+           Enable or disable transformation of call instructions to allow
+           calls across a greater range of addresses.    This option should be
+           used when call targets can potentially be out of range.  It may
+           degrade both code size and performance, but the linker can
+           generally optimize away the unnecessary overhead when a call ends
+           up within range.  The default is [1m--no-longcalls[22m.
+
+       [1m--transform | --no-transform[0m
+           Enable or disable all assembler transformations of Xtensa
+           instructions, including both relaxation and optimization.  The
+           default is [1m--transform[22m; [1m--no-transform [22mshould only be used in the
+           rare cases when the instructions must be exactly as specified in
+           the assembly source.  Using [1m--no-transform [22mcauses out of range
+           instruction operands to be errors.
+
+       [1m--rename-section [4m[22moldname[24m[1m=[4m[22mnewname[0m
+           Rename the [4moldname[24m section to [4mnewname[24m.  This option can be used
+           multiple times to rename multiple sections.
+
+       [1m--trampolines | --no-trampolines[0m
+           Enable or disable transformation of jump instructions to allow
+           jumps across a greater range of addresses.    This option should be
+           used when jump targets can potentially be out of range.  In the
+           absence of such jumps this option does not affect code size or
+           performance.  The default is [1m--trampolines[22m.
+
+       The following options are available when as is configured for a Z80
+       family processor.
+
+       [1m-z80[0m
+           Assemble for Z80 processor.
+
+       [1m-r800[0m
+           Assemble for R800 processor.
+
+       [1m-ignore-undocumented-instructions[0m
+       [1m-Wnud[0m
+           Assemble undocumented Z80 instructions that also work on R800
+           without warning.
+
+       [1m-ignore-unportable-instructions[0m
+       [1m-Wnup[0m
+           Assemble all undocumented Z80 instructions without warning.
+
+       [1m-warn-undocumented-instructions[0m
+       [1m-Wud[0m
+           Issue a warning for undocumented Z80 instructions that also work on
+           R800.
+
+       [1m-warn-unportable-instructions[0m
+       [1m-Wup[0m
+           Issue a warning for undocumented Z80 instructions that do not work
+           on R800.
+
+       [1m-forbid-undocumented-instructions[0m
+       [1m-Fud[0m
+           Treat all undocumented instructions as errors.
+
+       [1m-forbid-unportable-instructions[0m
+       [1m-Fup[0m
+           Treat undocumented Z80 instructions that do not work on R800 as
+           errors.
+
+[1mSEE ALSO[0m
+       [4mgcc[24m(1), [4mld[24m(1), and the Info entries for [4mbinutils[24m and [4mld[24m.
+
+[1mCOPYRIGHT[0m
+       Copyright (c) 1991-2015 Free Software Foundation, Inc.
+
+       Permission is granted to copy, distribute and/or modify this document
+       under the terms of the GNU Free Documentation License, Version 1.3 or
+       any later version published by the Free Software Foundation; with no
+       Invariant Sections, with no Front-Cover Texts, and with no Back-Cover
+       Texts.  A copy of the license is included in the section entitled "GNU
+       Free Documentation License".
+
+binutils-2.26                     2016-01-25                             AS(1)

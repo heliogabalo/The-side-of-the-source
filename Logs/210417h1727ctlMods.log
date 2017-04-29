@@ -1,0 +1,132 @@
+     1	Module                  Size  Used by
+     2	fuse                   98304  5
+     3	sunrpc                319488  1
+     4	kvm_intel             184320  0
+     5	kvm                   552960  1 kvm_intel
+     6	irqbypass              16384  1 kvm
+     7	acpi_cpufreq           20480  1
+     8	amdkfd                131072  1
+     9	amd_iommu_v2           20480  1 amdkfd
+    10	radeon               1503232  7
+    11	i2c_algo_bit           16384  1 radeon
+    12	drm_kms_helper        131072  1 radeon
+    13	r8169                  81920  0
+    14	serio_raw              16384  0
+    15	ttm                    90112  1 radeon
+    16	drm                   335872  10 ttm,drm_kms_helper,radeon
+    17	mii                    16384  1 r8169
+    18	ata_generic            16384  0
+    19	pata_acpi              16384  0
+    20	fjes                   28672  0
+***************************************************
+
+     1	Module                  Size  Used by
+     2	fuse                   98304  5
+     3	sunrpc                319488  1
+     4	kvm_intel             184320  0
+     5	kvm                   552960  1 kvm_intel
+     6	irqbypass              16384  1 kvm
+     7	acpi_cpufreq           20480  1
+     8	amdkfd                131072  1
+     9	amd_iommu_v2           20480  1 amdkfd
+    10	radeon               1503232  7
+    11	i2c_algo_bit           16384  1 radeon
+    12	drm_kms_helper        131072  1 radeon
+    13	serio_raw              16384  0
+    14	ttm                    90112  1 radeon
+    15	drm                   335872  10 ttm,drm_kms_helper,radeon
+    16	ata_generic            16384  0
+****************************************************************\n
+     1	Module                  Size  Used by
+     2	amdgpu                983040  0
+     3	fuse                   98304  5
+     4	kvm_intel             184320  0
+     5	kvm                   552960  1 kvm_intel
+     6	irqbypass              16384  1 kvm
+     7	acpi_cpufreq           20480  1
+     8	amdkfd                131072  2
+     9	amd_iommu_v2           20480  1 amdkfd
+    10	radeon               1503232  7
+    11	i2c_algo_bit           16384  2 amdgpu,radeon
+    12	drm_kms_helper        131072  2 amdgpu,radeon
+    13	ttm                    90112  2 amdgpu,radeon
+    14	drm                   335872  11 ttm,drm_kms_helper,amdgpu,radeon
+    15	r8169                  81920  0
+    16	serio_raw              16384  0
+    17	mii                    16384  1 r8169
+    18	ata_generic            16384  0
+    19	pata_acpi              16384  0
+    20	fjes                   28672  0
+****************************************************************\n
+     1	Module                  Size  Used by
+     2	amdgpu                983040  0
+     3	fuse                   98304  5
+     4	kvm_intel             184320  0
+     5	kvm                   552960  1 kvm_intel
+     6	irqbypass              16384  1 kvm
+     7	acpi_cpufreq           20480  1
+     8	amdkfd                131072  2
+     9	amd_iommu_v2           20480  1 amdkfd
+    10	radeon               1503232  7
+    11	i2c_algo_bit           16384  2 amdgpu,radeon
+    12	drm_kms_helper        131072  2 amdgpu,radeon
+    13	ttm                    90112  2 amdgpu,radeon
+    14	drm                   335872  11 ttm,drm_kms_helper,amdgpu,radeon
+    15	serio_raw              16384  0
+    16	ata_generic            16384  0
+    17	pata_acpi              16384  0
+    18	fjes                   28672  0
+****************************************************************\n
+     1	Module                  Size  Used by
+     2	amdgpu                983040  0
+     3	fuse                   98304  5
+     4	kvm_intel             184320  0
+     5	kvm                   552960  1 kvm_intel
+     6	irqbypass              16384  1 kvm
+     7	acpi_cpufreq           20480  1
+     8	amdkfd                131072  2
+     9	amd_iommu_v2           20480  1 amdkfd
+    10	radeon               1503232  7
+    11	i2c_algo_bit           16384  2 amdgpu,radeon
+    12	drm_kms_helper        131072  2 amdgpu,radeon
+    13	ttm                    90112  2 amdgpu,radeon
+    14	drm                   335872  11 ttm,drm_kms_helper,amdgpu,radeon
+    15	serio_raw              16384  0
+    16	ata_generic            16384  0
+-2 ********************************************************\n
+     1	Module                  Size  Used by
+     2	fuse                   98304  5
+     3	kvm_intel             184320  0
+     4	kvm                   552960  1 kvm_intel
+     5	irqbypass              16384  1 kvm
+     6	acpi_cpufreq           20480  1
+     7	amdkfd                131072  1
+     8	amd_iommu_v2           20480  1 amdkfd
+     9	radeon               1503232  7
+    10	i2c_algo_bit           16384  1 radeon
+    11	drm_kms_helper        131072  1 radeon
+    12	serio_raw              16384  0
+    13	ata_generic            16384  0
+    14	ttm                    90112  1 radeon
+    15	pata_acpi              16384  0
+    16	r8169                  81920  0
+    17	drm                   335872  10 ttm,drm_kms_helper,radeon
+    18	fjes                   28672  0
+    19	mii                    16384  1 r8169
+********************************************************
+
+     1	Module                  Size  Used by
+     2	fuse                   98304  5
+     3	kvm_intel             184320  0
+     4	kvm                   552960  1 kvm_intel
+     5	irqbypass              16384  1 kvm
+     6	acpi_cpufreq           20480  1
+     7	amdkfd                131072  1
+     8	amd_iommu_v2           20480  1 amdkfd
+     9	radeon               1503232  7
+    10	i2c_algo_bit           16384  1 radeon
+    11	drm_kms_helper        131072  1 radeon
+    12	serio_raw              16384  0
+    13	ata_generic            16384  0
+    14	ttm                    90112  1 radeon
+    15	drm                   335872  10 ttm,drm_kms_helper,radeon
