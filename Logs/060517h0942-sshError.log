@@ -1,0 +1,17 @@
+Global variable on ssh agent was unset after
+uninstall "cheese". The daemon run as expected but
+it is unable to connect to running tipical git 
+command to syncing repos.
+
+!! git push/pull
+!! lose original mesage from shell, but it was saying something like
+!! unable to connect to remote repo.
+
+A deep search via systemctl shows a inactive(dead) service of de daemon but
+clearly, it is runing. The problem was fixed by setting up the variable on
+the user space, by:
+
+!! eval $(ssh-agent)
+
+!! set SSH_AGENT_PID=$thePidName
+!! ssh-add pk-user-key
