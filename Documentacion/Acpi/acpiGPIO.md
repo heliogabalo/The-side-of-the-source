@@ -8,7 +8,7 @@ Interfase de Configuración avanzada de Energía.
 La abstracción GPIO, es soportada por la definición de ACPI 5.0, que es listada en este
 artículo.
 
-Para verificar que sus controladores GPIO, aceptar los requisitos de la plataforma 
+Para verificar que sus controladores GPIO, aceptan los requisitos de la plataforma 
 Windows, ver [GPIO lista de comprobación de requisitos del Controlador][link].
 
 #### Controlador de dispositivo GPIO
@@ -70,7 +70,7 @@ ver [Dispositivo de Boton][link].
 _ActiveBoth_, la pila del dispositivo GPIO de Windows, garantiza que la primera 
 interrupción generada después de la conexión de interupción por el controlador, será
 siempre para la señal de estado de aserción. La pila asume completamente que el estado
-de aserción de todos las líneas deinterrupción, de _ActiveBoth_, son de bájo nivel
+de aserción de todas las líneas deinterrupción, de _ActiveBoth_, son de bájo nivel
 lógico (el extremo ActiveLow) por defecto. Si en su plataforma este no es el caso, 
 puede sobreescribirse por defecto, incluyendo un método de controlador GPIO de 
 dispositivo específico, ver [método de controlador GPIO específico(_DSM)][link].
@@ -88,7 +88,7 @@ emulación ActiveBoth, implementando una llamada a la funcion
 configurar la bandera(flag) `EmulateActiveBoth` en la estructura de información 
 básica que la llamada a la función `CLIENT_QueryControllerBasicInformation` del 
 controlador, suministra a `GpioClx`.
-Para mas información, ver [Controladores de I/O de propósito genera _GPIO_][link].
+Para mas información, ver [Controladores de I/O de propósito general _GPIO_][link].
 
 #### Espacio de nombres de objeto GPIO
 
@@ -99,7 +99,7 @@ especificación ACPI 5.0.
 
 
 #### Identificación de dispositivos y configuración de objetos
-Un espacio de nombres para el controlador GPIO de dispositivo ACPI, incluye lo siguiente
+Un espacio de nombres para el controlador GPIO de dispositivo ACPI, incluye lo siguiente:
 
 - Un objeto asignado por el fabricante de hardware compatible con ACPI.
 - Un conjunto de recursos objeto `_CSR`.

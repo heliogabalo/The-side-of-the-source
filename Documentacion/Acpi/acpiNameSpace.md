@@ -1,8 +1,8 @@
 #### Gerarquía para el espacio de nombres ACPI
 
-> Espacio de nombres ACPI, A-en, en adelante.
+> Espacio de nombres ACPI, __A-en__, en adelante.
 
-_A-en_ debe ser una referencia precisa en cuanto a la topología del hardware, empezando
+__A-en__ debe ser una referencia precisa en cuanto a la topología del hardware, empezando
 con el Bus de sistema del procesador `\_SB`. En general, un dispositivo que conecta con
 el Bus o controlador, aparecerá como miembro de tal dispositivo, Bus o controlador, 
 dentro del espacio de nombres.
@@ -24,9 +24,9 @@ decodificación de recursos para descubrir su relación.
 
 - Cualquier bloque funcional o periférico, conectado a través del Bus _standard_, que
 soporte la enumeración de hardware(ejem. SDIO y USB), en absoluto necesitan aparecer en
-_A-en_.
+__A-en__.
 
-Aunque puede incluirse tal dispositivo bajo su controlador predecesor en el _A-en_, en
+Aunque puede incluirse tal dispositivo bajo su controlador predecesor en el __A-en__, en
 ciertos casos. Por ejemplo, esto es necesario en dispositivos envebidos USB HSIC o SDIO,
 donde controldes de plataformas específicas(no habituales) -ejm. interruptores, conexiones
 GPIO o SPB, etc, son asociados con el dispositivo, como parte del mismo, pero `Acpi.sys`
@@ -55,3 +55,12 @@ sistema.
 - Control de dispositivo genérico: configuración de recursos y control de recursos de
 energía.
 - Características específicas de control: estado de las baterias.
+
+
+__Notas__:
+
+## Administración del espacio de nombres
+- La inicialización del espacio de nombres, puede llevarse a cabo mediante la
+BIOS o, desde un archivo. Ésto, presumiblemente hace referencia a un sistema
+U-EFI, donde podemos cargar el núcleo desde algo así como un bloque o FS.
+De cualquier forma, existe la alternativa, esto es importante!!!!!!!!!!!!!!!

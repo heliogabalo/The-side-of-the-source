@@ -107,7 +107,7 @@ a estados de mayor requerimiento.
 #### Estados del procesador.
 
 Los estados de energía de la CPU C0-C3 son definidos de la siguiente forma:
-- C0 es el estado operativo.
+- C0 es el estado operativo o condición de carrera.
 - C1 (conocido habitualmente como _Halt_), es un estado donde el procesador no está
 ejecutando instruciones, pero puede volver a un estado de ejecución, instantáneamente.
 Todo procesador compatible, debe soportar dicho estado de energía. Algunos procesadores
@@ -116,13 +116,13 @@ mejorado), para un menor consumo de energía.
 - C2 Habitualmente conocido como reloj en pausa. es un estado donde el procesador mantiene
 el software visible, aunque puede llevar mas tiempo su reactivación. Es opcional que el
 procesador incorpore tal estado.
-- C3 A munudo conocido como _durmiente_, es un estado donde el procesador no necesita 
+- C3 A menudo conocido como _durmiente_, es un estado donde el procesador no necesita 
 guardar un caché coherente, pero retiene otros estados. Algunos procesadores tienen 
 variaciones con respecto al mismo(C3). Es una diferencia en cuánto al tiempo de duración
 que toma en reactivarse el procesador. Es opcional igualmente.
 - Estados adicionales, son definidos por los fabricantes para algunos procesadores. Por
 ejemplo los _Haswell de Intel_, tienen estados por encima de C10, definiendo estados del
-núcleo u estados de paquetes.
+núcleo o estados de paquetes.
 
 #### Comportamiento del estado
 Mientras un dispositivo o procesador opera (D0 y C0 respectivamente), podría estar en
@@ -151,7 +151,7 @@ por el fabricante de la plataforma, en cuanto al comportamiento y la recuperaci�
 falla. Los habituales PCs basados en Intel, tienen una interfase de función fija, definida
 por Intel, la cuál provee un conjunto de funcionalidades para el núcleo, que reduce la
 necesidad de sistemas compatibles, de un controlador de pila para proporcionar 
-funcionalidad básica, durante el tiempo de arranque o en caso de fallos mayor de sistema.
+funcionalidad básica, durante el tiempo de arranque o en caso de falla mayor de sistema.
 
 Interfase de error para Plataformas ACPI(APEI) es una especificación para el seguimiento
 de errores de máquinaria(hardware), desde el conjunto de _chips(o chipset)_ al sistema

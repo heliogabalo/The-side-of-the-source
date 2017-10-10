@@ -36,7 +36,7 @@ Un dispositivo para el cual `Acpi.sys` crea un dispositivo de objetos es llamado
 depende de ACPI BIOS y de la configuración de _placa base_. Cabe mencionar que `Acpi.sys`
 carga el Bus filtro ACPI, sólo para dispositivos descritos en _A-en_ y están 
 permanentemente conectados a la plataforma de hardware(típicamente, estos dispositivos
-están integrados en el núcle de silicona o, soldados a la placa base). No todas las
+están integrados en el núcleo de silicona o, soldados a la placa base). No todas las
 _Placas Base_ disponen de un Bus filtro ACPI.
 
 Toda la funcionalidad ACPI, es transparente a los controladores de alto nivel. Estos 
@@ -65,7 +65,7 @@ de región][link].
 
 #### Métodos de control ACPI
 
-Son objetos de códigom, que declaran y definen operaciones simples, para consultar y
+Son objetos de código, que declaran y definen operaciones simples, para consultar y
 configurar dispositivos ACPI. Los _métodos de control_ son almacenados en el ACPI BIOS y, son codificados en formato _código de bit_, llamado lenguaje Máquina ACPI(AML). Los 
 métodos de control para un dispositivo, son cargados en memoria, desde el sistema de 
 _firmware_ al A-en, e interpretados por el controlador ACPI de Windows, `Acpi.sys`.
