@@ -1,0 +1,1381 @@
+-- Logs begin at lun 2017-10-16 13:10:35 CEST, end at jue 2017-10-19 16:52:04 CEST. --
+oct 19 13:31:35 NR021AA NetworkManager[801]: <info>  [1508412695.0731] dhcp4 (enp5s0): canceled DHCP transaction, DHCP client pid 2170
+oct 19 13:31:35 NR021AA avahi-daemon[703]: Withdrawing address record for 192.168.1.104 on enp5s0.
+oct 19 13:31:35 NR021AA NetworkManager[801]: <info>  [1508412695.0731] dhcp4 (enp5s0): state changed bound -> done
+oct 19 13:31:35 NR021AA avahi-daemon[703]: Leaving mDNS multicast group on interface enp5s0.IPv4 with address 192.168.1.104.
+oct 19 13:31:35 NR021AA NetworkManager[801]: <info>  [1508412695.0735] dhcp6 (enp5s0): canceled DHCP transaction
+oct 19 13:31:35 NR021AA avahi-daemon[703]: Interface enp5s0.IPv4 no longer relevant for mDNS.
+oct 19 13:31:35 NR021AA avahi-daemon[703]: Withdrawing address record for 2a01:c50e:363d:2100:840f:9432:3c3c:3f6a on enp5s0.
+oct 19 13:31:35 NR021AA avahi-daemon[703]: Leaving mDNS multicast group on interface enp5s0.IPv6 with address 2a01:c50e:363d:2100:840f:9432:3c3c:3f6a.
+oct 19 13:31:35 NR021AA avahi-daemon[703]: Interface enp5s0.IPv6 no longer relevant for mDNS.
+oct 19 13:31:35 NR021AA NetworkManager[801]: <info>  [1508412695.0836] manager: NetworkManager state is now CONNECTED_LOCAL
+oct 19 13:31:35 NR021AA NetworkManager[801]: <info>  [1508412695.0864] manager: NetworkManager state is now DISCONNECTED
+oct 19 13:31:35 NR021AA audit: NETFILTER_CFG table=nat family=10 entries=54
+oct 19 13:31:35 NR021AA audit: NETFILTER_CFG table=filter family=10 entries=90
+oct 19 13:31:35 NR021AA audit: NETFILTER_CFG table=mangle family=10 entries=41
+oct 19 13:31:35 NR021AA dbus[706]: [system] Activating via systemd: service name='org.freedesktop.nm_dispatcher' unit='dbus-org.freedesktop.nm-dispatcher.service'
+oct 19 13:31:35 NR021AA systemd[1]: Starting Network Manager Script Dispatcher Service...
+-- Subject: Unit NetworkManager-dispatcher.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit NetworkManager-dispatcher.service has begun starting up.
+oct 19 13:31:35 NR021AA dbus[706]: [system] Successfully activated service 'org.freedesktop.nm_dispatcher'
+oct 19 13:31:35 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=NetworkManager-dispatcher comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+oct 19 13:31:35 NR021AA systemd[1]: Started Network Manager Script Dispatcher Service.
+-- Subject: Unit NetworkManager-dispatcher.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit NetworkManager-dispatcher.service has finished starting up.
+-- 
+-- The start-up result is done.
+oct 19 13:31:35 NR021AA nm-dispatcher[4644]: req:1 'down' [enp5s0]: new request (5 scripts)
+oct 19 13:31:35 NR021AA nm-dispatcher[4644]: req:1 'down' [enp5s0]: start running ordered scripts...
+oct 19 13:31:35 NR021AA chronyd[758]: Source 193.145.15.15 offline
+oct 19 13:31:35 NR021AA chronyd[758]: Source 2001:720:424:1::1:15 offline
+oct 19 13:31:35 NR021AA chronyd[758]: Source 158.227.98.15 offline
+oct 19 13:31:35 NR021AA chronyd[758]: Source 2001:720:1410:101f::15 offline
+oct 19 13:31:35 NR021AA chronyd[758]: Can't synchronise: no selectable sources
+oct 19 13:31:45 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=NetworkManager-dispatcher comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+oct 19 14:01:01 NR021AA CROND[4694]: (root) CMD (run-parts /etc/cron.hourly)
+oct 19 14:01:01 NR021AA run-parts[4697]: (/etc/cron.hourly) starting 0anacron
+oct 19 14:01:01 NR021AA run-parts[4703]: (/etc/cron.hourly) finished 0anacron
+oct 19 14:14:17 NR021AA dbus[706]: [system] Activating via systemd: service name='net.reactivated.Fprint' unit='fprintd.service'
+oct 19 14:14:17 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=fprintd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+oct 19 14:14:17 NR021AA systemd[1]: Starting Fingerprint Authentication Daemon...
+-- Subject: Unit fprintd.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit fprintd.service has begun starting up.
+oct 19 14:14:17 NR021AA dbus[706]: [system] Successfully activated service 'net.reactivated.Fprint'
+oct 19 14:14:17 NR021AA systemd[1]: Started Fingerprint Authentication Daemon.
+-- Subject: Unit fprintd.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit fprintd.service has finished starting up.
+-- 
+-- The start-up result is done.
+oct 19 14:14:22 NR021AA audit[4718]: USER_AUTH pid=4718 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:xdm_t:s0-s0:c0.c1023 msg='op=PAM:authentication grantors=pam_unix,pam_gnome_keyring acct="root" exe="/usr/libexec/gdm-session-worker" hostname=? addr=? terminal=/dev/tty2 res=success'
+oct 19 14:14:22 NR021AA audit[4718]: USER_ACCT pid=4718 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:xdm_t:s0-s0:c0.c1023 msg='op=PAM:accounting grantors=pam_unix,pam_localuser acct="root" exe="/usr/libexec/gdm-session-worker" hostname=? addr=? terminal=/dev/tty2 res=success'
+oct 19 14:14:22 NR021AA audit[4718]: CRED_REFR pid=4718 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:xdm_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_unix,pam_gnome_keyring acct="root" exe="/usr/libexec/gdm-session-worker" hostname=? addr=? terminal=/dev/tty2 res=success'
+oct 19 14:14:48 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=fprintd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+oct 19 14:19:18 NR021AA cupsd[1861]: REQUEST localhost - - "POST / HTTP/1.1" 200 183 Renew-Subscription successful-ok
+oct 19 14:27:46 NR021AA systemd[1]: Starting dnf makecache...
+-- Subject: Unit dnf-makecache.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit dnf-makecache.service has begun starting up.
+oct 19 14:27:46 NR021AA dnf[4758]: Caché de metadatos actualizado recientemente.
+oct 19 14:27:46 NR021AA systemd[1]: Started dnf makecache.
+-- Subject: Unit dnf-makecache.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit dnf-makecache.service has finished starting up.
+-- 
+-- The start-up result is done.
+oct 19 14:27:46 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=dnf-makecache comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+oct 19 14:27:46 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=dnf-makecache comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+oct 19 14:54:47 NR021AA org.gnome.Shell.desktop[2849]: Gjs-Message: JS LOG: The property brightness doesn't seem to be a normal object property of [0x5c9cd1fec0 StWidget] or a registered special property
+oct 19 14:54:48 NR021AA org.gnome.Shell.desktop[2849]: Gjs-Message: JS LOG: The property vignette_sharpness doesn't seem to be a normal object property of [0x5c9cd1fec0 StWidget] or a registered special property
+oct 19 14:54:50 NR021AA dbus-daemon[2777]: Activating service name='org.gnome.ControlCenter.SearchProvider'
+oct 19 14:54:50 NR021AA dbus-daemon[2777]: Activating service name='org.gnome.Contacts.SearchProvider'
+oct 19 14:54:50 NR021AA dbus-daemon[2777]: Activating service name='org.gnome.Documents'
+oct 19 14:54:50 NR021AA dbus-daemon[2777]: Activating service name='org.gnome.Boxes.SearchProvider'
+oct 19 14:54:50 NR021AA dbus-daemon[2777]: Activating service name='org.gnome.Calculator.SearchProvider'
+oct 19 14:54:50 NR021AA dbus-daemon[2777]: Activating service name='org.gnome.seahorse.Application'
+oct 19 14:54:50 NR021AA dbus-daemon[2777]: Activating service name='org.gnome.clocks'
+oct 19 14:54:50 NR021AA dbus-daemon[2777]: Successfully activated service 'org.gnome.Calculator.SearchProvider'
+oct 19 14:54:50 NR021AA dbus-daemon[2777]: Successfully activated service 'org.gnome.Boxes.SearchProvider'
+oct 19 14:54:50 NR021AA dbus-daemon[2777]: Successfully activated service 'org.gnome.ControlCenter.SearchProvider'
+oct 19 14:54:50 NR021AA dbus-daemon[2777]: Successfully activated service 'org.gnome.clocks'
+oct 19 14:54:50 NR021AA dbus-daemon[2777]: Successfully activated service 'org.gnome.seahorse.Application'
+oct 19 14:54:51 NR021AA dbus-daemon[2777]: Successfully activated service 'org.gnome.Documents'
+oct 19 14:54:51 NR021AA dbus-daemon[2777]: Successfully activated service 'org.gnome.Contacts.SearchProvider'
+oct 19 14:54:51 NR021AA org.gnome.Contacts.SearchProvider[2777]: ** (gnome-contacts-search-provider:4998): WARNING **: contacts-store.vala:335: Unable to check accounts caps The name org.freedesktop.Telepathy.AccountManager was not provided by any .service files
+oct 19 14:54:51 NR021AA dbus[706]: [system] Activating via systemd: service name='org.bluez' unit='dbus-org.bluez.service'
+oct 19 14:54:51 NR021AA org.gnome.Contacts.SearchProvider[2777]: (gnome-contacts-search-provider:4998): folks-WARNING **: backend-store.vala:434: Error preparing Backend 'telepathy': The name org.freedesktop.Telepathy.AccountManager was not provided by any .service files
+oct 19 14:54:52 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): EDID vendor "HWP", prod id 9890
+oct 19 14:54:52 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Using hsync ranges from config file
+oct 19 14:54:52 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Using vrefresh ranges from config file
+oct 19 14:54:52 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Printing DDC gathered Modelines:
+oct 19 14:54:52 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "1440x900"x0.0  106.50  1440 1520 1672 1904  900 903 909 934 -hsync +vsync (55.9 kHz eP)
+oct 19 14:54:52 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "800x600"x0.0   40.00  800 840 968 1056  600 601 605 628 +hsync +vsync (37.9 kHz e)
+oct 19 14:54:52 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "640x480"x0.0   31.50  640 656 720 840  480 481 484 500 -hsync -vsync (37.5 kHz e)
+oct 19 14:54:52 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "640x480"x0.0   25.18  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+oct 19 14:54:52 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "720x400"x0.0   28.32  720 738 846 900  400 412 414 449 -hsync +vsync (31.5 kHz e)
+oct 19 14:54:52 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "1280x1024"x0.0  135.00  1280 1296 1440 1688  1024 1025 1028 1066 +hsync +vsync (80.0 kHz e)
+oct 19 14:54:52 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "1024x768"x0.0   78.75  1024 1040 1136 1312  768 769 772 800 +hsync +vsync (60.0 kHz e)
+oct 19 14:54:52 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "1024x768"x0.0   65.00  1024 1048 1184 1344  768 771 777 806 -hsync -vsync (48.4 kHz e)
+oct 19 14:54:52 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "832x624"x0.0   57.28  832 864 928 1152  624 625 628 667 -hsync -vsync (49.7 kHz e)
+oct 19 14:54:52 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "800x600"x0.0   49.50  800 816 896 1056  600 601 604 625 +hsync +vsync (46.9 kHz e)
+oct 19 14:54:52 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "1152x864"x0.0  108.00  1152 1216 1344 1600  864 865 868 900 +hsync +vsync (67.5 kHz e)
+oct 19 14:54:52 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "1152x720"x60.0   67.32  1152 1208 1328 1504  720 721 724 746 -hsync +vsync (44.8 kHz e)
+oct 19 14:54:52 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "1280x960"x0.0  108.00  1280 1376 1488 1800  960 961 964 1000 +hsync +vsync (60.0 kHz e)
+oct 19 14:54:52 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "1280x1024"x0.0  108.00  1280 1328 1440 1688  1024 1025 1028 1066 +hsync +vsync (64.0 kHz e)
+oct 19 14:54:59 NR021AA PackageKit[1510]: resolve transaction /152_debddabe from uid 0 finished with success after 4721ms
+oct 19 14:54:59 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on flash-player-properties.desktop from addon to unknown is not OK
+oct 19 14:54:59 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on gstreamer-bad-freeworld from codec to unknown is not OK
+oct 19 14:54:59 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on gstreamer-libav from codec to unknown is not OK
+oct 19 14:54:59 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on adobe-release-x86_64 from source to unknown is not OK
+oct 19 14:54:59 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on bjnplugin from source to unknown is not OK
+oct 19 14:54:59 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on google-chrome from source to unknown is not OK
+oct 19 14:54:59 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on google-earth-stable from source to unknown is not OK
+oct 19 14:54:59 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on google-musicmanager-beta from source to unknown is not OK
+oct 19 14:54:59 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on google-talkplugin from source to unknown is not OK
+oct 19 14:54:59 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on livna-release from source to unknown is not OK
+oct 19 14:54:59 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on nautilus-dropbox from source to unknown is not OK
+oct 19 14:54:59 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on rpmfusion-free-release from source to unknown is not OK
+oct 19 14:54:59 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on rpmfusion-nonfree-release from source to unknown is not OK
+oct 19 14:54:59 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on libnpgoogletalk.so from addon to unknown is not OK
+oct 19 14:54:59 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: failed to call gs_plugin_refine_app on icons: Failed to download icon https://abs.twimg.com/a/1381897480/images/resources/twitter-bird-blue-on-white.png: Cannot resolve hostname
+oct 19 14:54:59 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: failed to call gs_plugin_refine_app on icons: Failed to download icon https://www.facebook.com/images/fb_icon_325x325.png: Cannot resolve hostname
+oct 19 14:54:59 NR021AA PackageKit[1510]: resolve transaction /153_abadddbe from uid 0 finished with success after 39ms
+oct 19 14:54:59 NR021AA PackageKit[1510]: resolve transaction /154_ecddbded from uid 0 finished with success after 42ms
+oct 19 14:54:59 NR021AA PackageKit[1510]: resolve transaction /155_baccdeeb from uid 0 finished with success after 38ms
+oct 19 14:55:16 NR021AA dbus[706]: [system] Failed to activate service 'org.bluez': timed out
+oct 19 14:55:48 NR021AA dbus[706]: [system] Activating via systemd: service name='org.freedesktop.hostname1' unit='dbus-org.freedesktop.hostname1.service'
+oct 19 14:55:48 NR021AA systemd[1]: Starting Hostname Service...
+-- Subject: Unit systemd-hostnamed.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-hostnamed.service has begun starting up.
+oct 19 14:55:48 NR021AA dbus[706]: [system] Successfully activated service 'org.freedesktop.hostname1'
+oct 19 14:55:48 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-hostnamed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+oct 19 14:55:48 NR021AA systemd[1]: Started Hostname Service.
+-- Subject: Unit systemd-hostnamed.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-hostnamed.service has finished starting up.
+-- 
+-- The start-up result is done.
+oct 19 14:56:18 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-hostnamed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+oct 19 15:01:01 NR021AA CROND[5197]: (root) CMD (run-parts /etc/cron.hourly)
+oct 19 15:01:01 NR021AA run-parts[5200]: (/etc/cron.hourly) starting 0anacron
+oct 19 15:01:01 NR021AA run-parts[5206]: (/etc/cron.hourly) finished 0anacron
+oct 19 15:17:38 NR021AA cupsd[1861]: REQUEST localhost - - "POST / HTTP/1.1" 200 183 Renew-Subscription successful-ok
+oct 19 15:28:46 NR021AA systemd[1]: Starting dnf makecache...
+-- Subject: Unit dnf-makecache.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit dnf-makecache.service has begun starting up.
+oct 19 15:28:46 NR021AA dnf[5404]: Error: Failed to synchronize cache for repo 'updates'
+oct 19 15:28:46 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=dnf-makecache comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=failed'
+oct 19 15:28:46 NR021AA systemd[1]: dnf-makecache.service: Main process exited, code=exited, status=1/FAILURE
+oct 19 15:28:46 NR021AA systemd[1]: Failed to start dnf makecache.
+-- Subject: Unit dnf-makecache.service has failed
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit dnf-makecache.service has failed.
+-- 
+-- The result is failed.
+oct 19 15:28:46 NR021AA systemd[1]: dnf-makecache.service: Unit entered failed state.
+oct 19 15:28:46 NR021AA systemd[1]: dnf-makecache.service: Failed with result 'exit-code'.
+oct 19 16:01:01 NR021AA CROND[5691]: (root) CMD (run-parts /etc/cron.hourly)
+oct 19 16:01:01 NR021AA run-parts[5694]: (/etc/cron.hourly) starting 0anacron
+oct 19 16:01:01 NR021AA run-parts[5700]: (/etc/cron.hourly) finished 0anacron
+oct 19 16:11:48 NR021AA gnome-settings-daemon.desktop[2930]: (nautilus:5786): Gtk-WARNING **: Failed to register client: GDBus.Error:org.gnome.SessionManager.AlreadyRegistered: Unable to register client
+oct 19 16:11:48 NR021AA dbus[706]: [system] Activating via systemd: service name='org.freedesktop.hostname1' unit='dbus-org.freedesktop.hostname1.service'
+oct 19 16:11:48 NR021AA systemd[1]: Starting Hostname Service...
+-- Subject: Unit systemd-hostnamed.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-hostnamed.service has begun starting up.
+oct 19 16:11:48 NR021AA gnome-settings-daemon.desktop[2930]: (nautilus:5786): Gtk-WARNING **: Theme parsing error: <broken file>:1:0: Failed to import: El recurso en «/org/gnome/libgd/tagged-entry/default.css» no existe
+oct 19 16:11:48 NR021AA dbus[706]: [system] Successfully activated service 'org.freedesktop.hostname1'
+oct 19 16:11:48 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-hostnamed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+oct 19 16:11:48 NR021AA systemd[1]: Started Hostname Service.
+-- Subject: Unit systemd-hostnamed.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-hostnamed.service has finished starting up.
+-- 
+-- The start-up result is done.
+oct 19 16:12:18 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-hostnamed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+oct 19 16:12:30 NR021AA dbus-daemon[2777]: Activating service name='org.gnome.gedit'
+oct 19 16:12:30 NR021AA dbus-daemon[2777]: Successfully activated service 'org.gnome.gedit'
+oct 19 16:15:58 NR021AA cupsd[1861]: REQUEST localhost - - "POST / HTTP/1.1" 200 183 Renew-Subscription successful-ok
+oct 19 16:18:43 NR021AA kernel: r8169 0000:05:00.0 enp5s0: link up
+oct 19 16:18:43 NR021AA audit: NETFILTER_CFG table=nat family=2 entries=52
+oct 19 16:18:43 NR021AA audit: NETFILTER_CFG table=filter family=2 entries=86
+oct 19 16:18:43 NR021AA audit: NETFILTER_CFG table=mangle family=2 entries=40
+oct 19 16:18:43 NR021AA audit: NETFILTER_CFG table=nat family=10 entries=52
+oct 19 16:18:43 NR021AA audit: NETFILTER_CFG table=filter family=10 entries=87
+oct 19 16:18:43 NR021AA audit: NETFILTER_CFG table=mangle family=10 entries=40
+oct 19 16:18:43 NR021AA dhclient[5903]: DHCPREQUEST on enp5s0 to 255.255.255.255 port 67 (xid=0xa3de8d7c)
+oct 19 16:18:43 NR021AA NetworkManager[801]: <info>  [1508422723.2767] device (enp5s0): link connected
+oct 19 16:18:43 NR021AA NetworkManager[801]: <info>  [1508422723.2782] device (enp5s0): state change: unavailable -> disconnected (reason 'carrier-changed') [20 30 40]
+oct 19 16:18:43 NR021AA NetworkManager[801]: <info>  [1508422723.2794] policy: auto-activating connection 'Wired connection 1'
+oct 19 16:18:43 NR021AA NetworkManager[801]: <info>  [1508422723.2802] device (enp5s0): Activation: starting connection 'Wired connection 1' (e09daa04-e78e-4ac1-8d5f-1ff29684a936)
+oct 19 16:18:43 NR021AA NetworkManager[801]: <info>  [1508422723.2803] device (enp5s0): state change: disconnected -> prepare (reason 'none') [30 40 0]
+oct 19 16:18:43 NR021AA NetworkManager[801]: <info>  [1508422723.2803] manager: NetworkManager state is now CONNECTING
+oct 19 16:18:43 NR021AA NetworkManager[801]: <info>  [1508422723.2806] device (enp5s0): state change: prepare -> config (reason 'none') [40 50 0]
+oct 19 16:18:43 NR021AA NetworkManager[801]: <info>  [1508422723.3279] device (enp5s0): state change: config -> ip-config (reason 'none') [50 70 0]
+oct 19 16:18:43 NR021AA NetworkManager[801]: <info>  [1508422723.3285] dhcp4 (enp5s0): activation: beginning transaction (timeout in 45 seconds)
+oct 19 16:18:43 NR021AA NetworkManager[801]: <info>  [1508422723.3337] dhcp4 (enp5s0): dhclient started with pid 5903
+oct 19 16:18:43 NR021AA dhclient[5903]: DHCPACK from 192.168.1.1 (xid=0xa3de8d7c)
+oct 19 16:18:43 NR021AA NetworkManager[801]: <info>  [1508422723.4343]   address 192.168.1.104
+oct 19 16:18:43 NR021AA NetworkManager[801]: <info>  [1508422723.4345]   plen 24 (255.255.255.0)
+oct 19 16:18:43 NR021AA NetworkManager[801]: <info>  [1508422723.4345]   gateway 192.168.1.1
+oct 19 16:18:43 NR021AA NetworkManager[801]: <info>  [1508422723.4345]   server identifier 192.168.1.1
+oct 19 16:18:43 NR021AA NetworkManager[801]: <info>  [1508422723.4345]   lease time 4294967295
+oct 19 16:18:43 NR021AA avahi-daemon[703]: Joining mDNS multicast group on interface enp5s0.IPv4 with address 192.168.1.104.
+oct 19 16:18:43 NR021AA NetworkManager[801]: <info>  [1508422723.4345]   nameserver '192.168.1.1'
+oct 19 16:18:43 NR021AA NetworkManager[801]: <info>  [1508422723.4346]   domain name 'home'
+oct 19 16:18:43 NR021AA NetworkManager[801]: <info>  [1508422723.4346] dhcp4 (enp5s0): state changed unknown -> bound
+oct 19 16:18:43 NR021AA avahi-daemon[703]: New relevant interface enp5s0.IPv4 for mDNS.
+oct 19 16:18:43 NR021AA avahi-daemon[703]: Registering new address record for 192.168.1.104 on enp5s0.IPv4.
+oct 19 16:18:43 NR021AA NetworkManager[801]: <info>  [1508422723.4398] device (enp5s0): state change: ip-config -> ip-check (reason 'none') [70 80 0]
+oct 19 16:18:43 NR021AA dbus[706]: [system] Activating via systemd: service name='org.freedesktop.nm_dispatcher' unit='dbus-org.freedesktop.nm-dispatcher.service'
+oct 19 16:18:43 NR021AA systemd[1]: Starting Network Manager Script Dispatcher Service...
+-- Subject: Unit NetworkManager-dispatcher.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit NetworkManager-dispatcher.service has begun starting up.
+oct 19 16:18:43 NR021AA dbus[706]: [system] Successfully activated service 'org.freedesktop.nm_dispatcher'
+oct 19 16:18:43 NR021AA systemd[1]: Started Network Manager Script Dispatcher Service.
+-- Subject: Unit NetworkManager-dispatcher.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit NetworkManager-dispatcher.service has finished starting up.
+-- 
+-- The start-up result is done.
+oct 19 16:18:43 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=NetworkManager-dispatcher comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+oct 19 16:18:43 NR021AA nm-dispatcher[5914]: req:1 'pre-up' [enp5s0]: new request (1 scripts)
+oct 19 16:18:43 NR021AA NetworkManager[801]: <info>  [1508422723.4810] device (enp5s0): state change: ip-check -> secondaries (reason 'none') [80 90 0]
+oct 19 16:18:43 NR021AA NetworkManager[801]: <info>  [1508422723.4813] device (enp5s0): state change: secondaries -> activated (reason 'none') [90 100 0]
+oct 19 16:18:43 NR021AA NetworkManager[801]: <info>  [1508422723.4814] manager: NetworkManager state is now CONNECTED_LOCAL
+oct 19 16:18:43 NR021AA NetworkManager[801]: <info>  [1508422723.4822] manager: NetworkManager state is now CONNECTED_SITE
+oct 19 16:18:43 NR021AA NetworkManager[801]: <info>  [1508422723.4823] policy: set 'Wired connection 1' (enp5s0) as default for IPv4 routing and DNS
+oct 19 16:18:43 NR021AA NetworkManager[801]: <info>  [1508422723.4868] device (enp5s0): Activation: successful, device activated.
+oct 19 16:18:43 NR021AA nm-dispatcher[5914]: req:2 'up' [enp5s0]: new request (5 scripts)
+oct 19 16:18:43 NR021AA NetworkManager[801]: <info>  [1508422723.4924] connectivity: check for uri 'http://fedoraproject.org/static/hotspot.txt' failed with 'Error al resolver «fedoraproject.org»: Name or service not known'
+oct 19 16:18:43 NR021AA nm-dispatcher[5914]: req:2 'up' [enp5s0]: start running ordered scripts...
+oct 19 16:18:43 NR021AA NetworkManager[801]: <info>  [1508422723.4945] connectivity: check for uri 'http://fedoraproject.org/static/hotspot.txt' failed with 'Error al resolver «fedoraproject.org»: Name or service not known'
+oct 19 16:18:43 NR021AA NetworkManager[801]: <info>  [1508422723.4950] connectivity: check for uri 'http://fedoraproject.org/static/hotspot.txt' failed with 'Error al resolver «fedoraproject.org»: Name or service not known'
+oct 19 16:18:43 NR021AA NetworkManager[801]: <info>  [1508422723.5034] connectivity: check for uri 'http://fedoraproject.org/static/hotspot.txt' failed with 'Error al resolver «fedoraproject.org»: Name or service not known'
+oct 19 16:18:43 NR021AA dhclient[5903]: bound to 192.168.1.104 -- renewal in 2147483648 seconds.
+oct 19 16:18:43 NR021AA systemd[1]: iscsi.service: Unit cannot be reloaded because it is inactive.
+oct 19 16:18:43 NR021AA chronyd[758]: Source 193.145.15.15 online
+oct 19 16:18:43 NR021AA chronyd[758]: Source 2001:720:424:1::1:15 online
+oct 19 16:18:43 NR021AA chronyd[758]: Source 2001:720:1410:101f::15 online
+oct 19 16:18:43 NR021AA chronyd[758]: Source 158.227.98.15 online
+oct 19 16:18:44 NR021AA chronyd[758]: Selected source 158.227.98.15
+oct 19 16:18:44 NR021AA avahi-daemon[703]: Joining mDNS multicast group on interface enp5s0.IPv6 with address fe80::bddf:7f4b:4a6f:3784.
+oct 19 16:18:44 NR021AA avahi-daemon[703]: New relevant interface enp5s0.IPv6 for mDNS.
+oct 19 16:18:44 NR021AA avahi-daemon[703]: Registering new address record for fe80::bddf:7f4b:4a6f:3784 on enp5s0.*.
+oct 19 16:18:45 NR021AA NetworkManager[801]: <info>  [1508422725.0526] dhcp6 (enp5s0): activation: beginning transaction (timeout in 45 seconds)
+oct 19 16:18:45 NR021AA NetworkManager[801]: <info>  [1508422725.0564] dhcp6 (enp5s0): dhclient started with pid 5945
+oct 19 16:18:45 NR021AA NetworkManager[801]: <info>  [1508422725.0584] policy: set 'Wired connection 1' (enp5s0) as default for IPv6 routing and DNS
+oct 19 16:18:45 NR021AA dhclient[5945]: XMT: Info-Request on enp5s0, interval 1060ms.
+oct 19 16:18:45 NR021AA dhclient[5945]: RCV: Reply message on enp5s0 from fe80::e63e:d7ff:fe6c:c5b4.
+oct 19 16:18:45 NR021AA NetworkManager[801]: <info>  [1508422725.1211]   nameserver 'fe80::e63e:d7ff:fe6c:c5b4'
+oct 19 16:18:45 NR021AA NetworkManager[801]: <info>  [1508422725.1212]   domain search 'home.'
+oct 19 16:18:45 NR021AA NetworkManager[801]: <info>  [1508422725.1212] dhcp6 (enp5s0): state changed unknown -> bound
+oct 19 16:18:45 NR021AA nm-dispatcher[5914]: req:3 'dhcp6-change' [enp5s0]: new request (5 scripts)
+oct 19 16:18:45 NR021AA nm-dispatcher[5914]: req:3 'dhcp6-change' [enp5s0]: start running ordered scripts...
+oct 19 16:18:45 NR021AA NetworkManager[801]: <info>  [1508422725.1329] dhcp6 (enp5s0): client pid 5945 exited with status 0
+oct 19 16:18:45 NR021AA NetworkManager[801]: <info>  [1508422725.1332] dhcp6 (enp5s0): state changed bound -> done
+oct 19 16:18:45 NR021AA NetworkManager[801]: <info>  [1508422725.1611] manager: NetworkManager state is now CONNECTED_GLOBAL
+oct 19 16:18:46 NR021AA avahi-daemon[703]: Leaving mDNS multicast group on interface enp5s0.IPv6 with address fe80::bddf:7f4b:4a6f:3784.
+oct 19 16:18:46 NR021AA avahi-daemon[703]: Joining mDNS multicast group on interface enp5s0.IPv6 with address 2a01:c50e:363d:2100:840f:9432:3c3c:3f6a.
+oct 19 16:18:46 NR021AA avahi-daemon[703]: Registering new address record for 2a01:c50e:363d:2100:840f:9432:3c3c:3f6a on enp5s0.*.
+oct 19 16:18:46 NR021AA avahi-daemon[703]: Withdrawing address record for fe80::bddf:7f4b:4a6f:3784 on enp5s0.
+oct 19 16:18:55 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=NetworkManager-dispatcher comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+oct 19 16:26:57 NR021AA systemd[1]: Closed udev Control Socket.
+-- Subject: Unit systemd-udevd-control.socket has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-udevd-control.socket has finished shutting down.
+oct 19 16:26:57 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-udevd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+oct 19 16:26:57 NR021AA dbus[706]: [system] Reloaded configuration
+oct 19 16:26:57 NR021AA systemd[1]: Closed udev Kernel Socket.
+-- Subject: Unit systemd-udevd-kernel.socket has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-udevd-kernel.socket has finished shutting down.
+oct 19 16:26:57 NR021AA dbus[706]: [system] Reloaded configuration
+oct 19 16:26:57 NR021AA systemd[1]: Stopping udev Kernel Device Manager...
+-- Subject: Unit systemd-udevd.service has begun shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-udevd.service has begun shutting down.
+oct 19 16:26:57 NR021AA systemd[1]: Stopped udev Kernel Device Manager.
+-- Subject: Unit systemd-udevd.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-udevd.service has finished shutting down.
+oct 19 16:26:57 NR021AA dbus-daemon[1651]: Reloaded configuration
+oct 19 16:26:58 NR021AA dbus-daemon[1399]: Reloaded configuration
+oct 19 16:26:58 NR021AA dbus-daemon[2777]: Reloaded configuration
+oct 19 16:26:57 NR021AA dbus[706]: [system] Reloaded configuration
+oct 19 16:26:59 NR021AA systemd[1]: Reexecuting.
+oct 19 16:26:59 NR021AA systemd[1]: systemd 229 running in system mode. (+PAM +AUDIT +SELINUX +IMA -APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD +IDN)
+oct 19 16:26:59 NR021AA audit[1]: AVC avc:  denied  { read } for  pid=1 comm="systemd" name="capabilities" dev="xenfs" ino=3 scontext=system_u:system_r:init_t:s0 tcontext=system_u:object_r:xenfs_t:s0 tclass=file permissive=0
+oct 19 16:26:59 NR021AA systemd[1]: Detected virtualization xen.
+oct 19 16:26:59 NR021AA systemd[1]: Detected architecture x86-64.
+oct 19 16:26:59 NR021AA systemd[1]: Listening on udev Control Socket.
+-- Subject: Unit systemd-udevd-control.socket has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-udevd-control.socket has finished starting up.
+-- 
+-- The start-up result is done.
+oct 19 16:26:59 NR021AA systemd[1]: Listening on udev Kernel Socket.
+-- Subject: Unit systemd-udevd-kernel.socket has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-udevd-kernel.socket has finished starting up.
+-- 
+-- The start-up result is done.
+oct 19 16:26:59 NR021AA systemd[1]: Starting udev Kernel Device Manager...
+-- Subject: Unit systemd-udevd.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-udevd.service has begun starting up.
+oct 19 16:26:59 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-udevd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+oct 19 16:26:59 NR021AA systemd[1]: Started udev Kernel Device Manager.
+-- Subject: Unit systemd-udevd.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-udevd.service has finished starting up.
+-- 
+-- The start-up result is done.
+oct 19 16:27:02 NR021AA polkitd[756]: Registered Authentication Agent for unix-process:27418:1503931 (system bus name :1.187 [/usr/bin/pkttyagent --notify-fd 4 --fallback], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale es_ES.UTF-8)
+oct 19 16:27:02 NR021AA systemd[1]: Reloading.
+oct 19 16:27:02 NR021AA polkitd[756]: Unregistered Authentication Agent for unix-process:27418:1503931 (system bus name :1.187, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale es_ES.UTF-8) (disconnected from bus)
+oct 19 16:27:02 NR021AA systemd[1]: Stopped udev Wait for Complete Device Initialization.
+-- Subject: Unit systemd-udev-settle.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-udev-settle.service has finished shutting down.
+oct 19 16:27:02 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-udev-settle comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+oct 19 16:27:02 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-udev-settle comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+oct 19 16:27:02 NR021AA systemd[1]: Stopping udev Wait for Complete Device Initialization...
+-- Subject: Unit systemd-udev-settle.service has begun shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-udev-settle.service has begun shutting down.
+oct 19 16:27:02 NR021AA systemd[1]: Starting udev Wait for Complete Device Initialization...
+-- Subject: Unit systemd-udev-settle.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-udev-settle.service has begun starting up.
+oct 19 16:27:02 NR021AA dbus[706]: [system] Activating service name='org.fedoraproject.Setroubleshootd' (using servicehelper)
+oct 19 16:27:02 NR021AA systemd[1]: Started udev Wait for Complete Device Initialization.
+-- Subject: Unit systemd-udev-settle.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-udev-settle.service has finished starting up.
+-- 
+-- The start-up result is done.
+oct 19 16:27:02 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-udev-settle comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+oct 19 16:27:02 NR021AA systemd[1]: Stopped udev Coldplug all Devices.
+-- Subject: Unit systemd-udev-trigger.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-udev-trigger.service has finished shutting down.
+oct 19 16:27:02 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-udev-trigger comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+oct 19 16:27:02 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-udev-trigger comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+oct 19 16:27:02 NR021AA systemd[1]: Stopping udev Coldplug all Devices...
+-- Subject: Unit systemd-udev-trigger.service has begun shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-udev-trigger.service has begun shutting down.
+oct 19 16:27:02 NR021AA systemd[1]: Starting udev Coldplug all Devices...
+-- Subject: Unit systemd-udev-trigger.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-udev-trigger.service has begun starting up.
+oct 19 16:27:02 NR021AA systemd[1]: Closed udev Control Socket.
+-- Subject: Unit systemd-udevd-control.socket has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-udevd-control.socket has finished shutting down.
+oct 19 16:27:02 NR021AA systemd[1]: Stopping udev Control Socket.
+-- Subject: Unit systemd-udevd-control.socket has begun shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-udevd-control.socket has begun shutting down.
+oct 19 16:27:02 NR021AA systemd[1]: systemd-udevd-control.socket: Socket service systemd-udevd.service already active, refusing.
+oct 19 16:27:02 NR021AA systemd[1]: Failed to listen on udev Control Socket.
+-- Subject: Unit systemd-udevd-control.socket has failed
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-udevd-control.socket has failed.
+-- 
+-- The result is failed.
+oct 19 16:27:02 NR021AA systemd[1]: Closed udev Kernel Socket.
+-- Subject: Unit systemd-udevd-kernel.socket has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-udevd-kernel.socket has finished shutting down.
+oct 19 16:27:02 NR021AA systemd[1]: Stopping udev Kernel Socket.
+-- Subject: Unit systemd-udevd-kernel.socket has begun shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-udevd-kernel.socket has begun shutting down.
+oct 19 16:27:02 NR021AA systemd[1]: systemd-udevd-kernel.socket: Socket service systemd-udevd.service already active, refusing.
+oct 19 16:27:02 NR021AA systemd[1]: Failed to listen on udev Kernel Socket.
+-- Subject: Unit systemd-udevd-kernel.socket has failed
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-udevd-kernel.socket has failed.
+-- 
+-- The result is failed.
+oct 19 16:27:02 NR021AA systemd[1]: Stopping udev Kernel Device Manager...
+-- Subject: Unit systemd-udevd.service has begun shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-udevd.service has begun shutting down.
+oct 19 16:27:02 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-udevd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+oct 19 16:27:02 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-udevd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+oct 19 16:27:02 NR021AA systemd[1]: Stopped udev Kernel Device Manager.
+-- Subject: Unit systemd-udevd.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-udevd.service has finished shutting down.
+oct 19 16:27:02 NR021AA systemd[1]: Listening on udev Control Socket.
+-- Subject: Unit systemd-udevd-control.socket has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-udevd-control.socket has finished starting up.
+-- 
+-- The start-up result is done.
+oct 19 16:27:02 NR021AA systemd[1]: Listening on udev Kernel Socket.
+-- Subject: Unit systemd-udevd-kernel.socket has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-udevd-kernel.socket has finished starting up.
+-- 
+-- The start-up result is done.
+oct 19 16:27:02 NR021AA systemd[1]: Starting udev Kernel Device Manager...
+-- Subject: Unit systemd-udevd.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-udevd.service has begun starting up.
+oct 19 16:27:02 NR021AA systemd[1]: Started udev Kernel Device Manager.
+-- Subject: Unit systemd-udevd.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-udevd.service has finished starting up.
+-- 
+-- The start-up result is done.
+oct 19 16:27:02 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-udevd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+oct 19 16:27:02 NR021AA /usr/libexec/gdm-x-session[2746]: (II) config/udev: removing device Power Button
+oct 19 16:27:02 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "fd" "15"
+oct 19 16:27:02 NR021AA /usr/libexec/gdm-x-session[2746]: (II) UnloadModule: "libinput"
+oct 19 16:27:02 NR021AA /usr/libexec/gdm-x-session[2746]: (II) systemd-logind: releasing fd for 13:65
+oct 19 16:27:02 NR021AA systemd-logind[724]: Watching system buttons on /dev/input/event1 (Power Button)
+oct 19 16:27:02 NR021AA /usr/libexec/gdm-x-session[2746]: (II) config/udev: Adding input device Power Button (/dev/input/event1)
+oct 19 16:27:02 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Power Button: Applying InputClass "evdev keyboard catchall"
+oct 19 16:27:02 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Power Button: Applying InputClass "libinput keyboard catchall"
+oct 19 16:27:02 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Power Button: Applying InputClass "system-keyboard"
+oct 19 16:27:02 NR021AA /usr/libexec/gdm-x-session[2746]: (II) systemd-logind: got fd for /dev/input/event1 13:65 fd 30 paused 0
+oct 19 16:27:02 NR021AA /usr/libexec/gdm-x-session[2746]: (II) Using input driver 'libinput' for 'Power Button'
+oct 19 16:27:02 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Power Button: always reports core events
+oct 19 16:27:02 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "Device" "/dev/input/event1"
+oct 19 16:27:02 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "_source" "server/udev"
+oct 19 16:27:02 NR021AA /usr/libexec/gdm-x-session[2746]: (II) input device 'Power Button', /dev/input/event1 is tagged by udev as: Keyboard
+oct 19 16:27:02 NR021AA /usr/libexec/gdm-x-session[2746]: (II) input device 'Power Button', /dev/input/event1 is a keyboard
+oct 19 16:27:02 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "config_info" "udev:/sys/devices/LNXSYSTM:00/LNXPWRBN:00/input/input1/event1"
+oct 19 16:27:02 NR021AA /usr/libexec/gdm-x-session[2746]: (II) XINPUT: Adding extended input device "Power Button" (type: KEYBOARD, id 6)
+oct 19 16:27:02 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "xkb_layout" "es"
+oct 19 16:27:02 NR021AA /usr/libexec/gdm-x-session[2746]: (II) input device 'Power Button', /dev/input/event1 is tagged by udev as: Keyboard
+oct 19 16:27:02 NR021AA /usr/libexec/gdm-x-session[2746]: (II) input device 'Power Button', /dev/input/event1 is a keyboard
+oct 19 16:27:02 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-udev-trigger comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+oct 19 16:27:02 NR021AA systemd[1]: Started udev Coldplug all Devices.
+-- Subject: Unit systemd-udev-trigger.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-udev-trigger.service has finished starting up.
+-- 
+-- The start-up result is done.
+oct 19 16:27:02 NR021AA /usr/libexec/gdm-x-session[2746]: (II) config/udev: removing GPU device /sys/devices/pci0000:00/0000:00:01.0/0000:01:00.0/drm/card0 /dev/dri/card0
+oct 19 16:27:02 NR021AA /usr/libexec/gdm-x-session[2746]: xf86: remove device 0 /sys/devices/pci0000:00/0000:00:01.0/0000:01:00.0/drm/card0
+oct 19 16:27:02 NR021AA /usr/libexec/gdm-x-session[2746]: failed to find screen to remove
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): EDID vendor "HWP", prod id 9890
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Using hsync ranges from config file
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Using vrefresh ranges from config file
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Printing DDC gathered Modelines:
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "1440x900"x0.0  106.50  1440 1520 1672 1904  900 903 909 934 -hsync +vsync (55.9 kHz eP)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "800x600"x0.0   40.00  800 840 968 1056  600 601 605 628 +hsync +vsync (37.9 kHz e)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "640x480"x0.0   31.50  640 656 720 840  480 481 484 500 -hsync -vsync (37.5 kHz e)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "640x480"x0.0   25.18  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "720x400"x0.0   28.32  720 738 846 900  400 412 414 449 -hsync +vsync (31.5 kHz e)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "1280x1024"x0.0  135.00  1280 1296 1440 1688  1024 1025 1028 1066 +hsync +vsync (80.0 kHz e)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "1024x768"x0.0   78.75  1024 1040 1136 1312  768 769 772 800 +hsync +vsync (60.0 kHz e)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "1024x768"x0.0   65.00  1024 1048 1184 1344  768 771 777 806 -hsync -vsync (48.4 kHz e)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "832x624"x0.0   57.28  832 864 928 1152  624 625 628 667 -hsync -vsync (49.7 kHz e)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "800x600"x0.0   49.50  800 816 896 1056  600 601 604 625 +hsync +vsync (46.9 kHz e)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "1152x864"x0.0  108.00  1152 1216 1344 1600  864 865 868 900 +hsync +vsync (67.5 kHz e)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "1152x720"x60.0   67.32  1152 1208 1328 1504  720 721 724 746 -hsync +vsync (44.8 kHz e)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "1280x960"x0.0  108.00  1280 1376 1488 1800  960 961 964 1000 +hsync +vsync (60.0 kHz e)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "1280x1024"x0.0  108.00  1280 1328 1440 1688  1024 1025 1028 1066 +hsync +vsync (64.0 kHz e)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): EDID vendor "HWP", prod id 9890
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Using hsync ranges from config file
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Using vrefresh ranges from config file
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Printing DDC gathered Modelines:
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "1440x900"x0.0  106.50  1440 1520 1672 1904  900 903 909 934 -hsync +vsync (55.9 kHz eP)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "800x600"x0.0   40.00  800 840 968 1056  600 601 605 628 +hsync +vsync (37.9 kHz e)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "640x480"x0.0   31.50  640 656 720 840  480 481 484 500 -hsync -vsync (37.5 kHz e)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "640x480"x0.0   25.18  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "720x400"x0.0   28.32  720 738 846 900  400 412 414 449 -hsync +vsync (31.5 kHz e)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "1280x1024"x0.0  135.00  1280 1296 1440 1688  1024 1025 1028 1066 +hsync +vsync (80.0 kHz e)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "1024x768"x0.0   78.75  1024 1040 1136 1312  768 769 772 800 +hsync +vsync (60.0 kHz e)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "1024x768"x0.0   65.00  1024 1048 1184 1344  768 771 777 806 -hsync -vsync (48.4 kHz e)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "832x624"x0.0   57.28  832 864 928 1152  624 625 628 667 -hsync -vsync (49.7 kHz e)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "800x600"x0.0   49.50  800 816 896 1056  600 601 604 625 +hsync +vsync (46.9 kHz e)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "1152x864"x0.0  108.00  1152 1216 1344 1600  864 865 868 900 +hsync +vsync (67.5 kHz e)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "1152x720"x60.0   67.32  1152 1208 1328 1504  720 721 724 746 -hsync +vsync (44.8 kHz e)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "1280x960"x0.0  108.00  1280 1376 1488 1800  960 961 964 1000 +hsync +vsync (60.0 kHz e)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "1280x1024"x0.0  108.00  1280 1328 1440 1688  1024 1025 1028 1066 +hsync +vsync (64.0 kHz e)
+oct 19 16:27:03 NR021AA systemd-logind[724]: Watching system buttons on /dev/input/event0 (Power Button)
+oct 19 16:27:03 NR021AA kernel: intel_rng: FWH not detected
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) config/udev: Adding input device HDA Intel Front Mic (/dev/input/event8)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) No input driver specified, ignoring this device.
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) This device may have been added with another device file.
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) config/udev: Adding input device HDA Intel Rear Mic (/dev/input/event7)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) No input driver specified, ignoring this device.
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) This device may have been added with another device file.
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) config/udev: removing device Power Button
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "fd" "18"
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) UnloadModule: "libinput"
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) systemd-logind: releasing fd for 13:64
+oct 19 16:27:03 NR021AA mtp-probe[27487]: checking bus 3, device 2: "/sys/devices/pci0000:00/0000:00:1d.1/usb3/3-2"
+oct 19 16:27:03 NR021AA mtp-probe[27487]: bus: 3, device: 2 was not an MTP device
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) config/udev: Adding input device Power Button (/dev/input/event0)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Power Button: Applying InputClass "evdev keyboard catchall"
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Power Button: Applying InputClass "libinput keyboard catchall"
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Power Button: Applying InputClass "system-keyboard"
+oct 19 16:27:03 NR021AA kernel: leds_ss4200: no LED devices found
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) systemd-logind: got fd for /dev/input/event0 13:64 fd 18 paused 0
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) Using input driver 'libinput' for 'Power Button'
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Power Button: always reports core events
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "Device" "/dev/input/event0"
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "_source" "server/udev"
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) input device 'Power Button', /dev/input/event0 is tagged by udev as: Keyboard
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) input device 'Power Button', /dev/input/event0 is a keyboard
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "config_info" "udev:/sys/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0C:00/input/input0/event0"
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) XINPUT: Adding extended input device "Power Button" (type: KEYBOARD, id 7)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "xkb_layout" "es"
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) input device 'Power Button', /dev/input/event0 is tagged by udev as: Keyboard
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) input device 'Power Button', /dev/input/event0 is a keyboard
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) config/udev: Adding input device HDA ATI HDMI HDMI/DP,pcm=3 (/dev/input/event6)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) No input driver specified, ignoring this device.
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) This device may have been added with another device file.
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) config/udev: Adding input device HDA Intel Line Out (/dev/input/event10)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) No input driver specified, ignoring this device.
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) This device may have been added with another device file.
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) config/udev: Adding input device HDA Intel Front Headphone (/dev/input/event11)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) No input driver specified, ignoring this device.
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) This device may have been added with another device file.
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) config/udev: Adding input device HDA Intel Line (/dev/input/event9)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) No input driver specified, ignoring this device.
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) This device may have been added with another device file.
+oct 19 16:27:03 NR021AA mtp-probe[27492]: checking bus 1, device 5: "/sys/devices/pci0000:00/0000:00:1d.7/usb1/1-8"
+oct 19 16:27:03 NR021AA mtp-probe[27492]: bus: 1, device: 5 was not an MTP device
+oct 19 16:27:03 NR021AA mtp-probe[27488]: checking bus 4, device 2: "/sys/devices/pci0000:00/0000:00:1d.2/usb4/4-1"
+oct 19 16:27:03 NR021AA mtp-probe[27488]: bus: 4, device: 2 was not an MTP device
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) config/udev: Adding input device Logitech USB Optical Mouse (/dev/input/mouse0)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) No input driver specified, ignoring this device.
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) This device may have been added with another device file.
+oct 19 16:27:03 NR021AA mtp-probe[27490]: checking bus 4, device 3: "/sys/devices/pci0000:00/0000:00:1d.2/usb4/4-2"
+oct 19 16:27:03 NR021AA mtp-probe[27490]: bus: 4, device: 3 was not an MTP device
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) config/udev: removing device Logitech USB Optical Mouse
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "fd" "19"
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) UnloadModule: "libinput"
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) systemd-logind: releasing fd for 13:66
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) config/udev: Adding input device Logitech USB Optical Mouse (/dev/input/event2)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Logitech USB Optical Mouse: Applying InputClass "evdev pointer catchall"
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Logitech USB Optical Mouse: Applying InputClass "libinput pointer catchall"
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) systemd-logind: got fd for /dev/input/event2 13:66 fd 19 paused 0
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) Using input driver 'libinput' for 'Logitech USB Optical Mouse'
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Logitech USB Optical Mouse: always reports core events
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "Device" "/dev/input/event2"
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "_source" "server/udev"
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) input device 'Logitech USB Optical Mouse', /dev/input/event2 is tagged by udev as: Mouse
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) Device 'Logitech USB Optical Mouse' set to 1000 DPI
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) input device 'Logitech USB Optical Mouse', /dev/input/event2 is a pointer caps
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:1d.1/usb3/3-2/3-2:1.0/0003:046D:C05A.0001/input/input5/event2"
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) XINPUT: Adding extended input device "Logitech USB Optical Mouse" (type: MOUSE, id 8)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "AccelerationScheme" "none"
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Logitech USB Optical Mouse: (accel) selected scheme none/0
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Logitech USB Optical Mouse: (accel) acceleration factor: 2.000
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Logitech USB Optical Mouse: (accel) acceleration threshold: 4
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) input device 'Logitech USB Optical Mouse', /dev/input/event2 is tagged by udev as: Mouse
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) Device 'Logitech USB Optical Mouse' set to 1000 DPI
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) input device 'Logitech USB Optical Mouse', /dev/input/event2 is a pointer caps
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) config/udev: removing device Logitech USB Keyboard
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "fd" "21"
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) UnloadModule: "libinput"
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) systemd-logind: releasing fd for 13:68
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) config/udev: Adding input device Logitech USB Keyboard (/dev/input/event4)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Logitech USB Keyboard: Applying InputClass "evdev keyboard catchall"
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Logitech USB Keyboard: Applying InputClass "libinput keyboard catchall"
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Logitech USB Keyboard: Applying InputClass "system-keyboard"
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) systemd-logind: got fd for /dev/input/event4 13:68 fd 21 paused 0
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) Using input driver 'libinput' for 'Logitech USB Keyboard'
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Logitech USB Keyboard: always reports core events
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "Device" "/dev/input/event4"
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "_source" "server/udev"
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) input device 'Logitech USB Keyboard', /dev/input/event4 is tagged by udev as: Keyboard
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) input device 'Logitech USB Keyboard', /dev/input/event4 is a keyboard
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:1d.2/usb4/4-1/4-1:1.1/0003:046D:C31C.0003/input/input7/event4"
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) XINPUT: Adding extended input device "Logitech USB Keyboard" (type: KEYBOARD, id 10)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "xkb_layout" "es"
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) input device 'Logitech USB Keyboard', /dev/input/event4 is tagged by udev as: Keyboard
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) input device 'Logitech USB Keyboard', /dev/input/event4 is a keyboard
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) config/udev: removing device Logitech USB Keyboard
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "fd" "20"
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) UnloadModule: "libinput"
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) systemd-logind: releasing fd for 13:67
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) config/udev: Adding input device Logitech USB Keyboard (/dev/input/event3)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Logitech USB Keyboard: Applying InputClass "evdev keyboard catchall"
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Logitech USB Keyboard: Applying InputClass "libinput keyboard catchall"
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Logitech USB Keyboard: Applying InputClass "system-keyboard"
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) systemd-logind: got fd for /dev/input/event3 13:67 fd 20 paused 0
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) Using input driver 'libinput' for 'Logitech USB Keyboard'
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Logitech USB Keyboard: always reports core events
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "Device" "/dev/input/event3"
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "_source" "server/udev"
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) input device 'Logitech USB Keyboard', /dev/input/event3 is tagged by udev as: Keyboard
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) input device 'Logitech USB Keyboard', /dev/input/event3 is a keyboard
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:1d.2/usb4/4-1/4-1:1.0/0003:046D:C31C.0002/input/input6/event3"
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) XINPUT: Adding extended input device "Logitech USB Keyboard" (type: KEYBOARD, id 9)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "xkb_layout" "es"
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) input device 'Logitech USB Keyboard', /dev/input/event3 is tagged by udev as: Keyboard
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) input device 'Logitech USB Keyboard', /dev/input/event3 is a keyboard
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) config/udev: removing device Corsair Corsair Gaming K70 RAPIDFIRE Keyboard
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "fd" "22"
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) UnloadModule: "libinput"
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) systemd-logind: releasing fd for 13:69
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) config/udev: Adding input device Corsair Corsair Gaming K70 RAPIDFIRE Keyboard  (/dev/input/event5)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Corsair Corsair Gaming K70 RAPIDFIRE Keyboard : Applying InputClass "evdev keyboard catchall"
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Corsair Corsair Gaming K70 RAPIDFIRE Keyboard : Applying InputClass "libinput keyboard catchall"
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Corsair Corsair Gaming K70 RAPIDFIRE Keyboard : Applying InputClass "system-keyboard"
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) systemd-logind: got fd for /dev/input/event5 13:69 fd 22 paused 0
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) Using input driver 'libinput' for 'Corsair Corsair Gaming K70 RAPIDFIRE Keyboard '
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Corsair Corsair Gaming K70 RAPIDFIRE Keyboard : always reports core events
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "Device" "/dev/input/event5"
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "_source" "server/udev"
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) input device 'Corsair Corsair Gaming K70 RAPIDFIRE Keyboard ', /dev/input/event5 is tagged by udev as: Keyboard
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) input device 'Corsair Corsair Gaming K70 RAPIDFIRE Keyboard ', /dev/input/event5 is a keyboard
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:1d.2/usb4/4-2/4-2:1.0/0003:1B1C:1B3A.0004/input/input8/event5"
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) XINPUT: Adding extended input device "Corsair Corsair Gaming K70 RAPIDFIRE Keyboard " (type: KEYBOARD, id 11)
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "xkb_layout" "es"
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) input device 'Corsair Corsair Gaming K70 RAPIDFIRE Keyboard ', /dev/input/event5 is tagged by udev as: Keyboard
+oct 19 16:27:03 NR021AA /usr/libexec/gdm-x-session[2746]: (II) input device 'Corsair Corsair Gaming K70 RAPIDFIRE Keyboard ', /dev/input/event5 is a keyboard
+oct 19 16:27:03 NR021AA kernel: intel_powerclamp: No package C-state available
+oct 19 16:27:03 NR021AA systemd-udevd[27462]: Could not generate persistent MAC address for br0: No such file or directory
+oct 19 16:27:04 NR021AA systemd[1]: dev-disk-by\x2dlabel-F24.device: Dev dev-disk-by\x2dlabel-F24.device appeared twice with different sysfs paths /sys/devices/virtual/block/dm-3 and /sys/devices/virtual/block/dm-5
+oct 19 16:27:04 NR021AA systemd[1601]: dev-disk-by\x2dlabel-F24.device: Dev dev-disk-by\x2dlabel-F24.device appeared twice with different sysfs paths /sys/devices/virtual/block/dm-3 and /sys/devices/virtual/block/dm-5
+oct 19 16:27:04 NR021AA systemd[2729]: dev-disk-by\x2dlabel-F24.device: Dev dev-disk-by\x2dlabel-F24.device appeared twice with different sysfs paths /sys/devices/virtual/block/dm-3 and /sys/devices/virtual/block/dm-5
+oct 19 16:27:04 NR021AA systemd[1370]: dev-disk-by\x2dlabel-F24.device: Dev dev-disk-by\x2dlabel-F24.device appeared twice with different sysfs paths /sys/devices/virtual/block/dm-3 and /sys/devices/virtual/block/dm-5
+oct 19 16:27:04 NR021AA systemd[2729]: dev-disk-by\x2dlabel-F24.device: Dev dev-disk-by\x2dlabel-F24.device appeared twice with different sysfs paths /sys/devices/virtual/block/dm-3 and /sys/devices/virtual/block/dm-4
+oct 19 16:27:04 NR021AA systemd[1]: dev-disk-by\x2dlabel-F24.device: Dev dev-disk-by\x2dlabel-F24.device appeared twice with different sysfs paths /sys/devices/virtual/block/dm-3 and /sys/devices/virtual/block/dm-4
+oct 19 16:27:04 NR021AA systemd[1601]: dev-disk-by\x2dlabel-F24.device: Dev dev-disk-by\x2dlabel-F24.device appeared twice with different sysfs paths /sys/devices/virtual/block/dm-3 and /sys/devices/virtual/block/dm-4
+oct 19 16:27:04 NR021AA systemd[1370]: dev-disk-by\x2dlabel-F24.device: Dev dev-disk-by\x2dlabel-F24.device appeared twice with different sysfs paths /sys/devices/virtual/block/dm-3 and /sys/devices/virtual/block/dm-4
+oct 19 16:27:05 NR021AA dbus[706]: [system] Successfully activated service 'org.fedoraproject.Setroubleshootd'
+oct 19 16:27:06 NR021AA setroubleshoot[27453]: SELinux is preventing systemd from read access on the file capabilities. For complete SELinux messages. run sealert -l df016ec1-9d32-4903-9180-000979310fbd
+oct 19 16:27:06 NR021AA python3[27453]: SELinux is preventing systemd from read access on the file capabilities.
+                                        
+                                        *****  Plugin catchall (100. confidence) suggests   **************************
+                                        
+                                        If you believe that systemd should be allowed read access on the capabilities file by default.
+                                        Then you should report this as a bug.
+                                        You can generate a local policy module to allow this access.
+                                        Do
+                                        allow this access for now by executing:
+                                        # ausearch -c 'systemd' --raw | audit2allow -M my-systemd
+                                        # semodule -X 300 -i my-systemd.pp
+                                        
+oct 19 16:27:11 NR021AA dbus-daemon[2777]: Activating service name='org.fedoraproject.Setroubleshootd'
+oct 19 16:27:11 NR021AA dbus-daemon[2777]: Successfully activated service 'org.fedoraproject.Setroubleshootd'
+oct 19 16:27:11 NR021AA org.fedoraproject.Setroubleshootd[2777]: (setroubleshoot:29636): Gtk-CRITICAL **: gtk_grid_attach: assertion '_gtk_widget_get_parent (child) == NULL' failed
+oct 19 16:27:17 NR021AA polkitd[756]: Registered Authentication Agent for unix-process:31148:1505443 (system bus name :1.191 [/usr/bin/pkttyagent --notify-fd 4 --fallback], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale es_ES.UTF-8)
+oct 19 16:27:17 NR021AA systemd[1]: Reloading.
+oct 19 16:27:17 NR021AA polkitd[756]: Unregistered Authentication Agent for unix-process:31148:1505443 (system bus name :1.191, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale es_ES.UTF-8) (disconnected from bus)
+oct 19 16:27:19 NR021AA dbus[706]: [system] Activating via systemd: service name='org.freedesktop.GeoClue2' unit='geoclue.service'
+oct 19 16:27:19 NR021AA systemd[1]: Starting Location Lookup Service...
+-- Subject: Unit geoclue.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit geoclue.service has begun starting up.
+oct 19 16:27:20 NR021AA dbus[706]: [system] Successfully activated service 'org.freedesktop.GeoClue2'
+oct 19 16:27:20 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=geoclue comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+oct 19 16:27:20 NR021AA systemd[1]: Started Location Lookup Service.
+-- Subject: Unit geoclue.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit geoclue.service has finished starting up.
+-- 
+-- The start-up result is done.
+oct 19 16:27:25 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=geoclue comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+oct 19 16:27:29 NR021AA org.fedoraproject.Setroubleshootd[2777]: (setroubleshoot:29636): Gtk-CRITICAL **: gtk_grid_attach: assertion '_gtk_widget_get_parent (child) == NULL' failed
+oct 19 16:27:29 NR021AA org.fedoraproject.Setroubleshootd[2777]: (setroubleshoot:29636): Gtk-CRITICAL **: gtk_grid_attach: assertion '_gtk_widget_get_parent (child) == NULL' failed
+oct 19 16:28:59 NR021AA systemd[1]: Starting dnf makecache...
+-- Subject: Unit dnf-makecache.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit dnf-makecache.service has begun starting up.
+oct 19 16:28:59 NR021AA dnf[31246]: Caché de metadatos actualizado recientemente.
+oct 19 16:28:59 NR021AA systemd[1]: Started dnf makecache.
+-- Subject: Unit dnf-makecache.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit dnf-makecache.service has finished starting up.
+-- 
+-- The start-up result is done.
+oct 19 16:28:59 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=dnf-makecache comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+oct 19 16:28:59 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=dnf-makecache comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+oct 19 16:29:21 NR021AA org.gnome.Shell.desktop[2849]: Window manager warning: Buggy client sent a _NET_ACTIVE_WINDOW message with a timestamp of 0 for 0x16000fc (Documento )
+oct 19 16:29:37 NR021AA org.gnome.Shell.desktop[2849]: Window manager warning: Buggy client sent a _NET_ACTIVE_WINDOW message with a timestamp of 0 for 0x16000fc (Documento )
+oct 19 16:29:40 NR021AA gnome-settings-daemon.desktop[2930]: (nautilus:31491): Gtk-WARNING **: Failed to register client: GDBus.Error:org.gnome.SessionManager.AlreadyRegistered: Unable to register client
+oct 19 16:29:40 NR021AA gnome-settings-daemon.desktop[2930]: (nautilus:31491): Gtk-WARNING **: Theme parsing error: <broken file>:1:0: Failed to import: El recurso en «/org/gnome/libgd/tagged-entry/default.css» no existe
+oct 19 16:29:40 NR021AA dbus[706]: [system] Activating via systemd: service name='org.freedesktop.hostname1' unit='dbus-org.freedesktop.hostname1.service'
+oct 19 16:29:40 NR021AA systemd[1]: Starting Hostname Service...
+-- Subject: Unit systemd-hostnamed.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-hostnamed.service has begun starting up.
+oct 19 16:29:40 NR021AA dbus[706]: [system] Successfully activated service 'org.freedesktop.hostname1'
+oct 19 16:29:40 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-hostnamed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+oct 19 16:29:40 NR021AA systemd[1]: Started Hostname Service.
+-- Subject: Unit systemd-hostnamed.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-hostnamed.service has finished starting up.
+-- 
+-- The start-up result is done.
+oct 19 16:29:51 NR021AA org.gnome.Shell.desktop[2849]: Gjs-Message: JS LOG: The property brightness doesn't seem to be a normal object property of [0x5c9e270b50 StWidget] or a registered special property
+oct 19 16:29:51 NR021AA org.gnome.Shell.desktop[2849]: Gjs-Message: JS LOG: The property vignette_sharpness doesn't seem to be a normal object property of [0x5c9e270b50 StWidget] or a registered special property
+oct 19 16:30:10 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-hostnamed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+oct 19 16:30:13 NR021AA dbus-daemon[2777]: Activating via systemd: service name='org.gnome.Terminal' unit='gnome-terminal-server.service'
+oct 19 16:30:13 NR021AA systemd[2729]: Starting GNOME Terminal Server...
+-- Subject: Unit UNIT has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit UNIT has begun starting up.
+oct 19 16:30:13 NR021AA dbus-daemon[2777]: Successfully activated service 'org.gnome.Terminal'
+oct 19 16:30:13 NR021AA systemd[2729]: Started GNOME Terminal Server.
+-- Subject: Unit UNIT has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit UNIT has finished starting up.
+-- 
+-- The start-up result is done.
+oct 19 16:33:00 NR021AA gnome-settings-daemon.desktop[2930]: (nautilus:31634): Gtk-WARNING **: Failed to register client: GDBus.Error:org.gnome.SessionManager.AlreadyRegistered: Unable to register client
+oct 19 16:33:00 NR021AA gnome-settings-daemon.desktop[2930]: (nautilus:31634): Gtk-WARNING **: Theme parsing error: <broken file>:1:0: Failed to import: El recurso en «/org/gnome/libgd/tagged-entry/default.css» no existe
+oct 19 16:33:00 NR021AA dbus[706]: [system] Activating via systemd: service name='org.freedesktop.hostname1' unit='dbus-org.freedesktop.hostname1.service'
+oct 19 16:33:00 NR021AA systemd[1]: Starting Hostname Service...
+-- Subject: Unit systemd-hostnamed.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-hostnamed.service has begun starting up.
+oct 19 16:33:00 NR021AA dbus[706]: [system] Successfully activated service 'org.freedesktop.hostname1'
+oct 19 16:33:00 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-hostnamed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+oct 19 16:33:00 NR021AA systemd[1]: Started Hostname Service.
+-- Subject: Unit systemd-hostnamed.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-hostnamed.service has finished starting up.
+-- 
+-- The start-up result is done.
+oct 19 16:33:22 NR021AA dbus-daemon[2777]: Activating service name='org.gnome.gedit'
+oct 19 16:33:22 NR021AA dbus-daemon[2777]: Successfully activated service 'org.gnome.gedit'
+oct 19 16:33:30 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-hostnamed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+oct 19 16:36:49 NR021AA sudo[488]:     root : TTY=pts/0 ; PWD=/root/Github/ckb-next ; USER=root ; COMMAND=/bin/echo
+oct 19 16:36:49 NR021AA audit[488]: USER_CMD pid=488 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='cwd="/root/Github/ckb-next" cmd="echo" terminal=pts/0 res=success'
+oct 19 16:36:49 NR021AA audit[488]: CRED_REFR pid=488 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_env,pam_fprintd acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:49 NR021AA sudo[488]: pam_systemd(sudo:session): Cannot create session: Already occupied by a session
+oct 19 16:36:49 NR021AA audit[488]: USER_START pid=488 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:session_open grantors=pam_keyinit,pam_limits,pam_keyinit,pam_limits,pam_systemd,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:49 NR021AA sudo[488]: pam_unix(sudo:session): session opened for user root by (uid=0)
+oct 19 16:36:49 NR021AA sudo[488]: pam_unix(sudo:session): session closed for user root
+oct 19 16:36:49 NR021AA audit[488]: USER_END pid=488 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:session_close grantors=pam_keyinit,pam_limits,pam_keyinit,pam_limits,pam_systemd,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:49 NR021AA audit[488]: CRED_DISP pid=488 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_env,pam_fprintd acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:49 NR021AA sudo[492]:     root : TTY=pts/0 ; PWD=/root/Github/ckb-next ; USER=root ; COMMAND=/bin/mkdir -p /usr/bin
+oct 19 16:36:49 NR021AA audit[492]: USER_CMD pid=492 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='cwd="/root/Github/ckb-next" cmd=6D6B646972202D70202F7573722F62696E terminal=pts/0 res=success'
+oct 19 16:36:49 NR021AA audit[492]: CRED_REFR pid=492 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_env,pam_fprintd acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:49 NR021AA sudo[492]: pam_systemd(sudo:session): Cannot create session: Already occupied by a session
+oct 19 16:36:49 NR021AA audit[492]: USER_START pid=492 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:session_open grantors=pam_keyinit,pam_limits,pam_keyinit,pam_limits,pam_systemd,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:49 NR021AA sudo[492]: pam_unix(sudo:session): session opened for user root by (uid=0)
+oct 19 16:36:49 NR021AA sudo[492]: pam_unix(sudo:session): session closed for user root
+oct 19 16:36:49 NR021AA audit[492]: USER_END pid=492 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:session_close grantors=pam_keyinit,pam_limits,pam_keyinit,pam_limits,pam_systemd,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:49 NR021AA audit[492]: CRED_DISP pid=492 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_env,pam_fprintd acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:50 NR021AA sudo[494]:     root : TTY=pts/0 ; PWD=/root/Github/ckb-next ; USER=root ; COMMAND=/bin/mkdir -p /usr/lib
+oct 19 16:36:50 NR021AA audit[494]: USER_CMD pid=494 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='cwd="/root/Github/ckb-next" cmd=6D6B646972202D70202F7573722F6C6962 terminal=pts/0 res=success'
+oct 19 16:36:50 NR021AA audit[494]: CRED_REFR pid=494 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_env,pam_fprintd acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:50 NR021AA sudo[494]: pam_systemd(sudo:session): Cannot create session: Already occupied by a session
+oct 19 16:36:50 NR021AA audit[494]: USER_START pid=494 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:session_open grantors=pam_keyinit,pam_limits,pam_keyinit,pam_limits,pam_systemd,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:50 NR021AA sudo[494]: pam_unix(sudo:session): session opened for user root by (uid=0)
+oct 19 16:36:50 NR021AA sudo[494]: pam_unix(sudo:session): session closed for user root
+oct 19 16:36:50 NR021AA audit[494]: USER_END pid=494 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:session_close grantors=pam_keyinit,pam_limits,pam_keyinit,pam_limits,pam_systemd,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:50 NR021AA audit[494]: CRED_DISP pid=494 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_env,pam_fprintd acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:50 NR021AA sudo[496]:     root : TTY=pts/0 ; PWD=/root/Github/ckb-next ; USER=root ; COMMAND=/bin/install bin/ckb /usr/bin/ckb
+oct 19 16:36:50 NR021AA audit[496]: USER_CMD pid=496 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='cwd="/root/Github/ckb-next" cmd=696E7374616C6C2062696E2F636B62202F7573722F62696E2F636B62 terminal=pts/0 res=success'
+oct 19 16:36:50 NR021AA audit[496]: CRED_REFR pid=496 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_env,pam_fprintd acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:50 NR021AA sudo[496]: pam_systemd(sudo:session): Cannot create session: Already occupied by a session
+oct 19 16:36:50 NR021AA sudo[496]: pam_unix(sudo:session): session opened for user root by (uid=0)
+oct 19 16:36:50 NR021AA audit[496]: USER_START pid=496 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:session_open grantors=pam_keyinit,pam_limits,pam_keyinit,pam_limits,pam_systemd,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:50 NR021AA sudo[496]: pam_unix(sudo:session): session closed for user root
+oct 19 16:36:50 NR021AA audit[496]: USER_END pid=496 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:session_close grantors=pam_keyinit,pam_limits,pam_keyinit,pam_limits,pam_systemd,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:50 NR021AA audit[496]: CRED_DISP pid=496 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_env,pam_fprintd acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:50 NR021AA sudo[498]:     root : TTY=pts/0 ; PWD=/root/Github/ckb-next ; USER=root ; COMMAND=/bin/install bin/ckb-daemon /usr/bin/ckb-daemon
+oct 19 16:36:50 NR021AA audit[498]: USER_CMD pid=498 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='cwd="/root/Github/ckb-next" cmd=696E7374616C6C2062696E2F636B622D6461656D6F6E202F7573722F62696E2F636B622D6461656D6F6E terminal=pts/0 res=success'
+oct 19 16:36:50 NR021AA audit[498]: CRED_REFR pid=498 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_env,pam_fprintd acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:50 NR021AA sudo[498]: pam_systemd(sudo:session): Cannot create session: Already occupied by a session
+oct 19 16:36:50 NR021AA sudo[498]: pam_unix(sudo:session): session opened for user root by (uid=0)
+oct 19 16:36:50 NR021AA audit[498]: USER_START pid=498 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:session_open grantors=pam_keyinit,pam_limits,pam_keyinit,pam_limits,pam_systemd,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:50 NR021AA sudo[498]: pam_unix(sudo:session): session closed for user root
+oct 19 16:36:50 NR021AA audit[498]: USER_END pid=498 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:session_close grantors=pam_keyinit,pam_limits,pam_keyinit,pam_limits,pam_systemd,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:50 NR021AA audit[498]: CRED_DISP pid=498 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_env,pam_fprintd acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:50 NR021AA sudo[500]:     root : TTY=pts/0 ; PWD=/root/Github/ckb-next ; USER=root ; COMMAND=/bin/mkdir -p /usr/lib/ckb-animations
+oct 19 16:36:50 NR021AA audit[500]: USER_CMD pid=500 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='cwd="/root/Github/ckb-next" cmd=6D6B646972202D70202F7573722F6C69622F636B622D616E696D6174696F6E73 terminal=pts/0 res=success'
+oct 19 16:36:50 NR021AA audit[500]: CRED_REFR pid=500 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_env,pam_fprintd acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:50 NR021AA sudo[500]: pam_systemd(sudo:session): Cannot create session: Already occupied by a session
+oct 19 16:36:50 NR021AA audit[500]: USER_START pid=500 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:session_open grantors=pam_keyinit,pam_limits,pam_keyinit,pam_limits,pam_systemd,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:50 NR021AA sudo[500]: pam_unix(sudo:session): session opened for user root by (uid=0)
+oct 19 16:36:50 NR021AA sudo[500]: pam_unix(sudo:session): session closed for user root
+oct 19 16:36:50 NR021AA audit[500]: USER_END pid=500 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:session_close grantors=pam_keyinit,pam_limits,pam_keyinit,pam_limits,pam_systemd,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:50 NR021AA audit[500]: CRED_DISP pid=500 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_env,pam_fprintd acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:50 NR021AA sudo[502]:     root : TTY=pts/0 ; PWD=/root/Github/ckb-next ; USER=root ; COMMAND=/bin/install bin/ckb-animations/ckb-gradient bin/ckb-animations/ckb-heat bin/ckb-animations/ckb-pinwheel bin/ckb-animations/ckb-rain bin/ckb-animations/ckb-random bin/ckb-animations/ckb-ripple bin/ckb-animations/ckb-wave /usr/lib/ckb-animations
+oct 19 16:36:50 NR021AA audit[502]: USER_CMD pid=502 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='cwd="/root/Github/ckb-next" cmd=696E7374616C6C2062696E2F636B622D616E696D6174696F6E732F636B622D6772616469656E742062696E2F636B622D616E696D6174696F6E732F636B622D686561742062696E2F636B622D616E696D6174696F6E732F636B622D70696E776865656C2062696E2F636B622D616E696D6174696F6E732F636B622D7261696E2062696E2F636B622D616E696D6174696F6E732F636B622D72616E646F6D2062696E2F636B622D616E696D6174696F6E732F636B622D726970706C652062696E2F636B622D616E696D6174696F6E732F636B622D77617665202F7573722F6C69622F636B622D616E696D6174696F6E73 terminal=pts/0 res=success'
+oct 19 16:36:50 NR021AA audit[502]: CRED_REFR pid=502 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_env,pam_fprintd acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:50 NR021AA sudo[502]: pam_systemd(sudo:session): Cannot create session: Already occupied by a session
+oct 19 16:36:50 NR021AA sudo[502]: pam_unix(sudo:session): session opened for user root by (uid=0)
+oct 19 16:36:50 NR021AA audit[502]: USER_START pid=502 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:session_open grantors=pam_keyinit,pam_limits,pam_keyinit,pam_limits,pam_systemd,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:50 NR021AA sudo[502]: pam_unix(sudo:session): session closed for user root
+oct 19 16:36:50 NR021AA audit[502]: USER_END pid=502 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:session_close grantors=pam_keyinit,pam_limits,pam_keyinit,pam_limits,pam_systemd,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:50 NR021AA audit[502]: CRED_DISP pid=502 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_env,pam_fprintd acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:50 NR021AA sudo[504]:     root : TTY=pts/0 ; PWD=/root/Github/ckb-next ; USER=root ; COMMAND=/bin/xdg-icon-resource install --novendor --size 512 usr/ckb.png
+oct 19 16:36:50 NR021AA audit[504]: USER_CMD pid=504 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='cwd="/root/Github/ckb-next" cmd=7864672D69636F6E2D7265736F7572636520696E7374616C6C202D2D6E6F76656E646F72202D2D73697A6520353132207573722F636B622E706E67 terminal=pts/0 res=success'
+oct 19 16:36:50 NR021AA audit[504]: CRED_REFR pid=504 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_env,pam_fprintd acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:50 NR021AA sudo[504]: pam_systemd(sudo:session): Cannot create session: Already occupied by a session
+oct 19 16:36:50 NR021AA sudo[504]: pam_unix(sudo:session): session opened for user root by (uid=0)
+oct 19 16:36:50 NR021AA audit[504]: USER_START pid=504 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:session_open grantors=pam_keyinit,pam_limits,pam_keyinit,pam_limits,pam_systemd,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:50 NR021AA sudo[504]: pam_unix(sudo:session): session closed for user root
+oct 19 16:36:50 NR021AA audit[504]: USER_END pid=504 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:session_close grantors=pam_keyinit,pam_limits,pam_keyinit,pam_limits,pam_systemd,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:50 NR021AA audit[504]: CRED_DISP pid=504 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_env,pam_fprintd acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:50 NR021AA sudo[532]:     root : TTY=pts/0 ; PWD=/root/Github/ckb-next ; USER=root ; COMMAND=/bin/xdg-desktop-menu install --novendor usr/ckb.desktop
+oct 19 16:36:50 NR021AA audit[532]: USER_CMD pid=532 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='cwd="/root/Github/ckb-next" cmd=7864672D6465736B746F702D6D656E7520696E7374616C6C202D2D6E6F76656E646F72207573722F636B622E6465736B746F70 terminal=pts/0 res=success'
+oct 19 16:36:50 NR021AA audit[532]: CRED_REFR pid=532 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_env,pam_fprintd acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:50 NR021AA sudo[532]: pam_systemd(sudo:session): Cannot create session: Already occupied by a session
+oct 19 16:36:50 NR021AA sudo[532]: pam_unix(sudo:session): session opened for user root by (uid=0)
+oct 19 16:36:50 NR021AA audit[532]: USER_START pid=532 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:session_open grantors=pam_keyinit,pam_limits,pam_keyinit,pam_limits,pam_systemd,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:50 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): As-WARNING **: failed to rescan: Failed to parse /usr/local/share/applications/ckb.desktop file: cannot process file of type application/x-desktop
+oct 19 16:36:50 NR021AA sudo[532]: pam_unix(sudo:session): session closed for user root
+oct 19 16:36:50 NR021AA audit[532]: USER_END pid=532 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:session_close grantors=pam_keyinit,pam_limits,pam_keyinit,pam_limits,pam_systemd,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:50 NR021AA audit[532]: CRED_DISP pid=532 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_env,pam_fprintd acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:59 NR021AA sudo[592]:     root : TTY=pts/0 ; PWD=/root/Github/ckb-next ; USER=root ; COMMAND=/bin/systemctl stop ckb-daemon
+oct 19 16:36:59 NR021AA audit[592]: USER_CMD pid=592 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='cwd="/root/Github/ckb-next" cmd=73797374656D63746C2073746F7020636B622D6461656D6F6E terminal=pts/0 res=success'
+oct 19 16:36:59 NR021AA audit[592]: CRED_REFR pid=592 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_env,pam_fprintd acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:59 NR021AA sudo[592]: pam_systemd(sudo:session): Cannot create session: Already occupied by a session
+oct 19 16:36:59 NR021AA audit[592]: USER_START pid=592 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:session_open grantors=pam_keyinit,pam_limits,pam_keyinit,pam_limits,pam_systemd,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:59 NR021AA sudo[592]: pam_unix(sudo:session): session opened for user root by (uid=0)
+oct 19 16:36:59 NR021AA polkitd[756]: Registered Authentication Agent for unix-process:593:1563647 (system bus name :1.212 [/usr/bin/pkttyagent --notify-fd 4 --fallback], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale es_ES.UTF-8)
+oct 19 16:36:59 NR021AA audit[1]: USER_AVC pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='Unknown permission stop for class system exe="/usr/lib/systemd/systemd" sauid=0 hostname=? addr=? terminal=?'
+oct 19 16:36:59 NR021AA audit[1]: USER_AVC pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='Unknown permission stop for class system exe="/usr/lib/systemd/systemd" sauid=0 hostname=? addr=? terminal=?'
+oct 19 16:36:59 NR021AA sudo[592]: pam_unix(sudo:session): session closed for user root
+oct 19 16:36:59 NR021AA audit[592]: USER_END pid=592 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:session_close grantors=pam_keyinit,pam_limits,pam_keyinit,pam_limits,pam_systemd,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:59 NR021AA audit[592]: CRED_DISP pid=592 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_env,pam_fprintd acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:59 NR021AA sudo[600]:     root : TTY=pts/0 ; PWD=/root/Github/ckb-next ; USER=root ; COMMAND=/bin/mkdir -p /usr/lib/systemd/system
+oct 19 16:36:59 NR021AA audit[600]: USER_CMD pid=600 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='cwd="/root/Github/ckb-next" cmd=6D6B646972202D70202F7573722F6C69622F73797374656D642F73797374656D terminal=pts/0 res=success'
+oct 19 16:36:59 NR021AA audit[600]: CRED_REFR pid=600 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_env,pam_fprintd acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:59 NR021AA polkitd[756]: Unregistered Authentication Agent for unix-process:593:1563647 (system bus name :1.212, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale es_ES.UTF-8) (disconnected from bus)
+oct 19 16:36:59 NR021AA sudo[600]: pam_systemd(sudo:session): Cannot create session: Already occupied by a session
+oct 19 16:36:59 NR021AA sudo[600]: pam_unix(sudo:session): session opened for user root by (uid=0)
+oct 19 16:36:59 NR021AA audit[600]: USER_START pid=600 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:session_open grantors=pam_keyinit,pam_limits,pam_keyinit,pam_limits,pam_systemd,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:59 NR021AA sudo[600]: pam_unix(sudo:session): session closed for user root
+oct 19 16:36:59 NR021AA audit[600]: USER_END pid=600 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:session_close grantors=pam_keyinit,pam_limits,pam_keyinit,pam_limits,pam_systemd,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:59 NR021AA audit[600]: CRED_DISP pid=600 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_env,pam_fprintd acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:59 NR021AA sudo[604]:     root : TTY=pts/0 ; PWD=/root/Github/ckb-next ; USER=root ; COMMAND=/bin/install -m 0644 service/systemd/ckb-daemon.service /usr/lib/systemd/system
+oct 19 16:36:59 NR021AA audit[604]: USER_CMD pid=604 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='cwd="/root/Github/ckb-next" cmd=696E7374616C6C202D6D203036343420736572766963652F73797374656D642F636B622D6461656D6F6E2E73657276696365202F7573722F6C69622F73797374656D642F73797374656D terminal=pts/0 res=success'
+oct 19 16:36:59 NR021AA audit[604]: CRED_REFR pid=604 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_env,pam_fprintd acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:59 NR021AA audit[604]: USER_START pid=604 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:session_open grantors=pam_keyinit,pam_limits,pam_keyinit,pam_limits,pam_systemd,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:59 NR021AA sudo[604]: pam_systemd(sudo:session): Cannot create session: Already occupied by a session
+oct 19 16:36:59 NR021AA sudo[604]: pam_unix(sudo:session): session opened for user root by (uid=0)
+oct 19 16:36:59 NR021AA sudo[604]: pam_unix(sudo:session): session closed for user root
+oct 19 16:36:59 NR021AA audit[604]: USER_END pid=604 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:session_close grantors=pam_keyinit,pam_limits,pam_keyinit,pam_limits,pam_systemd,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:59 NR021AA audit[604]: CRED_DISP pid=604 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_env,pam_fprintd acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:59 NR021AA sudo[611]:     root : TTY=pts/0 ; PWD=/root/Github/ckb-next ; USER=root ; COMMAND=/bin/systemctl daemon-reload
+oct 19 16:36:59 NR021AA audit[611]: USER_CMD pid=611 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='cwd="/root/Github/ckb-next" cmd=73797374656D63746C206461656D6F6E2D72656C6F6164 terminal=pts/0 res=success'
+oct 19 16:36:59 NR021AA audit[611]: CRED_REFR pid=611 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_env,pam_fprintd acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:59 NR021AA sudo[611]: pam_systemd(sudo:session): Cannot create session: Already occupied by a session
+oct 19 16:36:59 NR021AA sudo[611]: pam_unix(sudo:session): session opened for user root by (uid=0)
+oct 19 16:36:59 NR021AA audit[611]: USER_START pid=611 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:session_open grantors=pam_keyinit,pam_limits,pam_keyinit,pam_limits,pam_systemd,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:59 NR021AA polkitd[756]: Registered Authentication Agent for unix-process:612:1563657 (system bus name :1.216 [/usr/bin/pkttyagent --notify-fd 4 --fallback], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale es_ES.UTF-8)
+oct 19 16:36:59 NR021AA systemd[1]: Reloading.
+oct 19 16:36:59 NR021AA sudo[611]: pam_unix(sudo:session): session closed for user root
+oct 19 16:36:59 NR021AA polkitd[756]: Unregistered Authentication Agent for unix-process:612:1563657 (system bus name :1.216, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale es_ES.UTF-8) (disconnected from bus)
+oct 19 16:36:59 NR021AA audit[611]: USER_END pid=611 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:session_close grantors=pam_keyinit,pam_limits,pam_keyinit,pam_limits,pam_systemd,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:59 NR021AA audit[611]: CRED_DISP pid=611 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_env,pam_fprintd acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:59 NR021AA sudo[645]:     root : TTY=pts/0 ; PWD=/root/Github/ckb-next ; USER=root ; COMMAND=/bin/systemctl enable ckb-daemon
+oct 19 16:36:59 NR021AA audit[645]: USER_CMD pid=645 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='cwd="/root/Github/ckb-next" cmd=73797374656D63746C20656E61626C6520636B622D6461656D6F6E terminal=pts/0 res=success'
+oct 19 16:36:59 NR021AA audit[645]: CRED_REFR pid=645 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_env,pam_fprintd acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:59 NR021AA audit[645]: USER_START pid=645 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:session_open grantors=pam_keyinit,pam_limits,pam_keyinit,pam_limits,pam_systemd,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:36:59 NR021AA sudo[645]: pam_systemd(sudo:session): Cannot create session: Already occupied by a session
+oct 19 16:36:59 NR021AA sudo[645]: pam_unix(sudo:session): session opened for user root by (uid=0)
+oct 19 16:36:59 NR021AA polkitd[756]: Registered Authentication Agent for unix-process:648:1563679 (system bus name :1.218 [/usr/bin/pkttyagent --notify-fd 4 --fallback], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale es_ES.UTF-8)
+oct 19 16:36:59 NR021AA systemd[1]: Reloading.
+oct 19 16:37:00 NR021AA audit[645]: USER_END pid=645 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:session_close grantors=pam_keyinit,pam_limits,pam_keyinit,pam_limits,pam_systemd,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:37:00 NR021AA audit[645]: CRED_DISP pid=645 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_env,pam_fprintd acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:37:00 NR021AA sudo[645]: pam_unix(sudo:session): session closed for user root
+oct 19 16:37:00 NR021AA polkitd[756]: Unregistered Authentication Agent for unix-process:648:1563679 (system bus name :1.218, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale es_ES.UTF-8) (disconnected from bus)
+oct 19 16:37:00 NR021AA audit[680]: USER_CMD pid=680 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='cwd="/root/Github/ckb-next" cmd=73797374656D63746C20737461727420636B622D6461656D6F6E terminal=pts/0 res=success'
+oct 19 16:37:00 NR021AA audit[680]: CRED_REFR pid=680 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_env,pam_fprintd acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:37:00 NR021AA sudo[680]:     root : TTY=pts/0 ; PWD=/root/Github/ckb-next ; USER=root ; COMMAND=/bin/systemctl start ckb-daemon
+oct 19 16:37:00 NR021AA sudo[680]: pam_systemd(sudo:session): Cannot create session: Already occupied by a session
+oct 19 16:37:00 NR021AA sudo[680]: pam_unix(sudo:session): session opened for user root by (uid=0)
+oct 19 16:37:00 NR021AA audit[680]: USER_START pid=680 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:session_open grantors=pam_keyinit,pam_limits,pam_keyinit,pam_limits,pam_systemd,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:37:00 NR021AA polkitd[756]: Registered Authentication Agent for unix-process:683:1563700 (system bus name :1.220 [/usr/bin/pkttyagent --notify-fd 4 --fallback], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale es_ES.UTF-8)
+oct 19 16:37:00 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=ckb-daemon comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+oct 19 16:37:00 NR021AA systemd[1]: Started Corsair Keyboard Daemon.
+-- Subject: Unit ckb-daemon.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit ckb-daemon.service has finished starting up.
+-- 
+-- The start-up result is done.
+oct 19 16:37:00 NR021AA ckb-daemon[694]:     ckb: Corsair RGB driver v0.2.8
+oct 19 16:37:00 NR021AA ckb-daemon[694]: [I] Root controller ready at /dev/input/ckb0
+oct 19 16:37:00 NR021AA sudo[680]: pam_unix(sudo:session): session closed for user root
+oct 19 16:37:00 NR021AA audit[680]: USER_END pid=680 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:session_close grantors=pam_keyinit,pam_limits,pam_keyinit,pam_limits,pam_systemd,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:37:00 NR021AA audit[680]: CRED_DISP pid=680 uid=0 auid=4294967295 ses=4294967295 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_env,pam_fprintd acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+oct 19 16:37:00 NR021AA polkitd[756]: Unregistered Authentication Agent for unix-process:683:1563700 (system bus name :1.220, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale es_ES.UTF-8) (disconnected from bus)
+oct 19 16:37:00 NR021AA ckb-daemon[694]: [I] >>>vendor = 0x1b1c, product = 0x1b3a, path = /dev/bus/usb/004/003, syspath = /sys/devices/pci0000:00/0000:00:1d.2/usb4/4-2
+oct 19 16:37:00 NR021AA ckb-daemon[694]: [I] Connecting Corsair Gaming K70 RAPIDFIRE Keyboard at /dev/input/ckb1
+oct 19 16:37:00 NR021AA ckb-daemon[694]: [I] claiming interfaces. name=Corsair Gaming K70 RAPIDFIRE Keyboard , firmware=0205; Got >> 3<< as ep_str
+oct 19 16:37:00 NR021AA ckb-daemon[694]: [I] claiming 3 endpoints
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (II) config/udev: removing device Corsair Corsair Gaming K70 RAPIDFIRE Keyboard
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "fd" "22"
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (II) UnloadModule: "libinput"
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (II) systemd-logind: releasing fd for 13:69
+oct 19 16:37:00 NR021AA kernel: intel_powerclamp: No package C-state available
+oct 19 16:37:00 NR021AA kernel: input: ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard as /devices/virtual/input/input15
+oct 19 16:37:00 NR021AA kernel: input: ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard as /devices/virtual/input/input16
+oct 19 16:37:00 NR021AA ckb-daemon[694]: [I] Starting input thread for /dev/input/ckb1
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (II) config/udev: Adding input device ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard (/dev/input/mouse1)
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (**) ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard: Applying InputClass "system-keyboard"
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (II) No input driver specified, ignoring this device.
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (II) This device may have been added with another device file.
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (II) config/udev: Adding input device ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard (/dev/input/event5)
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (**) ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard: Applying InputClass "evdev keyboard catchall"
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (**) ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard: Applying InputClass "libinput keyboard catchall"
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (**) ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard: Applying InputClass "system-keyboard"
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (II) systemd-logind: got fd for /dev/input/event5 13:69 fd 22 paused 0
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (II) Using input driver 'libinput' for 'ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard'
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (**) ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard: always reports core events
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "Device" "/dev/input/event5"
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "_source" "server/udev"
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (II) input device 'ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard', /dev/input/event5 is tagged by udev as: Keyboard
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (II) input device 'ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard', /dev/input/event5 is a keyboard
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "config_info" "udev:/sys/devices/virtual/input/input15/event5"
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (II) XINPUT: Adding extended input device "ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard" (type: KEYBOARD, id 11)
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "xkb_layout" "es"
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (II) input device 'ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard', /dev/input/event5 is tagged by udev as: Keyboard
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (II) input device 'ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard', /dev/input/event5 is a keyboard
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (II) config/udev: Adding input device ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard (/dev/input/event12)
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (**) ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard: Applying InputClass "evdev pointer catchall"
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (**) ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard: Applying InputClass "evdev keyboard catchall"
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (**) ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard: Applying InputClass "libinput pointer catchall"
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (**) ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard: Applying InputClass "libinput keyboard catchall"
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (**) ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard: Applying InputClass "system-keyboard"
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (II) systemd-logind: got fd for /dev/input/event12 13:76 fd 33 paused 0
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (II) Using input driver 'libinput' for 'ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard'
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (**) ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard: always reports core events
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "Device" "/dev/input/event12"
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "_source" "server/udev"
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (II) input device 'ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard', /dev/input/event12 is tagged by udev as: Keyboard Mouse
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (II) input device 'ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard', /dev/input/event12 is a pointer caps
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (II) input device 'ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard', /dev/input/event12 is a keyboard
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (II) libinput: ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard: needs a virtual subdevice
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "config_info" "udev:/sys/devices/virtual/input/input16/event12"
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (II) XINPUT: Adding extended input device "ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard" (type: MOUSE, id 12)
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "AccelerationScheme" "none"
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (**) ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard: (accel) selected scheme none/0
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (**) ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard: (accel) acceleration factor: 2.000
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (**) ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard: (accel) acceleration threshold: 4
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (II) input device 'ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard', /dev/input/event12 is tagged by udev as: Keyboard Mouse
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (II) input device 'ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard', /dev/input/event12 is a pointer caps
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (II) input device 'ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard', /dev/input/event12 is a keyboard
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (**) ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard: Applying InputClass "evdev pointer catchall"
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (**) ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard: Applying InputClass "evdev keyboard catchall"
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (**) ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard: Applying InputClass "libinput pointer catchall"
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (**) ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard: Applying InputClass "libinput keyboard catchall"
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (**) ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard: Applying InputClass "system-keyboard"
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (II) systemd-logind: returning pre-existing fd for /dev/input/event12 13:76
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (II) Using input driver 'libinput' for 'ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard'
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (**) ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard: always reports core events
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "Device" "/dev/input/event12"
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "_source" "_driver/libinput"
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (II) libinput: ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard: is a virtual subdevice
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "config_info" "udev:/sys/devices/virtual/input/input16/event12"
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (II) XINPUT: Adding extended input device "ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard" (type: KEYBOARD, id 13)
+oct 19 16:37:00 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "xkb_layout" "es"
+oct 19 16:37:00 NR021AA ckb-daemon[694]: [E] os_sendindicators (usb_linux.c:218): Connection timed out
+oct 19 16:37:00 NR021AA ckb-daemon[694]: [I] Attempting reset...
+oct 19 16:37:00 NR021AA kernel: usb 4-2: usbfs: USBDEVFS_CONTROL failed cmd ckb-daemon rqt 33 rq 9 len 1 ret -110
+oct 19 16:37:01 NR021AA kernel: usb 4-2: reset full-speed USB device number 3 using uhci_hcd
+oct 19 16:37:01 NR021AA ckb-daemon[694]: [I] claiming 3 endpoints
+oct 19 16:37:03 NR021AA ckb-daemon[694]: [I] Reset success
+oct 19 16:37:03 NR021AA ckb-daemon[694]: [I] Setup finished for /dev/input/ckb1
+oct 19 16:37:30 NR021AA kernel: usb 4-1: USB disconnect, device number 2
+oct 19 16:37:30 NR021AA /usr/libexec/gdm-x-session[2746]: (II) config/udev: removing device Logitech USB Keyboard
+oct 19 16:37:30 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "fd" "20"
+oct 19 16:37:30 NR021AA /usr/libexec/gdm-x-session[2746]: (II) UnloadModule: "libinput"
+oct 19 16:37:30 NR021AA /usr/libexec/gdm-x-session[2746]: (II) systemd-logind: releasing fd for 13:67
+oct 19 16:37:30 NR021AA /usr/libexec/gdm-x-session[2746]: (II) config/udev: removing device Logitech USB Keyboard
+oct 19 16:37:30 NR021AA /usr/libexec/gdm-x-session[2746]: (**) Option "fd" "21"
+oct 19 16:37:30 NR021AA /usr/libexec/gdm-x-session[2746]: (II) UnloadModule: "libinput"
+oct 19 16:37:30 NR021AA /usr/libexec/gdm-x-session[2746]: (II) systemd-logind: releasing fd for 13:68
+oct 19 16:37:34 NR021AA packagekitd[1510]: child is at 2/3 steps and parent done [pk-backend-hif.c:545]
+oct 19 16:37:34 NR021AA packagekitd[1510]: 3) pk-backend-hif.c:925 (0/5)
+oct 19 16:37:34 NR021AA packagekitd[1510]: 2) pk-backend-hif.c:697 (1/2)
+oct 19 16:37:34 NR021AA packagekitd[1510]: 1) pk-backend-hif.c:521 (1/2)
+oct 19 16:37:34 NR021AA packagekitd[1510]: 0) hif-sack.c:188 (2/3)
+oct 19 16:37:36 NR021AA PackageKit[1510]: get-updates transaction /156_dbdaabcc from uid 0 finished with success after 2299ms
+oct 19 16:37:36 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: failed to get updates: no results to show
+oct 19 16:38:05 NR021AA dbus-daemon[2777]: Activating service name='org.gnome.ControlCenter.SearchProvider'
+oct 19 16:38:05 NR021AA dbus-daemon[2777]: Activating service name='org.gnome.Contacts.SearchProvider'
+oct 19 16:38:05 NR021AA dbus-daemon[2777]: Activating service name='org.gnome.Documents'
+oct 19 16:38:05 NR021AA dbus-daemon[2777]: Activating service name='org.gnome.Nautilus'
+oct 19 16:38:05 NR021AA dbus-daemon[2777]: Activating service name='org.gnome.Boxes.SearchProvider'
+oct 19 16:38:05 NR021AA dbus-daemon[2777]: Activating service name='org.gnome.Calculator.SearchProvider'
+oct 19 16:38:05 NR021AA dbus-daemon[2777]: Activating service name='org.gnome.seahorse.Application'
+oct 19 16:38:05 NR021AA dbus-daemon[2777]: Activating service name='org.gnome.clocks'
+oct 19 16:38:05 NR021AA dbus-daemon[2777]: Successfully activated service 'org.gnome.Calculator.SearchProvider'
+oct 19 16:38:05 NR021AA dbus-daemon[2777]: Successfully activated service 'org.gnome.Boxes.SearchProvider'
+oct 19 16:38:05 NR021AA dbus-daemon[2777]: Successfully activated service 'org.gnome.clocks'
+oct 19 16:38:05 NR021AA dbus-daemon[2777]: Successfully activated service 'org.gnome.ControlCenter.SearchProvider'
+oct 19 16:38:05 NR021AA dbus-daemon[2777]: Successfully activated service 'org.gnome.Nautilus'
+oct 19 16:38:06 NR021AA dbus-daemon[2777]: Successfully activated service 'org.gnome.seahorse.Application'
+oct 19 16:38:06 NR021AA dbus-daemon[2777]: Successfully activated service 'org.gnome.Documents'
+oct 19 16:38:06 NR021AA dbus-daemon[2777]: Successfully activated service 'org.gnome.Contacts.SearchProvider'
+oct 19 16:38:06 NR021AA org.gnome.Contacts.SearchProvider[2777]: ** (gnome-contacts-search-provider:834): WARNING **: contacts-store.vala:335: Unable to check accounts caps The name org.freedesktop.Telepathy.AccountManager was not provided by any .service files
+oct 19 16:38:06 NR021AA dbus[706]: [system] Activating via systemd: service name='org.bluez' unit='dbus-org.bluez.service'
+oct 19 16:38:06 NR021AA org.gnome.Contacts.SearchProvider[2777]: (gnome-contacts-search-provider:834): folks-WARNING **: backend-store.vala:434: Error preparing Backend 'telepathy': The name org.freedesktop.Telepathy.AccountManager was not provided by any .service files
+oct 19 16:38:07 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: failed to call gs_plugin_refine on packagekit-refine: Se canceló la operación
+oct 19 16:38:09 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: failed to call gs_plugin_refine on packagekit-refine: /158_dedbcada was cancelled and was never run
+oct 19 16:38:09 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: failed to call gs_plugin_add_search on appstream: Se canceló la operación
+oct 19 16:38:09 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: failed to call gs_plugin_add_search on appstream: Se canceló la operación
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]: #                                                                                      @1244ms GsPlugin::setup 1244ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]: #                                                                                      @0042ms GsPlugin::fedora-distro-upgrades(gs_plugin_initialize) 12ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]: #                                                                                      @0054ms GsPlugin::fedora-distro-upgrades(gs_plugin_setup) 8ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]: #                                                                                      @0063ms GsPlugin::fwupd(gs_plugin_setup) 9ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]: #                                                                                      @1244ms GsPlugin::appstream(gs_plugin_setup) 1177ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]: #                                                                                      @1243ms AsStore:load 1177ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]: #                                                                                      @1243ms AsStore:load{per-system} 1176ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]: #                                                                                      @1034ms AsStore:app-info{/usr/share/app-info/xmls/fedora.xml.gz} 967ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]: #                                                                                      @0993ms AsStore:store-from-file 926ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]: #                                                                                      @0993ms AsStore:store-from-root 181ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]: #                                                                                      @1060ms AsStore:app-info{/usr/share/app-info/xmls/gstreamer-non-free.xml} 25ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]: #                                                                                      @1060ms AsStore:store-from-file 25ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]: #                                                                                      @1122ms AsStore:load-installed{/usr/share/appdata} 60ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]: #                                                                                      @1238ms AsStore:load-installed{/usr/share/applications} 115ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]: #                                                                                      @29461ms 0x32d83550f0~GsPlugin::fedora-distro-upgrades(gs_plugin_refresh) 1154ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]: #                                                                                      @31713ms 0x32d83550f0~GsPlugin::fwupd(gs_plugin_refresh) 2251ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]: #                                                                                      @46463ms 0x32d83550f0~GsPlugin::packagekit-refresh(gs_plugin_refresh) 14750ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]: #                                                                                      @33748ms 0x32d83550f0~packagekit-refresh::transaction 1975ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]: #                                                                                      @31784ms AsStore:store-from-file 6ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]: #                                                                                      @46463ms 0x32d83550f0~packagekit-refresh::transaction 12643ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]: #                                                                                      @47837ms 0x7fa3440058f0~GsPlugin::*(gs_plugin_add_updates) 12923ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]: #                                                                                      @47837ms 0x7fa3440058f0~GsPlugin::packagekit-refine(gs_plugin_add_updates;gs_plugin_refine) 12921ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]: #                                                                                      @47836ms 0x7fa3440058f0~packagekit-refine::transaction[(null)] 1372ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]: #                                                                                      @48503ms 0x32d83550f0~GsPlugin::*(gs_plugin_add_updates) 2039ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]: #                                                                                      @48503ms 0x32d83550f0~GsPlugin::packagekit-refine(gs_plugin_add_updates;gs_plugin_refine) 2037ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]: #                                                                                      @48502ms 0x32d83550f0~packagekit-refine::transaction[(null)] 666ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]:                                                    #                                   @9135123ms 0x32d7e86800~GsPlugin::appstream(gs_plugin_add_search) 3085ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]:                                                    #                                   @9135123ms 0x32d7e86800~appstream::search 3085ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]:                                                    #                                   @9135200ms 0x32d7e86800~GsPlugin::appstream(gs_plugin_add_search;gs_plugin_refine) 76ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]:                                                    #                                   @9140187ms 0x32d7e86800~GsPlugin::packagekit-refine(gs_plugin_add_search;gs_plugin_refine) 4984ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]:                                                    #                                   @9140187ms 0x32d7e86800~packagekit-refine[name->id] 4984ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]:                                                    #                                   @9140177ms 0x32d7e86800~packagekit-refine::transaction[(null)] 4749ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]:                                                    #                                   @9140216ms 0x32d7e86800~GsPlugin::icons(gs_plugin_add_search;gs_plugin_refine) 29ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]:                                                    #                                   @9140527ms 0x32d5069230~GsPlugin::packagekit-refine(gs_plugin_refine) 298ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]:                                                    #                                   @9140527ms 0x32d5069230~packagekit-refine[name->id] 298ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]:                                                    #                                   @9140527ms 0x32d5069230~packagekit-refine::transaction[(null)] 41ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]:                                                    #                                   @9140814ms 0x32d7e86800~GsPlugin::packagekit-refine(gs_plugin_refine) 281ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]:                                                    #                                   @9140814ms 0x32d7e86800~packagekit-refine[name->id] 281ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]:                                                    #                                   @9140813ms 0x32d7e86800~packagekit-refine::transaction[(null)] 45ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]:                                                    #                                   @9141102ms 0x32d5069230~GsPlugin::packagekit-refine(gs_plugin_refine) 281ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]:                                                    #                                   @9141102ms 0x32d5069230~packagekit-refine[name->id] 281ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]:                                                    #                                   @9141101ms 0x32d5069230~packagekit-refine::transaction[(null)] 41ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]:                                                                                      # @15297299ms 0x7fa344005800~GsPlugin::*(gs_plugin_add_updates) 2385ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]:                                                                                      # @15297299ms 0x7fa344005800~GsPlugin::packagekit-refine(gs_plugin_add_updates;gs_plugin_refine) 2384ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]:                                                                                      # @15297298ms 0x7fa344005800~packagekit-refine::transaction[(null)] 2323ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]:                                                                                      # @15328449ms 0x7fa34c020f20~GsPlugin::appstream(gs_plugin_add_search) 1336ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]:                                                                                      # @15328449ms 0x7fa34c020f20~appstream::search 1336ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]:                                                                                      # @15328666ms 0x7fa34c020f20~GsPlugin::appstream(gs_plugin_add_search;gs_plugin_refine) 216ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]:                                                                                      # @15328690ms 0x7fa34c017d90~GsPlugin::appstream(gs_plugin_add_search) 148ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]:                                                                                      # @15328690ms 0x7fa34c017d90~appstream::search 148ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]:                                                                                      # @15328874ms 0x7fa34c020f20~GsPlugin::icons(gs_plugin_add_search;gs_plugin_refine) 204ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]:                                                                                      # @15328716ms 0x7fa34c017d90~GsPlugin::appstream(gs_plugin_add_search;gs_plugin_refine) 26ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]:                                                                                      # @15328928ms 0x32d50690f0~GsPlugin::appstream(gs_plugin_add_search) 185ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]:                                                                                      # @15328928ms 0x32d50690f0~appstream::search 185ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]:                                                                                      # @15328992ms 0x32d50690f0~GsPlugin::appstream(gs_plugin_add_search;gs_plugin_refine) 64ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]:                                                                                      # @15330235ms 0x32d50690f0~GsPlugin::packagekit-refine(gs_plugin_add_search;gs_plugin_refine) 1242ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]:                                                                                      # @15330430ms 0x7fa34c020f20~GsPlugin::appstream(gs_plugin_add_search) 197ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]:                                                                                      # @15330427ms 0x7fa34c020f20~appstream::search 194ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]:                                                                                      # @15330596ms 0x32d50690f0~GsPlugin::appstream(gs_plugin_add_search) 179ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]:                                                                                      # @15330596ms 0x32d50690f0~appstream::search 179ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]:                                                                                      # @15332239ms 0x7fa34c020f20~GsPlugin::appstream(gs_plugin_add_search) 395ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]:                                                                                      # @15332239ms 0x7fa34c020f20~appstream::search 395ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]:                                                                                      # @15332334ms 0x7fa34c020f20~GsPlugin::appstream(gs_plugin_add_search;gs_plugin_refine) 94ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]: $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ @????ms GsMain 15332573ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]: $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ @????ms 0x7fa34c020f20~packagekit-refine[name->id] 3691ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]: $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ @????ms 0x7fa34c017d90~GsPlugin::packagekit-refine(gs_plugin_add_search;gs_plugin_refine) 3643ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]: $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ @????ms 0x7fa34c017d90~packagekit-refine[name->id] 3643ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]: $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ @????ms 0x7fa34c017d90~packagekit-refine::transaction[(null)] 3565ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]: $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ @????ms 0x32d50690f0~packagekit-refine[name->id] 3368ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]: $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ @????ms 0x7fa34c020f20~GsPlugin::packagekit-refine(gs_plugin_add_search;gs_plugin_refine) 24ms
+oct 19 16:38:11 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): As-WARNING **: Already a started task for 0x7fa34c020f20~packagekit-refine[name->id]
+oct 19 16:38:12 NR021AA PackageKit[1510]: resolve transaction /157_bbbcadac from uid 0 finished with success after 4494ms
+oct 19 16:38:12 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on adobe-release-x86_64 from source to unknown is not OK
+oct 19 16:38:12 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on bjnplugin from source to unknown is not OK
+oct 19 16:38:12 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on google-chrome from source to unknown is not OK
+oct 19 16:38:12 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on google-earth-stable from source to unknown is not OK
+oct 19 16:38:12 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on google-musicmanager-beta from source to unknown is not OK
+oct 19 16:38:12 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on google-talkplugin from source to unknown is not OK
+oct 19 16:38:12 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on livna-release from source to unknown is not OK
+oct 19 16:38:12 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on nautilus-dropbox from source to unknown is not OK
+oct 19 16:38:12 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on rpmfusion-free-release from source to unknown is not OK
+oct 19 16:38:12 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on rpmfusion-nonfree-release from source to unknown is not OK
+oct 19 16:38:14 NR021AA PackageKit[1510]: resolve transaction /159_aebcdaec from uid 0 finished with success after 2728ms
+oct 19 16:38:14 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on flash-player-properties.desktop from addon to unknown is not OK
+oct 19 16:38:14 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on gstreamer-bad-freeworld from codec to unknown is not OK
+oct 19 16:38:14 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on gstreamer-libav from codec to unknown is not OK
+oct 19 16:38:14 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on adobe-release-x86_64 from source to unknown is not OK
+oct 19 16:38:14 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on bjnplugin from source to unknown is not OK
+oct 19 16:38:14 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on google-chrome from source to unknown is not OK
+oct 19 16:38:14 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on google-earth-stable from source to unknown is not OK
+oct 19 16:38:14 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on google-musicmanager-beta from source to unknown is not OK
+oct 19 16:38:14 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on google-talkplugin from source to unknown is not OK
+oct 19 16:38:14 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on livna-release from source to unknown is not OK
+oct 19 16:38:14 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on nautilus-dropbox from source to unknown is not OK
+oct 19 16:38:14 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on rpmfusion-free-release from source to unknown is not OK
+oct 19 16:38:14 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on rpmfusion-nonfree-release from source to unknown is not OK
+oct 19 16:38:14 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on libnpgoogletalk.so from addon to unknown is not OK
+oct 19 16:38:15 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): EDID vendor "HWP", prod id 9890
+oct 19 16:38:15 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Using hsync ranges from config file
+oct 19 16:38:15 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Using vrefresh ranges from config file
+oct 19 16:38:15 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Printing DDC gathered Modelines:
+oct 19 16:38:15 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "1440x900"x0.0  106.50  1440 1520 1672 1904  900 903 909 934 -hsync +vsync (55.9 kHz eP)
+oct 19 16:38:15 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "800x600"x0.0   40.00  800 840 968 1056  600 601 605 628 +hsync +vsync (37.9 kHz e)
+oct 19 16:38:15 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "640x480"x0.0   31.50  640 656 720 840  480 481 484 500 -hsync -vsync (37.5 kHz e)
+oct 19 16:38:15 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "640x480"x0.0   25.18  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+oct 19 16:38:15 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "720x400"x0.0   28.32  720 738 846 900  400 412 414 449 -hsync +vsync (31.5 kHz e)
+oct 19 16:38:15 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "1280x1024"x0.0  135.00  1280 1296 1440 1688  1024 1025 1028 1066 +hsync +vsync (80.0 kHz e)
+oct 19 16:38:15 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "1024x768"x0.0   78.75  1024 1040 1136 1312  768 769 772 800 +hsync +vsync (60.0 kHz e)
+oct 19 16:38:15 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "1024x768"x0.0   65.00  1024 1048 1184 1344  768 771 777 806 -hsync -vsync (48.4 kHz e)
+oct 19 16:38:15 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "832x624"x0.0   57.28  832 864 928 1152  624 625 628 667 -hsync -vsync (49.7 kHz e)
+oct 19 16:38:15 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "800x600"x0.0   49.50  800 816 896 1056  600 601 604 625 +hsync +vsync (46.9 kHz e)
+oct 19 16:38:15 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "1152x864"x0.0  108.00  1152 1216 1344 1600  864 865 868 900 +hsync +vsync (67.5 kHz e)
+oct 19 16:38:15 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "1152x720"x60.0   67.32  1152 1208 1328 1504  720 721 724 746 -hsync +vsync (44.8 kHz e)
+oct 19 16:38:15 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "1280x960"x0.0  108.00  1280 1376 1488 1800  960 961 964 1000 +hsync +vsync (60.0 kHz e)
+oct 19 16:38:15 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "1280x1024"x0.0  108.00  1280 1328 1440 1688  1024 1025 1028 1066 +hsync +vsync (64.0 kHz e)
+oct 19 16:38:31 NR021AA dbus[706]: [system] Failed to activate service 'org.bluez': timed out
+oct 19 16:38:49 NR021AA dbus-daemon[2777]: Activating service name='org.gnome.Contacts.SearchProvider'
+oct 19 16:38:49 NR021AA dbus-daemon[2777]: Activating service name='org.gnome.Documents'
+oct 19 16:38:49 NR021AA dbus-daemon[2777]: Activating service name='org.gnome.Nautilus'
+oct 19 16:38:49 NR021AA dbus-daemon[2777]: Activating service name='org.gnome.Boxes.SearchProvider'
+oct 19 16:38:49 NR021AA dbus-daemon[2777]: Activating service name='org.gnome.Calculator.SearchProvider'
+oct 19 16:38:49 NR021AA dbus-daemon[2777]: Activating service name='org.gnome.clocks'
+oct 19 16:38:49 NR021AA dbus-daemon[2777]: Successfully activated service 'org.gnome.Boxes.SearchProvider'
+oct 19 16:38:49 NR021AA dbus-daemon[2777]: Successfully activated service 'org.gnome.Calculator.SearchProvider'
+oct 19 16:38:49 NR021AA dbus-daemon[2777]: Successfully activated service 'org.gnome.clocks'
+oct 19 16:38:49 NR021AA dbus-daemon[2777]: Successfully activated service 'org.gnome.Nautilus'
+oct 19 16:38:49 NR021AA dbus-daemon[2777]: Successfully activated service 'org.gnome.Documents'
+oct 19 16:38:50 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: failed to call gs_plugin_add_search on appstream: Se canceló la operación
+oct 19 16:38:50 NR021AA dbus-daemon[2777]: Successfully activated service 'org.gnome.Contacts.SearchProvider'
+oct 19 16:38:50 NR021AA org.gnome.Contacts.SearchProvider[2777]: ** (gnome-contacts-search-provider:978): WARNING **: contacts-store.vala:335: Unable to check accounts caps The name org.freedesktop.Telepathy.AccountManager was not provided by any .service files
+oct 19 16:38:50 NR021AA dbus[706]: [system] Activating via systemd: service name='org.bluez' unit='dbus-org.bluez.service'
+oct 19 16:38:50 NR021AA org.gnome.Contacts.SearchProvider[2777]: (gnome-contacts-search-provider:978): folks-WARNING **: backend-store.vala:434: Error preparing Backend 'telepathy': The name org.freedesktop.Telepathy.AccountManager was not provided by any .service files
+oct 19 16:38:50 NR021AA PackageKit[1510]: resolve transaction /160_adeadbcc from uid 0 finished with success after 536ms
+oct 19 16:38:50 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on adobe-release-x86_64 from source to unknown is not OK
+oct 19 16:38:50 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on bjnplugin from source to unknown is not OK
+oct 19 16:38:50 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on google-chrome from source to unknown is not OK
+oct 19 16:38:50 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on google-earth-stable from source to unknown is not OK
+oct 19 16:38:50 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on google-musicmanager-beta from source to unknown is not OK
+oct 19 16:38:50 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on google-talkplugin from source to unknown is not OK
+oct 19 16:38:50 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on livna-release from source to unknown is not OK
+oct 19 16:38:50 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on nautilus-dropbox from source to unknown is not OK
+oct 19 16:38:50 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on rpmfusion-free-release from source to unknown is not OK
+oct 19 16:38:50 NR021AA gnome-software-service.desktop[2981]: (gnome-software:2981): Gs-WARNING **: Kind change on rpmfusion-nonfree-release from source to unknown is not OK
+oct 19 16:38:51 NR021AA PackageKit[1510]: resolve transaction /161_baeddeba from uid 0 finished with success after 39ms
+oct 19 16:38:51 NR021AA PackageKit[1510]: resolve transaction /162_abcaaebd from uid 0 finished with success after 39ms
+oct 19 16:38:51 NR021AA PackageKit[1510]: resolve transaction /163_abddadda from uid 0 finished with success after 38ms
+oct 19 16:38:51 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): EDID vendor "HWP", prod id 9890
+oct 19 16:38:51 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Using hsync ranges from config file
+oct 19 16:38:51 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Using vrefresh ranges from config file
+oct 19 16:38:51 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Printing DDC gathered Modelines:
+oct 19 16:38:51 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "1440x900"x0.0  106.50  1440 1520 1672 1904  900 903 909 934 -hsync +vsync (55.9 kHz eP)
+oct 19 16:38:51 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "800x600"x0.0   40.00  800 840 968 1056  600 601 605 628 +hsync +vsync (37.9 kHz e)
+oct 19 16:38:51 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "640x480"x0.0   31.50  640 656 720 840  480 481 484 500 -hsync -vsync (37.5 kHz e)
+oct 19 16:38:51 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "640x480"x0.0   25.18  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+oct 19 16:38:51 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "720x400"x0.0   28.32  720 738 846 900  400 412 414 449 -hsync +vsync (31.5 kHz e)
+oct 19 16:38:51 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "1280x1024"x0.0  135.00  1280 1296 1440 1688  1024 1025 1028 1066 +hsync +vsync (80.0 kHz e)
+oct 19 16:38:51 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "1024x768"x0.0   78.75  1024 1040 1136 1312  768 769 772 800 +hsync +vsync (60.0 kHz e)
+oct 19 16:38:51 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "1024x768"x0.0   65.00  1024 1048 1184 1344  768 771 777 806 -hsync -vsync (48.4 kHz e)
+oct 19 16:38:51 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "832x624"x0.0   57.28  832 864 928 1152  624 625 628 667 -hsync -vsync (49.7 kHz e)
+oct 19 16:38:51 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "800x600"x0.0   49.50  800 816 896 1056  600 601 604 625 +hsync +vsync (46.9 kHz e)
+oct 19 16:38:51 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "1152x864"x0.0  108.00  1152 1216 1344 1600  864 865 868 900 +hsync +vsync (67.5 kHz e)
+oct 19 16:38:51 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "1152x720"x60.0   67.32  1152 1208 1328 1504  720 721 724 746 -hsync +vsync (44.8 kHz e)
+oct 19 16:38:51 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "1280x960"x0.0  108.00  1280 1376 1488 1800  960 961 964 1000 +hsync +vsync (60.0 kHz e)
+oct 19 16:38:51 NR021AA /usr/libexec/gdm-x-session[2746]: (II) RADEON(0): Modeline "1280x1024"x0.0  108.00  1280 1328 1440 1688  1024 1025 1028 1066 +hsync +vsync (64.0 kHz e)
+oct 19 16:39:00 NR021AA dbus[706]: [system] Activating via systemd: service name='org.freedesktop.locale1' unit='dbus-org.freedesktop.locale1.service'
+oct 19 16:39:00 NR021AA systemd[1]: Starting Locale Service...
+-- Subject: Unit systemd-localed.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-localed.service has begun starting up.
+oct 19 16:39:00 NR021AA dbus[706]: [system] Successfully activated service 'org.freedesktop.locale1'
+oct 19 16:39:00 NR021AA systemd[1]: Started Locale Service.
+-- Subject: Unit systemd-localed.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-localed.service has finished starting up.
+-- 
+-- The start-up result is done.
+oct 19 16:39:00 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-localed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+oct 19 16:39:15 NR021AA dbus[706]: [system] Failed to activate service 'org.bluez': timed out
+oct 19 16:39:16 NR021AA gnome-control-center.desktop[1048]: (gkbd-keyboard-display:1070): Gtk-CRITICAL **: gtk_widget_set_allocation: assertion '_gtk_widget_get_visible (widget) || _gtk_widget_is_toplevel (widget)' failed
+oct 19 16:39:16 NR021AA gnome-control-center.desktop[1048]: Gtk-Message: GtkDialog mapped without a transient parent. This is discouraged.
+oct 19 16:39:31 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-localed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+oct 19 16:39:45 NR021AA dbus[706]: [system] Activating via systemd: service name='org.freedesktop.locale1' unit='dbus-org.freedesktop.locale1.service'
+oct 19 16:39:45 NR021AA systemd[1]: Starting Locale Service...
+-- Subject: Unit systemd-localed.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-localed.service has begun starting up.
+oct 19 16:39:45 NR021AA dbus[706]: [system] Successfully activated service 'org.freedesktop.locale1'
+oct 19 16:39:45 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-localed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+oct 19 16:39:45 NR021AA systemd[1]: Started Locale Service.
+-- Subject: Unit systemd-localed.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-localed.service has finished starting up.
+-- 
+-- The start-up result is done.
+oct 19 16:39:45 NR021AA systemd-localed[1081]: Changed X11 keyboard layout to 'es,us' model '' variant ',' options ''
+oct 19 16:39:49 NR021AA gnome-control-center.desktop[1048]: (gkbd-keyboard-display:1086): Gtk-CRITICAL **: gtk_widget_set_allocation: assertion '_gtk_widget_get_visible (widget) || _gtk_widget_is_toplevel (widget)' failed
+oct 19 16:39:49 NR021AA gnome-control-center.desktop[1048]: Gtk-Message: GtkDialog mapped without a transient parent. This is discouraged.
+oct 19 16:39:49 NR021AA gnome-control-center.desktop[1048]: (gkbd-keyboard-display:1094): Gtk-CRITICAL **: gtk_widget_set_allocation: assertion '_gtk_widget_get_visible (widget) || _gtk_widget_is_toplevel (widget)' failed
+oct 19 16:39:49 NR021AA gnome-control-center.desktop[1048]: Gtk-Message: GtkDialog mapped without a transient parent. This is discouraged.
+oct 19 16:39:52 NR021AA gnome-control-center.desktop[1048]: (gkbd-keyboard-display:1086): GLib-CRITICAL **: Source ID 19 was not found when attempting to remove it
+oct 19 16:39:56 NR021AA systemd-localed[1081]: Changed X11 keyboard layout to 'us,es' model '' variant ',' options ''
+oct 19 16:39:56 NR021AA systemd-localed[1081]: Changed virtual console keymap to 'us' toggle ''
+oct 19 16:39:56 NR021AA systemd[1]: Stopped Setup Virtual Console.
+-- Subject: Unit systemd-vconsole-setup.service has finished shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-vconsole-setup.service has finished shutting down.
+oct 19 16:39:56 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-vconsole-setup comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+oct 19 16:39:56 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-vconsole-setup comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+oct 19 16:39:56 NR021AA systemd[1]: Stopping Setup Virtual Console...
+-- Subject: Unit systemd-vconsole-setup.service has begun shutting down
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-vconsole-setup.service has begun shutting down.
+oct 19 16:39:56 NR021AA systemd[1]: Starting Setup Virtual Console...
+-- Subject: Unit systemd-vconsole-setup.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-vconsole-setup.service has begun starting up.
+oct 19 16:39:56 NR021AA systemd[1]: Started Setup Virtual Console.
+-- Subject: Unit systemd-vconsole-setup.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-vconsole-setup.service has finished starting up.
+-- 
+-- The start-up result is done.
+oct 19 16:39:56 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-vconsole-setup comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+oct 19 16:40:01 NR021AA gnome-control-center.desktop[1048]: (gkbd-keyboard-display:1109): Gtk-CRITICAL **: gtk_widget_set_allocation: assertion '_gtk_widget_get_visible (widget) || _gtk_widget_is_toplevel (widget)' failed
+oct 19 16:40:01 NR021AA gnome-control-center.desktop[1048]: Gtk-Message: GtkDialog mapped without a transient parent. This is discouraged.
+oct 19 16:40:25 NR021AA gnome-control-center.desktop[1048]: (gkbd-keyboard-display:1116): Gtk-CRITICAL **: gtk_widget_set_allocation: assertion '_gtk_widget_get_visible (widget) || _gtk_widget_is_toplevel (widget)' failed
+oct 19 16:40:25 NR021AA gnome-control-center.desktop[1048]: Gtk-Message: GtkDialog mapped without a transient parent. This is discouraged.
+oct 19 16:40:26 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-localed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+oct 19 16:41:32 NR021AA ckb.desktop[1147]: QObject::startTimer: Timers cannot have negative intervals
+oct 19 16:41:32 NR021AA ckb.desktop[1147]: (ckb:1147): GLib-GObject-WARNING **: g_object_get_valist: object class 'GtkSettings' has no property named 'gtk-application-prefer-dark-theme'
+oct 19 16:41:32 NR021AA ckb.desktop[1147]: (ckb:1147): GLib-GObject-WARNING **: g_object_get_valist: object class 'GtkSettings' has no property named 'gtk-long-press-time'
+oct 19 16:41:32 NR021AA ckb.desktop[1147]: The ckb GUI should not be run as root.
+oct 19 16:43:23 NR021AA dbus[706]: [system] Activating via systemd: service name='org.freedesktop.hostname1' unit='dbus-org.freedesktop.hostname1.service'
+oct 19 16:43:23 NR021AA systemd[1]: Starting Hostname Service...
+-- Subject: Unit systemd-hostnamed.service has begun start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-hostnamed.service has begun starting up.
+oct 19 16:43:23 NR021AA dbus[706]: [system] Successfully activated service 'org.freedesktop.hostname1'
+oct 19 16:43:23 NR021AA systemd[1]: Started Hostname Service.
+-- Subject: Unit systemd-hostnamed.service has finished start-up
+-- Defined-By: systemd
+-- Support: http://lists.freedesktop.org/mailman/listinfo/systemd-devel
+-- 
+-- Unit systemd-hostnamed.service has finished starting up.
+-- 
+-- The start-up result is done.
+oct 19 16:43:23 NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-hostnamed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+oct 19 16:43:53 NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-hostnamed comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+oct 19 16:52:04 NR021AA org.gnome.gedit[2777]: (gedit:31655): Gtk-WARNING **: Allocating size to GtkHeaderBar 0xc1b066e3f0 without calling gtk_widget_get_preferred_width/height(). How does the code know the size to allocate?
+oct 19 16:52:04 NR021AA org.gnome.gedit[2777]: (gedit:31655): Gtk-WARNING **: Allocating size to GtkOverlay 0xc1b06f2170 without calling gtk_widget_get_preferred_width/height(). How does the code know the size to allocate?
+oct 19 16:52:04 NR021AA org.gnome.gedit[2777]: (gedit:31655): Gtk-WARNING **: Allocating size to GtkBox 0xc1b042cf90 without calling gtk_widget_get_preferred_width/height(). How does the code know the size to allocate?

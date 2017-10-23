@@ -1,0 +1,129 @@
+## El sistema no arranca normalmente 
+
+Antecedentes:
+
+111117
+
+- Se borran 4 LV's, correspondientes a un sistema operativo instalado en
+'/dev/sda3'. Las operaciones se realizan desde un nuevo SO, alojado en
+otra partición independiente, por lo que aunque el sistema LVM reconoce
+los LV's tales particiones no estan montadas como parte del sistema.
+
+- Comprobación hecha sobre el fichero /etc/fstab(normal - estado OK).
+
+- Se desinstalan herramientas de oficina innecesarias, que ocupan una
+cantidad valiosa de espacio. Sospecho que es aquí donde aparece el 
+problema. La desinstalación se lleva a cabo mediante las herramientas
+de sistemas, propias de la distribución Linux instalada.
+
+
+
+
+-------------------------------------------
+
+## Orden en que se sucede el problema:
+
+- Arrancamos el PC
+
+- La carga de la Bios y posterior menu de selección de Nucleo, dado por el
+gestor de arranque instalado(grub2), se sucede con normalidad.
+
+- La primera lína de la cónsola en serie del sistema, advierte que
+los módulos del kernel no se están cargando[no recuerdo exactamente la
+advertencia].
+
+- El sistema es capaz de encontrar las particiones /root y /swap,
+pero es incapaz de montar ninguna de ellas. En su lugar se monta una
+partición /root de emergencia.
+
+- Aparece la imagen de fondo de escritorio original(fedora) con la bolita
+en blanco cargando. Sin embargo, el proceso de carga del sistema se relentiza
+notablemente y termina por parar completamente. No se inicia el gestor de
+acceso de usuario.
+
+- Intuyo que esta pantalla, es la simple foto que se carga a través del 
+frameBuffer, igual que el fondo para el gestor de arranque. Aún no disponemos
+de motor gráfico(x11).
+
+- cambiamos al terminal y, después de varios minutos, aparece la consola de
+emergencia de 'dracut'.
+
+- Procedo a comprobar 'fstab', y no está, en su lugar, aparece 'fstab.empty', 
+vacio.
+
+- Manualmente monto la partición root, y reconstruyo 'fstab' con las dos
+particiones reconocidad root/swap. 
+
+- Se edita el grub.cfg para depurar la salida, en cuanto a la carga del sistema
+Para ello, se borran los argumentos rhgb y quiet, que carga la imagen del kernel
+durante el arranque.
+
+- Añado otros argumentos a la línea. 'rd.shell' y 'rd.debug' 'log_buf_len=1M'.
+
+- Reinicio el sistema, con los argumentos añadidos a la línea de comando del 
+kernel, el sistema muestra la información de depuración, pero resulta comple-
+tamente ilegible nada. El procesador está trabajando intensamente.
+
+- pulso el botón pausa desde el teclado, y aparece el fondo de inicio de 
+escritorio, paralizado completamente. Vulvo a la cónsola.
+
+- Las salida de depuración acelera notablemente la salida y el procesador,
+aumenta la carga de trabajo, haciendose visible esto por el sonido y la 
+velocidad de salida en la depuración. Apago el equipo, rápidamente. 
+
+- He tenido que forzar su apagado, puesto que la señal de interrupción y desconexion
+desde la cónsola, era completamente inutil. Forzado mecánico.
+
+- Reinicio el sistema, y selecciono otra opción desde el gestor de arranque. 
+Esta vez con Xen, y el mismo núcleo. Intuyo que es la carga de depuración lo que
+estaba sobrecargando el procesador. La entrada seleccionada en el Grub, es
+la que originalmente fue configurada con la instalación del sistema.
+
+- La consola vuelve arrojar el mismo error en la carga de módulos del sistema,
+primera línea. Todo parece que funciona igual de mal. 
+Aparece nuevamente la shell de emergencia 'dracut' y el mensaje que sugiere
+leer el log con 'journalctl'. 
+
+- Esto quiere decir que no hay nada montado, a parte del sistema de emergencia,
+tal y como describí al principio de este log.
+
+- se redirecciona la salida no interactiva de la consola, hacia 'dev/kmsg'.
+
+- Tras unos segundos, sin mensajes en la cónsola, aparecen un par de nuevos
+mensajes que no me da tiempo a leer, y el sistema empieza a cargar el
+gestor de identificación de usuario. Se entra en el sistema con aparente
+normalidad.
+
+- adjunto 121117-journalctl.out. Historico.
+
+- Añado del log de sistema '121117-rdsosreport.txt', Este report es generado después
+de haber entrado en el sistema normalmente. El nucleo es el correcto, y la version de Xen, tambien. 
+
+
+dracut: Can't write to /boot/45666c53d6984f098f98d2aec8fbddbf/4.11.12-100.fc24.x86_64: Directory /boot/45666c53d6984f098f98d2aec8fbddbf/4.11.12-100.fc24.x86_64 does not exist or is not accessible.
+
+parece que dracut ha creado el direcorio: 
+ /boot/45666c53d6984f098f98d2aec8fbddbf/empty_dir
+ 
+Como el nombre indica, se trata de un directorio vacio.
+
+-La carga del procesador parece normal. Comprobado con top. Aunque experimenta
+picos inusualmente altos, cuando cambio entre ventanas, en torno al 37-50%.
+Estoy utilizando, las aplicaciónes de gnome(gdit, y la terminal).
+
+- Vale, olvidaba mencionar que obviamente, tambien le he echado un ojo a los 
+módulos cargados, por que aunque el kernel no estaba cargando sus própios
+módulos, por lo que he podido ver, la GPU si ha cargado varios.
+
+- Esto podría significar algo más que el microcódigo, que incluye el 
+fabricante de hardware de sistema(AMD).
+
+
+
+
+
+
+
+
+
+- Es posible que esté dando problemas el disco duro?

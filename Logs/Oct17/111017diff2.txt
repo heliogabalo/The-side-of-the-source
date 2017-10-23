@@ -1,0 +1,169 @@
+*** /home/heliogabalo/Github/The-side-of-the-source/Logs/Oct17/101017.txt	2017-10-10 17:39:52.384306313 +0200
+--- /home/heliogabalo/Github/The-side-of-the-source/Logs/Oct17/111017dmesg.txt	2017-10-11 09:10:15.624133399 +0200
+***************
+*** 917,919 ****
+--- 917,1080 ----
+  [oct10 14:20] r8169 0000:05:00.0 enp5s0: link up
+  [  +8,194637] r8169 0000:05:00.0 enp5s0: link down
+  [oct10 14:26] r8169 0000:05:00.0 enp5s0: link up
++ [oct10 18:03] PM: Syncing filesystems ... done.
++ [  +1,299814] PM: Preparing system for sleep (mem)
++ [  +0,000210] Freezing user space processes ... (elapsed 0.001 seconds) done.
++ [  +0,001801] Freezing remaining freezable tasks ... (elapsed 0.001 seconds) done.
++ [  +0,001214] PM: Suspending system (mem)
++ [  +0,000047] Suspending console(s) (use no_console_suspend to debug)
++ [  +0,000332] sd 0:0:0:0: [sda] Synchronizing SCSI cache
++ [  +0,135116] sd 0:0:0:0: [sda] Stopping disk
++ [  +0,701484] PM: suspend of devices complete after 838.651 msecs
++ [  +0,000002] PM: suspend devices took 0.839 seconds
++ [  +0,000460] PM: late suspend of devices complete after 0.459 msecs
++ [  +0,000212] pci 0000:00:1e.0: System wakeup enabled by ACPI
++ [  +0,000120] ehci-pci 0000:00:1d.7: System wakeup enabled by ACPI
++ [  +0,000049] uhci_hcd 0000:00:1d.3: System wakeup enabled by ACPI
++ [  +0,000029] uhci_hcd 0000:00:1d.1: System wakeup enabled by ACPI
++ [  +0,000038] uhci_hcd 0000:00:1d.2: System wakeup enabled by ACPI
++ [  +0,000000] uhci_hcd 0000:00:1d.0: System wakeup enabled by ACPI
++ [  +0,013743] PM: noirq suspend of devices complete after 14.225 msecs
++ [  +0,000000] ACPI: Preparing to enter system sleep state S3
++ [  +0,000000] PM: Saving platform NVS memory
++ [  +0,002909] Disabling non-boot CPUs ...
++ [  +0,003138] smpboot: CPU 1 is now offline
++ [oct10 18:04] ACPI: Low-level resume complete
++ [  +0,000045] PM: Restoring platform NVS memory
++ [  +0,000880] Suspended for 4963.100 seconds
++ [  +0,000045] xen_acpi_processor: Uploading Xen processor PM info
++ [  +0,000016] Enabling non-boot CPUs ...
++ [  +0,000015] installing Xen timer for CPU 1
++ [  +0,000395]  cache: parent cpu1 should not be sleeping
++ [  +0,000160] CPU1 is up
++ [  +0,000168] ACPI: Waking up from system sleep state S3
++ [  +0,000521] uhci_hcd 0000:00:1d.0: System wakeup disabled by ACPI
++ [  +0,000049] uhci_hcd 0000:00:1d.1: System wakeup disabled by ACPI
++ [  +0,000000] uhci_hcd 0000:00:1d.2: System wakeup disabled by ACPI
++ [  +0,000040] uhci_hcd 0000:00:1d.3: System wakeup disabled by ACPI
++ [  +0,011593] ehci-pci 0000:00:1d.7: System wakeup disabled by ACPI
++ [  +0,000263] PM: noirq resume of devices complete after 12.137 msecs
++ [  +0,000159] PM: early resume of devices complete after 0.138 msecs
++ [  +0,000140] usb usb3: root hub lost power or was reset
++ [  +0,000000] usb usb2: root hub lost power or was reset
++ [  +0,000057] usb usb4: root hub lost power or was reset
++ [  +0,000000] usb usb5: root hub lost power or was reset
++ [  +0,000205] pci 0000:00:1e.0: System wakeup disabled by ACPI
++ [  +0,000338] rtc_cmos 00:01: System wakeup disabled by ACPI
++ [  +0,011459] [drm] PCIE GART of 1024M enabled (table at 0x0000000000162000).
++ [  +0,000091] radeon 0000:01:00.0: WB enabled
++ [  +0,000002] radeon 0000:01:00.0: fence driver on ring 0 use gpu addr 0x0000000080000c00 and cpu addr 0xffff8801199a8c00
++ [  +0,000001] radeon 0000:01:00.0: fence driver on ring 3 use gpu addr 0x0000000080000c0c and cpu addr 0xffff8801199a8c0c
++ [  +0,000754] radeon 0000:01:00.0: fence driver on ring 5 use gpu addr 0x0000000000072118 and cpu addr 0xffffc90001832118
++ [  +0,013775] sd 0:0:0:0: [sda] Starting disk
++ [  +0,002516] [drm] ring test on 0 succeeded in 2 usecs
++ [  +0,000009] [drm] ring test on 3 succeeded in 6 usecs
++ [  +0,000207] r8169 0000:05:00.0 enp5s0: link down
++ [  +0,176900] [drm] ring test on 5 succeeded in 2 usecs
++ [  +0,000008] [drm] UVD initialized successfully.
++ [  +0,000081] [drm] ib test on ring 0 succeeded in 0 usecs
++ [  +0,000075] [drm] ib test on ring 3 succeeded in 0 usecs
++ [  +0,289654] usb 4-1: reset low-speed USB device number 2 using uhci_hcd
++ [  +0,007976] usb 3-2: reset low-speed USB device number 2 using uhci_hcd
++ [  +0,355252] [drm] ib test on ring 5 succeeded
++ [  +0,006211] PM: resume of devices complete after 867.738 msecs
++ [  +0,000210] PM: resume devices took 0.868 seconds
++ [  +0,000025] PM: Finishing wakeup.
++ [  +0,000000] Restarting tasks ... done.
++ [  +4,160717] ata1: link is slow to respond, please be patient (ready=0)
++ [  +0,385256] ata1.01: ACPI cmd ef/03:42:00:00:00:b0 (SET FEATURES) filtered out
++ [  +0,000002] ata1.01: ACPI cmd ef/03:42:00:00:00:b0 (SET FEATURES) filtered out
++ [  +0,000001] ata1.01: ACPI cmd ef/03:0c:00:00:00:b0 (SET FEATURES) filtered out
++ [  +0,000002] ata1.01: ACPI cmd f5/00:00:00:00:00:b0 (SECURITY FREEZE LOCK) filtered out
++ [  +0,018947] ata1.00: ACPI cmd ef/03:45:00:00:00:a0 (SET FEATURES) filtered out
++ [  +0,000002] ata1.00: ACPI cmd ef/03:45:00:00:00:a0 (SET FEATURES) filtered out
++ [  +0,000001] ata1.00: ACPI cmd ef/03:0c:00:00:00:a0 (SET FEATURES) filtered out
++ [  +0,000002] ata1.00: ACPI cmd f5/00:00:00:00:00:a0 (SECURITY FREEZE LOCK) filtered out
++ [  +0,005316] ata1.00: configured for UDMA/133
++ [  +0,037608] ata1.01: configured for UDMA/33
++ [  +0,173380] IPv6: ADDRCONF(NETDEV_UP): enp5s0: link is not ready
++ [  +0,003643] r8169 0000:05:00.0 enp5s0: link down
++ [  +0,000040] IPv6: ADDRCONF(NETDEV_UP): enp5s0: link is not ready
++ [oct10 18:06] nautilus[4157]: segfault at 0 ip 00007fb42000ee00 sp 00007ffd26abd148 error 4 in libgio-2.0.so.0.4800.1[7fb41ff5a000+17d000]
++ [oct10 18:08] EXT4-fs (dm-3): mounted filesystem with ordered data mode. Opts: (null)
++ [oct10 19:01] PM: Syncing filesystems ... done.
++ [  +1,894646] PM: Preparing system for sleep (mem)
++ [  +0,000169] Freezing user space processes ... (elapsed 0.001 seconds) done.
++ [  +0,001746] Freezing remaining freezable tasks ... (elapsed 0.001 seconds) done.
++ [  +0,001137] PM: Suspending system (mem)
++ [  +0,000045] Suspending console(s) (use no_console_suspend to debug)
++ [  +0,023758] sd 0:0:0:0: [sda] Synchronizing SCSI cache
++ [  +0,238994] sd 0:0:0:0: [sda] Stopping disk
++ [  +0,709893] PM: suspend of devices complete after 974.668 msecs
++ [  +0,000003] PM: suspend devices took 0.975 seconds
++ [  +0,000420] PM: late suspend of devices complete after 0.419 msecs
++ [  +0,000300] uhci_hcd 0000:00:1d.3: System wakeup enabled by ACPI
++ [  +0,000017] uhci_hcd 0000:00:1d.2: System wakeup enabled by ACPI
++ [  +0,000048] uhci_hcd 0000:00:1d.1: System wakeup enabled by ACPI
++ [  +0,000003] uhci_hcd 0000:00:1d.0: System wakeup enabled by ACPI
++ [  +0,000126] ehci-pci 0000:00:1d.7: System wakeup enabled by ACPI
++ [  +0,000050] pci 0000:00:1e.0: System wakeup enabled by ACPI
++ [  +0,012002] PM: noirq suspend of devices complete after 12.574 msecs
++ [  +0,000814] ACPI: Preparing to enter system sleep state S3
++ [  +0,000371] PM: Saving platform NVS memory
++ [  +0,003449] Disabling non-boot CPUs ...
++ [  +0,001438] smpboot: CPU 1 is now offline
++ [  +0,327391] ACPI: Low-level resume complete
++ [  +0,000045] PM: Restoring platform NVS memory
++ [  +0,000878] Suspended for 38806.638 seconds
++ [  +0,000047] xen_acpi_processor: Uploading Xen processor PM info
++ [  +0,000017] Enabling non-boot CPUs ...
++ [  +0,000014] installing Xen timer for CPU 1
++ [  +0,000848]  cache: parent cpu1 should not be sleeping
++ [  +0,000157] CPU1 is up
++ [  +0,000008] ACPI: Waking up from system sleep state S3
++ [  +0,000663] uhci_hcd 0000:00:1d.0: System wakeup disabled by ACPI
++ [  +0,000000] uhci_hcd 0000:00:1d.1: System wakeup disabled by ACPI
++ [  +0,000000] uhci_hcd 0000:00:1d.2: System wakeup disabled by ACPI
++ [  +0,000000] uhci_hcd 0000:00:1d.3: System wakeup disabled by ACPI
++ [  +0,012713] ehci-pci 0000:00:1d.7: System wakeup disabled by ACPI
++ [  +0,000194] PM: noirq resume of devices complete after 13.112 msecs
++ [  +0,000266] PM: early resume of devices complete after 0.245 msecs
++ [  +0,000138] usb usb3: root hub lost power or was reset
++ [  +0,000000] usb usb2: root hub lost power or was reset
++ [  +0,000058] usb usb4: root hub lost power or was reset
++ [  +0,000000] usb usb5: root hub lost power or was reset
++ [  +0,000760] pci 0000:00:1e.0: System wakeup disabled by ACPI
++ [  +0,002355] rtc_cmos 00:01: System wakeup disabled by ACPI
++ [  +0,010110] [drm] PCIE GART of 1024M enabled (table at 0x0000000000162000).
++ [  +0,000091] radeon 0000:01:00.0: WB enabled
++ [  +0,000002] radeon 0000:01:00.0: fence driver on ring 0 use gpu addr 0x0000000080000c00 and cpu addr 0xffff8801199a8c00
++ [  +0,000001] radeon 0000:01:00.0: fence driver on ring 3 use gpu addr 0x0000000080000c0c and cpu addr 0xffff8801199a8c0c
++ [  +0,000747] radeon 0000:01:00.0: fence driver on ring 5 use gpu addr 0x0000000000072118 and cpu addr 0xffffc90001832118
++ [  +0,013866] sd 0:0:0:0: [sda] Starting disk
++ [  +0,002990] [drm] ring test on 0 succeeded in 2 usecs
++ [  +0,000000] [drm] ring test on 3 succeeded in 6 usecs
++ [  +0,000219] r8169 0000:05:00.0 enp5s0: link down
++ [  +0,176917] [drm] ring test on 5 succeeded in 2 usecs
++ [  +0,000008] [drm] UVD initialized successfully.
++ [  +0,000078] [drm] ib test on ring 0 succeeded in 0 usecs
++ [  +0,000076] [drm] ib test on ring 3 succeeded in 0 usecs
++ [  +0,262567] usb 4-1: reset low-speed USB device number 2 using uhci_hcd
++ [  +0,023884] usb 3-2: reset low-speed USB device number 2 using uhci_hcd
++ [  +0,411508] [drm] ib test on ring 5 succeeded
++ [  +0,005801] PM: resume of devices complete after 914.313 msecs
++ [  +0,000000] PM: resume devices took 0.914 seconds
++ [  +0,000238] PM: Finishing wakeup.
++ [  +0,000000] Restarting tasks ... done.
++ [  +0,137010] IPv6: ADDRCONF(NETDEV_UP): enp5s0: link is not ready
++ [  +0,003574] r8169 0000:05:00.0 enp5s0: link down
++ [  +0,000032] IPv6: ADDRCONF(NETDEV_UP): enp5s0: link is not ready
++ [  +3,983197] ata1: link is slow to respond, please be patient (ready=0)
++ [  +0,382261] ata1.01: ACPI cmd ef/03:42:00:00:00:b0 (SET FEATURES) filtered out
++ [  +0,000001] ata1.01: ACPI cmd ef/03:42:00:00:00:b0 (SET FEATURES) filtered out
++ [  +0,000002] ata1.01: ACPI cmd ef/03:0c:00:00:00:b0 (SET FEATURES) filtered out
++ [  +0,000001] ata1.01: ACPI cmd f5/00:00:00:00:00:b0 (SECURITY FREEZE LOCK) filtered out
++ [  +0,018930] ata1.00: ACPI cmd ef/03:45:00:00:00:a0 (SET FEATURES) filtered out
++ [  +0,000000] ata1.00: ACPI cmd ef/03:45:00:00:00:a0 (SET FEATURES) filtered out
++ [  +0,000000] ata1.00: ACPI cmd ef/03:0c:00:00:00:a0 (SET FEATURES) filtered out
++ [  +0,000000] ata1.00: ACPI cmd f5/00:00:00:00:00:a0 (SECURITY FREEZE LOCK) filtered out
++ [  +0,005068] ata1.00: configured for UDMA/133
++ [  +0,037832] ata1.01: configured for UDMA/33
++ [oct10 19:07] radeon 0000:01:00.0: evergreen_surface_check_2d:282 texture pitch 1472 invalid must be aligned with 128
++ [  +0,000000] radeon 0000:01:00.0: evergreen_cs_track_validate_texture:831 texture invalid 0x167c2dc1 0x40000383 0x060a0000 0x00000000 0x80000000 0x800204da
++ [  +0,000000] [drm:radeon_cs_ioctl [radeon]] *ERROR* Invalid command stream !

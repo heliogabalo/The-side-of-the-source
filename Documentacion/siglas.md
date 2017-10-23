@@ -38,7 +38,7 @@
 #### FMA -- Fused Multiply-Add. Mejora para el cálculo de operaciones con punto flotante.
 #### OC -- OverClocking
 #### PASID -- Process Adress Space Identifiers, Identificadores del espacio de direccionamiento de proceso.
-#### IOMMU --
+#### IOMMU -- I/O Memory Management Unit
 ---
 
 ## Referencias Memorias
@@ -108,19 +108,37 @@
 #### ACPICA --ACPI Component Architecture
 #### SLIC -- System Licensed Internal Code
   ---------------
+#### BGRT -- Tabla de recursos del arranque de gráficos.
+
+#### CSRT -- Tabla de recursos del núcleo del sistema.
+
+#### DBG2 -- Tabla 2 del puerto de depuración.
+
 #### DSDT --- Sistema de Descripción de Tabla Diferenciado
+#### DMAR -- DMA Remapping table
+#### DRHD
+
+#### FACP
+#### FACS
 #### FADT --- Tabla de Descripcion fija ACPI
-#### SSDT ---  System Service Desription Table-  Tabla de  descripción de servicio de sistema
+#### FPDT -- Tabla para la mejora de datos del firmware.
+
+#### GTDT
+
+#### HPET -- Hight Precision Event Timer
+
 #### MTRR
+#### MADT -- Tabla controlador múltiple de interrupción.
+#### MCFG
+
+#### RMRR
 #### RSDP
 #### RSDT
-#### MADT -- Tabla controlador múltiple de interrupción.
-#### GTDT
-#### CSRT -- Tabla de recursos del núcleo del sistema.
-#### DBG2 -- Tabla 2 del puerto de depuración.
-#### BGRT -- Tabla de recursos del arranque de gráficos.
-#### FPDT -- Tabla para la mejora de datos del firmware.
-#### DSDT
+
+#### SSDT ---  System Service Desription Table- Tabla de descripción de servicio de sistema
+
+#### XSDT
+
 #### WSMT
   ---------------
 #### DSL  --- .dsl -- extension, disassembled ASL

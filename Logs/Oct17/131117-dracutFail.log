@@ -1,0 +1,40 @@
+Siguiendo el log de ayer, he podido recuperar la salida de error que faltaba.
+
+
+
+[  189.604924] NR021AA dracut-initqueue[328]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  190.125169] NR021AA dracut-initqueue[328]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  190.645519] NR021AA dracut-initqueue[328]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  190.645676] NR021AA dracut-initqueue[328]: Warning: Could not boot.
+[  190.682140] NR021AA systemd[1]: Received SIGRTMIN+20 from PID 330 (plymouthd).
+[  190.717604] NR021AA dracut-initqueue[328]: Warning: /dev/fedora/swap does not exist
+[  190.727268] NR021AA systemd[1]: Starting Dracut Emergency Shell...
+[  190.746769] NR021AA systemd[1]: Received SIGRTMIN+21 from PID 330 (plymouthd).
+[  190.747614] NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=plymouth-start comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[  190.752662] NR021AA kernel: kauditd_printk_skb: 2 callbacks suppressed
+[  190.752664] NR021AA kernel: audit: type=1131 audit(1507885347.774:13): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=plymouth-start comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+
+
+Resumen:
+[  190.645676] NR021AA dracut-initqueue[328]: Warning: Could not boot.
+- El sistema no puede arrancar
+- a continuación se reciben varias señales desde el proceso (plymouth).
+- No se esta detectando la partición de intercambio, esto es relativamente malo
+en cuanto a cargar el sistema. En principio explicaría por qué no carga el 
+sistema.
+- Se activa el sistema de cónsola de emergencia(dracut).
+- Parece que se para el servicio playmouth-start desde systemd(demonio de sistema?)
+- y se suprimen dos llamadas a la activación de tal servicio.
+
+Comprobación:
+
+/etc/fstab
+
+una vez entrado en el sistema, este archivo está formado correctamente,
+lo que lleva a pensar: por qué no se lee cuando inicia el sistema?
+
+Conclusión:
+No se está montando la partición de intercambio, lo que podría ser la causa de
+que no arrancase el sistema.
+
+

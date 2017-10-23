@@ -1,0 +1,1369 @@
++ cat /lib/dracut/dracut-044-18.git20160108.fc24
+dracut-044-18.git20160108.fc24
++ cat /proc/cmdline
+placeholder root=/dev/mapper/f24-root ro rd.lvm.lv=f24/root rd.lvm.lv=f24/swap rd.lvm.lv=fedora/swap rhgb quiet
++ '[' -f /etc/cmdline ']'
++ for _i in '/etc/cmdline.d/*.conf'
++ '[' -f '/etc/cmdline.d/*.conf' ']'
++ break
++ cat /proc/self/mountinfo
+0 0 0:1 / / rw shared:1 - rootfs rootfs rw
+17 0 0:17 / /sys rw,nosuid,nodev,noexec,relatime shared:2 - sysfs sysfs rw
+18 0 0:4 / /proc rw,nosuid,nodev,noexec,relatime shared:7 - proc proc rw
+19 0 0:6 / /dev rw,nosuid shared:8 - devtmpfs devtmpfs rw,size=1908588k,nr_inodes=477147,mode=755
+20 17 0:7 / /sys/kernel/security rw,nosuid,nodev,noexec,relatime shared:3 - securityfs securityfs rw
+21 19 0:18 / /dev/shm rw,nosuid,nodev shared:9 - tmpfs tmpfs rw
+22 19 0:19 / /dev/pts rw,nosuid,noexec,relatime shared:10 - devpts devpts rw,gid=5,mode=620,ptmxmode=000
+23 0 0:20 / /run rw,nosuid,nodev shared:11 - tmpfs tmpfs rw,mode=755
+24 17 0:21 / /sys/fs/cgroup ro,nosuid,nodev,noexec shared:4 - tmpfs tmpfs ro,mode=755
+25 24 0:22 / /sys/fs/cgroup/systemd rw,nosuid,nodev,noexec,relatime shared:5 - cgroup cgroup rw,xattr,release_agent=/usr/lib/systemd/systemd-cgroups-agent,name=systemd
+26 17 0:23 / /sys/fs/pstore rw,nosuid,nodev,noexec,relatime shared:6 - pstore pstore rw
+27 24 0:24 / /sys/fs/cgroup/hugetlb rw,nosuid,nodev,noexec,relatime shared:12 - cgroup cgroup rw,hugetlb
+28 24 0:25 / /sys/fs/cgroup/cpu,cpuacct rw,nosuid,nodev,noexec,relatime shared:13 - cgroup cgroup rw,cpu,cpuacct
+29 24 0:26 / /sys/fs/cgroup/net_cls,net_prio rw,nosuid,nodev,noexec,relatime shared:14 - cgroup cgroup rw,net_cls,net_prio
+30 24 0:27 / /sys/fs/cgroup/cpuset rw,nosuid,nodev,noexec,relatime shared:15 - cgroup cgroup rw,cpuset
+31 24 0:28 / /sys/fs/cgroup/perf_event rw,nosuid,nodev,noexec,relatime shared:16 - cgroup cgroup rw,perf_event
+32 24 0:29 / /sys/fs/cgroup/memory rw,nosuid,nodev,noexec,relatime shared:17 - cgroup cgroup rw,memory
+33 24 0:30 / /sys/fs/cgroup/freezer rw,nosuid,nodev,noexec,relatime shared:18 - cgroup cgroup rw,freezer
+34 24 0:31 / /sys/fs/cgroup/devices rw,nosuid,nodev,noexec,relatime shared:19 - cgroup cgroup rw,devices
+35 24 0:32 / /sys/fs/cgroup/pids rw,nosuid,nodev,noexec,relatime shared:20 - cgroup cgroup rw,pids
+36 24 0:33 / /sys/fs/cgroup/blkio rw,nosuid,nodev,noexec,relatime shared:21 - cgroup cgroup rw,blkio
+58 17 0:34 / /sys/kernel/config rw,relatime shared:22 - configfs configfs rw
++ cat /proc/mounts
+rootfs / rootfs rw 0 0
+sysfs /sys sysfs rw,nosuid,nodev,noexec,relatime 0 0
+proc /proc proc rw,nosuid,nodev,noexec,relatime 0 0
+devtmpfs /dev devtmpfs rw,nosuid,size=1908588k,nr_inodes=477147,mode=755 0 0
+securityfs /sys/kernel/security securityfs rw,nosuid,nodev,noexec,relatime 0 0
+tmpfs /dev/shm tmpfs rw,nosuid,nodev 0 0
+devpts /dev/pts devpts rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000 0 0
+tmpfs /run tmpfs rw,nosuid,nodev,mode=755 0 0
+tmpfs /sys/fs/cgroup tmpfs ro,nosuid,nodev,noexec,mode=755 0 0
+cgroup /sys/fs/cgroup/systemd cgroup rw,nosuid,nodev,noexec,relatime,xattr,release_agent=/usr/lib/systemd/systemd-cgroups-agent,name=systemd 0 0
+pstore /sys/fs/pstore pstore rw,nosuid,nodev,noexec,relatime 0 0
+cgroup /sys/fs/cgroup/hugetlb cgroup rw,nosuid,nodev,noexec,relatime,hugetlb 0 0
+cgroup /sys/fs/cgroup/cpu,cpuacct cgroup rw,nosuid,nodev,noexec,relatime,cpu,cpuacct 0 0
+cgroup /sys/fs/cgroup/net_cls,net_prio cgroup rw,nosuid,nodev,noexec,relatime,net_cls,net_prio 0 0
+cgroup /sys/fs/cgroup/cpuset cgroup rw,nosuid,nodev,noexec,relatime,cpuset 0 0
+cgroup /sys/fs/cgroup/perf_event cgroup rw,nosuid,nodev,noexec,relatime,perf_event 0 0
+cgroup /sys/fs/cgroup/memory cgroup rw,nosuid,nodev,noexec,relatime,memory 0 0
+cgroup /sys/fs/cgroup/freezer cgroup rw,nosuid,nodev,noexec,relatime,freezer 0 0
+cgroup /sys/fs/cgroup/devices cgroup rw,nosuid,nodev,noexec,relatime,devices 0 0
+cgroup /sys/fs/cgroup/pids cgroup rw,nosuid,nodev,noexec,relatime,pids 0 0
+cgroup /sys/fs/cgroup/blkio cgroup rw,nosuid,nodev,noexec,relatime,blkio 0 0
+configfs /sys/kernel/config configfs rw,relatime 0 0
++ blkid
+/dev/sda1: UUID="8C6A9FA96A9F8F18" TYPE="ntfs" PARTUUID="89ce13ae-01"
+/dev/sda2: LABEL="New Volume" UUID="7E1CE7971CE7492B" TYPE="ntfs" PARTUUID="89ce13ae-02"
+/dev/sda3: UUID="G1HYHO-5bq3-A4ls-eGvt-uePV-ekdC-ViKMYg" TYPE="LVM2_member" PARTUUID="89ce13ae-03"
+/dev/sda5: UUID="DXrifx-ro63-Q9j8-MxMb-UPZX-Kb7z-1puSQK" TYPE="LVM2_member" PARTUUID="89ce13ae-05"
+/dev/mapper/f24-root: LABEL="F24" UUID="35f152a3-fb33-4e3b-b591-5c3250fc72a1" TYPE="ext4"
+/dev/mapper/f24-swap: LABEL="F24" UUID="909e1e10-730d-46f6-abd2-093cc87d663d" TYPE="swap"
+/dev/sdb1: LABEL="Ntfs-copias" UUID="B6A2A8E2A2A8A7F7" TYPE="ntfs" PARTUUID="2d0e1507-01"
+/dev/sdb2: UUID="C9CC-579A" TYPE="vfat" PARTUUID="2d0e1507-02"
+/dev/sdb3: UUID="lTqEPo-dbYM-Pzna-xBLa-01eH-8JHP-uUysYd" TYPE="LVM2_member" PARTUUID="2d0e1507-03"
+/dev/sdb4: UUID="fwCuL5-5Y3G-RvB1-qnY1-YOn7-uD27-jSfvG6" TYPE="LVM2_member" PARTUUID="2d0e1507-04"
++ blkid -o udev
+ID_FS_UUID=8C6A9FA96A9F8F18
+ID_FS_UUID_ENC=8C6A9FA96A9F8F18
+ID_FS_TYPE=ntfs
+ID_FS_PARTUUID=89ce13ae-01
+
+ID_FS_LABEL=New_Volume
+ID_FS_LABEL_ENC=New\x20Volume
+ID_FS_UUID=7E1CE7971CE7492B
+ID_FS_UUID_ENC=7E1CE7971CE7492B
+ID_FS_TYPE=ntfs
+ID_FS_PARTUUID=89ce13ae-02
+
+ID_FS_UUID=G1HYHO-5bq3-A4ls-eGvt-uePV-ekdC-ViKMYg
+ID_FS_UUID_ENC=G1HYHO-5bq3-A4ls-eGvt-uePV-ekdC-ViKMYg
+ID_FS_TYPE=LVM2_member
+ID_FS_PARTUUID=89ce13ae-03
+
+ID_FS_UUID=DXrifx-ro63-Q9j8-MxMb-UPZX-Kb7z-1puSQK
+ID_FS_UUID_ENC=DXrifx-ro63-Q9j8-MxMb-UPZX-Kb7z-1puSQK
+ID_FS_TYPE=LVM2_member
+ID_FS_PARTUUID=89ce13ae-05
+
+ID_FS_LABEL=F24
+ID_FS_LABEL_ENC=F24
+ID_FS_UUID=35f152a3-fb33-4e3b-b591-5c3250fc72a1
+ID_FS_UUID_ENC=35f152a3-fb33-4e3b-b591-5c3250fc72a1
+ID_FS_TYPE=ext4
+
+ID_FS_LABEL=F24
+ID_FS_LABEL_ENC=F24
+ID_FS_UUID=909e1e10-730d-46f6-abd2-093cc87d663d
+ID_FS_UUID_ENC=909e1e10-730d-46f6-abd2-093cc87d663d
+ID_FS_TYPE=swap
+
+ID_FS_LABEL=Ntfs-copias
+ID_FS_LABEL_ENC=Ntfs-copias
+ID_FS_UUID=B6A2A8E2A2A8A7F7
+ID_FS_UUID_ENC=B6A2A8E2A2A8A7F7
+ID_FS_TYPE=ntfs
+ID_FS_PARTUUID=2d0e1507-01
+
+ID_FS_UUID=C9CC-579A
+ID_FS_UUID_ENC=C9CC-579A
+ID_FS_TYPE=vfat
+ID_FS_PARTUUID=2d0e1507-02
+
+ID_FS_UUID=lTqEPo-dbYM-Pzna-xBLa-01eH-8JHP-uUysYd
+ID_FS_UUID_ENC=lTqEPo-dbYM-Pzna-xBLa-01eH-8JHP-uUysYd
+ID_FS_TYPE=LVM2_member
+ID_FS_PARTUUID=2d0e1507-03
+
+ID_FS_UUID=fwCuL5-5Y3G-RvB1-qnY1-YOn7-uD27-jSfvG6
+ID_FS_UUID_ENC=fwCuL5-5Y3G-RvB1-qnY1-YOn7-uD27-jSfvG6
+ID_FS_TYPE=LVM2_member
+ID_FS_PARTUUID=2d0e1507-04
++ ls -l /dev/disk/by-id /dev/disk/by-label /dev/disk/by-path /dev/disk/by-uuid
+/dev/disk/by-id:
+total 0
+lrwxrwxrwx 1 root 0  9 Oct 12 11:54 ata-ST1000DM003-1ER162_Z4Y5W1PT -> ../../sda
+lrwxrwxrwx 1 root 0 10 Oct 12 11:54 ata-ST1000DM003-1ER162_Z4Y5W1PT-part1 -> ../../sda1
+lrwxrwxrwx 1 root 0 10 Oct 12 11:54 ata-ST1000DM003-1ER162_Z4Y5W1PT-part2 -> ../../sda2
+lrwxrwxrwx 1 root 0 10 Oct 12 11:54 ata-ST1000DM003-1ER162_Z4Y5W1PT-part3 -> ../../sda3
+lrwxrwxrwx 1 root 0 10 Oct 12 11:54 ata-ST1000DM003-1ER162_Z4Y5W1PT-part4 -> ../../sda4
+lrwxrwxrwx 1 root 0 10 Oct 12 11:54 ata-ST1000DM003-1ER162_Z4Y5W1PT-part5 -> ../../sda5
+lrwxrwxrwx 1 root 0  9 Oct 12 11:54 ata-TSSTcorp_CDDVDW_TS-H653Z -> ../../sr0
+lrwxrwxrwx 1 root 0 10 Oct 12 11:54 dm-name-f24-root -> ../../dm-0
+lrwxrwxrwx 1 root 0 10 Oct 12 11:54 dm-name-f24-swap -> ../../dm-1
+lrwxrwxrwx 1 root 0 10 Oct 12 11:54 dm-uuid-LVM-aHLwVn0B6QX5S6RrM2koAJXavIGQe8wme2K5BXAT06RYl43vbPvN3c56y2mcdqXz -> ../../dm-1
+lrwxrwxrwx 1 root 0 10 Oct 12 11:54 dm-uuid-LVM-aHLwVn0B6QX5S6RrM2koAJXavIGQe8wmwqEB1Vbi9qlIzyUOFdU9e1BNdG11rq0A -> ../../dm-0
+lrwxrwxrwx 1 root 0 10 Oct 12 11:54 lvm-pv-uuid-DXrifx-ro63-Q9j8-MxMb-UPZX-Kb7z-1puSQK -> ../../sda5
+lrwxrwxrwx 1 root 0 10 Oct 12 11:54 lvm-pv-uuid-G1HYHO-5bq3-A4ls-eGvt-uePV-ekdC-ViKMYg -> ../../sda3
+lrwxrwxrwx 1 root 0 10 Oct 12 11:54 lvm-pv-uuid-fwCuL5-5Y3G-RvB1-qnY1-YOn7-uD27-jSfvG6 -> ../../sdb4
+lrwxrwxrwx 1 root 0 10 Oct 12 11:54 lvm-pv-uuid-lTqEPo-dbYM-Pzna-xBLa-01eH-8JHP-uUysYd -> ../../sdb3
+lrwxrwxrwx 1 root 0  9 Oct 12 11:54 usb-Generic-_Compact_Flash_20060413092100000-0:0 -> ../../sdc
+lrwxrwxrwx 1 root 0  9 Oct 12 11:54 usb-Generic-_MS_MS-Pro_20060413092100000-0:3 -> ../../sdf
+lrwxrwxrwx 1 root 0  9 Oct 12 11:54 usb-Generic-_SD_MMC_20060413092100000-0:2 -> ../../sde
+lrwxrwxrwx 1 root 0  9 Oct 12 11:54 usb-Generic-_SM_xD-Picture_20060413092100000-0:1 -> ../../sdd
+lrwxrwxrwx 1 root 0  9 Oct 12 11:54 usb-TOSHIBA_STOR.E_ALU_2S_201301063529-0:0 -> ../../sdb
+lrwxrwxrwx 1 root 0 10 Oct 12 11:54 usb-TOSHIBA_STOR.E_ALU_2S_201301063529-0:0-part1 -> ../../sdb1
+lrwxrwxrwx 1 root 0 10 Oct 12 11:54 usb-TOSHIBA_STOR.E_ALU_2S_201301063529-0:0-part2 -> ../../sdb2
+lrwxrwxrwx 1 root 0 10 Oct 12 11:54 usb-TOSHIBA_STOR.E_ALU_2S_201301063529-0:0-part3 -> ../../sdb3
+lrwxrwxrwx 1 root 0 10 Oct 12 11:54 usb-TOSHIBA_STOR.E_ALU_2S_201301063529-0:0-part4 -> ../../sdb4
+lrwxrwxrwx 1 root 0  9 Oct 12 11:54 wwn-0x5000c5007aca33ad -> ../../sda
+lrwxrwxrwx 1 root 0 10 Oct 12 11:54 wwn-0x5000c5007aca33ad-part1 -> ../../sda1
+lrwxrwxrwx 1 root 0 10 Oct 12 11:54 wwn-0x5000c5007aca33ad-part2 -> ../../sda2
+lrwxrwxrwx 1 root 0 10 Oct 12 11:54 wwn-0x5000c5007aca33ad-part3 -> ../../sda3
+lrwxrwxrwx 1 root 0 10 Oct 12 11:54 wwn-0x5000c5007aca33ad-part4 -> ../../sda4
+lrwxrwxrwx 1 root 0 10 Oct 12 11:54 wwn-0x5000c5007aca33ad-part5 -> ../../sda5
+
+/dev/disk/by-label:
+total 0
+lrwxrwxrwx 1 root 0 10 Oct 12 11:54 F24 -> ../../dm-1
+lrwxrwxrwx 1 root 0 10 Oct 12 11:54 New\x20Volume -> ../../sda2
+lrwxrwxrwx 1 root 0 10 Oct 12 11:54 Ntfs-copias -> ../../sdb1
+
+/dev/disk/by-path:
+total 0
+lrwxrwxrwx 1 root 0  9 Oct 12 11:54 pci-0000:00:1d.7-usb-0:1:1.0-scsi-0:0:0:0 -> ../../sdb
+lrwxrwxrwx 1 root 0 10 Oct 12 11:54 pci-0000:00:1d.7-usb-0:1:1.0-scsi-0:0:0:0-part1 -> ../../sdb1
+lrwxrwxrwx 1 root 0 10 Oct 12 11:54 pci-0000:00:1d.7-usb-0:1:1.0-scsi-0:0:0:0-part2 -> ../../sdb2
+lrwxrwxrwx 1 root 0 10 Oct 12 11:54 pci-0000:00:1d.7-usb-0:1:1.0-scsi-0:0:0:0-part3 -> ../../sdb3
+lrwxrwxrwx 1 root 0 10 Oct 12 11:54 pci-0000:00:1d.7-usb-0:1:1.0-scsi-0:0:0:0-part4 -> ../../sdb4
+lrwxrwxrwx 1 root 0  9 Oct 12 11:54 pci-0000:00:1d.7-usb-0:8:1.0-scsi-0:0:0:0 -> ../../sdc
+lrwxrwxrwx 1 root 0  9 Oct 12 11:54 pci-0000:00:1d.7-usb-0:8:1.0-scsi-0:0:0:1 -> ../../sdd
+lrwxrwxrwx 1 root 0  9 Oct 12 11:54 pci-0000:00:1d.7-usb-0:8:1.0-scsi-0:0:0:2 -> ../../sde
+lrwxrwxrwx 1 root 0  9 Oct 12 11:54 pci-0000:00:1d.7-usb-0:8:1.0-scsi-0:0:0:3 -> ../../sdf
+lrwxrwxrwx 1 root 0  9 Oct 12 11:54 pci-0000:00:1f.2-ata-1 -> ../../sda
+lrwxrwxrwx 1 root 0 10 Oct 12 11:54 pci-0000:00:1f.2-ata-1-part1 -> ../../sda1
+lrwxrwxrwx 1 root 0 10 Oct 12 11:54 pci-0000:00:1f.2-ata-1-part2 -> ../../sda2
+lrwxrwxrwx 1 root 0 10 Oct 12 11:54 pci-0000:00:1f.2-ata-1-part3 -> ../../sda3
+lrwxrwxrwx 1 root 0 10 Oct 12 11:54 pci-0000:00:1f.2-ata-1-part4 -> ../../sda4
+lrwxrwxrwx 1 root 0 10 Oct 12 11:54 pci-0000:00:1f.2-ata-1-part5 -> ../../sda5
+
+/dev/disk/by-uuid:
+total 0
+lrwxrwxrwx 1 root 0 10 Oct 12 11:54 35f152a3-fb33-4e3b-b591-5c3250fc72a1 -> ../../dm-0
+lrwxrwxrwx 1 root 0 10 Oct 12 11:54 7E1CE7971CE7492B -> ../../sda2
+lrwxrwxrwx 1 root 0 10 Oct 12 11:54 8C6A9FA96A9F8F18 -> ../../sda1
+lrwxrwxrwx 1 root 0 10 Oct 12 11:54 909e1e10-730d-46f6-abd2-093cc87d663d -> ../../dm-1
+lrwxrwxrwx 1 root 0 10 Oct 12 11:54 B6A2A8E2A2A8A7F7 -> ../../sdb1
+lrwxrwxrwx 1 root 0 10 Oct 12 11:54 C9CC-579A -> ../../sdb2
++ for _i in '/etc/conf.d/*.conf'
++ '[' -f /etc/conf.d/systemd.conf ']'
++ echo /etc/conf.d/systemd.conf
+/etc/conf.d/systemd.conf
++ cat /etc/conf.d/systemd.conf
+systemdutildir="/usr/lib/systemd"
+systemdsystemunitdir="/usr/lib/systemd/system"
+systemdsystemconfdir="/etc/systemd/system"
++ command -v lvm
++ lvm pvdisplay
+  --- Physical volume ---
+  PV Name               /dev/sdb3
+  VG Name               multimedia
+  PV Size               1.27 TiB / not usable 0   
+  Allocatable           yes 
+  PE Size               4.00 MiB
+  Total PE              332149
+  Free PE               327029
+  Allocated PE          5120
+  PV UUID               lTqEPo-dbYM-Pzna-xBLa-01eH-8JHP-uUysYd
+   
+  --- Physical volume ---
+  PV Name               /dev/sdb4
+  VG Name               multimedia
+  PV Size               50.00 GiB / not usable 4.00 MiB
+  Allocatable           yes 
+  PE Size               4.00 MiB
+  Total PE              12799
+  Free PE               12799
+  Allocated PE          0
+  PV UUID               fwCuL5-5Y3G-RvB1-qnY1-YOn7-uD27-jSfvG6
+   
+  --- Physical volume ---
+  PV Name               /dev/sda5
+  VG Name               f24
+  PV Size               25.01 GiB / not usable 4.00 MiB
+  Allocatable           yes 
+  PE Size               4.00 MiB
+  Total PE              6402
+  Free PE               2
+  Allocated PE          6400
+  PV UUID               DXrifx-ro63-Q9j8-MxMb-UPZX-Kb7z-1puSQK
+   
+  --- Physical volume ---
+  PV Name               /dev/sda3
+  VG Name               VGxen
+  PV Size               25.00 GiB / not usable 3.00 MiB
+  Allocatable           yes 
+  PE Size               4.00 MiB
+  Total PE              6400
+  Free PE               6400
+  Allocated PE          0
+  PV UUID               G1HYHO-5bq3-A4ls-eGvt-uePV-ekdC-ViKMYg
+   
++ lvm vgdisplay
+  --- Volume group ---
+  VG Name               multimedia
+  System ID             
+  Format                lvm2
+  Metadata Areas        2
+  Metadata Sequence No  14
+  VG Access             read/write
+  VG Status             resizable
+  MAX LV                0
+  Cur LV                2
+  Open LV               0
+  Max PV                0
+  Cur PV                2
+  Act PV                2
+  VG Size               1.32 TiB
+  PE Size               4.00 MiB
+  Total PE              344948
+  Alloc PE / Size       5120 / 20.00 GiB
+  Free  PE / Size       339828 / 1.30 TiB
+  VG UUID               O7KwyB-hjwM-0Agf-0HZZ-yKWc-70vl-hbm4Nu
+   
+  --- Volume group ---
+  VG Name               f24
+  System ID             
+  Format                lvm2
+  Metadata Areas        1
+  Metadata Sequence No  5
+  VG Access             read/write
+  VG Status             resizable
+  MAX LV                0
+  Cur LV                4
+  Open LV               0
+  Max PV                0
+  Cur PV                1
+  Act PV                1
+  VG Size               25.01 GiB
+  PE Size               4.00 MiB
+  Total PE              6402
+  Alloc PE / Size       6400 / 25.00 GiB
+  Free  PE / Size       2 / 8.00 MiB
+  VG UUID               aHLwVn-0B6Q-X5S6-RrM2-koAJ-XavI-GQe8wm
+   
+  --- Volume group ---
+  VG Name               VGxen
+  System ID             
+  Format                lvm2
+  Metadata Areas        1
+  Metadata Sequence No  28
+  VG Access             read/write
+  VG Status             resizable
+  MAX LV                0
+  Cur LV                0
+  Open LV               0
+  Max PV                0
+  Cur PV                1
+  Act PV                1
+  VG Size               25.00 GiB
+  PE Size               4.00 MiB
+  Total PE              6400
+  Alloc PE / Size       0 / 0   
+  Free  PE / Size       6400 / 25.00 GiB
+  VG UUID               ILuteI-uOEG-u6PA-QQCs-11sP-F1WG-EitGyl
+   
++ lvm lvdisplay
+  --- Logical volume ---
+  LV Path                /dev/multimedia/backups
+  LV Name                backups
+  VG Name                multimedia
+  LV UUID                z9u3jc-jhzm-wSFm-2F2U-QNC2-YfGT-fqOVGD
+  LV Write Access        read/write
+  LV Creation host, time NR021AA, 2017-03-15 16:49:59 +0000
+  LV Status              NOT available
+  LV Size                15.00 GiB
+  Current LE             3840
+  Segments               1
+  Allocation             inherit
+  Read ahead sectors     auto
+   
+  --- Logical volume ---
+  LV Path                /dev/multimedia/vmTexto
+  LV Name                vmTexto
+  VG Name                multimedia
+  LV UUID                0MjJmy-d2ta-eb88-GKzX-HU8H-GCLk-7eIE6L
+  LV Write Access        read/write
+  LV Creation host, time NR021AA, 2017-03-21 17:06:05 +0000
+  LV Status              NOT available
+  LV Size                5.00 GiB
+  Current LE             1280
+  Segments               1
+  Allocation             inherit
+  Read ahead sectors     auto
+   
+  --- Logical volume ---
+  LV Path                /dev/f24/tmp
+  LV Name                tmp
+  VG Name                f24
+  LV UUID                hYstv7-6uPO-Xcp9-Wum8-pLdJ-JmCC-To9sEj
+  LV Write Access        read/write
+  LV Creation host, time NR021AA, 2017-10-09 20:15:13 +0000
+  LV Status              NOT available
+  LV Size                3.00 GiB
+  Current LE             768
+  Segments               1
+  Allocation             inherit
+  Read ahead sectors     auto
+   
+  --- Logical volume ---
+  LV Path                /dev/f24/root
+  LV Name                root
+  VG Name                f24
+  LV UUID                wqEB1V-bi9q-lIzy-UOFd-U9e1-BNdG-11rq0A
+  LV Write Access        read/write
+  LV Creation host, time NR021AA, 2017-10-09 20:15:14 +0000
+  LV Status              available
+  # open                 0
+  LV Size                15.00 GiB
+  Current LE             3840
+  Segments               1
+  Allocation             inherit
+  Read ahead sectors     auto
+  - currently set to     256
+  Block device           253:0
+   
+  --- Logical volume ---
+  LV Path                /dev/f24/home
+  LV Name                home
+  VG Name                f24
+  LV UUID                qdzwwu-eKk0-YVd0-6bkH-EsVi-tSbC-dc6GRr
+  LV Write Access        read/write
+  LV Creation host, time NR021AA, 2017-10-09 20:15:16 +0000
+  LV Status              NOT available
+  LV Size                5.00 GiB
+  Current LE             1280
+  Segments               1
+  Allocation             inherit
+  Read ahead sectors     auto
+   
+  --- Logical volume ---
+  LV Path                /dev/f24/swap
+  LV Name                swap
+  VG Name                f24
+  LV UUID                e2K5BX-AT06-RYl4-3vbP-vN3c-56y2-mcdqXz
+  LV Write Access        read/write
+  LV Creation host, time NR021AA, 2017-10-09 20:15:17 +0000
+  LV Status              available
+  # open                 0
+  LV Size                2.00 GiB
+  Current LE             512
+  Segments               1
+  Allocation             inherit
+  Read ahead sectors     auto
+  - currently set to     256
+  Block device           253:1
+   
++ command -v dmsetup
++ dmsetup ls --tree
+f24-swap (253:1)
+ `- (8:5)
+f24-root (253:0)
+ `- (8:5)
++ cat /proc/mdstat
+Personalities : 
+unused devices: <none>
++ command -v ip
++ ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: enp5s0: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000
+    link/ether 18:a6:f7:01:78:98 brd ff:ff:ff:ff:ff:ff
++ command -v journalctl
++ journalctl -ab --no-pager -o short-monotonic
+-- Logs begin at Thu 2017-10-12 11:54:54 UTC, end at Thu 2017-10-12 11:58:06 UTC. --
+[    0.779065] NR021AA systemd-journald[162]: Runtime journal (/run/log/journal/) is 8.0M, max 187.6M, 179.6M free.
+[    0.000000] NR021AA kernel: Linux version 4.11.12-100.fc24.x86_64 (mockbuild@bkernel02.phx2.fedoraproject.org) (gcc version 6.3.1 20161221 (Red Hat 6.3.1-1) (GCC) ) #1 SMP Fri Jul 21 17:35:20 UTC 2017
+[    0.000000] NR021AA kernel: Command line: placeholder root=/dev/mapper/f24-root ro rd.lvm.lv=f24/root rd.lvm.lv=f24/swap rd.lvm.lv=fedora/swap rhgb quiet
+[    0.000000] NR021AA kernel: x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+[    0.000000] NR021AA kernel: x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+[    0.000000] NR021AA kernel: x86/fpu: Enabled xstate features 0x3, context size is 576 bytes, using 'standard' format.
+[    0.000000] NR021AA kernel: Released 0 page(s)
+[    0.000000] NR021AA kernel: e820: BIOS-provided physical RAM map:
+[    0.000000] NR021AA kernel: Xen: [mem 0x0000000000000000-0x000000000009efff] usable
+[    0.000000] NR021AA kernel: Xen: [mem 0x000000000009f400-0x00000000000fffff] reserved
+[    0.000000] NR021AA kernel: Xen: [mem 0x0000000000100000-0x00000000cfe8ffff] usable
+[    0.000000] NR021AA kernel: Xen: [mem 0x00000000cfe90000-0x00000000cfee2fff] ACPI NVS
+[    0.000000] NR021AA kernel: Xen: [mem 0x00000000cfee3000-0x00000000cfeeffff] ACPI data
+[    0.000000] NR021AA kernel: Xen: [mem 0x00000000cfef0000-0x00000000cfefffff] reserved
+[    0.000000] NR021AA kernel: Xen: [mem 0x00000000e0000000-0x00000000efffffff] reserved
+[    0.000000] NR021AA kernel: Xen: [mem 0x00000000fec00000-0x00000000ffffffff] reserved
+[    0.000000] NR021AA kernel: Xen: [mem 0x0000000100000000-0x000000012fffffff] usable
+[    0.000000] NR021AA kernel: NX (Execute Disable) protection: active
+[    0.000000] NR021AA kernel: SMBIOS 2.5 present.
+[    0.000000] NR021AA kernel: DMI: HP-Pavilion NR021AA-ABE p6027es/Boston, BIOS 5.19 03/06/2009
+[    0.000000] NR021AA kernel: Hypervisor detected: Xen
+[    0.000000] NR021AA kernel: e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+[    0.000000] NR021AA kernel: e820: remove [mem 0x000a0000-0x000fffff] usable
+[    0.000000] NR021AA kernel: e820: last_pfn = 0x130000 max_arch_pfn = 0x400000000
+[    0.000000] NR021AA kernel: MTRR: Disabled
+[    0.000000] NR021AA kernel: x86/PAT: MTRRs disabled, skipping PAT initialization too.
+[    0.000000] NR021AA kernel: x86/PAT: Configuration [0-7]: WB  WT  UC- UC  WC  WP  UC  UC  
+[    0.000000] NR021AA kernel: e820: last_pfn = 0xcfe90 max_arch_pfn = 0x400000000
+[    0.000000] NR021AA kernel: Base memory trampoline at [ffff880000099000] 99000 size 24576
+[    0.000000] NR021AA kernel: BRK [0x02386000, 0x02386fff] PGTABLE
+[    0.000000] NR021AA kernel: BRK [0x02387000, 0x02387fff] PGTABLE
+[    0.000000] NR021AA kernel: BRK [0x02388000, 0x02388fff] PGTABLE
+[    0.000000] NR021AA kernel: BRK [0x02389000, 0x02389fff] PGTABLE
+[    0.000000] NR021AA kernel: BRK [0x0238a000, 0x0238afff] PGTABLE
+[    0.000000] NR021AA kernel: BRK [0x0238b000, 0x0238bfff] PGTABLE
+[    0.000000] NR021AA kernel: BRK [0x0238c000, 0x0238cfff] PGTABLE
+[    0.000000] NR021AA kernel: BRK [0x0238d000, 0x0238dfff] PGTABLE
+[    0.000000] NR021AA kernel: BRK [0x0238e000, 0x0238efff] PGTABLE
+[    0.000000] NR021AA kernel: BRK [0x0238f000, 0x0238ffff] PGTABLE
+[    0.000000] NR021AA kernel: BRK [0x02390000, 0x02390fff] PGTABLE
+[    0.000000] NR021AA kernel: BRK [0x02391000, 0x02391fff] PGTABLE
+[    0.000000] NR021AA kernel: RAMDISK: [mem 0x04000000-0x0561afff]
+[    0.000000] NR021AA kernel: ACPI: Early table checksum verification disabled
+[    0.000000] NR021AA kernel: ACPI: RSDP 0x00000000000F8300 000024 (v02 HPQOEM)
+[    0.000000] NR021AA kernel: ACPI: XSDT 0x00000000CFEE3080 000054 (v01 HPQOEM SLIC-CPC 42302E31 AWRD 00000000)
+[    0.000000] NR021AA kernel: ACPI: FACP 0x00000000CFEE7300 0000F4 (v03 HPQOEM SLIC-CPC 42302E31 AWRD 00000000)
+[    0.000000] NR021AA kernel: ACPI BIOS Warning (bug): 32/64X length mismatch in FADT/Pm1aEventBlock: 32/8 (20170119/tbfadt-603)
+[    0.000000] NR021AA kernel: ACPI BIOS Warning (bug): 32/64X length mismatch in FADT/Pm1aControlBlock: 16/8 (20170119/tbfadt-603)
+[    0.000000] NR021AA kernel: ACPI BIOS Warning (bug): 32/64X length mismatch in FADT/PmTimerBlock: 32/8 (20170119/tbfadt-603)
+[    0.000000] NR021AA kernel: ACPI BIOS Warning (bug): 32/64X length mismatch in FADT/Gpe0Block: 64/8 (20170119/tbfadt-603)
+[    0.000000] NR021AA kernel: ACPI BIOS Warning (bug): Invalid length for FADT/Pm1aEventBlock: 8, using default 32 (20170119/tbfadt-708)
+[    0.000000] NR021AA kernel: ACPI BIOS Warning (bug): Invalid length for FADT/Pm1aControlBlock: 8, using default 16 (20170119/tbfadt-708)
+[    0.000000] NR021AA kernel: ACPI BIOS Warning (bug): Invalid length for FADT/PmTimerBlock: 8, using default 32 (20170119/tbfadt-708)
+[    0.000000] NR021AA kernel: ACPI: DSDT 0x00000000CFEE3240 004097 (v01 HPQOEM SLIC-CPC 00001000 MSFT 03000000)
+[    0.000000] NR021AA kernel: ACPI: FACS 0x00000000CFE90000 000040
+[    0.000000] NR021AA kernel: ACPI: FACS 0x00000000CFE90000 000040
+[    0.000000] NR021AA kernel: ACPI: SLIC 0x00000000CFEE74C0 000176 (v01 HPQOEM SLIC-CPC 42302E31 AWRD 00000000)
+[    0.000000] NR021AA kernel: ACPI: HPET 0x00000000CFEE7740 000038 (v01 HPQOEM SLIC-CPC 42302E31 AWRD 00000098)
+[    0.000000] NR021AA kernel: ACPI: MCFG 0x00000000CFEE7780 00003C (v01 HPQOEM SLIC-CPC 42302E31 AWRD 00000000)
+[    0.000000] NR021AA kernel: ACPI: APIC 0x00000000CFEE7400 000084 (v01 HPQOEM SLIC-CPC 42302E31 AWRD 00000000)
+[    0.000000] NR021AA kernel: ACPI: SSDT 0x00000000CFEE7E20 000380 (v01 HPQOEM SLIC-CPC 00003000 INTL 20041203)
+[    0.000000] NR021AA kernel: ACPI: Local APIC address 0xfee00000
+[    0.000000] NR021AA kernel: Setting APIC routing to Xen PV.
+[    0.000000] NR021AA kernel: NUMA turned off
+[    0.000000] NR021AA kernel: Faking a node at [mem 0x0000000000000000-0x000000012fffffff]
+[    0.000000] NR021AA kernel: NODE_DATA(0) allocated [mem 0xcf681000-0xcf6abfff]
+[    0.000000] NR021AA kernel: Zone ranges:
+[    0.000000] NR021AA kernel:   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+[    0.000000] NR021AA kernel:   DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
+[    0.000000] NR021AA kernel:   Normal   [mem 0x0000000100000000-0x000000012fffffff]
+[    0.000000] NR021AA kernel:   Device   empty
+[    0.000000] NR021AA kernel: Movable zone start for each node
+[    0.000000] NR021AA kernel: Early memory node ranges
+[    0.000000] NR021AA kernel:   node   0: [mem 0x0000000000001000-0x000000000009efff]
+[    0.000000] NR021AA kernel:   node   0: [mem 0x0000000000100000-0x00000000cfe8ffff]
+[    0.000000] NR021AA kernel:   node   0: [mem 0x0000000100000000-0x000000012fffffff]
+[    0.000000] NR021AA kernel: Initmem setup node 0 [mem 0x0000000000001000-0x000000012fffffff]
+[    0.000000] NR021AA kernel: On node 0 totalpages: 1048110
+[    0.000000] NR021AA kernel:   DMA zone: 64 pages used for memmap
+[    0.000000] NR021AA kernel:   DMA zone: 21 pages reserved
+[    0.000000] NR021AA kernel:   DMA zone: 3998 pages, LIFO batch:0
+[    0.000000] NR021AA kernel:   DMA32 zone: 13243 pages used for memmap
+[    0.000000] NR021AA kernel:   DMA32 zone: 847504 pages, LIFO batch:31
+[    0.000000] NR021AA kernel:   Normal zone: 3072 pages used for memmap
+[    0.000000] NR021AA kernel:   Normal zone: 196608 pages, LIFO batch:31
+[    0.000000] NR021AA kernel: p2m virtual area at ffffc90000000000, size is a00000
+[    0.000000] NR021AA kernel: Remapped 150692 page(s)
+[    0.000000] NR021AA kernel: ACPI: PM-Timer IO Port: 0x408
+[    0.000000] NR021AA kernel: ACPI: Local APIC address 0xfee00000
+[    0.000000] NR021AA kernel: ACPI: LAPIC_NMI (acpi_id[0x00] high edge lint[0x1])
+[    0.000000] NR021AA kernel: ACPI: LAPIC_NMI (acpi_id[0x01] high edge lint[0x1])
+[    0.000000] NR021AA kernel: ACPI: LAPIC_NMI (acpi_id[0x02] high edge lint[0x1])
+[    0.000000] NR021AA kernel: ACPI: LAPIC_NMI (acpi_id[0x03] high edge lint[0x1])
+[    0.000000] NR021AA kernel: IOAPIC[0]: apic_id 4, version 32, address 0xfec00000, GSI 0-23
+[    0.000000] NR021AA kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+[    0.000000] NR021AA kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+[    0.000000] NR021AA kernel: ACPI: IRQ0 used by override.
+[    0.000000] NR021AA kernel: ACPI: IRQ9 used by override.
+[    0.000000] NR021AA kernel: Using ACPI (MADT) for SMP configuration information
+[    0.000000] NR021AA kernel: ACPI: HPET id: 0x8086a201 base: 0xfed00000
+[    0.000000] NR021AA kernel: smpboot: Allowing 4 CPUs, 2 hotplug CPUs
+[    0.000000] NR021AA kernel: PM: Registered nosave memory: [mem 0x00000000-0x00000fff]
+[    0.000000] NR021AA kernel: PM: Registered nosave memory: [mem 0x0009f000-0x0009ffff]
+[    0.000000] NR021AA kernel: PM: Registered nosave memory: [mem 0x000a0000-0x000fffff]
+[    0.000000] NR021AA kernel: PM: Registered nosave memory: [mem 0xcfe90000-0xcfee2fff]
+[    0.000000] NR021AA kernel: PM: Registered nosave memory: [mem 0xcfee3000-0xcfeeffff]
+[    0.000000] NR021AA kernel: PM: Registered nosave memory: [mem 0xcfef0000-0xcfefffff]
+[    0.000000] NR021AA kernel: PM: Registered nosave memory: [mem 0xcff00000-0xdfffffff]
+[    0.000000] NR021AA kernel: PM: Registered nosave memory: [mem 0xe0000000-0xefffffff]
+[    0.000000] NR021AA kernel: PM: Registered nosave memory: [mem 0xf0000000-0xfebfffff]
+[    0.000000] NR021AA kernel: PM: Registered nosave memory: [mem 0xfec00000-0xffffffff]
+[    0.000000] NR021AA kernel: e820: [mem 0xcff00000-0xdfffffff] available for PCI devices
+[    0.000000] NR021AA kernel: Booting paravirtualized kernel on Xen
+[    0.000000] NR021AA kernel: Xen version: 4.6.6 (preserve-AD)
+[    0.000000] NR021AA kernel: clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1910969940391419 ns
+[    0.000000] NR021AA kernel: setup_percpu: NR_CPUS:8192 nr_cpumask_bits:4 nr_cpu_ids:4 nr_node_ids:1
+[    0.000000] NR021AA kernel: percpu: Embedded 36 pages/cpu @ffff880124a00000 s108952 r8192 d30312 u524288
+[    0.000000] NR021AA kernel: pcpu-alloc: s108952 r8192 d30312 u524288 alloc=1*2097152
+[    0.000000] NR021AA kernel: pcpu-alloc: [0] 0 1 2 3 
+[    0.000000] NR021AA kernel: Built 1 zonelists in Node order, mobility grouping on.  Total pages: 1031710
+[    0.000000] NR021AA kernel: Policy zone: Normal
+[    0.000000] NR021AA kernel: Kernel command line: placeholder root=/dev/mapper/f24-root ro rd.lvm.lv=f24/root rd.lvm.lv=f24/swap rd.lvm.lv=fedora/swap rhgb quiet
+[    0.000000] NR021AA kernel: PID hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.000000] NR021AA kernel: software IO TLB [mem 0x120a00000-0x124a00000] (64MB) mapped at [ffff880120a00000-ffff8801249fffff]
+[    0.000000] NR021AA kernel: Memory: 3817144K/4192440K available (8702K kernel code, 1668K rwdata, 3604K rodata, 2124K init, 1816K bss, 375296K reserved, 0K cma-reserved)
+[    0.000000] NR021AA kernel: SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=2, Nodes=1
+[    0.001000] NR021AA kernel: Hierarchical RCU implementation.
+[    0.001000] NR021AA kernel: 	Build-time adjustment of leaf fanout to 64.
+[    0.001000] NR021AA kernel: 	RCU restricting CPUs from NR_CPUS=8192 to nr_cpu_ids=2.
+[    0.001000] NR021AA kernel: RCU: Adjusting geometry for rcu_fanout_leaf=64, nr_cpu_ids=2
+[    0.001000] NR021AA kernel: Using NULL legacy PIC
+[    0.001000] NR021AA kernel: NR_IRQS:524544 nr_irqs:440 0
+[    0.001000] NR021AA kernel: xen:events: Using FIFO-based ABI
+[    0.001000] NR021AA kernel: xen: --> pirq=1 -> irq=1 (gsi=1)
+[    0.001000] NR021AA kernel: xen: --> pirq=2 -> irq=2 (gsi=2)
+[    0.001000] NR021AA kernel: xen: --> pirq=3 -> irq=3 (gsi=3)
+[    0.001000] NR021AA kernel: xen: --> pirq=4 -> irq=4 (gsi=4)
+[    0.001000] NR021AA kernel: xen: --> pirq=5 -> irq=5 (gsi=5)
+[    0.001000] NR021AA kernel: xen: --> pirq=6 -> irq=6 (gsi=6)
+[    0.001000] NR021AA kernel: xen: --> pirq=7 -> irq=7 (gsi=7)
+[    0.001000] NR021AA kernel: xen: --> pirq=8 -> irq=8 (gsi=8)
+[    0.001000] NR021AA kernel: xen: --> pirq=9 -> irq=9 (gsi=9)
+[    0.001000] NR021AA kernel: xen: --> pirq=10 -> irq=10 (gsi=10)
+[    0.001000] NR021AA kernel: xen: --> pirq=11 -> irq=11 (gsi=11)
+[    0.001000] NR021AA kernel: xen: --> pirq=12 -> irq=12 (gsi=12)
+[    0.001000] NR021AA kernel: xen: --> pirq=13 -> irq=13 (gsi=13)
+[    0.001000] NR021AA kernel: xen: --> pirq=14 -> irq=14 (gsi=14)
+[    0.001000] NR021AA kernel: xen: --> pirq=15 -> irq=15 (gsi=15)
+[    0.001000] NR021AA kernel: 	Offload RCU callbacks from all CPUs
+[    0.001000] NR021AA kernel: 	Offload RCU callbacks from CPUs: 0-1.
+[    0.001000] NR021AA kernel: Console: colour VGA+ 80x25
+[    0.001000] NR021AA kernel: console [tty0] enabled
+[    0.001000] NR021AA kernel: clocksource: xen: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+[    0.001000] NR021AA kernel: Xen: using vcpuop timer interface
+[    0.001000] NR021AA kernel: installing Xen timer for CPU 0
+[    0.001000] NR021AA kernel: tsc: Fast TSC calibration using PIT
+[    0.001006] NR021AA kernel: tsc: Detected 3325.302 MHz processor
+[    0.001015] NR021AA kernel: Calibrating delay loop (skipped), value calculated using timer frequency.. 6651.00 BogoMIPS (lpj=3325504)
+[    0.001017] NR021AA kernel: pid_max: default: 32768 minimum: 301
+[    0.001033] NR021AA kernel: ACPI: Core revision 20170119
+[    0.008783] NR021AA kernel: ACPI: 2 ACPI AML tables successfully acquired and loaded
+[    0.009037] NR021AA kernel: Security Framework initialized
+[    0.009040] NR021AA kernel: Yama: becoming mindful.
+[    0.009046] NR021AA kernel: SELinux:  Initializing.
+[    0.009069] NR021AA kernel: SELinux:  Starting in permissive mode
+[    0.009603] NR021AA kernel: Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes)
+[    0.011493] NR021AA kernel: Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes)
+[    0.012297] NR021AA kernel: Mount-cache hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.012307] NR021AA kernel: Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.012649] NR021AA kernel: CPU: Physical Processor ID: 0
+[    0.012650] NR021AA kernel: CPU: Processor Core ID: 0
+[    0.012653] NR021AA kernel: mce: CPU supports 2 MCE banks
+[    0.012667] NR021AA kernel: Last level iTLB entries: 4KB 128, 2MB 4, 4MB 4
+[    0.012668] NR021AA kernel: Last level dTLB entries: 4KB 256, 2MB 0, 4MB 32, 1GB 0
+[    0.012762] NR021AA kernel: Freeing SMP alternatives memory: 32K
+[    0.014005] NR021AA kernel: ftrace: allocating 31963 entries in 125 pages
+[    0.020118] NR021AA kernel: smpboot: Max logical packages: 2
+[    0.020122] NR021AA kernel: VPMU disabled by hypervisor.
+[    0.020225] NR021AA kernel: Performance Events: Core2 events, PMU not available due to virtualization, using software events only.
+[    0.020949] NR021AA kernel: NMI watchdog: disabled (cpu0): hardware events not enabled
+[    0.020950] NR021AA kernel: NMI watchdog: Shutting down hard lockup detector on all cpus
+[    0.020962] NR021AA kernel: smp: Bringing up secondary CPUs ...
+[    0.021112] NR021AA kernel: installing Xen timer for CPU 1
+[    0.021239] NR021AA kernel: smp: Brought up 1 node, 2 CPUs
+[    0.021239] NR021AA kernel: sched_clock: Marking stable (21000000, 0)->(2112013104, -2091013104)
+[    0.021388] NR021AA kernel: devtmpfs: initialized
+[    0.021446] NR021AA kernel: x86/mm: Memory block size: 128MB
+[    0.023805] NR021AA kernel: PM: Registering ACPI NVS region [mem 0xcfe90000-0xcfee2fff] (339968 bytes)
+[    0.023843] NR021AA kernel: clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+[    0.023851] NR021AA kernel: futex hash table entries: 512 (order: 3, 32768 bytes)
+[    0.023904] NR021AA kernel: pinctrl core: initialized pinctrl subsystem
+[    0.023942] NR021AA kernel: RTC time: 11:54:53, date: 10/12/17
+[    0.024027] NR021AA kernel: NET: Registered protocol family 16
+[    0.024034] NR021AA kernel: xen:grant_table: Grant tables using version 1 layout
+[    0.024045] NR021AA kernel: Grant table initialized
+[    0.024301] NR021AA kernel: PCCT header not found.
+[    0.024337] NR021AA kernel: ACPI: bus type PCI registered
+[    0.024338] NR021AA kernel: acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+[    0.024431] NR021AA kernel: PCI: MMCONFIG for domain 0000 [bus 00-ff] at [mem 0xe0000000-0xefffffff] (base 0xe0000000)
+[    0.024433] NR021AA kernel: PCI: MMCONFIG at [mem 0xe0000000-0xefffffff] reserved in E820
+[    0.052693] NR021AA kernel: PCI: Using configuration type 1 for base access
+[    0.054263] NR021AA kernel: ACPI: Added _OSI(Module Device)
+[    0.054263] NR021AA kernel: ACPI: Added _OSI(Processor Device)
+[    0.054264] NR021AA kernel: ACPI: Added _OSI(3.0 _SCP Extensions)
+[    0.054265] NR021AA kernel: ACPI: Added _OSI(Processor Aggregator Device)
+[    0.054363] NR021AA kernel: xen: registering gsi 9 triggering 0 polarity 0
+[    0.056776] NR021AA kernel: ACPI: Dynamic OEM Table Load:
+[    0.056780] NR021AA kernel: ACPI: SSDT 0xFFFF88011F9BDC00 00026C (v01 PmRef  Cpu0Ist  00003000 INTL 20041203)
+[    0.056947] NR021AA kernel: ACPI: Dynamic OEM Table Load:
+[    0.056950] NR021AA kernel: ACPI: SSDT 0xFFFF88011FA0C200 000152 (v01 PmRef  Cpu1Ist  00003000 INTL 20041203)
+[    0.057263] NR021AA kernel: ACPI: Interpreter enabled
+[    0.057278] NR021AA kernel: ACPI: (supports S0 S1 S3 S4 S5)
+[    0.057278] NR021AA kernel: ACPI: Using IOAPIC for interrupt routing
+[    0.057296] NR021AA kernel: PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    0.061335] NR021AA kernel: ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+[    0.061339] NR021AA kernel: acpi PNP0A08:00: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI]
+[    0.061342] NR021AA kernel: acpi PNP0A08:00: _OSC failed (AE_NOT_FOUND); disabling ASPM
+[    0.061544] NR021AA kernel: PCI host bridge to bus 0000:00
+[    0.061546] NR021AA kernel: pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+[    0.061547] NR021AA kernel: pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+[    0.061548] NR021AA kernel: pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+[    0.061549] NR021AA kernel: pci_bus 0000:00: root bus resource [mem 0x000c0000-0x000dffff window]
+[    0.061550] NR021AA kernel: pci_bus 0000:00: root bus resource [mem 0xcff00000-0xfebfffff window]
+[    0.061552] NR021AA kernel: pci_bus 0000:00: root bus resource [bus 00-ff]
+[    0.061563] NR021AA kernel: pci 0000:00:00.0: [8086:29c0] type 00 class 0x060000
+[    0.061703] NR021AA kernel: pci 0000:00:01.0: [8086:29c1] type 01 class 0x060400
+[    0.061785] NR021AA kernel: pci 0000:00:01.0: PME# supported from D0 D3hot D3cold
+[    0.061913] NR021AA kernel: pci 0000:00:1b.0: [8086:27d8] type 00 class 0x040300
+[    0.061937] NR021AA kernel: pci 0000:00:1b.0: reg 0x10: [mem 0xfdff8000-0xfdffbfff 64bit]
+[    0.062046] NR021AA kernel: pci 0000:00:1b.0: PME# supported from D0 D3hot D3cold
+[    0.062092] NR021AA kernel: pci 0000:00:1b.0: System wakeup disabled by ACPI
+[    0.062149] NR021AA kernel: pci 0000:00:1d.0: [8086:27c8] type 00 class 0x0c0300
+[    0.062210] NR021AA kernel: pci 0000:00:1d.0: reg 0x20: [io  0xf500-0xf51f]
+[    0.062279] NR021AA kernel: pci 0000:00:1d.0: System wakeup disabled by ACPI
+[    0.062320] NR021AA kernel: pci 0000:00:1d.1: [8086:27c9] type 00 class 0x0c0300
+[    0.062380] NR021AA kernel: pci 0000:00:1d.1: reg 0x20: [io  0xf600-0xf61f]
+[    0.062448] NR021AA kernel: pci 0000:00:1d.1: System wakeup disabled by ACPI
+[    0.062490] NR021AA kernel: pci 0000:00:1d.2: [8086:27ca] type 00 class 0x0c0300
+[    0.062550] NR021AA kernel: pci 0000:00:1d.2: reg 0x20: [io  0xf700-0xf71f]
+[    0.062618] NR021AA kernel: pci 0000:00:1d.2: System wakeup disabled by ACPI
+[    0.062659] NR021AA kernel: pci 0000:00:1d.3: [8086:27cb] type 00 class 0x0c0300
+[    0.062720] NR021AA kernel: pci 0000:00:1d.3: reg 0x20: [io  0xf800-0xf81f]
+[    0.062790] NR021AA kernel: pci 0000:00:1d.3: System wakeup disabled by ACPI
+[    0.062842] NR021AA kernel: pci 0000:00:1d.7: [8086:27cc] type 00 class 0x0c0320
+[    0.062866] NR021AA kernel: pci 0000:00:1d.7: reg 0x10: [mem 0xfdfff000-0xfdfff3ff]
+[    0.062988] NR021AA kernel: pci 0000:00:1d.7: PME# supported from D0 D3hot D3cold
+[    0.063029] NR021AA kernel: pci 0000:00:1d.7: System wakeup disabled by ACPI
+[    0.063081] NR021AA kernel: pci 0000:00:1e.0: [8086:244e] type 01 class 0x060401
+[    0.063189] NR021AA kernel: pci 0000:00:1e.0: System wakeup disabled by ACPI
+[    0.063240] NR021AA kernel: pci 0000:00:1f.0: [8086:27b8] type 00 class 0x060100
+[    0.063349] NR021AA kernel: pci 0000:00:1f.0: quirk: [io  0x0400-0x047f] claimed by ICH6 ACPI/GPIO/TCO
+[    0.063354] NR021AA kernel: pci 0000:00:1f.0: quirk: [io  0x0480-0x04bf] claimed by ICH6 GPIO
+[    0.063357] NR021AA kernel: pci 0000:00:1f.0: ICH7 LPC Generic IO decode 1 PIO at 0800 (mask 003f)
+[    0.063360] NR021AA kernel: pci 0000:00:1f.0: ICH7 LPC Generic IO decode 2 PIO at 0290 (mask 001f)
+[    0.063479] NR021AA kernel: pci 0000:00:1f.2: [8086:27c0] type 00 class 0x01018a
+[    0.063498] NR021AA kernel: pci 0000:00:1f.2: reg 0x10: [io  0x0000-0x0007]
+[    0.063509] NR021AA kernel: pci 0000:00:1f.2: reg 0x14: [io  0x0000-0x0003]
+[    0.063520] NR021AA kernel: pci 0000:00:1f.2: reg 0x18: [io  0x0000-0x0007]
+[    0.063531] NR021AA kernel: pci 0000:00:1f.2: reg 0x1c: [io  0x0000-0x0003]
+[    0.063542] NR021AA kernel: pci 0000:00:1f.2: reg 0x20: [io  0xf900-0xf90f]
+[    0.063567] NR021AA kernel: pci 0000:00:1f.2: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
+[    0.063568] NR021AA kernel: pci 0000:00:1f.2: legacy IDE quirk: reg 0x14: [io  0x03f6]
+[    0.063570] NR021AA kernel: pci 0000:00:1f.2: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
+[    0.063571] NR021AA kernel: pci 0000:00:1f.2: legacy IDE quirk: reg 0x1c: [io  0x0376]
+[    0.063602] NR021AA kernel: pci 0000:00:1f.2: PME# supported from D3hot
+[    0.063682] NR021AA kernel: pci 0000:00:1f.3: [8086:27da] type 00 class 0x0c0500
+[    0.063753] NR021AA kernel: pci 0000:00:1f.3: reg 0x20: [io  0x0500-0x051f]
+[    0.063924] NR021AA kernel: pci 0000:01:00.0: [1002:6779] type 00 class 0x030000
+[    0.063948] NR021AA kernel: pci 0000:01:00.0: reg 0x10: [mem 0xd0000000-0xdfffffff 64bit pref]
+[    0.063966] NR021AA kernel: pci 0000:01:00.0: reg 0x18: [mem 0xfdca0000-0xfdcbffff 64bit]
+[    0.063978] NR021AA kernel: pci 0000:01:00.0: reg 0x20: [io  0xde00-0xdeff]
+[    0.064000] NR021AA kernel: pci 0000:01:00.0: reg 0x30: [mem 0x00000000-0x0001ffff pref]
+[    0.064065] NR021AA kernel: pci 0000:01:00.0: supports D1 D2
+[    0.064143] NR021AA kernel: pci 0000:01:00.1: [1002:aa98] type 00 class 0x040300
+[    0.064167] NR021AA kernel: pci 0000:01:00.1: reg 0x10: [mem 0xfdcfc000-0xfdcfffff 64bit]
+[    0.064283] NR021AA kernel: pci 0000:01:00.1: supports D1 D2
+[    0.064422] NR021AA kernel: pci 0000:00:01.0: PCI bridge to [bus 01]
+[    0.064425] NR021AA kernel: pci 0000:00:01.0:   bridge window [io  0xd000-0xdfff]
+[    0.064428] NR021AA kernel: pci 0000:00:01.0:   bridge window [mem 0xfdc00000-0xfdcfffff]
+[    0.064434] NR021AA kernel: pci 0000:00:01.0:   bridge window [mem 0xd0000000-0xdfffffff 64bit pref]
+[    0.064478] NR021AA kernel: pci 0000:05:00.0: [10ec:8169] type 00 class 0x020000
+[    0.064501] NR021AA kernel: pci 0000:05:00.0: reg 0x10: [io  0xee00-0xeeff]
+[    0.064514] NR021AA kernel: pci 0000:05:00.0: reg 0x14: [mem 0xfddff000-0xfddff0ff]
+[    0.064575] NR021AA kernel: pci 0000:05:00.0: reg 0x30: [mem 0x00000000-0x0001ffff pref]
+[    0.064616] NR021AA kernel: pci 0000:05:00.0: supports D1 D2
+[    0.064617] NR021AA kernel: pci 0000:05:00.0: PME# supported from D1 D2 D3hot D3cold
+[    0.064721] NR021AA kernel: pci 0000:00:1e.0: PCI bridge to [bus 05] (subtractive decode)
+[    0.064726] NR021AA kernel: pci 0000:00:1e.0:   bridge window [io  0xe000-0xefff]
+[    0.064730] NR021AA kernel: pci 0000:00:1e.0:   bridge window [mem 0xfdd00000-0xfddfffff]
+[    0.064736] NR021AA kernel: pci 0000:00:1e.0:   bridge window [mem 0xfde00000-0xfdefffff 64bit pref]
+[    0.064738] NR021AA kernel: pci 0000:00:1e.0:   bridge window [io  0x0000-0x0cf7 window] (subtractive decode)
+[    0.064739] NR021AA kernel: pci 0000:00:1e.0:   bridge window [io  0x0d00-0xffff window] (subtractive decode)
+[    0.064740] NR021AA kernel: pci 0000:00:1e.0:   bridge window [mem 0x000a0000-0x000bffff window] (subtractive decode)
+[    0.064741] NR021AA kernel: pci 0000:00:1e.0:   bridge window [mem 0x000c0000-0x000dffff window] (subtractive decode)
+[    0.064742] NR021AA kernel: pci 0000:00:1e.0:   bridge window [mem 0xcff00000-0xfebfffff window] (subtractive decode)
+[    0.064852] NR021AA kernel: xen: registering gsi 8 triggering 1 polarity 0
+[    0.064896] NR021AA kernel: xen: registering gsi 13 triggering 1 polarity 0
+[    0.065252] NR021AA kernel: ACPI: PCI Interrupt Link [LNKA] (IRQs 3 4 5 7 9 *10 11 12 14 15)
+[    0.065312] NR021AA kernel: ACPI: PCI Interrupt Link [LNKB] (IRQs 3 4 *5 7 9 10 11 12 14 15)
+[    0.065371] NR021AA kernel: ACPI: PCI Interrupt Link [LNKC] (IRQs *3 4 5 7 9 10 11 12 14 15)
+[    0.065431] NR021AA kernel: ACPI: PCI Interrupt Link [LNKD] (IRQs 3 4 5 7 9 10 *11 12 14 15)
+[    0.065489] NR021AA kernel: ACPI: PCI Interrupt Link [LNKE] (IRQs 3 4 5 7 9 10 11 12 14 15) *0, disabled.
+[    0.065549] NR021AA kernel: ACPI: PCI Interrupt Link [LNKF] (IRQs 3 4 5 7 9 10 11 12 14 15) *0, disabled.
+[    0.065608] NR021AA kernel: ACPI: PCI Interrupt Link [LNK0] (IRQs 3 4 5 7 9 10 11 12 14 15) *0, disabled.
+[    0.065668] NR021AA kernel: ACPI: PCI Interrupt Link [LNK1] (IRQs 3 4 5 *7 9 10 11 12 14 15)
+[    0.065721] NR021AA kernel: ACPI: Enabled 2 GPEs in block 00 to 1F
+[    0.065751] NR021AA kernel: xen:balloon: Initialising balloon driver
+[    0.067565] NR021AA kernel: xen_balloon: Initialising balloon driver
+[    0.067660] NR021AA kernel: pci 0000:01:00.0: vgaarb: setting as boot VGA device
+[    0.067662] NR021AA kernel: pci 0000:01:00.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+[    0.067664] NR021AA kernel: pci 0000:01:00.0: vgaarb: bridge control possible
+[    0.067664] NR021AA kernel: vgaarb: loaded
+[    0.067761] NR021AA kernel: SCSI subsystem initialized
+[    0.067820] NR021AA kernel: libata version 3.00 loaded.
+[    0.067840] NR021AA kernel: ACPI: bus type USB registered
+[    0.067855] NR021AA kernel: usbcore: registered new interface driver usbfs
+[    0.067862] NR021AA kernel: usbcore: registered new interface driver hub
+[    0.067874] NR021AA kernel: usbcore: registered new device driver usb
+[    0.067985] NR021AA kernel: PCI: Using ACPI for IRQ routing
+[    0.078813] NR021AA kernel: PCI: pci_cache_line_size set to 64 bytes
+[    0.078866] NR021AA kernel: e820: reserve RAM buffer [mem 0x0009f000-0x0009ffff]
+[    0.078867] NR021AA kernel: e820: reserve RAM buffer [mem 0xcfe90000-0xcfffffff]
+[    0.078953] NR021AA kernel: NetLabel: Initializing
+[    0.078953] NR021AA kernel: NetLabel:  domain hash size = 128
+[    0.078954] NR021AA kernel: NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    0.078970] NR021AA kernel: NetLabel:  unlabeled traffic allowed by default
+[    0.079094] NR021AA kernel: clocksource: Switched to clocksource xen
+[    0.092330] NR021AA kernel: VFS: Disk quotas dquot_6.6.0
+[    0.092353] NR021AA kernel: VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    0.092383] NR021AA kernel: hugetlbfs: disabling because there are no supported hugepage sizes
+[    0.092426] NR021AA kernel: pnp: PnP ACPI init
+[    0.092578] NR021AA kernel: system 00:00: [io  0x04d0-0x04d1] has been reserved
+[    0.092579] NR021AA kernel: system 00:00: [io  0x0800-0x087f] has been reserved
+[    0.092581] NR021AA kernel: system 00:00: [io  0x0290-0x0297] has been reserved
+[    0.092582] NR021AA kernel: system 00:00: [io  0x0880-0x088f] has been reserved
+[    0.092585] NR021AA kernel: system 00:00: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    0.092655] NR021AA kernel: pnp 00:01: Plug and Play ACPI device, IDs PNP0b00 (active)
+[    0.092943] NR021AA kernel: system 00:02: [io  0x0400-0x04bf] could not be reserved
+[    0.092946] NR021AA kernel: system 00:02: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    0.093144] NR021AA kernel: system 00:03: [mem 0xe0000000-0xefffffff] has been reserved
+[    0.093147] NR021AA kernel: system 00:03: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    0.093257] NR021AA kernel: system 00:04: [mem 0x000f0000-0x000fffff] could not be reserved
+[    0.093259] NR021AA kernel: system 00:04: [mem 0xcff00000-0xcfffffff] has been reserved
+[    0.093260] NR021AA kernel: system 00:04: [mem 0xfed00000-0xfed000ff] has been reserved
+[    0.093262] NR021AA kernel: system 00:04: [mem 0xcfe90000-0xcfefffff] could not be reserved
+[    0.093263] NR021AA kernel: system 00:04: [mem 0x00000000-0x0009ffff] could not be reserved
+[    0.093264] NR021AA kernel: system 00:04: [mem 0x00100000-0xcfe8ffff] could not be reserved
+[    0.093266] NR021AA kernel: system 00:04: [mem 0xfec00000-0xfec00fff] could not be reserved
+[    0.093267] NR021AA kernel: system 00:04: [mem 0xfed13000-0xfed1dfff] has been reserved
+[    0.093268] NR021AA kernel: system 00:04: [mem 0xfed20000-0xfed8ffff] has been reserved
+[    0.093269] NR021AA kernel: system 00:04: [mem 0xfee00000-0xfee00fff] has been reserved
+[    0.093271] NR021AA kernel: system 00:04: [mem 0xffb00000-0xffb7ffff] has been reserved
+[    0.093272] NR021AA kernel: system 00:04: [mem 0xfff00000-0xffffffff] has been reserved
+[    0.093273] NR021AA kernel: system 00:04: [mem 0x000e0000-0x000effff] could not be reserved
+[    0.093276] NR021AA kernel: system 00:04: Plug and Play ACPI device, IDs PNP0c01 (active)
+[    0.093280] NR021AA kernel: pnp: PnP ACPI: found 5 devices
+[    0.093426] NR021AA kernel: random: fast init done
+[    0.099021] NR021AA kernel: PM-Timer failed consistency check  (0xffffff) - aborting.
+[    0.099049] NR021AA kernel: pci 0000:01:00.0: BAR 6: assigned [mem 0xfdc00000-0xfdc1ffff pref]
+[    0.099051] NR021AA kernel: pci 0000:00:01.0: PCI bridge to [bus 01]
+[    0.099054] NR021AA kernel: pci 0000:00:01.0:   bridge window [io  0xd000-0xdfff]
+[    0.099059] NR021AA kernel: pci 0000:00:01.0:   bridge window [mem 0xfdc00000-0xfdcfffff]
+[    0.099062] NR021AA kernel: pci 0000:00:01.0:   bridge window [mem 0xd0000000-0xdfffffff 64bit pref]
+[    0.099069] NR021AA kernel: pci 0000:05:00.0: BAR 6: assigned [mem 0xfdd00000-0xfdd1ffff pref]
+[    0.099070] NR021AA kernel: pci 0000:00:1e.0: PCI bridge to [bus 05]
+[    0.099073] NR021AA kernel: pci 0000:00:1e.0:   bridge window [io  0xe000-0xefff]
+[    0.099078] NR021AA kernel: pci 0000:00:1e.0:   bridge window [mem 0xfdd00000-0xfddfffff]
+[    0.099082] NR021AA kernel: pci 0000:00:1e.0:   bridge window [mem 0xfde00000-0xfdefffff 64bit pref]
+[    0.099094] NR021AA kernel: pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
+[    0.099095] NR021AA kernel: pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]
+[    0.099096] NR021AA kernel: pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]
+[    0.099097] NR021AA kernel: pci_bus 0000:00: resource 7 [mem 0x000c0000-0x000dffff window]
+[    0.099099] NR021AA kernel: pci_bus 0000:00: resource 8 [mem 0xcff00000-0xfebfffff window]
+[    0.099100] NR021AA kernel: pci_bus 0000:01: resource 0 [io  0xd000-0xdfff]
+[    0.099101] NR021AA kernel: pci_bus 0000:01: resource 1 [mem 0xfdc00000-0xfdcfffff]
+[    0.099102] NR021AA kernel: pci_bus 0000:01: resource 2 [mem 0xd0000000-0xdfffffff 64bit pref]
+[    0.099103] NR021AA kernel: pci_bus 0000:05: resource 0 [io  0xe000-0xefff]
+[    0.099104] NR021AA kernel: pci_bus 0000:05: resource 1 [mem 0xfdd00000-0xfddfffff]
+[    0.099105] NR021AA kernel: pci_bus 0000:05: resource 2 [mem 0xfde00000-0xfdefffff 64bit pref]
+[    0.099106] NR021AA kernel: pci_bus 0000:05: resource 4 [io  0x0000-0x0cf7 window]
+[    0.099107] NR021AA kernel: pci_bus 0000:05: resource 5 [io  0x0d00-0xffff window]
+[    0.099108] NR021AA kernel: pci_bus 0000:05: resource 6 [mem 0x000a0000-0x000bffff window]
+[    0.099109] NR021AA kernel: pci_bus 0000:05: resource 7 [mem 0x000c0000-0x000dffff window]
+[    0.099110] NR021AA kernel: pci_bus 0000:05: resource 8 [mem 0xcff00000-0xfebfffff window]
+[    0.099175] NR021AA kernel: NET: Registered protocol family 2
+[    0.099370] NR021AA kernel: TCP established hash table entries: 32768 (order: 6, 262144 bytes)
+[    0.099544] NR021AA kernel: TCP bind hash table entries: 32768 (order: 7, 524288 bytes)
+[    0.099733] NR021AA kernel: TCP: Hash tables configured (established 32768 bind 32768)
+[    0.099786] NR021AA kernel: UDP hash table entries: 2048 (order: 4, 65536 bytes)
+[    0.099817] NR021AA kernel: UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes)
+[    0.099881] NR021AA kernel: NET: Registered protocol family 1
+[    0.099954] NR021AA kernel: xen: registering gsi 23 triggering 0 polarity 1
+[    0.099977] NR021AA kernel: xen: --> pirq=23 -> irq=23 (gsi=23)
+[    0.100084] NR021AA kernel: xen: registering gsi 19 triggering 0 polarity 1
+[    0.100102] NR021AA kernel: xen: --> pirq=19 -> irq=19 (gsi=19)
+[    0.100205] NR021AA kernel: xen: registering gsi 18 triggering 0 polarity 1
+[    0.100214] NR021AA kernel: xen: --> pirq=18 -> irq=18 (gsi=18)
+[    0.100315] NR021AA kernel: xen: registering gsi 16 triggering 0 polarity 1
+[    0.100324] NR021AA kernel: xen: --> pirq=16 -> irq=16 (gsi=16)
+[    0.100426] NR021AA kernel: xen: registering gsi 23 triggering 0 polarity 1
+[    0.100428] NR021AA kernel: Already setup the GSI :23
+[    0.100518] NR021AA kernel: pci 0000:01:00.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+[    0.100525] NR021AA kernel: PCI: CLS 64 bytes, default 64
+[    0.100584] NR021AA kernel: Unpacking initramfs...
+[    0.388848] NR021AA kernel: Freeing initrd memory: 22636K
+[    0.389600] NR021AA kernel: audit: initializing netlink subsys (disabled)
+[    0.389646] NR021AA kernel: audit: type=2000 audit(1507809294.784:1): state=initialized audit_enabled=0 res=1
+[    0.389854] NR021AA kernel: Initialise system trusted keyrings
+[    0.389905] NR021AA kernel: workingset: timestamp_bits=36 max_order=20 bucket_order=0
+[    0.391127] NR021AA kernel: zbud: loaded
+[    0.391664] NR021AA kernel: SELinux:  Registering netfilter hooks
+[    0.440808] NR021AA kernel: NET: Registered protocol family 38
+[    0.440811] NR021AA kernel: Key type asymmetric registered
+[    0.440812] NR021AA kernel: Asymmetric key parser 'x509' registered
+[    0.440833] NR021AA kernel: Block layer SCSI generic (bsg) driver version 0.4 loaded (major 249)
+[    0.440873] NR021AA kernel: io scheduler noop registered
+[    0.440873] NR021AA kernel: io scheduler deadline registered
+[    0.440907] NR021AA kernel: io scheduler cfq registered (default)
+[    0.440908] NR021AA kernel: io scheduler mq-deadline registered
+[    0.440957] NR021AA kernel: atomic64_test: passed for x86-64 platform with CX8 and with SSE
+[    0.441126] NR021AA kernel: xen: registering gsi 16 triggering 0 polarity 1
+[    0.441132] NR021AA kernel: Already setup the GSI :16
+[    0.441278] NR021AA kernel: intel_idle: does not run on family 6 model 23
+[    0.441340] NR021AA kernel: input: Power Button as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0C:00/input/input0
+[    0.441343] NR021AA kernel: ACPI: Power Button [PWRB]
+[    0.441383] NR021AA kernel: input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input1
+[    0.441384] NR021AA kernel: ACPI: Power Button [PWRF]
+[    0.441451] NR021AA kernel: Warning: Processor Platform Limit not supported.
+[    0.441511] NR021AA kernel: GHES: HEST is not enabled!
+[    0.441912] NR021AA kernel: Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+[    0.443322] NR021AA kernel: hpet_acpi_add: no address or irqs in _CRS
+[    0.443358] NR021AA kernel: Non-volatile memory driver v1.3
+[    0.443385] NR021AA kernel: Linux agpgart interface v0.103
+[    0.443639] NR021AA kernel: ata_piix 0000:00:1f.2: version 2.13
+[    0.443686] NR021AA kernel: xen: registering gsi 19 triggering 0 polarity 1
+[    0.443688] NR021AA kernel: Already setup the GSI :19
+[    0.443697] NR021AA kernel: ata_piix 0000:00:1f.2: MAP [ P0 P2 P1 P3 ]
+[    0.444373] NR021AA kernel: scsi host0: ata_piix
+[    0.444465] NR021AA kernel: scsi host1: ata_piix
+[    0.444494] NR021AA kernel: ata1: SATA max UDMA/133 cmd 0x1f0 ctl 0x3f6 bmdma 0xf900 irq 14
+[    0.444495] NR021AA kernel: ata2: SATA max UDMA/133 cmd 0x170 ctl 0x376 bmdma 0xf908 irq 15
+[    0.444620] NR021AA kernel: libphy: Fixed MDIO Bus: probed
+[    0.444676] NR021AA kernel: ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    0.444679] NR021AA kernel: ehci-pci: EHCI PCI platform driver
+[    0.444731] NR021AA kernel: xen: registering gsi 23 triggering 0 polarity 1
+[    0.444733] NR021AA kernel: Already setup the GSI :23
+[    0.444758] NR021AA kernel: ehci-pci 0000:00:1d.7: EHCI Host Controller
+[    0.444798] NR021AA kernel: ehci-pci 0000:00:1d.7: new USB bus registered, assigned bus number 1
+[    0.444812] NR021AA kernel: ehci-pci 0000:00:1d.7: debug port 1
+[    0.448739] NR021AA kernel: ehci-pci 0000:00:1d.7: cache line size of 64 is not supported
+[    0.448755] NR021AA kernel: ehci-pci 0000:00:1d.7: irq 23, io mem 0xfdfff000
+[    0.455155] NR021AA kernel: ehci-pci 0000:00:1d.7: USB 2.0 started, EHCI 1.00
+[    0.455218] NR021AA kernel: usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[    0.455220] NR021AA kernel: usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.455222] NR021AA kernel: usb usb1: Product: EHCI Host Controller
+[    0.455224] NR021AA kernel: usb usb1: Manufacturer: Linux 4.11.12-100.fc24.x86_64 ehci_hcd
+[    0.455225] NR021AA kernel: usb usb1: SerialNumber: 0000:00:1d.7
+[    0.455348] NR021AA kernel: hub 1-0:1.0: USB hub found
+[    0.455355] NR021AA kernel: hub 1-0:1.0: 8 ports detected
+[    0.455484] NR021AA kernel: ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    0.455486] NR021AA kernel: ohci-pci: OHCI PCI platform driver
+[    0.455493] NR021AA kernel: uhci_hcd: USB Universal Host Controller Interface driver
+[    0.455549] NR021AA kernel: xen: registering gsi 23 triggering 0 polarity 1
+[    0.455550] NR021AA kernel: Already setup the GSI :23
+[    0.455563] NR021AA kernel: uhci_hcd 0000:00:1d.0: UHCI Host Controller
+[    0.455604] NR021AA kernel: uhci_hcd 0000:00:1d.0: new USB bus registered, assigned bus number 2
+[    0.455611] NR021AA kernel: uhci_hcd 0000:00:1d.0: detected 2 ports
+[    0.455633] NR021AA kernel: uhci_hcd 0000:00:1d.0: irq 23, io base 0x0000f500
+[    0.455694] NR021AA kernel: usb usb2: New USB device found, idVendor=1d6b, idProduct=0001
+[    0.455695] NR021AA kernel: usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.455696] NR021AA kernel: usb usb2: Product: UHCI Host Controller
+[    0.455697] NR021AA kernel: usb usb2: Manufacturer: Linux 4.11.12-100.fc24.x86_64 uhci_hcd
+[    0.455698] NR021AA kernel: usb usb2: SerialNumber: 0000:00:1d.0
+[    0.455774] NR021AA kernel: hub 2-0:1.0: USB hub found
+[    0.455781] NR021AA kernel: hub 2-0:1.0: 2 ports detected
+[    0.455887] NR021AA kernel: xen: registering gsi 19 triggering 0 polarity 1
+[    0.455889] NR021AA kernel: Already setup the GSI :19
+[    0.455901] NR021AA kernel: uhci_hcd 0000:00:1d.1: UHCI Host Controller
+[    0.455939] NR021AA kernel: uhci_hcd 0000:00:1d.1: new USB bus registered, assigned bus number 3
+[    0.455947] NR021AA kernel: uhci_hcd 0000:00:1d.1: detected 2 ports
+[    0.455976] NR021AA kernel: uhci_hcd 0000:00:1d.1: irq 19, io base 0x0000f600
+[    0.456036] NR021AA kernel: usb usb3: New USB device found, idVendor=1d6b, idProduct=0001
+[    0.456038] NR021AA kernel: usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.456039] NR021AA kernel: usb usb3: Product: UHCI Host Controller
+[    0.456040] NR021AA kernel: usb usb3: Manufacturer: Linux 4.11.12-100.fc24.x86_64 uhci_hcd
+[    0.456041] NR021AA kernel: usb usb3: SerialNumber: 0000:00:1d.1
+[    0.456118] NR021AA kernel: hub 3-0:1.0: USB hub found
+[    0.456124] NR021AA kernel: hub 3-0:1.0: 2 ports detected
+[    0.456239] NR021AA kernel: xen: registering gsi 18 triggering 0 polarity 1
+[    0.456240] NR021AA kernel: Already setup the GSI :18
+[    0.456253] NR021AA kernel: uhci_hcd 0000:00:1d.2: UHCI Host Controller
+[    0.456290] NR021AA kernel: uhci_hcd 0000:00:1d.2: new USB bus registered, assigned bus number 4
+[    0.456296] NR021AA kernel: uhci_hcd 0000:00:1d.2: detected 2 ports
+[    0.456325] NR021AA kernel: uhci_hcd 0000:00:1d.2: irq 18, io base 0x0000f700
+[    0.456385] NR021AA kernel: usb usb4: New USB device found, idVendor=1d6b, idProduct=0001
+[    0.456386] NR021AA kernel: usb usb4: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.456387] NR021AA kernel: usb usb4: Product: UHCI Host Controller
+[    0.456388] NR021AA kernel: usb usb4: Manufacturer: Linux 4.11.12-100.fc24.x86_64 uhci_hcd
+[    0.456389] NR021AA kernel: usb usb4: SerialNumber: 0000:00:1d.2
+[    0.456470] NR021AA kernel: hub 4-0:1.0: USB hub found
+[    0.456477] NR021AA kernel: hub 4-0:1.0: 2 ports detected
+[    0.456587] NR021AA kernel: xen: registering gsi 16 triggering 0 polarity 1
+[    0.456588] NR021AA kernel: Already setup the GSI :16
+[    0.456601] NR021AA kernel: uhci_hcd 0000:00:1d.3: UHCI Host Controller
+[    0.456639] NR021AA kernel: uhci_hcd 0000:00:1d.3: new USB bus registered, assigned bus number 5
+[    0.456646] NR021AA kernel: uhci_hcd 0000:00:1d.3: detected 2 ports
+[    0.456676] NR021AA kernel: uhci_hcd 0000:00:1d.3: irq 16, io base 0x0000f800
+[    0.456736] NR021AA kernel: usb usb5: New USB device found, idVendor=1d6b, idProduct=0001
+[    0.456738] NR021AA kernel: usb usb5: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.456739] NR021AA kernel: usb usb5: Product: UHCI Host Controller
+[    0.456740] NR021AA kernel: usb usb5: Manufacturer: Linux 4.11.12-100.fc24.x86_64 uhci_hcd
+[    0.456741] NR021AA kernel: usb usb5: SerialNumber: 0000:00:1d.3
+[    0.456823] NR021AA kernel: hub 5-0:1.0: USB hub found
+[    0.456828] NR021AA kernel: hub 5-0:1.0: 2 ports detected
+[    0.456923] NR021AA kernel: usbcore: registered new interface driver usbserial
+[    0.456929] NR021AA kernel: usbcore: registered new interface driver usbserial_generic
+[    0.456934] NR021AA kernel: usbserial: USB Serial support registered for generic
+[    0.456953] NR021AA kernel: i8042: PNP: No PS/2 controller found.
+[    0.456954] NR021AA kernel: i8042: Probing ports directly.
+[    0.459074] NR021AA kernel: serio: i8042 KBD port at 0x60,0x64 irq 1
+[    0.459078] NR021AA kernel: serio: i8042 AUX port at 0x60,0x64 irq 12
+[    0.459173] NR021AA kernel: mousedev: PS/2 mouse device common for all mice
+[    0.459293] NR021AA kernel: rtc_cmos 00:01: RTC can wake from S4
+[    0.459416] NR021AA kernel: rtc_cmos 00:01: rtc core: registered rtc_cmos as rtc0
+[    0.459442] NR021AA kernel: rtc_cmos 00:01: alarms up to one month, 242 bytes nvram
+[    0.459484] NR021AA kernel: device-mapper: uevent: version 1.0.3
+[    0.459545] NR021AA kernel: device-mapper: ioctl: 4.35.0-ioctl (2016-06-23) initialised: dm-devel@redhat.com
+[    0.459819] NR021AA kernel: hidraw: raw HID events driver (C) Jiri Kosina
+[    0.459848] NR021AA kernel: usbcore: registered new interface driver usbhid
+[    0.459849] NR021AA kernel: usbhid: USB HID core driver
+[    0.459907] NR021AA kernel: drop_monitor: Initializing network drop monitor service
+[    0.459964] NR021AA kernel: ip_tables: (C) 2000-2006 Netfilter Core Team
+[    0.459999] NR021AA kernel: Initializing XFRM netlink socket
+[    0.460104] NR021AA kernel: NET: Registered protocol family 10
+[    0.463359] NR021AA kernel: Segment Routing with IPv6
+[    0.463372] NR021AA kernel: mip6: Mobile IPv6
+[    0.463373] NR021AA kernel: NET: Registered protocol family 17
+[    0.463650] NR021AA kernel: registered taskstats version 1
+[    0.463659] NR021AA kernel: Loading compiled-in X.509 certificates
+[    0.466372] NR021AA kernel: alg: No test for pkcs1pad(rsa,sha256) (pkcs1pad(rsa-generic,sha256))
+[    0.467176] NR021AA kernel: Loaded X.509 cert 'Fedora kernel signing key: 0389d6580c9f74371de9ab1a5f33e2c290a00459'
+[    0.467194] NR021AA kernel: zswap: loaded using pool lzo/zbud
+[    0.470132] NR021AA kernel: Key type big_key registered
+[    0.472939] NR021AA kernel: Key type encrypted registered
+[    0.473126] NR021AA kernel:   Magic number: 5:981:933
+[    0.473222] NR021AA kernel: rtc_cmos 00:01: setting system clock to 2017-10-12 11:54:54 UTC (1507809294)
+[    0.473245] NR021AA kernel: PM: Hibernation image not present or could not be loaded.
+[    0.613027] NR021AA kernel: ata1.00: ATA-9: ST1000DM003-1ER162, CC45, max UDMA/133
+[    0.613029] NR021AA kernel: ata1.00: 1953525168 sectors, multi 16: LBA48 NCQ (depth 0/32)
+[    0.613228] NR021AA kernel: ata1.01: ATAPI: TSSTcorp CDDVDW TS-H653Z, 4303, max UDMA/33
+[    0.618066] NR021AA kernel: ata1.00: configured for UDMA/133
+[    0.622686] NR021AA kernel: ata1.01: configured for UDMA/33
+[    0.623242] NR021AA kernel: scsi 0:0:0:0: Direct-Access     ATA      ST1000DM003-1ER1 CC45 PQ: 0 ANSI: 5
+[    0.623408] NR021AA kernel: sd 0:0:0:0: Attached scsi generic sg0 type 0
+[    0.623442] NR021AA kernel: sd 0:0:0:0: [sda] 1953525168 512-byte logical blocks: (1.00 TB/932 GiB)
+[    0.623444] NR021AA kernel: sd 0:0:0:0: [sda] 4096-byte physical blocks
+[    0.623456] NR021AA kernel: sd 0:0:0:0: [sda] Write Protect is off
+[    0.623457] NR021AA kernel: sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
+[    0.623475] NR021AA kernel: sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[    0.624100] NR021AA kernel: scsi 0:0:1:0: CD-ROM            TSSTcorp CDDVDW TS-H653Z  4303 PQ: 0 ANSI: 5
+[    0.649550] NR021AA kernel: sr 0:0:1:0: [sr0] scsi3-mmc drive: 40x/40x writer dvd-ram cd/rw xa/form2 cdda tray
+[    0.649552] NR021AA kernel: cdrom: Uniform CD-ROM driver Revision: 3.20
+[    0.649677] NR021AA kernel: sr 0:0:1:0: Attached scsi CD-ROM sr0
+[    0.649757] NR021AA kernel: sr 0:0:1:0: Attached scsi generic sg1 type 5
+[    0.684740] NR021AA kernel:  sda: sda1 sda2 sda3 sda4 < sda5 >
+[    0.685218] NR021AA kernel: sd 0:0:0:0: [sda] Attached SCSI disk
+[    0.686072] NR021AA kernel: Freeing unused kernel memory: 2124K
+[    0.686073] NR021AA kernel: Write protecting the kernel read-only data: 14336k
+[    0.689973] NR021AA kernel: Freeing unused kernel memory: 1524K
+[    0.690211] NR021AA kernel: Freeing unused kernel memory: 492K
+[    0.690218] NR021AA kernel: ------------[ cut here ]------------
+[    0.690223] NR021AA kernel: WARNING: CPU: 0 PID: 1 at arch/x86/mm/dump_pagetables.c:235 note_page+0x63c/0x7e0
+[    0.690225] NR021AA kernel: x86/mm: Found insecure W+X mapping at address ffff880000000000/0xffff880000000000
+[    0.690226] NR021AA kernel: Modules linked in:
+[    0.690229] NR021AA kernel: CPU: 0 PID: 1 Comm: swapper/0 Not tainted 4.11.12-100.fc24.x86_64 #1
+[    0.690230] NR021AA kernel: Hardware name: HP-Pavilion NR021AA-ABE p6027es/Boston, BIOS 5.19 03/06/2009
+[    0.690231] NR021AA kernel: Call Trace:
+[    0.690236] NR021AA kernel:  dump_stack+0x63/0x86
+[    0.690237] NR021AA kernel:  __warn+0xcb/0xf0
+[    0.690238] NR021AA kernel:  warn_slowpath_fmt+0x5a/0x80
+[    0.690240] NR021AA kernel:  note_page+0x63c/0x7e0
+[    0.690241] NR021AA kernel:  ptdump_walk_pgd_level_core+0x3b1/0x460
+[    0.690242] NR021AA kernel:  ? 0xffffffff81000000
+[    0.690244] NR021AA kernel:  ptdump_walk_pgd_level_checkwx+0x17/0x20
+[    0.690245] NR021AA kernel:  mark_rodata_ro+0xf4/0x100
+[    0.690247] NR021AA kernel:  ? rest_init+0x80/0x80
+[    0.690248] NR021AA kernel:  kernel_init+0x2a/0x100
+[    0.690250] NR021AA kernel:  ret_from_fork+0x25/0x30
+[    0.690252] NR021AA kernel: ---[ end trace 4bd5093d9a1dc807 ]---
+[    0.698018] NR021AA kernel: x86/mm: Checked W+X mappings: FAILED, 5114 W+X pages found.
+[    0.698028] NR021AA kernel: rodata_test: all tests were successful
+[    0.711475] NR021AA systemd[1]: systemd 229 running in system mode. (+PAM +AUDIT +SELINUX +IMA -APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD +IDN)
+[    0.711571] NR021AA systemd[1]: Detected virtualization xen.
+[    0.711576] NR021AA systemd[1]: Detected architecture x86-64.
+[    0.711578] NR021AA systemd[1]: Running in initial RAM disk.
+[    0.711596] NR021AA systemd[1]: Set hostname to <NR021AA>.
+[    0.764656] NR021AA systemd[1]: Reached target Swap.
+[    0.764713] NR021AA systemd[1]: Reached target Timers.
+[    0.764760] NR021AA systemd[1]: Listening on Journal Socket (/dev/log).
+[    0.764825] NR021AA systemd[1]: Listening on Journal Audit Socket.
+[    0.765308] NR021AA systemd[1]: Created slice System Slice.
+[    0.768109] NR021AA kernel: usb 1-1: new high-speed USB device number 2 using ehci-pci
+[    0.783253] NR021AA kernel: audit: type=1130 audit(1507809294.809:2): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=kmod-static-nodes comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    0.798847] NR021AA kernel: audit: type=1130 audit(1507809294.824:3): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-sysctl comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    0.809335] NR021AA kernel: audit: type=1130 audit(1507809294.835:4): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-tmpfiles-setup-dev comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    0.816192] NR021AA systemd-journald[162]: Journal started
+[    0.816612] NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=kmod-static-nodes comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    0.816729] NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-sysctl comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    0.816776] NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-tmpfiles-setup-dev comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    0.816807] NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-journald comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    0.816885] NR021AA systemd-modules-load[157]: Failed to find module 'xen-evtchn'
+[    0.816669] NR021AA kernel: audit: type=1130 audit(1507809294.842:5): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-journald comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    0.817110] NR021AA systemd-modules-load[157]: Failed to find module 'xen-gntdev'
+[    0.817307] NR021AA systemd-modules-load[157]: Failed to find module 'xen-gntalloc'
+[    0.818383] NR021AA systemd-modules-load[157]: Failed to find module 'xen-blkback'
+[    0.818936] NR021AA systemd-modules-load[157]: Failed to find module 'xen-netback'
+[    0.819116] NR021AA systemd-modules-load[157]: Failed to find module 'xen-pciback'
+[    0.819297] NR021AA systemd-modules-load[157]: Failed to find module 'xen-scsiback'
+[    0.819476] NR021AA systemd-modules-load[157]: Failed to find module 'xen-acpi-processor'
+[    0.819546] NR021AA systemd-sysctl[165]: Couldn't write '0' to 'net/bridge/bridge-nf-call-ip6tables', ignoring: No such file or directory
+[    0.819602] NR021AA systemd-sysctl[165]: Couldn't write '0' to 'net/bridge/bridge-nf-call-iptables', ignoring: No such file or directory
+[    0.819656] NR021AA systemd-sysctl[165]: Couldn't write '0' to 'net/bridge/bridge-nf-call-arptables', ignoring: No such file or directory
+[    0.820741] NR021AA dracut-cmdline[158]: dracut-24 (Workstation Edition) dracut-044-18.git20160108.fc24
+[    0.827145] NR021AA dracut-cmdline[158]: Using kernel command line parameters: placeholder root=/dev/mapper/f24-root ro rd.lvm.lv=f24/root rd.lvm.lv=f24/swap rd.lvm.lv=fedora/swap rhgb quiet
+[    0.888161] NR021AA kernel: usb 1-1: New USB device found, idVendor=0930, idProduct=0b1a
+[    0.888163] NR021AA kernel: usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[    0.888164] NR021AA kernel: usb 1-1: Product: STOR.E ALU 2S
+[    0.888165] NR021AA kernel: usb 1-1: Manufacturer: TOSHIBA
+[    0.888166] NR021AA kernel: usb 1-1: SerialNumber: 201301063529
+[    0.893608] NR021AA systemd[1]: Started Setup Virtual Console.
+[    0.893695] NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-vconsole-setup comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    0.893760] NR021AA kernel: audit: type=1130 audit(1507809294.919:6): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-vconsole-setup comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    0.972187] NR021AA systemd[1]: Started dracut cmdline hook.
+[    0.972285] NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=dracut-cmdline comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    0.972506] NR021AA systemd[1]: Starting dracut pre-udev hook...
+[    0.972346] NR021AA kernel: audit: type=1130 audit(1507809294.997:7): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=dracut-cmdline comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    1.011921] NR021AA systemd[1]: Started dracut pre-udev hook.
+[    1.012075] NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=dracut-pre-udev comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    1.012138] NR021AA kernel: audit: type=1130 audit(1507809295.038:8): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=dracut-pre-udev comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    1.017258] NR021AA systemd[1]: Starting udev Kernel Device Manager...
+[    1.018701] NR021AA kernel: audit: type=1130 audit(1507809295.044:9): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-udevd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    1.019797] NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-udevd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    1.019934] NR021AA systemd[1]: Started udev Kernel Device Manager.
+[    1.020099] NR021AA systemd[1]: Starting udev Coldplug all Devices...
+[    1.027741] NR021AA kernel: usb-storage 1-1:1.0: USB Mass Storage device detected
+[    1.035048] NR021AA kernel: scsi host2: usb-storage 1-1:1.0
+[    1.035132] NR021AA kernel: usbcore: registered new interface driver usb-storage
+[    1.039143] NR021AA kernel: usbcore: registered new interface driver uas
+[    1.065267] NR021AA systemd[1]: Mounting Configuration File System...
+[    1.070317] NR021AA systemd[1]: Mounted Configuration File System.
+[    1.080057] NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-udev-trigger comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    1.080217] NR021AA systemd[1]: Started udev Coldplug all Devices.
+[    1.080355] NR021AA systemd[1]: Reached target System Initialization.
+[    1.080494] NR021AA systemd[1]: Starting Show Plymouth Boot Screen...
+[    1.080110] NR021AA kernel: audit: type=1130 audit(1507809295.104:10): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-udev-trigger comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    1.084027] NR021AA systemd[1]: Starting dracut initqueue hook...
+[    1.121106] NR021AA kernel: usb 3-2: new low-speed USB device number 2 using uhci_hcd
+[    1.135700] NR021AA kernel: r8169 Gigabit Ethernet driver 2.3LK-NAPI loaded
+[    1.135778] NR021AA kernel: xen: registering gsi 16 triggering 0 polarity 1
+[    1.135782] NR021AA kernel: Already setup the GSI :16
+[    1.135805] NR021AA kernel: r8169 0000:05:00.0 (unnamed net_device) (uninitialized): not PCI Express
+[    1.136068] NR021AA kernel: r8169 0000:05:00.0 eth0: RTL8169sb/8110sb at 0xffffc9000105d000, 18:a6:f7:01:78:98, XID 10000000 IRQ 16
+[    1.136070] NR021AA kernel: r8169 0000:05:00.0 eth0: jumbo features [frames: 7152 bytes, tx checksumming: ok]
+[    1.186687] NR021AA kernel: r8169 0000:05:00.0 enp5s0: renamed from eth0
+[    1.233034] NR021AA kernel: [drm] radeon kernel modesetting enabled.
+[    1.236335] NR021AA kernel: AMD IOMMUv2 driver by Joerg Roedel <jroedel@suse.de>
+[    1.236336] NR021AA kernel: AMD IOMMUv2 functionality not available on this system
+[    1.244302] NR021AA kernel: CRAT table not found
+[    1.244304] NR021AA kernel: Finished initializing topology ret=0
+[    1.244316] NR021AA kernel: kfd kfd: Initialized module
+[    1.245171] NR021AA kernel: xen: registering gsi 16 triggering 0 polarity 1
+[    1.245176] NR021AA kernel: Already setup the GSI :16
+[    1.245596] NR021AA kernel: [drm] initializing kernel modesetting (CAICOS 0x1002:0x6779 0x174B:0xE199 0x00).
+[    1.245621] NR021AA kernel: [drm] register mmio base: 0xFDCA0000
+[    1.245621] NR021AA kernel: [drm] register mmio size: 131072
+[    1.246526] NR021AA kernel: ATOM BIOS: AMD
+[    1.247063] NR021AA kernel: radeon 0000:01:00.0: VRAM: 2048M 0x0000000000000000 - 0x000000007FFFFFFF (2048M used)
+[    1.247065] NR021AA kernel: radeon 0000:01:00.0: GTT: 1024M 0x0000000080000000 - 0x00000000BFFFFFFF
+[    1.247067] NR021AA kernel: [drm] Detected VRAM RAM=2048M, BAR=256M
+[    1.247068] NR021AA kernel: [drm] RAM width 64bits DDR
+[    1.247486] NR021AA kernel: [TTM] Zone  kernel: Available graphics memory: 1921976 kiB
+[    1.247487] NR021AA kernel: [TTM] Initializing pool allocator
+[    1.247491] NR021AA kernel: [TTM] Initializing DMA pool allocator
+[    1.247511] NR021AA kernel: [drm] radeon: 2048M of VRAM memory ready
+[    1.247512] NR021AA kernel: [drm] radeon: 1024M of GTT memory ready.
+[    1.247520] NR021AA kernel: [drm] Loading CAICOS Microcode
+[    1.247627] NR021AA kernel: [drm] Internal thermal controller without fan control
+[    1.252076] NR021AA kernel: [drm] radeon: dpm initialized
+[    1.252368] NR021AA kernel: [drm] GART: num cpu pages 262144, num gpu pages 262144
+[    1.260430] NR021AA kernel: [drm] PCIE GART of 1024M enabled (table at 0x0000000000162000).
+[    1.260546] NR021AA kernel: radeon 0000:01:00.0: WB enabled
+[    1.260548] NR021AA kernel: radeon 0000:01:00.0: fence driver on ring 0 use gpu addr 0x0000000080000c00 and cpu addr 0xffff8801199eac00
+[    1.260549] NR021AA kernel: radeon 0000:01:00.0: fence driver on ring 3 use gpu addr 0x0000000080000c0c and cpu addr 0xffff8801199eac0c
+[    1.261302] NR021AA kernel: radeon 0000:01:00.0: fence driver on ring 5 use gpu addr 0x0000000000072118 and cpu addr 0xffffc90001632118
+[    1.261775] NR021AA kernel: [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[    1.261776] NR021AA kernel: [drm] Driver supports precise vblank timestamp query.
+[    1.261777] NR021AA kernel: radeon 0000:01:00.0: radeon: MSI limited to 32-bit
+[    1.261844] NR021AA kernel: radeon 0000:01:00.0: radeon: using MSI.
+[    1.261878] NR021AA kernel: [drm] radeon: irq initialized.
+[    1.279122] NR021AA kernel: [drm] ring test on 0 succeeded in 2 usecs
+[    1.279132] NR021AA kernel: [drm] ring test on 3 succeeded in 6 usecs
+[    1.294398] NR021AA systemd[1]: dev-disk-by\x2dpath-pci\x2d0000:00:1f.2\x2data\x2d1.device: Dev dev-disk-by\x2dpath-pci\x2d0000:00:1f.2\x2data\x2d1.device appeared twice with different sysfs paths /sys/devices/pci0000:00/0000:00:1f.2/ata1/host0/target0:0:1/0:0:1:0/block/sr0 and /sys/devices/pci0000:00/0000:00:1f.2/ata1/host0/target0:0:0/0:0:0:0/block/sda
+[    1.456329] NR021AA kernel: [drm] ring test on 5 succeeded in 2 usecs
+[    1.456340] NR021AA kernel: [drm] UVD initialized successfully.
+[    1.456408] NR021AA kernel: clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x2fef68ddeea, max_idle_ns: 440795317101 ns
+[    1.456718] NR021AA kernel: [drm] ib test on ring 0 succeeded in 0 usecs
+[    1.456766] NR021AA kernel: [drm] ib test on ring 3 succeeded in 0 usecs
+[    1.477198] NR021AA kernel: usb 3-2: New USB device found, idVendor=046d, idProduct=c05a
+[    1.477200] NR021AA kernel: usb 3-2: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    1.477201] NR021AA kernel: usb 3-2: Product: USB Optical Mouse
+[    1.477202] NR021AA kernel: usb 3-2: Manufacturer: Logitech
+[    1.493565] NR021AA kernel: input: Logitech USB Optical Mouse as /devices/pci0000:00/0000:00:1d.1/usb3/3-2/3-2:1.0/0003:046D:C05A.0001/input/input5
+[    1.493644] NR021AA kernel: hid-generic 0003:046D:C05A.0001: input,hidraw0: USB HID v1.11 Mouse [Logitech USB Optical Mouse] on usb-0000:00:1d.1-2/input0
+[    1.847157] NR021AA kernel: usb 4-1: new low-speed USB device number 2 using uhci_hcd
+[    2.017126] NR021AA kernel: usb 4-1: New USB device found, idVendor=046d, idProduct=c31c
+[    2.017128] NR021AA kernel: usb 4-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    2.017130] NR021AA kernel: usb 4-1: Product: USB Keyboard
+[    2.017132] NR021AA kernel: usb 4-1: Manufacturer: Logitech
+[    2.051584] NR021AA kernel: input: Logitech USB Keyboard as /devices/pci0000:00/0000:00:1d.2/usb4/4-1/4-1:1.0/0003:046D:C31C.0002/input/input6
+[    2.103323] NR021AA kernel: hid-generic 0003:046D:C31C.0002: input,hidraw1: USB HID v1.10 Keyboard [Logitech USB Keyboard] on usb-0000:00:1d.2-1/input0
+[    2.111149] NR021AA kernel: [drm] ib test on ring 5 succeeded
+[    2.111477] NR021AA kernel: [drm] Radeon Display Connectors
+[    2.111478] NR021AA kernel: [drm] Connector 0:
+[    2.111479] NR021AA kernel: [drm]   HDMI-A-1
+[    2.111479] NR021AA kernel: [drm]   HPD1
+[    2.111481] NR021AA kernel: [drm]   DDC: 0x6460 0x6460 0x6464 0x6464 0x6468 0x6468 0x646c 0x646c
+[    2.111481] NR021AA kernel: [drm]   Encoders:
+[    2.111482] NR021AA kernel: [drm]     DFP1: INTERNAL_UNIPHY1
+[    2.111482] NR021AA kernel: [drm] Connector 1:
+[    2.111483] NR021AA kernel: [drm]   DVI-D-1
+[    2.111483] NR021AA kernel: [drm]   HPD4
+[    2.111484] NR021AA kernel: [drm]   DDC: 0x6440 0x6440 0x6444 0x6444 0x6448 0x6448 0x644c 0x644c
+[    2.111484] NR021AA kernel: [drm]   Encoders:
+[    2.111485] NR021AA kernel: [drm]     DFP2: INTERNAL_UNIPHY
+[    2.111485] NR021AA kernel: [drm] Connector 2:
+[    2.111486] NR021AA kernel: [drm]   VGA-1
+[    2.111487] NR021AA kernel: [drm]   DDC: 0x6430 0x6430 0x6434 0x6434 0x6438 0x6438 0x643c 0x643c
+[    2.111487] NR021AA kernel: [drm]   Encoders:
+[    2.111487] NR021AA kernel: [drm]     CRT1: INTERNAL_KLDSCP_DAC1
+[    2.152179] NR021AA kernel: input: Logitech USB Keyboard as /devices/pci0000:00/0000:00:1d.2/usb4/4-1/4-1:1.1/0003:046D:C31C.0003/input/input7
+[    2.156556] NR021AA kernel: [drm] fb mappable at 0xD0363000
+[    2.156556] NR021AA kernel: [drm] vram apper at 0xD0000000
+[    2.156557] NR021AA kernel: [drm] size 5324800
+[    2.156557] NR021AA kernel: [drm] fb depth is 24
+[    2.156558] NR021AA kernel: [drm]    pitch is 5888
+[    2.156607] NR021AA kernel: fbcon: radeondrmfb (fb0) is primary device
+[    2.183823] NR021AA kernel: Console: switching to colour frame buffer device 180x56
+[    2.187243] NR021AA kernel: radeon 0000:01:00.0: fb0: radeondrmfb frame buffer device
+[    2.196963] NR021AA kernel: [drm] Initialized radeon 2.49.0 20080528 for 0000:01:00.0 on minor 0
+[    2.204184] NR021AA kernel: hid-generic 0003:046D:C31C.0003: input,hidraw2: USB HID v1.10 Device [Logitech USB Keyboard] on usb-0000:00:1d.2-1/input1
+[    2.278196] NR021AA systemd[1]: Received SIGRTMIN+20 from PID 319 (plymouthd).
+[    2.279161] NR021AA audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=plymouth-start comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    2.279315] NR021AA systemd[1]: Started Show Plymouth Boot Screen.
+[    2.279445] NR021AA systemd[1]: Started Forward Password Requests to Plymouth Directory Watch.
+[    2.279572] NR021AA systemd[1]: Reached target Paths.
+[    2.279700] NR021AA systemd[1]: Reached target Basic System.
+[    2.463161] NR021AA kernel: usb 1-8: new high-speed USB device number 5 using ehci-pci
+[    2.463245] NR021AA kernel: clocksource: Switched to clocksource tsc
+[    2.599552] NR021AA kernel: usb 1-8: New USB device found, idVendor=0bda, idProduct=0151
+[    2.599555] NR021AA kernel: usb 1-8: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[    2.599557] NR021AA kernel: usb 1-8: Product: USB2.0-CRW
+[    2.599558] NR021AA kernel: usb 1-8: Manufacturer: Generic
+[    2.599560] NR021AA kernel: usb 1-8: SerialNumber: 20060413092100000
+[    2.601464] NR021AA kernel: usb-storage 1-8:1.0: USB Mass Storage device detected
+[    2.601628] NR021AA kernel: scsi host3: usb-storage 1-8:1.0
+[    2.868014] NR021AA dracut-initqueue[320]: Scanning devices sda3 sda5  for LVM logical volumes f24/root f24/swap fedora/swap
+[    2.876138] NR021AA kernel: random: crng init done
+[    2.887432] NR021AA dracut-initqueue[320]: inactive '/dev/f24/tmp' [3.00 GiB] inherit
+[    2.887595] NR021AA dracut-initqueue[320]: inactive '/dev/f24/root' [15.00 GiB] inherit
+[    2.887731] NR021AA dracut-initqueue[320]: inactive '/dev/f24/home' [5.00 GiB] inherit
+[    2.887888] NR021AA dracut-initqueue[320]: inactive '/dev/f24/swap' [2.00 GiB] inherit
+[    3.039548] NR021AA systemd[1]: Found device /dev/mapper/f24-root.
+[    3.196023] NR021AA systemd[1]: dev-disk-by\x2dlabel-F24.device: Dev dev-disk-by\x2dlabel-F24.device appeared twice with different sysfs paths /sys/devices/virtual/block/dm-0 and /sys/devices/virtual/block/dm-1
+[    3.227460] NR021AA dracut-initqueue[320]: Volume group "fedora" not found
+[    3.227611] NR021AA dracut-initqueue[320]: Cannot process volume group fedora
+[    3.620456] NR021AA kernel: scsi 3:0:0:0: Direct-Access     Generic- Compact Flash    1.00 PQ: 0 ANSI: 0 CCS
+[    3.625692] NR021AA kernel: scsi 3:0:0:1: Direct-Access     Generic- SM/xD-Picture    1.00 PQ: 0 ANSI: 0 CCS
+[    3.630818] NR021AA kernel: scsi 3:0:0:2: Direct-Access     Generic- SD/MMC           1.00 PQ: 0 ANSI: 0 CCS
+[    3.636067] NR021AA kernel: scsi 3:0:0:3: Direct-Access     Generic- MS/MS-Pro        1.00 PQ: 0 ANSI: 0 CCS
+[    3.926948] NR021AA kernel: scsi 2:0:0:0: Direct-Access     TOSHIBA  STOR.E ALU 2S    0001 PQ: 0 ANSI: 6
+[    3.927345] NR021AA kernel: sd 2:0:0:0: Attached scsi generic sg2 type 0
+[    3.927468] NR021AA kernel: sd 3:0:0:0: Attached scsi generic sg3 type 0
+[    3.927591] NR021AA kernel: sd 3:0:0:1: Attached scsi generic sg4 type 0
+[    3.927725] NR021AA kernel: sd 3:0:0:2: Attached scsi generic sg5 type 0
+[    3.927854] NR021AA kernel: sd 3:0:0:3: Attached scsi generic sg6 type 0
+[    3.928493] NR021AA kernel: sd 2:0:0:0: [sdb] 2930277168 512-byte logical blocks: (1.50 TB/1.36 TiB)
+[    3.930867] NR021AA kernel: sd 2:0:0:0: [sdb] Write Protect is off
+[    3.930868] NR021AA kernel: sd 2:0:0:0: [sdb] Mode Sense: 1f 00 00 08
+[    3.931975] NR021AA kernel: sd 2:0:0:0: [sdb] No Caching mode page found
+[    3.931978] NR021AA kernel: sd 2:0:0:0: [sdb] Assuming drive cache: write through
+[    3.936678] NR021AA kernel: sd 3:0:0:0: [sdc] Attached SCSI removable disk
+[    3.937549] NR021AA kernel: sd 3:0:0:1: [sdd] Attached SCSI removable disk
+[    3.938417] NR021AA kernel: sd 3:0:0:2: [sde] Attached SCSI removable disk
+[    3.939421] NR021AA kernel: sd 3:0:0:3: [sdf] Attached SCSI removable disk
+[    3.944215] NR021AA kernel:  sdb: sdb1 sdb2 sdb3 sdb4
+[    3.947544] NR021AA kernel: sd 2:0:0:0: [sdb] Attached SCSI disk
+[    4.628551] NR021AA dracut-initqueue[320]: Scanning devices sda3 sda5 sdb3 sdb4  for LVM logical volumes f24/root f24/swap fedora/swap
+[    4.743356] NR021AA dracut-initqueue[320]: inactive '/dev/multimedia/backups' [15.00 GiB] inherit
+[    4.743503] NR021AA dracut-initqueue[320]: inactive '/dev/multimedia/vmTexto' [5.00 GiB] inherit
+[    4.749089] NR021AA dracut-initqueue[320]: inactive '/dev/f24/tmp' [3.00 GiB] inherit
+[    4.749221] NR021AA dracut-initqueue[320]: ACTIVE '/dev/f24/root' [15.00 GiB] inherit
+[    4.749356] NR021AA dracut-initqueue[320]: inactive '/dev/f24/home' [5.00 GiB] inherit
+[    4.749488] NR021AA dracut-initqueue[320]: ACTIVE '/dev/f24/swap' [2.00 GiB] inherit
+[    4.914440] NR021AA dracut-initqueue[320]: Volume group "fedora" not found
+[    4.914590] NR021AA dracut-initqueue[320]: Cannot process volume group fedora
+[    6.056246] NR021AA systemd[1]: Received SIGRTMIN+20 from PID 319 (plymouthd).
+[   13.484340] NR021AA systemd[1]: Received SIGRTMIN+20 from PID 319 (plymouthd).
+[   15.655875] NR021AA systemd[1]: Received SIGRTMIN+20 from PID 319 (plymouthd).
+[  129.380953] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  129.422633] NR021AA dracut-initqueue[320]: Scanning devices sda3 sda5 sdb3 sdb4  for LVM logical volumes f24/root f24/swap fedora/swap
+[  129.711168] NR021AA dracut-initqueue[320]: inactive '/dev/multimedia/backups' [15.00 GiB] inherit
+[  129.711315] NR021AA dracut-initqueue[320]: inactive '/dev/multimedia/vmTexto' [5.00 GiB] inherit
+[  129.726096] NR021AA dracut-initqueue[320]: inactive '/dev/f24/tmp' [3.00 GiB] inherit
+[  129.726340] NR021AA dracut-initqueue[320]: ACTIVE '/dev/f24/root' [15.00 GiB] inherit
+[  129.726480] NR021AA dracut-initqueue[320]: inactive '/dev/f24/home' [5.00 GiB] inherit
+[  129.726611] NR021AA dracut-initqueue[320]: ACTIVE '/dev/f24/swap' [2.00 GiB] inherit
+[  129.736371] NR021AA dracut-initqueue[320]: PARTIAL MODE. Incomplete logical volumes will be processed.
+[  129.813057] NR021AA dracut-initqueue[320]: PARTIAL MODE. Incomplete logical volumes will be processed.
+[  129.889948] NR021AA dracut-initqueue[320]: PARTIAL MODE. Incomplete logical volumes will be processed.
+[  130.003034] NR021AA dracut-initqueue[320]: Volume group "fedora" not found
+[  130.003183] NR021AA dracut-initqueue[320]: Cannot process volume group fedora
+[  130.540049] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  131.059686] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  131.579113] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  132.098565] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  132.618110] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  133.137628] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  133.656895] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  134.176523] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  134.696040] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  135.215626] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  135.735337] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  136.254791] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  136.774539] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  137.294079] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  137.813622] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  138.333368] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  138.852759] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  139.372384] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  139.892050] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  140.411648] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  140.931358] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  141.450626] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  141.969938] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  142.489345] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  143.008989] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  143.528590] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  144.048333] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  144.568043] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  145.087623] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  145.607569] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  146.127512] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  146.646921] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  147.166616] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  147.686526] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  148.206433] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  148.725945] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  149.245694] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  149.765986] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  150.285666] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  150.805511] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  151.324836] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  151.844584] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  152.364384] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  152.883864] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  153.403613] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  153.923107] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  154.442819] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  154.888176] NR021AA systemd[1]: Received SIGRTMIN+20 from PID 319 (plymouthd).
+[  154.962579] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  155.483310] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  156.003362] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  156.523049] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  157.042842] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  157.562615] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  158.082495] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  158.601973] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  159.121510] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  159.641469] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  160.160705] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  160.680629] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  161.200252] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  161.719802] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  162.239525] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  162.759397] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  163.279059] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  163.798862] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  164.318722] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  164.838275] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  165.358070] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  165.877776] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  166.397718] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  166.917390] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  167.437263] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  167.957380] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  168.477149] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  168.997037] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  169.516915] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  170.036837] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  170.394890] NR021AA systemd[1]: Received SIGRTMIN+20 from PID 319 (plymouthd).
+[  170.556863] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  171.076780] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  171.596775] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  172.116576] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  172.636534] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  173.156658] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  173.676504] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  174.196607] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  174.716387] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  175.236563] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  175.756569] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  176.276676] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  176.796245] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  177.316352] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  177.835882] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  178.255441] NR021AA systemd[1]: Received SIGRTMIN+20 from PID 319 (plymouthd).
+[  178.356091] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  178.876164] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  179.395726] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  179.915835] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  180.436050] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  180.955958] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  181.475662] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  181.995796] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  182.515947] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  183.036090] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  183.556266] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  184.076585] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  184.596755] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  185.116661] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  185.636847] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  186.156921] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  186.676962] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  187.197068] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  187.717324] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  188.236866] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  188.756882] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  189.276874] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  189.796861] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  190.316799] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  190.836876] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  191.356758] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  191.876886] NR021AA dracut-initqueue[320]: Warning: dracut-initqueue timeout - starting timeout scripts
+[  191.877058] NR021AA dracut-initqueue[320]: Warning: Could not boot.
+[  191.927353] NR021AA systemd[1]: Received SIGRTMIN+20 from PID 319 (plymouthd).
+[  191.962841] NR021AA dracut-initqueue[320]: Warning: /dev/fedora/swap does not exist
+[  191.972494] NR021AA systemd[1]: Starting Dracut Emergency Shell...
+[  191.992060] NR021AA systemd[1]: Received SIGRTMIN+21 from PID 319 (plymouthd).
+[  191.992843] NR021AA audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=plymouth-start comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[  191.998436] NR021AA kernel: kauditd_printk_skb: 1 callbacks suppressed
+[  191.998438] NR021AA kernel: audit: type=1131 audit(1507809486.018:12): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=plymouth-start comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'

@@ -1,0 +1,58 @@
+/*
+linux stack
+http://unix.stackexchange.com/questions/276951/
+how-to-change-the-titlebar-height-in-standard-gtk-apps-and-those-with-headerbars
+*/
+window.ssd headerbar.titlebar {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  min-height: 0;
+  font-size: 8px; /* ori 10px*/
+}
+
+window.ssd headerbar.titlebar button.titlebutton {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  min-height: 0;
+}
+
+/* shrink headerbars*/
+headerbar {
+  min-height: 38px; /* 38 */
+  padding-left: 2px; /*same as childres vertical margins for nicer proportions*/
+  padding-right: 2px;
+}
+
+headerbar entry,
+headerbar spinbutton,
+headerbar button,
+headerbar separator {
+  margin-top: 2px; /*same as headerbar side padding for nicer proportion*/
+  margin-bottom: 2px;
+}
+
+/* shrink ssd titlebars */
+.default-decoration {
+  min-height: 0; /* let the entry and button drive the titlebar size*/
+  padding: 2px;
+}
+
+.default-decoration .titlebutton {
+  min-height: 16px; /*tweak these two pops to reduce button size !! 26*/
+  min-width: 16px;
+}
+/*
+  GtkInspector is disabled by default, to activate it:
+
+  $ gsettings set org.gtk.Settings.Debug enable-inspector-keybinding true
+
+  After this an application can be debbuged with:
+  $ GTK_DEBUG=interactive myApp
+
+  GtkInspector is not a replacement to the debbuger is something like a
+  complemented tool. I saw a featured counterpart of GtkInspector on privative
+  side to develope movil apps(Reveal app).
+  I think are both related, and some TODO is pointed on the page: (**interesting**)
+  https://wiki.gnome.org/Projects/GTK+/Inspector
+
+*/

@@ -1,6 +1,6 @@
 [user]
-	name = heliogabalo
+	name = helio
 	email = jonitjuego@gmail.com
 [push]
-#	default = matching
-	default = current
+	default = matching
+#	default = current
