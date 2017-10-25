@@ -9,12 +9,17 @@ un buen momento para instalarlo.
 
 #### Eleccion del software
 
+- Descarga del nucleo:\
+
 		git clone git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git
 		cd linux-stable
 		
 		git tag -l | less
 		
 		git checkout -b stable tag
+
+- 
+
 
 #### Construccion e instalacion del _kernel_
 
@@ -81,7 +86,7 @@ Decidir despues si lo hacemos con _Qemu_ o no.
 Si lo hacemos con Xen, hay que reconfigurar el kernel e instalar Xen, despues crear
 la MV.
 
-Si lo hacemos con Qemo, ejem, para ver si funciona o no la reconfiguracion del 
+Si lo hacemos con Qemu, ejem, para ver si funciona o no la reconfiguracion del 
 kernel, goto line 1.
 
 ################# END BORRAR ESTO ####################
@@ -122,3 +127,16 @@ sistema para `.config`.
 Construye un `kernel` _por defecto_.
 
 		make defconfig
+		
+		
+		
+		
+---
+
+## Referencias
+
+[https://docs.fedoraproject.org/f26/install-guide][Fedora Installation Guide]
+[https://en.wikibooks.org/wiki/How_To_Backup_Operating_Systems][How_To_Backup_Operating_Systems]
+[https://www.kernel.org/doc][kernel-docs]
+
+

@@ -33,12 +33,14 @@
 #### PE's -- Processing Elements
 #### API -- Application Programming Interface
 #### CRT -- Tubo de Rayos Catódicos
-#### TDP -- Thermal Design Power. Indica la cantidad de W de calor, que puede disipar el sistema 
-     antes de alcanzar el máximo d.
+#### TDP -- Thermal Design Power. Indica la cantidad de W de calor, que puede disipar el sistema antes de alcanzar el máximo d.
 #### FMA -- Fused Multiply-Add. Mejora para el cálculo de operaciones con punto flotante.
 #### OC -- OverClocking
 #### PASID -- Process Adress Space Identifiers, Identificadores del espacio de direccionamiento de proceso.
 #### IOMMU -- I/O Memory Management Unit
+#### OHCI -- Open Host Controller Interface to talk to USB 1.1
+#### UHCI --
+
 ---
 
 ## Referencias Memorias
