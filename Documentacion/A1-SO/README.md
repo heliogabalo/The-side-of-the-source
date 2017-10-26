@@ -1,4 +1,12 @@
-Aqui enlazan otras paginas:
+##	INDICE
+
+1. Eleccion del software
+2. Construccion e instalacion del _kernel_ 
+3. Reconfiguracion en caliente; con el sistema en funcionamiento.
+4. Construir un kernel de uso general
+5. Referencias
+
+---
 
 Lo primero habra que identificar la fuente con la que trabajar. Hay varias formas de
 hacerlo. La mas simple es ir al sitio del software en cuestion y hacer click en el 
@@ -17,8 +25,6 @@ un buen momento para instalarlo.
 		git tag -l | less
 		
 		git checkout -b stable tag
-
-- 
 
 
 #### Construccion e instalacion del _kernel_
@@ -49,7 +55,6 @@ Para ello se utilizara lo opcion _output/dir_, su nomenclatura es la siguiente:
 		$ make O=/home/name/build/kernel
 		$ make O=/home/name/build/kernel modules_install install
 
-
 De esta forma, en lugar de construir hacia la ruta por defecto del sistema `/`,
 sera indicada una ruta alternativa, `/home/name/build/kernel`, en este caso.
 
@@ -64,32 +69,6 @@ Tambien existe la posibilidad de crear una imagen ISO:
 		
 
 - En el mismo equipo
-
-################# BORRAR ESTO ####################
-
-Parece que todo es muy confuso, pero piensa un momento, de verdad quieres crear
-un sistema operativo desde ceso? entiendes que eso conyeva la seleccion de todas
-las aplicaciones y su testeo de compatibilidad?
-
-No, esa no es la forma. Hay que instalar la distribucion y despues modificar el kernel,
-de lo contrario estariamos hablando de un proyecto que puede durar _$(indeterminado)_.
-El jaleo mental, es que pretendo hacer las pruebas en una _VM_ por eso todo este rollo,
-de la imagen, el directorio y demas. Necesito un campo de prueba donde si se incendia
-algo, pueda salir corriendo sin mirar atras y, borrar el fuego si procede!
-
-Lo primero sera conseguir la imagen, el sistema. Puede ser el mismo disco de instalacion
-o generar una imagen desde la que se pueda arrancar, esto implica al menos un sistema
-de ficheros donde montar la imagen del kernel.
-
-Decidir despues si lo hacemos con _Qemu_ o no.
-
-Si lo hacemos con Xen, hay que reconfigurar el kernel e instalar Xen, despues crear
-la MV.
-
-Si lo hacemos con Qemu, ejem, para ver si funciona o no la reconfiguracion del 
-kernel, goto line 1.
-
-################# END BORRAR ESTO ####################
 
 > __nota:__ recuerda que para cambiar a una rama `checkout master` y, para
 > _cambiar_ a una rama en particular, deberemos escribir todo el nombre de 
@@ -108,9 +87,6 @@ kernel, goto line 1.
 - creacion imagen(paquete).
 
 
-
-
-
 #### Reconfiguracion en caliente; con el sistema en funcionamiento.
 
 Si el _kernel_ esta configurado para ello:
@@ -121,6 +97,7 @@ guardar el archivo de configuracion fuera del _nombre_ que usara el
 sistema para `.config`.
 
 		make savedefconfig
+
 		
 #### Construir un kernel de uso general
 
@@ -129,14 +106,16 @@ Construye un `kernel` _por defecto_.
 		make defconfig
 		
 		
-		
-		
 ---
 
 ## Referencias
 
-[https://docs.fedoraproject.org/f26/install-guide][Fedora Installation Guide]
-[https://en.wikibooks.org/wiki/How_To_Backup_Operating_Systems][How_To_Backup_Operating_Systems]
-[https://www.kernel.org/doc][kernel-docs]
-
-
+[https://docs.fedoraproject.org/f26/install-guide]:[Fedora Installation Guide]
+[https://en.wikibooks.org/wiki/How_To_Backup_Operating_Systems]:[How_To_Backup_Operating_Systems]
+[https://www.kernel.org/doc]:[kernel-docs]
+#### Reconstruir el kernel
+[https://boot.fedoraproject.org/downloads]:[Reconstruir?]
+#### DOWNLOAD
+[https://dl.fedoraproject.org/pub/alt/bfo/bfo.iso]:[Downloads]
+#### net isntall
+[http://ipxe.org]:[Net-install]
