@@ -1,4 +1,6 @@
-##	INDICE
+## El nucleo
+
+####	INDICE
 
 1. Eleccion del software
 2. Construccion e instalacion del _kernel_ 
