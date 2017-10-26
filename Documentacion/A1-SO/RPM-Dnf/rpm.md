@@ -19,8 +19,8 @@ Ver  los metadatos:
 ---
 
 ## Referencias 
-[vdt.cs.wisc.edu/internal/native/using-srpm.html]:[Using an Source RPM]  
-[https://fedoraproject.org/wiki/Building_a_custom_kernel][Buildeing a custom ekrnel]  
+[Using an Source RPM]:[vdt.cs.wisc.edu/internal/native/using-srpm.html]  
+[Buildeing a custom ekrnel][https://fedoraproject.org/wiki/Building_a_custom_kernel]  
 [https://www.hiroom2.com/2016/06/25/fedora-24-rebuild-kernel-with-src-rpm][narrow escape]  
 [https://fedoraproject.org/wiki/Using_Mock_to_test_package_builds][using mock to test packagebuilds]  
 [https://github.com/rpm_software_management/mock/wicki][Mock]  
