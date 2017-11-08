@@ -6,6 +6,7 @@
 2. Construccion e instalacion del _kernel_ 
 3. Reconfiguracion en caliente; con el sistema en funcionamiento.
 4. Construir un kernel de uso general
+5. Opciones de depuración
 5. Referencias
 
 ---
@@ -108,6 +109,22 @@ Construye un `kernel` _por defecto_.
 		make defconfig
 		
 		
+---
+#### Opciones de depuración
+
+En ambos casos, es una mala idea tomar por defecto las siguientes prácticas. AVISO.
+- Mantener una copia del `.config` con el que se compiló el núcleo.
+- Activar la característica `General Setup -> kernel .config support`.
+		$ cat /proc/config.gz | gunzip > /tmp/running.config
+		or ...
+		$ 2cat /proc/config.gz > /tmp/running.config
+
+Esta práctica únicamente es recomendable cuando se depura el núcleo. Es la excepción,
+ya que es cuando resulta útil. Pero no hay que olvidar desactivar la característica 
+y borrar cualquier rastro de tal archivo. ¿Por qué? lol, pues por que si algo/alguien
+accede al equipo con privilegios suficientes podrá, replicar el núcleo del sistema.
+> __nota:__ siempre y cuando el sujeto tenga la capacidad, los drivers y dispositivos
+> o en su defecto, una máquina capaz de emular dichos componentes!
 ---
 
 ## Referencias

@@ -3,247 +3,248 @@
 
 #### Introducción
 
-Éste capítulo proporciona un resumen a _alto nivel_ de __ACPI__. Para facilitar la comprensión
-de __ACPI__, esta sección se centra en su conjunto y conceptos generales sobre __ACPI__, en 
-lugar de centrar la discusión en otros aspectos excepcionales o detalles concretos.
+Éste capítulo proporciona un resumen a _alto nivel_ de __ACPI__. Para facilitar la  
+comprensión de __ACPI__, esta sección se centra en su conjunto y conceptos generales   sobre __ACPI__, en lugar de centrar la discusión en otros aspectos excepcionales o   detalles concretos.
 
-El resto de documentación específica, proporciona un mayor grado en detalle sobre cuestiones
-particulares y, es por tanto lectura recomendada para desarrolladores que pretendan su uso.
+El resto de documentación específica, proporciona un mayor grado en detalle sobre   cuestiones particulares y, es por tanto lectura recomendada para desarrolladores que   pretendan su uso.
 
 #### Historia de ACPI
-__ACPI__ fué desarrollado en colaboración con _Intel, Microsoft, Toshiba, HP, y Phoenix_, a 
-medidados de 1990. Antes de su desarrollo, el sistema operativo(OS) usaba principalmente
-la interfase BIOS(Basic Input/Output System) para la gestión de la energía y el reconocimiento
-de dispositivos y su configuración. Ésta aproximación a la gestión de energía, usó la habilidad
-del _OS_, para llamar al sistema BIOS de forma _nativa_, en cuanto a dicha gestión de energía.
+__ACPI__ fué desarrollado en colaboración con _Intel, Microsoft, Toshiba, HP,  
+y Phoenix_, a medidados de 1990. Antes de su desarrollo, el sistema operativo(OS)  
+usaba principalmente la interfase BIOS(Basic Input/Output System) para la gestión  
+de la energía y el reconocimiento de dispositivos y su configuración. Ésta  
+aproximación a la gestión de energía, usó la habilidad del _OS_, para llamar al  
+sistema BIOS de forma _nativa_, en cuanto a dicha gestión de energía.  
 
-LA BIOS también fue usada para el reconocimiento de dispositivos de sistema y la carga de sus
-controladores, basándose en pruebas de entrada/salida(I/O) y tratando de establecer una 
-correlación entre el dispositivo y el controlador adecuado(Plug & Play). La localización de
-los dispositivos podía ser _harcodeada_ dentro de la __BIOS__ por que la plataforma en si
-misma era __no-enumerable__.
+LA BIOS también fue usada para el reconocimiento de dispositivos de sistema y la  
+carga de sus controladores, basándose en pruebas de entrada/salida(I/O) y tratando  
+de establecer una correlación entre el dispositivo y el controlador adecuado(Plug &  
+Play). La localización de los dispositivos podía ser _harcodeada_ dentro de la __BIOS__  
+por que la plataforma en si misma era __no-enumerable__.  
 
-Ésta solución era problemática en tres puntos clave. Primero, el comportamiento de aplicaciones
-del _OS_, podía afectar negativamente por la configuración de la gestion de energía de la __BIOS__
-provocando que el sistema activase el estado durmiente u otros estados inconvenientes, durante 
-presentaciones.
+Ésta solución era problemática en tres puntos clave. Primero, el comportamiento de   aplicaciones del _OS_, podía afectar negativamente por la configuración de la  
+gestion de energía de la __BIOS__ provocando que el sistema activase el estado  
+durmiente u otros estados inconvenientes, durante presentaciones.  
 
-Segundo, las interfases de gestión de energía eran particulares(propietarias) para cada sistema
-individual. Finalmente, la configuración ,por defecto, para varios dispositivos, podía hacer
-que entrasen en conflicto entre ellos, causando que los dispositivos dejasen de funcionar,
-que se comportasen de forma errática o que no fuesen reconocibles.
+Segundo, las interfases de gestión de energía eran particulares(propietarias)  
+para cada sistema individual. Finalmente, la configuración ,por defecto, para  
+varios dispositivos, podía hacer que entrasen en conflicto entre ellos, causando  
+que los dispositivos dejasen de funcionar, que se comportasen de forma errática  
+o que no fuesen reconocibles.  
 
 __ACPI__, fue desarrollado para solventar dichos problemas.
 
 
 #### Qué es ACPI?
 
-En primer lugar, __ACPI__ puede ser entendido como una _arquitectura independiente_, para la
-gestión de la energía y, un marco de configuración que compone un subsistema dentro del 
-_OS_ huesped. Éste _marco_, establece un conjunto de registros de hardware para definir 
-distintos estados de energía(durmiente, hibernación, activo, etc). El conjunto de registros
-de hardware, puden acondicionar operaciones sobre hardware dedicado o de propuesta general.
+En primer lugar, __ACPI__ puede ser entendido como una _arquitectura independiente_,  para la gestión de la energía y, un marco de configuración que compone un subsistema  
+dentro del _OS_ huesped. Éste _marco_, establece un conjunto de registros de hardware  
+para definir distintos estados de energía(durmiente, hibernación, activo, etc). El  
+conjunto de registros de hardware, puden acondicionar operaciones sobre hardware  
+dedicado o de propuesta general.  
 
-La intención primaria, del marco normalizado __ACPI(standard ACPI framework)__ y, el conjunto
-de registros de hardware, es activar la gestión de la energía y configuración de sistema,
-sin tener que llamar nativamente al software de fabricate desde el _OS_. __ACPI__ actua como
-una interfase de capa, entre el software de fabricante de sistema(firmware) _BIOS_ y, el
-_OS_. Tal y como se muestra en las figuras 1 y 2, con ciertas restricciones y reglas.
+La intención primaria, del marco normalizado __ACPI(standard ACPI framework)__ y, el  
+conjunto de registros de hardware, es activar la gestión de la energía y configuración  
+de sistema, sin tener que llamar nativamente al software de fabricate desde el _OS_.  
+__ACPI__ actua como una interfase de capa, entre el software de fabricante de sistema  
+(firmware) _BIOS_ y, el _OS_. Tal y como se muestra en las figuras 1 y 2, con ciertas  
+restricciones y reglas.  
 
 
   
-    ******************************************************
-    **                 Sistema Operativo                **
-    ******************************************************
-                            ^  |
-                            |  |
-                            |  #
-    ******************************************************
-    **                 ACPI subsistem                   **
-    ******************************************************
-                              ^
-                              |
-    ******************************************************
-    **           software de fabricante                 **
-    ******************************************************
+    ******************************************************  
+    **                 Sistema Operativo                **  
+    ******************************************************  
+                            ^  |  
+                            |  |  
+                            |  #  
+    ******************************************************  
+    **                 ACPI subsistem                   **  
+    ******************************************************  
+                              ^  
+                              |  
+    ******************************************************  
+    **           software de fabricante                 **  
+    ******************************************************  
   
-> El subsistema ACPI es una interfase de capa, entre el software de fabricante
-> y el sistema operativo. Las flechas indican el flujo de datos.
+> El subsistema ACPI es una interfase de capa, entre el software de fabricante  
+> y el sistema operativo. Las flechas indican el flujo de datos.  
 
-
-Fundamentalmente, ACPI define dos tipos de estructura de datos, los cuáles son compartidos
-en el software de fabricante y el _OS_: tablas de datos y definición de bloques. Estas 
-estructuras de datos constituyen el mecanismo de comunicación principal entre el _firmware_
-y el _OS_. Las tablas de datos, almacenan datos en crudo y son utilizados por los 
-controladores de dispositivo. Las definiciones de bloque, consisten en código de _byte_
-que es ejecutable por el intérprete.
-
-    ******************************************************
-    **                 Sistema Operativo¬               **
-    ************************************|*****************
-    **                                  |               **
-    ************************************|*****************
-    **                 Subsistema ACPI  |               **
-    **                      ------------|               **
-    **                      |                           **
-    **                      |                           **
-    ** ******************   | ************************* ** 
-    ** * Tabla de datos *   | * Definición de bloques * **
-    ** ******************   | ************************* **
-    **                      |        |                  **
-    **                      |        |                  **
-    **                      #        #                  **
-    **            ********************** ----------¬    ** 
-    **            *   Intérprete AML   *           |    **
-    **            ********************** <-|       |    **
-    **                                     |       |    **
-    **                                     |       |    **
-    **  ***********************************|*******|**  **
-    **  *         Espacio de nombres ACPI  #       | *  ** 
-    **  *                   ********************** | *  **
-    **  *                   *       Objetos      * | *  **
-    **  *                   ********************** | *  **
-    **  *******************************************|**  **
-    ***********************************************|******
-                                                   #      
-    ******************************************************
-    **                 Hardware de Sistema              **
-    ******************************************************
-
-> EL subsistema ACPI consiste en dos tipos de estructuras de datos:
-> 1.-tabla de datos, 2.- bloques de definición.
->
-> Durante la inizialización, el intérprete AML extrae el código de 
-> _byte_ en el bloque de definición, como objetos enumerables.
->
-> Esta colleción de objetos enumerables, forman una contruccion 
-> del _OS_, llamada __Espacio de nombres ACPI__.
+  
+Fundamentalmente, ACPI define dos tipos de estructura de datos, los cuáles son  
+compartidos en el software de fabricante y el _OS_: tablas de datos y definición  
+de bloques. Estas estructuras de datos constituyen el mecanismo de comunicación  
+principal entre el _firmware_ y el _OS_. Las tablas de datos, almacenan datos en  
+crudo y son utilizados por los controladores de dispositivo. Las definiciones de  
+bloque, consisten en código de _byte_ que es ejecutable por el intérprete.  
+  
+    ******************************************************  
+    **                 Sistema Operativo¬               **  
+    ************************************|*****************  
+    **                                  |               **  
+    ************************************|*****************  
+    **                 Subsistema ACPI  |               **  
+    **                      ------------|               **  
+    **                      |                           **  
+    **                      |                           **  
+    ** ******************   | ************************* **  
+    ** * Tabla de datos *   | * Definición de bloques * **  
+    ** ******************   | ************************* **  
+    **                      |        |                  **  
+    **                      |        |                  **  
+    **                      #        #                  **  
+    **            ********************** ----------¬    **  
+    **            *   Intérprete AML   *           |    **  
+    **            ********************** <-|       |    **  
+    **                                     |       |    **  
+    **                                     |       |    **  
+    **  ***********************************|*******|**  **  
+    **  *         Espacio de nombres ACPI  #       | *  **  
+    **  *                   ********************** | *  **  
+    **  *                   *       Objetos      * | *  **  
+    **  *                   ********************** | *  **  
+    **  *******************************************|**  **  
+    ***********************************************|******  
+                                                   #        
+    ******************************************************  
+    **                 Hardware de Sistema              **  
+    ******************************************************  
+  
+> EL subsistema ACPI consiste en dos tipos de estructuras de datos:  
+> 1.-tabla de datos, 2.- bloques de definición.  
 > 
-> Los objetos, pueden tener valores directamente definidos o,
-> deberán ser evaluados e interpretados por el intérprete _AML_.
->
-> El intérprete _AML_, dirigido por el _OS_, evalua los objetos e
-> interfases con el _hardware_ de sistema, para llevar a cabo las
-> operaciones necesarias.
-
-Éste código de _byte_ de los bloques de definición, es compilado desde el código _ASL
-(ACPI Source Language)_. _ASL_ es el lenguaje usado para definir objetos _ACPI_ y para
-escribir métodos de control. Un compilador _ASL_, traduce _ASL_ a código de _byte_ _AML_ 
--o _ACPI machine Language_. _AML_, es el lenguaje procesado por el intérprete _ACPI AML_,
-como indica la figura 3.
-
-    ******************************************************************
-    **                        código ASL                            **
-    *******************************|**********************************
-                                   |
-                                   |
-    *******************************#**********************************
-    **                        compilador ASL                        **
-    **********************************|*******************************
-                                      |
-                                      |
-    **********************************#*******************************
-    **                        Bloque de definición                  **
-    **            ***********************************               **
-    **            *        código de byte AML       *               **
-    **            *****************|*****************               **
-    **                             |                                **
-    *******************************|**********************************
-                                   |
-    *******************************#**********************************
-    **                     intérprete AML                           **
-    ******************************************************************
-
-El interprete AML ejecuta el código de byte y los objetos en los bloques de definición, para
-dejar que el código de _byte_ lleve a cabo bucles de construcción, evaluaciones condicionales
-acceso a espacios de direcciones definidos y, otras operaciones que requieran las aplicaciones.
-El intérprete _AML_ tiene acceso de lecutra/escritura al espacio de direcciones definido,
-incluyendo la memoria de sistema, _I/O_, configuración _PCI_ y más. Accede a estos espacios
-de direcciones, mediante la definición de puntos de entrada llamados objetos. 
-Los objetos también pueden tener directamente definido un valor o en su lugar, deben ser 
-evaluados e interpretados por el interprete _AML_.
-
-Ésta coleción de objetos enumerables, es una construcción del _OS_ llamada __espacio de nombres
-ACPI__. El espacio de nombres es una representación jerarquica de dispositivos _ACPI_ en el 
-sistema. El _bus_ de sistema, es la ríz de enumeración  para dichos dispositivos _ACPI_. 
-Los dispositivos que son enumerables por otros _buses_, como los _PCI_ o dispositivos _USB_
-no están normalmente enumerados en el espacio de nombres. En su lugar, sus própios _buses_
-enumeran los dispositivos y cargan sus controladores. Aunque, todos los _buses_ enumerables
-tienen una técnica de codificación que permite a _ACPI_ codificar direcciones específicas
-de _bus_, para el dispositivo. Así que pueden ser encontrados en _ACPI_, incluso cuando 
-_ACPI_ no carga el controlador para tales dispositivos.
-
-Generalmente, dispositivos que tienen un objeto `_HID`(hardware identification object -o 
-identificador de objeto de hardware), son enumerados y tienen sus controladores cargados 
-por _ACPI_. Dispositivos con objeto `_ADR`(physical addres object)son normalmente 
-_no enumerados_ por _ACPI_ y, generalmente no carga su respectivo controlador mediante 
-_ACPI_. Dispositivos `_ADR`, pueden llevar a cabo, habitualmente, todas la funciones 
-necesarias sin involucrar a _ACPI_, pero en casos en los que el dispositivo no puede
-efectuar una determinada función o si el dispositivo necesita comunicarse con el 
-_firmware_, _ACPI_ puede evaluar dichos objetos para concluir la determinada función.
-
-Como ejemplo de ésto, _PCI_ no soporta nativamente la conexión en caliente(hotplug). 
-Aunque _PCI_ puede hacer uso de _ACPI_ para evaluar tales objetos y definir métodos que 
-permitan a _ACPI_ implementar dicha función para completar la conexión en caliente en un
-_PCI_.
-
-Un aspecto adicional de _ACPI_ es un modelo en tiempo de ejecución, capaz de controlar 
-cualquier evento de interrupción _ACPI_ que ocurra durante la operación del sistema.
-_ACPI_ continúa para evaluar los objetos, cuando sea necesario controlar estos eventos.
-Este modelo de interrupción basado en tiempo de ejecución, es discutido en gran detalle
-en el _Modelo de tiempo de ejecución_, mas abajo.
-
+> Durante la inizialización, el intérprete AML extrae el código de  
+> _byte_ en el bloque de definición, como objetos enumerables.  
+>  
+> Esta colleción de objetos enumerables, forman una contruccion  
+> del _OS_, llamada __Espacio de nombres ACPI__.  
+>  
+> Los objetos, pueden tener valores directamente definidos o,  
+> deberán ser evaluados e interpretados por el intérprete _AML_.  
+>  
+> El intérprete _AML_, dirigido por el _OS_, evalua los objetos e  
+> interfases con el _hardware_ de sistema, para llevar a cabo las  
+> operaciones necesarias.  
+  
+Éste código de _byte_ de los bloques de definición, es compilado desde el código  
+_ASL (ACPI Source Language)_. _ASL_ es el lenguaje usado para definir objetos  
+_ACPI_ y para escribir métodos de control. Un compilador _ASL_, traduce _ASL_ a  
+código de _byte_ _AML_ -o _ACPI machine Language_. _AML_, es el lenguaje procesado  
+por el intérprete _ACPI AML_, como indica la figura 3.  
+  
+    ******************************************************************  
+    **                        código ASL                            **  
+    *******************************|**********************************  
+                                   |  
+                                   |  
+    *******************************#**********************************  
+    **                        compilador ASL                        **  
+    **********************************|*******************************  
+                                      |  
+                                      |  
+    **********************************#*******************************  
+    **                        Bloque de definición                  **  
+    **            ***********************************               **  
+    **            *        código de byte AML       *               **  
+    **            *****************|*****************               **  
+    **                             |                                **  
+    *******************************|**********************************  
+                                   |  
+    *******************************#**********************************  
+    **                     intérprete AML                           **  
+    ******************************************************************  
+  
+El interprete AML ejecuta el código de byte y los objetos en los bloques de  
+definición, para dejar que el código de _byte_ lleve a cabo bucles de construcción,   evaluaciones condicionales acceso a espacios de direcciones definidos y, otras   operaciones que requieran las aplicaciones.  
+El intérprete _AML_ tiene acceso de lecutra/escritura al espacio de direcciones  
+definido, incluyendo la memoria de sistema, _I/O_, configuración _PCI_ y más. Accede  
+a estos espacios de direcciones, mediante la definición de puntos de entrada  
+llamados objetos.  
+Los objetos también pueden tener directamente definido un valor o en su lugar, deben  
+ser evaluados e interpretados por el interprete _AML_.  
+  
+Ésta coleción de objetos enumerables, es una construcción del _OS_ llamada __espacio  
+de nombres ACPI__. El espacio de nombres es una representación jerarquica de  
+dispositivos _ACPI_ en el sistema. El _bus_ de sistema, es la ríz de enumeración  
+para dichos dispositivos _ACPI_.  
+Los dispositivos que son enumerables por otros _buses_, como los _PCI_ o dispositivos   _USB_no están normalmente enumerados en el espacio de nombres. En su lugar, sus  
+própios _buses_ enumeran los dispositivos y cargan sus controladores. Aunque, todos  
+los _buses_ enumerables tienen una técnica de codificación que permite a _ACPI_  
+codificar direcciones específicas de _bus_, para el dispositivo. Así que pueden ser  
+encontrados en _ACPI_, incluso cuando _ACPI_ no carga el controlador para tales   dispositivos.  
+  
+Generalmente, dispositivos que tienen un objeto `_HID`(hardware identification  
+object -o identificador de objeto de hardware), son enumerados y tienen sus  
+controladores cargados por _ACPI_. Dispositivos con objeto `_ADR`(physical addres  
+object)son normalmente _no enumerados_ por _ACPI_ y, generalmente no carga su  
+respectivo controlador mediante _ACPI_. Dispositivos `_ADR`, pueden llevar a cabo,  
+habitualmente, todas la funciones necesarias sin involucrar a _ACPI_, pero en casos  
+en los que el dispositivo no puede efectuar una determinada función o si el 
+dispositivo necesita comunicarse con el _firmware_, _ACPI_ puede evaluar dichos  
+objetos para concluir la determinada función.  
+  
+Como ejemplo de ésto, _PCI_ no soporta nativamente la conexión en caliente(hotplug).  
+Aunque _PCI_ puede hacer uso de _ACPI_ para evaluar tales objetos y definir métodos  
+que permitan a _ACPI_ implementar dicha función para completar la conexión en  
+caliente en un _PCI_.  
+  
+Un aspecto adicional de _ACPI_ es un modelo en tiempo de ejecución, capaz de controlar  
+cualquier evento de interrupción _ACPI_ que ocurra durante la operación del sistema.  
+_ACPI_ continúa para evaluar los objetos, cuando sea necesario controlar estos eventos.  
+Este modelo de interrupción basado en tiempo de ejecución, es discutido en gran  
+detalle en el _Modelo de tiempo de ejecución_, mas abajo.  
+  
 #### Inicialización ACPI
-La mejor manera de entender como funciona _ACPI_ es cronológicamente. En el momento en
-el que el usuario enciande el sistema, el firmware de sistema completa su configuración,
-inicialización y _autoprueba_.
+La mejor manera de entender como funciona _ACP_ es cronológicamente. En el momento  
+en el que el usuario enciande el sistema, el firmware de sistema completa su  
+configuración, inicialización y _autoprueba_.  
+  
+  
+                ********************************************************  
+                **                  firmware de sistema               **  
+                ********************************************************  
+                                          |  
+                                          #  
+                                 **********************  
+                                 *        XSDT        *  
+                                 **********************  
+                                            |  
+                    ------------------------------------------------------    
+                    |                       |                            |  
+                    #                       #                            #  
+    *******************    **********************     **************************  
+    *     FADT        *    *        SSDT        *     *  tabla ACPI principal  *  
+    *******************    **********************     **************************  
+                |                              |  
+        ********#**********                    |  
+        *     DSDT        *                    |  
+        *******************                    |  
+                |------------------------------|  
+                                               |  
+                                               #  
+                      *******************************************************  
+                      **             Espacio de nombres ACPI               **  
+                      *******************************************************  
 
-
-                ********************************************************
-                **                  firmware de sistema               **
-                ********************************************************
-                                          |
-                                          #
-                                 **********************
-                                 *        XSDT        *
-                                 **********************
-                                            |
-                    -----------------------------------------------------------
-                    |                       |                                 |
-                    #                       #                                 #
-        **********************          **********************       **************************
-        *        FADT        *          *        SSDT        *       *  tabla ACPI principal  *
-        **********************          **********************       **************************
-                   |                              |
-        ***********#**********                    |
-        *        DSDT        *                    |
-        **********************                    |
-                   |------------------------------|
-                                                  |
-                                                  #
-                      *******************************************************
-                      **             Espacio de nombres ACPI               **
-                      *******************************************************
-
-> El firmware de sistema actualiza las tablas _ACPI_ cuando sea necesario, con
-> información sólo disponible en tiempo de ejecución, antes de _pasar el control_
-> al cargador de arranque.
+> El firmware de sistema actualiza las tablas _ACPI_ cuando sea necesario, con  
+> información sólo disponible en tiempo de ejecución, antes de _pasar el control_  
+> al cargador de arranque.  
+>   
+> La _XSDT_, es la primera tabla usada por el subsistema _ACPI_ de los sistemas  
+> operativos y, contiene las direcciones de la _mayoria_ de tablas _ACPI_ en el  
+> sistema.  
 >  
-> La _XSDT_, es la primera tabla usada por el subsistema _ACPI_ de los sistemas
-> operativos y, contiene las direcciones de la _mayoria_ de tablas _ACPI_ en el
-> sistema.
+> La _XSDT_ apunta a la _FADT_ a _SSDT_, y otras tablas _ACPI_ principales.  
 >  
-> La _XSDT_ apunta a la _FADT_ a _SSDT_, y otras tablas _ACPI_ principales.
-> 
-> La _FADT_ dirige el subsistema _ACPI_ a _DSDT_, la cuál es el principio del
-> espacio de nombres por virtud de ser la primera tabla que contiene un bloque
-> de definición.
->  
-> Entonces, el subsistema _ACPI_, consuma la _DSDT_ y, empieza a contruir el 
-> espacio de nombres _ACPI_ desde los bloques de definición.
-> El _XSDT_ también apunta a _SSDT_, y le añade, el espacio de nombres.
-
-
+> La _FADT_ dirige el subsistema _ACPI_ a _DSDT_, la cuál es el principio del  
+> espacio de nombres por virtud de ser la primera tabla que contiene un bloque  
+> de definición.  
+>   
+> Entonces, el subsistema _ACPI_, consuma la _DSDT_ y, empieza a contruir el  
+> espacio de nombres _ACPI_ desde los bloques de definición.  
+> El _XSDT_ también apunta a _SSDT_, y le añade, el espacio de nombres. 
+  
+  
 El firmware de sistema entonces, usa la información obtenida durante la inizialización del firmware
 para actualizar las tablas _ACPI_, cuando es necesario, mediante diversas configuraciones de 
 plataforma y los datos de la interfase de energía, pasando después el control al cargador de 
