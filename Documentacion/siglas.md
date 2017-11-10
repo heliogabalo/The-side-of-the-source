@@ -10,7 +10,7 @@
 8. Referencias a Video
 9. Referencias a Supuestos
 10. Referencias/enlaces
-		- 1. Repositorios
+		- 1. Repositorios			
 				 - HTTP
 				 - FTP
 		- 2. Documentacion
@@ -42,13 +42,14 @@
 #### FPGA -- Matrices de puertas reconfigurables
 #### BIOS -- Basic Input Output System
 #### CMOS -- Complementary metal-oxide-semiconductor (RTC and basic info PC config)
-#### SMBIOS --
+#### SMBIOS -- System Management BIOS, define data structures & acces methods to read BIOS.
 #### Northdridge -- Comunicacion directa con CPU y PCI-Express
 #### SouthBridge -- Otras operaciones secundarias sobre PCI -- (Serial ATA, SCSI)???
 #### ICH -- Input/Output Controller Hub - SouthBridge
 #### DPMI -- DOS Protected Mode Interface
 #### PCB -- Process Control Block - define el estado actual del sistema operativo.
 #### IP -- Intellectual Property(desambiguación).
+#### DMI -- Desktop Management Interface.
 #### DMI(intel) -- Direct Media Interface(desambiguación)
 #### UMI(amd)
 #### DVI -- Digital Visual Interface
@@ -94,7 +95,7 @@
 #### DDR -- Double Data Rate
 #### DDRx -- desambiguación// Data Direction Register
 #### GDDR5 -- Double Data Rate type five Synchronous Graphics Random-acces Memory
-#### DDR SDRAM
+#### DDR SDRAM -- Double Data Rate Synchronous Dynamic Random-Acces Memory
 #### IMC -- Integrated Memory Controller
 #### MCH -- Memory Controller Hub
 #### MLC -- Multi-Level Cell
@@ -252,20 +253,25 @@
 ## Referencias/enlaces
 
 #### 10.1 Repositorios
+
+#### 10.1.1 Nucleo
 	- HTTPS
-[Acpi-in-Linux](https://www.kernel.org/doc/ols/2005/ols2005v1-pages-59-76.pdf)
 [UML](http://user-mode-linux.sourceforge.net)
 
 	- FTP
 [UML-ftp](ftp://ftp.ca.kernel.org/pub/kernel/v2.4/linux-2.4.0-prerelease.tar.bz2)
+[Project-builder](ftp://ftp.project-builder.org/)
 
 #### 10.2 Documentacion
 	- HTTPS
 [IOMMU](http://www.intel.com/content/dam/www/public/us/en/documents/product-specifications/vt-directed-io-spec.pdf)
 [RCU](http://www.rdrop.com/users/paulmck/RCU/)
+[RCU/Linux-kernel](http://www.rdrop.com/users/paulmck/RCU/linuxusage/rculocktab.html)
 [GPMC](http://www.ti.com/lit/pdf/spruh73)
-
+[DDR2 SDRAM](en.wikipedia.org/wiki/DDR2_SDRAM)
+[fedoraCustomKernel](https://fedoraproject.org/wiki/Building_a_custom_kernel) muy buena!!!
+[Acpi-in-Linux](https://www.kernel.org/doc/ols/2005/ols2005v1-pages-59-76.pdf)
+[CodeGuro](https://www.codeguru.com/) buena pero no funciona la busqueda!! SMBIOS Demystified
 
 ##### 10.3 Patentes
 [RCU-patente](http://liburcu.org/)
-

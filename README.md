@@ -1,10 +1,19 @@
-# The-side-of-the-source #
+# The-side-of-the-source
 ##...a deep hole on the side source. ##
 
 Este repositorio contiene código escrito en distintos lenguajes de programación.
 Es nada más que un espacio donde almacenar archivos interesentes, obtenidos de
 distintas fuentes.
 
+
+TODO: aquí va el índice del repositorio
+# Indice
+1. ...
+99. Reseña a proceso de compilación.
+---
+
+
+#### 99. Reseña a proceso de compilación.
 Algunos archivos son más dependientes que otros, aunque en general, pueden ser
 compilados como aplicaciones independientes.
 
@@ -42,4 +51,5 @@ Si quieres participar activamente en este repositorio tienes dos formas de hacer
 - Puedes clonar la repo con:
   <pre><code>git clone https://github.com/heliogabalo/The-side-of-the-source.git</code></pre> 
   o hacer un fork al mismo y tabajar sobre tu propia rama.
+
 

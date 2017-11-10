@@ -1,6 +1,13 @@
+## Indice
+
+1. Uso del compilador de C
+2. Uso del depurador
+3. Utilidades para depurar el núcleo
+
+
 ## Programación en Linux
 
-#### Uso del compilador de C
+#### 1. Uso del compilador de C
 
   - __Herramientas útiles__
     - nm: lista los símbolos en un archivo de objetos.
@@ -17,7 +24,7 @@
     - `lsb`: Linux Standard Base.
     - `ldd`: presenta las librerías requeridas por el programa. Su sintaxis es: `<ldd> <programa>`.
 
-#### Uso del depurador
+#### 2. Uso del depurador
 `GDB` es la navaja suiza del programador, _El depurador_. Voy a dejarme aquí un
 apunte a un pequeño script que yo uso para arrancar el programa, dentro del
 depurador, y no estar repitiendo lo mismo sobre la cónsola, una y otra vez:
@@ -41,3 +48,17 @@ No tiene mucho sentido hacer un tuto aquí, por que la red tiene más _tutos_ so
 		fi
 		
 > mirar en el directorio Xcb
+
+#### 3. Utilidades para depurar el núcleo
+
+- Kprobes - característica que permite capturar casi cualquier dirección y ejecutar
+una llamada a la función. ver <Kallsyms>
+- Kallsyms - 
+- debug_info - los símbolos de depuración, es util si se utilizan herramientas própias
+de depuración, como `gdb`. Lógicamente, la imagen resultante será mayor(300k aprox).
+- virtme - aplicación, especialmente útil antes de instalar el `kernel`. Aquello que siempre
+quiso hacer con su SO y nunca pudo.
+Se trata de un entorno _virtual_ donde probar características del kernel, realizar pruebas,
+o simplente depurar el sistema en busca de gazapos, sin el peligro que conllevaría hacerlo
+en el kernel en uso. 
+
