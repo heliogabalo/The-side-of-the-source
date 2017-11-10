@@ -169,26 +169,3 @@ Bastante simple. En lugar de ir borrando innecesariamente la particción y
 tener que volver a crearla o, andar trasteando con los merge los pool, etc,
 Ha sido preparada una nueva partición que será utilizada como _MV's_, pero
 eso será otro día.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
