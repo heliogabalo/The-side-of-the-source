@@ -1,27 +1,36 @@
 ## Indice
 
-1. Referencias Generales
+
+
+
+1. [Referencias Generales](#i1)
+	 - 1.1 Referencias SO
 2. Referencias a memorias
 3. Referencias a criptografia
 4. Referencias a Disco Duro
-5. Referincias a Unidades de procesamiento
-6. Referencias Acpi/Acpica/Tablas-Acpi
-7. Referencias Cryptomonedas
-8. Referencias a Video
-9. Referencias a Supuestos
-10. Referencias/enlaces
+5. [Referincias a Unidades de procesamiento](#i5)
+6. [APM(Advanced Power Management)](#i6)
+7. Referencias Acpi/Acpica/Tablas-Acpi
+8. Referencias Cryptomonedas
+9. Referencias a Video
+10. Referencias a Supuestos
+11. Referencias/enlaces
 		- 1. Repositorios			
 				 - HTTP
 				 - FTP
 		- 2. Documentacion
 				 - HTTP
 				 - FTP		
-
+---
+1. [PROCESO DE INSTALACION DE UNA IMAGEN](#i1)
+    1. [Crear imagen](#i1)  
+    2. [Convertir imagen](#1i2)
+## 1. <a name="i1">PROCESO DE INSTALACION DE UNA IMAGEN</a>  
+#### Crear imagen
 
 ---
-## Referencias Generales
+## 1. <a name="i1">Referencias Generales</a>
 
-#### OSPM --- Operating System directed Power Management
 #### OEM  -- Original Equipment Manufacture
 #### OS --- Operating system
 #### OSL ---  OS Service Layer
@@ -73,11 +82,18 @@
 #### LUN --
 #### PMMU -- paged memory management unit
 #### AoE -- ATA over Ethernet
-#### HID -- Human Interface Device, it take INPUTS and give OUTPUTS.
-#### RCU -- Read Copy Update
+#### HID -- Human Interface Device, it take INPUTS and give OUTPUTS.[hardware/hid]:[hid.md]
+#### RCU -- Read Copy Update [hardware/procesador]:[rcu.md]
 #### PME power management event support
 ---
 
+## 1.1 <a name="i1i1">Referencias SO</a>
+
+#### SysV --  SysV init run level system `/etc/rc.d/` 
+#### Systemd -- a system and a service manager
+#### Udev -- Dynamic Device management
+
+---
 ## Referencias Memorias/chips
 
 #### ROM -- Read Only Memory
@@ -140,14 +156,18 @@
 ## Referencia criptografia
 
 #### GPG -- GnuPG, GNU Privacy Guard
-
+#### SELinux --
+#### TLS --
 ---
-#### Referincias a Unidades de procesamiento
 
-#### NUMA -- Non Uniform Memory Acces (policy to alocate memory areas)
+
+
+#### <a name="i5">5. Referincias a Unidades de procesamiento</a>
+
+#### NUMA -- Non Uniform Memory Acces (policy to alocate memory areas)[hardware/procesador]:[numa.md]
 #### HSA --(AMD) Heterogeneus System Architecture
 #### CPU -- Central Process Unit, Unidad de Procesador Central.
-
+#### MPS -- Multiprocessor Specification
 
 #### Referencias Disco Duro
 
@@ -163,12 +183,20 @@
 
 ---
 
-# Referencias Acpi/Acpica/Tablas-Acpi
+## <a name="i6">Referencias APM(Advanced Power Management)</a>
 
+#### APM -- Advanced Power Management [hardware/apm]:[apm.md]
+---
+
+## Referencias Acpi/Acpica/Tablas-Acpi
+
+#### ASWG -- ACPI Specification Working Group
 #### API -- Application Programming Interface
 #### ACPI -- Advanced Control Power Interface
 #### ACPICA --ACPI Component Architecture
 #### SLIC -- System Licensed Internal Code
+#### OSI -- Operating System Interfaces" (_OSI)
+#### OSPM --- Operating System directed Power Management
   ---------------
 #### BGRT -- Tabla de recursos del arranque de gráficos.
 
@@ -184,7 +212,7 @@
 #### IOVA -- IO Virtual address.
 
 #### FACP
-#### FACS
+#### FACS -- Firmware ACPI Control Structure
 #### FADT -- Tabla de Descripcion fija ACPI
 #### FPDT -- Tabla para la mejora de datos del firmware.
 
@@ -192,21 +220,22 @@
 
 #### HPET -- Hight Precision Event Timer
 
-#### MTRR
 #### MADT -- Tabla controlador múltiple de interrupción.
 #### MCFG
 
 #### RSDP
 #### RSDT
 
-#### SSDT ---  System Service Desription Table- Tabla de descripción de servicio de sistema
+#### SSDT -- System Service Desription Table- Tabla de descripción de servicio de sistema
 
 #### XSDT
 
 #### WSMT
   ---------------
 #### DSL  --- .dsl -- extension, disassembled ASL
-#### .aml v& .asm --
+#### AML -- ACPI Machine Language
+#### ASL -- ACPI Source Language
+#### ASM --
   ---------------
 #### GPE --- General Purpouse Events
 #### SCI -- Sistema de control de Interrupcion
