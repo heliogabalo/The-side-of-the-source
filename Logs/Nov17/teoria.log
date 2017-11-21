@@ -1,0 +1,37 @@
+
+16112017:17:28
+
+Teoría:
+De alguna manera estan virtualizando mi sistema, y cargando éste desde otra maquina remota.
+no es muy normal que se configure la bash por defecto del sistema, con cuatro líneas
+(el mínimo) y tenga una salida de 8 líneas. Esto es un comportamiento completamente anómalo.
+No se a que se debe esto pero es así, he hecho una captura de pantalla que lo demuestra.
+
+Esto explicaría por que se han sobre escrito el microcódigo de fabricante de graficas
+(embebida y PCIe), varias tablas acpi, para reconocimiento y configuración de los controladores
+de dispositivo y el microcódigo de de la CPU.
+
+También he visto que se carga el servicio modem manager, aunque tengo desactivada la 
+característica desde la BIOS(tarjeta de red embebida) tampoco compilada desde la la
+fuente del núcleo. He tenido que desactivar el servicio manualmente, pero parece que sigue
+poniéndose en marcha. Sospecho que se utiliza la tarjeta de red interna en una "especie
+de entorno dual". Otras veces he hecho referencia al comportamiento espúreo de la red,
+indicando un MITM. Definitivamente desisto de indagar más al respecto, no tengo ningún
+interés en seguir ahondando en infraestructura de red.
+
+Otra cosa que he notado es que después de compilar el núcleo, borrar los módulos de otras
+instalaciones e instalar los nuevos. "wpa_supplicant" el servicio/aplicacion para la
+red "wi-fi" igualmente sigue poniéndose en funcionamiento. No me explico como, pero
+es así. Cuando mi equipo es un ordenador de sobremesa y de estar conectado, lo hace
+por cable, directamente conectado al "router".
+
+He desactivado el servicio, pero sigue poniendose en funcionamiento.
+
+Los "targets" de systemd (run level en otros systemas) son un completo desastre, están
+todos configurados de la misma forma, es decir no hay diferencia entre el rc-1 el 3 y 5.
+Contienen los mismos servicios. 
+
+Quien quiera que esté detrás, no lo está haciendo sólo. Es un acoso en toda regla.
+Aunque no pueda demostrar quén está detras de todo esto, si puedo demostrar que el código
+ha sido alterado. Que me han robado mi carrera como programador, que están acosándome 
+constante y reiteradamente y que algún día van a tener que explicarlo a un juez.

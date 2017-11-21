@@ -6,15 +6,15 @@
 1. [Referencias Generales](#i1)
 	 - 1.1 Referencias SO
 2. Referencias a memorias
-3. Referencias a criptografia
 4. Referencias a Disco Duro
 5. [Referincias a Unidades de procesamiento](#i5)
 6. [APM(Advanced Power Management)](#i6)
 7. Referencias Acpi/Acpica/Tablas-Acpi
-8. Referencias Cryptomonedas
 9. Referencias a Video
 10. Referencias a Supuestos
-11. Referencias/enlaces
+79. Referencias a criptografia
+89. Referencias Cryptomonedas
+99. Referencias/enlaces
 		- 1. Repositorios			
 				 - HTTP
 				 - FTP
@@ -34,6 +34,7 @@
 #### OEM  -- Original Equipment Manufacture
 #### OS --- Operating system
 #### OSL ---  OS Service Layer
+#### ABI --
 #### SoC -- Sistemas en Chip
 #### SCI --- System Control Interrupt
 #### HDL -- Hardware Description Language
@@ -70,10 +71,11 @@
 #### FMA -- Fused Multiply-Add. Mejora para el cálculo de operaciones con punto flotante.
 #### OC -- OverClocking
 #### PASID -- Process Adress Space Identifiers, Identificadores del espacio de direccionamiento de proceso.
-#### IOMMU -- I/O Memory Management Unit
 #### HCI -- Host Controller Interface
 #### OHCI -- Open Host Controller Interface to talk to USB 1.1
 #### UHCI -- Universal Host Controller Interface
+#### EHCI -- Extended? Host Controller Interface
+#### AHCI -- ?? Host Controller Interface
 #### UDMA -- Ultra Direct Memory Acces
 #### EDID -- 
 #### JIT -- Just In Time
@@ -85,6 +87,10 @@
 #### HID -- Human Interface Device, it take INPUTS and give OUTPUTS.[hardware/hid]:[hid.md]
 #### RCU -- Read Copy Update [hardware/procesador]:[rcu.md]
 #### PME power management event support
+#### UUID -- User Unique Identifier
+#### CSR -- Cambridge Silicon Radio
+#### IPC -- InterProcess Communication
+#### SMP --
 ---
 
 ## 1.1 <a name="i1i1">Referencias SO</a>
@@ -107,6 +113,7 @@
 #### DRAM -- RAM dinamica "memoria principal del sistema"
 #### SRAM -- RAM estatica (común en el procesador como memoria caché)
 #### FPGA -- Field-programmable gate array(integrated circuit)
+#### IOMMU -- I/O Memory Management Unit. 
 #### DMA -- Direct Memory Acces
 #### DDR -- Double Data Rate
 #### DDRx -- desambiguación// Data Direction Register
@@ -153,21 +160,27 @@
 #### POST -- Power-On Self-Test
 ---
 
-## Referencia criptografia
-
-#### GPG -- GnuPG, GNU Privacy Guard
-#### SELinux --
-#### TLS --
----
-
-
-
 #### <a name="i5">5. Referincias a Unidades de procesamiento</a>
 
 #### NUMA -- Non Uniform Memory Acces (policy to alocate memory areas)[hardware/procesador]:[numa.md]
 #### HSA --(AMD) Heterogeneus System Architecture
 #### CPU -- Central Process Unit, Unidad de Procesador Central.
+#### APU -- Accelerated Processing Unit, is a CPU and a GPU on a single die, known as _Fusion_.
 #### MPS -- Multiprocessor Specification
+#### MSR -- Model Specific Registers
+#### AMD64 -- the x86_64 chipset invented by AMD
+#### LMSLE -- (CPU-AMD) Long Mode Segment Limit Enable
+#### IA64 -- Intel Itanium chipseet
+#### IA32 -- Intel architecture, 32-bit.
+#### 8080 -- 
+#### LONG MODE -- 64bit OS can acces 64bit instructions
+#### REAL MODE -- or _virtual 8086 mode_, apps can't run on LONG MODE
+#### UNREAL MODE -- intel 80286, ega video type
+#### SMM -- System Management Moode or _rin-2_, all execution is suspended
+#### VIA 
+#### TRANSMETA
+---
+
 
 #### Referencias Disco Duro
 
@@ -180,8 +193,11 @@
 #### VBR -- Volume Boot Record
 #### LBA -- Logical Block Addressing
 #### CHS -- Cylinder Head Sector
-
+#### GPT
+#### EFI
+#### UEFI
 ---
+
 
 ## <a name="i6">Referencias APM(Advanced Power Management)</a>
 
@@ -242,7 +258,34 @@
 ---
 
 
+## Referencias a Supuestos
+
+#### CMMA -- Collaborative Memory Management Assist
+#### Intel-VT -- Virtualization technology(by Intel)
+#### AMD-V -- Virtualization technology(by AMD side), initialy SVM("Flag", Secure Virtual Machine)
+
+
 ---
+## Referencias a Video
+
+#### AGP -- Accelerated Graphics Port
+#### APU -- Accelerated Processing Unit, is a CPU and a GPU on a single die, known as _Fusion_.
+#### GPU -- Graphic Processing Unit
+#### ATI -- GPU vendor acquired by AMD in 2006
+#### GART -- Graphics Address Remapping   table
+---
+
+
+## Referencia criptografia
+
+#### GPG -- GnuPG, GNU Privacy Guard
+#### SELinux --
+#### TLS --
+#### bss -- Basis Service Set. on static libs, the need to init vars before call it(c/c++).
+#### HMAC -- Hash-Based message authentification code.
+---
+
+
 ## Referencias Cryptomonedas
 
 #### ETC -- Ethereum Classic
@@ -266,19 +309,8 @@
 #### DAG -- Direct Acyclic Graph
 ---
 
-## Referencias a Supuestos
-
-#### CMMA -- Collaborative Memory Management Assist
 
 
----
-## Referencias a Video
-
-#### AGP -- Accelerated Graphics Port
-#### APU --
-#### GPU --
-
----
 ## Referencias/enlaces
 
 #### 10.1 Repositorios

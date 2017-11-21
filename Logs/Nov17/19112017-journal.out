@@ -1,0 +1,148 @@
+-- Logs begin at mié 2017-10-25 19:29:16 CEST, end at dom 2017-11-19 18:21:17 CET. --
+nov 19 15:17:09 NR021AA systemd[3251]: Startup finished in 34ms.
+nov 19 15:17:09 NR021AA dbus-daemon[3284]: Activating via systemd: service name='org.gtk.vfs.Daemon' unit='gvfs-daemon.service'
+nov 19 15:17:09 NR021AA dbus-daemon[3284]: Successfully activated service 'org.gtk.vfs.Daemon'
+nov 19 15:17:09 NR021AA gnome-keyring-ssh.desktop[3303]: SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+nov 19 15:17:10 NR021AA gnome-keyring-secrets.desktop[3306]: SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+nov 19 15:17:10 NR021AA gnome-keyring-pkcs11.desktop[3304]: SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+nov 19 15:17:10 NR021AA org.gnome.Shell.desktop[3311]: glamor: EGL version 1.4 (DRI2):
+nov 19 15:17:10 NR021AA org.gnome.Shell.desktop[3311]: Failed to initialize glamor
+nov 19 15:17:10 NR021AA org.gnome.Shell.desktop[3311]: Failed to initialize glamor, falling back to sw
+nov 19 15:17:10 NR021AA dbus-daemon[3284]: Activating via systemd: service name='org.a11y.Bus' unit='at-spi-dbus-bus.service'
+nov 19 15:17:10 NR021AA dbus-daemon[3284]: Successfully activated service 'org.a11y.Bus'
+nov 19 15:17:10 NR021AA at-spi-bus-launcher[3322]: Activating service name='org.a11y.atspi.Registry'
+nov 19 15:17:10 NR021AA at-spi-bus-launcher[3322]: Successfully activated service 'org.a11y.atspi.Registry'
+nov 19 15:17:10 NR021AA org.a11y.atspi.Registry[3327]: SpiRegistry daemon is running with well-known name - org.a11y.atspi.Registry
+nov 19 15:17:10 NR021AA pulseaudio[3335]: [pulseaudio] bluez5-util.c: GetManagedObjects() failed: org.freedesktop.systemd1.NoSuchUnit: Unit dbus-org.bluez.service not found.
+nov 19 15:17:11 NR021AA dbus-daemon[3284]: Activating service name='org.gnome.Shell.CalendarServer'
+nov 19 15:17:11 NR021AA dbus-daemon[3284]: Activating service name='ca.desrt.dconf'
+nov 19 15:17:11 NR021AA dbus-daemon[3284]: Activating via systemd: service name='org.gtk.vfs.UDisks2VolumeMonitor' unit='gvfs-udisks2-volume-monitor.service'
+nov 19 15:17:12 NR021AA dbus-daemon[3284]: Successfully activated service 'ca.desrt.dconf'
+nov 19 15:17:12 NR021AA dbus-daemon[3284]: Successfully activated service 'org.gtk.vfs.UDisks2VolumeMonitor'
+nov 19 15:17:12 NR021AA dbus-daemon[3284]: Activating via systemd: service name='org.gtk.vfs.AfcVolumeMonitor' unit='gvfs-afc-volume-monitor.service'
+nov 19 15:17:12 NR021AA gvfs-afc-volume-monitor[3375]: Volume monitor alive
+nov 19 15:17:13 NR021AA dbus-daemon[3284]: Successfully activated service 'org.gtk.vfs.AfcVolumeMonitor'
+nov 19 15:17:13 NR021AA dbus-daemon[3284]: Activating via systemd: service name='org.gtk.vfs.GoaVolumeMonitor' unit='gvfs-goa-volume-monitor.service'
+nov 19 15:17:13 NR021AA dbus-daemon[3284]: Activating service name='org.gnome.OnlineAccounts'
+nov 19 15:17:13 NR021AA dbus-daemon[3284]: Activating via systemd: service name='org.gnome.evolution.dataserver.Sources5' unit='evolution-source-registry.service'
+nov 19 15:17:13 NR021AA org.gnome.OnlineAccounts[3284]: goa-daemon-Message: goa-daemon version 3.20.1 starting
+nov 19 15:17:13 NR021AA dbus-daemon[3284]: Activating service name='org.gnome.Identity'
+nov 19 15:17:13 NR021AA dbus-daemon[3284]: Successfully activated service 'org.gnome.OnlineAccounts'
+nov 19 15:17:13 NR021AA dbus-daemon[3284]: Successfully activated service 'org.gtk.vfs.GoaVolumeMonitor'
+nov 19 15:17:13 NR021AA dbus-daemon[3284]: Activating via systemd: service name='org.gtk.vfs.GPhoto2VolumeMonitor' unit='gvfs-gphoto2-volume-monitor.service'
+nov 19 15:17:13 NR021AA dbus-daemon[3284]: Successfully activated service 'org.gtk.vfs.GPhoto2VolumeMonitor'
+nov 19 15:17:13 NR021AA dbus-daemon[3284]: Activating via systemd: service name='org.gtk.vfs.MTPVolumeMonitor' unit='gvfs-mtp-volume-monitor.service'
+nov 19 15:17:13 NR021AA dbus-daemon[3284]: Successfully activated service 'org.gnome.Identity'
+nov 19 15:17:13 NR021AA org.gnome.Identity[3284]: (process:3396): libgoaidentity-WARNING **: GoaKerberosIdentityManager: Using polling for change notification for credential cache type 'KEYRING'
+nov 19 15:17:13 NR021AA dbus-daemon[3284]: Successfully activated service 'org.gtk.vfs.MTPVolumeMonitor'
+nov 19 15:17:14 NR021AA org.gnome.Shell.desktop[3311]: (gnome-shell:3311): Gtk-WARNING **: Theme directory base/ of theme oxygen has no size field
+nov 19 15:17:14 NR021AA org.gnome.Shell.desktop[3311]: (gnome-shell:3311): Gjs-WARNING **: JS ERROR: could not get remote objects for service org.gnome.SettingsDaemon.Smartcard path /org/gnome/SettingsDaemon/Smartcard: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.gnome.SettingsDaemon.Smartcard was not provided by any .service files
+nov 19 15:17:14 NR021AA org.gnome.Shell.desktop[3311]: _proxyInvoker/asyncCallback@resource:///org/gnome/gjs/modules/overrides/Gio.js:83
+nov 19 15:17:14 NR021AA gnome-session[3280]: gnome-session-binary[3280]: WARNING: App 'spice-vdagent.desktop' exited with code 1
+nov 19 15:17:14 NR021AA spice-vdagent[3428]: Cannot access vdagent virtio channel /dev/virtio-ports/com.redhat.spice.0
+nov 19 15:17:14 NR021AA gnome-session-binary[3280]: WARNING: App 'spice-vdagent.desktop' exited with code 1
+nov 19 15:17:14 NR021AA xdg-user-dirs.desktop[3431]: /home/raul/Plantillas was removed, reassigning TEMPLATES to homedir
+nov 19 15:17:14 NR021AA xdg-user-dirs.desktop[3431]: /home/raul/Público was removed, reassigning PUBLICSHARE to homedir
+nov 19 15:17:14 NR021AA xdg-user-dirs.desktop[3431]: /home/raul/Documentos was removed, reassigning DOCUMENTS to homedir
+nov 19 15:17:14 NR021AA xdg-user-dirs.desktop[3431]: /home/raul/Música was removed, reassigning MUSIC to homedir
+nov 19 15:17:14 NR021AA xdg-user-dirs.desktop[3431]: /home/raul/Imágenes was removed, reassigning PICTURES to homedir
+nov 19 15:17:14 NR021AA xdg-user-dirs.desktop[3431]: /home/raul/Vídeos was removed, reassigning VIDEOS to homedir
+nov 19 15:17:14 NR021AA dbus-daemon[3284]: Successfully activated service 'org.gnome.evolution.dataserver.Sources5'
+nov 19 15:17:14 NR021AA gnome-settings-daemon.desktop[3424]: ** (gnome-settings-daemon:3424): WARNING **: Schemas 'org.gnome.desktop.a11y' has not been setup
+nov 19 15:17:15 NR021AA dbus-daemon[3284]: Successfully activated service 'org.gnome.Shell.CalendarServer'
+nov 19 15:17:15 NR021AA dbus-daemon[3284]: Activating via systemd: service name='org.gnome.evolution.dataserver.Calendar7' unit='evolution-calendar-factory.service'
+nov 19 15:17:16 NR021AA gnome-shell[3311]: GNOME Shell started at Sun Nov 19 2017 15:17:14 GMT+0100 (CET)
+nov 19 15:17:16 NR021AA dbus-daemon[3284]: Activating service name='org.freedesktop.Tracker1'
+nov 19 15:17:16 NR021AA dbus-daemon[3284]: Successfully activated service 'org.freedesktop.Tracker1'
+nov 19 15:17:16 NR021AA tracker-store.desktop[3517]: (uint32 2,)
+nov 19 15:17:16 NR021AA gnome-session-binary[3280]: Entering running state
+nov 19 15:17:16 NR021AA sealertauto.desktop[3531]: SELinux Troubleshooter: Applet requires SELinux be enabled to run.
+nov 19 15:17:17 NR021AA dbus-daemon[3284]: Successfully activated service 'org.gnome.evolution.dataserver.Calendar7'
+nov 19 15:17:17 NR021AA ckb.desktop[3502]: QObject::startTimer: Timers cannot have negative intervals
+nov 19 15:17:17 NR021AA dbus-daemon[3284]: Activating via systemd: service name='org.gnome.evolution.dataserver.AddressBook9' unit='evolution-addressbook-factory.service'
+nov 19 15:17:18 NR021AA ckb.desktop[3502]: (ckb:3502): GLib-GObject-WARNING **: g_object_get_valist: object class 'GtkSettings' has no property named 'gtk-application-prefer-dark-theme'
+nov 19 15:17:18 NR021AA ckb.desktop[3502]: (ckb:3502): GLib-GObject-WARNING **: g_object_get_valist: object class 'GtkSettings' has no property named 'gtk-long-press-time'
+nov 19 15:17:19 NR021AA gnome-settings-daemon.desktop[3424]: (gnome-settings-daemon:3424): GLib-GObject-CRITICAL **: g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+nov 19 15:17:19 NR021AA ckb.desktop[3502]: Path  to settings is "/home/raul/.config/ckb/ckb.conf"
+nov 19 15:17:19 NR021AA libcanberra-login-sound.desktop[3510]: Failed to play sound: File or data not found
+nov 19 15:17:19 NR021AA dbus-daemon[3284]: Successfully activated service 'org.gnome.evolution.dataserver.AddressBook9'
+nov 19 15:17:41 NR021AA gnome-settings-daemon.desktop[3424]: (gedit:3700): Gtk-WARNING **: Allocating size to GtkHeaderBar 0x562003dbf390 without calling gtk_widget_get_preferred_width/height(). How does the code know the size to allocate?
+nov 19 15:17:41 NR021AA gnome-settings-daemon.desktop[3424]: (gedit:3700): Gtk-WARNING **: Allocating size to GtkOverlay 0x562003f64120 without calling gtk_widget_get_preferred_width/height(). How does the code know the size to allocate?
+nov 19 15:17:41 NR021AA gnome-settings-daemon.desktop[3424]: (gedit:3700): Gtk-WARNING **: Allocating size to GtkBox 0x562003d0ff90 without calling gtk_widget_get_preferred_width/height(). How does the code know the size to allocate?
+nov 19 15:18:09 NR021AA dbus-daemon[3284]: Activating via systemd: service name='org.gtk.vfs.Metadata' unit='gvfs-metadata.service'
+nov 19 15:18:09 NR021AA dbus-daemon[3284]: Successfully activated service 'org.gtk.vfs.Metadata'
+nov 19 15:18:36 NR021AA gnome-settings-daemon.desktop[3424]: (gedit:3700): Gtk-WARNING **: Drawing a gadget with negative dimensions. Did you forget to allocate a size? (node image owner GtkSearchEntry)
+nov 19 15:18:43 NR021AA dbus-daemon[3284]: Activating via systemd: service name='org.gnome.Terminal' unit='gnome-terminal-server.service'
+nov 19 15:18:43 NR021AA dbus-daemon[3284]: Successfully activated service 'org.gnome.Terminal'
+nov 19 15:19:03 NR021AA dbus-daemon[3284]: Activating via systemd: service name='org.gnome.Terminal' unit='gnome-terminal-server.service'
+nov 19 15:19:03 NR021AA dbus-daemon[3284]: Successfully activated service 'org.gnome.Terminal'
+nov 19 15:19:17 NR021AA org.gnome.Shell.desktop[3311]: Window manager warning: last_user_time (202885) is greater than comparison timestamp (202884).  This most likely represents a buggy client sending inaccurate timestamps in messages such as _NET_ACTIVE_WINDOW.  Trying to work around...
+nov 19 15:19:17 NR021AA org.gnome.Shell.desktop[3311]: Window manager warning: W10 appears to be one of the offending windows with a timestamp of 202885.  Working around...
+nov 19 15:23:01 NR021AA dbus-daemon[3284]: Activating via systemd: service name='org.gnome.Terminal' unit='gnome-terminal-server.service'
+nov 19 15:23:01 NR021AA dbus-daemon[3284]: Successfully activated service 'org.gnome.Terminal'
+nov 19 15:33:47 NR021AA dbus-daemon[3284]: Activating service name='org.gnome.ControlCenter.SearchProvider'
+nov 19 15:33:47 NR021AA dbus-daemon[3284]: Activating service name='org.gnome.Contacts.SearchProvider'
+nov 19 15:33:47 NR021AA dbus-daemon[3284]: Activating service name='org.gnome.Documents'
+nov 19 15:33:47 NR021AA dbus-daemon[3284]: Activating service name='org.gnome.Nautilus'
+nov 19 15:33:47 NR021AA dbus-daemon[3284]: Activating service name='org.gnome.Boxes.SearchProvider'
+nov 19 15:33:47 NR021AA dbus-daemon[3284]: Activating service name='org.gnome.Calculator.SearchProvider'
+nov 19 15:33:47 NR021AA dbus-daemon[3284]: Activating service name='org.gnome.seahorse.Application'
+nov 19 15:33:47 NR021AA dbus-daemon[3284]: Activating service name='org.gnome.clocks'
+nov 19 15:33:47 NR021AA dbus-daemon[3284]: Successfully activated service 'org.gnome.Calculator.SearchProvider'
+nov 19 15:33:47 NR021AA dbus-daemon[3284]: Successfully activated service 'org.gnome.Boxes.SearchProvider'
+nov 19 15:33:47 NR021AA dbus-daemon[3284]: Successfully activated service 'org.gnome.ControlCenter.SearchProvider'
+nov 19 15:33:47 NR021AA dbus-daemon[3284]: Successfully activated service 'org.gnome.Nautilus'
+nov 19 15:33:47 NR021AA dbus-daemon[3284]: Successfully activated service 'org.gnome.clocks'
+nov 19 15:33:48 NR021AA dbus-daemon[3284]: Successfully activated service 'org.gnome.seahorse.Application'
+nov 19 15:33:48 NR021AA dbus-daemon[3284]: Successfully activated service 'org.gnome.Documents'
+nov 19 15:33:48 NR021AA dbus-daemon[3284]: Successfully activated service 'org.gnome.Contacts.SearchProvider'
+nov 19 15:33:48 NR021AA org.gnome.Contacts.SearchProvider[3284]: ** (gnome-contacts-search-provider:4178): WARNING **: contacts-store.vala:335: Unable to check accounts caps The name org.freedesktop.Telepathy.AccountManager was not provided by any .service files
+nov 19 15:33:48 NR021AA org.gnome.Contacts.SearchProvider[3284]: (gnome-contacts-search-provider:4178): folks-WARNING **: backend-store.vala:434: Error preparing Backend 'telepathy': The name org.freedesktop.Telepathy.AccountManager was not provided by any .service files
+nov 19 15:33:49 NR021AA gnome-software-service.desktop[3490]: (gnome-software:3490): Gs-WARNING **: failed to call gs_plugin_add_search on appstream: Se canceló la operación
+nov 19 15:33:55 NR021AA gnome-software-service.desktop[3490]: (gnome-software:3490): Gs-WARNING **: failed to call gs_plugin_refine on packagekit-refine: cancelled by user action
+nov 19 15:33:58 NR021AA dbus-daemon[3284]: Activating service name='org.gnome.Calculator.SearchProvider'
+nov 19 15:33:58 NR021AA dbus-daemon[3284]: Activating service name='org.gnome.clocks'
+nov 19 15:33:58 NR021AA dbus-daemon[3284]: Successfully activated service 'org.gnome.Calculator.SearchProvider'
+nov 19 15:33:58 NR021AA dbus-daemon[3284]: Successfully activated service 'org.gnome.clocks'
+nov 19 15:34:00 NR021AA org.gnome.Shell.desktop[3311]: Gjs-Message: JS LOG: Invalid result meta returned from search provider seahorse.desktop
+nov 19 15:34:15 NR021AA dbus-daemon[3284]: Activating service name='org.gnome.Contacts.SearchProvider'
+nov 19 15:34:15 NR021AA dbus-daemon[3284]: Activating service name='org.gnome.Documents'
+nov 19 15:34:15 NR021AA dbus-daemon[3284]: Activating service name='org.gnome.Nautilus'
+nov 19 15:34:15 NR021AA dbus-daemon[3284]: Activating service name='org.gnome.Boxes.SearchProvider'
+nov 19 15:34:15 NR021AA dbus-daemon[3284]: Activating service name='org.gnome.Calculator.SearchProvider'
+nov 19 15:34:15 NR021AA dbus-daemon[3284]: Activating service name='org.gnome.clocks'
+nov 19 15:34:15 NR021AA dbus-daemon[3284]: Successfully activated service 'org.gnome.Calculator.SearchProvider'
+nov 19 15:34:15 NR021AA dbus-daemon[3284]: Successfully activated service 'org.gnome.Boxes.SearchProvider'
+nov 19 15:34:15 NR021AA dbus-daemon[3284]: Successfully activated service 'org.gnome.clocks'
+nov 19 15:34:15 NR021AA dbus-daemon[3284]: Successfully activated service 'org.gnome.Nautilus'
+nov 19 15:34:16 NR021AA gnome-software-service.desktop[3490]: (gnome-software:3490): Gs-WARNING **: failed to call gs_plugin_add_search on appstream: Se canceló la operación
+nov 19 15:34:16 NR021AA org.gnome.Shell.desktop[3311]: Gjs-Message: JS LOG: Invalid result meta returned from search provider seahorse.desktop
+nov 19 15:34:16 NR021AA dbus-daemon[3284]: Successfully activated service 'org.gnome.Documents'
+nov 19 15:34:16 NR021AA dbus-daemon[3284]: Successfully activated service 'org.gnome.Contacts.SearchProvider'
+nov 19 15:34:16 NR021AA org.gnome.Contacts.SearchProvider[3284]: ** (gnome-contacts-search-provider:4374): WARNING **: contacts-store.vala:335: Unable to check accounts caps The name org.freedesktop.Telepathy.AccountManager was not provided by any .service files
+nov 19 15:34:16 NR021AA org.gnome.Contacts.SearchProvider[3284]: (gnome-contacts-search-provider:4374): folks-WARNING **: backend-store.vala:434: Error preparing Backend 'telepathy': The name org.freedesktop.Telepathy.AccountManager was not provided by any .service files
+nov 19 16:17:13 NR021AA evolution-source-registry[3388]: ** (evolution-source-registry:3388): WARNING **: secret_service_search_sync: must specify at least one attribute to match
+nov 19 17:48:06 NR021AA gvfsd[3287]: ** (gvfsd:3287): WARNING **: dbus_mount_reply: Error from org.gtk.vfs.Mountable.mount(): Falló al obtener la lista de compartición del servidor: Connection refused
+nov 19 17:48:07 NR021AA gvfsd[3287]: ** (gvfsd:3287): WARNING **: dbus_mount_reply: Error from org.gtk.vfs.Mountable.mount(): Falló al obtener la lista de compartición del servidor: Connection refused
+nov 19 17:48:07 NR021AA gvfsd[3287]: ** (process:4947): WARNING **: Couldn't create directory monitor on smb://x-gnome-default-workgroup/. Error: La ubicación especificada no está montada
+nov 19 17:48:07 NR021AA gvfsd[3287]: ** (process:4952): WARNING **: Couldn't create directory monitor on smb://x-gnome-default-workgroup/. Error: La ubicación especificada no está montada
+nov 19 17:53:29 NR021AA su[5072]: (to root) raul on pts/2
+nov 19 17:53:29 NR021AA su[5072]: pam_systemd(su-l:session): Cannot create session: Already occupied by a session
+nov 19 17:53:29 NR021AA su[5072]: pam_unix(su-l:session): session opened for user root by (uid=1000)
+nov 19 17:59:12 NR021AA su[5072]: pam_unix(su-l:session): session closed for user root
+nov 19 18:09:22 NR021AA gnome-settings-daemon.desktop[3424]: (nautilus:5191): Gtk-WARNING **: Failed to register client: GDBus.Error:org.gnome.SessionManager.AlreadyRegistered: Unable to register client
+nov 19 18:09:23 NR021AA gnome-settings-daemon.desktop[3424]: (nautilus:5191): Gtk-WARNING **: Theme parsing error: <broken file>:1:0: Failed to import: El recurso en «/org/gnome/libgd/tagged-entry/default.css» no existe
+nov 19 18:10:07 NR021AA gnome-settings-daemon.desktop[3424]: (nautilus:5191): GLib-GObject-CRITICAL **: g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+nov 19 18:10:07 NR021AA gnome-settings-daemon.desktop[3424]: (nautilus:5191): GLib-GObject-CRITICAL **: g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+nov 19 18:10:50 NR021AA gnome-settings-daemon.desktop[3424]: (nautilus:5191): GLib-GObject-CRITICAL **: g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+nov 19 18:10:50 NR021AA gnome-settings-daemon.desktop[3424]: (nautilus:5191): GLib-GObject-CRITICAL **: g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+nov 19 18:10:50 NR021AA gnome-settings-daemon.desktop[3424]: (nautilus:5191): GLib-GObject-CRITICAL **: g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+nov 19 18:11:22 NR021AA gnome-settings-daemon.desktop[3424]: (nautilus:5253): Gtk-WARNING **: Failed to register client: GDBus.Error:org.gnome.SessionManager.AlreadyRegistered: Unable to register client
+nov 19 18:11:22 NR021AA gnome-settings-daemon.desktop[3424]: (nautilus:5253): Gtk-WARNING **: Theme parsing error: <broken file>:1:0: Failed to import: El recurso en «/org/gnome/libgd/tagged-entry/default.css» no existe
+nov 19 18:13:23 NR021AA gnome-settings-daemon.desktop[3424]: (gedit:3700): Gtk-WARNING **: Allocating size to GtkOverlay 0x562004386b30 without calling gtk_widget_get_preferred_width/height(). How does the code know the size to allocate?
+nov 19 18:16:47 NR021AA gnome-settings-daemon.desktop[3424]: (nautilus:5253): GLib-GObject-CRITICAL **: g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+nov 19 18:16:47 NR021AA gnome-settings-daemon.desktop[3424]: (nautilus:5253): GLib-GObject-CRITICAL **: g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+nov 19 18:16:47 NR021AA gnome-settings-daemon.desktop[3424]: (nautilus:5253): GLib-GObject-CRITICAL **: g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+nov 19 18:16:47 NR021AA gnome-settings-daemon.desktop[3424]: (nautilus:5253): GLib-GObject-CRITICAL **: g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+nov 19 18:21:17 NR021AA gnome-settings-daemon.desktop[3424]: (nautilus:5680): Gtk-WARNING **: Failed to register client: GDBus.Error:org.gnome.SessionManager.AlreadyRegistered: Unable to register client
+nov 19 18:21:17 NR021AA gnome-settings-daemon.desktop[3424]: (nautilus:5680): Gtk-WARNING **: Theme parsing error: <broken file>:1:0: Failed to import: El recurso en «/org/gnome/libgd/tagged-entry/default.css» no existe
