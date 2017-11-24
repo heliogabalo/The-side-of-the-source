@@ -43,7 +43,7 @@
 #### LAPIC -- Local component, integrado en el procesador
 #### ASIC -- Circuitos Integrados de Aplicación Específica
 #### SMI
-#### ISA -- Industry Standard Architecture
+#### ISA -- Industry Standard Architecture, también llamado I/O channel.
 #### PCI -- Peripheral Component Interconnect
 #### PCMCIA -- Personal Computer Memory Card International Association
 #### SPI -- Serial Peripheral Interface -- Interfase de periféricos en serie.
@@ -91,6 +91,8 @@
 #### CSR -- Cambridge Silicon Radio
 #### IPC -- InterProcess Communication
 #### SMP --
+#### SMBUS -- o SMB, System Management Bus
+#### MCA -- Micro Channel Architecture
 ---
 
 ## 1.1 <a name="i1i1">Referencias SO</a>
@@ -336,3 +338,10 @@
 
 ##### 10.3 Patentes
 [RCU-patente](http://liburcu.org/)
+
+
+--- a more comprehensive tool device --fwupdmgr
+
+
+
+

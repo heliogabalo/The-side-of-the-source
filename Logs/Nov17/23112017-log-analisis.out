@@ -1,0 +1,228 @@
+## log 
+
+El último intento de compilar el kernel con los módulos apropiados a este host NR021AA
+termina en falla debido a lo siguiente:
+
+- el módulo criptográfico para comprobar las firmas de cada uno de los módulos,
+no permite la instalación de los modulos necesarios dada la configuración del núcleo.
+Parece ser, que es debido a que la actual instalacion del sistema operativo, no
+dispone de los certificados `.pem` apropiados.
+
+- Según la documentación, descrita en la página de RedHat, en relación a la resolución de 
+este problema, no se ha podido llegar a resolver aún.
+
+- TODO:Habría que referenciar aquí la página de RedHat que proponía la resolución del problema
+
+- Como estoy escribiendo esto de memoría, no dispongo de los datos de respaldo, pero puedo 
+confirmar que se siguió exactamente el proceso propuesto en la documentación y, que resultó
+en la creación de dichos certificados, de forma exitosa.
+
+- Después de generar el índice en la ruta donde este sistema(fedora24), guarda dichos certificados, la cónsola sigue arrojando el mismo resultado.
+
+- TODO: habría que recrear el proceso para documentar la falla _in situ_.
+
+- En la configuración del núclo únicamente se activa:
+		Module signature verification
+		Automatically sign all modules
+
+- La compilación de los módules termina de forma exitosa, sin errorres.
+
+- La instalación de los módulos compilados,(elevación de permisos ajustada), arroja el siguiente
+resultado:
+
+			INSTALL crypto/crypto_engine.ko
+		At main.c:160:
+		- SSL error:02001002:system library:fopen:No such file or directory: bss_file.c:175
+		- SSL error:2006D080:BIO routines:BIO_new_file:no such file: bss_file.c:182
+		sign-file: certs/signing_key.pem: No such file or directory
+		scripts/Makefile.modinst:35: fallo en las instrucciones para el objetivo 'crypto/crypto_engine.ko'
+		Makefile:1231: fallo en las instrucciones para el objetivo '_modinst_'
+		make[1]: *** [crypto/crypto_engine.ko] Error 1
+		make: *** [_modinst_] Error 2
+
+- Se ha reescrito el directorio donde se contenían los módulos de anteriores instalaciones,
+quedando únicamente:
+		/lib/modules/miKernel-rc/kernel/crypto/crypto_engine.ko
+
+- Llegado a este punto, queda aportar la pagina de RedHat, donde se documenta la resolución del
+problema, con respecto al requisito de tales certificados.
+
+---
+
+Se procede a la compilación e instalación de los modulos necesarios para el correcto funcionamiento
+del sistema, antes de la activación de las característica de _firmado y verificación de modulos_.
+
+- Para esto se procede de la siguiente manera:
+
+1. Reinicio del sistema, a la espera de resultado erroneo durante el arranque efectivo.
+		Como el resultado de este proceso es impredecible por el administrador,
+		se genera una copia del proceso, en un directorio externo que pueda ser recuperable en caso
+		de respuesta de falla completa.	
+		
+2. Recompilación e instalación de los módulos sin la activación de las características 
+mencionadas como parte del sistema.
+3. Reporte de proceso.
+		No parece haber diferencia, en cuanto a que módulos están o no cargados. SIN EFECTO.
+		
+		- Debido a esto, deduzco que la instalación de los módulos durante la instalación de la 
+		imagen del kernel que cargará el sistema, es incorrecta.
+		La relación de `librerías.ko`, desde la ruta de sistema `/usr/lib/modules/releaseCandidate/kernel`
+		no coincide con la imagen que debería haber en la partción de arranque `/boot`
+		
+		- Mover los módulos desde la partición de arranque, provoca la inadecuada carga o carga 
+		incorrecta, de los módulos necesarios para el arranque, provocando que deba arrancarse el
+		sistema desde un dispositivo externo.
+		
+--
+El comando de línea para la depuración del kernel durante el arranque del sistema, no tiene efecto
+más que la salida por la terminal. Con esto quiero decir, que `/run/initramfs/rdsreport.txt` no  
+ha sido generado. Fallo en la depuración. `rd.debug`.
+
+TODO: habrá que escribir otro log, para los escripts que está cargando dracut, mirándolos
+por encima¡, he visto que se hace referencia a módulos no compilados en la imágen, y que 
+siguen cargándose en el sistema. FALLA CRITICA.
+
+---
+Estos son los metadatos del dispositivo de sonido. Estos datos resultan confusos debido a que
+el dispositivo no está conectado a la placa a través de un zócalo `PCI`, es parte de la placa,
+o lo que es lo mismo, es uno de los chips que conforman el conjunto de microchips de la placa.
+
+		I:44003145
+		E:ID_PCI_CLASS_FROM_DATABASE=Multimedia controller
+		E:ID_PCI_SUBCLASS_FROM_DATABASE=Audio device
+		E:ID_VENDOR_FROM_DATABASE=Intel Corporation
+		E:ID_MODEL_FROM_DATABASE=NM10/ICH7 Family High Definition Audio Controller
+
+- según la tabla de metadatos para dispositivos que lista el SO, el siguiente ábol:
+
+		+---+--00.0 bus norte o hostBridge
+		|		|
+		|		--+--1b.0 Dispositivo de Soonido(embebido/no es placa)
+		|		|
+		|		--+--1d.0 Bus (UHCI) para los 4 USB v1.0 posteriores.
+		|		| |
+		|		|	--+--1d.1 Serial Bus controller UHCI USBv1.0
+		|		|	|
+		|		|	--+--1d.2 Serial Bus controller UHCI USBv1.0
+		|		|	|
+		|		|	--+--1d.3 Serial Bus controller UHCI USBv1.0
+		|		|	|
+		|		|	--+--1d.7 Serial Bus controller UHCI USBv1.0
+		|		|
+		|		--+--1e.0 PCI bridge - zocalo-1  
+		|		|
+		|		--+--1f.0 PCI bridge - ISA bridge
+		|		|	|
+		|		|	--+--1f.2 IDE interface Family SATA Controller [IDE mode]
+		|		|	|
+		|		|	--+--1f.3 Serial bus controller SMBus
+		|		|
+		|		--+--02.0 VGA controller Express Integrated Graphics Controller
+		|
+		---------+--05.00.0 PCI Gigabit Ethernet Controller 
+		
+> La única duda en el esquema anterior, es si la interfase de red `05.00.0` debería haberla
+> colgado desde dentro del `busNorte` o como he hecho, desde fuera. He decidido colgarla fuera
+> del árbol, por que el dispositivo tiene precedencia sobre todos los demás dispositivos debido 
+> al identificador que el SO le ha asignado `05.00.0`.
+> Siguiendo la lógica en cuanto a la denominación de dispositivo, lo anterior tiene sentido.
+>
+> CORRECCIÓN--
+> Aunque pienso que no es así. no tiene sentido decir que por ID el dispositivo tiene precedencia
+> no es verdad. Por que se trata de una relación gerarquica, donde el primer dispositivo `00.0`
+> encabeza la lista de dispositivos.
+> La forma correcta de leerlo es:
+
+		00.00.0 --+ HostBridge
+		05.00.0 --|--+-- PCI Ethernet Controller
+		
+
+		+--00.0 bus norte o hostBridge
+		|
+		--+--1b.0 Dispositivo de Sonido(embebido/no es tarjeta)
+		|
+		--+--1d.0 Bus (UHCI) para los 4 USB v1.0 posteriores.
+		| |
+		|	--+--1d.1 Serial Bus controller UHCI USBv1.0
+		|	|
+		|	--+--1d.2 Serial Bus controller UHCI USBv1.0
+		|	|
+		|	--+--1d.3 Serial Bus controller UHCI USBv1.0
+		|	|
+		|	--+--1d.7 Serial Bus controller UHCI USBv1.0
+		|
+		--+--1e.0 PCI bridge - zocalo-1  
+		|
+		--+--1f.0 PCI bridge - ISA bridge
+		|	|
+		|	--+--1f.2 IDE interface Family SATA Controller [IDE mode]
+		|	|
+		|	--+--1f.3 Serial bus controller SMBus
+		|
+		--+--02.0 VGA controller Express Integrated Graphics Controller
+		|
+		|
+		|
+		--+--05.00.0 PCI Gigabit Ethernet Controller
+
+
+Esto es, en cuanto a como lée el Sistema Operativo, pero sigue sin ser correcto, por que
+el IDE o Serial Ata o HD(disco duro), se vé claramente que cuelga de una interfase 
+obsoleta `ISA`, además de no aparecer expuesta una segunda interfase `PCI` que sí
+tiene la placa. En su lugar aparece SMBus, según entiendo SMBUS, es una especie de gestor(bus) y
+debería colgar directamente de la rama principal.
+
+Por otro lado, falta una segunda `PCI` y dos zócalos `PCI` _simplificado_, que son igualmente
+dos entradas para tarjeta `PCI` de tamaño reducido, combinación habitual en las _placas_.
+
+Esto debería ser expuesto bajo el bus principal, por defecto, ya que no estamos hablando de
+dispositivos tipo _conectar y listo_, ya que el acceso a estos buses debe hacerse, accediendo
+a la maquinaria del equipo.
+
+Que pueda configurarse para que a través de un USB se consiga extender la funcionalidad de
+la _placa base_, eso es otro cantar, ya que por lógica, debería requerir una configuración
+forzada o expresamente _constituida para_.
+
+Tenía la duda de si mi placa tenía o no una entrada ISA, pero el bus se reconoce fácilmente
+por que, es bastante mas grande que los zócalos `PCI`. Así que queda absolutamente confirmado
+que la placa NO TIENE ningún zócalo `ISA`, el sistema operativo con un reluciente y novedoso
+`Fedora24` se ha sacado de la manga _el tal_ bus.
+
+Esto es algo muy _anormal_, ya que como digo es un _bus muy muy antiguo_, y cuando digo antiguo
+estoy hablando de principios 1980.
+
+Aquí queda estudiar como exponer bus del IDE, a través de una infterfase más moderna.
+
+Sólo se me ocurre que pueda tener sentido colocar un bus obsoleto(ISA) a través de otro
+más moderno(PCI) para conseguir que los dispositivos que cuelguen de esta comunicación
+puedan compartir el _ancho de banda_ para la comunicación entre dispositivos.
+
+De alguna manera, esto es _engañar_ al sistema par conectar más dispositivos de los que en realidad
+prodrían conectarse sin un multiplexador físico.
+---
+
+Queda también por comprobar y demostrar que se está utilizando el sistema de radio frecuencia
+`bluetooth`	para crear un punto de acceso remoto a través del servicio `wpa_supplicant` desde 
+donde conectar un dispositivo mobil/tablet para un intruso a través de la técnica conocida  
+como `MITM`, esto conlleva falsear el almacén de confianza del `SO` donde se están utilizando
+claves falsas.
+
+--- 
+Atendiendo a todo lo anterior, el movimiento lógico o vector de ataque, será reescribir el 
+código de scripts cargado una vez alcanzado `rc.4(multiusuraio/normal)` para evitar la 
+supervisión e intercepción del código atacante.
+
+Efectivamente esto no es un virus, se trata de código que ha forazado su própia carga en el 
+sistema, para lograr recursos que de otra forma sería imposible.
+		
+			
+			
+
+
+
+
+
+
+
+
+
