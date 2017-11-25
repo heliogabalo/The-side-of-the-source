@@ -22,5 +22,5 @@
 |tmp  					|	Ficheros temporales, se borra periódicamente y al _reinicio_ |  
 |usr  					|	Jerarquía secundaria																				 |  
 |var  					|	Datos variables																							 |  
-|windows  			|	Si hay un Windows de Microsoft instalado en el disco duro		 |  
-|  						  	se debería montar en esta carpeta														 |
+|windows  			|	Si hay un Windows de Microsoft instalado en el disco duro	se debería montar en esta carpeta	 |  
+
