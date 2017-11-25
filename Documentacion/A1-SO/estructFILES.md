@@ -3,7 +3,7 @@
 
 
 |		Directorio	|												Descripción														 |
-|---------------|:------------------------------------------------------------:|  
+|:--------------|-------------------------------------------------------------:|  
 |bin  					| comandos binarios esenciales																 |  
 |boot  					|	Ficheros estáticos del cargador de arranque									 |  
 |dev  					|	Ficheros que representas periféricos/dispositivos						 |  
@@ -23,4 +23,4 @@
 |usr  					|	Jerarquía secundaria																				 |  
 |var  					|	Datos variables																							 |  
 |windows  			|	Si hay un Windows de Microsoft instalado en el disco duro		 |  
-  						  	se debería montar en esta carpeta
+|  						  	se debería montar en esta carpeta														 |
