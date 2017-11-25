@@ -1,0 +1,4 @@
+El siguiente error detectado durante un temprano inicio de sistema:
+
+grub> ls
+	(fd0) error: failure reading sector 0x0 from "fd0"

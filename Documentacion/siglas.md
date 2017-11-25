@@ -45,6 +45,7 @@
 #### SMI
 #### ISA -- Industry Standard Architecture, también llamado I/O channel.
 #### PCI -- Peripheral Component Interconnect
+#### PCI-SIG -- PCI Special Interest Group
 #### PCMCIA -- Personal Computer Memory Card International Association
 #### SPI -- Serial Peripheral Interface -- Interfase de periféricos en serie.
 #### PIC -- Programmable Interrupt Controller
@@ -75,7 +76,7 @@
 #### OHCI -- Open Host Controller Interface to talk to USB 1.1
 #### UHCI -- Universal Host Controller Interface
 #### EHCI -- Extended? Host Controller Interface
-#### AHCI -- ?? Host Controller Interface
+#### AHCI -- Advanced Host Controller Interface
 #### UDMA -- Ultra Direct Memory Acces
 #### EDID -- 
 #### JIT -- Just In Time
@@ -93,6 +94,8 @@
 #### SMP --
 #### SMBUS -- o SMB, System Management Bus
 #### MCA -- Micro Channel Architecture
+#### VLB -- VESA Local Bus
+#### AER -- Advanced Error Reporting
 ---
 
 ## 1.1 <a name="i1i1">Referencias SO</a>

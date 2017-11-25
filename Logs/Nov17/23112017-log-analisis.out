@@ -153,7 +153,7 @@ o lo que es lo mismo, es uno de los chips que conforman el conjunto de microchip
 		|
 		--+--1e.0 PCI bridge - zocalo-1  
 		|
-		--+--1f.0 PCI bridge - ISA bridge
+		--+--1f.0 PCI bridge - ISA bridge 
 		|	|
 		|	--+--1f.2 IDE interface Family SATA Controller [IDE mode]
 		|	|
@@ -172,7 +172,7 @@ obsoleta `ISA`, además de no aparecer expuesta una segunda interfase `PCI` que 
 tiene la placa. En su lugar aparece SMBus, según entiendo SMBUS, es una especie de gestor(bus) y
 debería colgar directamente de la rama principal.
 
-Por otro lado, falta una segunda `PCI` y dos zócalos `PCI` _simplificado_, que son igualmente
+Por otro lado, falta dos zócalos `PCI` _simplificado_, que son igualmente
 dos entradas para tarjeta `PCI` de tamaño reducido, combinación habitual en las _placas_.
 
 Esto debería ser expuesto bajo el bus principal, por defecto, ya que no estamos hablando de
@@ -201,6 +201,58 @@ De alguna manera, esto es _engañar_ al sistema par conectar más dispositivos d
 prodrían conectarse sin un multiplexador físico.
 ---
 
+		+--00.0 bus norte o hostBridge
+		|
+		--+--1b.0 Dispositivo de Sonido(embebido/no es tarjeta)
+		|
+		--+--1d.0 Bus (UHCI) para los 4 USB v1.0 posteriores.
+		| |
+		|	--+--1d.1 Serial Bus controller UHCI USBv1.0
+		|	|
+		|	--+--1d.2 Serial Bus controller UHCI USBv1.0
+		|	|
+		|	--+--1d.3 Serial Bus controller UHCI USBv1.0
+		|	|
+		|	--+--1d.7 Serial Bus controller UHCI USBv1.0
+		|
+		--+--1e.0 PCI bridge - zocalo-1  				<<<<<--------------- esto es una PCIe x1
+		|
+		--+--1f.0 PCI bridge - ISA bridge 			<<<<<--------------- esto es una PCIe x1
+		|	|
+		|	--+--1f.2 IDE interface Family SATA Controller [IDE mode] <<<<<--- conectado en IDE
+		|	|
+		|	--+--1f.3 Serial bus controller SMBus
+		|
+		--+--02.0 VGA controller Express Integrated Graphics Controller
+		|
+		|
+		|
+		--+--05.00.0 PCI Gigabit Ethernet Controller <<<<<-------ocupado en PCI 
+
+
+
+resumen de los buses fisicos del sistema:
+
+		- 1 -- PCIe x16 v.(por determinar v.2?)
+		- 2 -- PCIe x1  v.(por determinar v.2?)
+		- 1 -- PCI v.(por determinar v.2?)
+		- 1 -- host USB v.1.0(4uds.)
+		- 1 -- host USB v.2.0(2uds.)
+
+
+
+CONCLUSIIÓN:
+Se está desaprovechando la velocidad[1], de la que es capaz el bus PCIe, si se configura un
+puente PCI, para controlar dispositivos que de sobras tienen espacio físico para ser alojados
+sobre los correspondientes buses.
+
+[1] -- ancho de banda, ratio de transferencia y frecuencia de reloj.
+		v. 1.x (2.5 GT/s):
+				250 MB/s (x1)
+				4 GB/s (x16)
+
+
+---
 Queda también por comprobar y demostrar que se está utilizando el sistema de radio frecuencia
 `bluetooth`	para crear un punto de acceso remoto a través del servicio `wpa_supplicant` desde 
 donde conectar un dispositivo mobil/tablet para un intruso a través de la técnica conocida  
