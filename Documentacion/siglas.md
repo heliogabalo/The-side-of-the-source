@@ -77,6 +77,7 @@
 #### UHCI -- Universal Host Controller Interface
 #### EHCI -- Extended? Host Controller Interface
 #### AHCI -- Advanced Host Controller Interface
+#### xHCI -- Extensible Host Controller Interface
 #### UDMA -- Ultra Direct Memory Acces
 #### EDID -- 
 #### JIT -- Just In Time
@@ -96,6 +97,7 @@
 #### MCA -- Micro Channel Architecture
 #### VLB -- VESA Local Bus
 #### AER -- Advanced Error Reporting
+#### NFS
 ---
 
 ## 1.1 <a name="i1i1">Referencias SO</a>
@@ -327,7 +329,7 @@
 	- FTP
 [UML-ftp](ftp://ftp.ca.kernel.org/pub/kernel/v2.4/linux-2.4.0-prerelease.tar.bz2)
 [Project-builder](ftp://ftp.project-builder.org/)
-
+[pivot_root][ftp://ftp.kernel.org/pub/linux/utils/utils-linux]
 #### 10.2 Documentacion
 	- HTTPS
 [IOMMU](http://www.intel.com/content/dam/www/public/us/en/documents/product-specifications/vt-directed-io-spec.pdf)

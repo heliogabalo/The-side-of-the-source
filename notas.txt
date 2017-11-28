@@ -1,2 +1,13 @@
 http://www.intel.la/content/www/xl/es/support/detect.html?iid=dc_iduu
 http://ark.intel.com/es-es/products/36463/Intel-Core2-Duo-Processor-E7300-3M-Cache-2_66-GHz-1066-MHz-FSB#@downloads
+
+
+
+TODO:
+
+hay que compilar de nuevo y volver a repasar debugfs
+
+-NFS
+-xHCI - wiki Extensible Host Controller Interface
+
+
