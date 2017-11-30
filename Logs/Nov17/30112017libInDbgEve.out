@@ -1,0 +1,61 @@
+event1 	DEVICE_ADDED     Power Button                      seat0 default group1 cap:k
+event0 	DEVICE_ADDED     Power Button                      seat0 default group2 cap:k
+event2 	DEVICE_ADDED     ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard seat0 default group3 cap:k
+event3 	DEVICE_ADDED     ckb1: Corsair Gaming K70 RAPIDFIRE Keyboard seat0 default group4 cap:kp left scroll-nat scroll-button
+event2 	KEYBOARD_KEY      +4.40s	KEY_DOWN (108) pressed
+event2 	KEYBOARD_KEY      +4.49s	KEY_DOWN (108) released
+event2 	KEYBOARD_KEY      +6.29s	KEY_UP (103) pressed
+event2 	KEYBOARD_KEY      +6.38s	KEY_UP (103) released
+event2 	KEYBOARD_KEY      +9.12s	KEY_LEFT (105) pressed
+event2 	KEYBOARD_KEY      +9.19s	KEY_LEFT (105) released
+event2 	KEYBOARD_KEY     +10.27s	KEY_RIGHT (106) pressed
+event2 	KEYBOARD_KEY     +10.34s	KEY_RIGHT (106) released
+event2 	KEYBOARD_KEY     +13.69s	KEY_ESC (1) pressed
+event2 	KEYBOARD_KEY     +13.76s	KEY_ESC (1) released
+event2 	KEYBOARD_KEY     +14.82s	KEY_LEFTCTRL (29) pressed
+event2 	KEYBOARD_KEY     +15.23s	KEY_C (46) pressed
+
+---
+
+ * `libinput-debug-events` --- pasado por tuberia para recoger la salida
+
+Esta es la secuencia que he pulsado en el teclado antes de mandar la las señal `SIGKILL` 
+
+ `abajo,arriva,izquierda,derecha,esc,ctrlLeft,c`
+
+
+
+ * Esto es nada mas que una prueba, para observar el comportamiento del
+ dispositivo, en este caso el teclado. 
+ 
+ * Interpreto la salida de la aplicación con dos bloques de código diferenciado
+ 	- Los dispositivos que se ponen a la escucha como eventos de entrada.
+ 	- Los eventos de dispositivo que se registrarán como entrada de usuario: 
+ 
+ - lo primero que encuentro es el POWER BUTTON
+ Interpreto que el boton de encendido, ha sido añadido 2 veces*** 
+ Debo suponer que esta aplicación, se pone a la escucha con el objeto de
+ detectar eventos de entrada.
+ En este contexto, tiene sentido que aparezca el boton de encendido, ya que
+ sabe, que el usuario podría apagar el ordenador en cualquier momento
+ [ok] para la primera señal de evento.
+ [no ok] el primer evento no es `event0`
+ [no ok] el primer evento es `event1`
+ [no ok] el evento de boton de encendido a la escucha, se repite dos veces.
+ [ok] Se pone a la ecucha el dispositivo teclado, ya que es el único dispositivo
+ de entrada, que hay conectado en ese momento.
+ [ok] el tercer evento es `event2` `cap:k`
+ [no ok] se vuelve a definir el teclado, como dispositivo de entrada, y se definen nuevas 
+ capacidades para el dispositivo, distintas de las que tiene el teclado que recogerá las
+ pulsaciones de usuario. `cap:kp left scroll-nat scroll-button`
+ [no ok] es facil ver, que todas las pulsaciones han sido duplicadas****
+ por cada pulsación que yo he pulsado, la aplicación ha registrado DOS(2), excepto para
+ la señal `ctrl-break`. que es una combinación de tecla `ctrl + C`.
+ 
+ * hay otras cuestiones que dejo por analizar, por falta de datos técnicos, como son:
+ - capacidades definidas en la declaración de dispositivo.
+ - capacidades definidas del dispositivo en particular
+ - timpo transcurrido 
+ - asociación del código ascii, para el mapeado del teclado.
+ - otros...
+ 

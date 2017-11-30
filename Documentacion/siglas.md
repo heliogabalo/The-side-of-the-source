@@ -73,11 +73,12 @@
 #### OC -- OverClocking
 #### PASID -- Process Adress Space Identifiers, Identificadores del espacio de direccionamiento de proceso.
 #### HCI -- Host Controller Interface
-#### OHCI -- Open Host Controller Interface to talk to USB 1.1
-#### UHCI -- Universal Host Controller Interface
-#### EHCI -- Extended? Host Controller Interface
+#### HCD -- Host Controller Driver
+#### OHCI -- Open Host Controller Interface to talk to USB 1.1 - ver xHCI.md
+#### UHCI -- Universal Host Controller Interface - ver xHCI.md
+#### EHCI -- Enhanced Host Controller Interface - ver xHCI.md
 #### AHCI -- Advanced Host Controller Interface
-#### xHCI -- Extensible Host Controller Interface
+#### xHCI -- Extensible Host Controller Interface [hardware/driver][xHCI.md]
 #### UDMA -- Ultra Direct Memory Acces
 #### EDID -- 
 #### JIT -- Just In Time
@@ -186,6 +187,7 @@
 #### SMM -- System Management Moode or _rin-2_, all execution is suspended
 #### VIA 
 #### TRANSMETA
+#### SRAT -- tabla...
 ---
 
 

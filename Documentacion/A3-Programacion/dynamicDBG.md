@@ -1,6 +1,8 @@
 1. Introducción
 2. Controlando el comportamiento del depurador dinámico
 3. Ver el comportamiento del depurador dinámico
+4. Referencias de comandos del lenguaje
+
 
 88. Notas y apuntes
 99. Referencias y agradecimientos
@@ -85,6 +87,31 @@ _sentencias_ del depurador con cualquiera de estas "banderas", no activas por de
 		
 		# filename:lineno [module]function flags format
 	  /usr/src/packages/BUILD/sgi-enhancednfs-1.4/default/net/sunrpc/svcsock.c:1603 [sunrpc]svc_send p "svc_process: st_sendto returned %d\012"
+	  
+
+#### Referencias de comandos del lenguaje
+
+A nivel de léxico, los comandos comprenden una secuencia de palabras separadas por espacios  
+o tabulados. Todos estos son equivalentes:
+
+		# echo -n 'file svcsock.c line 1603 +p' > <debugfs>/dynamic_debug/control
+		
+		# echo -n '  file   svcsock.c     line  1603 +p  ' > <debugfs>/dynamic_debug/control
+		
+		# echo -n 'file svcsock.c line 1603 +p' > <debugfs>/dynamic_debug/control
+		
+La entrega de comandos está vinculada a una llamada de sistema `write()`.
+Pueden ser escritos múltiples comandos, separados por `;` o `\n`
+
+		# echo "func pnpacpi_get_resources +p; func pnp_assign_mem +p" \  
+			> <debugfs>/dynamic_debug/control
+
+Si el conjunto de consultas es grandes, pueden guardarse en un archivo `batch`:
+
+		# cat query-batch-file > <debugfs>/dynamic_debug/control
+
+
+
 
 
 #### Notas y apuntes
@@ -146,3 +173,6 @@ mirar en `/proc` y `/sys`.
 #### Referencias y agradecimientos
 
 Documentación/dynamic-debug-howto.txt
+
+[burzalodowa][https://burzalodowa.wordpress.com/2013/09/18/how-to-enable-and-tune-dynamic-debugging-for-xhci/]
+

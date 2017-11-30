@@ -5,9 +5,27 @@ http://ark.intel.com/es-es/products/36463/Intel-Core2-Duo-Processor-E7300-3M-Cac
 
 TODO:
 
-hay que compilar de nuevo y volver a repasar debugfs
+- Supervision diaria:
+ * -reglas locales udev
+	 -es buena idea hacer un log e ir apuntando las pesquisas.
 
+A3-- dynamicDBG.md Referencias de comandos del lenguaje 111 p
+
+- Hay que averiguar qué es, para que sirve, como funciona, por qué está ahí
+	el directorio `/boot/i386/`
+
+	* Pero sobre todo _POR QUÉ ESTÁ AHÍ_
+	
+- yenta module hace referencia al bus ISA
 -NFS
--xHCI - wiki Extensible Host Controller Interface
-
-
+-LVM:
+ * Una correcta instalacion  del hipervisor, aconseja la instalaci'on tanto
+   del dom0 como de las vms atrav'es del gestor LVM.
+ * Preparacion de los medios con "lvm-cachedVolumes"
+ * Preparacion del nucleo
+ * Configuracion basica:
+ 		- puente de red para el dom0.
+ * Los drivers de los dispositivos, siguen utilizando el bus ISA, aún cuando
+ la configuración del nucleo elude cualquier mención a ellos.
+ En este sistema NO EXISTE el _bus ISA_. 
+-
