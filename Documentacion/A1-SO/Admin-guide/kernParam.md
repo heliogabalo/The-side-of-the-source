@@ -174,6 +174,31 @@ un parámetro:
 		XEN	Xen support is enabled
 
 
+El siguiente texto explica otras opciones:  
+
+	BUGS=	Relacionado con posibles errores(bugs) del procesador, en dicho procesador.	 
+	KNL	es un parámetro de arranque del kernel  
+	BOOT	es un parámetro del gestor de arranque  
+
+Los parámetros marcados con BOOT son de hecho, interpretados por el gestor de arranque,  
+y no tienen un significado directo para el kernel.
+No modificar la sintaxis de los parámetros del gestor de arranque, sin una necesidad  
+extrema o sin ser coordinados con la documentación aportada en <Documentacion>$plataforma/boot.txt
+
+Nótese que todos los parámetros del kernel listados más abajo[#ref1], hacen distinción entre  
+mayúsculas o no. El símbolo `=` en el nombre de stado de un parámetro, será _entrado_ como  
+_variable de entorno_, donde su ausencia indica que aparecerá como argumente del _kernel_  
+leíble via `/proc/cmdline` por los programas en carrera, una vez el sistema este en marcha.  
+
+El número de parámetros del núcleo, _no es límitado_, pero su longitud _lo está_, a un número 
+fijo de carácteres. Éste límite depende de la arquitectura y, está comprendida entre  
+_256 y 4096 carácteres_. Definido en el archivo `./include/asm/setup.h` como 
+`COMMAND_LINE_SIZE`
+
+Finalmente, el sufijo [KMG] es comunmente descrito después de un número de valores de  
+parámetro. Éstas letras 'K', 'M' y 'G', representan el multiplicador _Kilo, Mega, Giga_,  
+iguales a 2^10, 2^20, and 2^30, `bytes` respectivamente. Estos sufjos de letras, podrán
+ser omitidos completamente.
 
 
 
@@ -182,14 +207,7 @@ un parámetro:
 > el traductor la encontró al descargar la fuente.  
 
 
-
-
-
-
-
-
-
-
 #### Referencias y agradecimientos
 
 Documentación extraida de la fuente del _núcleo de linux_.
+[ref1][kernel-parameters.txt]

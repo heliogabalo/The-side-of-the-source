@@ -1,10 +1,8 @@
 ## Indice
 
-
-
-
 1. [Referencias Generales](#i1)
 	 - 1.1 Referencias SO
+	 - 1.2 [_Placas_](#i1i12)
 2. Referencias a memorias
 4. Referencias a Disco Duro
 5. [Referincias a Unidades de procesamiento](#i5)
@@ -31,32 +29,19 @@
 ---
 ## 1. <a name="i1">Referencias Generales</a>
 
-#### OEM  -- Original Equipment Manufacture
 #### OS --- Operating system
 #### OSL ---  OS Service Layer
 #### ABI --
-#### SoC -- Sistemas en Chip
-#### SCI --- System Control Interrupt
 #### HDL -- Hardware Description Language
 #### HPET -- High Precision Event Timer
 #### APIC --  Advanced Programmable Interrupt Controller
 #### LAPIC -- Local component, integrado en el procesador
-#### ASIC -- Circuitos Integrados de Aplicación Específica
 #### SMI
-#### ISA -- Industry Standard Architecture, también llamado I/O channel.
-#### PCI -- Peripheral Component Interconnect
-#### PCI-SIG -- PCI Special Interest Group
 #### PCMCIA -- Personal Computer Memory Card International Association
 #### SPI -- Serial Peripheral Interface -- Interfase de periféricos en serie.
 #### PIC -- Programmable Interrupt Controller
 #### DSP -- Procesadores Digitales de Señal
 #### FPGA -- Matrices de puertas reconfigurables
-#### BIOS -- Basic Input Output System
-#### CMOS -- Complementary metal-oxide-semiconductor (RTC and basic info PC config)
-#### SMBIOS -- System Management BIOS, define data structures & acces methods to read BIOS.
-#### Northdridge -- Comunicacion directa con CPU y PCI-Express
-#### SouthBridge -- Otras operaciones secundarias sobre PCI -- (Serial ATA, SCSI)???
-#### ICH -- Input/Output Controller Hub - SouthBridge
 #### DPMI -- DOS Protected Mode Interface
 #### PCB -- Process Control Block - define el estado actual del sistema operativo.
 #### IP -- Intellectual Property(desambiguación).
@@ -70,24 +55,13 @@
 #### CRT -- Tubo de Rayos Catódicos
 #### TDP -- Thermal Design Power. Indica la cantidad de W de calor, que puede disipar el sistema antes de alcanzar el máximo d.
 #### FMA -- Fused Multiply-Add. Mejora para el cálculo de operaciones con punto flotante.
-#### OC -- OverClocking
 #### PASID -- Process Adress Space Identifiers, Identificadores del espacio de direccionamiento de proceso.
-#### HCI -- Host Controller Interface
-#### HCD -- Host Controller Driver
-#### OHCI -- Open Host Controller Interface to talk to USB 1.1 - ver xHCI.md
-#### UHCI -- Universal Host Controller Interface - ver xHCI.md
-#### EHCI -- Enhanced Host Controller Interface - ver xHCI.md
-#### AHCI -- Advanced Host Controller Interface
-#### xHCI -- Extensible Host Controller Interface [hardware/driver][xHCI.md]
-#### UDMA -- Ultra Direct Memory Acces
 #### EDID -- 
 #### JIT -- Just In Time
 #### PAE -- Phisical Address Extension
 #### FPU -- (Floating Poinmt Unit)??
 #### LUN --
 #### PMMU -- paged memory management unit
-#### AoE -- ATA over Ethernet
-#### HID -- Human Interface Device, it take INPUTS and give OUTPUTS.[hardware/hid]:[hid.md]
 #### RCU -- Read Copy Update [hardware/procesador]:[rcu.md]
 #### PME power management event support
 #### UUID -- User Unique Identifier
@@ -99,7 +73,14 @@
 #### VLB -- VESA Local Bus
 #### AER -- Advanced Error Reporting
 #### NFS
+#### GPM -- relacionado con una interfase para ratón(controlador de ventos). Una "especie de Clipboard".
+#### ABRT -- Automatic Bug Reporting Tool
+#### MBR -- Master Boot Record
+#### EBR -- Extended Boot Record, logical partition precedent sector unalloc space
+#### ACM -- comunication device class _Abstract Control Model_ interfase
+#### UART --
 ---
+
 
 ## 1.1 <a name="i1i1">Referencias SO</a>
 
@@ -107,7 +88,41 @@
 #### Systemd -- a system and a service manager
 #### Udev -- Dynamic Device management
 
+
+## 1.2 <a name="i1i12">_Placas_</a>
+
+#### OEM  -- Original Equipment Manufacture
+#### SoC -- Sistemas en Chip
+#### SCI --- System Control Interrupt
+#### ISA -- Industry Standard Architecture, también llamado I/O channel.
+#### ASIC -- Circuitos Integrados de Aplicación Específica
+#### PCI -- Peripheral Component Interconnect
+#### PCI-SIG -- PCI Special Interest Group
+#### BIOS -- Basic Input Output System
+#### CMOS -- Complementary metal-oxide-semiconductor (RTC and basic info PC config)
+#### SMBIOS -- System Management BIOS, define data structures & acces methods to read BIOS.
+#### Northdridge -- Comunicacion directa con CPU y PCI-Express
+#### SouthBridge -- Otras operaciones secundarias sobre PCI -- (Serial ATA, SCSI)???
+#### ICH -- Input/Output Controller Hub - SouthBridge
+#### AoE -- ATA over Ethernet
+#### HID -- Human Interface Device, it take INPUTS and give OUTPUTS.[hardware/hid]:[hid.md]
+#### HCI -- Host Controller Interface
+#### HCD -- Host Controller Driver
+#### OHCI -- Open Host Controller Interface to talk to USB 1.1 - ver xHCI.md
+#### UHCI -- Universal Host Controller Interface - ver xHCI.md
+#### EHCI -- Enhanced Host Controller Interface - ver xHCI.md
+#### AHCI -- Advanced Host Controller Interface
+#### xHCI -- Extensible Host Controller Interface [hardware/driver][xHCI.md]
+#### OC -- OverClocking
+#### `G` Connector --
+#### Form Factor(FF) -- Standard ATX, Micro ATX, Mini ATX, Nano ATX, Pico ATX
+#### AT	-- Advanced Tecnology
+#### ATX -- Advanced Tecnology Extended
+#### FBS -- Front Side Bus
+#### Mother Board -- sadly called _"mobo"_ thing.
 ---
+
+
 ## Referencias Memorias/chips
 
 #### ROM -- Read Only Memory
@@ -120,6 +135,7 @@
 #### DRAM -- Dynamic Random Acces Memory
 #### DRAM -- RAM dinamica "memoria principal del sistema"
 #### SRAM -- RAM estatica (común en el procesador como memoria caché)
+#### SMRAM --
 #### FPGA -- Field-programmable gate array(integrated circuit)
 #### IOMMU -- I/O Memory Management Unit. 
 #### DMA -- Direct Memory Acces
@@ -166,6 +182,7 @@
 #### GPIO -- General Purpose input/output (port/Ver ACPI) 
 #### GPIO	   pin genérico en un circuito integrado.
 #### POST -- Power-On Self-Test
+#### UDMA -- Ultra Direct Memory Acces
 ---
 
 #### <a name="i5">5. Referincias a Unidades de procesamiento</a>

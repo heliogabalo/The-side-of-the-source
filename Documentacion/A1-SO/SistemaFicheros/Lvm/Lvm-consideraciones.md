@@ -1,9 +1,9 @@
 ## Consideraciones
 
 ### INDICE
-- Encontrar punto de montaje asiciado al _LV_.
-- Ruta asociada a SeLinux
-- Uso de LVM
+1. Encontrar punto de montaje asiciado al _LV_.  
+2. Ruta asociada a SeLinux  
+3. Uso de LVM  
 
 ---
 
@@ -16,11 +16,10 @@ recurrir a:
 
 		# mount | grep volume_group-lvname
 
-¿Alguno recuerda el comentario que hice sobre los `guiones`?. Maldito _lol_!!.
 > __caso práctico__: _LV_ llamado "mi-volumen" montanodo sobre `/mnt/mi_puntoM`
 , el _PV_ se llama "infierno".
 `# mount|grep infierno-mi--volumen`.
-Esto funciona sobre una distribución Fedora. Hay otra notación por _siaca!_.
+Esto funciona sobre una distribución Fedora. 
 		# mount |grep VG/lvname
 
 #### Ruta asociada a SeLinux
@@ -50,7 +49,7 @@ the volume group, specify the physical volume or volumes at the end at the
 lvcreate command line. The following command creates a logical volume named
 testlv in volume group testvg allocated from the physical volume /dev/sdg1,
 
-lvcreate -L 1500 -ntestlv testvg /dev/sdg1
+		lvcreate -L 1500 -ntestlv testvg /dev/sdg1
 
 Para crear un _LV_ que pueda ser recolocado sobre un específico _PV_ dentro de
 un _VG_, se debe especificar el _PV_ o volúmenes al final del comando `lvcreate`.

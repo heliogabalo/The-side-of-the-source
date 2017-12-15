@@ -1,7 +1,6 @@
 ## Caché LVM
 
 #### Descripción
-...si no me equivoco esto será algo así:
 
 La idea aquí es crear un volúmen lógico donde almacenar muchos datos. Sería
 un ejemplo perfecto una gran base de datos.
@@ -10,7 +9,7 @@ En lugar de almacenar todos los datos mezclados, se compartimentalizarán,
 en otros _LV's_, consiguiendo con esto mayor eficiencia en la lectura/escritura
 hacia el dispositivo.
 
-Esto se consigue almacenando los bloques de uso frecuente, en _LV's_ mas
+Esto se consigue almacenando los _bloques de uso frecuente_, en _LV's_ mas
 rápidos -ya que estarán contruidos para almacenar datos específicos.
 El gestor _LV_, se refiere a estos pequeños y rápidos _LV's_, como :
 __cache pool LV__
@@ -46,7 +45,7 @@ Método principal de uso:
 	volumenes al que queramos asociar o el nombre de grupo que tendrá
 	en caso de no existir el _VG_(esto último es una suposición).
 
->> _Teníamos un contruidos un _PV_ y su respectivo _VG_, por lo que_
+>> Había un contruidos un _PV_ y su respectivo _VG_, por lo que_
 >> _El Origin parte con un tamaño de 15G, PV=25G, y quedará un remanente_
 >> _en el PV de aproximadamente otros 5G._
 
@@ -111,18 +110,9 @@ Método principal de uso:
 
 		# lvs -a VG   
 		LV                 VG    Attr       LSize  Pool         Origin Data%  Meta%  Move Log Cpy%Sync Convert
-		OriginLV              VG    Cwi-a-C--- 15,00g [cacheDatos]        0,00   3,47            100,00
-		[OriginLV_corig]      VG    owi-aoC--- 15,00g
-		[cacheDatos]       VG    Cwi---C---  2,00g                     		0,00   3,47            100,00
+		OriginLV           VG    Cwi-a-C--- 15,00g [cacheDatos]        0,00   3,47            100,00
+		[OriginLV_corig]   VG    owi-aoC--- 15,00g
+		[cacheDatos]       VG    Cwi---C---  2,00g										 0,00   3,47            100,00
 		[cacheDatos_cdata] VG    Cwi-ao----  2,00g
 		[cacheDatos_cmeta] VG    ewi-ao----  8,00m
 		[lvol0_pmspare]    VG    ewi-------  8,00m
-			
-
-
-
-
-
-
-
-

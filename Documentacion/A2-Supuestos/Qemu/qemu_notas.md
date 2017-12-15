@@ -167,7 +167,7 @@ redimensionar con qemu.
 > Vemos que el orden del proceso es opuesto en cada caso!!
 
 
-__Reseña:__ en Territorio Linux, hemos encontrado que una de la librerías más importantes
+__nota:__ en Territorio Linux, hemos encontrado que una de la librerías más importantes
 de Qemu _libvirt_, no están completamente _integradas_ en otras distribuciones fuera 
 de _Fedora_. 
 Nuestro equipo utiliza generalmente máquinas _Debian_, y es verdad que las sibrerías están, 
@@ -532,7 +532,7 @@ Ahora sería oportuno listar y revisar los datos:
 __Crear capturas externas de  disco__  
 Primero es listado el dispositivo de bloque asociado a la supuesta.  
 
-    # virsh domblklist myVm-base   <- domain block list  
+    # virsh domblklist myVm-base   - domain block list  
 
 A continuación es creada la captura, con la supuesta en carrera.  
 
@@ -549,7 +549,8 @@ Por último. volvemos a listar el dispositivo de bloque, mediante la instrucció
 
 #### <a name="2i4">Proceso de reversión </a>
 Revertir a un estado de _captura interna_, es posible; ya sea sobre un punto de guardado
-o disco. 
+o disco.  
+
 > Esta característica podría sufrir cambios en sucesivas versiones de la aplicación.
 
 Para revertir a una cpatura llamada capt1 de myVm1:
@@ -1040,7 +1041,7 @@ Este comando identifica la imagen, como un dispositivo de bloque llamado
 
 1. CARGAMOS EL MÓDULO  
 
-       `# modprobe nbd` -- Esto carga el módulo de no estar cargado.  
+     `# modprobe nbd` -- Esto carga el módulo de no estar cargado.  
      `# modprobe nbd max_part=16`  
 
 2. A continuación preparamos el dispositivo donde montaremos la unidad.  

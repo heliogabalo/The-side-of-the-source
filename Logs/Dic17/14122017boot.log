@@ -1,0 +1,9 @@
+En la versión de Fedora 24, instalada en ésta máquina el arranque se inicia
+con `initrd16 /initramfs-rc.img` para llamar a `init`.  
+
+Tal y como está escrito el código, se interpreta:
+1º- `initrd16` es un módulo
+2º- toma como argumento /initramfs-rc.img para llamar a `init`
+3º- Systemd no ha configurado ninguna ruta para para llamar a `init`,
+ya que la _entrada de la variable_ esta comentada en sus respectivo archivo.
+

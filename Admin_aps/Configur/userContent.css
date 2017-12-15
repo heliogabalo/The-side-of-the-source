@@ -1,0 +1,15 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.jsonly.xul")
+
+/* aply to all document on a web $entry */
+
+@-moz-document domain(google.com) {
+	img {opacity: 0.05 !important; }
+	 
+}
+
+/* aply to all document */
+
+img {
+	opacity: 0.05 !important;
+	background-color: 0FFF;
+}
