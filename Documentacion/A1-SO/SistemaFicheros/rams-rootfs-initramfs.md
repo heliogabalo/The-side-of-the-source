@@ -18,7 +18,7 @@ Es un sistema de archivos muy simple, el cuál exporta los mecanismos de _cachea
 _Linux_(la página caché y la `dentry` caché), como un sistema de archivo dinámicamente  
 redimensionable, basado en el sistema de archivo de _la RAM_.
 
-Normalmente, todos los archivos son cacheados por el _kernel linux_. Las página de datos de  
+Normalmente, todos los archivos son _cacheados_ por el _kernel linux_. Las página de datos de  
 lectura desde el almacén de soporte(`backing store`, habitualmente el _dispositivo de bloque_,  
 donde es montado el _FS_)son mantenidos en caso de ser necesitado de nuevo, pero marcado como  
 `clean`(liberable), en caso de que el _sistema memoria virtual_ necesitase la memoria para  
@@ -40,13 +40,19 @@ montando el disco caché como sistema de archivo. Por esta razón, `ramfs`, no e
 de componente, para el _menú de configuración_ `menuconfig`, que pueda ser _desactivada_, 
 ya que podrían haber espacios de guardado corruptos.
 
+> __dentry:__ es utilizado para relacionar el número de _inodos_ con los nombres de archivo.  
+> Juegan un papel importante en el _cacheado de un directorio_, donde se guardan los archivos  
+> frecuentemente accedidos (ejem. `ls -ltru /etc`), para un más rápido acceso a los mismos. 
+> El _sistema de archivos transversal_, es otro de los aspectos de `dentry` ya que mantiene  
+> una relación entre directorios y sus archivos.
+
 
 #### ramfs y ramdisk
 
 El antiguo mecanismo "disco ram", creaba un dispositivo de bloque sintético, fuera de un area
 para la RAM, y lo usó como `backing store` para el sistema de archivos. Éste dispositivo de  
 bloque, tenía un tamaño fijo, así que el FS montado en él, también con tamaño fijo.
-Al usar un "disco de ram" requería copiar memoria innecesariamente desde el _falso_  
+Usar un "disco de ram" requería copiar memoria innecesariamente desde el _falso_  
 dispositivo de bloque, al caché de página(y volver a copiar los cambios). También crear y  
 destruir _`dentry`s_. 
 Además necesitó un controlador para el _FS_ -como el _ext2_, para formar e interpretar  
@@ -61,18 +67,17 @@ ya que todo el acceso a archivos, va a través de la página y de la caché `den
 RAM es simplemente innecesario; internamente, `ramfs` es mucho mas simple.  
 
 Otra razón por la que `ramfs` ha quedado _semi obsoleta_ es que la introducción de los  
-dispositivos de retorno(`loopback`), ofrece una mayor flesibilidad y forma conveniente, de  
-crear _dispositivos de bloque sintéticos_; ahora desde archivos, en lugar de _memoria no  
-limpia_. Ver `losetup(8)` para más detalles.  
+dispositivos de retorno(`loopback`), ofrece una mayor flexibilidad y forma conveniente, de  
+crear _dispositivos de bloque sintéticos_; ahora desde archivos, en lugar de _memoria no_  
+_limpia_. Ver `losetup(8)` para más detalles.  
 
 #### ramfs y tmpfs
 
-Una de las _contras_ en `ramfs`, es que se puede seguir escribiendo datos, hasta que se ha  
+Uno de los _contras_ en `ramfs`, es que se puede seguir escribiendo datos, hasta que se ha  
 ocupado toda la memoria, y la _VM_ no puede liberarla por que la _VM_ piensa que todos los  
 archivos deberían ser escritos al `backing store`(en lugar del espacio  de intercambio),  
 pero `ramfs` no tiene `backing store`. Así que sólo el `root` -o usuario con permisos,  
-debería tener acceso de escritura al montado _ramfs_.
-
+debería tener acceso de escritura al montado de _ramfs_.
 
 Se creó un derivativo de `ramfs` para añadir límite de tamaño, y la habilidad de escribir  
 los datos en el espacio de intercambio(swap). Normalmente los usuarios tienen permisos de
@@ -121,7 +126,7 @@ texto y datos `__init`, que pueden ser descartados durante el proceso de arranqu
 
 - El programa utilizado por el viejo `initrd`, -se llamó `/initrd` no `/init`,  
 hizo alguna configuración, retornando después al _kernel_. Mientras que no se espera  
-lo mismo de `initramfs`, retornar la kernel. 
+lo mismo de `initramfs`, retornar al kernel. 
 Si `/init` necesita dejar de controlar, puede _sobremontar_ `/` con un nuevo  
 dispositivo raíz y, ejecutar otro programa `init`. Ver `switch_root utility`, abajo.
 
@@ -204,7 +209,7 @@ un _mesaje de uso_ documentando el archivo anterior
 
 
 Una de las ventajas del archivo de configuración, es que el acceso _root_, no es necesario,  
-para configurar los permisos o crear nuevos _nodos de dispositivo_ en el nuevo archvo.  
+para configurar los permisos o crear nuevos _nodos de dispositivo_ en el nuevo archivo.  
 Nótese, que las dos _entradas_ en el siguiente archivo, esperan _encontrar_ los archivos  
 
 		file /init initramfs/init.sh 755 0 0  
@@ -230,7 +235,7 @@ creado desde `usr/gen_init_cpio.c`.
 El proceso del _kernel_ para construir el código `cpio`, es _autocontenido_, igual que el  
 proceso de _extracción del arranque_ -no se si muy alegremente, pero con cierta obviedad.  
 
-La única cosa, que podría necesitar _utilidades extarnas instaladas_, es _el crear_, o  
+La única cosa, que podría necesitar _utilidades externas instaladas_, es _el crear_, o  
 _extraer_, un `cpio` personalizado, que coincidiese con la _construcción del núcleo_,  
 en lugar de un _archivo de configuració o directorio_.
 

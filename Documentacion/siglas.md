@@ -79,6 +79,7 @@
 #### EBR -- Extended Boot Record, logical partition precedent sector unalloc space
 #### ACM -- comunication device class _Abstract Control Model_ interfase
 #### UART --
+#### HPC -- High Performance Computing
 ---
 
 
@@ -136,6 +137,8 @@
 #### DRAM -- RAM dinamica "memoria principal del sistema"
 #### SRAM -- RAM estatica (común en el procesador como memoria caché)
 #### SMRAM --
+#### NVRAM -- Non Volatile RAM, llamada _CMOS RAM_ en PCs, guarda la _config de la BIOS_
+#### CMOS-- tipo de memoria, usa la bateria de litio del sistema para guardar los datos tras offlined.
 #### FPGA -- Field-programmable gate array(integrated circuit)
 #### IOMMU -- I/O Memory Management Unit. 
 #### DMA -- Direct Memory Acces
@@ -152,7 +155,9 @@
 #### PCB -- Printed Circuit Board
 #### CFI -- Common flash memory interface
 #### ECC memory -- Error-correcting code memory
+#### OOM -- Out Of Memory manager
 #### EDAC -- Error Detection And Correction 
+#### DAC -- Digital Audio Converter
 #### LDPC
 #### SDDC --(Intel) Single Device Data Correction
 #### MLC -- Multi-Level Cell
@@ -183,6 +188,7 @@
 #### GPIO	   pin genérico en un circuito integrado.
 #### POST -- Power-On Self-Test
 #### UDMA -- Ultra Direct Memory Acces
+#### NPU -- Network Processing unnit
 ---
 
 #### <a name="i5">5. Referincias a Unidades de procesamiento</a>

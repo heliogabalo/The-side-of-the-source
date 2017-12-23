@@ -5,6 +5,8 @@ http://ark.intel.com/es-es/products/36463/Intel-Core2-Duo-Processor-E7300-3M-Cac
 
 TODO:
 
+**** wmctrl xdotool xprop xwinfo
+
 
 - localizar .config gedit
 
@@ -59,5 +61,7 @@ A3-- dynamicDBG.md Referencias de comandos del lenguaje 111 p
 			- sysV
 			- sistemd initrd, `change_root`
 		- Systemd init, `pivot_root`
+		
+		
 		
 		

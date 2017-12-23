@@ -2,3 +2,26 @@ El siguiente error detectado durante un temprano inicio de sistema:
 
 grub> ls
 	(fd0) error: failure reading sector 0x0 from "fd0"
+	
+	
+__nota:__ fd se refiere a floppy disk, o las disqueteras de 3 1/2 y 5 1/4.
+Algunos sistemas antiguos, mantienen la opcion para arrancar el sistema desde
+estos medios.
+
+Concretamente este error, sospecho que está provocado por que el sistema aún
+no ha cargado el controlador del dispositivo(floppys) y aunque está desabilitado
+desde la BIOS, se encuentra a la escucha, del inicio de sistema a través de 
+este medio.
+
+Podría indicar, que o no se está cargando el microcódigo de la BIOS, o se ha
+sobreescrito, y por lo tanto no se están utilizando los valores especificados
+en la BIOS.
+
+literalmente, indica que se ha encontrado un fallo en la lectura del 
+_sector 0_ del disco tipo flopy, primer miembro del arreglo -el primer disco.
+
+... si no hay disco como narices lo va a leer!! de hecho no hay disquetera.
+
+
+FD 0 - podria interpretarse como el descriptor de archivo(file descriptor)
+0 1 2, entrada salida error estandar.

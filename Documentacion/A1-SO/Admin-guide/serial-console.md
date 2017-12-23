@@ -5,7 +5,7 @@
 
 ## Cónsola en serie Linux
 
-Para utilizar la cónsola en seria, se necesita compilar dicho soporte, con el kernel. Por  
+Para utilizar la cónsola en serie, se necesita compilar dicho soporte, con el kernel. Por  
 defecto, no está compilado. Dentro del menú de configuración:
 
 	menuselection: `Character devices --> Serial drivers -->`  
