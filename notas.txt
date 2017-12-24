@@ -1,6 +1,3 @@
-http://www.intel.la/content/www/xl/es/support/detect.html?iid=dc_iduu
-http://ark.intel.com/es-es/products/36463/Intel-Core2-Duo-Processor-E7300-3M-Cache-2_66-GHz-1066-MHz-FSB#@downloads
-
 
 
 TODO:
@@ -10,10 +7,6 @@ TODO:
 
 - localizar .config gedit
 
-- Supervision diaria:
- * -reglas locales udev
-	 -es buena idea hacer un log e ir apuntando las pesquisas.
-	 
 
 A3-- dynamicDBG.md Referencias de comandos del lenguaje 111 p
 
@@ -38,29 +31,7 @@ A3-- dynamicDBG.md Referencias de comandos del lenguaje 111 p
  En este sistema NO EXISTE el _bus ISA_. 
 ---
 
-- Disco de arranque
-	_ref. el torito_
-	- desde cero
-		- cear dispositivo
-			- planificar el espacio 
-				- tamaño de "bloque"; del dispositivo de bloque
-				- tamaño de sector, o FS que alojara
-		- dar formato para el FS
-			- Otros _sistemas de archivo_
-			- Los _wrapers_
-		- instalar los archivos necesarios
-	- copia desde otro medio "arrancable"
-		- commprobar el espacio `file`
-		- copiar sin los simbolos de depuracion `objcopy --strip-all`
-		- copia exacta `dd <if=> <of=> <bs=> <count=>` _o clon_
-		- instalar los archivos necesarios
-	- Diferencias en una instalacion sobre HDD
-		- el grub o gestor de arranque
-		- imagen comprimida
-		- `step by step` _En dos pasos_
-			- sysV
-			- sistemd initrd, `change_root`
-		- Systemd init, `pivot_root`
+
 		
 		
 		

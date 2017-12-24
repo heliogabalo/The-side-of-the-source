@@ -30,7 +30,7 @@ aislada_.
 
 Empezamos escribiendo un pequeño ejemplo de guía:
 
-	`xen-create-image \
+	xen-create-image \
 	--dhcp --mac my:my:my:mac:mac:mac \
 	--memory 512M --swap 1000M \
 	--dist squeeze \

@@ -305,6 +305,7 @@
 #### GPU -- Graphic Processing Unit
 #### ATI -- GPU vendor acquired by AMD in 2006
 #### GART -- Graphics Address Remapping   table
+#### HUD -- Heads Up Display, el jad, o hud. Arriva las manos.
 ---
 
 
@@ -365,6 +366,9 @@
 [fedoraCustomKernel](https://fedoraproject.org/wiki/Building_a_custom_kernel) muy buena!!!
 [Acpi-in-Linux](https://www.kernel.org/doc/ols/2005/ols2005v1-pages-59-76.pdf)
 [CodeGuro](https://www.codeguru.com/) buena pero no funciona la busqueda!! SMBIOS Demystified
+
+[asistenteDelControlador-intel][http://www.intel.la/content/www/xl/es/support/detect.html?iid=dc_iduu]
+[cpu-E7300][http://ark.intel.com/es-es/products/36463/Intel-Core2-Duo-Processor-E7300-3M-Cache-2_66-GHz-1066-MHz-FSB#@downloads]
 
 ##### 10.3 Patentes
 [RCU-patente](http://liburcu.org/)
