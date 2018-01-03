@@ -93,7 +93,7 @@ Tambien existe la posibilidad de crear una imagen ISO:
 #### Reconfiguracion en caliente; con el sistema en funcionamiento.
 
 Si el _kernel_ esta configurado para ello:
-		cat /proc/config.gz | gunzip | less
+		cat /proc/config.gz | gunzip > myConfig
 
 ... una vez terminado, se puede utilizar la siguiente instrucion para
 guardar el archivo de configuracion fuera del _nombre_ que usara el

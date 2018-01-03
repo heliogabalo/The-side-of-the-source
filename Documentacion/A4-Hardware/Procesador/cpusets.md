@@ -151,8 +151,22 @@ modificación de los cpusets _presentes_, conocidos por el kernel.
 Nuevas llamadas de sistema a `cpuset`, no serán añadidas. Todo soporte de consulta y  
 modificación _cpuset_ será por medio  del sistema de archivo _cpuset_.  
 
-El archivo `/proc/<pid>/status` tiene añadidas _cuatro líneas_ por cada tarea, mostrando  
-las tareas permitidas `cpus_allowed` (en la cpu que podrá ser programada)
+El archivo `/proc/<pid>/status` tiene añadidas _cuatro líneas_ por cada tarea,  
+mostrando las tareas permitidas `cpus_allowed` (en la cpu que podrá ser programada),  
+los siguientes archivos describen el `cpuset`.
+
+ - cpuset.cpus: lista CPUs en el _cpuset_
+ - cpuset.mems: lista Memory Nodes en _cpuset_
+ - `cpuset.memory_migrate flag`: si es configurado, mueve páginas a los nodos _cpuset_
+ - cpuset.cpu_exclusive flag: is cpu placement exclusive?
+ - cpuset.mem_exclusive flag: is memory placement exclusive?
+ - cpuset.mem_hardwall flag:  is memory allocation hardwalled
+ - cpuset.memory_pressure: measure of how much paging pressure in cpuset
+ - `cpuset.memory_spread_page` flag: if set, spread page cache evenly on allowed nodes
+ - `cpuset.memory_spread_slab` flag: if set, spread slab cache evenly on allowed nodes
+ - `cpuset.sched_load_balance` flag: if set, load balance within CPUs on that cpuset
+ - `cpuset.sched_relax_domain_level`: the searching range when migrating tasks
+
 
 ## Referencias y agradecimeintos
 
@@ -166,14 +180,16 @@ Modified by Paul Menage <menage@google.com>
 Modified by Hidetoshi Seto <seto.hidetoshi@jp.fujitsu.com>  
 
 > __kernel de Linux:__ se refiere al núcleo de un sistema operativo, que ha tomado el  
-> nombre, de la persona -y su grupo de investigadores, que _desarrolló y liberó_, el código  
-> del núcleo del sistema operativo.  
+> nombre, de la persona -y su grupo de investigadores, que _desarrolló y liberó_,  
+> el código del núcleo del sistema operativo.  
 
-> __GNU:__ es un acrónimo recursivo para _"GNU no es UNIX"_, por que está basado en 
-> código _UNIX_, pero difiere de éste, en que es _código libre_ y no contiene _código UNIX_.
-> Es un sistema operativo y, un _conjunto_ de aplicaciones, programas, configuraciones,
-> que son incorporadas por las _distribuciones_, de muchos de los sistemas operativos  
-> basados en el _kernel de Linux_. __Richard Stallman__, fué su fundador.
+> __GNU:__ es un acrónimo recursivo para _"GNU no es UNIX"_, por que está basado en  
+> código _UNIX_, pero difiere de éste, en que es _código libre_ y no contiene  
+> _código UNIX_.  
+> Es un sistema operativo y, un _conjunto_ de aplicaciones, programas,  
+> configuraciones, que son incorporadas por las _distribuciones_, de muchos de los  
+> sistemas operativos > basados en el _kernel de Linux_. __Richard Stallman__,  
+> fué su fundador.  
 
 > __Linux Torvald:__ 
 

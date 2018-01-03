@@ -67,7 +67,7 @@
 #### UUID -- User Unique Identifier
 #### CSR -- Cambridge Silicon Radio
 #### IPC -- InterProcess Communication
-#### SMP --
+#### SMP -- Symmetric multiprocessing
 #### SMBUS -- o SMB, System Management Bus
 #### MCA -- Micro Channel Architecture
 #### VLB -- VESA Local Bus
@@ -139,6 +139,7 @@
 #### SMRAM --
 #### NVRAM -- Non Volatile RAM, llamada _CMOS RAM_ en PCs, guarda la _config de la BIOS_
 #### CMOS-- tipo de memoria, usa la bateria de litio del sistema para guardar los datos tras offlined.
+#### SADC -- System Activity Data collector
 #### FPGA -- Field-programmable gate array(integrated circuit)
 #### IOMMU -- I/O Memory Management Unit. 
 #### DMA -- Direct Memory Acces
