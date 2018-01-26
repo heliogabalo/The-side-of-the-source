@@ -60,6 +60,8 @@
 #### JIT -- Just In Time
 #### PAE -- Phisical Address Extension
 #### FPU -- (Floating Poinmt Unit)??
+#### FLOPS -- Floatin Point per second
+#### MIPS -- Millions of instructions per second
 #### LUN --
 #### PMMU -- paged memory management unit
 #### RCU -- Read Copy Update [hardware/procesador]:[rcu.md]
@@ -222,6 +224,7 @@
 #### ATAPI -- AT Attachment Packet Interface
 #### PATA -- Parallel ATA
 #### SATA -- Serial ATA
+#### SAS -- Serial Attached SCSI
 #### MBR -- Master Boot Record
 #### VBR -- Volume Boot Record
 #### LBA -- Logical Block Addressing
@@ -229,6 +232,9 @@
 #### GPT
 #### EFI
 #### UEFI
+#### HDD -- Hard Disk Drive
+#### SSD -- Solid State Drive
+#### SSHD -- Solid State Hybrid Drive
 ---
 
 
