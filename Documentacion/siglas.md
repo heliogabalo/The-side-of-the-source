@@ -1,31 +1,28 @@
 ## Indice
 
-1. [Referencias Generales](#i1)
-	 - 1.1 Referencias SO
-	 - 1.2 [_Placas_](#i1i12)
-2. Referencias a memorias
-4. Referencias a Disco Duro
-5. [Referincias a Unidades de procesamiento](#i5)
-6. [APM(Advanced Power Management)](#i6)
-7. Referencias Acpi/Acpica/Tablas-Acpi
-9. Referencias a Video
-10. Referencias a Supuestos
-79. Referencias a criptografia
-89. Referencias Cryptomonedas
-99. Referencias/enlaces
-		- 1. Repositorios			
-				 - HTTP
-				 - FTP
-		- 2. Documentacion
-				 - HTTP
-				 - FTP		
----
-1. [PROCESO DE INSTALACION DE UNA IMAGEN](#i1)
-    1. [Crear imagen](#i1)  
-    2. [Convertir imagen](#1i2)
-## 1. <a name="i1">PROCESO DE INSTALACION DE UNA IMAGEN</a>  
-#### Crear imagen
+1. [Referencias Generales](#i1)  
+	  1.1 [Referencias SO](#i1i1)  
+	  1.2 [_Placas_](#i1i2)  
+2. [Referencias a memorias](#i2)
+3. [Referencias a Disco Duro](#i3)
+4. [Referincias a Unidades de procesamiento](#i4)
+5. [APM(Advanced Power Management)](#i5)
+6. [Referencias Acpi/Acpica/Tablas-Acpi](#i6)
+7. [Referencias a Video](#i7)
+8. [Referencias a Supuestos](#i8)
+9. [Referencias a criptografia](#i9)
+10. [Referencias Cryptomonedas](#i10)
+11. [Referencias/enlaces](#i11)  
+11.1 [Núcleo](#i11i1)  
+11.1.1 [Repositorios](#i11i1i1)  
+ 			  11.1.1.1 HTTP  
+		 	  11.1.1.2 FTP  
+11.1.2 [Documentacion](#i11i1i2)  
+       11.1.2.1 HTTP  
+		 	 11.1.2.2 FTP  
+11.2 [Patentes](#i11i2)  
 
+<a name=""></a>
 ---
 ## 1. <a name="i1">Referencias Generales</a>
 
@@ -64,7 +61,7 @@
 #### MIPS -- Millions of instructions per second
 #### LUN --
 #### PMMU -- paged memory management unit
-#### RCU -- Read Copy Update [hardware/procesador]:[rcu.md]
+#### RCU -- Read Copy Update [rcu](A4-Hardware/Procesador/rcu.md)
 #### PME power management event support
 #### UUID -- User Unique Identifier
 #### CSR -- Cambridge Silicon Radio
@@ -92,7 +89,7 @@
 #### Udev -- Dynamic Device management
 
 
-## 1.2 <a name="i1i12">_Placas_</a>
+## 1.2 <a name="i1i2">_Placas_</a>
 
 #### OEM  -- Original Equipment Manufacture
 #### SoC -- Sistemas en Chip
@@ -126,7 +123,7 @@
 ---
 
 
-## Referencias Memorias/chips
+## 2. <a name="i2">Referencias Memorias/chips</a>
 
 #### ROM -- Read Only Memory
 #### PROM -- Programmable Read Only Memory
@@ -194,7 +191,28 @@
 #### NPU -- Network Processing unnit
 ---
 
-#### <a name="i5">5. Referincias a Unidades de procesamiento</a>
+## 3. <a name="i3">Referencias Disco Duro</a>
+
+#### IDE -- Integrated Drive Electronic
+#### ATA -- AT Attachment
+#### ATAPI -- AT Attachment Packet Interface
+#### PATA -- Parallel ATA
+#### SATA -- Serial ATA
+#### SAS -- Serial Attached SCSI
+#### MBR -- Master Boot Record
+#### VBR -- Volume Boot Record
+#### LBA -- Logical Block Addressing
+#### CHS -- Cylinder Head Sector
+#### GPT
+#### EFI
+#### UEFI
+#### HDD -- Hard Disk Drive
+#### SSD -- Solid State Drive
+#### SSHD -- Solid State Hybrid Drive
+---
+
+
+## 4. <a name="i4">Referincias a Unidades de procesamiento</a>
 
 #### NUMA -- Non Uniform Memory Acces (policy to alocate memory areas)[hardware/procesador]:[numa.md]
 #### HSA --(AMD) Heterogeneus System Architecture
@@ -216,34 +234,12 @@
 #### SRAT -- tabla...
 ---
 
-
-#### Referencias Disco Duro
-
-#### IDE -- Integrated Drive Electronic
-#### ATA -- AT Attachment
-#### ATAPI -- AT Attachment Packet Interface
-#### PATA -- Parallel ATA
-#### SATA -- Serial ATA
-#### SAS -- Serial Attached SCSI
-#### MBR -- Master Boot Record
-#### VBR -- Volume Boot Record
-#### LBA -- Logical Block Addressing
-#### CHS -- Cylinder Head Sector
-#### GPT
-#### EFI
-#### UEFI
-#### HDD -- Hard Disk Drive
-#### SSD -- Solid State Drive
-#### SSHD -- Solid State Hybrid Drive
----
-
-
-## <a name="i6">Referencias APM(Advanced Power Management)</a>
+## 5. <a name="i5">Referencias APM(Advanced Power Management)</a>
 
 #### APM -- Advanced Power Management [hardware/apm]:[apm.md]
 ---
 
-## Referencias Acpi/Acpica/Tablas-Acpi
+## 6. <a name="i6">Referencias Acpi/Acpica/Tablas-Acpi</a>
 
 #### ASWG -- ACPI Specification Working Group
 #### API -- Application Programming Interface
@@ -296,16 +292,8 @@
 #### SCI -- Sistema de control de Interrupcion
 ---
 
-
-## Referencias a Supuestos
-
-#### CMMA -- Collaborative Memory Management Assist
-#### Intel-VT -- Virtualization technology(by Intel)
-#### AMD-V -- Virtualization technology(by AMD side), initialy SVM("Flag", Secure Virtual Machine)
-
-
 ---
-## Referencias a Video
+## 7. <a name="i7">Referencias a Video</a>
 
 #### AGP -- Accelerated Graphics Port
 #### APU -- Accelerated Processing Unit, is a CPU and a GPU on a single die, known as _Fusion_.
@@ -315,8 +303,14 @@
 #### HUD -- Heads Up Display, el jad, o hud. Arriva las manos.
 ---
 
+## 8. <a name="i8">Referencias a Supuestos</a>
 
-## Referencia criptografia
+#### CMMA -- Collaborative Memory Management Assist
+#### Intel-VT -- Virtualization technology(by Intel)
+#### AMD-V -- Virtualization technology(by AMD side), initialy SVM("Flag", Secure Virtual Machine)
+---
+
+## 9. <a name="i9">Referencia criptografia</a>
 
 #### GPG -- GnuPG, GNU Privacy Guard
 #### SELinux --
@@ -326,7 +320,7 @@
 ---
 
 
-## Referencias Cryptomonedas
+## 10. <a name="i10">Referencias Cryptomonedas</a>
 
 #### ETC -- Ethereum Classic
 #### ETH -- Ethereum
@@ -349,39 +343,35 @@
 #### DAG -- Direct Acyclic Graph
 ---
 
+## 11. <a name="i11">Referencias/enlaces</a>
 
+#### 11.1.1 Nucleo/Repositorios
+	- __HTTPS__
+[UML](http://user-mode-linux.sourceforge.net)  
 
-## Referencias/enlaces
-
-#### 10.1 Repositorios
-
-#### 10.1.1 Nucleo
+	- __FTP__
+[UML-ftp](ftp://ftp.ca.kernel.org/pub/kernel/v2.4/linux-2.4.0-prerelease.tar.bz2)  
+[Project-builder](ftp://ftp.project-builder.org/)  
+[pivot_root](ftp://ftp.kernel.org/pub/linux/utils/utils-linux)  
+### 11.1.2 Documentacion
 	- HTTPS
-[UML](http://user-mode-linux.sourceforge.net)
+[IOMMU](http://www.intel.com/content/dam/www/public/us/en/documents/product-specifications/vt-directed-io-spec.pdf)  
+[RCU](http://www.rdrop.com/users/paulmck/RCU/)  
+[RCU/Linux-kernel](http://www.rdrop.com/users/paulmck/RCU/linuxusage/rculocktab.html)  
+[GPMC](http://www.ti.com/lit/pdf/spruh73)  
+[DDR2 SDRAM](en.wikipedia.org/wiki/DDR2_SDRAM)  
+[fedoraCustomKernel](https://fedoraproject.org/wiki/Building_a_custom_kernel) muy buena!!!  
+[Acpi-in-Linux](https://www.kernel.org/doc/ols/2005/ols2005v1-pages-59-76.pdf)  
+[CodeGuro](https://www.codeguru.com/) buena pero no funciona la busqueda!! SMBIOS Demystified  
 
-	- FTP
-[UML-ftp](ftp://ftp.ca.kernel.org/pub/kernel/v2.4/linux-2.4.0-prerelease.tar.bz2)
-[Project-builder](ftp://ftp.project-builder.org/)
-[pivot_root][ftp://ftp.kernel.org/pub/linux/utils/utils-linux]
-#### 10.2 Documentacion
-	- HTTPS
-[IOMMU](http://www.intel.com/content/dam/www/public/us/en/documents/product-specifications/vt-directed-io-spec.pdf)
-[RCU](http://www.rdrop.com/users/paulmck/RCU/)
-[RCU/Linux-kernel](http://www.rdrop.com/users/paulmck/RCU/linuxusage/rculocktab.html)
-[GPMC](http://www.ti.com/lit/pdf/spruh73)
-[DDR2 SDRAM](en.wikipedia.org/wiki/DDR2_SDRAM)
-[fedoraCustomKernel](https://fedoraproject.org/wiki/Building_a_custom_kernel) muy buena!!!
-[Acpi-in-Linux](https://www.kernel.org/doc/ols/2005/ols2005v1-pages-59-76.pdf)
-[CodeGuro](https://www.codeguru.com/) buena pero no funciona la busqueda!! SMBIOS Demystified
+[asistenteDelControlador-intel](http://www.intel.la/content/www/xl/es/support/detect.html?iid=dc_iduu)  
+[cpu-E7300](http://ark.intel.com/es-es/products/36463/Intel-Core2-Duo-Processor-E7300-3M-Cache-2_66-GHz-1066-MHz-FSB#@downloads)  
 
-[asistenteDelControlador-intel][http://www.intel.la/content/www/xl/es/support/detect.html?iid=dc_iduu]
-[cpu-E7300][http://ark.intel.com/es-es/products/36463/Intel-Core2-Duo-Processor-E7300-3M-Cache-2_66-GHz-1066-MHz-FSB#@downloads]
-
-##### 10.3 Patentes
-[RCU-patente](http://liburcu.org/)
+### 11.2 Patentes
+[RCU-patente](http://liburcu.org/)  
 
 
---- a more comprehensive tool device --fwupdmgr
+--- a more comprehensive tool device --fwupdmgr  
 
 
 
