@@ -1,3 +1,5 @@
+`documentation/filesystems/`
+
 1. Sistema de fichero `Overlay`.
 2. El más alto, el más bajo.
 3. Directorios
@@ -18,7 +20,7 @@ por varias razones técnicas. Se espera que en muchos casos prácticos, puedan s
 estas diferencias.
 
 Ésta aproximación es _hibrida_, por que los _objetos_que aparecen en el sistema de ficheros,  
-no parecen pertenecer todos, al sistema de ficheros. En muchos casos, un objeto accedidto  
+no parecen pertenecer todos, al sistema de ficheros. En muchos casos, un objeto accedido  
 en la unión, será indistinguible el acceder a él, desde el sistema de fichero origianl.
 Ésto resulta obvio, en el camplo `st_dev`, retornado con `stat(2)`.
 

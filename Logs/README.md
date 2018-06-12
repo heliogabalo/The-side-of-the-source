@@ -12,6 +12,6 @@
   4. La denominación de 'Directoro/Repositorio público' no discrimina el concepto  
      de 'Directorio Personal' pues así se ha constituido desde un principio.  
   
-  5. Esto no es una puta revista rosa. Por lo que si busca este tipo de lectura,  
-     debería pensar en redirigir sus esfuerzos, hacia fuentes asociadas a tal idea.  
+  5. Esto no es una revista rosa. Por lo que si busca este tipo de lectura,  
+     debería redirigir sus esfuerzos, hacia fuentes asociadas a tal idea.  
 
