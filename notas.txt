@@ -2,37 +2,62 @@
 
 TODO:
 
-**** wmctrl xdotool xprop xwinfo
+
+[] Revisar rsync scrpt
+		[] Hay que sincronizar Repo con Git
+				[] Crear ScriptSyncRepo
+		[] Hay que sincronizar con DO		
+				[] Crear ScriptSyncDO
+		[] Programar entradas en crontab
+				[] Crear userCrontab -- ver crontab -l
+				
+[] Subscribir a <http://www.zytor.com/mailman/listinfo/klibc>
+[] Sugerir colaboración en foros?
+
+/////////////////		DOCUMENTACION ///////////////////////////
+
+[] referencias a memorias revisar esto
+	- hbm2[] fpga[x]
+
+[] hay que terminar los apuntes de Qemu, acuerdate de meter los _esquemas_.
+
+[x] error404, hay que hacerla!!
+		[] No funciona -- revisar!
+		
+[] **** wmctrl xdotool xprop xwinfo		
+[] - localizar .config gedit		
+[] yenta module hace referencia al bus ISA		
+/////////////////		END DOCUMENTACION ///////////////////////////
 
 
-- localizar .config gedit
+///////////////////////////// BLOG BARCELONADO ////////////////////
 
+[] barcelonaDo relacionar DNI con firma digital.
+[] Reglamento General de Protección de Datos (RGPD) .Hay que prepara el aviso.
+	<https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679>
+	<https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security>
+	<https://developers.google.com/web/fundamentals/security/encrypt-in-transit/enable-https>
+///////////////////////////// END BLOG BARCELONADO ////////////////////
 
-A3-- dynamicDBG.md Referencias de comandos del lenguaje 111 p
+/////////////////////////////  GAMES /////////////////////////////////
 
-- Hay que averiguar qué es, para que sirve, como funciona, por qué está ahí
-	el directorio `/boot/i386/`
-
-	* Pero sobre todo _POR QUÉ ESTÁ AHÍ_
-	
-	*averiguar pcscs-- unkown grup udevd (on lab)	
-	
-- yenta module hace referencia al bus ISA
--NFS
--LVM:
- * Una correcta instalacion  del hipervisor, aconseja la instalaci'on tanto
-   del dom0 como de las vms atrav'es del gestor LVM.
- * Preparacion de los medios con "lvm-cachedVolumes"
- * Preparacion del nucleo
- * Configuracion basica:
- 		- puente de red para el dom0.
- * Los drivers de los dispositivos, siguen utilizando el bus ISA, aún cuando
- la configuración del nucleo elude cualquier mención a ellos.
- En este sistema NO EXISTE el _bus ISA_. 
----
-
+[] nueva seccion games
+		[] Abrir seccion FIJA ScummVM desde Games.
+/////////////////////////////  END GAMES /////////////////////////////////
+		
 
 		
 		
 		
-		
+
+************************************************************************		
+Funcionamiento de los repositiorios:
+
+- Todo lo que es página web, joder, va en la puta página.
+- El documento se redacta en <actualTrabajo>, si es blog, blog. Si es Documentación, tal y tal.
+- Cuando terminas de escribir, el artículo o la documentación, se gurda la copia en la corresponditen sección con git.
+- Se pasa a <revisar> -aún en md, por último lo pones en <preparado>.
+- Si lo estas revisando, a medida que contruyes la estructura de página -código!, dejas la
+copia en <preparado>, y entendemos que: o no esta lista la estructura -código, o esta en proceso de terminar. Como el "texto" está listo, esto distingue aquellos documetos que están en proceso de ser publicados.
+
+************************************************************************
