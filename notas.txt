@@ -10,9 +10,19 @@ TODO:
 				[] Crear ScriptSyncDO
 		[] Programar entradas en crontab
 				[] Crear userCrontab -- ver crontab -l
-				
+			
 [] Subscribir a <http://www.zytor.com/mailman/listinfo/klibc>
 [] Sugerir colaboración en foros?
+
+rsync -arv --exclude=excluir --delete-during /tmp/Orig /tmp/Dest
+	
+
+/
+
+
+
+
+
 
 /////////////////		DOCUMENTACION ///////////////////////////
 
