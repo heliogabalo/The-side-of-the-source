@@ -1,0 +1,22 @@
+#!/bin/sh
+
+rsync -avr /home/raul/Github/territoriolinux/barcelonaDo/{.MdFiles,POSTED} \
+/home/raul/Github/territoriolinux/TerritorioLinux/.Md-files/Repo/BarcelonaDo/ \
+1> /home/raul/Github/The-side-of-the-source/Logs/CtrlRepoLogs/
+
+
+
+touc	h /home/raul/Github/The-side-of-the-source/Logs/CtrlRepoLogs/$mydate
+
+
+mydate='echo ctrl$(date +'%d-%m-%Y').log'
+
+
+
+{ctrl[..1].log}
+
+ctrl{1..99}.log
+
+echo e$(date +'%d-%m-%Y').log
+
+alias ssdf='bin /path/to'

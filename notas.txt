@@ -17,8 +17,7 @@ TODO:
 rsync -arv --exclude=excluir --delete-during /tmp/Orig /tmp/Dest
 	
 
-/
-
+[] Mailing List Hello World rsync@lists.samba.org
 
 
 
@@ -54,10 +53,15 @@ rsync -arv --exclude=excluir --delete-during /tmp/Orig /tmp/Dest
 [] nueva seccion games
 		[] Abrir seccion FIJA ScummVM desde Games.
 /////////////////////////////  END GAMES /////////////////////////////////
-		
+
 
 		
-		
+/////////////////////////////  HARDWARE REVIEW /////////////////////////////////
+-----------------------------  			REPASAR						----------------------------------
+
+https://www.linux.com/learn/using-new-guid-partition-table-linux-goodbye-ancient-mbr		
+https://www.linux.com/learn/how-upgrade-your-linux-pc-hardware
+/////////////////////////////  HARDWARE REVIEW /////////////////////////////////
 		
 
 ************************************************************************		
