@@ -17,7 +17,7 @@ TODO:
 rsync -arv --exclude=excluir --delete-during /tmp/Orig /tmp/Dest
 	
 
-[] Mailing List Hello World rsync@lists.samba.org
+[x] Mailing List Hello World rsync@lists.samba.org
 
 
 

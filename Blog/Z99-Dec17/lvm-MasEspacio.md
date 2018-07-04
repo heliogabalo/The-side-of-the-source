@@ -1,1 +1,0 @@
-/home/raul/Github/The-side-of-the-source/Documentacion/A1-SO/SistemaFicheros/Lvm/lvm-masEspacio.md
