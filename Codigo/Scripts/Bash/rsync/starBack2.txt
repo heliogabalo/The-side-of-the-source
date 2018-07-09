@@ -1,0 +1,27 @@
+//////////////////////////
+tar --create \
+	--exclude=/path/to/exclude \
+	--listed-incremental=/path/to/incremental
+	--file=/file/name.tar \
+	/origin/backed/file
+	
+---
+////////////////////////
+Compress before send 
+gzip file.tar
+
+
+//////////////////////
+-a 			archive mode
+-v				verbose
+-r				recursive
+-u 			skip new files on Destination
+--exclude=pattern match
+
+rsync -avr \
+	--exclude=patron.aExcluir \
+	--delete-during=/tmp/Dest/ \
+	 /tmp/Orig/ /tmp/Dest/
+
+
+rsync -avr --delete-during=todoEnDest repoOrig repoDest

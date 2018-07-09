@@ -1,0 +1,3 @@
+SPEC="" # Set the feature here
+
+dnf install $SPEC

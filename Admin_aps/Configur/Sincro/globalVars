@@ -1,0 +1,57 @@
+#!/bin/sh
+# <.> the point is the original command for <source>
+
+## WEBBMS -- Web Blog Main Source
+## WEBBMD -- Web Blog Main Destination
+## WEBBGS -- Web Blog Game Source
+## WEBBGD -- Web Blog Game Destination
+## WEBBBS -- Web Blog BarcelonaDo Source
+## WEBBBD -- Web Blog BarcelonaDo Destination
+WEBBMS=/mnt/LV/Github/territoriolinux/Blog/.Md-files/Posted
+WEBBMD=/mnt/LV/Github/territoriolinux/Blog/.Md-files/{.currentWork,.ready,.toReview}
+WEBBGS=/mnt/LV/Github/territoriolinux/Blog/Games/.MdFiles/Posted
+WEBBGD=/mnt/LV/Github/territoriolinux/Blog/Games/.MdFiles/{.currentWork,.ready,.toReview}
+WEBBBS=/mnt/LV/Github/territoriolinux/Blog/barcelonaDo/Posted
+WEBBBD=/mnt/LV/Github/territoriolinux/Blog/barcelonaDo/{.currentWork,.ready,.toReview}
+####
+##GITBMS -- Git Blog Main Source
+##GITBMD -- Git Blog Main Destination
+##GITBGS -- Git Blog Game Source
+##GITBGD -- Git Blog Game Destination
+##GITBBS -- Git Blog barcelonaDo Source
+##GITBBD -- Git Blog barcelonaDo Destination
+GITBMS=/mnt/LV/Github/The-side-of-the-source/Blog/{.currentWork,.ready,.toReview}
+GITBMD=/mnt/LV/Github/The-side-of-the-source/Blog/Posted
+GITBGS=/mnt/LV/Github/The-side-of-the-source/Blog/Games/{.currentWork,.ready,.toReview}
+GITBGD=/mnt/LV/Github/The-side-of-the-source/Blog/Games/Posted
+GITBBS=/mnt/LV/Github/The-side-of-the-source/Blog/barcelonaDo{.currentWork,.ready,.toReview}
+GITBBD=/mnt/LV/Github/The-side-of-the-source/Blog/barcelonaDo/Posted
+####
+## WEBDS -- Web Documentation Source
+## WEBDS -- Web Documentation Destination
+## WEBDRD -- Web Documentation Repo Destination
+WEBDS=/mnt/LV/Github/territoriolinux/TerritorioLinux/.Md-files/Posted
+WEBDD=/mnt/LV/Github/territoriolinux/TerritorioLinux/.Md-files/{.currentWork,.ready,.toReview}
+WEBDRD=/mnt/LV/Github/territoriolinux/TerritorioLinux/.Md-files/Repo
+####
+## GITDS -- Git Documentation Source
+## GITDS -- Git Documentation Destination
+## GITDRS -- Git Documentation Repo Source
+GITDS=/mnt/LV/Github/The-side-of-the-source/Documentacion <--exclude=Posted>
+GITDD=/mnt/LV/Github/The-side-of-the-source/Documentacion/Posted
+
+####
+## WEBGS -- Web Games Source
+## WEBGD -- Web Games Destination
+WEBGS=se escribe directamente en html por que suelo ser un parrafo o menos!
+WEBGD=/mnt/LV/Github/territoriolinux/Games/.Md-files
+####
+## GITGS -- Git Games Source
+## GITGD -- Git Games Destination
+GITGS=/mnt/LV/Github/The-side-of-the-source/Games/{.currentWork,.ready,.toReview}
+GITGD=/mnt/LV/Github/The-side-of-the-source/Games/posted
+
+
+
+
+

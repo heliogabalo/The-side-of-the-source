@@ -2,6 +2,9 @@ Tanto si es para investigación o como entretenimiento, instalar una nueva GPU d
 
 Conduce al lector, através de la instalación del _software_ y _hardware_; cubre cualquier aspecto necesario para poner en funcionamiento la tarjeta NVIDIA. El procreso trabaja sobre ordenadores con UEFI activado y, sobre cualquier tipo de _gráfica_ moderna de NVIDIA.
 
+
+### Preparación ###
+
 La guía enfatiza los siguientes materiales:
 
 *		Una máquina con soporte UEFI. El comando `dmidecode -t 0` arroja sobre la cónsola la información para comprovarlo. Habrá que buscar si aparece: __UEFI supported__. De cualquier otra forma, aunque es posible _actualizar_ ciertas máquinas y darles soporte UEFI, no es recomendable, al ser un proceso delicado.
@@ -10,6 +13,9 @@ La guía enfatiza los siguientes materiales:
 * conexión a internet.
 * Fedora 28.
 
+
+### Ejemplo de configuración ###
+
 El ejemplo de instalación utiliza:
 
 * Un computador de sobremesa, Dell Optiplex 9010.
@@ -17,8 +23,8 @@ El ejemplo de instalación utiliza:
 * Con objeto de hace coincidir los requisitos de energía de la GPU, la fuente de alimentación fue cambiada por una EVGA – 80 PLUS 600W ATX 12V/EPS 12V. La PSU está 300W por encima del mínimo recomendado, aunque con satisfacer el mínimo recomendado es duficiente, en la mayoría de casos.
 * Fedora 28, por supuesto!
 
-### _Hardware_ y modificaciones ###
 
+### _Hardware_ y modificaciones ###
 
 __PSU__
 
@@ -29,7 +35,6 @@ __nota__: de acuerdo con algunos fabricantes de tarjetas NVIDIA, sistemas precon
 
 Comentar de igual forma, que deberíamos _tocar a tierra_, antes de _meter mano_ a algún componente, -fuera anillos, relojes, etc, y, asegurarnos que la carcasa de la PSU, va a caber dentro de nuestra _caja_.
 
-
 __CPU__
 
 Aunque instalar una GPU NVIDIA de alta calidad, es posible en máquinas viejas, un procesador lento o -de alguna manera, _estropeado_, podría producir un _cuello de botella_ en cuanto al funcinamiento de la GPU. Para detectar el impacto negativo sobre una máquina, [click aquí](http://thebottlenecker.com/). Es importante conocer las características del procesador, para evitar parear una GPU de alto rendimiento, con un procesador que _no de la talla_! Considerar _actualizar_ la CPU.
@@ -39,6 +44,9 @@ __Placa Base__
 
 Antes de proceder, hay que asegurar que la placa base, sea compatible con la GPU escogida. La gráfica debería ser insertada en el zócalo PCI-E x16, cerca del difusor de calor. Asegurando que la configuración contiene espacio suficiente para la GPU. 
 En adición, nótese que las GPU's de hoy en día emplean tecnología PCI-E v3.0. Aunque estas GPU's, funcionarán mejor sobre zócalos PCI-E v3.0, no deberían sufrir significativamente, sobre versiones de zócalo anteriores.
+
+
+### Instalación ###
 
 1. Lanzar un terminal y, actualizar el _gestor de paquetes_:
 
@@ -126,7 +134,7 @@ __Utilización__:
 * [How to install a graphics card](URL)
 * [The Fedora Wiki Page](URL)
 * [The Bottlenecker](URL)
-* [UEFI](siglas.html)
+* [UEFI](//TerritorioLinux/siglas.html)
 
 
 
