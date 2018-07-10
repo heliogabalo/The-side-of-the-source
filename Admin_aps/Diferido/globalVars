@@ -50,8 +50,9 @@ WEBGD=/mnt/LV/Github/territoriolinux/Games/.Md-files
 ## GITGD -- Git Games Destination
 GITGS=/mnt/LV/Github/The-side-of-the-source/Games/{.currentWork,.ready,.toReview}
 GITGD=/mnt/LV/Github/The-side-of-the-source/Games/posted
-
-
+##
+HOUSE=/mnt/LV/Github/The-side-of-the-source/Admin_aps/
+CTRLOUT=/mnt/LV/Github/The-side-of-the-source/Logs/CtrlRepoLogs/ctrl.log
 
 
 

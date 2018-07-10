@@ -1,0 +1,26 @@
+#!/bin/sh
+
+if [ -x /var/www/fromBorrar ]; then
+
+	mv /var/www/.borrarOld /tmp/
+
+	tar -z --create \
+		--file=/var/www/.toSync/dtl$(date +'%d-%m-%y').tar.gz \
+		/var/www/borrar > /var/www/.toSync/out 2>&1
+		
+	mv /var/www/borrar /var/www/.borrarOld
+
+	if [ -x /var/www/.toSync/dtl$(date +'%d-%m-%y').tar.gz ]; then
+		rm -R	 /var/www/.borrarOld
+	else
+		echo "the package to sync, wasn't created, WARNING" > /var/www/.toSync/out 2>&1
+		echo "********************"  >>.toSync/ctrlOut
+	fi
+
+	mv /var/www/fromBorrar /var/www/borrar >> .toSync/ctrlOut 2>&1
+	echo "********************"  >>.toSync/ctrlOut
+	
+else 
+	echo "Original Repo Syncronization Failed to Push" >> .toSync/ctrlOut 2>&1
+	echo "********************"  >>.toSync/ctrlOut
+fi

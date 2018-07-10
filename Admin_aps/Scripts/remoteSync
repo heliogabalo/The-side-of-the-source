@@ -1,0 +1,27 @@
+#!/bin/sh
+
+if [ -x /tmp/Blog/fromBorrar ]; then
+		
+		mv /tmp/Blog/borrar /tmp/Blog/.borrarOldTemp
+		
+		mv /tmp/Blog/fromBorrar /tmp/Blog/borrar 
+
+		tar -z --create \
+			--file=/tmp/Blog/.toSync/dtl$(date +'%d-%m-%y').tar.gz \
+			/tmp/Blog/borrar > /tmp/Blog/ctrlOut 2>&1
+		
+		PACK="$(ls /tmp/Blog/.toSync/)"
+		MYDATE="dtl$('date' '+%d-%m-%y').tar.gz"
+		if [ $PACK ==  $MYDATE ] 
+		then 
+			echo "***package exist**" 
+			rm -R	 /tmp/Blog/.borrarOldTemp 
+			echo "***removing Temporal copies**"
+		else
+			echo "We are cahanging history"
+		fi
+
+else 
+	echo "Original Repo Syncronization Failed to Push" 
+	echo "********************"  
+fi

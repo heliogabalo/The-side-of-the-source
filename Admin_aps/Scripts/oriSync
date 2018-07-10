@@ -1,0 +1,5 @@
+#!/bin/sh
+
+rsync -avr \
+	 /tmp/Blog/fromBorrar root@138.68.78.228:/var/www/ >> /tmp/ctrlOriOut 2>&1
+	 echo "********************************" >> /tmp/ctrlOriOut
