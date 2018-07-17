@@ -1,3 +1,5 @@
+kernel/admin-guide/dynamic-debug-howto
+
 1. Introducción
 2. Controlando el comportamiento del depurador dinámico
 3. Ver el comportamiento del depurador dinámico

@@ -1,5 +1,5 @@
 ## Contenido
-1. [Cestificados](#1c)
+1. [certificados](#1c)
 2. [Configurando __libvirt__ para TLS](#2c)
     1. [Lista completa del proceso](#2c1)
     2. [Concepto central](#2c2)

@@ -1,13 +1,15 @@
-1. Parámetros para la línea de comandos del _kernel_
-2. Listas de CPU
+1. [Parámetros para la línea de comandos del _kernel_](#i1)
+2. [Listas de CPU](#i2)
 
-99. Referencias y agradecimientos
+3. [Referencias y agradecimientos](#i3)
 
-#### Parámetros para la línea de comandos del _kernel_
+</br>
+</br>
+#### <a name="i1">Parámetros para la línea de comandos del _kernel_</a>
 
-Los siguientes, son una lista consolidada de parámetro del núcleo implementados por  
-las funciones(macros) `__setup()`, `core_param()` y `module_param()`. Han sido ordenadas  
-alfabéticamente siguiendo el orden del alfabeto Inglés.  
+Los siguientes, son una lista consolidada de parámetros del núcleo implementados  
+por las funciones(macros) `__setup()`, `core_param()` y `module_param()`. Han sido  
+ordenadas alfabéticamente siguiendo el orden del alfabeto Inglés.  
 
 El núcleo analiza los parámetros desde la línea de comandos hasta encontrar `--`;  
 si no reconoce el parámetro y no contiene un `.`, el parámetro es pasado a `init`:  
@@ -21,10 +23,10 @@ comandos con un prefijo de nombre de módulo, o _via_ `modprobe`, ejem.
 		(líne de comandos modprobe)modprobe usbcore blinkenlights=1
 		
 Los parámetros para módulos, los cuales están construidos _dentro_ del núcleo,  
-necesitan ser especificados en la línea de comandos kernel. `modprobe` busca a través de  
-la línea de comandos kernel (`/proc/cmdline`) y recoge los parámetros de los módulos  
-cuando lee uno, así que la línea de comandos kernel, puede usarse para cargar módulos  
-también.  
+necesitan ser especificados en la línea de comandos kernel. `modprobe` busca a  
+través de la línea de comandos kernel (`/proc/cmdline`) y recoge los parámetros  
+de los módulos cuando lee uno, así que la línea de comandos kernel, puede usarse  
+para cargar módulos también.  
 
 Los guiones `-` y guión bajo `_` son equivalentes en los nombres de parámetros, así:  
 
@@ -41,8 +43,11 @@ Las dobles comillas `"`, son usadas para proteger espacios ` ` en _valores_:
 		
 > __parser:__ analizador de sentencias.	 
 
-		
-#### Listas de CPU
+</br>
+</br>
+---
+
+#### <a name="i2">Listas de CPU</a>
 
 Algunos parámetros del _kernel_ toman una lista de CPUs como valor ejem.  
 `isolcpu`, `nohz_full`, `irqaffinity`, `rcu_nocbs`. El formato de estas listas es:  
@@ -52,7 +57,7 @@ Algunos parámetros del _kernel_ toman una lista de CPUs como valor ejem.
 ó  
 
 		<cpu number>-<cpu number>  
-		(must be a positive range in ascending order)  
+		(debe ser un rango positivo en orden ascendente)
 
 ó una mezcla  
 
@@ -60,28 +65,26 @@ Algunos parámetros del _kernel_ toman una lista de CPUs como valor ejem.
 
 
 Nótese, que para el caso especial de un rango, podría separarse el rango en dos  
-grupos de igual tamaño y, para cada grupo, usar cierta cantidad desde el comienzo de  
-ese grupo:  
+grupos de igual tamaño y, para cada grupo, usar cierta cantidad desde el comienzo  
+de ese grupo:  
 
 		<cpu number>-cpu number>:<used size>/<group size>  
 
-Por ejemplo, uno podría añadir el siguiente parámetro a la línea de comandos:
+Por ejemplo, uno podría añadir el siguiente parámetro a la línea de comandos:  
 
 		isolcpus=1,2,10-20,100-2000:2/25  
 		
-Donde el objeto final, representa CPUs 100,101,125,126,150,151,...
----
-
+Donde el objeto final, representa CPUs 100,101,125,126,150,151,...  
 
 El comando `modinfo $(modulName)` muestra una lista actualizada de todos los parámetros  
 de un módulo _cargable_.  
-Los módulos _cargables_, después de ser cargado dentro del kernel en carrera, también  
+Los módulos _cargables_, después de ser cargados dentro del kernel en carrera, también  
 revelarán sus parámetros desde `/sys/module/$(modulname)/parameters/$(parm)`.  
 
-Los parámetros listados más abajo, sólo son válidos si ciertas opciones de núcleo, 
+Los parámetros listados más abajo, sólo son válidos si ciertas opciones de núcleo,  
 fueron activadas y, si cierto _hardware_ está presente. El texto entre corchetes `[]`  
 al principio de cada descripción, establece las restricciones en el que es aplicable  
-un parámetro:
+un parámetro:  
 
 
 		ACPI	activado soporte para ACPI
@@ -181,33 +184,38 @@ El siguiente texto explica otras opciones:
 	BOOT	es un parámetro del gestor de arranque  
 
 Los parámetros marcados con BOOT son de hecho, interpretados por el gestor de arranque,  
-y no tienen un significado directo para el kernel.
+y no tienen un significado directo para el kernel.  
+
+!!!!!!!!!!!CARD WARNING AQUI  
 No modificar la sintaxis de los parámetros del gestor de arranque, sin una necesidad  
-extrema o sin ser coordinados con la documentación aportada en <Documentacion>$plataforma/boot.txt
+extrema o sin ser coordinados con la documentación aportada en:
 
-Nótese que todos los parámetros del kernel listados más abajo[#ref1], hacen distinción entre  
-mayúsculas o no. El símbolo `=` en el nombre de stado de un parámetro, será _entrado_ como  
-_variable de entorno_, donde su ausencia indica que aparecerá como argumente del _kernel_  
-leíble via `/proc/cmdline` por los programas en carrera, una vez el sistema este en marcha.  
+		<Documentacion>$plataforma/boot.txt
 
-El número de parámetros del núcleo, _no es límitado_, pero su longitud _lo está_, a un número 
-fijo de carácteres. Éste límite depende de la arquitectura y, está comprendida entre  
-_256 y 4096 carácteres_. Definido en el archivo `./include/asm/setup.h` como 
-`COMMAND_LINE_SIZE`
+Nótese que todos los parámetros del kernel listados más abajo[Doc](#ref1), hacen distinción  
+entre mayúsculas o no. El símbolo `=` en el nombre de stado de un parámetro, será  
+_entrado_ como _variable de entorno_, donde su ausencia indica que aparecerá como  
+argumente del _kernel_ leíble via `/proc/cmdline` por los programas en carrera,  
+una vez el sistema este en marcha.  
 
-Finalmente, el sufijo [KMG] es comunmente descrito después de un número de valores de  
-parámetro. Éstas letras 'K', 'M' y 'G', representan el multiplicador _Kilo, Mega, Giga_,  
-iguales a 2^10, 2^20, and 2^30, `bytes` respectivamente. Estos sufjos de letras, podrán
-ser omitidos completamente.
+El número de parámetros del núcleo, _no es límitado_, pero su longitud _lo está_,  
+a un número fijo de carácteres. Éste límite depende de la arquitectura y, está  
+comprendida entre _256 y 4096 carácteres_. Definido en el archivo  
+`./include/asm/setup.h` como `COMMAND_LINE_SIZE`.  
 
+Finalmente, el sufijo `[KMG]` es comunmente descrito después de un número de valores  
+de parámetro. Éstas letras 'K', 'M' y 'G', representan el multiplicador _Kilo, Mega,  
+Giga_, iguales a 2^10, 2^20, and 2^30, `bytes` respectivamente. Estos sufjos de  
+letras, podrán ser omitidos completamente.  
 
 
 > Éste documento podría no estar completamente actualizado.  
 > Efestivamente, no hay corchetes. La lista de parámetros está copiada, tal y como  
 > el traductor la encontró al descargar la fuente.  
 
-
-#### Referencias y agradecimientos
+</br>
+</br>
+#### <a name="i3">Referencias y agradecimientos</a>
 
 Documentación extraida de la fuente del _núcleo de linux_.
-[ref1][kernel-parameters.txt]
+<a name="ref1">documentación :`kernel-parameters.txt`<a>

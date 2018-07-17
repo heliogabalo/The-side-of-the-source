@@ -45,6 +45,17 @@ ocurra, es importante el __cómo conseguir la información__.
 - Encuestas y preguntas a clientes potenciales.
 - ¿Podrán analizarse las opiniones en foros, blogs, facebook?
 
+#### Mapa de proyecto ####
+
+Se trata de hacer una lista, con los pasos que habrá que dar hasta la consecución del objetivo. Por ejemplo, si quieres vender zapatos, primero necesitas los materiales, seria algo así:
+
+- aprender a hacer zapatos
+- comprar suelas
+- comprar piel.
+- comprar cordones
+- montar los zapatos
+- veder zapatos
+
 #### Recoger datos de fuentes de gobierno
 Las fuentes de gobierno _suelen_ ser fiables, es un buen lugar donde conseguir
 información _fiable y honesta_.
@@ -99,7 +110,7 @@ La información recogida tanto en instituciones académicas como gubernamentales
 resultará de gran utilidad, sin embargo continuará faltando la información de la  
 funten más importante; __los clientes(y clientes potenciales)__.
 
-Será necesario buscar dicha información, de directamente de _estas personas_.
+Será necesario buscar dicha información, directamente de _estas personas_.
 __Por ejemplo:__ si la intención es vender productos de música, es apropiado  
 consultar _blogs y foros_ populares sobre música, y conocer qué productos y marcas,  
 son los favoritos de las personas que _frecuentan_ los mismos:

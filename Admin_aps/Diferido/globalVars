@@ -29,28 +29,38 @@ GITBBD=/mnt/LV/Github/The-side-of-the-source/Blog/barcelonaDo/Posted
 ####
 ## WEBDS -- Web Documentation Source
 ## WEBDS -- Web Documentation Destination
-## WEBDRD -- Web Documentation Repo Destination
+## WEBDRD -- Web Documentation Articles Destination
 WEBDS=/mnt/LV/Github/territoriolinux/TerritorioLinux/.Md-files/Posted
-WEBDD=/mnt/LV/Github/territoriolinux/TerritorioLinux/.Md-files/{.currentWork,.ready,.toReview}
-WEBDRD=/mnt/LV/Github/territoriolinux/TerritorioLinux/.Md-files/Repo
+WEBDD=/mnt/LV/Github/territoriolinux/TerritorioLinux/.Md-files/Documentacion
+WEBDAD=/mnt/LV/Github/territoriolinux/TerritorioLinux/.Md-files/{.currentWork,.ready,.toReview}
 ####
 ## GITDS -- Git Documentation Source
 ## GITDS -- Git Documentation Destination
 ## GITDRS -- Git Documentation Repo Source
-GITDS=/mnt/LV/Github/The-side-of-the-source/Documentacion <--exclude=Posted>
+EXCLUDE=/mnt/LV/Github/The-side-of-the-source/Documentacion/{Posted,.currentWork,.ready,.toReview}
+ARTICLES=/mnt/LV/Github/The-side-of-the-source/Documentacion/{.currentWork,.ready,.toReview}
+GITDS=/mnt/LV/Github/The-side-of-the-source/Documentacion 
 GITDD=/mnt/LV/Github/The-side-of-the-source/Documentacion/Posted
-
 ####
 ## WEBGS -- Web Games Source
 ## WEBGD -- Web Games Destination
-WEBGS=se escribe directamente en html por que suelo ser un parrafo o menos!
+WEBGS=/mnt/LV/Github/territoriolinux/Games/.Md-files/Posted
 WEBGD=/mnt/LV/Github/territoriolinux/Games/.Md-files
 ####
 ## GITGS -- Git Games Source
 ## GITGD -- Git Games Destination
-GITGS=/mnt/LV/Github/The-side-of-the-source/Games/{.currentWork,.ready,.toReview}
+GITGEXCLUDE=/mnt/LV/Github/The-side-of-the-source/Games/posted
+GITGS=/mnt/LV/Github/The-side-of-the-source/Games/
 GITGD=/mnt/LV/Github/The-side-of-the-source/Games/posted
+####
+## 
+GITBS=/mnt/LV/Github/The-side-of-the-source/barcelonaDo/.MdFiles
+GITBD=/mnt/LV/Github/The-side-of-the-source/barcelonaDo/Posted
 ##
+WEBBS=/mnt/LV/Github/territoriolinux/barcelonaDo/.Md-files/Posted
+WEBBD=/mnt/LV/Github/territoriolinux/barcelonaDo/.Md-files
+
+####
 HOUSE=/mnt/LV/Github/The-side-of-the-source/Admin_aps/
 CTRLOUT=/mnt/LV/Github/The-side-of-the-source/Logs/CtrlRepoLogs/ctrl.log
 

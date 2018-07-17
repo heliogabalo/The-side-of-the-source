@@ -33,6 +33,15 @@ MAILTO=helio
 0,29 8,10,12,16,18 * * *  rsync -a --delete $WEBBBS $GITBBD >> $CTRLOUT 2>&1
 
 ## Pages
+0,29 8,10,12,16,18 * * *  rsync -a --delete --exclude=$EXCLUDE $GITDS $WEBDD 
+0,29 8,10,12,16,18 * * *  rsync -a --delete $WEBDS $GITDD
+0,29 8,10,12,16,18 * * *  rsync -a --delete $ARTICLES $WEBDAD
+
+0,29 8,10,12,16,18 * * *  rsync -a --delete --exclude=$GITGEXCLUDE $GITGS $WEBGD
+0,29 8,10,12,16,18 * * *  rsync -a --delete $WEBGS $GITGD
+
+0,29 8,10,12,16,18 * * *  rsync -a --delete $GITBS $WEBBD
+0,29 8,10,12,16,18 * * *  rsync -a --delete $WEBBS $GITBD
 
 
 #0-59 0-23 6 7 fri      helio   bash ~/Documents/ensayo
