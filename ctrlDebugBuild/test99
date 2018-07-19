@@ -1,0 +1,8 @@
+#!/bin/bash
+source /mnt/LV/Github/globV
+
+if  [ -r /tmp/log ]; then
+		mv /mnt/LV/Gitub/tl/TerritorioLinux/.Md-files/Documentacion	/{.currentWork,.ready,.toReview,Posted} /tmp/
+	else
+		echo "there is no files/dirs on that place, skiped" >> $CTRLOUT 2>&1
+fi	

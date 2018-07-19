@@ -1,0 +1,39 @@
+## Pull all global variables, this is the first job that occurs once. So the stab is not polluted with the same entrie over & over.
+
+##TODO To refactor, all is the same function, and is needed to serialize it.
+## It is posible? to construck a block {arg1, arg2} reading it from a 2D Array
+## and iterate over, till the end. So write it in C implies to "rewrite the wile" cause 
+##  "rsync" functions are implemented on "C", or "Bash", anyway, the function to do the
+## [ -r jobs ], is TRUE.
+## The CTRLOUT var, needed to refactor to be only one call, on the begining of de document
+##  instead every single job!
+
+source /mnt/LV/Github/globV
+
+## backUps
+shred -xu $CTRLOUT
+sh $HOUSE/Admin_aps/Scripts/starBack.sh /tmp/ >> $CTRLOUT 2>&1 
+## Is needed to erase the incremental file, e. once on week. So the first day is full sized.
+shred -xu /mnt/LV/Github/The-side-of-the-source/Respaldo/Local/incremental.log
+
+## Main Blog
+rsync -a --delete {$GITBMS,$GITBMS1,$GITBMS2} $WEBBMD >> $CTRLOUT 2>&1
+rsync -a --delete $WEBBMS $GITBMD >> $CTRLOUT 2>&1
+rsync -a --delete $GITBMS3 $WEBBMD >> $CTRLOUT 2>&1
+## Blog Games
+rsync -a --delete {$GITBGS,$GITBGS1,$GITBGS2} $WEBBGD >> $CTRLOUT 2>&1
+rsync -a --delete $WEBBGS $GITBGD >> $CTRLOUT 2>&1
+## Blog BarcelonaDo
+rsync -a --delete {$GITBBS,$GITBBS1,$GITBBS2}  $WEBBBD >> $CTRLOUT 2>&1
+rsync -a --delete $WEBBBD $GITBBD >> $CTRLOUT 2>&1
+## Main Pages
+rsync -avr --delete $GITDS $WEBDD >> $CTRLOUT 2>&1
+rsync -a --delete $WEBDS $GITDD >> $CTRLOUT 2>&1
+rsync -a --delete {$GITDAR,$GITDAR1,$GITDAR2} $WEBDAD >> $CTRLOUT 2>&1
+## Games Page
+rsync -a --delete --exclude='Posted' $GITGS $WEBGD >> $CTRLOUT 2>&1
+rsync -a --delete $WEBGS $GITGD >> $CTRLOUT 2>&1
+## BarcelonaDo Page
+rsync -a --delete --exclude='Posted' $GITBS $WEBBD >> $CTRLOUT 2>&1
+rsync -a --delete $WEBBS $GITBD >> $CTRLOUT 2>&1
+

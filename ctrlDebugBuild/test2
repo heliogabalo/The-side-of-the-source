@@ -1,0 +1,23 @@
+declare -A SUB_1=(["name1key"]="name1val" ["name2key"]="name2val")
+declare -A SUB_2=(["name3key"]="name3val" ["name4key"]="name4val")
+STRING_1="string1val"
+STRING_2="string2val"
+MAIN_ARRAY=(
+  "${SUB_1[*]}"
+  "${SUB_2[*]}"
+  "${STRING_1}"
+  "${STRING_2}"
+)
+echo "COUNT: " ${#MAIN_ARRAY[@]}
+for key in ${!MAIN_ARRAY[@]}; do
+    IFS=' ' read -a val <<< ${MAIN_ARRAY[$key]}
+    echo "VALUE: " ${val[@]}
+    if [[ ${#val[@]} -gt 1 ]]; then
+        for subkey in ${!val[@]}; do
+            subval=${val[$subkey]}
+            echo "SUBVALUE: " ${subval}
+        done
+    fi
+done
+
+

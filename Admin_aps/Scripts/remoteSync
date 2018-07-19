@@ -22,7 +22,7 @@ if [ -x /tmp/Blog/fromBorrar ]; then
 			echo "We are cahanging history"
 		fi
 
-else 
-	echo "Original Repo Syncronization Failed to Push" 
-	echo "********************"  
+	else 
+		echo "Original Repo Syncronization Failed to Push" 
+		echo "********************"  
 fi
