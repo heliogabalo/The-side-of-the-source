@@ -1,3 +1,5 @@
+# Sh Two dimension array emulation
+
 declare -A SUB_1=(["name1key"]="name1val" ["name2key"]="name2val")
 declare -A SUB_2=(["name3key"]="name3val" ["name4key"]="name4val")
 STRING_1="string1val"

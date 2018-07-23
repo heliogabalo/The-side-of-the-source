@@ -1,0 +1,71 @@
+## WEBBMS -- Web Blog Main Source
+## WEBBMD -- Web Blog Main Destination
+## WEBBGS -- Web Blog Game Source
+## WEBBGD -- Web Blog Game Destination
+## WEBBBS -- Web Blog BarcelonaDo Source
+## WEBBBD -- Web Blog BarcelonaDo Destination
+WEBBMS=/mnt/LV/Github/territoriolinux/Blog/.Md-files/Posted
+WEBBMD=/mnt/LV/Github/territoriolinux/Blog/.Md-files/
+WEBBGS=/mnt/LV/Github/territoriolinux/Blog/Games/.MdFiles/Posted
+WEBBGD=/mnt/LV/Github/territoriolinux/Blog/Games/.MdFiles/
+WEBBBS=/mnt/LV/Github/territoriolinux/Blog/barcelonaDo/Posted
+WEBBBD=/mnt/LV/Github/territoriolinux/Blog/barcelonaDo/
+####
+##GITBMS -- Git Blog Main Source
+##GITBMD -- Git Blog Main Destination
+##GITBGS -- Git Blog Game Source
+##GITBGD -- Git Blog Game Destination
+##GITBBS -- Git Blog barcelonaDo Source
+##GITBBD -- Git Blog barcelonaDo Destination
+GITBMS=/mnt/LV/Github/The-side-of-the-source/Blog/.currentWork
+GITBMS1=/mnt/LV/Github/The-side-of-the-source/Blog/.ready
+GITBMS2=/mnt/LV/Github/The-side-of-the-source/Blog/.toReview
+GITBMS3=/mnt/LV/Github/The-side-of-the-source/Blog/Archives
+GITBMD=/mnt/LV/Github/The-side-of-the-source/Blog/
+GITBGS=/mnt/LV/Github/The-side-of-the-source/Blog/Games/.currentWork
+GITBGS1=/mnt/LV/Github/The-side-of-the-source/Blog/Games/.ready
+GITBGS2=/mnt/LV/Github/The-side-of-the-source/Blog/Games/.toReview
+GITBGD=/mnt/LV/Github/The-side-of-the-source/Blog/Games/
+GITBBS=/mnt/LV/Github/The-side-of-the-source/Blog/barcelonaDo/.currentWork
+GITBBS1=/mnt/LV/Github/The-side-of-the-source/Blog/barcelonaDo/.ready
+GITBBS2=/mnt/LV/Github/The-side-of-the-source/Blog/barcelonaDo/.toReview
+GITBBD=/mnt/LV/Github/The-side-of-the-source/Blog/barcelonaDo/
+####
+## WEBDS -- Web Documentation Source
+## WEBDD -- Web Documentation Destination
+## WEBDAD -- Web Documentation Articles Destination
+WEBDS=/mnt/LV/Github/territoriolinux/TerritorioLinux/.Md-files/Posted
+WEBDD=/mnt/LV/Github/territoriolinux/TerritorioLinux/.Md-files/
+WEBDAD=/mnt/LV/Github/territoriolinux/TerritorioLinux/.Md-files/
+####
+## GITDS -- Git Documentation Source
+## GITDD -- Git Documentation Destination
+## GITDAR -- Git Documentation Repo Source
+GITDS=/mnt/LV/Github/The-side-of-the-source/Documentacion/Temas
+GITDD=/mnt/LV/Github/The-side-of-the-source/Documentacion/
+GITDAR=/mnt/LV/Github/The-side-of-the-source/Documentacion/.currentWork
+GITDAR1=/mnt/LV/Github/The-side-of-the-source/Documentacion/.ready
+GITDAR2=/mnt/LV/Github/The-side-of-the-source/Documentacion/.toReview
+####
+## WEBGS -- Web Games Source
+## WEBGD -- Web Games Destination
+WEBGS=/mnt/LV/Github/territoriolinux/Games/.Md-files/Posted
+WEBGD=/mnt/LV/Github/territoriolinux/Games/.Md-files/
+####
+## GITGS -- Git Games Source
+## GITGD -- Git Games Destination
+GITGEXCLUDE=/mnt/LV/Github/The-side-of-the-source/Games/Posted
+GITGS=/mnt/LV/Github/The-side-of-the-source/Games/
+GITGD=/mnt/LV/Github/The-side-of-the-source/Games/
+####
+## GITBS -- Git BarcelonaDo Source
+## GITBD -- Git BarcelonaDo Destination
+GITBS=/mnt/LV/Github/The-side-of-the-source/barcelonaDo/
+GITBD=/mnt/LV/Github/The-side-of-the-source/barcelonaDo/
+## WEBBS -- Web BarcelonaDo Source
+## WEBBD -- Web BarcelonaDo Destination
+WEBBS=/mnt/LV/Github/territoriolinux/barcelonaDo/Posted
+WEBBD=/mnt/LV/Github/territoriolinux/barcelonaDo/
+####
+HOUSE=/mnt/LV/Github/The-side-of-the-source
+CTRLOUT=/mnt/LV/Github/The-side-of-the-source/Logs/CtrlRepoLogs/ctrl.log
