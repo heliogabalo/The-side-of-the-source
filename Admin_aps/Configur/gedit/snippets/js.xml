@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<snippets language="js">
+  <snippet>
+    <tag>if</tag>
+    <text><![CDATA[if ($1) {
+	$2
+}]]></text>
+    <description>if</description>
+  </snippet>
+  <snippet>
+    <tag>for</tag>
+    <text><![CDATA[for(i=0; i <=something; i++) {$2}]]></text>
+    <description>For</description>
+  </snippet>
+</snippets>

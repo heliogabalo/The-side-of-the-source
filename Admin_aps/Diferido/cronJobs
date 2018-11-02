@@ -1,7 +1,7 @@
 SHELL=/bin/bash
 PATH=/sbin:/bin:/usr/sbin:/usr/bin
 #MAILTO=user
-GLOBVARS=/mnt/LV/Github/ts/Admin_aps/Diferido/gv
+HOUSE=/mnt/LV/Github/ts/
 #CRON_TZ=Country
 # For details see man 4 crontabs
 
@@ -14,5 +14,6 @@ GLOBVARS=/mnt/LV/Github/ts/Admin_aps/Diferido/gv
 # |  |  |  |  |
 # *  *  *  *  * user-name  command to be executed
 # <.> the point is the original command for <source>
-*/1 * * * *	. $GLOBVARS
 10 */2 * * *    $HOUSE/Admin_aps/Diferido/sr > /tmp/log 2>&1
+@reboot         $HOUSE/Admin_aps/Scripts/inicio > /tmp/log 2>&1
+10 * */5 * fri    $HOUSE/Admin_aps/Diferido/respaldo > /tmp/log 2>&1

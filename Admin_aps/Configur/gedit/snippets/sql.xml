@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<snippets language="sql">
+  <snippet>
+    <tag>pgl</tag>
+    <text><![CDATA[pager less;]]></text>
+    <description>Pager</description>
+  </snippet>
+</snippets>

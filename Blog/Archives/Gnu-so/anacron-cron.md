@@ -43,16 +43,6 @@ pathDir:
 		/etc/crontab
 
 ---
-<.> the point is the original command for <source>
- */1 * * * *	. $GLOBVARS
- Pull all global variables, this is the first job that occurs once. So the stab is not polluted with the same entrie over & over.
- El enfoque de la aplicacion(rsync), es coger una lista de variables -son todos los archivos y directorios que van a ser sincronizados, extrayendo todas las reglas ejem: includes/excludes/ etc. a archivos externos. Con esto conseguimos simplificar la llamada a la aplicacion, manteniendo reglas complejas, en archivos separados. 
- El enfoque que yo he preparado, es el opuesto; son construidas reglas in "situ" especificas para cada directorio o archivo. Hay mucho que refactorizar aqui, juas.
- IDEA -- coger la lista de variables, y preparar un "FILTER", en el archivo donde se incluye los directorios/archivos a sincronizar, tambien pueden incluirse las "reglas", aunque estas habra que colocarlas al principio del archivo, o de lo contrario no seran alcanzadas cuando deban aplicarse.
- Otra nota, "rsync" proporciona un mecanismo para evitar el borrado de archivos que fueron anteriormente "guardados(backed-up)", esto significa, que la regla "--delete" sobre directorios y archivos guardados con anterioridad, no sera aplicada!!. CONVIENE LEER LA PAGINA DE MANUAL.
- Otra nota, los filtros NO son rutas hacia la "X", es un PATRON de texto -algo asi como un REGEX, que tendra encuenta la aplicacion, sobre el directorio que se le dijo trabajase.
-
-
 
 ## 2. Referencias
 [anacmron][somewhereDeepOnAHole]

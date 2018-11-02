@@ -1,0 +1,92 @@
+
+fedoramagazine.org
+Run a Minecraft server using Spigot
+8-10 minutes
+
+Minecraft is one of the most popular video games in the world today, with over 70 million purchased accounts. After playing single-player for a while, the next step most players look into is multiplayer. There are thousands of servers for Minecraft players to join, and starting your own server isn’t too difficult either. The most popular Minecraft server software is called Spigot.
+
+Spigot is an open-source Java project that lets users run their own Minecraft server and add plugins to extend the possibilities of their server. There are over 100,000 Spigot servers in existence today. This makes Spigot one of the most stable and diverse Minecraft servers available.
+Compiling Spigot
+
+To use Spigot, you must use their BuildTools utility to build and compile Spigot from source code. In order to use BuildTools, you’ll need to install Java and git. To do this, open a terminal and run this command:
+
+sudo dnf install java-1.8.0-openjdk git
+
+After the command finishes, you can prepare to compile Spigot. First download the latest version of BuildTools from the Spigot Jenkins and place it into a new directory. Next, open up a terminal and change directories into the directory you placed BuildTools in. To compile Spigot, run the following commands:
+
+git config --global --unset core.autocrlf
+java -jar BuildTools.jar
+
+The first command is important, because it ensures line endings are consistent so BuildTools works correctly.
+
+After BuildTools finishes running, a few different JAR files now appear in the directory. These include something like craftbukkit-1.x.x.jar and spigot-1.x.x.jar, where x.x represents the current version of Minecraft. CraftBukkit is the original Minecraft server implementation, but is no longer officially maintained. (The Spigot team releases updates for CraftBukkit.) Spigot is a fork of CraftBukkit with a few performance enhancements under the hood. Therefore, you’ll want to use the Spigot JAR file.
+Starting Your Server
+
+Once you have the spigot-1.x.x.jar file ready, it’s time to move onto finally running your server! There are a variety of methods to do this. We’re going to use window manager software called tmux to allow you to run your server without needing to keep a terminal window open.
+
+First, install tmux from the Fedora repositories. Run the following command in a terminal window:
+
+sudo dnf install tmux
+
+There are countless ways to use tmux and do all kinds of awesome things. For relevancy, this guide only covers basic usage. You can learn more about using tmux using this cheatsheet. For our purposes, we’ll create a tmux session, write a basic start-up script, and then run our Spigot server inside of the tmux session. Before we get rolling, you will want to write your start-up script. This can be a one-line file, and should be named something like start-spigot.sh. Its contents should look something like this:
+
+#!/bin/bash
+java -Xms1024M -Xmx1024M -jar spigot.jar
+
+After writing this script, place it in the same directory with your Spigot JAR file. Now let’s move onto setting up tmux and running your server. Run the following commands to set up your session:
+
+tmux new -s minecraft
+cd /path/to/spigot.jar
+chmod +x start.sh
+./start.sh
+
+Your Spigot server now starts running and provides more instructions on your screen for setting up your server.
+Basic Configuration
+
+There are a few basic configuration tips and guides available for how to best configure your Spigot server to meet your needs. A full configuration guide can be found on the Spigot Wiki. In this article, we will cover some of the basic and most important configuration tips. There are two configuration files we will need to work with: server.properties and spigot.yml.
+server.properties
+
+There a wide number of settings in this file, but we will only cover some of the essential parts:
+
+    server-ip
+        Default: <empty>
+        When blank, this assumes the localhost. If your machine does not have multiple IP addresses, leaving this blank is acceptable.
+    server-port
+        Default: 25565
+        Specify the TCP port that you want your Spigot server to listen on.
+    enable-query
+        Default: false
+        Set this to true to allow external services to ping your server for information, such as a listing website showing online players and active plugins.
+    query.port
+        Must be manually entered
+        You should set this UDP port to a different number than your server TCP port to prevent anyone on the Internet from easily finding out information about your server, if you do not wish to share it.
+    max-players
+        Default: 10
+        Specify the maximum number of players that can play on your server at the same time.
+    motd
+        Default: A Minecraft Server
+        Change this line to a server name for your Minecraft server that appears on the Multiplayer menu. You can have up to two lines on the menu; to split your MOTD, use the \n escape character.
+
+spigot.yml
+
+The spigot.yml file contains default configuration specific to the Spigot server. There are several options that can be changed here. If performance is a concern, you can tweak settings to maximize performance on even the oldest system. A full Spigot configuration guide can be found on their wiki. However, like before, we’ll cover some basic configuration options here.
+
+    settings > restart-on-crash
+        If your server should ever crash, you can have it automatically restart by calling the start script you created earlier. This is especially useful if you want to run your server long-term. Just ensure your start script is specified in the following line for this setting.
+    world-settings > anti-xray
+        There are plenty of hacks and cheats in Minecraft. One of the most popular is the x-ray hack. This cheat allows players to see through “useless” blocks and immediately find more valuable blocks behind them, such as diamonds and gold. Spigot has its own anti-xray protection built-in to try to counter this.
+        There are two different engine modes: 1 and 2. Mode 1 is a lighter protection that isn’t as effective, but conserves resources. Engine Mode 2 requires more computing power but attempts to obfuscate all non-visible blocks on the fly to block x-ray hacks. Try playing around with the settings to find what works best for you!
+    world-settings > dragon-death-sound-radius
+        This is just one example of the tweaks available in Spigot. You can adjust the range of the dragon death sound for all players on your server. By default, anyone online can hear the sound if a player slays the dragon. This setting allows you to set a radius to limit the range of the death noise.
+    world-settings > arrow-despawn-rate
+        This setting is more of a performance-oriented tweak. If you lower the default rate for arrows to despawn, you can reduce the load on your server to render these items. If players on your server are always shooting bow-and-arrows at each other, this can be a very useful tweak to gain performance.
+
+Plugins
+
+In addition to the default configuration options, Spigot comes with a rich API that Java developers can use to write their own plugins and modifications for Spigot. If you want to find more plugins, Spigot hosts a wide number of user-submitted plugins on their Resource Manager. Searching for plugins that interest you is a great way to expand the potential of your server, and to make it more interesting for your players. Try playing around with a few different plugins to find what works best for you and your players.
+
+In no time, you’ll be up and running your Spigot server for the world to play on!
+Justin W. Flory
+
+Justin W. Flory is a student and open source contributor based in the United States. Currently, he is a student at the Rochester Institute of Technology, majoring in Networking & Systems Administration and minoring in Free and Open Source Software. Justin is an active contributor to the Fedora Project. In Fedora, he leads the Community Operations team and participates with the Diversity team. He is also an Ambassador to represent Fedora at events and conferences, where he has spoken on the stages of FOSDEM, DevConfCZ, All Things Open, OSCAL, and more. Justin also participates in other open source communities. He is a former staff member of the SpigotMC project, a contributor to MusicBrainz, and a community moderator for Opensource.com. He also worked on the UNICEF Office of Innovation's MagicBox project. Additionally, Justin is an avid traveler and always tries to learn something new from the places he visits and the people he meets. You may find him appreciating South American coffee at a local coffeehouse or meditating at the community zen center.
+

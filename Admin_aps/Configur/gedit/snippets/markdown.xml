@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<snippets language="markdown">
+  <snippet>
+    <tag>b</tag>
+    <text><![CDATA[__$0__]]></text>
+    <description>Bold</description>
+  </snippet>
+  <snippet>
+    <tag>i</tag>
+    <text><![CDATA[_$0_]]></text>
+    <description>Italic</description>
+  </snippet>
+  <snippet>
+    <tag>firma</tag>
+    <text><![CDATA[<ul id="firma">
+	<li><b>Traducción:</b> Heliogabalo S.J.</li>
+	<li><em>www.territoriolinux.net</em></li>
+</ul>]]></text>
+    <description>Firma</description>
+  </snippet>
+  <snippet>
+    <tag>kbd</tag>
+    <text><![CDATA[<kbd>$1</kbd>]]></text>
+    <description>Keyboar Tag</description>
+  </snippet>
+  <snippet>
+    <tag>u</tag>
+    <text><![CDATA[<u>$1</u>]]></text>
+    <description>Underline</description>
+  </snippet>
+  <snippet>
+    <tag>tc</tag>
+    <text><![CDATA[| Table | Table | Table | Table |	Table |
+|:--:|:--:|:--:|:--:|:--:|
+| $1 | $2 | $3 | $4 | $5 |]]></text>
+    <description>TableCentered</description>
+  </snippet>
+  <snippet>
+    <tag>tl</tag>
+    <text><![CDATA[| $1 | $2 | $3 | $4 | $5 |]]></text>
+    <description>Table Line</description>
+  </snippet>
+</snippets>

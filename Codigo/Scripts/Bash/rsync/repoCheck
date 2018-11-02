@@ -1,0 +1,11 @@
+#!/bin/sh
+
+repo=/mnt/LV/Github/The-side-of-the-source
+
+chown -R root:root $repo ;
+find $repo -type d -exec chmod -R 755 {} \; 
+find $repo -type f -exec chmod -R 0644 {} \;
+find $repo -type f -name "config.php" -exec chmod 0644 {} \;
+find $repo -type f -name "index.php" -exec chmod 0644 {} \;
+find $repo -type f -name "startup" -exec chmod 0644 {} \;
+

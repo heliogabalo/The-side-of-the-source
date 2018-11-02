@@ -1,0 +1,110 @@
+--- Running report_uReport ---
+('report_uReport' completed successfully)
+
+--- Running analyze_CCpp ---
+Ok to upload core dump? (It may contain sensitive data). If your answer is 'No', a stack trace will be generated locally. (It may download a huge amount of data). 'YES'
+Querying server settings
+Preparing an archive to upload
+Uploading 1.1 MiB
+Upload successful
+Retrace job started
+Retrace job failed
+Retrace failed. Try again later and if the problem persists report this issue please.
+2018-10-27 05:18:36 Analyzing crash data
+ 2018-10-27 05:18:50 INFO:faf.Coredump2Packages:Executing eu-unstrip
+INFO:faf.Coredump2Packages:Mapping build-ids into debuginfo packages
+WARNING:faf.Coredump2Packages:No debuginfo found for '6ae901d76bedd2bbf397cb076f81e66f36970738' (/usr/libexec/ibus-x11)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'dbd5d36ac4c78dd3de2ee53bb9be5579cc332544' (/usr/lib64/libfreebl3.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for '5514b78daa6411f7cd748c68aef3048b48efb7aa' (/usr/lib64/libcrypt-nss-2.25.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for '61f8b3648c9775e96a133866f5d00cb15970fb79' (/usr/lib64/libltdl.so.7.3.1)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'cf9e14fcc595ebeb7fecdd073fe35b7b6988cac0' (/usr/lib64/libtdb.so.1.3.13)
+WARNING:faf.Coredump2Packages:No debuginfo found for '3d1d905f2e3133b3bea63c952347bd3cbeeb7b4c' (/usr/lib64/gtk-3.0/modules/libpk-gtk-module.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for '7a1b0a4ea7b8fc402b3a264c4a6a52366b842407' (/usr/lib64/gio/modules/libdconfsettings.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'cbc4f329539eb8af3ab2a373776c2d8a346019ae' (/usr/lib64/gio/modules/libgvfsdbus.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for '7a115bb2d3a42dac361132a81a385d01d4dc02bd' (/usr/lib64/libutil-2.25.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for '58bbe3959be4704b4654d424f9ecdfa71a4c492a' (/usr/lib64/gvfs/libgvfscommon.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for '0a70ffdc29fc7181df2724529ead4c6343bfbb6f' (/usr/lib64/gio/modules/libgioremote-volume-monitor.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for '3b73bbc3f12ae8bbce4bac9f00b3f1682678045d' (/usr/lib64/libLLVM-4.0.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'e75d501ecd92c1536aa7acb4db897f3cd9c3bde5' (/usr/lib64/libelf-0.169.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for '547629ce1dccf410b654c1bb9960646312a632d2' (/usr/lib64/libdrm_amdgpu.so.1.0.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'c1cc020dd5347df18a0ed381cca28e04b6017884' (/usr/lib64/libdrm_radeon.so.1.0.1)
+WARNING:faf.Coredump2Packages:No debuginfo found for '1b23f4766c3c1beff824f0203547d2bf650287e0' (/usr/lib64/libdrm_nouveau.so.2.0.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'bf74dcb1ab6ccdda83eeacfac7fa7c818d1ce367' (/usr/lib64/dri/swrast_dri.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'b3670e909dbec83bd419792916e615d20012aa48' (/usr/lib64/libdrm.so.2.4.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for '01dd8c57c30b8b05ad1c7555295996efe8640c05' (/usr/lib64/libX11-xcb.so.1.0.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'e4a33f2b2fa5f64b27c553c512207405cc0c5fd2' (/usr/lib64/libglapi.so.0.0.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for '850b9246241398eebda059a092bf8c69554b0c5c' (/usr/lib64/libGLX_mesa.so.0.0.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'f9692a7ffff2fe11583c4d12a37b7ae11647d73e' (/usr/lib64/libgpg-error.so.0.20.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for '20b16a532958bfe10c68e0dc516ee61ce98a57c1' (/usr/lib64/libgcrypt.so.20.1.7)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'edb52c4f8c5e3453b509e8ea872f7b5584f2c8f8' (/usr/lib64/liblz4.so.1.7.5)
+WARNING:faf.Coredump2Packages:No debuginfo found for '315d6463c90a86c2c441cdaf242c06d249674277' (/usr/lib64/libGLX.so.0.0.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for '075603a130fbd2b11c2729978e2002381afb2f58' (/usr/lib64/libGLdispatch.so.0.0.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for '7ff88c08084e879b79ce555d77c4b22214221785' (/usr/lib64/libgraphite2.so.3.0.1)
+WARNING:faf.Coredump2Packages:No debuginfo found for '42d28e0a7efbe4a59083e89dd671d909ffc8c748' (/usr/lib64/libdbus-1.so.3.16.4)
+WARNING:faf.Coredump2Packages:No debuginfo found for '14d0438eaa2a34215f833456160cddabb2de277b' (/usr/lib64/libatspi.so.0.0.1)
+WARNING:faf.Coredump2Packages:No debuginfo found for '692eac228f5130a9fc991bf26c1e17a1a5c45efa' (/usr/lib64/libgcc_s-7-20170622.so.1)
+WARNING:faf.Coredump2Packages:No debuginfo found for '97a16219b91d95b79eb6b9e1d6347917078b4e26' (/usr/lib64/libresolv-2.25.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for '5327963fd40b38c283cbfea2d1da27025b4b1e1e' (/usr/lib64/libselinux.so.1)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'd79f34870077db291118ffcae7d10c58438f1baa' (/usr/lib64/libpcre.so.1.2.8)
+WARNING:faf.Coredump2Packages:No debuginfo found for '46a463b40c5b38363925089b20192772adc68927' (/usr/lib64/libffi.so.6.0.2)
+WARNING:faf.Coredump2Packages:No debuginfo found for '6ff425a5cf1735c0e003981e28f29072cf28a003' (/usr/lib64/libGL.so.1.0.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for '469a1516309736f16f81f717a6e3e0f94cd876b0' (/usr/lib64/libEGL.so.1.0.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for '51ce17b8b6305ad9bdd8cc9af7265828446444e0' (/usr/lib64/libfreetype.so.6.13.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for '4597c12ed51821c8c8c74efd0f38e643a08d28e3' (/usr/lib64/libharfbuzz.so.0.10400.4)
+WARNING:faf.Coredump2Packages:No debuginfo found for '4bfc9b131352cadcc8e7c12afdd5b23d6ab1cbdd' (/usr/lib64/libgthread-2.0.so.0.5200.3)
+WARNING:faf.Coredump2Packages:No debuginfo found for '654833852719e82b13e70b8913d8d3e7b354f76b' (/usr/lib64/librt-2.25.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for '04f96aa17e8545f8e59fd1b6ae439a67b6f97107' (/usr/lib64/libwayland-egl.so.1.0.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for '7039d61089231e7c4b514bdf14f0facdf95aa117' (/usr/lib64/libxkbcommon.so.0.0.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for '575eaa2cce38289c1d786f33be9ac044663147fb' (/usr/lib64/libm-2.25.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'fe2a277f62ae8b0b7e09ae277876b6c64b4627b9' (/usr/lib64/libpangoft2-1.0.so.0.4000.6)
+WARNING:faf.Coredump2Packages:No debuginfo found for '437d95626bf0691c97dd3aed0e764f2cb050b884' (/usr/lib64/libepoxy.so.0.0.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for '28e73d8bd6b056582c92682eab24b354c6efc923' (/usr/lib64/libatk-bridge-2.0.so.0.0.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for '62de423fda08fc89600453e9f91d61eb0d5e3414' (/usr/lib64/libgmodule-2.0.so.0.5200.3)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'fe02889a41424b4854925a9e980d52fc924f477c' (/usr/lib64/libdl-2.25.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for '4239cd94ad76c92a23967ab4fe9246570266b8d8' (/usr/lib64/libc-2.25.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for '66d01a742c485b39706a386e32c5a5512dcaaffb' (/usr/lib64/libpthread-2.25.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for '0b43611288742c9c62d4571aba4f0848e15a9d4c' (/usr/lib64/libglib-2.0.so.0.5200.3)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'c1dccc3e2d43640ebfc70f0bdfb8354656d75b5e' (/usr/lib64/libgobject-2.0.so.0.5200.3)
+WARNING:faf.Coredump2Packages:No debuginfo found for '6b88468decb8a30ba0e5f6ffed24e18be83dd2f9' (/usr/lib64/libgio-2.0.so.0.5200.3)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'b547f93993934f3f00019c1d8c063f6b60c9eaff' (/usr/lib64/libgdk_pixbuf-2.0.so.0.3600.6)
+WARNING:faf.Coredump2Packages:No debuginfo found for '6aeff3bdaa2688fc3900a4fbfdd38e505bf347d1' (/usr/lib64/libcairo.so.2.11400.10)
+WARNING:faf.Coredump2Packages:No debuginfo found for '60865c09ab0ff3e583b2b5cf7937ec0127e06040' (/usr/lib64/libcairo-gobject.so.2.11400.10)
+WARNING:faf.Coredump2Packages:No debuginfo found for '00ea822d559436f10c5a06acded3cb4ced33a99e' (/usr/lib64/libatk-1.0.so.0.22409.1)
+WARNING:faf.Coredump2Packages:No debuginfo found for '12fd3c9bf80abab2baa3fbbe617c2a9e18fff1a7' (/usr/lib64/libpango-1.0.so.0.4000.6)
+WARNING:faf.Coredump2Packages:No debuginfo found for '0aac71fd1b54aed1021d5b1e3bf1f78cfb225d4c' (/usr/lib64/libpangocairo-1.0.so.0.4000.6)
+WARNING:faf.Coredump2Packages:No debuginfo found for '0af55d35473aa8e8fe9cc6d6d7800d07dce25b76' (/usr/lib64/libgdk-3.so.0.2200.16)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'a1378e261c4ef492a543a597c6b418c8c55a561b' (/usr/lib64/libgtk-3.so.0.2200.16)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'ac17b70d10a046aa8dbf7f40ae66d7f620b0915e' (/usr/lib64/libX11.so.6.3.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for '0c807d406c6477330ba016f198ed5afd8fea1921' (/usr/lib64/libibus-1.0.so.5.0.516)
+WARNING:faf.Coredump2Packages:No debuginfo found for '079feab4fb58967d79cbdaac2d0437e593da894e' (ld-linux-x86-64.so.2)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'b052d777a24e2107a08c5110fe4b40c455b53547' (linux-vdso.so.1)
+INFO:faf.Coredump2Packages:Getting binary packages from debuginfos
+
+    2018-10-27 05:18:50 Preparing environment for backtrace generation
+   2018-10-27 05:18:52 /usr/bin/mock init --resultdir /srv/retrace/tasks/679980043/log --configdir /srv/retrace/tasks/679980043 exitted with 30
+=== OUTPUT ===
+INFO: mock.py version 1.4.13 starting (python version = 2.7.5)...
+Start: init plugins
+INFO: selinux disabled
+Finish: init plugins
+Start: run
+Start: clean chroot
+Finish: clean chroot
+Start: chroot init
+INFO: calling preinit hooks
+INFO: enabled HW Info plugin
+Mock Version: 1.4.13
+INFO: Mock Version: 1.4.13
+Start: yum install
+ERROR: Command failed: 
+ # /usr/bin/yum --installroot /var/lib/mock/679980043/root/ --releasever 7.5 --skip-broken install bash cpio glibc-debuginfo abrt-addon-ccpp shadow-utils gdb rpm
+Failed to set locale, defaulting to C
+Error: Nothing to do
+
+
+   2018-10-27 05:18:53 None
+
+Do you want to generate a stack trace locally? (It may download a huge amount of data but reporting can't continue without stack trace). 'NO'
+('analyze_CCpp' exited with 1)
+
+

@@ -1,0 +1,51 @@
+[legacy/keybindings]
+read-only='<Primary>r'
+
+[legacy]
+menu-accelerator-enabled=false
+schema-version=uint32 3
+default-show-menubar=false
+
+[legacy/profiles:]
+list=['b1dcc9dd-5262-4d8d-a863-c897e6d979b9', '4d2cfdf4-466d-47b1-bf8d-4a89e7041da7', '5759b15a-de99-4877-a51a-15b024f24754']
+default='b1dcc9dd-5262-4d8d-a863-c897e6d979b9'
+
+[legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+visible-name='regular'
+default-size-columns=65
+default-size-rows=4
+title='Regular'
+use-system-font=false
+font='Monospace 10'
+scroll-on-keystroke=false
+title-mode='ignore'
+scrollbar-policy='never'
+audible-bell=false
+scrollback-lines=1
+
+[legacy/profiles:/:5759b15a-de99-4877-a51a-15b024f24754]
+visible-name='ncurses'
+default-size-columns=75
+default-size-rows=35
+title='Ncurses'
+use-system-font=false
+font='Monospace 10'
+scroll-on-keystroke=false
+title-mode='ignore'
+scrollbar-policy='never'
+audible-bell=false
+scrollback-lines=1
+
+[legacy/profiles:/:4d2cfdf4-466d-47b1-bf8d-4a89e7041da7]
+visible-name='login'
+login-shell=true
+default-size-columns=60
+default-size-rows=4
+title='Login'
+use-system-font=false
+font='Monospace 10'
+scroll-on-keystroke=false
+title-mode='ignore'
+scrollbar-policy='never'
+audible-bell=false
+scrollback-lines=1

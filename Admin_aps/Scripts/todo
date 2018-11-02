@@ -1,0 +1,33 @@
+#!/bin/sh
+
+#TODO Como cambian las variables, hay que implementar una función con lo siguiente para comprobar si existe el archivo, crear el archivo -esto podría hacerse mejor con un touch y registrar el log, después sincronizar el contenido.
+
+if [[ -r $FILE ]]; then
+	rsync -avu --delete $SOURCE $DESTINATION
+	else
+		cp $SOURCE $DESTINATION
+fi
+
+# Hay que idear un método, para pasar la varible con el directorio que toque. Se meocurre hacer un mapa de variables -como siempre! El problema con bash, es que la manipulación de arreglos de más de una dimensión, es extremadamente doloroso, puesto que el lenguaje no implementa dicha funcionalidad.
+
+miArreglo2D [
+{sou1, dest1},
+{sou2, dest2}
+];
+
+# En C es bastante más sencillo, implementar un arreglo similar a lo anterior. Quedaría implentar el metodo -con un for por ejemplo, para recorrer el arreglo y pasar los argumentos a la función.
+
+myFuncion (arg1, arg2) {}
+
+
+# Muy probablemente al siguiente pollo le salga hasta gorro. Pero es una idea con la que empezar a iterar sobre el arreglo.
+for (( i = 0; i < $sizeOfArreglo; i++ )); do
+	SOURCE=i
+	for (( j = 0; j < $sizeOfArreglo; j++ )); do
+		DESTINATION=j
+	done
+done
+
+#Primero, delimitar el tamaño del arreglo, guardando el valor en una variable.
+#Esto es probablemente innecesario, puesto que al recorrer el mismo, cuando se alcance la ultima entrada del mismo, el bucle termine de forma limpia.
+#Segundo, debe trabajarse con variables locales, con el bucle for, ya que cambia su contenido, en cada pasada. 

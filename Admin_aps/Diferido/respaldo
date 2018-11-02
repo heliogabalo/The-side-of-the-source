@@ -1,0 +1,12 @@
+#!/bin/sh
+
+source /mnt/LV/Github/the-side-of-the-source-code/Admin_aps/Diferido/gv
+
+## backUps
+rm -f $CTRLOUT
+
+rm -f $HOUSE/Respaldo/Local/incremental.log
+
+sh $HOUSE/Admin_aps/Scripts/starBack.sh /tmp/ >> $CTRLOUT 2>&1 
+## Is needed to erase the incremental file, e. once on week. So the first day is full sized.
+

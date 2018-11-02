@@ -1,0 +1,171 @@
+--- Running report_uReport ---
+('report_uReport' completed successfully)
+
+--- Running analyze_CCpp ---
+Ok to upload core dump? (It may contain sensitive data). If your answer is 'No', a stack trace will be generated locally. (It may download a huge amount of data). 'YES'
+Querying server settings
+Preparing an archive to upload
+You are going to upload 38.3 MiB. Continue? 'YES'
+Uploading 38.3 MiB
+Upload successful
+Retrace job started
+Preparing environment for backtrace generation
+Retrace job failed
+Retrace failed. Try again later and if the problem persists report this issue please.
+2018-10-27 05:24:05 Analyzing crash data
+ 2018-10-27 05:24:22 INFO:faf.Coredump2Packages:Executing eu-unstrip
+INFO:faf.Coredump2Packages:Mapping build-ids into debuginfo packages
+WARNING:faf.Coredump2Packages:No debuginfo found for 'aa28909667a2cc8b4e292f7b2dad207c239f16ad' (/usr/bin/gnome-shell)
+WARNING:faf.Coredump2Packages:No debuginfo found for '810b61493411500943e50e02bd4c82d6e69c424f' (/usr/lib64/libnss_files-2.25.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for '3d1d905f2e3133b3bea63c952347bd3cbeeb7b4c' (/usr/lib64/gtk-3.0/modules/libpk-gtk-module.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'd02c9d25256c850fc97d761ceb4d5ef48a95b3d9' (/usr/lib64/gconv/ISO8859-1.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for '78cc96a7c575b6733cd973b19d00755aab58006f' (/usr/lib64/librsvg-2.so.2.40.17)
+WARNING:faf.Coredump2Packages:No debuginfo found for '6bfb1da53c9b76716933e0a78999712408e2d1ee' (/usr/lib64/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-svg.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for '2b49783f94f02f53f55660a976f7d270816ab843' (/usr/lib64/libgmp.so.10.3.2)
+WARNING:faf.Coredump2Packages:No debuginfo found for '177304e0bf1336b5f0697bcb278173cdb4cd79ea' (/usr/lib64/libtasn1.so.6.5.4)
+WARNING:faf.Coredump2Packages:No debuginfo found for '03aa9aaf127cacbf770f19b2bfd5f3e8949a5337' (/usr/lib64/libidn2.so.0.3.1)
+WARNING:faf.Coredump2Packages:No debuginfo found for '0d83e4a0924c4d2656103df959007896541a8c95' (/usr/lib64/libgnutls.so.30.14.5)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'd5283d6d07a77c4a1d8c67596826cbeceac909a2' (/usr/lib64/libgdm.so.1.0.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'c3f548600ac66f995ba7d410dd9b38162630a1d0' (/usr/lib64/libnss_sss.so.2)
+WARNING:faf.Coredump2Packages:No debuginfo found for '4009e67a281ed5cd655f372d09c9154c3c04a779' (/usr/lib64/libfreeblpriv3.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for '8eeae1a88cbe92cd719749816737c20331edf555' (/usr/lib64/libsoftokn3.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for '0c807d406c6477330ba016f198ed5afd8fea1921' (/usr/lib64/libibus-1.0.so.5.0.516)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'b5f313bf264af342d6fea113e8973e38ca2aa983' (/usr/lib64/libgweather-3.so.6.7.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for '29760b99c0f31d0b377108a70376d284eb0264b7' (/usr/lib64/libgee-0.8.so.2.6.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for '7a1b0a4ea7b8fc402b3a264c4a6a52366b842407' (/usr/lib64/gio/modules/libdconfsettings.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'cbc4f329539eb8af3ab2a373776c2d8a346019ae' (/usr/lib64/gio/modules/libgvfsdbus.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for '7a115bb2d3a42dac361132a81a385d01d4dc02bd' (/usr/lib64/libutil-2.25.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for '58bbe3959be4704b4654d424f9ecdfa71a4c492a' (/usr/lib64/gvfs/libgvfscommon.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for '0a70ffdc29fc7181df2724529ead4c6343bfbb6f' (/usr/lib64/gio/modules/libgioremote-volume-monitor.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'c1cc020dd5347df18a0ed381cca28e04b6017884' (/usr/lib64/libdrm_radeon.so.1.0.1)
+WARNING:faf.Coredump2Packages:No debuginfo found for '1b23f4766c3c1beff824f0203547d2bf650287e0' (/usr/lib64/libdrm_nouveau.so.2.0.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for '0ff32d16cd359a0713c1435c964ec0e5c8ea43bb' (/usr/lib64/libdrm_intel.so.1.0.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'a133716f52e0d3dec96d6e81303c64081144914e' (/usr/lib64/dri/i915_dri.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'e4a33f2b2fa5f64b27c553c512207405cc0c5fd2' (/usr/lib64/libglapi.so.0.0.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'b901d7eef8b68a2343d5dc08c3ebd6bb082e4c5f' (/usr/lib64/libEGL_mesa.so.0.0.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'dbd5d36ac4c78dd3de2ee53bb9be5579cc332544' (/usr/lib64/libfreebl3.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'e9ec222cd4ac9899efab1397b370d5add1625de5' (/usr/lib64/libnsl-2.25.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for '315d6463c90a86c2c441cdaf242c06d249674277' (/usr/lib64/libGLX.so.0.0.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for '7ff88c08084e879b79ce555d77c4b22214221785' (/usr/lib64/libgraphite2.so.3.0.1)
+WARNING:faf.Coredump2Packages:No debuginfo found for '5514b78daa6411f7cd748c68aef3048b48efb7aa' (/usr/lib64/libcrypt-nss-2.25.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for '05057bc16c4fce98cfc5512f7068bbf126559376' (/usr/lib64/libkeyutils.so.1.6)
+WARNING:faf.Coredump2Packages:No debuginfo found for '943378048db6ad972a0a7d4732416b232b320de9' (/usr/lib64/libkrb5support.so.0.1)
+WARNING:faf.Coredump2Packages:No debuginfo found for '065ad34c67500cad3470623abe91e41af5cfb489' (/usr/lib64/libk5crypto.so.3.1)
+WARNING:faf.Coredump2Packages:No debuginfo found for '6ccc6cac947aa68c6b6c442b85e67c8f5b61d2b8' (/usr/lib64/libkrb5.so.3.3)
+WARNING:faf.Coredump2Packages:No debuginfo found for '8cdf81ae0f4346c31239442b7c12c3f5efce08d9' (/usr/lib64/libicudata.so.57.1)
+WARNING:faf.Coredump2Packages:No debuginfo found for '3e1262fc1c590eb159df4b446ff0be6149b6be95' (/usr/lib64/libicuuc.so.57.1)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'c090f94f74f9415ada3d86199bbaea399a6a9684' (/usr/lib64/libicui18n.so.57.1)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'afea0fd4e0809f9ecf5bf09b800a59a1b600c6f8' (/usr/lib64/libsndfile.so.1.0.28)
+WARNING:faf.Coredump2Packages:No debuginfo found for '075603a130fbd2b11c2729978e2002381afb2f58' (/usr/lib64/libGLdispatch.so.0.0.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for '6ff425a5cf1735c0e003981e28f29072cf28a003' (/usr/lib64/libGL.so.1.0.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'd79f34870077db291118ffcae7d10c58438f1baa' (/usr/lib64/libpcre.so.1.2.8)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'e606f176e36eafcb8f789d6727ed155ad2b4d12a' (/usr/lib64/libwacom.so.2.5.3)
+WARNING:faf.Coredump2Packages:No debuginfo found for '69ea46a2e87bf623881bd21414593c10605639c1' (/usr/lib64/libevdev.so.2.1.19)
+WARNING:faf.Coredump2Packages:No debuginfo found for '4597c12ed51821c8c8c74efd0f38e643a08d28e3' (/usr/lib64/libharfbuzz.so.0.10400.4)
+WARNING:faf.Coredump2Packages:No debuginfo found for '437d95626bf0691c97dd3aed0e764f2cb050b884' (/usr/lib64/libepoxy.so.0.0.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for '4dd8335e5906fd4acaa7a806f07ebee4fb2af34b' (/usr/lib64/libICE.so.6.3.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'f3e5ef389b128bc32cf40362432dc2a4564d91da' (/usr/lib64/libxkbcommon-x11.so.0.0.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'a8cadc26ec0d9c81ea2f6f5a8e50492687e1250f' (/usr/lib64/libgnome-desktop-3.so.12.2.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for '7fb15b4ef3e88b9056b792bd0f77a21c44149308' (/usr/lib64/libnspr4.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'd773472b318bc35951f55ca4764879da6f93427f' (/usr/lib64/libplc4.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for '1c7e9374d5cb350781dbba82d21d7f024821c36e' (/usr/lib64/libplds4.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for '73ba0ca157f7fd6698a3dd28ea9e0bf2b849e4b0' (/usr/lib64/libnssutil3.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'a907dd9c5b2fc732bbb056b498fa9804961ff6c7' (/usr/lib64/libnss3.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for '28ae558369ca8837e30e5eba07727c8d089ddb34' (/usr/lib64/libsmime3.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for '5cae4ea45d84192a26104e74f2e6e58444692416' (/usr/lib64/libssl3.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for '096a747e03693717d94b439482bca8d1594c4b24' (/usr/lib64/libnm-glib-vpn.so.1.2.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'edb52c4f8c5e3453b509e8ea872f7b5584f2c8f8' (/usr/lib64/liblz4.so.1.7.5)
+WARNING:faf.Coredump2Packages:No debuginfo found for '5327963fd40b38c283cbfea2d1da27025b4b1e1e' (/usr/lib64/libselinux.so.1)
+WARNING:faf.Coredump2Packages:No debuginfo found for '97a16219b91d95b79eb6b9e1d6347917078b4e26' (/usr/lib64/libresolv-2.25.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'f9692a7ffff2fe11583c4d12a37b7ae11647d73e' (/usr/lib64/libgpg-error.so.0.20.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for '20b16a532958bfe10c68e0dc516ee61ce98a57c1' (/usr/lib64/libgcrypt.so.20.1.7)
+WARNING:faf.Coredump2Packages:No debuginfo found for '61f8b3648c9775e96a133866f5d00cb15970fb79' (/usr/lib64/libltdl.so.7.3.1)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'cf9e14fcc595ebeb7fecdd073fe35b7b6988cac0' (/usr/lib64/libtdb.so.1.3.13)
+WARNING:faf.Coredump2Packages:No debuginfo found for '01dd8c57c30b8b05ad1c7555295996efe8640c05' (/usr/lib64/libX11-xcb.so.1.0.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'c70f3cd2e955c10c05c0859f4eb32e8d0f63ee82' (/usr/lib64/libgssapi_krb5.so.2.2)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'c46fc0dd46b381dc258aeb4ff51320cc70bfb337' (/usr/lib64/libsqlite3.so.0.8.6)
+WARNING:faf.Coredump2Packages:No debuginfo found for '692eac228f5130a9fc991bf26c1e17a1a5c45efa' (/usr/lib64/libgcc_s-7-20170622.so.1)
+WARNING:faf.Coredump2Packages:No debuginfo found for '52f08a9ae654623c281492e59cc060739e9f7faa' (/usr/lib64/libstdc++.so.6.0.24)
+WARNING:faf.Coredump2Packages:No debuginfo found for '46a463b40c5b38363925089b20192772adc68927' (/usr/lib64/libffi.so.6.0.2)
+WARNING:faf.Coredump2Packages:No debuginfo found for '14d0438eaa2a34215f833456160cddabb2de277b' (/usr/lib64/libatspi.so.0.0.1)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'fe02889a41424b4854925a9e980d52fc924f477c' (/usr/lib64/libdl-2.25.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for '654833852719e82b13e70b8913d8d3e7b354f76b' (/usr/lib64/librt-2.25.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for '4239cd94ad76c92a23967ab4fe9246570266b8d8' (/usr/lib64/libc-2.25.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for '66d01a742c485b39706a386e32c5a5512dcaaffb' (/usr/lib64/libpthread-2.25.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'ac17b70d10a046aa8dbf7f40ae66d7f620b0915e' (/usr/lib64/libX11.so.6.3.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for '469a1516309736f16f81f717a6e3e0f94cd876b0' (/usr/lib64/libEGL.so.1.0.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'b3670e909dbec83bd419792916e615d20012aa48' (/usr/lib64/libdrm.so.2.4.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for '2d5a0cf4016181d908add1061eb618cc637e74d0' (/usr/lib64/libgbm.so.1.0.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for '0b43611288742c9c62d4571aba4f0848e15a9d4c' (/usr/lib64/libglib-2.0.so.0.5200.3)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'c1dccc3e2d43640ebfc70f0bdfb8354656d75b5e' (/usr/lib64/libgobject-2.0.so.0.5200.3)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'b547f93993934f3f00019c1d8c063f6b60c9eaff' (/usr/lib64/libgdk_pixbuf-2.0.so.0.3600.6)
+WARNING:faf.Coredump2Packages:No debuginfo found for '62de423fda08fc89600453e9f91d61eb0d5e3414' (/usr/lib64/libgmodule-2.0.so.0.5200.3)
+WARNING:faf.Coredump2Packages:No debuginfo found for '6aeff3bdaa2688fc3900a4fbfdd38e505bf347d1' (/usr/lib64/libcairo.so.2.11400.10)
+WARNING:faf.Coredump2Packages:No debuginfo found for '575eaa2cce38289c1d786f33be9ac044663147fb' (/usr/lib64/libm-2.25.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for '19815189d1eba3f18b062edd8eec4de7802089be' (/usr/lib64/mutter/libmutter-cogl-0.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for '04f96aa17e8545f8e59fd1b6ae439a67b6f97107' (/usr/lib64/libwayland-egl.so.1.0.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for '6b88468decb8a30ba0e5f6ffed24e18be83dd2f9' (/usr/lib64/libgio-2.0.so.0.5200.3)
+WARNING:faf.Coredump2Packages:No debuginfo found for '68dfff2010e318a9b5f87db8f8d80cf701acafb6' (/usr/lib64/libjson-glib-1.0.so.0.200.6)
+WARNING:faf.Coredump2Packages:No debuginfo found for '12fd3c9bf80abab2baa3fbbe617c2a9e18fff1a7' (/usr/lib64/libpango-1.0.so.0.4000.6)
+WARNING:faf.Coredump2Packages:No debuginfo found for '0aac71fd1b54aed1021d5b1e3bf1f78cfb225d4c' (/usr/lib64/libpangocairo-1.0.so.0.4000.6)
+WARNING:faf.Coredump2Packages:No debuginfo found for '00ea822d559436f10c5a06acded3cb4ced33a99e' (/usr/lib64/libatk-1.0.so.0.22409.1)
+WARNING:faf.Coredump2Packages:No debuginfo found for '60865c09ab0ff3e583b2b5cf7937ec0127e06040' (/usr/lib64/libcairo-gobject.so.2.11400.10)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'e8953ebae82081b49d97ea7744304fadc7abfb17' (/usr/lib64/mutter/libmutter-cogl-path-0.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for '7a4cefcd6e0de8cad1bf5cc0ce9e7503fb473e6d' (/usr/lib64/mutter/libmutter-cogl-pango-0.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for '4bfc9b131352cadcc8e7c12afdd5b23d6ab1cbdd' (/usr/lib64/libgthread-2.0.so.0.5200.3)
+WARNING:faf.Coredump2Packages:No debuginfo found for '7039d61089231e7c4b514bdf14f0facdf95aa117' (/usr/lib64/libxkbcommon.so.0.0.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for '5ba1b574dffe066913e4fd38ea9eaf2d724ef692' (/usr/lib64/libinput.so.10.12.5)
+WARNING:faf.Coredump2Packages:No debuginfo found for '51ce17b8b6305ad9bdd8cc9af7265828446444e0' (/usr/lib64/libfreetype.so.6.13.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'fe2a277f62ae8b0b7e09ae277876b6c64b4627b9' (/usr/lib64/libpangoft2-1.0.so.0.4000.6)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'ffc7b7488c0dff46a13c551abce69dd708aaa062' (/usr/lib64/mutter/libmutter-clutter-0.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for '0af55d35473aa8e8fe9cc6d6d7800d07dce25b76' (/usr/lib64/libgdk-3.so.0.2200.16)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'a1378e261c4ef492a543a597c6b418c8c55a561b' (/usr/lib64/libgtk-3.so.0.2200.16)
+WARNING:faf.Coredump2Packages:No debuginfo found for '7f100d8d20e9cdeca78dc3e081d925b0a52d00ea' (/usr/lib64/libmutter-0.so.0.0.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for '42d28e0a7efbe4a59083e89dd671d909ffc8c748' (/usr/lib64/libdbus-1.so.3.16.4)
+WARNING:faf.Coredump2Packages:No debuginfo found for '0a2ac5a91031a6c990c5465eba409f8e6e8f1b51' (/usr/lib64/libnm-util.so.2.7.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for '0ed93659718572acfae6ec1ed0deba5c93f5aea8' (/usr/lib64/libnm-glib.so.4.9.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for '9069f31f5f78f04ba159e45ef91f1d079fb96828' (/usr/lib64/libnm-gtk.so.0.0.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for '591f89a2311218107a3410131f4c308d1a288fba' (/usr/lib64/libp11-kit.so.0.3.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for '7be5b75801463c394b070107a6f508b9a8f9e9ca' (/usr/lib64/libpolkit-gobject-1.so.0.0.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for '9da711c464a21b1aec8a1b21f9bfcfdcc6636647' (/usr/lib64/libpolkit-agent-1.so.0.0.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for '1753ba92a545cc1d0e21cf07c8ebfd856df5cfcc' (/usr/lib64/libgirepository-1.0.so.1.0.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'fc4c924607d4f901a02d2b95dad739600ab7e37e' (/usr/lib64/libsoup-2.4.so.1.8.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for '52fe9e7ca67f60bf887b28e9d32026c78e9e09b6' (/usr/lib64/libgstreamer-1.0.so.0.1201.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for '35f92442290b0e2bca8d16714eccebd3f96e1930' (/usr/lib64/libgstbase-1.0.so.0.1201.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for '914f9e9248d9912da56131770b0087c0f894c3ec' (/usr/lib64/libgjs.so.0.0.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for '28e73d8bd6b056582c92682eab24b354c6efc923' (/usr/lib64/libatk-bridge-2.0.so.0.0.0)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'e637bc8513a179489c450ea2f2438d8a192d67cc' (/usr/lib64/libcroco-0.6.so.3.0.1)
+WARNING:faf.Coredump2Packages:No debuginfo found for '84a63e5cde4d406dcc8d6fcab37498e54be9eecf' (/usr/lib64/gnome-shell/libgnome-shell-menu.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for '23255a2ae44a2aa37a88955db209292b3051d578' (/usr/lib64/gnome-shell/libgnome-shell.so)
+WARNING:faf.Coredump2Packages:No debuginfo found for '079feab4fb58967d79cbdaac2d0437e593da894e' (ld-linux-x86-64.so.2)
+WARNING:faf.Coredump2Packages:No debuginfo found for 'b052d777a24e2107a08c5110fe4b40c455b53547' (linux-vdso.so.1)
+INFO:faf.Coredump2Packages:Getting binary packages from debuginfos
+
+    2018-10-27 05:24:22 Preparing environment for backtrace generation
+   2018-10-27 05:24:26 /usr/bin/mock init --resultdir /srv/retrace/tasks/984508637/log --configdir /srv/retrace/tasks/984508637 exitted with 30
+=== OUTPUT ===
+INFO: mock.py version 1.4.13 starting (python version = 2.7.5)...
+Start: init plugins
+INFO: selinux disabled
+Finish: init plugins
+Start: run
+Start: clean chroot
+Finish: clean chroot
+Start: chroot init
+INFO: calling preinit hooks
+INFO: enabled HW Info plugin
+Mock Version: 1.4.13
+INFO: Mock Version: 1.4.13
+Start: yum install
+ERROR: Command failed: 
+ # /usr/bin/yum --installroot /var/lib/mock/984508637/root/ --releasever 7.5 --skip-broken install bash cpio glibc-debuginfo abrt-addon-ccpp shadow-utils gdb rpm
+Failed to set locale, defaulting to C
+Error: Nothing to do
+
+
+   2018-10-27 05:24:27 None
+
+Do you want to generate a stack trace locally? (It may download a huge amount of data but reporting can't continue without stack trace). 'NO'
+('analyze_CCpp' exited with 1)
+
+

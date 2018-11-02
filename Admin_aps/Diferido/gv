@@ -17,19 +17,19 @@ WEBBBD=/mnt/LV/Github/territoriolinux/Blog/barcelonaDo/
 ##GITBGD -- Git Blog Game Destination
 ##GITBBS -- Git Blog barcelonaDo Source
 ##GITBBD -- Git Blog barcelonaDo Destination
-GITBMS=/mnt/LV/Github/The-side-of-the-source/Blog/.currentWork
-GITBMS1=/mnt/LV/Github/The-side-of-the-source/Blog/.ready
-GITBMS2=/mnt/LV/Github/The-side-of-the-source/Blog/.toReview
-GITBMS3=/mnt/LV/Github/The-side-of-the-source/Blog/Archives
-GITBMD=/mnt/LV/Github/The-side-of-the-source/Blog/
-GITBGS=/mnt/LV/Github/The-side-of-the-source/Blog/Games/.currentWork
-GITBGS1=/mnt/LV/Github/The-side-of-the-source/Blog/Games/.ready
-GITBGS2=/mnt/LV/Github/The-side-of-the-source/Blog/Games/.toReview
-GITBGD=/mnt/LV/Github/The-side-of-the-source/Blog/Games/
-GITBBS=/mnt/LV/Github/The-side-of-the-source/Blog/barcelonaDo/.currentWork
-GITBBS1=/mnt/LV/Github/The-side-of-the-source/Blog/barcelonaDo/.ready
-GITBBS2=/mnt/LV/Github/The-side-of-the-source/Blog/barcelonaDo/.toReview
-GITBBD=/mnt/LV/Github/The-side-of-the-source/Blog/barcelonaDo/
+GITBMS=/mnt/LV/Github/the-side-of-the-source-code/Blog/.currentWork
+GITBMS1=/mnt/LV/Github/the-side-of-the-source-code/Blog/.ready
+GITBMS2=/mnt/LV/Github/the-side-of-the-source-code/Blog/.toReview
+GITBMS3=/mnt/LV/Github/the-side-of-the-source-code/Blog/Archives
+GITBMD=/mnt/LV/Github/the-side-of-the-source-code/Blog/
+GITBGS=/mnt/LV/Github/the-side-of-the-source-code/Blog/Games/.currentWork
+GITBGS1=/mnt/LV/Github/the-side-of-the-source-code/Blog/Games/.ready
+GITBGS2=/mnt/LV/Github/the-side-of-the-source-code/Blog/Games/.toReview
+GITBGD=/mnt/LV/Github/the-side-of-the-source-code/Blog/Games/
+GITBBS=/mnt/LV/Github/the-side-of-the-source-code/Blog/barcelonaDo/.currentWork
+GITBBS1=/mnt/LV/Github/the-side-of-the-source-code/Blog/barcelonaDo/.ready
+GITBBS2=/mnt/LV/Github/the-side-of-the-source-code/Blog/barcelonaDo/.toReview
+GITBBD=/mnt/LV/Github/the-side-of-the-source-code/Blog/barcelonaDo/
 ####
 ## WEBDS -- Web Documentation Source
 ## WEBDD -- Web Documentation Destination
@@ -40,12 +40,12 @@ WEBDAD=/mnt/LV/Github/territoriolinux/TerritorioLinux/.Md-files/
 ####
 ## GITDS -- Git Documentation Source
 ## GITDD -- Git Documentation Destination
-## GITDAR -- Git Documentation Repo Source
-GITDS=/mnt/LV/Github/The-side-of-the-source/Documentacion/Temas
-GITDD=/mnt/LV/Github/The-side-of-the-source/Documentacion/
-GITDAR=/mnt/LV/Github/The-side-of-the-source/Documentacion/.currentWork
-GITDAR1=/mnt/LV/Github/The-side-of-the-source/Documentacion/.ready
-GITDAR2=/mnt/LV/Github/The-side-of-the-source/Documentacion/.toReview
+## GITDAR -- Git Documentation Articles Source
+GITDS=/mnt/LV/Github/the-side-of-the-source-code/Documentacion/Temas
+GITDD=/mnt/LV/Github/the-side-of-the-source-code/Documentacion/
+GITDAR=/mnt/LV/Github/the-side-of-the-source-code/Documentacion/.currentWork
+GITDAR1=/mnt/LV/Github/the-side-of-the-source-code/Documentacion/.ready
+GITDAR2=/mnt/LV/Github/the-side-of-the-source-code/Documentacion/.toReview
 ####
 ## WEBGS -- Web Games Source
 ## WEBGD -- Web Games Destination
@@ -54,18 +54,22 @@ WEBGD=/mnt/LV/Github/territoriolinux/Games/.Md-files/
 ####
 ## GITGS -- Git Games Source
 ## GITGD -- Git Games Destination
-GITGEXCLUDE=/mnt/LV/Github/The-side-of-the-source/Games/Posted
-GITGS=/mnt/LV/Github/The-side-of-the-source/Games/
-GITGD=/mnt/LV/Github/The-side-of-the-source/Games/
+GITGEXCLUDE=/mnt/LV/Github/the-side-of-the-source-code/Games/Posted
+GITGS=/mnt/LV/Github/the-side-of-the-source-code/Games/
+GITGD=/mnt/LV/Github/the-side-of-the-source-code/Games/
 ####
 ## GITBS -- Git BarcelonaDo Source
 ## GITBD -- Git BarcelonaDo Destination
-GITBS=/mnt/LV/Github/The-side-of-the-source/barcelonaDo/
-GITBD=/mnt/LV/Github/The-side-of-the-source/barcelonaDo/
+GITBS=/mnt/LV/Github/the-side-of-the-source-code/barcelonaDo/
+GITBD=/mnt/LV/Github/the-side-of-the-source-code/barcelonaDo/
 ## WEBBS -- Web BarcelonaDo Source
 ## WEBBD -- Web BarcelonaDo Destination
 WEBBS=/mnt/LV/Github/territoriolinux/barcelonaDo/Posted
 WEBBD=/mnt/LV/Github/territoriolinux/barcelonaDo/
 ####
-HOUSE=/mnt/LV/Github/The-side-of-the-source
-CTRLOUT=/mnt/LV/Github/The-side-of-the-source/Logs/CtrlRepoLogs/ctrl.log
+HOUSE=/mnt/LV/Github/the-side-of-the-source-code
+CTRLOUT=/mnt/LV/Github/the-side-of-the-source-code/Logs/CtrlRepoLogs/ctrl.log
+## GEDITSS -- Gedit Snippet Source 
+## GEDITSD -- Gedit Snippet Destination
+GEDITSS=/tmp/.config/gedit/snippets/
+GEDITSD=$HOUSE/Admin_aps/Configur/gedit/snippets/

@@ -1,0 +1,47 @@
+#!/bin/sh
+
+. /root/Scripts/gv
+
+cd $sWEB 
+#tar -xzvf $LATEST
+find $LATEST -type f -exec tar -xzvf {} \;
+
+systemctl stop apache2.service
+
+rsync -avr --delete \ 
+$sWEB/territoriolinux $WEB \
+> $CTRLOUT/log$DATE 2>&1
+
+# Check if file exist, and delete it if TRUE, 
+if [ -d $WEB/territoriolinux ]; then 
+	
+	mv -f $sWEB/tl* $mWEB/
+	rm -Rf $sWEB/territoriolinux 
+
+else 
+	echo 'something deleted the file before me' > $CTRLOUT/logExcept$DATE
+fi
+
+
+## TODO hay que comprobar permisos dentro de una funcion(condicion).
+chown -R www-data:www-data $WEB 
+chown -R www-data:adminS $STORAGE 
+
+## La secuencia '\;' de escape, evita que ';' sea interpretado como argumento!
+## Lo que buscamos es indicar el final de linea, ya que estmos pasando los 
+## argumentos en la busqueda.
+find /var/www -type d -exec chmod -R 755 {} \;
+
+## Buscamos por nombre sobre archivos especificos
+## find $WEB -type f -name "*.php" -exec chmod 0640 {} \;
+##find $WEB -type f -exec chmod -R 0640 $WEB {} \;
+find $WEB -type f -exec chmod -R 0644 {} \;
+
+
+## Store permissions
+find $WEB -type f -name "config.php" -exec chmod 0444 {} \;
+find $WEB -type f -name "index.php" -exec chmod 0444 {} \;
+find $WEB -type f -name "startup" -exec chmod 0444 {} \;
+
+
+systemctl start apache2.service

@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# 'ls -lat' to see a file list stored by date.
+# 'find -ctine <number>' -- 24h, to 'find -ctime +1' the file AT LAST, 2 days ago.
+# 'find -ctime 0' file/s modified betwen the last 24 hours(range of hours).
+# 'find -ctime -5' -- to find a file 5 minutes ago, ???? it don't have relation with the 
+# above.
+# see manual for <find>  and <ctime> <atime> options.
+
+HOUSE=/mnt/LV/Github/the-side-of-the-source-code/Respaldo/
+sWEB=/var/src/tlBack/
+LATEST=$(ls $HOUSE -1 -t | head -1)
+CTRLOUT=/mnt/LV/Github/the-side-of-the-source-code/Logs/Droplet/
+#DATE=$(date +'%d-%m-%H%M')
+
+# sync back-up
+scp $HOUSE/$LATEST root@138.68.78.228:$sWEB \
+> $CTRLOUT/log 2>&1
+		 
+#ssh 138.68.78.228 'sh $SCRIPT' &&

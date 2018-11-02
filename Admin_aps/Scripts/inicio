@@ -1,0 +1,20 @@
+#!/bin/sh
+
+HOUSE=/mnt/LV/Github/the-side-of-the-source-code/Admin_aps/Configur
+
+#sleep 500
+
+rm /tmp/log
+
+cp $HOUSE/dump.txt $HOME/.config/dconf/
+cat $HOME/.config/dconf/dump.txt | dconf load /org/gnome/terminal/ > /tmp/log 2>&1
+chmod 0100 $HOME/.config/dconf/dump.txt > /tmp/log 2>&1
+sleep 100
+rsync -a --delete $HOUSE/gtk3/gtkCustom.css $HOME/.config/gtk-3.0/ > /tmp/log 2>&1
+mv $HOME/.config/gtk-3.0/gtkCustom.css $HOME/.config/gtk-3.0/gtk.css > /tmp/log 2>&1
+rsync -a --delete $HOUSE/gtk3/settings.ini /tmp/.config/gtk-3.0/ > /tmp/log 2>&1
+rsync -a --delete $HOUSE/gedit /tmp/.config/ > /tmp/log 2>&1
+rsync -a --delete $HOUSE/.bash_profile /tmp/ > /tmp/log 2>&1
+rsync -a --delete $HOUSE/.bashrc /tmp/ > /tmp/log 2>&1
+rsync -a --delete $HOUSE/.vimrc /tmp/ > /tmp/log 2>&1
+rsync -a --delete $HOUSE/.infokey /tmp/ > /tmp/log 2>&1

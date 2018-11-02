@@ -1,0 +1,49 @@
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   Admin_aps/Configur/gedit/snippets/html.xml
+	modified:   Admin_aps/Configur/gedit/snippets/markdown.xml
+	modified:   Admin_aps/Diferido/cronJobs
+	modified:   Admin_aps/Scripts/inicio
+	deleted:    Admin_aps/Scripts/oriSync
+	deleted:    Admin_aps/Scripts/remoteSync
+	deleted:    Admin_aps/Scripts/remoteSyncOld
+	modified:   Admin_aps/Scripts/starBack.sh
+	modified:   Blog/.currentWork/1-customPXE.md
+	modified:   Documentacion/.toReview/0-amd-v.md
+	modified:   Documentacion/Temas/A2-Supuestos/hypervisor.md
+	modified:   Documentacion/siglas.html
+	modified:   Logs/CtrlRepoLogs/ctrl.log
+	deleted:    Respaldo/Local/incremental.log
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Admin_aps/Scripts/Droplet/
+	Admin_aps/Scripts/License
+	Admin_aps/Scripts/testRemoteSync
+	Admin_aps/Scripts/testRemoteSyncOld
+	Admin_aps/storage/
+	Blog/.currentWork/1-serverHub.md
+	Blog/.currentWork/1-tmux4.md
+	Blog/.currentWork/1-tmux4.txt
+	Blog/.toReview/
+	Codigo/Sql/
+	Añadido 	Codigo/Sql/apuntes.md
+	Documentacion/.currentWork/1-fallocateman.md
+	Documentacion/.currentWork/99-Apermissions.md
+	Documentacion/.currentWork/setupBD.md
+	Logs/ApacheLogs/
+	Logs/Droplet/
+	Logs/Sept18/
+	Respaldo/tl-rastro28-09-23:00.tar.gz
+	Respaldo/tl03-10-1633.tar.gz
+	Respaldo/tl14-09-23:00.tar.gz
+	Respaldo/tl21-09-23:00.tar.gz
+	Respaldo/tl29-09-16:45.tar.gz
+	Respaldo/tl30-09-1802.tar.gz
+
+no changes added to commit (use "git add" and/or "git commit -a")

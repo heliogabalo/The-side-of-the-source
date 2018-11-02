@@ -1,0 +1,7 @@
+WEB=/var/www
+STORAGE=/var/storage/
+mWEB=/var/src/maintenance/
+sWEB=/var/src/tlBack
+CTRLOUT=/var/src/log/local
+DATE=$(date +'%d-%m-%H%M')
+LATEST=$(ls $sWEB -1 -t | head -1)

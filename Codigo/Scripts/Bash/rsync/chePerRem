@@ -1,0 +1,15 @@
+#!/bin/sh
+
+dbStore=/var/www/territoriolinux/
+dbStorage=/var/storage/
+
+chown -R www-data:www-data $dbStore ;
+find $dbStore -type d -exec chmod -R 755 {} \; 
+find $dbStore -type f -exec chmod -R 0644 {} \;
+find $dbStore -type f -name "config.php" -exec chmod 0644 {} \;
+find $dbStore -type f -name "index.php" -exec chmod 0644 {} \;
+find $dbStore -type f -name "startup" -exec chmod 0644 {} \;
+
+chown -R www-data:adminS $dbStorage ;
+find $dbStorage -type d -exec chmod -R 0755 {} \;
+find $dbStorage -type f -exec chmod -R 0644 {} \;

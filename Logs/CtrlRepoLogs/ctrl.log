@@ -1,9 +1,4 @@
 sending incremental file list
-.MdFiles/
-.MdFiles/.currentWork/
-.MdFiles/.ready/
-.MdFiles/.toReview/
-POSTED/
 
-sent 195 bytes  received 32 bytes  454.00 bytes/sec
-total size is 0  speedup is 0.00
+sent 4,564 bytes  received 58 bytes  9,244.00 bytes/sec
+total size is 3,332,835  speedup is 721.08

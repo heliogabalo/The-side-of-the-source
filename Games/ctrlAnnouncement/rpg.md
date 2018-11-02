@@ -7,9 +7,9 @@
 | fade to Silence | Black Forest G. | https://fadetosilence.com/ | ndf | ? | email-contact | earlA. | plataforma | 12-13 |
 | Dark souls remastered | FromSoftware | http://www.darksouls.jp/remastered/ | 24/05/18 | T7-G1 | email-contact | options | ps4,xb1,pc-switch | 12-13 |
 | Code Vein | BandaiNamco | https://www.bandainamcoent.com/games/code-vein#editions | 31/12/18 | T6 | support@bandainamcoent.com | pre | ps4,xb1,pc | 14 |
-| Horizon: Zero Down | Guerrilla G. | Horizon: Zero Down | disponible | Bandera | email-contact | options | plataforma | out |
+| Horizon: Zero Down | Guerrilla G. |  | disponible | Bandera | email-contact | options | plataforma | out |
 | Insomnia: the ark | Studio Mono | http://insomnia-project.com | TBA | T4 | mary@herocraft.com | options | pc | 15 |
-| System Shock 3 | OtherSide Ent. | System Shock 3 | tba | Gc | email-contact | options | ps4,xb1,pc | 8 |
+| System Shock 3 | OtherSide Ent. |  | tba | Gc | email-contact | options | ps4,xb1,pc | 8 |
 | Dauntless | Phoenix Labs | https://playdauntless.com/ | 2018 | T1 | press@phxlabs.ca | pre-FreeToPlay | pc | 20 |
 | Swtor: knights of the fallen empire | Bioware | http://www.swtor.com/fallen-empire | 01/06/18 | T3 | email-contact | pre | pc | 21 |
 

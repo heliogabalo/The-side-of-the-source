@@ -1,1 +1,0 @@
-/home/raul/Github/territoriolinux/TerritorioLinux/Md-files/Repo/Servidor/estudio2018.md

@@ -1,0 +1,7 @@
+#!/bin/sh
+
+dbStore=/var/www/territoriolinux/Store/
+dbStorage=/var/storage/
+
+rsync -avr --delete 138.68.78.228:/$dbStore /mnt/LV/Github/territoriolinux/Store/ > /tmp/log 2>&1 ;
+rsync -avr --delete 138.68.78.228:/$dbStorage /mnt/LV/Github/storage/ >> /tmp/log 2>&1 ;

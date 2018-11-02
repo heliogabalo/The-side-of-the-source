@@ -1,0 +1,15 @@
+CREATE FUNCTION dbo.StringBetweenTwoPatterns (@PrePattern varchar(max) @PostPattern varchar(max), @string varchar(max)) 
+RETURNS varchar(Max)
+AS 
+BEGIN   
+DECLARE @WildPre VARCHAR(MAX) = '%' + @PrePattern + '%'
+DECLARE @WildPost VARCHAR(MAX) = '%' + @PostPattern + '%'
+IF PATINDEX(@WildPre, @String) > 0
+    AND PATINDEX(@WildPost, @String) > 0
+BEGIN
+    DECLARE @RIGHT VARCHAR(MAX) = SUBSTRING(@string, PATINDEX(@WildPre,@string) + LEN(@PrePattern), LEN(@string))
+    RETURN LEFT(@RIGHT,(PATINDEX(@WildPost,@RIGHT) - 1))
+END
+RETURN NULL
+END
+GO

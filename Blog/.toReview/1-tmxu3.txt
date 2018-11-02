@@ -1,0 +1,108 @@
+
+fedoramagazine.org
+Add power to your terminal with powerline
+5-6 minutes
+
+A while ago, Fedora Magazine posted this interview with Rackspace architect Major Hayden where he mentioned the powerline utility. If you often use a terminal, you too might find powerline useful. It gives you helpful status information, and helps you stay organized.
+For the shell
+
+By default, the shell plugin gives you plenty of helpful data:
+
+    Login name
+    Local time
+    Current working directory or path. The path is condensed automatically when it grows longer than the terminal width.
+    The number of active background jobs
+    The hostname, when you connect via SSH to a remote system where powerline is installed
+
+This saves you a lot of twiddling with your shell environment and complex scripting! To install the utility, open a terminal and run this command:
+
+sudo dnf install powerline powerline-fonts
+
+The rest of these instructions assume you’re using Fedora’s standard bash shell. If you’re using a different shell, check out the documentation for tips.
+
+Next, configure your bash shell to use powerline by default. Add the following snippet to your ~/.bashrc file:
+
+if [ -f `which powerline-daemon` ]; then
+  powerline-daemon -q
+  POWERLINE_BASH_CONTINUATION=1
+  POWERLINE_BASH_SELECT=1
+  . /usr/share/powerline/bash/powerline.sh
+fi
+
+To activate the changes, open a new shell or terminal. You should have a terminal that looks like this:
+
+Terminal with powerline running in the bash shell
+
+Try changing directories. Watch how the “breadcrumb” prompt changes to show your current location. Very handy! You’ll also be able to see number of pending background jobs. And if powerline is installed on a remote system, the prompt includes the hostname when you connect via SSH.
+For tmux
+
+If you’re a command line junkie, you probably also know tmux. It allows you to split your terminal into many windows and panes, each containing its own session. But the tmux standard status line is not quite as interesting as what powerline provides by default:
+
+    Window information
+    System load
+    Time and date
+    Hostname, if you’re connected to a remote system via SSH
+
+Therefore, let’s install the plugin:
+
+sudo dnf install tmux-powerline
+
+Now add this line to your ~/.tmux.conf file:
+
+source "/usr/share/tmux/powerline.conf"
+
+Next, remove or comment out any lines in your tmux configuration for status bar length or content. Examples of these settings are status-left, status-right, status-left-length, and status-right-length.
+
+Your user configuration is stored in ~/.tmux.conf. If you don’t have one, copy an example from the web or /usr/share/tmux to ~/.tmux.conf, and then edit.
+
+When you next start tmux, you should see the powerline status bar:
+
+A tmux session with powerline running the status bar
+For vim
+
+If you use the vim editor, you’re also in luck. There’s a powerful plugin for vim, too. By default, it shows:
+
+    Operating mode (normal, insert, replace)
+    Current path and file name
+    Text encodings
+    Document and line positions
+
+To install it, use this command:
+
+sudo dnf install vim-powerline
+
+Now add the following lines to your ~/.vimrc file:
+
+python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup
+set laststatus=2 " Always display the statusline in all windows
+set showtabline=2 " Always display the tabline, even if there is only one tab
+set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
+set t_Co=256
+
+Now you can start vim and see a spiffy new status line:
+
+Vim running with powerline status
+Configuring powerline
+
+No command line utility is complete without configuration options. The configuration in this case isn’t exactly simple, though; it requires you to edit JSON formatted files. But there’s a complete configuration guide available in the official documentation. And since the utility is written in Python, it’s eminently hackable.
+
+When you hack the configuration, it’s usually to add, change, or remove segments. There are plenty of segments available, such as:
+
+    Content of environment variables
+    Version control system data (such as git branch and status!)
+    Weather
+    …and many more.
+
+To change the status layout in an environment, you create or edit configuration files in your ~/.config/powerline/ folder. These configurations are stored as themes for each plugin. You can use the powerline-lint utility to check your configuration for parsing errors after making changes.
+
+Some changes may require you to reload your session or possibly restart the daemon:
+
+powerline-daemon --replace
+
+Now you can enjoy more sophisticated status data in your favorite tools!
+Paul W. Frields
+
+Paul W. Frields has been a Linux user and enthusiast since 1997, and joined the Fedora Project in 2003, shortly after launch. He was a founding member of the Fedora Project Board, and has worked on documentation, website publishing, advocacy, toolchain development, and maintaining software. He joined Red Hat as Fedora Project Leader from February 2008 to July 2010, and remains with Red Hat as an engineering manager. He currently lives with his wife and two children in Virginia.
+

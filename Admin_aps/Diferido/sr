@@ -1,6 +1,6 @@
 #!/bin/sh
 
-source /mnt/LV/Github/The-side-of-the-source/Admin_aps/Diferido/gv
+source /mnt/LV/Github/the-side-of-the-source-code/Admin_aps/Diferido/gv
 
 ##TODO To refactor, all is the same function, and is needed to serialize it.
 ## It is posible? to construck a block {arg1, arg2} reading it from a 2D Array
@@ -10,14 +10,10 @@ source /mnt/LV/Github/The-side-of-the-source/Admin_aps/Diferido/gv
 ## The CTRLOUT var, needed to refactor to be only one call, on the begining of de document
 ##  instead every single job!
 
-## backUps
-shred -xu $CTRLOUT
-sh $HOUSE/Admin_aps/Scripts/starBack.sh /tmp/ >> $CTRLOUT 2>&1 
-## Is needed to erase the incremental file, e. once on week. So the first day is full sized.
-shred -xu $HOUSE/Respaldo/Local/incremental.log
+rm $CTRLOUT
 
 ## Main Blog
-rsync -a --delete {$GITBMS,$GITBMS1,$GITBMS2} $WEBBMD >> $CTRLOUT 2>&1
+rsync -a --delete {$GITBMS,$GITBMS1,$GITBMS2} $WEBBMD > $CTRLOUT 2>&1
 rsync -a --delete $WEBBMS $GITBMD >> $CTRLOUT 2>&1
 rsync -a --delete $GITBMS3 $WEBBMD >> $CTRLOUT 2>&1
 ## Blog Games
@@ -36,4 +32,10 @@ rsync -a --delete $WEBGS $GITGD >> $CTRLOUT 2>&1
 ## BarcelonaDo Page
 rsync -a --delete --exclude='Posted' $GITBS $WEBBD >> $CTRLOUT 2>&1
 rsync -a --delete $WEBBS $GITBD >> $CTRLOUT 2>&1
+## User preferences & configuration
+if [[ -d $GEDITSS ]]; then
+	rsync -a --delete $GEDITSS $GEDITSD >> $CTRLOUT 2>&1
+	else
+		echo "¿estamos reescribiendo la historia?" > /tmp/WARNING
+fi
 

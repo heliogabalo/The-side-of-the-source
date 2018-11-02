@@ -20,3 +20,5 @@ alias github='cd ~/Github'
 alias docs='cd ~/Github/The-side-of-the-source/Documentacion'
 alias sci='cd ~/GithubThe-side-of-the-source/Scripts'
 alias linux='cd ~/Github/linux-stable'
+alias out='> /tmp/log 2&>1'
+

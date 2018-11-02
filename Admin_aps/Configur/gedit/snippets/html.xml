@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='utf-8'?>
+<snippets language="html">
+  <snippet>
+    <tag>a</tag>
+    <text><![CDATA[<a href="$1">$2</a>]]></text>
+    <description>Anchor Ref</description>
+  </snippet>
+  <snippet>
+    <tag>an</tag>
+    <text><![CDATA[<a name="$1">$2</a>]]></text>
+    <description>Anchor</description>
+  </snippet>
+  <snippet>
+    <tag>strong</tag>
+    <text><![CDATA[<strong>$1</strong>]]></text>
+    <description>Strong</description>
+  </snippet>
+  <snippet>
+    <tag>pre</tag>
+    <text><![CDATA[<pre>
+	<code>$1</code>
+</pre>]]></text>
+    <description>Pre-code</description>
+  </snippet>
+  <snippet>
+    <tag>code</tag>
+    <text><![CDATA[	<code>$1</code>
+]]></text>
+    <description>Code</description>
+  </snippet>
+  <snippet>
+    <tag>em</tag>
+    <text><![CDATA[<em>$1</em>]]></text>
+    <description>Emphasis</description>
+  </snippet>
+  <snippet>
+    <tag>b</tag>
+    <text><![CDATA[<b>$0</b>]]></text>
+    <description>Bold</description>
+  </snippet>
+  <snippet>
+    <tag>p</tag>
+    <text><![CDATA[<p>$0</p>]]></text>
+    <description>Paragraph</description>
+  </snippet>
+  <snippet>
+    <tag>kbd</tag>
+    <text><![CDATA[<kbd>$1</kbd>]]></text>
+    <description>Keyboard Tag</description>
+  </snippet>
+  <snippet>
+    <tag>com</tag>
+    <text><![CDATA[<!-- -->]]></text>
+    <description>Comment</description>
+  </snippet>
+  <snippet override="html-tr">
+    <text><![CDATA[				<tr>
+						<td><a href="$1">$2</a></td>
+						<td>$3</td>
+						<td>$4</td>
+						<td>$5</td>
+				</tr>]]></text>
+    <tag>tr</tag>
+    <description>Table Row</description>
+  </snippet>
+  <snippet>
+    <tag>trc</tag>
+    <text><![CDATA[				<tr>
+						<td><a href="$1">$2</a></td>
+						<td>Aguascalientes(Privadas)</td>
+						<td>$3</td>
+						<td>+52 $4</td>
+				</tr>
+]]></text>
+    <description>Borrar</description>
+  </snippet>
+  <snippet>
+    <tag>firma</tag>
+    <text><![CDATA[<ul id="firma">
+	<li><b>Traducción:</b> Heliogabalo S.J.</li>
+	<li><em>www.territoriolinux.net</em></li>
+</ul>]]></text>
+    <description>Firma</description>
+  </snippet>
+  <snippet>
+    <tag>hr</tag>
+    <text><![CDATA[<hr>]]></text>
+    <description>Divisor Line</description>
+  </snippet>
+  <snippet>
+    <tag>html</tag>
+    <text><![CDATA[<html>$1</html>]]></text>
+    <description>HtmlTag</description>
+  </snippet>
+  <snippet>
+    <tag>php</tag>
+    <text><![CDATA[<?php $1 ?>]]></text>
+    <description>Php</description>
+  </snippet>
+  <snippet>
+    <tag>tc</tag>
+    <description>Table Row-custom</description>
+    <text><![CDATA[				<tr>
+						<td><a href="$2">$1</a></td>
+						<td>Barcelona</td>
+						<td>$3</td>
+						<td>$4</td>
+						<td>$5</td>
+				</tr>]]></text>
+  </snippet>
+  <snippet>
+    <tag>th</tag>
+    <text><![CDATA[<th>$1</th>]]></text>
+    <description>Table Head</description>
+  </snippet>
+  <snippet>
+    <tag>td</tag>
+    <text><![CDATA[<td>$1</td>]]></text>
+    <description>Table Field</description>
+  </snippet>
+</snippets>
