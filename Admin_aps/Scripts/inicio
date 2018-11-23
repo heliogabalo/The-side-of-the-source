@@ -18,3 +18,4 @@ rsync -a --delete $HOUSE/.bash_profile /tmp/ > /tmp/log 2>&1
 rsync -a --delete $HOUSE/.bashrc /tmp/ > /tmp/log 2>&1
 rsync -a --delete $HOUSE/.vimrc /tmp/ > /tmp/log 2>&1
 rsync -a --delete $HOUSE/.infokey /tmp/ > /tmp/log 2>&1
+rsync -a --delete $HOUSE/.exclude /tmp/ > /tmp/log 2>&1
