@@ -19,7 +19,7 @@
 ### [Descripción](i1) ###
 
 PXELINUX es un derivado de Syslinux, para el arranque desde un servidor en red, mediante _una ROM_[f1](#f1) de red, conforme a la especificación Intel PXE. 
-PXELINUX, no es un programa destinado a ser _flaseado_ o _quemado_, en una PROM[f1](#f1) de una tarjeta de red. En tal caso, revisar [iPXE](http://ipxe.org/).
+PXELINUX, no es un programa destinado a ser _flaseado_ o _quemado_, en una PROM[f1](#f1) de una tarjeta de red. En tal caso, revisar [iPXE](https://ipxe.org/).
 
 Si fuese necesario _crear_ una PROM; compatible con PXE, para la tarjeta de red -con objeto de utilizarla con PXELINUX, por qjemplo, revisar [NetBoot](http://netboot.sourceforge.net/).
 
