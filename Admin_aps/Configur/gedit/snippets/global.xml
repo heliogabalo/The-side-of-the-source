@@ -6,8 +6,52 @@
     <description>Territorio Linux</description>
   </snippet>
   <snippet>
-    <tag>ratas</tag>
-    <text><![CDATA[Las ratas atacan de nuevo!]]></text>
-    <description>Ratas</description>
+    <tag>out</tag>
+    <text><![CDATA[> /tmp/log 2>&1]]></text>
+    <description>Out</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[# wget http://"$YOURMIRROR"/debian/dists/wheezy/main/installer-"$ARCH"/current/images/netboot/netboot.tar.gz
+# wget http://"$YOURMIRROR"/debian/dists/wheezy/main/installer-"$ARCH"/current/images/SHA256SUMS
+# wget http://"$YOURMIRROR"/debian/dists/wheezy/Release
+# wget http://"$YOURMIRROR"/debian/dists/wheezy/Release.gpg
+
+# cat SHA256SUMS | grep -F netboot/netboot.tar.gz
+ac278b204f768784824a108e7cf3ae8807f9969adcb4598effeff2b92055bb52  ./netboot/netboot.tar.gz
+# sha256sum netboot.tar.gz
+ac278b204f768784824a108e7cf3ae8807f9969adcb4598effeff2b92055bb52  netboot.tar.gz
+(match!)
+
+# sha256sum SHA256SUMS
+4856ecb5015b93d7dd02249c91d03bd88890d44bd25d8a2d2a400bab63f9d7de  SHA256SUMS
+# cat Release | grep -A 100000 '^SHA256' | grep -F installer-"$ARCH"/current/images/SHA256SUMS
+4856ecb5015b93d7dd02249c91d03bd88890d44bd25d8a2d2a400bab63f9d7de    14289 main/installer-"$ARCH"/current/images/SHA256SUMS
+(match!)
+
+# gpg --verify Release.gpg Release
+gpg: WARNING: multiple signatures detected.  Only the first will be checked.
+gpg: Signature made Sat 15 Jun 2013 05:55:56 AM CDT using RSA key ID 473041FA
+gpg: Good signature from "Debian Archive Automatic Signing Key (6.0/squeeze) <ftpmaster@debian.org>"]]></text>
+    <description>Debian Ver-sig</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[## Actualizar a version especifica
+dnf upgrade --refresh --releasever=XX
+
+## Versiones kernel [instaladas/disponibles]
+dnf list kernel --showduplicates]]></text>
+    <description>Dnf Comands</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[## Llaves publicas del SO
+rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-XX-primary
+##
+rpm -qa | grep kernel]]></text>
+    <description>Rpm command</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[## Fedora ssh logs
+journalctl -u sshd | grep "input_userauth_request:"]]></text>
+    <description>Journal</description>
   </snippet>
 </snippets>
