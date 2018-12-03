@@ -41,11 +41,75 @@ echo ${tomorrow}
   <snippet>
     <tag>lmd5</tag>
     <text><![CDATA[ssh-add -l -E md5]]></text>
-    <description>Find md5</description>
+    <description>md5 Find</description>
   </snippet>
   <snippet>
     <tag>genkey</tag>
     <text><![CDATA[ssh-keygen -t rsa -b 4096 -C "your_email@example.com"]]></text>
     <description>Ssh-genKey</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[blockdev --getalignoff /dev/<partición>
+]]></text>
+    <description>Check Partition Align</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[qemu-system-x86_64 \
+  -drive format=raw,file=/dev/mapper/vg_vm-lv_vm_test,if=virtio,aio=native,cache.direct=on \
+  -net nic,model=virtio \
+  -net user \
+  -vga virtio \
+  -display gtk,gl=on \
+  -smp 3 \
+  -cpu host \
+  -machine type=pc,accel=kvm \
+  -m 3G]]></text>
+    <description>Qemu(direct-drive)</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[qemu-system-x86_64 \
+  -drive format=raw,file=./ubuntu_17,if=virtio,aio=native,cache.direct=on \
+  -net nic,model=virtio \
+  -net user \
+  -vga virtio \
+  -display gtk,gl=on \
+  -smp 3 \
+  -cpu host \
+  -machine type=pc,accel=kvm \
+  -m 3G]]></text>
+    <description>Qemu(LV on ext4)</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[qemu-system-x86_64 \
+  -drive format=raw,file=/dev/mapper/vg_vm-lv_vm_test,if=virtio,cache=none \
+  -net nic,model=virtio \
+  -net user \
+  -vga virtio \
+  -display gtk,gl=on \
+  -smp 3 \
+  -cpu host \
+  -machine type=pc,accel=kvm \
+  -m 3G]]></text>
+    <description>Qemu(Lv as VM drive)</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[dumpe2fs /dev/<device> | grep 'Block size']]></text>
+    <description>BlockOnFS</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[find /home/ -type f -size 6579c -exec ls {} \;]]></text>
+    <description>Find exact size</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[find /home/ -type f -size +512k -exec ls -lh {} \;]]></text>
+    <description>Find size+/-</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[dd if=/dev/zero of=/var/lib/libvirt/images/FileName.img bs=1M count=4096]]></text>
+    <description>Image(prealloc)</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[dd if=/dev/zero of=/var/lib/libvirt/images/FileName.img bs=1M seek=4096 count=0]]></text>
+    <description>Image(sparse)</description>
   </snippet>
 </snippets>
